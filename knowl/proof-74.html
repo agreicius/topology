@@ -11,17 +11,39 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para logical">
-<div class="para">The proof of (1) is elementary. (See text.) The proof of (2) is more interesting. Assume <span class="process-math">\(\{X_i\}_{i\in I}\)</span> is a collection of completely regular spaces, and let <span class="process-math">\(X=\prod_{i\in I}X_i\text{.}\)</span> Let <span class="process-math">\(A\subseteq X\)</span> be a closed set, and let <span class="process-math">\(b=(b_i)_{i\in I}\)</span> be any element not contained in <span class="process-math">\(A\text{.}\)</span> Since <span class="process-math">\(X-A\)</span> is open, we can find a base open neighborhood of <span class="process-math">\(b\)</span> of the form <span class="process-math">\(U=\prod_{k=1}^n U_{i_k}\times \prod_{i\ne i_k}X_i\text{.}\)</span> For each <span class="process-math">\(1\leq k\leq n\)</span> let <span class="process-math">\(f_k\colon X_{i_k}\rightarrow [0,1]\)</span> be a continuous function satisfying <span class="process-math">\(f_k(b_{i_k})=1, f_k(U_{i_k}^c)=\{0\}\text{.}\)</span>  The function</div>
+<article class="hiddenproof"><h4 class="heading"><span class="title">Step 2: definition of <span class="process-math">\(f\)</span> and continuity.</span></h4> <div class="para logical">
+<div class="para">Define <span class="process-math">\(f\colon X\rightarrow \R\)</span> as</div>
 <div class="displaymath process-math">
-\begin{align*}
-f\colon X \amp \rightarrow [0,1]\\
-x=(x_i)_{i\in I} \amp \mapsto \prod_{k=1}^nf_{i_k}(x_{i_k})
-\end{align*}
+\begin{equation*}
+f(x)=\inf\{p\in \Q\colon x\in U_p\}\text{.}
+\end{equation*}
 </div>
-<div class="para">is continuous (product of continuous functions) and satisfies <span class="process-math">\(f(b)=1\)</span> and <span class="process-math">\(f(A)=\{0\}\text{.}\)</span>
+<div class="para">Some easy properties of <span class="process-math">\(f\text{:}\)</span>
 </div>
+<ul class="disc">
+<li><div class="para">
+<span class="process-math">\(0\leq f(x)\leq 1\)</span> for all <span class="process-math">\(x\in X\text{.}\)</span>
+</div></li>
+<li><div class="para">
+<span class="process-math">\(f(x)\leq p\)</span> for all <span class="process-math">\(x\in \overline{U_p}\text{.}\)</span>
+</div></li>
+<li><div class="para">
+<span class="process-math">\(f(x)\geq p\)</span> for all <span class="process-math">\(x\notin U_p\text{.}\)</span>
+</div></li>
+</ul>
+<div class="para">We prove continuity by showing that <span class="process-math">\(f\)</span> is continuous at each <span class="process-math">\(x\text{.}\)</span> Given <span class="process-math">\(x\in X\)</span> and open set <span class="process-math">\((a,b)\)</span> containing <span class="process-math">\(y=f(x)\text{,}\)</span> choose rational numbers <span class="process-math">\(p, q\)</span> satisfying</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a&lt; p&lt; y &lt; q &lt; b\text{.}
+\end{equation*}
+</div>
+<div class="para">I claim <span class="process-math">\(U_q-\overline{U_p}\)</span> is an open set containing <span class="process-math">\(x\)</span> satisfying</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(U_q-\overline{U_p})\subseteq [p,q]\subseteq (a,b)\text{.}
+\end{equation*}
+</div>
+<div class="para">First, it is clear that <span class="process-math">\(U_q-\overline{U_p}\)</span> is open, and it follows easily from the elementary properties of <span class="process-math">\(f\)</span> quoted above that <span class="process-math">\(x\in U_q-\overline{U_p}\text{.}\)</span> Next, given any <span class="process-math">\(x'\in U_q-\overline{U_p}\text{,}\)</span> since <span class="process-math">\(x'\in \overline{U_q}\text{,}\)</span> we have <span class="process-math">\(f(x')\leq q\text{,}\)</span> and since <span class="process-math">\(x'\notin U_p\text{,}\)</span> we have <span class="process-math">\(f(x')\geq p\text{.}\)</span> This concludes the proof.</div>
 </div></article><span class="incontext"><a href="s_Urysohn_lemma.html#proof-74" class="internal">in-context</a></span>
 </body>
 </html>

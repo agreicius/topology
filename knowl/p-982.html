@@ -12,17 +12,7 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para logical">
-<div class="para">Assume by contradiction that <span class="process-math">\(S^*\ne T\text{,}\)</span> and let <span class="process-math">\(t_0\in T-S^*\text{.}\)</span> Since <span class="process-math">\(X_{t_0}\)</span> is compact, by <a href="" class="xref" data-knowl="./knowl/lemma_product_nets.html" title="Lemma 1.25.5: Nets in products">Lemma 1.25.5</a> the net <span class="process-math">\((f_i\vert_{S^*\cup \{t_0\}})_{i\in I}\)</span> in <span class="process-math">\(X_{S^*\cup {t_0}}=X_{S^*}\times X_{t_0}\)</span> has a limit point of the form <span class="process-math">\((g^*, x_{t_0})\text{.}\)</span> But then the element <span class="process-math">\((S,g)\in \mathcal{F}\)</span> defined as <span class="process-math">\(S=S^*\cup \{t_0\}\)</span> and</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/lemma_product_nets.html">
-\begin{equation*}
-g(s)=\begin{cases} g^*(s)\amp \text{if } s\in S^* \\
-x_{t_0}\amp \text{if } s=t_0
-\end{cases}
-\end{equation*}
-</div>
-<div class="para">satisfies <span class="process-math">\((S,g)\geq (S^*, g^*)\)</span> and <span class="process-math">\((S,g)\ne (S^*, g^*)\text{,}\)</span> contradicting the fact that <span class="process-math">\((S^*, g^*)\)</span> is a maximal element.</div>
-</div>
+<div class="para">Now define <span class="process-math">\(\mathcal{F}\)</span> to be the set of all pairs <span class="process-math">\((S,g)\text{,}\)</span> where <span class="process-math">\(S\subseteq T\)</span> and <span class="process-math">\(g\in X_S=\prod_{t\in S}X_t\)</span> is a limit point of the net <span class="process-math">\((f_i\vert_S)_{i\in I}\text{.}\)</span> Note how we are exploiting the function notation here: since elements of <span class="process-math">\(X_S\)</span> are just functions with domain <span class="process-math">\(S\subseteq T\text{,}\)</span> restricting the domain yields a map from <span class="process-math">\(X\)</span> to <span class="process-math">\(X_S\)</span> defined as <span class="process-math">\(f\mapsto f\vert_S\text{.}\)</span> This map is in fact just the projection map <span class="process-math">\(\pi_S\colon X\rightarrow \prod_{t\in S}X_t\)</span> defined as <span class="process-math">\(\pi_S(f)=(\pi_t(f))_{t\in S}\text{.}\)</span> It follows from this that this map is continuous.</div>
 <span class="incontext"><a href="s_Tychonoff.html#p-982" class="internal">in-context</a></span>
 </body>
 </html>

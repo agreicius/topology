@@ -11,37 +11,12 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><article class="hiddenproof"> <div class="para logical">
-<div class="para">Define <span class="process-math">\(f\colon X\rightarrow \R\)</span> as</div>
-<div class="displaymath process-math">
+<div class="para">The first crucial step in the proof is to build a collection of open sets <span class="process-math">\(\{U_p\}_{p\in \Q}\)</span> satisfying <span class="process-math">\(\overline{U_p}\subseteq U_{q}\)</span> if <span class="process-math">\(p&lt; q\text{.}\)</span> This is done by first picking an enumeration of <span class="process-math">\(\Q\cap [0,1]=\{p_1,p_2,\dots,\}\)</span> where for convenience <span class="process-math">\(p_1=1\)</span> and <span class="process-math">\(p_2=0\text{.}\)</span> We use the enumeration to define open sets <span class="process-math">\(U_p\)</span> for each <span class="process-math">\(p\in \Q\)</span> recursively as follows. Set <span class="process-math">\(U_1=X-B\text{.}\)</span> Since <span class="process-math">\(A\subseteq U_1\text{,}\)</span> by <a href="" class="xref" data-knowl="./knowl/th_regular_normal_equivalence.html" title="Theorem 1.19.8: Regular and normal equivalences">Theorem 1.19.8</a> we can find an open <span class="process-math">\(U_0\)</span> containing <span class="process-math">\(A\)</span> such that <span class="process-math">\(\overline{U}_0\subseteq U_1\text{.}\)</span> Now take any <span class="process-math">\(n\geq 2\)</span> and assume by induction that we constructed open sets <span class="process-math">\(U_{p_1}, U_{p_2},\dots, U_{p_n}\)</span> satisfying the desired inclusion condition. Write <span class="process-math">\(p&lt; p_{n+1} &lt; q\)</span> where  <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> are the immediate predecessor and successor, respectively, of <span class="process-math">\(p_{n+1}\)</span> among the set <span class="process-math">\(\{p_1,p_2,\dots, p_n\}\text{.}\)</span> By induction we have <span class="process-math">\(\overline{U_p}\subseteq U_q\text{.}\)</span> Pick <span class="process-math">\(U_{p_{n+1}}\)</span> to be any open set satisfying</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_regular_normal_equivalence.html">
 \begin{equation*}
-f(x)=\inf\{p\in \Q\colon x\in U_p\}\text{.}
+\overline{U_p}\subseteq U_{p_{n+1}}\subseteq \overline{U_{p_{n+1}}}\subseteq U_q\text{.}
 \end{equation*}
 </div>
-<div class="para">Some easy properties of <span class="process-math">\(f\text{:}\)</span>
-</div>
-<ul class="disc">
-<li><div class="para">
-<span class="process-math">\(0\leq f(x)\leq 1\)</span> for all <span class="process-math">\(x\in X\text{.}\)</span>
-</div></li>
-<li><div class="para">
-<span class="process-math">\(f(x)\leq p\)</span> for all <span class="process-math">\(x\in \overline{U_p}\text{.}\)</span>
-</div></li>
-<li><div class="para">
-<span class="process-math">\(f(x)\geq p\)</span> for all <span class="process-math">\(x\notin U_p\text{.}\)</span>
-</div></li>
-</ul>
-<div class="para">We prove continuity by showing that <span class="process-math">\(f\)</span> is continuous at each <span class="process-math">\(x\text{.}\)</span> Given <span class="process-math">\(x\in X\)</span> and open set <span class="process-math">\((a,b)\)</span> containing <span class="process-math">\(y=f(x)\text{,}\)</span> choose rational numbers <span class="process-math">\(p, q\)</span> satisfying</div>
-<div class="displaymath process-math">
-\begin{equation*}
-a&lt; p&lt; y &lt; q &lt; b\text{.}
-\end{equation*}
-</div>
-<div class="para">I claim <span class="process-math">\(U_q-\overline{U_p}\)</span> is an open set containing <span class="process-math">\(x\)</span> satisfying</div>
-<div class="displaymath process-math">
-\begin{equation*}
-f(U_q-\overline{U_p})\subseteq [p,q]\subseteq (a,b)\text{.}
-\end{equation*}
-</div>
-<div class="para">First, it is clear that <span class="process-math">\(U_q-\overline{U_p}\)</span> is open, and it follows easily from the elementary properties of <span class="process-math">\(f\)</span> quoted above that <span class="process-math">\(x\in U_q-\overline{U_p}\text{.}\)</span> Next, given any <span class="process-math">\(x'\in U_q-\overline{U_p}\text{,}\)</span> since <span class="process-math">\(x'\in \overline{U_q}\text{,}\)</span> we have <span class="process-math">\(f(x')\leq q\text{,}\)</span> and since <span class="process-math">\(x'\notin U_p\text{,}\)</span> we have <span class="process-math">\(f(x')\geq p\text{.}\)</span> This concludes the proof.</div>
+<div class="para">Lastly define <span class="process-math">\(U_p=\emptyset\)</span> for all <span class="process-math">\(p&lt; 0\)</span> and <span class="process-math">\(U_p=X\)</span> for all <span class="process-math">\(p&gt; 0\text{.}\)</span> It is easy to see that thus defined, our collection <span class="process-math">\(\{U_p\}_{p\in \Q}\)</span> satisfies the desired inclusion condition.</div>
 </div></article></body>
 </html>

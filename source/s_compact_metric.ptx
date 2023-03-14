@@ -138,6 +138,63 @@
         </p>
     </statement>
   </theorem>
-  
+  <project>
+    <title>Cantor set</title>
+    <p>
+      There is a unique family  <m>\{C_n\}_{n=0}^\infty</m> of closed sets of <m>[0,1]</m> of of <m>[0,1]</m> satisfying the following properties: 
+      <ul>
+        <li>
+          <p>
+            <m>C_0=[0,1]</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>C_n=\bigcup_{k=1}^{2^n}I_{n,k}</m> is a disjoint union of <m>2^n</m> intervals of the form <m>[a_k/3^n, (a_k+1)/3^n</m>, where <m>a_k\in \{0,1,\dots, 3^n-1\}</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>C_{n+1}</m> is obtained by <q>deleting the middle third</q> of each interval appearing in <m>C_n</m>: that is each interval <m>[a_k/3^n, (a_k+1)/3^n]</m> of <m>C_n</m> gives rise to two intervals <m>[a_{k}/3^{n+1}, (a_k+1)/3^{n+1}]</m> and <m>[(a_k+2)/3^{n+1}, (a_k+3)/3^{n+1}]</m>.
+          </p>
+        </li>
+      </ul>
+      Here is a tree illustration of the first three members of this family. 
+      <figure xml:id="fig_Cn">
+        <caption>Recursive generation of <m>C_n</m></caption>
+        <image xml:id="im_Cn" width='25%'>
+          <description>Recursive generation of <m>C_n</m></description>
+          <latex-image>
+            \begin{tikzcd}
+  C_0 \amp C_1 \amp C_2\\
+  \amp  \amp {[\frac{8}{9},1]}\\
+  \amp {[\frac{2}{3},1]}\arrow[dash]{ur}\arrow[dash]{dr}\\
+  \amp  \amp {[\frac{6}{9},\frac{7}{9}]}\\
+  {[0,1]}\arrow[dash]{uur}\arrow[dash]{ddr}\\
+  \amp \amp {[\frac{2}{9},\frac{3}{9}]}\\\
+  \amp {[0,\frac{1}{3}]}\arrow[dash]{ur}\arrow[dash]{dr}\\
+  \amp \amp {[0,\frac{1}{9}]}\\
+  \end{tikzcd}
+          </latex-image>
+        </image>
+      </figure>
+      The <term>Cantor set</term> is defined as <m>\mathcal{C}=\bigcap_{n=0}^\infty C_n</m>. 
+    </p>
+    <p>
+      Prove: the Cantor set is nonempty, Hausdorff, compact, <term>perfect</term> (closed and all points of <m>\mathcal{C}</m> are limit points of <m>\mathcal{C}</m>), and <term>totally disconnected</term> (the connected components of <m>\mathcal{C}</m> are singletons).  
+    </p>
+    <proof>
+      <p>
+        Since <m>[0,1]</m> is compact, and since <m>\{C_n\}_{n=0}^\infty</m> is a collection of nested nonempty closed sets, we know by <xref ref="cor_finite_intersection"/> that <m>\mathcal{C}\ne \emptyset</m>.  Since each <m>C_n</m> is clearly closed, <m>\mathcal{C}=\bigcap_{n=1}^\infty C_n</m> is closed and bounded, hence compact. Since <m>\mathcal{C}</m> is a subspace of a Hausdorff space, it is Hausdorff. 
+      </p>
+      <p>
+        We show that <m>\mathcal{C}</m> is perfect. We know already that <m>\mathcal{C}</m> is closed. Given any <m>x\in \mathcal{C}</m> and <m>\epsilon &gt; 0</m>, pick <m>N\in \Z_+</m> such that <m>1/3^N&lt; \epsilon</m>. Since <m>x\in C_{N}</m>, we have <m>x\in I=[a_k/3^N, (a_k+1)/3^N]</m> for some <m>a_k\in \{0,1,\dots, 3^N-1\}</m>. Let <m>J, K</m> be the two subintervals of <m>I</m> remaining after deleting its middle third. Assume without loss of generality that <m>x\in J</m>. The collection <m>\{C_n\cap K\}_{n=1}^\infty</m> is itself a family of nested, closed and nonempty subsets of <m>[0,1]</m>. Again by compactness, there is an element <m>y\in \bigcap_{n=0}^\infty (C_n\cap K)\subseteq \mathcal{C}</m>. Since <m>x,y\in I</m>, we have <m>d(x,y)\leq 1/3^N&lt; \epsilon</m>. Since <m>x\in J</m> and <m>y\in K</m>, and since <m>J\cap K=\emptyset</m>, we have <m>x\ne y</m>. 
+      </p>
+      <p>
+        We prove <m>\mathcal{C}</m> is totally disconnected. Let <m>A</m> be any subset of <m>\mathcal{C}</m> containing two distinct elements <m>x</m> and <m>y</m>. We will find a separation of <m>A</m>. Since <m>x\ne y</m>, we can find an <m>n</m> and disjoint intervals <m>I_{n,j}=[a_j/3^n, (a_j+1)/3^n], I_{n,k}=[a_k/3^n, (a_k+1)/3^n]</m> such that <m>x\in I_{n,j}</m> and <m>y\in I_{n,k}</m>: otherwise we would have <m>d(x,y)\leq 1/3^n</m> for all <m>n</m>, which would imply <m>d(x,y)=0</m>. Assume without loss of generality that <m>a_j&lt; a_k</m>, and let <m>b</m> be any element between <m>a_j</m> and <m>a_k</m> that does not lie in <m>C_n</m>. The open sets <m>U=A\cap [0,b)</m> and <m>V=A\cap (b,1]</m> form a separation of <m>A</m>, proving it is not connected. We conclude that the only connected subsets of <m>\mathcal{C}</m> are singletons, and thus that the connected components are singletons.  
+      </p>
+    </proof>
+    
+  </project>
   
   </section>

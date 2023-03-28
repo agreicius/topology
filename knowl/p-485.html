@@ -13,14 +13,15 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">It is enough to prove (2), since it clearly implies (1). The maps <span class="process-math">\(\pi_j\)</span> are continuous in a topology <span class="process-math">\(\mathcal{T}\)</span> if and only if for all <span class="process-math">\(j\in I\)</span> and open <span class="process-math">\(U_j\subseteq X_j\)</span> the preimage <span class="process-math">\(\pi_j^{-1}(U_j)=U_j\times \prod_{i\ne j}X_i\)</span> is open in <span class="process-math">\(\mathcal{T}\text{.}\)</span> Next it clear that <span class="process-math">\(U_j\times \prod_{i\ne j}X_i\)</span> is open in <span class="process-math">\(\mathcal{T}\)</span> for all <span class="process-math">\(j\in J\)</span> if and only if</div>
+<div class="para">For the next inclusion, take any open set <span class="process-math">\(U\)</span> in the uniform topology. For any <span class="process-math">\(x\in U\)</span> we can find <span class="process-math">\(\epsilon &gt; 0\)</span> such that <span class="process-math">\(B_{\epsilon}(x)\subseteq U\text{.}\)</span> Let <span class="process-math">\(V=\prod_{i\in I}(x_i-\epsilon/2, x_i+\epsilon/2)\text{,}\)</span> which is open in the box topology. Given any <span class="process-math">\(y=(y_i)\in V\text{,}\)</span> we have <span class="process-math">\(\overline{d}(y_i, x_i)\leq \abs{y_i-x_i}&lt; \epsilon/2\text{.}\)</span> It follows that in the uniform metric we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\cap_{k=1}^nU_{j_k}\times \prod_{i\ne j_k}X_i=\prod_{k=1}^n U_{j_k}\times \prod_{i\ne j_k}X_i
+d_{\operatorname{uni}}(y,x)=\sup\{\overline{d}(y_i, x_i)\}\leq \epsilon/2&lt; \epsilon\text{,}
 \end{equation*}
 </div>
-<div class="para">is open for any finite set <span class="process-math">\(\{j_1, j_2,\dots, j_n\}\subseteq I\text{.}\)</span> Since these sets form a basis for the product topology, we conclude that the projections are all continuous if and only if <span class="process-math">\(\mathcal{T}\)</span> is finer than the product topology.</div>
+<div class="para">showing that <span class="process-math">\(V\subseteq B_\epsilon(x)\subseteq U\text{.}\)</span> This proves <span class="process-math">\(\mathcal{T}_{\operatorname{uni}}\subseteq  \mathcal{T}_{\operatorname{box}}\text{.}\)</span>
 </div>
-<span class="incontext"><a href="s_continuous.html#p-485" class="internal">in-context</a></span>
+</div>
+<span class="incontext"><a href="s_prods_convergence_metric.html#p-485" class="internal">in-context</a></span>
 </body>
 </html>

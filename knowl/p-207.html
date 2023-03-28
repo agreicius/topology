@@ -13,16 +13,16 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">It is clear that each collection of interval types covers <span class="process-math">\(\R\)</span> in the sense of axiom (1). As for axiom (2), for each <span class="process-math">\(\mathcal{B}_i\text{,}\)</span> <span class="process-math">\(1\leq i\leq 3\text{,}\)</span> note that intersection of these types of intervals are either empty, or another interval of the same type. This is a result of the fact that</div>
+<div class="para">Let <span class="process-math">\(\{U_i\}_{i\in I}\)</span> be any collection of elements of <span class="process-math">\(\mathcal{T}\text{:}\)</span> i.e., for all <span class="process-math">\(i\in I\)</span> we have <span class="process-math">\(U_i=\emptyset\)</span> or <span class="process-math">\(U_i\)</span> is cofinite in <span class="process-math">\(X\text{.}\)</span> Let <span class="process-math">\(U=\bigcup_{i\in I}U_i\text{.}\)</span> If <span class="process-math">\(U_i=\emptyset\)</span> for all <span class="process-math">\(i\in I\text{,}\)</span> then <span class="process-math">\(U=\emptyset\in \mathcal{T}\text{.}\)</span> Otherwise there is an <span class="process-math">\(i_0\in I\)</span> such that <span class="process-math">\(U_{i_0}\)</span> is nonempty, hence cofinite. We have</div>
 <div class="displaymath process-math">
 \begin{align*}
-(a,b)\cap (c,d)\amp = \left(\max(a,c),\min(b,d)\right) \\
-[a,b)\cap [c,d) \amp = \left [\max{a,c}, \min(b,d)\right) \text{,}
+U^c \amp = \left( \bigcup_{i\in I}U_i\right)^c \\
+\amp = \bigcap_{i\in I} U_i^c  \amp (\text{DeMorgan's law})\\
+\amp \subseteq U_{i_0}^c\text{.}
 \end{align*}
 </div>
-<div class="para">where the interval described on the right is understood to be the empty set if <span class="process-math">\(\max(a,c)\geq \min(b,d)\text{.}\)</span>
+<div class="para">Since <span class="process-math">\(U_{i_0}^c\)</span> is finite, it follows that <span class="process-math">\(U^c\)</span> is finite. It follows that <span class="process-math">\(U\)</span> is cofinite, and hence an element of <span class="process-math">\(\mathcal{T}\)</span> as desired.</div>
 </div>
-</div>
-<span class="incontext"><a href="s_bases_top.html#p-207" class="internal">in-context</a></span>
+<span class="incontext"><a href="s_top_spaces.html#p-207" class="internal">in-context</a></span>
 </body>
 </html>

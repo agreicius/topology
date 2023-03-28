@@ -11,16 +11,19 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">The function <span class="process-math">\(d\colon X\times X\rightarrow \R\)</span> defined as</div>
+<div class="para">Why is the claim true? An element of <span class="process-math">\(\mathcal{B}\)</span> is either of the form <span class="process-math">\(I\)</span> or <span class="process-math">\(I-K\text{,}\)</span> where <span class="process-math">\(I=(a,b)\)</span> is an open interval. There are then three different cases describing intersections of two elements, as shown below. Here <span class="process-math">\(I_1, I_2\)</span> denote finite open intervals.</div>
 <div class="displaymath process-math">
-\begin{equation*}
-d(\boldx,\boldy)=\abs{x_1-y_1}+\abs{x_2-y_2}+\dots +\abs{x_n-y_n}
-\end{equation*}
+\begin{align*}
+I_1\cap I_2 \amp \\
+(I_1-K)\cap I_2\amp =I_1\cap I_2-K\cap I_2=I_1\cap I_2-K \\
+(I_1-K)\cap (I_2-K) \amp= (I_1-K)\cap I_2 - K\cap (I_2-K)\\
+\amp = I_1\cap I_2-K\text{.}
+\end{align*}
 </div>
-<div class="para">is a metric, called the <dfn class="terminology">taxicab metric</dfn>.</div>
+<div class="para">As we have already remarked, <span class="process-math">\(I_1\cap I_2\)</span> is either empty or a finite open interval <span class="process-math">\(I\text{.}\)</span> The claim now follows easily.</div>
 </div>
-<span class="incontext"><a href="s_metric1.html#p-257" class="internal">in-context</a></span>
+<span class="incontext"><a href="s_bases_top.html#p-257" class="internal">in-context</a></span>
 </body>
 </html>

@@ -12,23 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical">
-<div class="para">True to its name, an <span class="process-math">\(\epsilon\)</span>-ball around <span class="process-math">\(\boldx\in \R^n\)</span> is the open <span class="process-math">\(n\)</span>-cube</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/d_cartesian_product.html">
-\begin{equation*}
-\prod_{i=1}^n (x_i-\epsilon, x_i+\epsilon)\text{.}
-\end{equation*}
-</div>
-<div class="para">(Note that the product here is the Cartesian product of these intervals. (See <a href="" class="xref" data-knowl="./knowl/d_cartesian_product.html" title="Definition 0.1.12: Cartesian product (finite)">Definition 0.1.12</a>.)) Indeed, we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/d_cartesian_product.html">
-\begin{align*}
-\boldy\in B_\epsilon(\boldx) \amp \iff \max\{\abs{x_i-y_i}\}_{i=1}^n&lt; \epsilon \\
-\amp \iff \abs{x_i-y_i}&lt; \epsilon \text{ for all } 1\leq i\leq n\\
-\amp \iff y_i\in (x_i-\epsilon, x_i+\epsilon) \text{ for all } 1\leq i\leq n\\
-\amp \iff \boldy\in \prod_{i=1}^n (x_i-\epsilon, x_i+\epsilon)\text{.}
-\end{align*}
-</div>
-</div>
-<span class="incontext"><a href="s_metric1.html#p-266" class="internal">in-context</a></span>
+<div class="para">Assume for that for all <span class="process-math">\(U\in \mathcal{T}\)</span> and <span class="process-math">\(x\in U\)</span> there is an element <span class="process-math">\(B\in \mathcal{B}\)</span> such that <span class="process-math">\(x\in B\subseteq U\text{.}\)</span> Taking <span class="process-math">\(U=X\)</span> we see in particular that for all <span class="process-math">\(x\in X\)</span> there is a <span class="process-math">\(B\in \mathcal{B}\)</span> such that <span class="process-math">\(x\in B\text{.}\)</span> Thus <span class="process-math">\(\mathcal{B}\)</span> satisfies axiom (1) for a basis. Next, let <span class="process-math">\(B_1, B_2\in \mathcal{B}\)</span> and take <span class="process-math">\(x\in B_1\cap B_2\text{.}\)</span> Since <span class="process-math">\(B_1, B_2\in \mathcal{T}\)</span> are open, so is <span class="process-math">\(U=B_1\cap B_2\text{.}\)</span> Our assumption now implies that there is a <span class="process-math">\(B\in \mathcal{B}\)</span> such that <span class="process-math">\(x\in B\subseteq U=B_1\cap B_2\text{.}\)</span> Thus axiom (2) of <a href="" class="xref" data-knowl="./knowl/d_basis.html" title="Definition 2.2.1: Topological basis">Definition 2.2.1</a> holds, and we condlude <span class="process-math">\(\mathcal{B}\)</span> is a basis.</div>
+<span class="incontext"><a href="s_bases_top.html#p-266" class="internal">in-context</a></span>
 </body>
 </html>

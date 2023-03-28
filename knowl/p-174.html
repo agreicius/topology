@@ -12,7 +12,42 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Let <span class="process-math">\(\mathcal{T}=\{\emptyset, X\}\text{.}\)</span> By definition the given <span class="process-math">\(\mathcal{T}\)</span> contains <span class="process-math">\(\emptyset\)</span> and <span class="process-math">\(X\text{,}\)</span> and thus axiom (1) is satisfied. Since any union or intersection involving <span class="process-math">\(\emptyset\)</span> and <span class="process-math">\(X\)</span> is equal to either <span class="process-math">\(\emptyset\)</span> or <span class="process-math">\(X\text{,}\)</span> it is clear that <span class="process-math">\(\mathcal{T}\)</span> is closed under arbitrary unions and finite intersections. Thus axioms (2)-(3) are satisfied.</div>
-<span class="incontext"><a href="s_top_spaces.html#p-174" class="internal">in-context</a></span>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(X\)</span> be a topological space. For any element <span class="process-math">\(x\in X\text{,}\)</span> we let <span class="process-math">\(e_x\colon I\rightarrow X\)</span> denote the constant function <span class="process-math">\(e_x(s)=x\)</span> for all <span class="process-math">\(s\in I\text{.}\)</span>
+</div>
+<ol class="decimal">
+<li>
+<span class="heading"><span class="title">Associativity.</span></span><div class="para logical">
+<div class="para">If <span class="process-math">\(f\in P(X; x_0,x_1), g\in P(X; x_1,x_2), h\in P(X; x_2,x_3)\text{,}\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+[f]*([g]*[h])=([f]*[g])*[h]\text{.}
+\end{equation*}
+</div>
+</div>
+</li>
+<li>
+<span class="heading"><span class="title">Identities.</span></span><div class="para logical">
+<div class="para">Given <span class="process-math">\(f\in P(X; x_0, x_1)\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+[e_{x_0}]*[f]=[f]*[e_{x_1}]=[f].
+\end{equation*}
+</div>
+</div>
+</li>
+<li>
+<span class="heading"><span class="title">Inverses.</span></span><div class="para logical">
+<div class="para">Given <span class="process-math">\(f\in P(X; x_0,x_1)\text{,}\)</span> let <span class="process-math">\(\overline{f}\in P(X; x_1,x_0)\)</span> be its <dfn class="terminology">reverse</dfn>: i.e., <span class="process-math">\(\overline{f}(s)=f(1-s)\text{.}\)</span> We have</div>
+<div class="displaymath process-math">
+\begin{align*}
+[f]*[\overline{f}] \amp =[e_{x_0}] \amp [\overline{f}]*[f]=[e_{x_1}]\text{.}
+\end{align*}
+</div>
+</div>
+</li>
+</ol>
+</div>
+<span class="incontext"><a href="s_homotopy.html#p-174" class="internal">in-context</a></span>
 </body>
 </html>

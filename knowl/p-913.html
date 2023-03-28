@@ -12,25 +12,8 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical">
-<div class="para">Let <span class="process-math">\(R\)</span> denote a binary relation on the set <span class="process-math">\(I\text{.}\)</span> We write <span class="process-math">\(iRj\)</span> to assert that the relation <span class="process-math">\(R\)</span> holds between elements <span class="process-math">\(i,j\in I\text{.}\)</span> The relation <span class="process-math">\(R\)</span> is a <dfn class="terminology">partial ordering</dfn> if it satisfies the following three axioms.</div>
-<ul class="disc">
-<li>
-<span class="heading"><span class="title">Reflexive (PO1).</span></span><div class="para">For all <span class="process-math">\(i\in I\text{,}\)</span> we have <span class="process-math">\(iRi\text{.}\)</span>
+<div class="para">Implication: <span class="process-math">\((\Rightarrow)\text{.}\)</span> Assume <span class="process-math">\(X\)</span> is completely regular. Recall that in particular this means <span class="process-math">\(X\)</span> is <span class="process-math">\(T_1\text{.}\)</span> Define <span class="process-math">\(I\)</span> to be the set of all pairs <span class="process-math">\((x, U)\)</span> where <span class="process-math">\(x\in X\)</span> and <span class="process-math">\(U\)</span> is an open neighborhood of <span class="process-math">\(x\text{.}\)</span> For each <span class="process-math">\(i=(x,U)\text{,}\)</span> let <span class="process-math">\(f_i\colon X\rightarrow [0,1]\)</span> be a function satisfying <span class="process-math">\(f(x)=1\)</span> and <span class="process-math">\(f(X-U)=\{0\}\text{.}\)</span> (Such a function exists since <span class="process-math">\(X\)</span> is completely regular.) Now, for all <span class="process-math">\(x\in X\)</span> and for all open sets <span class="process-math">\(U\)</span> containing <span class="process-math">\(x\text{,}\)</span> corresponding to the index <span class="process-math">\(i=(x,U)\)</span> we have the function <span class="process-math">\(f_i\)</span> which satisfies <span class="process-math">\(f_i(x)=1&gt; 0\)</span> and <span class="process-math">\(f_i(X-U)=\{0\}\text{.}\)</span> We conclude by <a href="" class="xref" data-knowl="./knowl/th_embedding_theorem.html" title="Theorem 2.22.2: Embedding theorem">Theorem 2.22.2</a> that the map <span class="process-math">\(f(x)=(f_i(x))_{i\in I}\)</span> is an embedding of <span class="process-math">\(X\)</span> into <span class="process-math">\(\R^I\text{,}\)</span> and thus that <span class="process-math">\(X\)</span> is homeomorphic to a subspace of <span class="process-math">\(\R^I\text{.}\)</span>
 </div>
-</li>
-<li>
-<span class="heading"><span class="title">Transitive (PO2).</span></span><div class="para">For all <span class="process-math">\(i,j,k\in I\text{,}\)</span> if <span class="process-math">\(iRj\)</span> and <span class="process-math">\(jRk\text{,}\)</span> then <span class="process-math">\(iRk\text{.}\)</span>
-</div>
-</li>
-<li>
-<span class="heading"><span class="title">Antisymmetric (PO3).</span></span><div class="para">For all <span class="process-math">\(i,j\in I\text{,}\)</span> if <span class="process-math">\(iRj\)</span> and <span class="process-math">\(jRi\text{,}\)</span> then <span class="process-math">\(i=j\text{.}\)</span>
-</div>
-</li>
-</ul>
-<div class="para">The relation <span class="process-math">\(R\)</span> is a <dfn class="terminology">quasiordering</dfn> (or <dfn class="terminology">preordering</dfn>) if it satisfies axioms PO1 and PO2. When <span class="process-math">\(R\)</span> is a partial ordering or a quasiordering, we will often write <span class="process-math">\(i\leq j\)</span> for <span class="process-math">\(iRj\text{.}\)</span>
-</div>
-</div>
-<span class="incontext"><a href="s_nets.html#p-913" class="internal">in-context</a></span>
+<span class="incontext"><a href="s_Urysohn_metrization.html#p-913" class="internal">in-context</a></span>
 </body>
 </html>

@@ -401,7 +401,7 @@ window.MathJax = {
 </h2>
 <article class="convention remark-like" id="convention-1"><h3 class="heading">
 <span class="type">Notation</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(I=[0,1]\)</span>.</span>
-</h3> <div class="para" id="p-157">Throught this course <span class="process-math">\(I\)</span> will denote the interval <span class="process-math">\([0,1]\text{.}\)</span>
+</h3> <div class="para" id="p-157">Throughout this course <span class="process-math">\(I\)</span> will denote the interval <span class="process-math">\([0,1]\text{.}\)</span>
 </div></article><article class="definition definition-like" id="d_homotopy"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Homotopy of maps.</span>
 </h3> <div class="para logical" id="p-158">
@@ -468,16 +468,17 @@ F(1,t)\amp =(1-t)f(1)+tg(1)=(1-t)\boldx_1+t\boldx_1=\boldx_1 \text{.}
 <div class="displaymath process-math" id="md-23">
 \begin{align*}
 f\colon [0,1] \amp \rightarrow A \amp  g\colon [0,1]\amp \rightarrow A\\
-s \amp \mapsto (\cos 2\pi s, \sin 2\pi s)\amp s\amp \mapsto (1,0)\text{.}
+s \amp \mapsto (\cos (2\pi s), \sin (2\pi s))\amp s\amp \mapsto (1,0)\text{.}
 \end{align*}
 </div>
-<div class="para">Both <span class="process-math">\(f, g\)</span> are paths that begin and end at <span class="process-math">\((1,0)\text{;}\)</span> yet is intuitively clear that <span class="process-math">\(f\)</span> cannot be continuously deformed to <span class="process-math">\(g\)</span> without passing through the origin <span class="process-math">\((0,0)\)</span> at some point. In other words, the two paths are not path homotopic. This is surprisingly difficult to prove rigorously; we will get to this in the coming sections.</div>
+<div class="para">Both <span class="process-math">\(f, g\)</span> are paths that begin and end at <span class="process-math">\((1,0)\text{;}\)</span> it is intuitively clear that <span class="process-math">\(f\)</span> cannot be continuously deformed to <span class="process-math">\(g\)</span> (while staying tethered at <span class="process-math">\((1,0)\)</span>) without passing through the origin <span class="process-math">\((0,0)\)</span> at some point. In other words, the two paths are not path homotopic. This is surprisingly difficult to prove rigorously; we will get to this in the coming sections. On the other hand <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are in fact homotopic: consider <span class="process-math">\(F(s,t)=\left(\cos(2\pi(1-t)s),\sin(2\pi(1-t)s)\right)\)</span>
+</div>
 </div> <div class="para logical" id="p-166">
 <div class="para">Interestingly, the situation is different if we take <span class="process-math">\(A=\R^3-\{(0,0,0)\}\)</span> and</div>
 <div class="displaymath process-math" id="md-24">
 \begin{align*}
 f\colon [0,1] \amp \rightarrow A \amp  g\colon [0,1]\amp \rightarrow A\\
-s \amp \mapsto (\cos 2\pi s, \sin 2\pi s,0)\amp s\amp \mapsto (1,0,0)\text{.}
+s \amp \mapsto (\cos (2\pi s), \sin (2\pi s),0)\amp s\amp \mapsto (1,0,0)\text{.}
 \end{align*}
 </div>
 <div class="para">Visually describe a path homotopy <span class="process-math">\(F\)</span> from <span class="process-math">\(f\)</span> to <span class="process-math">\(g\text{,}\)</span> and then see if you can explicitly write down a formula for <span class="process-math">\(F\text{.}\)</span>

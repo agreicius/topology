@@ -3,7 +3,7 @@
   <convention>
     <title><m>I=[0,1]</m></title>
     <p>
-        Throught this course <m>I</m> will denote the interval <m>[0,1]</m>.
+        Throughout this course <m>I</m> will denote the interval <m>[0,1]</m>.
     </p>
   </convention>
   <definition xml:id="d_homotopy">
@@ -82,15 +82,15 @@
         Consider the the nonconvex set <m>A=\R^2-\{(0,0)\}</m> and the paths 
         <md>
             <mrow>f\colon [0,1] \amp \rightarrow A \amp  g\colon [0,1]\amp \rightarrow A</mrow>
-            <mrow>s \amp \mapsto (\cos 2\pi s, \sin 2\pi s)\amp s\amp \mapsto (1,0)</mrow>
+            <mrow>s \amp \mapsto (\cos (2\pi s), \sin (2\pi s))\amp s\amp \mapsto (1,0)</mrow>
         </md>.
-        Both <m>f, g</m> are paths that begin and end at <m>(1,0)</m>; yet is intuitively clear that <m>f</m> cannot be continuously deformed to <m>g</m> without passing through the origin <m>(0,0)</m> at some point. In other words, the two paths are not path homotopic. This is surprisingly difficult to prove rigorously; we will get to this in the coming sections. 
+        Both <m>f, g</m> are paths that begin and end at <m>(1,0)</m>; it is intuitively clear that <m>f</m> cannot be continuously deformed to <m>g</m> (while staying tethered at <m>(1,0)</m>) without passing through the origin <m>(0,0)</m> at some point. In other words, the two paths are not path homotopic. This is surprisingly difficult to prove rigorously; we will get to this in the coming sections. On the other hand <m>f</m> and <m>g</m> are in fact homotopic: consider <m>F(s,t)=\left(\cos(2\pi(1-t)s),\sin(2\pi(1-t)s)\right)</m> 
     </p>
     <p>
         Interestingly, the situation is different if we take <m>A=\R^3-\{(0,0,0)\}</m> and 
         <md>
             <mrow>f\colon [0,1] \amp \rightarrow A \amp  g\colon [0,1]\amp \rightarrow A</mrow>
-            <mrow>s \amp \mapsto (\cos 2\pi s, \sin 2\pi s,0)\amp s\amp \mapsto (1,0,0)</mrow>
+            <mrow>s \amp \mapsto (\cos (2\pi s), \sin (2\pi s),0)\amp s\amp \mapsto (1,0,0)</mrow>
         </md>.
         Visually describe a path homotopy <m>F</m> from <m>f</m> to <m>g</m>, and then see if you can explicitly write down a formula for <m>F</m>. 
     </p>

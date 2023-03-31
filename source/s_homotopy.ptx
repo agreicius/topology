@@ -78,7 +78,8 @@
   </example>
   <example xml:id="eg_homotopy_nonconvex">
     <title>Paths with non-convex codomain</title>
-    <p>
+    <statement>
+        <p>
         Consider the the nonconvex set <m>A=\R^2-\{(0,0)\}</m> and the paths 
         <md>
             <mrow>f\colon [0,1] \amp \rightarrow A \amp  g\colon [0,1]\amp \rightarrow A</mrow>
@@ -92,8 +93,33 @@
             <mrow>f\colon [0,1] \amp \rightarrow A \amp  g\colon [0,1]\amp \rightarrow A</mrow>
             <mrow>s \amp \mapsto (\cos (2\pi s), \sin (2\pi s),0)\amp s\amp \mapsto (1,0,0)</mrow>
         </md>.
-        Visually describe a path homotopy <m>F</m> from <m>f</m> to <m>g</m>, and then see if you can explicitly write down a formula for <m>F</m>. 
-    </p>
+         Intuitively, it seems we should be able to <q>lift</q> the graph of <m>f</m> up over the origin, then shrink it down to the point <m>(1,0,0)</m>.  Here is one explicit realization of this idea. Consider the family of curves <m>C_t</m> lying on the upper hemisphere of <m>S^2: x^2+y^2+z^2=1</m>, whose projection onto the <m>xy</m>-plane is the circle <m>(x-t)^2+y^2=(1-t)^2</m>. Such a curve has parametrization 
+            <me>
+                C_t(s)=\left(t+(1-t)\cos 2\pi s, (1-t)\sin 2\pi s, \sqrt{1-(t+(1-t)\cos 2\pi s)^2+(1-t)\sin 2\pi s)^2}\right)
+            </me>,
+            giving rise to a path homotopy <m>H(s,t)=C_t(s)</m> from <m>f</m> to <m>g</m>. The Sage cell below provides a nice visualization of this family of curves. 
+            <sage>
+                <input>
+                    var('s t')
+f(t,s)=t+(1-t)*cos(2*pi*s)
+g(t,s)=(1-t)*sin(2*pi*s)
+q(t,s)=sqrt(1-(f(t,s))^2-(g(t,s))^2)
+r(t,s)=[f(t,s),g(t,s),q(t,s)]
+u(t,s)=[f(t,s),g(t,s),0]
+P=sum(parametric_plot3d(u(n/8,s),(s,0,1), color='red') for n in [0..8])
+Q=sum(parametric_plot3d(r(n/8,s),(s,0,1), color='blue') for n in [1..8])
+R=sphere(opacity=.2, color="green")
+P+Q+R
+                </input>
+                <output>
+                    (for static output)
+                </output>
+            </sage>
+            
+            
+        </p>
+    </statement>
+
   </example>
   <theorem xml:id="th_homotopy_equivalence">
     <title>Homotopy equivalence relation</title>
@@ -114,6 +140,46 @@
             </ol>
         </p>
     </statement>
+    <proof>
+        <p>
+            We give a proof for (a). It is then easy to check that the same homotopies provided in this proof are path homotopies (<ie/>, satisfy <m>F(0,t)=x_0, F(1,t)=x_1</m>) in the context of paths in <m>P(X; x_0,x_1)</m>. 
+        </p>
+        <case>
+            <title>Reflexive</title>
+            <p>
+                Given a continuous function <m>f\colon X\rightarrow Y</m>, the map defined as <m>F(x,t)=f(x)</m> for all <m>(x,t)\in X\times I</m> is clearly a homotopy from <m>f</m> to <m>f</m>.
+            </p>
+        </case>
+        <case>
+            <title>Symmetric</title>
+            <p>
+                Let <m>f,g</m> be continuous maps from <m>X</m> to <m>Y</m>, and assume <m>f\simeq g</m>. By definition this means there is a homotopy <m>F\colon X\rightarrow I\rightarrow Y</m> from <m>f</m> to <m>g</m>, so that in particular <m>F(x,0)=f(x), F(x,1)=g(x)</m> for all <m>x\in X</m>. Define <m>G\colon X\rightarrow I\rightarrow Y</m> as <m>G(x,t)=F(x,1-t)</m>. It is clear that <m>G</m> is continuous, and we have 
+                <md>
+                    <mrow>G(x,0) \amp = F(x,1)=g(x) \amp G(x,1)\amp =F(x,0)=f(x)</mrow>
+                </md>.
+                Thus <m>G</m> is a homotopy from <m>g</m> to <m>f</m>, showing <m>g\simeq f</m>.  
+            </p>
+        </case>
+        <case>
+            <title>Transitive</title>
+        <p>
+            Let <m>f,g,h</m> be continuous maps from <m>X</m> to <m>Y</m>. We assume <m>f\simeq g</m> and <m>g\simeq h</m>. By definition there is a homotopy <m>F</m> from <m>f</m> to <m>g</m>, and a homotopy <m>G</m> from <m>g</m> to <m>h</m>. Define  
+            <md>
+                <mrow>H(x,t) \amp =\begin{cases}
+                   F(x,2t) \amp \text{if } t\in [0,1/2]\\
+                    G(x,2t) \amp \text{if } t\in [1/2, 1]
+                \end{cases}
+                </mrow>
+            </md>.
+        The functions <m>F(x,2t)</m> and <m>G(x,2t-1)</m> are continuous on the closed sets <m>X\times [0,1/2]</m> and <m>X\times [1/2, 1]</m>, respectively, and agree on the intersection <m>X\times \{1/2\}</m> since <m>F(x,2(1/2))=F(x,1)=g(x)</m> and <m>G(x,2(1/2)-1)=G(x,0)=g(x)</m> for all <m>x\in X</m>, by definition of homotopy. By the closed pasting lemma, we conclude that <m>H</m> is well-defined and continuous. Lastly, we have 
+        <md>
+            <mrow>H(x,0) \amp =F(x,0)=f(x)</mrow>
+            <mrow>H(x,1) \amp =G(x,1)=g(x)</mrow>   
+        </md>
+        for all <m>x\in X</m>. 
+        </p>
+        </case>
+    </proof>
   </theorem>
   <convention>
     <title>Homotopy equivalence</title>
@@ -142,9 +208,62 @@
             </me>.
         </p>
         <p>
-            The function <m>f*g</m> defined is a path from <m>x_0</m> to <m>x_1</m>. Furthermore, if <m>f\simeq_p f'</m> and <m>g\simeq_p g'</m>, then <m>f*g\simeq f'*g'</m>. 
+            The function <m>f*g</m> defined is a path from <m>x_0</m> to <m>x_2</m>. Furthermore, if <m>f\simeq_p f'</m> and <m>g\simeq_p g'</m>, then <m>f*g\simeq f'*g'</m>. In other words, we get a well-defined operation on homotopy classes defined as 
+            <me>
+                [f]*[g]=[f*g]
+            </me>.  
         </p>
     </statement>
+    <proof>
+        <p>
+            It is easy to see, using the closed pasting lemma, that <m>f*g</m> is well-defined and continuous. We show that it is well-defined on homotopy classes, as claimed. 
+        </p>
+        <p>
+            Suppose that <m>f\simeq_p f'</m> as witnessed by the path homotopy <m>F</m>, and that <m>g\simeq g'</m> as witnessed by the path homotopy <m>G</m>. Define
+            <md>
+                <mrow>H(s,t) \amp =
+                    \begin{cases}
+                    F(2s,t)\amp \text{if } s\in [0,1/2]\\
+                    G(2s-1,t)\amp \text{if } s\in [1/2, 1]
+                    \end{cases}
+                </mrow>
+            </md>.
+            Note first that <m>F(2(1/2),t)=F(1,t)=x_1</m> and <m>G(2(1/2)-1,t)=G(0,t)=x_1</m>, since <m>F</m> and <m>G</m> are path homotopies. Since <m>F(2s,t)</m> is continuous on <m>[0,1/2]\times I</m> and <m>G(2s-1,t)</m> is continuous on <m>[1/2,1]\times I</m>, and since they agree on the intersection of these sets, the closed pasting lemma implies <m>H</m> is a well-defined continuous function. 
+        </p>
+        <p>
+            Next, we have 
+            <md>
+                <mrow>H(s,0) \amp =\begin{cases}
+                    F(2s,0)\amp \text{if } s\in [0,1/2]\\
+                    G(2s-1,0)\amp \text{if } s\in [1/2, 1]
+                </mrow>
+                <mrow> \amp =\begin{cases}
+                    f(2s)\amp \text{if } s\in [0,1/2]\\
+                    g(2s-1)\amp \text{if } s\in [1/2, 1] 
+                </mrow>
+                <mrow> \amp =f*g(s)</mrow>
+                <mrow>H(s,1) \amp =\begin{cases}
+                    F(2s,1)\amp \text{if } s\in [0,1/2]\\
+                    G(2s-1,1)\amp \text{if } s\in [1/2, 1]
+                </mrow>
+                <mrow> \amp =\begin{cases}
+                    f'(2s)\amp \text{if } s\in [0,1/2]\\
+                    g'(2s-1)\amp \text{if } s\in [1/2, 1] 
+                </mrow>
+                <mrow> \amp =f'*g'(s)</mrow>
+            </md>,
+            showing that <m>H</m> is a homotopy from <m>f*g</m> to <m>f'*g'</m>. 
+        </p>
+        <p>
+            Lastly, we have
+            <md>
+                <mrow>H(0,t) \amp =F(0,t)=x_0
+                </mrow>
+                <mrow>H(1,t) \amp =G(2(1)-1,t)=G(1,t)=x_2</mrow>
+            </md>
+            for all <m>t\in I</m>, showing that <m>H</m> is a path homotopy. 
+        </p>
+    </proof>
   </definition>
   <theorem xml:id="th_path_product_props">
     <title>Path product properties</title>
@@ -185,6 +304,40 @@
         </p>
     </statement>
   </theorem>
+  <lemma xml:id="lemma_homotopy_reparameter">
+    <title>Reparametrization of path</title>
+    <statement>
+        <p>
+           Let <m>f\in P(X; x_0, x_1)</m>. If <m>\phi\colon I\rightarrow I</m> is a continuous map satisfying <m>\phi(0)=1</m> and <m>\phi(1)=1</m>, then <m>f\simeq_p f\circ \phi</m>.  In other words, a <q>reparametrized</q> path is homotopic to the original path. 
+        </p>
+    </statement>
+    <proof>
+        <p>
+            Homework exercise. 
+        </p>
+    </proof>
+  </lemma>
+  <theorem xml:id="th_homotopy_partition">
+    <title>Partitions of <m>I</m></title>
+    <statement>
+        <p>
+            Let <m>f\in P(X; x_0,x_1)</m>, let 
+            <me>
+                0=a_0&lt; a_1 &lt; a_2 &lt; \dots &lt; a_n=1
+            </me>
+            be a subdivision of <m>I</m> into <m>n</m> subintervals <m>I_k=[a_{k-1}, a_k]</m>, <m>1\leq k\leq n</m>, and let <m>f_k=f\circ\phi_k</m>, where <m>\phi_k\colon I\rightarrow [a_{k-1}, a_k]</m> is any continuous map satisfying <m>\phi_k(0)=a_{k-1}</m> and <m>\phi_k(1)=a_k</m>. We have 
+            <me>
+                [f]=[f_1]*[f_2]*\cdots *[f_n]
+            </me>. 
+        </p>
+    </statement>
+    <proof>
+        <p>
+            Homework exercise. 
+        </p>
+    </proof>
+  </theorem>
+  
   
   
 </section>

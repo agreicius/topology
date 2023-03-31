@@ -12,7 +12,16 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">Axiom 1. Given <span class="process-math">\(x=(x_1,x_2,\dots, x_n)\in X\text{,}\)</span> we have <span class="process-math">\(x\in X_1\times X_2\times\cdots\times X_n\in \mathcal{B}\text{.}\)</span>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(C\subseteq Y\text{.}\)</span> We have</div>
+<div class="displaymath process-math">
+\begin{align*}
+C \text{ closed in } Y \amp \iff Y-C \text{ open in } Y \\
+\amp\iff Y-C=U\cap Y \text{ for some open } U\subseteq X\\
+\amp \iff C=(X-U)\cap Y \text{ for some open } U\subseteq X\\
+\amp \iff C=C'\cap Y \text{ for some closed } C'\subseteq X\text{.}
+\end{align*}
+</div>
 </div>
 <span class="incontext"><a href="s_subspace_finite_products.html#p-428" class="internal">in-context</a></span>
 </body>

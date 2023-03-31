@@ -11,13 +11,23 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><article class="hiddenproof"><div class="para logical">
-<div class="para">Assume <span class="process-math">\(X\)</span> is regular and second countable. Let <span class="process-math">\(\mathcal{B}=\{B_n\colon n\in \Z_+\}\)</span> be a countable basis for <span class="process-math">\(X\text{.}\)</span> Let <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> be disjoint closed sets. By regularity, for each <span class="process-math">\(a\in A\)</span> we can find disjoint open sets <span class="process-math">\(U, V\)</span> containing <span class="process-math">\(a\)</span> and <span class="process-math">\(B\)</span> respectively. Since <span class="process-math">\(\mathcal{B}\)</span> is a basis, we can find a basis element <span class="process-math">\(B_{n_a}\)</span> such that <span class="process-math">\(a\in B_{n_a}\subseteq \overline{B_{n_a}}\subseteq X-B\text{.}\)</span> The set of all such is a countable subset of <span class="process-math">\(\mathcal{B}\text{,}\)</span> giving rise to a countable cover <span class="process-math">\(A\subseteq \bigcup_{n=1}^\infty U_n\)</span> satisfying <span class="process-math">\(\overline{U_n}\subseteq X-B\)</span> for all <span class="process-math">\(n\text{.}\)</span> Similarly, we can construct an open covering <span class="process-math">\(B\subseteq \bigcup_{n=1}^\infty V_n\)</span> satisfying <span class="process-math">\(\overline{V_n}\subseteq X-A\)</span> for all <span class="process-math">\(n\text{.}\)</span> The corresponding open sets are not necessarily disjoint. However the sets <span class="process-math">\(U=\bigcup_{n=1}^\infty U_n'\)</span> and <span class="process-math">\(V=\bigcup_{n=1}^\infty V_n'\text{,}\)</span> where</div>
+<div class="para">Let <span class="process-math">\(A,B\)</span> be disjoint closed subsets of <span class="process-math">\(X\text{.}\)</span> For each <span class="process-math">\(a\in A\)</span> we can find an <span class="process-math">\(\epsilon_a&gt; 0 \)</span> such that <span class="process-math">\(B_{\epsilon_a}(a)\cap B=\emptyset\text{.}\)</span> Similarly for each <span class="process-math">\(b\in B\)</span> we can find an <span class="process-math">\(\epsilon_b&gt; 0\)</span> such that <span class="process-math">\(B_{\epsilon_b}(b)\cap A=\emptyset\text{.}\)</span> I claim the open sets</div>
 <div class="displaymath process-math">
 \begin{align*}
-U_n'\amp =U_n-\bigcup_{k=1}^n\overline{V_k} \amp 
-V_n'\amp =V_n-\bigcup_{k=1}^n\overline{U_k} \text{,}
+U \amp =\bigcup_{a\in A}B_{\epsilon_a/2}(a)\\
+V \amp =\bigcup_{b\in B}B_{\epsilon_b/2}(b)
 \end{align*}
 </div>
-<div class="para">still cover <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> respectively, are still open, and are disjoint.</div>
+<div class="para">are disjoint, proving <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are separated by open sets. Indeed if  <span class="process-math">\(x\in U\cap V\text{,}\)</span> then <span class="process-math">\(x\in B_{\epsilon_a/2}(a)\cap B_{\epsilon_b/2}(b)\)</span> for some <span class="process-math">\(a\in A\)</span> and <span class="process-math">\(b\in B\text{.}\)</span> Without loss of generality we may assume that <span class="process-math">\(\epsilon_a\geq \epsilon_b\text{.}\)</span> But then we would have</div>
+<div class="displaymath process-math">
+\begin{align*}
+d(x,b) \amp \geq d(a,b)-d(a,x) \amp (\text{triangle ineq.}) \\
+\amp \geq \epsilon_a-d(a,x) \amp (b\notin B_{\epsilon_a}(a))\\
+\amp \geq \epsilon_a/2\\
+\amp \geq \epsilon_b/2\text{.}
+\end{align*}
+</div>
+<div class="para">This is a contradiction since we assumed <span class="process-math">\(x\in B_{\epsilon_b/2}(b)\text{.}\)</span>
+</div>
 </div></article></body>
 </html>

@@ -12,7 +12,25 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">The function <span class="process-math">\(f*g\)</span> defined is a path from <span class="process-math">\(x_0\)</span> to <span class="process-math">\(x_1\text{.}\)</span> Furthermore, if <span class="process-math">\(f\simeq_p f'\)</span> and <span class="process-math">\(g\simeq_p g'\text{,}\)</span> then <span class="process-math">\(f*g\simeq f'*g'\text{.}\)</span>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(f,g,h\)</span> be continuous maps from <span class="process-math">\(X\)</span> to <span class="process-math">\(Y\text{.}\)</span> We assume <span class="process-math">\(f\simeq g\)</span> and <span class="process-math">\(g\simeq h\text{.}\)</span> By definition there is a homotopy <span class="process-math">\(F\)</span> from <span class="process-math">\(f\)</span> to <span class="process-math">\(g\text{,}\)</span> and a homotopy <span class="process-math">\(G\)</span> from <span class="process-math">\(g\)</span> to <span class="process-math">\(h\text{.}\)</span> Define</div>
+<div class="displaymath process-math">
+\begin{align*}
+H(x,t) \amp =\begin{cases}
+F(x,2t) \amp \text{if } t\in [0,1/2]\\
+G(x,2t) \amp \text{if } t\in [1/2, 1]
+\end{cases}\text{.}
+\end{align*}
+</div>
+<div class="para">The functions <span class="process-math">\(F(x,2t)\)</span> and <span class="process-math">\(G(x,2t-1)\)</span> are continuous on the closed sets <span class="process-math">\(X\times [0,1/2]\)</span> and <span class="process-math">\(X\times [1/2, 1]\text{,}\)</span> respectively, and agree on the intersection <span class="process-math">\(X\times \{1/2\}\)</span> since <span class="process-math">\(F(x,2(1/2))=F(x,1)=g(x)\)</span> and <span class="process-math">\(G(x,2(1/2)-1)=G(x,0)=g(x)\)</span> for all <span class="process-math">\(x\in X\text{,}\)</span> by definition of homotopy. By the closed pasting lemma, we conclude that <span class="process-math">\(H\)</span> is well-defined and continuous. Lastly, we have</div>
+<div class="displaymath process-math">
+\begin{align*}
+H(x,0) \amp =F(x,0)=f(x)\\
+H(x,1) \amp =G(x,1)=g(x)
+\end{align*}
+</div>
+<div class="para">for all <span class="process-math">\(x\in X\text{.}\)</span>
+</div>
 </div>
 <span class="incontext"><a href="s_homotopy.html#p-173" class="internal">in-context</a></span>
 </body>

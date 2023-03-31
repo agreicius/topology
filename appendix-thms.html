@@ -14,7 +14,7 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Math 344-1,2">
 <meta property="book:author" content="Aaron Greicius">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
@@ -26,6 +26,19 @@ window.MathJax = {
   options: {
     ignoreHtmlClass: "tex2jax_ignore|ignore-math",
     processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
   },
   chtml: {
     scale: 0.98,
@@ -411,6 +424,11 @@ window.MathJax = {
 <a href="" class="xref" data-knowl="./knowl/th_homotopy_equivalence.html" title="Theorem 1.1.9: Homotopy equivalence relation">Theorem 1.1.9</a> Homotopy equivalence relation</div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_path_product_props.html" title="Theorem 1.1.12: Path product properties">Theorem 1.1.12</a> Path product properties</div>
+<div>
+<a href="" class="xref" data-knowl="./knowl/lemma_homotopy_reparameter.html" title="Lemma 1.1.13: Reparametrization of path">Lemma 1.1.13</a> Reparametrization of path</div>
+<div>
+<a href="" class="xref" data-knowl="./knowl/th_homotopy_partition.html" title="Theorem 1.1.14: Partitions of I">Theorem 1.1.14</a> Partitions of <span class="process-math">\(I\)</span>
+</div>
 <h4 class="heading hide-type" title="Section 2.2: Bases for topological spaces">
 <span class="codenumber">2.2</span><span class="space"> </span><span class="title">Bases for topological spaces</span>
 </h4>

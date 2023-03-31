@@ -14,7 +14,7 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Math 344-1,2">
 <meta property="book:author" content="Aaron Greicius">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
@@ -26,6 +26,19 @@ window.MathJax = {
   options: {
     ignoreHtmlClass: "tex2jax_ignore|ignore-math",
     processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
   },
   chtml: {
     scale: 0.98,
@@ -44,7 +57,13 @@ window.MathJax = {
     )}
   },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({inputLocation: 'pre.sagecell-sage',
+                       linked: true,
+                       languages: ['sage'],
+                       evalButtonText: 'Evaluate (Sage)'});
+</script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
 <script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -463,7 +482,8 @@ F(1,t)\amp =(1-t)f(1)+tg(1)=(1-t)\boldx_1+t\boldx_1=\boldx_1 \text{.}
 <div class="para">Thus any two paths to <span class="process-math">\(A\)</span> between any two points <span class="process-math">\(\boldx_0, \boldx_1\in A\)</span> are path homotopic.</div>
 </div></article><article class="example example-like" id="eg_homotopy_nonconvex"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.8</span><span class="period">.</span><span class="space"> </span><span class="title">Paths with non-convex codomain.</span>
-</h3> <div class="para logical" id="p-165">
+</h3>
+<div class="para logical" id="p-165">
 <div class="para">Consider the the nonconvex set <span class="process-math">\(A=\R^2-\{(0,0)\}\)</span> and the paths</div>
 <div class="displaymath process-math" id="md-23">
 \begin{align*}
@@ -481,7 +501,23 @@ f\colon [0,1] \amp \rightarrow A \amp  g\colon [0,1]\amp \rightarrow A\\
 s \amp \mapsto (\cos (2\pi s), \sin (2\pi s),0)\amp s\amp \mapsto (1,0,0)\text{.}
 \end{align*}
 </div>
-<div class="para">Visually describe a path homotopy <span class="process-math">\(F\)</span> from <span class="process-math">\(f\)</span> to <span class="process-math">\(g\text{,}\)</span> and then see if you can explicitly write down a formula for <span class="process-math">\(F\text{.}\)</span>
+<div class="para">Intuitively, it seems we should be able to “lift” the graph of <span class="process-math">\(f\)</span> up over the origin, then shrink it down to the point <span class="process-math">\((1,0,0)\text{.}\)</span>  Here is one explicit realization of this idea. Consider the family of curves <span class="process-math">\(C_t\)</span> lying on the upper hemisphere of <span class="process-math">\(S^2: x^2+y^2+z^2=1\text{,}\)</span> whose projection onto the <span class="process-math">\(xy\)</span>-plane is the circle <span class="process-math">\((x-t)^2+y^2=(1-t)^2\text{.}\)</span> Such a curve has parametrization</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C_t(s)=\left(t+(1-t)\cos 2\pi s, (1-t)\sin 2\pi s, \sqrt{1-(t+(1-t)\cos 2\pi s)^2+(1-t)\sin 2\pi s)^2}\right)\text{,}
+\end{equation*}
+</div>
+<div class="para">giving rise to a path homotopy <span class="process-math">\(H(s,t)=C_t(s)\)</span> from <span class="process-math">\(f\)</span> to <span class="process-math">\(g\text{.}\)</span> The Sage cell below provides a nice visualization of this family of curves. <pre class="ptx-sagecell sagecell-sage" id="sage-1"><script type="text/x-sage">                    var('s t')
+f(t,s)=t+(1-t)*cos(2*pi*s)
+g(t,s)=(1-t)*sin(2*pi*s)
+q(t,s)=sqrt(1-(f(t,s))^2-(g(t,s))^2)
+r(t,s)=[f(t,s),g(t,s),q(t,s)]
+u(t,s)=[f(t,s),g(t,s),0]
+P=sum(parametric_plot3d(u(n/8,s),(s,0,1), color='red') for n in [0..8])
+Q=sum(parametric_plot3d(r(n/8,s),(s,0,1), color='blue') for n in [1..8])
+R=sphere(opacity=.2, color="green")
+P+Q+R
+</script></pre>
 </div>
 </div></article><article class="theorem theorem-like" id="th_homotopy_equivalence"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.1.9</span><span class="period">.</span><span class="space"> </span><span class="title">Homotopy equivalence relation.</span>
@@ -497,15 +533,46 @@ s \amp \mapsto (\cos (2\pi s), \sin (2\pi s),0)\amp s\amp \mapsto (1,0,0)\text{.
 <span class="process-math">\(\simeq_p\)</span> is an equivalence relation on <span class="process-math">\(P(X; x_0,x_1)\text{.}\)</span>
 </div></li>
 </ol>
-</div></article><article class="convention remark-like" id="convention-2"><h3 class="heading">
+</div></article><article class="hiddenproof" id="proof-1"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-1"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-1"><article class="hiddenproof"><div class="para" id="p-170">We give a proof for (a). It is then easy to check that the same homotopies provided in this proof are path homotopies (i.e., satisfy <span class="process-math">\(F(0,t)=x_0, F(1,t)=x_1\)</span>) in the context of paths in <span class="process-math">\(P(X; x_0,x_1)\text{.}\)</span>
+</div> <article class="case" id="case-22"><h4 class="heading">Reflexive.</h4> <div class="para" id="p-171">Given a continuous function <span class="process-math">\(f\colon X\rightarrow Y\text{,}\)</span> the map defined as <span class="process-math">\(F(x,t)=f(x)\)</span> for all <span class="process-math">\((x,t)\in X\times I\)</span> is clearly a homotopy from <span class="process-math">\(f\)</span> to <span class="process-math">\(f\text{.}\)</span>
+</div></article> <article class="case" id="case-23"><h4 class="heading">Symmetric.</h4> <div class="para logical" id="p-172">
+<div class="para">Let <span class="process-math">\(f,g\)</span> be continuous maps from <span class="process-math">\(X\)</span> to <span class="process-math">\(Y\text{,}\)</span> and assume <span class="process-math">\(f\simeq g\text{.}\)</span> By definition this means there is a homotopy <span class="process-math">\(F\colon X\rightarrow I\rightarrow Y\)</span> from <span class="process-math">\(f\)</span> to <span class="process-math">\(g\text{,}\)</span> so that in particular <span class="process-math">\(F(x,0)=f(x), F(x,1)=g(x)\)</span> for all <span class="process-math">\(x\in X\text{.}\)</span> Define <span class="process-math">\(G\colon X\rightarrow I\rightarrow Y\)</span> as <span class="process-math">\(G(x,t)=F(x,1-t)\text{.}\)</span> It is clear that <span class="process-math">\(G\)</span> is continuous, and we have</div>
+<div class="displaymath process-math" id="md-25">
+\begin{align*}
+G(x,0) \amp = F(x,1)=g(x) \amp G(x,1)\amp =F(x,0)=f(x)\text{.}
+\end{align*}
+</div>
+<div class="para">Thus <span class="process-math">\(G\)</span> is a homotopy from <span class="process-math">\(g\)</span> to <span class="process-math">\(f\text{,}\)</span> showing <span class="process-math">\(g\simeq f\text{.}\)</span>
+</div>
+</div></article> <article class="case" id="case-24"><h4 class="heading">Transitive.</h4> <div class="para logical" id="p-173">
+<div class="para">Let <span class="process-math">\(f,g,h\)</span> be continuous maps from <span class="process-math">\(X\)</span> to <span class="process-math">\(Y\text{.}\)</span> We assume <span class="process-math">\(f\simeq g\)</span> and <span class="process-math">\(g\simeq h\text{.}\)</span> By definition there is a homotopy <span class="process-math">\(F\)</span> from <span class="process-math">\(f\)</span> to <span class="process-math">\(g\text{,}\)</span> and a homotopy <span class="process-math">\(G\)</span> from <span class="process-math">\(g\)</span> to <span class="process-math">\(h\text{.}\)</span> Define</div>
+<div class="displaymath process-math" id="md-26">
+\begin{align*}
+H(x,t) \amp =\begin{cases}
+F(x,2t) \amp \text{if } t\in [0,1/2]\\
+G(x,2t) \amp \text{if } t\in [1/2, 1]
+\end{cases}\text{.}
+\end{align*}
+</div>
+<div class="para">The functions <span class="process-math">\(F(x,2t)\)</span> and <span class="process-math">\(G(x,2t-1)\)</span> are continuous on the closed sets <span class="process-math">\(X\times [0,1/2]\)</span> and <span class="process-math">\(X\times [1/2, 1]\text{,}\)</span> respectively, and agree on the intersection <span class="process-math">\(X\times \{1/2\}\)</span> since <span class="process-math">\(F(x,2(1/2))=F(x,1)=g(x)\)</span> and <span class="process-math">\(G(x,2(1/2)-1)=G(x,0)=g(x)\)</span> for all <span class="process-math">\(x\in X\text{,}\)</span> by definition of homotopy. By the closed pasting lemma, we conclude that <span class="process-math">\(H\)</span> is well-defined and continuous. Lastly, we have</div>
+<div class="displaymath process-math" id="md-27">
+\begin{align*}
+H(x,0) \amp =F(x,0)=f(x)\\
+H(x,1) \amp =G(x,1)=g(x)
+\end{align*}
+</div>
+<div class="para">for all <span class="process-math">\(x\in X\text{.}\)</span>
+</div>
+</div></article></article></div>
+<article class="convention remark-like" id="convention-2"><h3 class="heading">
 <span class="type">Notation</span><span class="space"> </span><span class="codenumber">1.1.10</span><span class="period">.</span><span class="space"> </span><span class="title">Homotopy equivalence.</span>
-</h3> <div class="para" id="p-170">For topological spaces <span class="process-math">\(X, Y\text{,}\)</span> let <span class="process-math">\(C(X,Y)\)</span> be the set of all continuous functions. For a function <span class="process-math">\(f\in C(X,Y)\)</span> we let <span class="process-math">\([f]\)</span> denote its equivalence class with respect to <span class="process-math">\(\simeq\text{.}\)</span> The set <span class="process-math">\(C(X,Y)/\simeq\)</span> of all equivalence classes is denoted <span class="process-math">\([X,Y]\text{.}\)</span>
-</div> <div class="para" id="p-171">For <span class="process-math">\(f\in P(X; x_0,x_1)\text{,}\)</span> we will also use <span class="process-math">\([f]\)</span> to denote its equivalence class with respect to <span class="process-math">\(\simeq_p\text{.}\)</span>
+</h3> <div class="para" id="p-174">For topological spaces <span class="process-math">\(X, Y\text{,}\)</span> let <span class="process-math">\(C(X,Y)\)</span> be the set of all continuous functions. For a function <span class="process-math">\(f\in C(X,Y)\)</span> we let <span class="process-math">\([f]\)</span> denote its equivalence class with respect to <span class="process-math">\(\simeq\text{.}\)</span> The set <span class="process-math">\(C(X,Y)/\simeq\)</span> of all equivalence classes is denoted <span class="process-math">\([X,Y]\text{.}\)</span>
+</div> <div class="para" id="p-175">For <span class="process-math">\(f\in P(X; x_0,x_1)\text{,}\)</span> we will also use <span class="process-math">\([f]\)</span> to denote its equivalence class with respect to <span class="process-math">\(\simeq_p\text{.}\)</span>
 </div></article><article class="definition definition-like" id="d_path_product"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.11</span><span class="period">.</span><span class="space"> </span><span class="title">Path product.</span>
-</h3> <div class="para logical" id="p-172">
+</h3> <div class="para logical" id="p-176">
 <div class="para">Let <span class="process-math">\(X\)</span> be a topological space, and let <span class="process-math">\(x_0,x_1,x_2\in X\text{.}\)</span> We define a <dfn class="terminology">path product</dfn> operation</div>
-<div class="displaymath process-math" id="md-25">
+<div class="displaymath process-math" id="md-28">
 \begin{align*}
 P(X;x_0,x_1)\times P(X; x_1,x_2) \amp \rightarrow P(X;x_0, x_2)\\
 (f,g) \amp \mapsto f*g
@@ -520,16 +587,65 @@ g(2s-1)\amp \text{if } s\in [1/2,1]
 \end{cases}\text{.}
 \end{equation*}
 </div>
-</div> <div class="para" id="p-173">The function <span class="process-math">\(f*g\)</span> defined is a path from <span class="process-math">\(x_0\)</span> to <span class="process-math">\(x_1\text{.}\)</span> Furthermore, if <span class="process-math">\(f\simeq_p f'\)</span> and <span class="process-math">\(g\simeq_p g'\text{,}\)</span> then <span class="process-math">\(f*g\simeq f'*g'\text{.}\)</span>
-</div></article><article class="theorem theorem-like" id="th_path_product_props"><h3 class="heading">
+</div> <div class="para logical" id="p-177">
+<div class="para">The function <span class="process-math">\(f*g\)</span> defined is a path from <span class="process-math">\(x_0\)</span> to <span class="process-math">\(x_2\text{.}\)</span> Furthermore, if <span class="process-math">\(f\simeq_p f'\)</span> and <span class="process-math">\(g\simeq_p g'\text{,}\)</span> then <span class="process-math">\(f*g\simeq f'*g'\text{.}\)</span> In other words, we get a well-defined operation on homotopy classes defined as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+[f]*[g]=[f*g]\text{.}
+\end{equation*}
+</div>
+</div> <article class="hiddenproof" id="proof-2"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-2"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-2"><article class="hiddenproof"><div class="para" id="p-178">It is easy to see, using the closed pasting lemma, that <span class="process-math">\(f*g\)</span> is well-defined and continuous. We show that it is well-defined on homotopy classes, as claimed.</div> <div class="para logical" id="p-179">
+<div class="para">Suppose that <span class="process-math">\(f\simeq_p f'\)</span> as witnessed by the path homotopy <span class="process-math">\(F\text{,}\)</span> and that <span class="process-math">\(g\simeq g'\)</span> as witnessed by the path homotopy <span class="process-math">\(G\text{.}\)</span> Define</div>
+<div class="displaymath process-math" id="md-29">
+\begin{align*}
+H(s,t) \amp =
+\begin{cases}
+F(2s,t)\amp \text{if } s\in [0,1/2]\\
+G(2s-1,t)\amp \text{if } s\in [1/2, 1]
+\end{cases}\text{.}
+\end{align*}
+</div>
+<div class="para">Note first that <span class="process-math">\(F(2(1/2),t)=F(1,t)=x_1\)</span> and <span class="process-math">\(G(2(1/2)-1,t)=G(0,t)=x_1\text{,}\)</span> since <span class="process-math">\(F\)</span> and <span class="process-math">\(G\)</span> are path homotopies. Since <span class="process-math">\(F(2s,t)\)</span> is continuous on <span class="process-math">\([0,1/2]\times I\)</span> and <span class="process-math">\(G(2s-1,t)\)</span> is continuous on <span class="process-math">\([1/2,1]\times I\text{,}\)</span> and since they agree on the intersection of these sets, the closed pasting lemma implies <span class="process-math">\(H\)</span> is a well-defined continuous function.</div>
+</div> <div class="para logical" id="p-180">
+<div class="para">Next, we have</div>
+<div class="displaymath process-math" id="md-30">
+\begin{align*}
+H(s,0) \amp =\begin{cases}
+F(2s,0)\amp \text{if } s\in [0,1/2]\\
+G(2s-1,0)\amp \text{if } s\in [1/2, 1]\\
+\amp =\begin{cases}
+f(2s)\amp \text{if } s\in [0,1/2]\\
+g(2s-1)\amp \text{if } s\in [1/2, 1] \\
+\amp =f*g(s)\\
+H(s,1) \amp =\begin{cases}
+F(2s,1)\amp \text{if } s\in [0,1/2]\\
+G(2s-1,1)\amp \text{if } s\in [1/2, 1]\\
+\amp =\begin{cases}
+f'(2s)\amp \text{if } s\in [0,1/2]\\
+g'(2s-1)\amp \text{if } s\in [1/2, 1] \\
+\amp =f'*g'(s)\text{,}
+\end{align*}
+</div>
+<div class="para">showing that <span class="process-math">\(H\)</span> is a homotopy from <span class="process-math">\(f*g\)</span> to <span class="process-math">\(f'*g'\text{.}\)</span>
+</div>
+</div> <div class="para logical" id="p-181">
+<div class="para">Lastly, we have</div>
+<div class="displaymath process-math" id="md-31">
+\begin{align*}
+H(0,t) \amp =F(0,t)=x_0\\
+H(1,t) \amp =G(2(1)-1,t)=G(1,t)=x_2
+\end{align*}
+</div>
+<div class="para">for all <span class="process-math">\(t\in I\text{,}\)</span> showing that <span class="process-math">\(H\)</span> is a path homotopy.</div>
+</div></article></div></article><article class="theorem theorem-like" id="th_path_product_props"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.1.12</span><span class="period">.</span><span class="space"> </span><span class="title">Path product properties.</span>
 </h3>
-<div class="para logical" id="p-174">
+<div class="para logical" id="p-182">
 <div class="para">Let <span class="process-math">\(X\)</span> be a topological space. For any element <span class="process-math">\(x\in X\text{,}\)</span> we let <span class="process-math">\(e_x\colon I\rightarrow X\)</span> denote the constant function <span class="process-math">\(e_x(s)=x\)</span> for all <span class="process-math">\(s\in I\text{.}\)</span>
 </div>
 <ol class="decimal">
 <li id="li-27">
-<span class="heading"><span class="title">Associativity.</span></span><div class="para logical" id="p-175">
+<span class="heading"><span class="title">Associativity.</span></span><div class="para logical" id="p-183">
 <div class="para">If <span class="process-math">\(f\in P(X; x_0,x_1), g\in P(X; x_1,x_2), h\in P(X; x_2,x_3)\text{,}\)</span> then</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -539,7 +655,7 @@ g(2s-1)\amp \text{if } s\in [1/2,1]
 </div>
 </li>
 <li id="li-28">
-<span class="heading"><span class="title">Identities.</span></span><div class="para logical" id="p-176">
+<span class="heading"><span class="title">Identities.</span></span><div class="para logical" id="p-184">
 <div class="para">Given <span class="process-math">\(f\in P(X; x_0, x_1)\text{,}\)</span> we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -549,9 +665,9 @@ g(2s-1)\amp \text{if } s\in [1/2,1]
 </div>
 </li>
 <li id="li-29">
-<span class="heading"><span class="title">Inverses.</span></span><div class="para logical" id="p-177">
+<span class="heading"><span class="title">Inverses.</span></span><div class="para logical" id="p-185">
 <div class="para">Given <span class="process-math">\(f\in P(X; x_0,x_1)\text{,}\)</span> let <span class="process-math">\(\overline{f}\in P(X; x_1,x_0)\)</span> be its <dfn class="terminology">reverse</dfn>: i.e., <span class="process-math">\(\overline{f}(s)=f(1-s)\text{.}\)</span> We have</div>
-<div class="displaymath process-math" id="md-26">
+<div class="displaymath process-math" id="md-32">
 \begin{align*}
 [f]*[\overline{f}] \amp =[e_{x_0}] \amp [\overline{f}]*[f]=[e_{x_1}]\text{.}
 \end{align*}
@@ -559,7 +675,27 @@ g(2s-1)\amp \text{if } s\in [1/2,1]
 </div>
 </li>
 </ol>
-</div></article></section></div>
+</div></article><article class="lemma theorem-like" id="lemma_homotopy_reparameter"><h3 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">1.1.13</span><span class="period">.</span><span class="space"> </span><span class="title">Reparametrization of path.</span>
+</h3>
+<div class="para" id="p-186">Let <span class="process-math">\(f\in P(X; x_0, x_1)\text{.}\)</span> If <span class="process-math">\(\phi\colon I\rightarrow I\)</span> is a continuous map satisfying <span class="process-math">\(\phi(0)=1\)</span> and <span class="process-math">\(\phi(1)=1\text{,}\)</span> then <span class="process-math">\(f\simeq_p f\circ \phi\text{.}\)</span>  In other words, a “reparametrized” path is homotopic to the original path.</div></article><article class="hiddenproof" id="proof-3"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-3"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-3"><article class="hiddenproof"><div class="para" id="p-187">Homework exercise.</div></article></div>
+<article class="theorem theorem-like" id="th_homotopy_partition"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.1.14</span><span class="period">.</span><span class="space"> </span><span class="title">Partitions of <span class="process-math">\(I\)</span>.</span>
+</h3>
+<div class="para logical" id="p-188">
+<div class="para">Let <span class="process-math">\(f\in P(X; x_0,x_1)\text{,}\)</span> let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0=a_0&lt; a_1 &lt; a_2 &lt; \dots &lt; a_n=1
+\end{equation*}
+</div>
+<div class="para">be a subdivision of <span class="process-math">\(I\)</span> into <span class="process-math">\(n\)</span> subintervals <span class="process-math">\(I_k=[a_{k-1}, a_k]\text{,}\)</span> <span class="process-math">\(1\leq k\leq n\text{,}\)</span> and let <span class="process-math">\(f_k=f\circ\phi_k\text{,}\)</span> where <span class="process-math">\(\phi_k\colon I\rightarrow [a_{k-1}, a_k]\)</span> is any continuous map satisfying <span class="process-math">\(\phi_k(0)=a_{k-1}\)</span> and <span class="process-math">\(\phi_k(1)=a_k\text{.}\)</span> We have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+[f]=[f_1]*[f_2]*\cdots *[f_n]\text{.}
+\end{equation*}
+</div>
+</div></article><article class="hiddenproof" id="proof-4"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-4"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-4"><article class="hiddenproof"><div class="para" id="p-189">Homework exercise.</div></article></div></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="c_algebraic_topology.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="c_top_spaces.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

@@ -10,8 +10,48 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para logical"><ol class="decimal">
-<li><div class="para">Let <span class="process-math">\(\mathcal{T}=\{\emptyset, X\}\text{.}\)</span> By definition the given <span class="process-math">\(\mathcal{T}\)</span> contains <span class="process-math">\(\emptyset\)</span> and <span class="process-math">\(X\text{,}\)</span> and thus axiom (1) is satisfied. Since any union or intersection involving <span class="process-math">\(\emptyset\)</span> and <span class="process-math">\(X\)</span> is equal to either <span class="process-math">\(\emptyset\)</span> or <span class="process-math">\(X\text{,}\)</span> it is clear that <span class="process-math">\(\mathcal{T}\)</span> is closed under arbitrary unions and finite intersections. Thus axioms (2)-(3) are satisfied.</div></li>
-<li><div class="para">Let <span class="process-math">\(\mathcal{T}=\mathcal{P}(X)\text{.}\)</span> By definition, <span class="process-math">\(\mathcal{T}\)</span> is the set of <em class="emphasis">all</em> subsets of <span class="process-math">\(X\text{.}\)</span> In particular, it contains <span class="process-math">\(\emptyset\)</span> and <span class="process-math">\(X\text{,}\)</span> and thus axioms (1) is satisfied. Furthermore, since any union or intersection of subsets of <span class="process-math">\(X\)</span> is again a subset of <span class="process-math">\(X\text{,}\)</span> we see that axioms (2)-(3) are satisfied.</div></li>
-</ol></div></article></body>
+<body class="ignore-math"><article class="hiddenproof"><div class="para">It is easy to see, using the closed pasting lemma, that <span class="process-math">\(f*g\)</span> is well-defined and continuous. We show that it is well-defined on homotopy classes, as claimed.</div> <div class="para logical">
+<div class="para">Suppose that <span class="process-math">\(f\simeq_p f'\)</span> as witnessed by the path homotopy <span class="process-math">\(F\text{,}\)</span> and that <span class="process-math">\(g\simeq g'\)</span> as witnessed by the path homotopy <span class="process-math">\(G\text{.}\)</span> Define</div>
+<div class="displaymath process-math">
+\begin{align*}
+H(s,t) \amp =
+\begin{cases}
+F(2s,t)\amp \text{if } s\in [0,1/2]\\
+G(2s-1,t)\amp \text{if } s\in [1/2, 1]
+\end{cases}\text{.}
+\end{align*}
+</div>
+<div class="para">Note first that <span class="process-math">\(F(2(1/2),t)=F(1,t)=x_1\)</span> and <span class="process-math">\(G(2(1/2)-1,t)=G(0,t)=x_1\text{,}\)</span> since <span class="process-math">\(F\)</span> and <span class="process-math">\(G\)</span> are path homotopies. Since <span class="process-math">\(F(2s,t)\)</span> is continuous on <span class="process-math">\([0,1/2]\times I\)</span> and <span class="process-math">\(G(2s-1,t)\)</span> is continuous on <span class="process-math">\([1/2,1]\times I\text{,}\)</span> and since they agree on the intersection of these sets, the closed pasting lemma implies <span class="process-math">\(H\)</span> is a well-defined continuous function.</div>
+</div> <div class="para logical">
+<div class="para">Next, we have</div>
+<div class="displaymath process-math">
+\begin{align*}
+H(s,0) \amp =\begin{cases}
+F(2s,0)\amp \text{if } s\in [0,1/2]\\
+G(2s-1,0)\amp \text{if } s\in [1/2, 1]\\
+\amp =\begin{cases}
+f(2s)\amp \text{if } s\in [0,1/2]\\
+g(2s-1)\amp \text{if } s\in [1/2, 1] \\
+\amp =f*g(s)\\
+H(s,1) \amp =\begin{cases}
+F(2s,1)\amp \text{if } s\in [0,1/2]\\
+G(2s-1,1)\amp \text{if } s\in [1/2, 1]\\
+\amp =\begin{cases}
+f'(2s)\amp \text{if } s\in [0,1/2]\\
+g'(2s-1)\amp \text{if } s\in [1/2, 1] \\
+\amp =f'*g'(s)\text{,}
+\end{align*}
+</div>
+<div class="para">showing that <span class="process-math">\(H\)</span> is a homotopy from <span class="process-math">\(f*g\)</span> to <span class="process-math">\(f'*g'\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">Lastly, we have</div>
+<div class="displaymath process-math">
+\begin{align*}
+H(0,t) \amp =F(0,t)=x_0\\
+H(1,t) \amp =G(2(1)-1,t)=G(1,t)=x_2
+\end{align*}
+</div>
+<div class="para">for all <span class="process-math">\(t\in I\text{,}\)</span> showing that <span class="process-math">\(H\)</span> is a path homotopy.</div>
+</div></article></body>
 </html>

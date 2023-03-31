@@ -13,21 +13,48 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">True to its name, an <span class="process-math">\(\epsilon\)</span>-ball around <span class="process-math">\(\boldx\in \R^n\)</span> is the open <span class="process-math">\(n\)</span>-cube</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/d_cartesian_product.html">
+<div class="para">Let <span class="process-math">\(X=\R^n\text{,}\)</span> where <span class="process-math">\(n\)</span> is a positive integer. Let <span class="process-math">\(\boldx=(x_1,x_2,\dots, x_n), \boldy=(y_1,y_2,\dots, y_n)\text{.}\)</span>
+</div>
+<ol class="decimal">
+<li>
+<span class="heading"><span class="title">Euclidean metric.</span></span><div class="para logical">
+<div class="para">The function <span class="process-math">\(d\colon X\times X\rightarrow \R\)</span> defined as</div>
+<div class="displaymath process-math">
 \begin{equation*}
-\prod_{i=1}^n (x_i-\epsilon, x_i+\epsilon)\text{.}
+d(\boldx,\boldy)=\sqrt{(x_1-y_1)^2+(x_2-y_2)^2+\cdots +(x_n-y_n)^2}
 \end{equation*}
 </div>
-<div class="para">(Note that the product here is the Cartesian product of these intervals. (See <a href="" class="xref" data-knowl="./knowl/d_cartesian_product.html" title="Definition 0.1.12: Cartesian product (finite)">Definition 0.1.12</a>.)) Indeed, we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/d_cartesian_product.html">
-\begin{align*}
-\boldy\in B_\epsilon(\boldx) \amp \iff \max\{\abs{x_i-y_i}\}_{i=1}^n&lt; \epsilon \\
-\amp \iff \abs{x_i-y_i}&lt; \epsilon \text{ for all } 1\leq i\leq n\\
-\amp \iff y_i\in (x_i-\epsilon, x_i+\epsilon) \text{ for all } 1\leq i\leq n\\
-\amp \iff \boldy\in \prod_{i=1}^n (x_i-\epsilon, x_i+\epsilon)\text{.}
-\end{align*}
+<div class="para">is a metric, called the <dfn class="terminology">Euclidean metric</dfn>. The metric space <span class="process-math">\((\R^n, d)\)</span> is called <dfn class="terminology">Euclidean <span class="process-math">\(n\)</span>-space</dfn>. The <dfn class="terminology">norm</dfn> of <span class="process-math">\(\boldx\text{,}\)</span> denoted <span class="process-math">\(\norm{\boldx}\text{,}\)</span> is defined as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\norm{\boldx}=d(\boldx, \boldzero)=\sqrt{x_1^2+x_2^2+\cdots +x_n^2}\text{.}
+\end{equation*}
 </div>
+</div>
+</li>
+<li>
+<span class="heading"><span class="title">Box metric.</span></span><div class="para logical">
+<div class="para">The function <span class="process-math">\(d\colon X\times X\rightarrow \R\)</span> defined as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+d(\boldx,\boldy)=\max\{\abs{x_1-y_1},\abs{x_2-y_2},\dots, \abs{x_n-y_n}\}
+\end{equation*}
+</div>
+<div class="para">is a metric, called the <dfn class="terminology">box metric</dfn> (or <dfn class="terminology">square metric</dfn>).</div>
+</div>
+</li>
+<li>
+<span class="heading"><span class="title">Taxicab metric.</span></span><div class="para logical">
+<div class="para">The function <span class="process-math">\(d\colon X\times X\rightarrow \R\)</span> defined as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+d(\boldx,\boldy)=\abs{x_1-y_1}+\abs{x_2-y_2}+\dots +\abs{x_n-y_n}
+\end{equation*}
+</div>
+<div class="para">is a metric, called the <dfn class="terminology">taxicab metric</dfn>.</div>
+</div>
+</li>
+</ol>
 </div>
 <span class="incontext"><a href="s_metric1.html#p-287" class="internal">in-context</a></span>
 </body>

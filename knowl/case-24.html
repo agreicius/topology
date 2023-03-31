@@ -11,14 +11,25 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="case"><h4 class="heading">Case: <span class="process-math">\(X\)</span> infinite.</h4> <div class="para logical">
-<div class="para">Let <span class="process-math">\(U\)</span> be any finite nonempty subset of <span class="process-math">\(X\text{.}\)</span> Since <span class="process-math">\(X\)</span> is infinite and <span class="process-math">\(X=U\cup U^c\text{,}\)</span> it follows that <span class="process-math">\(U^c\)</span> must be infinite, and hence that <span class="process-math">\(U\)</span> is not cofinite. We conclude that <span class="process-math">\(U\in \mathcal{T}_{\operatorname{discrete}}=\mathcal{P}(X)\)</span> and <span class="process-math">\(U\notin \mathcal{T}_{\operatorname{cofinite}}\text{.}\)</span> Thus <span class="process-math">\(\mathcal{T}_{\operatorname{cofinite}}\subsetneq \mathcal{T}_{\operatorname{discrete}}\)</span> in this case. Next, fix in any element <span class="process-math">\(x\in X\)</span> and let <span class="process-math">\(U=X-\{x\}\text{.}\)</span> It is clear (a) that <span class="process-math">\(U\)</span> is cofinite, and (b) that <span class="process-math">\(U\)</span> is not equal to <span class="process-math">\(\emptyset\)</span> or <span class="process-math">\(X\text{.}\)</span> Thus <span class="process-math">\(U\in\mathcal{T}_{\operatorname{cofinite}}\)</span> and <span class="process-math">\(U\notin\mathcal{T}_{\operatorname{trivial}}\text{,}\)</span> proving that <span class="process-math">\(\mathcal{T}_{\operatorname{trivial}}\subsetneq \mathcal{T}_{\operatorname{cofinite}}\text{.}\)</span> We conclude that</div>
+<article class="case"><h4 class="heading">Transitive.</h4> <div class="para logical">
+<div class="para">Let <span class="process-math">\(f,g,h\)</span> be continuous maps from <span class="process-math">\(X\)</span> to <span class="process-math">\(Y\text{.}\)</span> We assume <span class="process-math">\(f\simeq g\)</span> and <span class="process-math">\(g\simeq h\text{.}\)</span> By definition there is a homotopy <span class="process-math">\(F\)</span> from <span class="process-math">\(f\)</span> to <span class="process-math">\(g\text{,}\)</span> and a homotopy <span class="process-math">\(G\)</span> from <span class="process-math">\(g\)</span> to <span class="process-math">\(h\text{.}\)</span> Define</div>
 <div class="displaymath process-math">
-\begin{equation*}
-\mathcal{T}_{\operatorname{trivial}}\subsetneq \mathcal{T}_{\operatorname{cofinite}}\subsetneq \mathcal{T}_{\operatorname{discrete}}
-\end{equation*}
+\begin{align*}
+H(x,t) \amp =\begin{cases}
+F(x,2t) \amp \text{if } t\in [0,1/2]\\
+G(x,2t) \amp \text{if } t\in [1/2, 1]
+\end{cases}\text{.}
+\end{align*}
 </div>
-<div class="para">in this case.</div>
-</div></article><span class="incontext"><a href="s_top_spaces.html#case-24" class="internal">in-context</a></span>
+<div class="para">The functions <span class="process-math">\(F(x,2t)\)</span> and <span class="process-math">\(G(x,2t-1)\)</span> are continuous on the closed sets <span class="process-math">\(X\times [0,1/2]\)</span> and <span class="process-math">\(X\times [1/2, 1]\text{,}\)</span> respectively, and agree on the intersection <span class="process-math">\(X\times \{1/2\}\)</span> since <span class="process-math">\(F(x,2(1/2))=F(x,1)=g(x)\)</span> and <span class="process-math">\(G(x,2(1/2)-1)=G(x,0)=g(x)\)</span> for all <span class="process-math">\(x\in X\text{,}\)</span> by definition of homotopy. By the closed pasting lemma, we conclude that <span class="process-math">\(H\)</span> is well-defined and continuous. Lastly, we have</div>
+<div class="displaymath process-math">
+\begin{align*}
+H(x,0) \amp =F(x,0)=f(x)\\
+H(x,1) \amp =G(x,1)=g(x)
+\end{align*}
+</div>
+<div class="para">for all <span class="process-math">\(x\in X\text{.}\)</span>
+</div>
+</div></article><span class="incontext"><a href="s_homotopy.html#case-24" class="internal">in-context</a></span>
 </body>
 </html>

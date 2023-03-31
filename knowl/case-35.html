@@ -11,8 +11,14 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="case"><h4 class="heading">
-<span class="process-math">\(f\)</span> is injective.</h4> <div class="para">Since <span class="process-math">\(X\)</span> is <span class="process-math">\(T_1\text{,}\)</span> given any <span class="process-math">\(x\ne y\in X\)</span> we can find an open set <span class="process-math">\(U\)</span> such that <span class="process-math">\(x\in U\)</span> and <span class="process-math">\(y\notin U\text{.}\)</span> By assumption, there is some <span class="process-math">\(i_0\in I\)</span> such that <span class="process-math">\(f_{i_{0}}(x)&gt; 0\)</span> and <span class="process-math">\(f_{i_0}(X-U)=\{0\}\text{.}\)</span> It follows that <span class="process-math">\(f_{i_{0}}(x)\ne f_{i_0}(y)\)</span> and hence that <span class="process-math">\(f(x)\ne f(y)\text{.}\)</span>
-</div></article><span class="incontext"><a href="s_Urysohn_metrization.html#case-35" class="internal">in-context</a></span>
+<article class="case"><h4 class="heading">Countable product.</h4> <div class="para logical">
+<div class="para">Let <span class="process-math">\(X=\prod_{n=1}^\infty X_n\)</span> where <span class="process-math">\(X_n\)</span> is connected for all <span class="process-math">\(n\text{.}\)</span> Fix any element <span class="process-math">\(x=(x_1,x_2,\dots, )\in X\text{.}\)</span> For each <span class="process-math">\(N\)</span> the set</div>
+<div class="displaymath process-math">
+\begin{equation*}
+X_N=\prod_{n=1}^NX_i\times \prod_{n=N+1}^\infty \{x_n\}\text{,}
+\end{equation*}
+</div>
+<div class="para">being homeomorphic to a finite product of connected spaces, is connected. Since <span class="process-math">\(X_N\cap X_{M}\ne \emptyset\)</span> for all <span class="process-math">\(N, M\text{,}\)</span> we conclude that <span class="process-math">\(Y=\bigcup_{N=1}^\infty X_N\)</span> is connected.</div>
+</div> <div class="para">Next, I claim that <span class="process-math">\(X=\overline{Y}\text{.}\)</span> Indeed, given any <span class="process-math">\(z=(z_1,z_2,\dots, )\)</span> and any open base element <span class="process-math">\(U=\prod_{n=1}^NU_n\times \prod_{n=N+1}^\infty X_n\)</span> containing <span class="process-math">\(z\text{,}\)</span> we have <span class="process-math">\((z_1,z_2,\dots, z_N, x_{N+1},x_{N+2},\dots)\in U\cap X_N\subseteq Y\text{.}\)</span> Since connectedness is preserved under closure, we conclude that <span class="process-math">\(X\)</span> is connected.</div></article><span class="incontext"><a href="s_connected1.html#case-35" class="internal">in-context</a></span>
 </body>
 </html>

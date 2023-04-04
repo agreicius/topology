@@ -23,7 +23,9 @@
     </statement>
   </definition>
   <remark>
-    Given a homotopy <m>F\colon X\times [0,1]\rightarrow Y</m> from <m>f</m> to <m>g</m>, for each <m>t\in I</m> we get a function <m>f_t\colon X\rightarrow Y</m> defined as <m>f_t(x)=F(x,t)</m>. In this way we can think of a homotopy <m>F</m> as a family of functions <m>\{f_t\}_{t\in I}</m> that <q>varies continuously with <m>t</m></q> (a shorthand way of saying that <m>F</m> is continuous), and which <q>continuously deforms</q> the function <m>f=f_0</m> to the function <m>g=f_1</m> as <m>t</m> ranges over <m>I</m>. 
+    <p>
+        Given a homotopy <m>F\colon X\times [0,1]\rightarrow Y</m> from <m>f</m> to <m>g</m>, for each <m>t\in I</m> we get a function <m>f_t\colon X\rightarrow Y</m> defined as <m>f_t(x)=F(x,t)</m>. In this way we can think of a homotopy <m>F</m> as a family of functions <m>\{f_t\}_{t\in I}</m> that <q>varies continuously with <m>t</m></q> (a shorthand way of saying that <m>F</m> is continuous), and which <q>continuously deforms</q> the function <m>f=f_0</m> to the function <m>g=f_1</m> as <m>t</m> ranges over <m>I</m>. 
+    </p>
   </remark>
   <example xml:id="eg_homotopy_convex">
     <title>Homotopic functions to <m>\R^n</m></title>
@@ -303,12 +305,94 @@ P+Q+R
 
         </p>
     </statement>
+    <proof>
+        <p>
+        <term>Associativity</term>. Let <m>p=f*(g*h)</m> and <m>q=(f*g)*h</m>. After unpacking the definitions for iterated path products, we see that 
+        <md>
+            <mrow>p(s) \amp = \begin{cases}
+            f(2s)\amp \text{if } s\in [0,1/2]\\
+            g(4s-2)\amp \text{if } s\in [1/2,3/4]\\
+            h(4s-3)\amp \text{if } s\in [3/4,1]
+            \end{cases}
+             </mrow>
+             <mrow>q(s) \amp = \begin{cases}
+                f(4s)\amp \text{if } s\in [0,1/4]\\
+                g(4s-1)\amp \text{if } s\in [1/4,1/2]\\
+                h(2s-1)\amp \text{if } s\in [1/2,1]
+                \end{cases}
+            </mrow>.
+        </md>
+        Define <m>\phi\colon I\rightarrow I</m> as 
+        <md>
+            <mrow>\phi(s) \amp =\begin{cases}
+                    \frac{1}{2}s \amp \text{if } s\in [0,1/4]\\
+                    s-1/4 \amp \text{if } s\in [1/4,3/4]\\ 
+                    2s-1 \amp \text{if } s\in [3/4, 1]
+                \end{cases}
+            </mrow>
+        </md>.
+        The pasting lemma implies <m>\phi</m> is continuous, and by definition we have <m>\phi(0)=0</m> and <m>\phi(1)</m>. A computation shows that <m>f*(g*h)(s)=(f*g)*h(\phi (s))</m>. In other words, <m>p=q\circ \phi</m>. By <xref ref="lemma_homotopy_reparameter"/> we conclude that <m>[f*(g*h)]= [(f*g)*h]</m> and thus that
+        <md>
+            <mrow>[f]*([g]*[h]) \amp =[f]*[g*h] \amp (\text{def.}) </mrow>
+            <mrow> \amp = [f*(g*h)] \amp (\text{def.})</mrow>
+            <mrow> \amp = [(f*g)*h]\amp (\text{by above})</mrow>
+            <mrow> \amp = [f*g]*[h] \amp (\text{def.)</mrow>
+            <mrow> \amp = ([f]*[g])*[h]\amp (\text{def.})</mrow>
+        </md>.
+        </p>
+        <p>
+        <term>Identities</term>. Using the definition of path product, we have 
+        <md>
+            <mrow>e_{x_0}*f(s) \amp =
+                \begin{cases}
+                x_0\amp \text{if } s\in [0,1/2]\\
+                f(2s-1) \amp \text{if } s\in [1/2,1]
+                \end{cases}  
+            </mrow>.
+        </md>
+            Define <m>\phi\colon I\rightarrow I</m> as 
+            <md>
+                <mrow>\phi(s) \amp =
+                    \begin{cases}
+                    x_0 \amp \text{if } s\in [0,1/2]
+                    2s-1 \amp \text{if } s\in [1/2/1]
+                    \end{cases}
+                </mrow>.
+                As above, it is easy to see that <m>\phi</m> is continuous and satisfies <m>\phi)0)=\phi(1)</m>. Furthermore, a computation shows <m>e_{x_0}*f=f\circ \phi</m>. We conclude from <xref ref="lemma_homotopy_reparameter"/> that <m>e_{x_0}*f\simeq f</m>, and hence <m>[e_{x_0}]*[f]*=[e_{x_0}*f]=[f]</m>. A similar argument shows that <m>[f]*[e_{x_1}]=[f]</m>.  
+            </md>
+        </p>
+        <p>
+        <term>Inverses</term>. First compute 
+        <md>
+            <mrow>f*\overline{f}(s) \amp = 
+                \begin{cases}
+                f(2s) \amp \text{if } s\in [0,1/2]\\
+                f(2(1-s)) \amp \text{if } s\in [1/2, 1]
+                \end{cases}
+            </mrow>.
+            Now define <m>F\colon I\times I\rightarrow I</m> as 
+            <me>
+                F(s,t)=
+                \begin{cases}
+                f(2st) \amp \text{if } s\in [0,1/2]\\
+                f(2(1-s)t) \amp \text{ if } s\in [1/2,1]
+                \end{cases}
+            </me>.
+            The usual arguments show that <m>F</m> is continuous, and a direct computation shows 
+            <md>
+                <mrow>F(s,0) \amp = f(0)=x_0 \amp F(s,1)\amp =f*\overline{f}(s)</mrow>
+                <mrow>F(0,t) \amp = f(0)=x_0 \amp F(1,t)\amp =f(0)=x_0</mrow> 
+            </md>,
+            showing that <m>F</m> is a path homotopy from <m>e_{x_0}</m> to <m>f*\overline{f}</m>, and thus <m>[f]*[\overline{f}]=[e_{x_0}]</m>. A similar argument can be used to show <mrow>[\overline{f}]*[f]=[e_{x_1}]</mrow>.           
+        </md>
+        </p>
+    </proof>
   </theorem>
   <lemma xml:id="lemma_homotopy_reparameter">
     <title>Reparametrization of path</title>
     <statement>
         <p>
-           Let <m>f\in P(X; x_0, x_1)</m>. If <m>\phi\colon I\rightarrow I</m> is a continuous map satisfying <m>\phi(0)=1</m> and <m>\phi(1)=1</m>, then <m>f\simeq_p f\circ \phi</m>.  In other words, a <q>reparametrized</q> path is homotopic to the original path. 
+           Let <m>f\in P(X; x_0, x_1)</m>. If <m>\phi\colon I\rightarrow I</m> is a continuous map satisfying <m>\phi(0)=0</m> and <m>\phi(1)=1</m>, then <m>f\simeq_p f\circ \phi</m>.  In other words, a <q>reparametrized</q> path is homotopic to the original path. 
         </p>
     </statement>
     <proof>

@@ -1,0 +1,200 @@
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="s_fundamental_group">
+  <title>Fundamental group</title>
+  <definition xml:id="d_group_defs">
+    <title>Group compendium</title>
+    <statement>
+      <p>
+        A <term>group</term> is a set <m>G</m> together with a binary operation <m>\cdot G\times G\rightarrow G</m> such that (i) the operation is associative, (ii) there is an <term>identity</term> element <m>e\in G</m> satisfying <m>e\cdot g=g\cdot e=g</m> for all <m>g\in G</m>, and (iii) for all <m>g\in G</m> there is an <term>inverse</term> element <m>g^{-1}\in G</m> satisfying <m>g\cdot g^{-1}=g^{-1}\cdot g=e</m>. 
+      </p>
+      <p>
+        A <term>subgroup</term> of a group <m>G</m> is a subset <m>H\subseteq G</m> that contains the identity element <m>e\in G</m>, and which is closed under the group operation: <ie/>, if <m>h, h'\in H</m>, then <m>h\cdot h'\in H</m>. We write <m>H\leq G</m> in this case. 
+      </p>
+      <p>
+        A <term>normal</term> subgroup of <m>G</m> is a subgroup <m>N</m> that satisfies <m>gNg^{-1}=N</m> for all <m>g\in G</m>: <ie/>, <m>N</m> is <term>closed under conjugation</term>. We write <m>N\normalin G</m> in this case. 
+      </p>
+      <p>
+        Given a subgroup <m>H\leq G</m>, we denote by <m>G/H</m> the set of all <term>left cosets</term> of <m>H</m>: <ie/>, <m>G/H=\{gH\colon g\in G\}</m>. Given a normal subgroup <m>N\normalin G</m> the set of cosets <m>G/N</m> has a group structure given by the operation 
+        <me>
+          gN\cdot g'N=gg'N
+        </me>. 
+        We call <m>G/N</m> the <term>quotient</term> of <m>G</m> by <m>N</m>.        
+      </p>
+      <p>
+        A <term>homomorphism</term> between groups <m>G, G'</m> is a function <m>\phi\colon G\rightarrow G'</m> satisfying <m>\phi(g_1\cdot_G g_2)=\phi(g_1)\cdot_{G'} \phi(g_2)</m> for all <m>g_1, g_2\in G</m>. (Here we use subscript notation to differentiate the two different group operations at play.) 
+      </p>
+      <p>
+        An <term>isomorphism</term> is an invertible homomorphism <m>\phi\colon G\rightarrow G'</m>. We say <m>G</m> and <m>G'</m> are <term>isomorphic</term>, denoted <m>G\cong G'</m>, if there is an isomorphism between them. (As it turns out, the inverse of an invertible group homomorphism is automatically a group homomorphism.)
+      </p>
+    </statement>
+  </definition>
+  <definition xml:id="d_fundamental_group">
+    <title>Fundamental group</title>
+    <statement>
+      <p>
+        Given a topological space <m>X</m> and element <m>x_0\in X</m>, the <term>fundamental group</term> of <m>X</m> based at <m>x_0</m>, denoted <m>\pi_1(X,x_0)</m>, is defined as 
+        <me>
+          \pi_1(X,x_0)=P(X; x_0, x_0)/\simeq_p
+        </me>.
+        In other words, <m>\pi_1(X,x_0)</m> is the set of all path homotopy equivalence classes <m>[f]</m>, where <m>f\in P(X; x_0, x_0)</m> is a closed path (or loop) beginning and ending at <m>x_0</m>.
+      </p>
+      <p>
+        The path product operation
+        <md>
+          <mrow>\pi_1(X,x_0)\times \pi(X,x_0) \amp \rightarrow \pi_1(X,x_0)</mrow>
+          <mrow>([f],[g]) \amp \mapsto [f]*[g]=[f*g]</mrow>
+        </md>
+        endows <m>\pi_1(X,x_0)</m> with the structure of a group. 
+      </p>
+      <case>
+        <title>Identity element</title>
+        <p>
+          The identity element of <m>\pi_1(X,x_0)</m> is given by <m>[e_{x_0}]</m>, where <m>e_{x_0}\colon I\rightarrow X</m> is the constant function <m>e_{x_0}(s)=x_0</m> for all <m>s\in I</m>. 
+        </p>
+      </case>
+      <case>
+        <title>Inverse elements</title>
+        <p>
+          Given an element <m>g=[f]\in \pi_1(X,x_0)</m> its group inverse is <m>g^{-1}=[\overline{f}]\in \pi_1(X,x_0)</m>, where <m>\overline{f}</m> is the reverse of <m>f</m>. 
+        </p>
+      </case>
+    </statement>
+    <proof>
+      <p>
+        That the path product operation endows <m>\pi_1(X,x_0)</m> with the structure of a group follows directly from <xref ref="th_path_product_props"/>.
+      </p>
+    </proof>
+  </definition>
+  <definition xml:id="d_simply_connected">
+    <title>Simply connected</title>
+    <statement>
+      <p>
+        A topological space <m>X</m> is <term>simply connected</term> if it is path connected and <m>\pi_1(X,x_0)=\{e\}</m> is trivial for all <m>x_0\in X</m>. 
+      </p>
+    </statement>
+  </definition>
+  <theorem xml:id="th_fund_group_path_connected">
+    <title>Fundamental group and path components</title>  
+    <statement>
+      <p>
+        Assume <m>\alpha\in P(X; x_0, x_1)</m>. The map
+        <md>
+          <mrow>\hat{\alpha}\colon \pi_1(X,x_0) \amp\rightarrow \pi_1(X,x_1) </mrow>
+          <mrow>[f] \amp \mapsto \hat{\alpha}([f])=[\overline{\alpha}]*[f]*[\alpha]</mrow>
+        </md>
+        is an isomorphism. 
+        As a consequence, if <m>C\subseteq X</m> is a path component of <m>X</m>, then <m>\pi_1(X,x)\cong \pi_1(X,x')</m> for any <m>x,x'\in C</m>. 
+      </p>
+    </statement>
+    <proof>
+      <p>
+        Note that the formula for <m>\hat{\alpha}</m> is defined in terms of the path product operation.  We showed in <xref ref="d_path_product"/> that this operation is well-defined on equivalence classes, making <m>\hat{\alpha}</m> well defined.  
+      </p>
+      <p>
+        We now show <m>\hat{\alpha}</m> is a homomorphism of groups. Given <m>[f], [g]\in \pi_1(X,x_0)</m>, we have 
+        <md>
+          <mrow> \hat{\alpha}([f]*[g]) \amp = [\overline{\alpha}]*[f]*[g]*[\alpha]</mrow>
+          <mrow> \amp =[\overline{\alpha}]*[f]*[e_{x_0}]*[g]*[\alpha]</mrow>
+          <mrow> \amp =[\overline{\alpha}]*[f]*[\alpha]*[\overline{\alpha}]*[g]*[\alpha]</mrow>
+          <mrow> \amp =\hat{\alpha}([f])*\hat{\alpha}([g])</mrow>
+        </md>.
+      </p>
+      <p>
+        Lastly one easily shows that <m>\widehat{\alpha}</m> is invertible, with inverse <m>\widehat{\alpha}^{-1}=\widehat{\overline{\alpha}}</m>. 
+      </p>
+    </proof>
+  </theorem>
+  <definition xml:id="d_pointed_space">
+    <title>Pointed space</title>
+    <statement>
+      <p>
+        Given a topological space <m>X</m> and element <m>x_0\in X</m>, the pair <m>(X,x_0)</m> is called a <term>pointed space</term> with <term>base point</term> <m>x_0</m>. Given pointed spaces <m>(X,x_0)</m> and <m>(Y,y_0)</m>, a <term>map of pointed spaces</term> (or <term>based map</term>) is a continuous function <m>f\colon X\rightarrow Y</m> satisfying <m>f(x_0)=y_0</m>. We write <m>f\colon (X,x_0)\rightarrow (Y,y_0)</m> in this case. 
+      </p>
+    </statement>
+  </definition>
+  <theorem xml:id="th_fund_group_function">
+    <title>Fundamental group functor</title>
+    <statement>
+      <p>
+      <ol>
+        <li>
+          <p>
+            Let <m>h\colon (X,x_0)\rightarrow (Y,y_0)</m> be a map of pointed spaces. 
+            The rule <m>h_*([f])=[h\circ f]</m> defines a group homomorphism <m>h_*\colon \pi_1(X,x_0)\rightarrow \pi_1(Y,y_0)</m>. 
+          </p>
+        </li>
+        <li>
+          <p>
+            Given maps of pointed spaces <m>h\colon (X,x_0)\rightarrow (Y,y_0)</m> and <m>k\colon (Y,y_0)\rightarrow (Z,z_0)</m>, we have <m>(k\circ h)_*=k_*\circ h_*</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Let <m>\id\colon X\rightarrow X</m> be the identity function <m>\id(x)=x</m> for all <m>x\in X</m>. For any <m>x_0\in X</m>, we have <m>\id_*=\id</m>, the identity group homomorphism on <m>\pi_1(X,x_0)</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+    </statement>
+    <proof>
+      <p>
+        <ol>
+          <li>
+            <p>
+              It is clear that the rule <m>f\mapsto h\circ f</m> defines a map from <m>P(X;x_0,x_0)</m> to <m>P(Y; y_0, y_0)</m>. We must show that it is well defined on equivalence classes. Assume <m>f,f'\in P(X; x_0, x_0)</m> are path homotopic, and let <m>F</m> be a path homotopy from <m>f</m> to <m>f'</m>. It is easy to see that <m>h\circ F</m> is a path homotopy from <m>h\circ f</m> to <m>h\circ f'</m>. Thus <m>[f]=[f']</m> implies <m>[h\circ f]=[h\circ f']</m>, showing <m>h_*</m> is a well-defined map from <m>\pi_1(X,x_0)</m> to <m>\pi_1(Y,y_0)</m>. 
+            </p>
+            <p>
+              Now we show <m>h_*</m> is a homomorphism of groups. We will use the (easy to show fact) general fact that given <m>f, g\in P(X; x_0, x_1)</m> and continuous <m>h\colon X\rightarrow Y</m>, we have <m>h\circ (f*g)=(h\circ f)*(h\cirg g)</m>. Now, given <m>[f],[g]\in \pi_1(X, x_0)</m>, we have  
+              <md>
+                <mrow>h_*([f]*[g]) \amp = [h\circ (f*g)]</mrow>
+                <mrow> \amp = [(h\circ f) * (h\circ g)</mrow>
+                <mrow> \amp =[h\circ f]*[h\circ g]</mrow>
+                <mrow> \amp =h_*([f])*h_*([g])</mrow> 
+              </md>.
+            </p>
+          </li>
+          <li>
+            <p>
+              For any <m>f\in \pi_1(X,x_0)</m> we have  
+              <md>
+                <mrow> (k\circ h)_* ([f]) \amp= [(k\circ h)\circ f] </mrow>
+                <mrow> \amp = [k\circ (h\circ f)]</mrow>
+                <mrow> \amp =k_*([h\circ f])</mrow>
+                <mrow> \amp =k_*(h_*([f]))</mrow>
+                <mrow> \amp =k_*\circ h_*([f])</mrow>
+              </md>.
+              This proves <m>(k\circ h)_*=k_*\circ h_*</m>. 
+            </p>
+          </li>
+          <li>
+            <p>
+              For any <m>[f]\in \pi_1(X,x_0)</m> we have <m>\id_*([f])=[\id\circ f]=[f]</m>. This proves <m>\id_*</m> is the identity homomorphism on <m>\pi_1(X, x_0)</m>.  
+            </p>
+          </li>
+        </ol>
+      </p>
+    </proof>
+  </theorem>
+  <corollary xml:id="cor_fund_group">
+    <title>Fundamental group invariance</title>
+    <statement>
+      <p>
+        Let <m>h\colon X\rightarrow Y</m> be a homemorphism, let <m>x_0\in X</m>, and let <m>y_0=h(x_0)</m>. The map <m>h_*\colon \pi_1(X,x_0)\rightarrow (Y,y_0)</m> is an isomorphism of groups. 
+      </p>
+    </statement>
+    <proof>
+      <p>
+        If <m>h</m> is a homemorphism, then <m>h^{-1}</m> defines a map of pointed spaces from <m>(Y,y_0)</m> to <m>(X,x_0)</m>. Since <m>h\circ h^{-1}=\id_Y</m> and <m>h^{-1}\circ h=\id_Y</m> we have 
+        <md>
+          <mrow> h_*\circ (h^{-1})_* \amp = (h\circ h^{-1})_* \amp 
+            (h^{-1})_*\circ h_* \amp = (h^{-1}\circ h)_* 
+          </mrow>
+          <mrow> \amp =(\id_Y)_* \amp  \amp =(\id_X)_* </mrow>
+          <mrow> \amp =\id_{\pi_(Y,y_0)} \amp \amp =\id_{\pi_1(X,x_0)}</mrow>
+        </md>.
+        This shows that <m>(h^{-1})_*</m> is the inverse of <m>h_*</m>, and thus that <m>h_*</m> is an isomorphism. 
+      </p>
+    </proof>
+  </corollary>
+  
+  
+  </section>

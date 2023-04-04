@@ -1,4 +1,7 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="c_algebraic_topology">
   <title>Algebraic topology</title>
   <xi:include  href="s_homotopy.ptx"/>
+  <xi:include  href="s_fundamental_group.ptx"/>
+  <xi:include  href="s_covering_spaces.ptx"/>
+
 </chapter>

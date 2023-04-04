@@ -1,0 +1,170 @@
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="s_covering_spaces">
+  <title>Covering spaces</title>
+  <definition xml:id="d_evenly_covered">
+    <title>Covering map</title>
+    <statement>
+        <p>
+            Let <m>p\colon E\rightarrow B</m> be a surjective continuous map. A set <m>U\subseteq B</m> is <term>evenly covered</term> by <m>p</m> if <m>p^{-1}(U)</m> can be written as a disjoint union of open sets <m>p^{-1}(U)=\bigcup_{\alpha\in I} V_{\alpha}</m>. The collection <m>\{V_{\alpha}\}_{\alpha\in I}</m> and <m>p\vert_{V_\alpha}\colon V_\alpha\rightarrow p^{-1}(U)</m> is a homeomorphism for all <m>\alpha\in I</m>. 
+        </p>
+        <p>
+            The collection <m>\{V_{\alpha}\}_{\alpha\in I}</m> is called a partition of <m>p^{-1}(U)</m> into <term>slices</term>. 
+        </p>
+        <p>
+            If every <m>b\in B</m> has an open neighborhood <m>U</m> that is evenly covered by <m>p</m>, then <m>p</m> is called a <term>covering map</term> and <m>E</m> is called a <term>covering space</term> of <m>B</m>. 
+        </p>
+    </statement>
+  </definition>
+  <example xml:id="eg_trivial_cover">
+    <title>Trivial covering</title>
+    <p>
+        Let <m>X, Y</m> be topological spaces, and suppose <m>X</m> is discrete. The projection 
+        <md>
+            <mrow>\pi_Y\colon X\times Y \amp \rightarrow Y</mrow>
+            <mrow>(x,y) \amp\mapsto y </mrow>
+        </md>
+        is a covering map. We call this a <term>trivial covering</term> of <m>Y</m>. 
+    </p>
+    <solution>
+        <p>
+            Since <m>X</m> is discrete, <m>\{x\}</m> is open for any <m>x\in X</m>. Given any open <m>U\subseteq Y</m>, the preimage <m>\pi_Y^{-1}(U)</m> is the disjoint union of the open sets <m>V_x=\{x\}\times U</m>, each of which is homeomorphic to <m>U</m> by the map <m>V_x\rightarrow U</m> sending <m>(x,y)</m> to <m>y</m>. Thus all open sets of <m>Y</m> are evenly covered by <m>\pi_Y</m>. 
+        </p>
+        <p>
+            This is called a trivial covering because the space <m>X\times Y</m> is homeomorphic to a a disjoint union of copies of <m>\{x\}\times Y</m> Alternatively, since <m>X</m> is discrete, the map 
+            <md>
+                <mrow>X\times Y \amp \rightarrow \coprod_{x\in X} Y_x</mrow>
+                <mrow>(x,y) \amp \mapsto y\in Y_x</mrow>
+            </md>
+            is a homeomorphism of <m>X\times Y</m> with the disjoint union <m>\coprod_{x\in X} Y_x</m>, where <m>Y_x</m> is a copy of <m>Y</m>. 
+        </p>
+    </solution>
+  </example>
+  <example xml:id="eg_covering_circle">
+    <title>Covering map <m>\R\rightarrow S^1</m></title>
+    <p>
+        The open map <m>p\colon \R\rightarrow S_1</m> defined as <m>p(s)=(\cos2\pi s, \sin 2\pi s)</m> is a covering map. 
+    </p>
+    <solution>
+        <p>
+            Let <m>P=(1,0)\in S^1</m>, and let <m>U=S_1-\{(-1,0)\}</m>. We have 
+            <md>
+                <mrow>p^{-1}(U) \amp = \bigcup_{n\in \Z}(n-1/2, n+1/2)</mrow>
+            </md>
+        </p>
+    </solution>
+  </example>
+  
+  <theorem xml:id="th_covering_map_props">
+    <title>Covering map properties</title>    
+    <statement>
+        <p>
+            Let <m>p\colon E\rightarrow B</m> be a covering map. 
+        </p>
+        <ol>
+            <li>
+                <p>
+                    For all <m>b\in B</m>, the preimage <m>p^{-1}(\{b\})</m> is a discrete subspace of <m>E</m>. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    For all <m>e\in E</m> there exists an open set <m>U</m> containing <m>e</m> such that <m>p\vert_U\colon U\rightarrow E</m> is a homeomorphism: <ie/>, <m>p</m> is a <term>local homeomorphism</term>. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    <m>p</m> is an open map. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    <m>p</m> is a quotient map. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    If <m>E</m> is connected and <m>\abs{p^{-1}(\{b_0\})}=k</m> for some <m>b_0\in B</m> and <m>k\in \Z_+</m>, then <m>\abs{p^{-1}(\{b\})}=k</m> for all <m>b\in B</m>. We call <m>p</m> a <term><m>k</m>-fold covering</term> in this case. 
+                </p>
+            </li>
+        </ol>
+    </statement>
+  </theorem>
+  <example xml:id="eg_nfold_covering">
+    <title><m>n</m>-fold covering of <m>S^1</m></title>
+    <p>
+        The map <m>p\colon S^1\rightarrow S^1</m> sending a point <m>Q=(\cos 2\pi s, \sin 2\pi s)</m> to <m>p(Q)=(\cos 2\pi ns, \sin 2\pi ns)</m> is an <m>n</m>-fold cover of <m>S^1</m>. 
+    </p>
+    <solution>
+        <p>
+            Homework exercise. 
+        </p>
+    </solution>
+  </example>
+  <example xml:id="eg_covering_P2">
+    <title>Covering of <m>\mathbb{P}^2</m></title>
+    <p>
+        Recall that <m>\mathbb{P}^2</m> is the quotient space obtained by identifying elements of <m>\R^3-\{(0,0,0)\}</m> that are scalar multiples of one another. We showed in a homeowork that <m>\mathbb{P}^2</m> is homeomorphic to the quotient of <m>S^2</m> obtained by identifying antipodal points. The corresponding quotient map <m>p\colon S^2\rightarrow \mathbb{P}^2</m> is a covering map. 
+    </p>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+  </example>
+  <example>
+    <title>Not all quotient maps are covering maps</title>
+   <p>
+    The map <m>p\colon I\rightarrow S^1 </m>, defined as <m>p(s)=(\cos 2\pi s, \sin 2\pi s)</m> is not a covering. 
+   </p>
+  </example>
+  <example>
+    <title>Local homeomorphism not sufficient</title>
+    <p>
+        The map <m>p\colon \R_+\rightarrow S^1</m> defined as <m>p(s)=(\cos 2\pi s, \sin 2\pi s)</m> satisfies (1)-(4) of <xref ref="th_covering_map_props"/>, but is not a covering map. 
+    </p>
+  </example>
+  <theorem xml:id="th_covering_map_construction">
+    <title>Covering map constructions</title>
+    <statement>
+        <p>
+           <ol>
+            <li>
+                <p>
+                    If <m>p\colon E\rightarrow B</m> and <m>p'\colon E'\rightarrow B'</m> are covering maps, then the map <m>p\times p'\colon E\times E'\rightarrow B\times B'
+                    </m> defined as <m>p\times p'(e,e')=(p(e), p'(e'))</m> is a covering map. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    If <m>p\colon E\colon rightarrow B </m> is a covering map and <m>B_0\subseteq B</m> is a subpace, then the function 
+                    <md>
+                        <mrow> q\colon p^{-1}(B_0) \amp \rightarrow B_0 </mrow>
+                        <mrow> b \amp \mapsto p(b)</mrow>
+                    </md>
+                    is a covering map. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    If  <m>p\colon E\rightarrow B</m> is a covering map and <m>\phi\colon E'\rightarrow E</m> and <m>\psi\colon B\rightarrow B'</m> are homeomorphisms, then <m>p\circ \phi</m> and <m>\psi\circ \phi</m> are covering maps.     
+                </p>
+            </li>
+           </ol> 
+        </p>
+    </statement>
+  </theorem>
+  <example xml:id="eg_cover_torus">
+    <title>Covering of torus</title>
+    <p>
+        Let <m>p\colon \R\rightarrow S^1</m> be the usual covering of the circle. The map <m>p\times p\colon \R\times\R\rightarrow S_1\times S_1\cong T</m> is a covering of the torus. 
+    </p>
+  </example>
+
+  <example xml:id="eg_cover_figure8">
+    <title>Covering of figure eight</title>
+    <p>
+        The <term>figure eight</term> is the subpsace of <m>Y\subseteq T=S^1\times S^1</m> defined as <m>X=S^1\times \{(1,0)\}\bigcup \{(1,0)\}\times S_1</m>. Let <m>p\colon \R\times \R\rightarrow T</m> be the standard covering map. We have <m>X=p^{-1}(Y)=\R\times \Z\cup \Z\times \R</m>. By <xref ref="th_covering_map_construction"/>, <m>p\vert_X\colon X\rightarrow Y</m> is a covering map. 
+    </p>
+    
+  </example>
+  
+ </section>

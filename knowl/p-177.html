@@ -13,10 +13,20 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">The function <span class="process-math">\(f*g\)</span> defined is a path from <span class="process-math">\(x_0\)</span> to <span class="process-math">\(x_2\text{.}\)</span> Furthermore, if <span class="process-math">\(f\simeq_p f'\)</span> and <span class="process-math">\(g\simeq_p g'\text{,}\)</span> then <span class="process-math">\(f*g\simeq f'*g'\text{.}\)</span> In other words, we get a well-defined operation on homotopy classes defined as</div>
+<div class="para">Let <span class="process-math">\(X\)</span> be a topological space, and let <span class="process-math">\(x_0,x_1,x_2\in X\text{.}\)</span> We define a <dfn class="terminology">path product</dfn> operation</div>
+<div class="displaymath process-math">
+\begin{align*}
+P(X;x_0,x_1)\times P(X; x_1,x_2) \amp \rightarrow P(X;x_0, x_2)\\
+(f,g) \amp \mapsto f*g
+\end{align*}
+</div>
+<div class="para">as follows:</div>
 <div class="displaymath process-math">
 \begin{equation*}
-[f]*[g]=[f*g]\text{.}
+f*g(s)=\begin{cases}
+f(2s)\amp \text{if } s\in [0,1/2]\\
+g(2s-1)\amp \text{if } s\in [1/2,1]
+\end{cases}\text{.}
 \end{equation*}
 </div>
 </div>

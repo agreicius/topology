@@ -12,7 +12,38 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<article class="case"><h4 class="heading">Implication: <span class="process-math">\((1)\implies (2)\)</span>.</h4> <div class="para">Suppose <span class="process-math">\(Y=\bigcup_{i\in I}A_i\)</span> for some sets <span class="process-math">\(A_i\in \mathcal{A}\text{.}\)</span> Given any <span class="process-math">\(y\in Y\)</span> we have <span class="process-math">\(y\in A_i\)</span> for some <span class="process-math">\(i\in I\text{.}\)</span> Since <span class="process-math">\(A_i\subseteq Y\text{,}\)</span> we are done.</div></article> <article class="case"><h4 class="heading">Implication: <span class="process-math">\((2)\implies (1)\)</span>.</h4> <div class="para">By assumption, for all <span class="process-math">\(y\in Y\)</span> we can find a set <span class="process-math">\(A_y\in \mathcal{A}\)</span> such that <span class="process-math">\(y\in A_y\subseteq Y\text{.}\)</span> It follows that <span class="process-math">\(Y=\bigcup_{y\in Y}A_y\text{,}\)</span> showing that <span class="process-math">\(Y\)</span> is a union of elements of <span class="process-math">\(\mathcal{A}\text{.}\)</span>
-</div></article></article><span class="incontext"><a href="s_bases_top.html#proof-8" class="internal">in-context</a></span>
+<div class="para logical"><ol class="decimal">
+<li>
+<div class="para">It is clear that the rule <span class="process-math">\(f\mapsto h\circ f\)</span> defines a map from <span class="process-math">\(P(X;x_0,x_0)\)</span> to <span class="process-math">\(P(Y; y_0, y_0)\text{.}\)</span> We must show that it is well defined on equivalence classes. Assume <span class="process-math">\(f,f'\in P(X; x_0, x_0)\)</span> are path homotopic, and let <span class="process-math">\(F\)</span> be a path homotopy from <span class="process-math">\(f\)</span> to <span class="process-math">\(f'\text{.}\)</span> It is easy to see that <span class="process-math">\(h\circ F\)</span> is a path homotopy from <span class="process-math">\(h\circ f\)</span> to <span class="process-math">\(h\circ f'\text{.}\)</span> Thus <span class="process-math">\([f]=[f']\)</span> implies <span class="process-math">\([h\circ f]=[h\circ f']\text{,}\)</span> showing <span class="process-math">\(h_*\)</span> is a well-defined map from <span class="process-math">\(\pi_1(X,x_0)\)</span> to <span class="process-math">\(\pi_1(Y,y_0)\text{.}\)</span>
+</div>
+<div class="para logical">
+<div class="para">Now we show <span class="process-math">\(h_*\)</span> is a homomorphism of groups. We will use the (easy to show fact) general fact that given <span class="process-math">\(f, g\in P(X; x_0, x_1)\)</span> and continuous <span class="process-math">\(h\colon X\rightarrow Y\text{,}\)</span> we have <span class="process-math">\(h\circ (f*g)=(h\circ f)*(h\cirg g)\text{.}\)</span> Now, given <span class="process-math">\([f],[g]\in \pi_1(X, x_0)\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{align*}
+h_*([f]*[g]) \amp = [h\circ (f*g)]\\
+\amp = [(h\circ f) * (h\circ g)\\
+\amp =[h\circ f]*[h\circ g]\\
+\amp =h_*([f])*h_*([g])\text{.}
+\end{align*}
+</div>
+</div>
+</li>
+<li><div class="para logical">
+<div class="para">For any <span class="process-math">\(f\in \pi_1(X,x_0)\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{align*}
+(k\circ h)_* ([f]) \amp= [(k\circ h)\circ f] \\
+\amp = [k\circ (h\circ f)]\\
+\amp =k_*([h\circ f])\\
+\amp =k_*(h_*([f]))\\
+\amp =k_*\circ h_*([f])\text{.}
+\end{align*}
+</div>
+<div class="para">This proves <span class="process-math">\((k\circ h)_*=k_*\circ h_*\text{.}\)</span>
+</div>
+</div></li>
+<li><div class="para">For any <span class="process-math">\([f]\in \pi_1(X,x_0)\)</span> we have <span class="process-math">\(\id_*([f])=[\id\circ f]=[f]\text{.}\)</span> This proves <span class="process-math">\(\id_*\)</span> is the identity homomorphism on <span class="process-math">\(\pi_1(X, x_0)\text{.}\)</span>
+</div></li>
+</ol></div></article><span class="incontext"><a href="s_fundamental_group.html#proof-8" class="internal">in-context</a></span>
 </body>
 </html>

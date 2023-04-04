@@ -13,38 +13,21 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h3 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.17.5.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.13.5.1</span><span class="period">.</span>
 </h3>
-<div class="para logical"><ol class="decimal">
-<li><div class="para">The map <span class="process-math">\(\iota\colon (-\pi/2,\pi/2)\hookrightarrow S^1\)</span> defined as <span class="process-math">\(\iota(t)=(\cos 2t, \sin 2t)\)</span> is an open embedding of <span class="process-math">\((-\pi/2, \pi/2)\)</span> onto <span class="process-math">\(S^1-\{(-1,0)\}\text{.}\)</span> Thus this is a realization of the one-point compactification of <span class="process-math">\((-\pi/2, \pi/2)\text{.}\)</span>
-</div></li>
-<li><div class="para logical">
-<div class="para">Since <span class="process-math">\(\arctan\colon \R\rightarrow (-\pi/2,\pi/2)\)</span> is a homeomorphism, the map <span class="process-math">\(\lambda\)</span> defined as the composition</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\R\xrightarrow{\arctan} (\pi/2,\pi/2)\xrightarrow{\iota} S^1
-\end{equation*}
-</div>
-<div class="para">is an open embedding of <span class="process-math">\(\R\)</span> onto <span class="process-math">\(S^1-\{(-1,0)\}\text{,}\)</span> providing a realization of the one-point compactification of <span class="process-math">\(\R\text{.}\)</span>  Note that we have by definition <span class="process-math">\(\lambda(t)=(\cos(2\arctan t), \sin(2\arctan t))\text{.}\)</span>
-</div>
-</div></li>
-<li><div class="para logical">
-<div class="para">Since the inclusion <span class="process-math">\(i\colon \Z\hookrightarrow \R\)</span> is a closed embedding, the restriction</div>
+<div class="para logical">
+<div class="para">It is easy to see that the straight line path <span class="process-math">\(\phi\colon[0,1]\rightarrow \R^n\)</span> defined as <span class="process-math">\(\phi(t)=(1-t)\boldx+t\boldy\)</span> is a continuous function connecting any two points in <span class="process-math">\(\R^n\text{.}\)</span> For our current purposes, we wish to show that if <span class="process-math">\(\boldy\in B_{\epsilon}(\boldx)\text{,}\)</span> then so is <span class="process-math">\((1-t)\boldx+t\boldy\text{,}\)</span> for any <span class="process-math">\(t\in [0,1]\text{.}\)</span> To this end, note that</div>
 <div class="displaymath process-math">
 \begin{align*}
-\lambda\vert_\Z\colon \Z \amp \hookrightarrow S^1\\
-n \amp \mapsto (\cos(2\arctan n),\sin(2\arctan n))
+d(\phi(t),\boldx)\amp =\norm{(1-t)\boldx+t\boldy-\boldx}  \\
+\amp =\norm{t(\boldy-\boldx)}\\
+\amp =\abs{t}d(\boldy,\boldx)\\
+\amp \leq \epsilon \amp (0\leq t\leq 1)\text{.}
 \end{align*}
 </div>
-<div class="para">is an embedding (neither open nor closed) of <span class="process-math">\(\Z\)</span> into <span class="process-math">\(S^1\text{.}\)</span> Restricting the codomain to the closed (hence compact) subset <span class="process-math">\(Y=\lambda(\Z)\cup\{(-1,0)\}\)</span> we get a one-point compactification</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\Z\hookrightarrow \{(-1,0)\}\cup \{(\cos(2\arctan n),\sin(2\arctan n))\colon n\in \Z\}\text{.}
-\end{equation*}
+<div class="para">This proves that the open ball is path connected, and hence connected. Next, it is easy to see that the closed ball is in fact the closure of the open ball. Since connectedness is preserved under closure, we conclude that the closed ball is connected.</div>
 </div>
-</div></li>
-</ol></div>
 </div>
-<span class="incontext"><a href="s_locally.html#solution-41" class="internal">in-context</a></span>
+<span class="incontext"><a href="s_connected_path.html#solution-41" class="internal">in-context</a></span>
 </body>
 </html>

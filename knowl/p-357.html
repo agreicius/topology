@@ -12,7 +12,23 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Assume <span class="process-math">\(x\in \overline{A}\text{.}\)</span>  If <span class="process-math">\(U\)</span> is an open set satisfying <span class="process-math">\(U\cap A=\emptyset\text{,}\)</span> then <span class="process-math">\(C=U^c\)</span> is a closed set containing <span class="process-math">\(A\text{,}\)</span> and hence contains <span class="process-math">\(x\text{.}\)</span> It follows that any open set containing <span class="process-math">\(x\)</span> intersects <span class="process-math">\(A\)</span> nontrivially. This proves (i) <span class="process-math">\(\implies\)</span> (ii).</div>
-<span class="incontext"><a href="s_closed_closure_interior.html#p-357" class="internal">in-context</a></span>
+<div class="para logical">
+<div class="para">True to its name, an <span class="process-math">\(\epsilon\)</span>-ball around <span class="process-math">\(\boldx\in \R^n\)</span> is the open <span class="process-math">\(n\)</span>-cube</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/d_cartesian_product.html">
+\begin{equation*}
+\prod_{i=1}^n (x_i-\epsilon, x_i+\epsilon)\text{.}
+\end{equation*}
+</div>
+<div class="para">(Note that the product here is the Cartesian product of these intervals. (See <a href="" class="xref" data-knowl="./knowl/d_cartesian_product.html" title="Definition 0.1.12: Cartesian product (finite)">Definition 0.1.12</a>.)) Indeed, we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/d_cartesian_product.html">
+\begin{align*}
+\boldy\in B_\epsilon(\boldx) \amp \iff \max\{\abs{x_i-y_i}\}_{i=1}^n&lt; \epsilon \\
+\amp \iff \abs{x_i-y_i}&lt; \epsilon \text{ for all } 1\leq i\leq n\\
+\amp \iff y_i\in (x_i-\epsilon, x_i+\epsilon) \text{ for all } 1\leq i\leq n\\
+\amp \iff \boldy\in \prod_{i=1}^n (x_i-\epsilon, x_i+\epsilon)\text{.}
+\end{align*}
+</div>
+</div>
+<span class="incontext"><a href="s_metric1.html#p-357" class="internal">in-context</a></span>
 </body>
 </html>

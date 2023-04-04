@@ -12,19 +12,39 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical"><ol class="decimal">
+<li>
+<div class="para">It is clear that the rule <span class="process-math">\(f\mapsto h\circ f\)</span> defines a map from <span class="process-math">\(P(X;x_0,x_0)\)</span> to <span class="process-math">\(P(Y; y_0, y_0)\text{.}\)</span> We must show that it is well defined on equivalence classes. Assume <span class="process-math">\(f,f'\in P(X; x_0, x_0)\)</span> are path homotopic, and let <span class="process-math">\(F\)</span> be a path homotopy from <span class="process-math">\(f\)</span> to <span class="process-math">\(f'\text{.}\)</span> It is easy to see that <span class="process-math">\(h\circ F\)</span> is a path homotopy from <span class="process-math">\(h\circ f\)</span> to <span class="process-math">\(h\circ f'\text{.}\)</span> Thus <span class="process-math">\([f]=[f']\)</span> implies <span class="process-math">\([h\circ f]=[h\circ f']\text{,}\)</span> showing <span class="process-math">\(h_*\)</span> is a well-defined map from <span class="process-math">\(\pi_1(X,x_0)\)</span> to <span class="process-math">\(\pi_1(Y,y_0)\text{.}\)</span>
+</div>
 <div class="para logical">
-<div class="para">When <span class="process-math">\(X=\{a, 7\}\text{,}\)</span> we have <span class="process-math">\(\mathcal{P}(X)=\{\emptyset, \{a\}, \{7\}, \{a,7\}\}\text{.}\)</span> By axiom (1) a topology <span class="process-math">\(\mathcal{T}\)</span> must contain <span class="process-math">\(\emptyset\)</span> and <span class="process-math">\(X=\{a,7\}\text{.}\)</span> It follows that there are exactly four possibilities for <span class="process-math">\(\mathcal{T}\)</span> based on whether the sets <span class="process-math">\(\{a\}\)</span> and <span class="process-math">\(\{7\}\)</span> are elements of <span class="process-math">\(\mathcal{T}\text{:}\)</span> i.e., the only possibilities are</div>
+<div class="para">Now we show <span class="process-math">\(h_*\)</span> is a homomorphism of groups. We will use the (easy to show fact) general fact that given <span class="process-math">\(f, g\in P(X; x_0, x_1)\)</span> and continuous <span class="process-math">\(h\colon X\rightarrow Y\text{,}\)</span> we have <span class="process-math">\(h\circ (f*g)=(h\circ f)*(h\cirg g)\text{.}\)</span> Now, given <span class="process-math">\([f],[g]\in \pi_1(X, x_0)\text{,}\)</span> we have</div>
 <div class="displaymath process-math">
 \begin{align*}
-\mathcal{T} \amp = \{\emptyset, \{a,7\}\} \\
-\mathcal{T} \amp = \{\emptyset, \{a,7\}, \{a\}\} \\
-\mathcal{T} \amp = \{\emptyset, \{a,7\}, \{7\}\} \\
-\mathcal{T} \amp = \{\emptyset, \{a,7\},\{a\}, \{7\}\} \text{.}
+h_*([f]*[g]) \amp = [h\circ (f*g)]\\
+\amp = [(h\circ f) * (h\circ g)\\
+\amp =[h\circ f]*[h\circ g]\\
+\amp =h_*([f])*h_*([g])\text{.}
 \end{align*}
 </div>
-<div class="para">These are the four subsets of <span class="process-math">\(\mathcal{P}(A)\)</span> that satisfy axiom (1). It is now straightforward to show that each of these choices also satisfies axioms (2) and (3). Thus there are exactly 4 distinct topologies we can define on <span class="process-math">\(X=\{a, 7\}\text{.}\)</span>
 </div>
+</li>
+<li><div class="para logical">
+<div class="para">For any <span class="process-math">\(f\in \pi_1(X,x_0)\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{align*}
+(k\circ h)_* ([f]) \amp= [(k\circ h)\circ f] \\
+\amp = [k\circ (h\circ f)]\\
+\amp =k_*([h\circ f])\\
+\amp =k_*(h_*([f]))\\
+\amp =k_*\circ h_*([f])\text{.}
+\end{align*}
 </div>
-<span class="incontext"><a href="s_top_spaces.html#p-215" class="internal">in-context</a></span>
+<div class="para">This proves <span class="process-math">\((k\circ h)_*=k_*\circ h_*\text{.}\)</span>
+</div>
+</div></li>
+<li><div class="para">For any <span class="process-math">\([f]\in \pi_1(X,x_0)\)</span> we have <span class="process-math">\(\id_*([f])=[\id\circ f]=[f]\text{.}\)</span> This proves <span class="process-math">\(\id_*\)</span> is the identity homomorphism on <span class="process-math">\(\pi_1(X, x_0)\text{.}\)</span>
+</div></li>
+</ol></div>
+<span class="incontext"><a href="s_fundamental_group.html#p-215" class="internal">in-context</a></span>
 </body>
 </html>

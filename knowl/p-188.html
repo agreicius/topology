@@ -13,17 +13,26 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(f\in P(X; x_0,x_1)\text{,}\)</span> let</div>
-<div class="displaymath process-math">
-\begin{equation*}
-0=a_0&lt; a_1 &lt; a_2 &lt; \dots &lt; a_n=1
-\end{equation*}
+<div class="para">
+<dfn class="terminology">Identities</dfn>. Using the definition of path product, we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/lemma_homotopy_reparameter.html">
+\begin{align*}
+e_{x_0}*f(s) \amp =
+\begin{cases}
+x_0\amp \text{if } s\in [0,1/2]\\
+f(2s-1) \amp \text{if } s\in [1/2,1]
+\end{cases}  
+\end{align*}
 </div>
-<div class="para">be a subdivision of <span class="process-math">\(I\)</span> into <span class="process-math">\(n\)</span> subintervals <span class="process-math">\(I_k=[a_{k-1}, a_k]\text{,}\)</span> <span class="process-math">\(1\leq k\leq n\text{,}\)</span> and let <span class="process-math">\(f_k=f\circ\phi_k\text{,}\)</span> where <span class="process-math">\(\phi_k\colon I\rightarrow [a_{k-1}, a_k]\)</span> is any continuous map satisfying <span class="process-math">\(\phi_k(0)=a_{k-1}\)</span> and <span class="process-math">\(\phi_k(1)=a_k\text{.}\)</span> We have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-[f]=[f_1]*[f_2]*\cdots *[f_n]\text{.}
-\end{equation*}
+<div class="para">Define <span class="process-math">\(\phi\colon I\rightarrow I\)</span> as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/lemma_homotopy_reparameter.html">
+\begin{align*}
+\phi(s) \amp =
+\begin{cases}
+x_0 \amp \text{if } s\in [0,1/2]
+2s-1 \amp \text{if } s\in [1/2/1]
+\end{cases}
+\end{align*}
 </div>
 </div>
 <span class="incontext"><a href="s_homotopy.html#p-188" class="internal">in-context</a></span>

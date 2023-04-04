@@ -13,22 +13,21 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h3 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.5.11.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.4.7.1</span><span class="period">.</span>
 </h3>
 <div class="para logical"><ol class="decimal">
-<li><div class="para">Let <span class="process-math">\((X,d)\)</span> be a metric space. Given any <span class="process-math">\(x\ne y\in X\text{,}\)</span> we have <span class="process-math">\(d(x,y)=r\ne 0\text{.}\)</span> The open balls <span class="process-math">\(B_{r/2}(x), B_{r/2}(y)\)</span> are disjoint open neighrborhoods of <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{,}\)</span> respectively.</div></li>
-<li><div class="para logical">
-<div class="para">Let <span class="process-math">\(X\)</span> be an infinite set with the cofinite topology. We will show that <span class="process-math">\(X\)</span> is not Hausdorff and hence not a metric space. In fact, we will show that any two nonempty open sets in <span class="process-math">\(X\)</span> intersect nontrivially. Indeed, given nonempty open sets <span class="process-math">\(U_1, U_2\text{,}\)</span> we have by definition <span class="process-math">\(U_1=X-S_1\text{,}\)</span> <span class="process-math">\(U_2=X-S_2\)</span> for finite sets <span class="process-math">\(S_1, S_2\text{.}\)</span> Their intersection is the open set</div>
-<div class="displaymath process-math">
-\begin{equation*}
-U_1\cap U_2=(X-S_1)\cap (X-S_2)=X-(S_1\cup S_2).
-\end{equation*}
+<li>
+<div class="para">The set <span class="process-math">\(A\)</span> is not open: any open ball containing the point <span class="process-math">\((0,1)\)</span> contains points with negative <span class="process-math">\(x\)</span>-coordinate. Hence there is no open ball containing <span class="process-math">\((0,1)\)</span> that is contained in <span class="process-math">\(A\text{.}\)</span>
 </div>
-<div class="para">Since <span class="process-math">\(X\)</span> is infinite and the <span class="process-math">\(S_i\)</span> are finite, we have <span class="process-math">\(X-(S_1\cup S_2)\ne\emptyset\text{,}\)</span> and thus <span class="process-math">\(U_1\cap U_2\ne \emptyset\text{.}\)</span>
+<div class="para">The set <span class="process-math">\(A\)</span> is closed. If <span class="process-math">\(P=(x,y)\in A^c\text{,}\)</span> then either <span class="process-math">\(x&lt; 0\)</span> or <span class="process-math">\(y&lt; 0\text{.}\)</span> Let <span class="process-math">\(\epsilon=\min\{\abs{x},\abs{y}\}\text{.}\)</span> Every element of <span class="process-math">\(B_\epsilon(P)\)</span> has either a negative <span class="process-math">\(x\)</span>-coordinate or a negative <span class="process-math">\(y\)</span>-coordinate. Hence <span class="process-math">\(P\in B_{\epsilon}(P)\subseteq A^c\text{.}\)</span> This proves <span class="process-math">\(A\)</span> is closed, using <a href="" class="xref" data-knowl="./knowl/lemma_basis_closed.html" title="Lemma 2.4.6: Basis description of closed sets">Lemma 2.4.6</a>.</div>
+</li>
+<li>
+<div class="para">Again, the set <span class="process-math">\(A\)</span> is not open, as witnessed by <span class="process-math">\((0,1)\in A\text{.}\)</span>
 </div>
-</div></li>
+<div class="para">The set <span class="process-math">\(A^c\)</span> is also not open. Take <span class="process-math">\(P=(1,0)\in A^c\text{.}\)</span> Any open ball containing <span class="process-math">\(P\)</span> contains points with positive <span class="process-math">\(y\)</span>-coordinate. Thus there is no open ball containing <span class="process-math">\(P\)</span> and contained in <span class="process-math">\(A^c\text{.}\)</span> We conclude that <span class="process-math">\(A\)</span> is not closed, using <a href="" class="xref" data-knowl="./knowl/lemma_basis_closed.html" title="Lemma 2.4.6: Basis description of closed sets">Lemma 2.4.6</a>.</div>
+</li>
 </ol></div>
 </div>
-<span class="incontext"><a href="s_limitpoints_hausdorff.html#solution-23" class="internal">in-context</a></span>
+<span class="incontext"><a href="s_closed_closure_interior.html#solution-23" class="internal">in-context</a></span>
 </body>
 </html>

@@ -11,12 +11,14 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/d_cartesian_product.html">
 \begin{align*}
-D\colon X\times X \amp \rightarrow \R\\
-\left((x_i)_{i=1}^\infty, (y_i)_{i=1}^\infty\right) \amp\mapsto  \sup\left\{\frac{\overline{d}(x_i,y_i)}{i}\colon i\in \Z_+\right\}
+\boldy\in B_\epsilon(\boldx) \amp \iff \max\{\abs{x_i-y_i}\}_{i=1}^n&lt; \epsilon \\
+\amp \iff \abs{x_i-y_i}&lt; \epsilon \text{ for all } 1\leq i\leq n\\
+\amp \iff y_i\in (x_i-\epsilon, x_i+\epsilon) \text{ for all } 1\leq i\leq n\\
+\amp \iff \boldy\in \prod_{i=1}^n (x_i-\epsilon, x_i+\epsilon)
 \end{align*}
 </div>
-<span class="incontext"><a href="s_prods_convergence_metric.html#md-57" class="internal">in-context</a></span>
+<span class="incontext"><a href="s_metric1.html#md-59" class="internal">in-context</a></span>
 </body>
 </html>

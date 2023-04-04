@@ -11,9 +11,20 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">We prove the contrapositive. Suppose <span class="process-math">\(X\)</span> is not compact, and let <span class="process-math">\(\mathcal{U}=\{U_i\}_{i\in I}\)</span> be a cover with no finite cover. Define <span class="process-math">\(J\)</span> to the be the set of all pairs <span class="process-math">\((K, x)\text{,}\)</span> where <span class="process-math">\(K\)</span> is a finite subset of <span class="process-math">\(I\)</span> and <span class="process-math">\(x\in X-\bigcup_{k\in K}U_k\text{.}\)</span> (Note that <span class="process-math">\(X-\bigcup_{k\in K}U_k\ne\emptyset\)</span> since <span class="process-math">\(\mathcal{U}\)</span> has no finite subcover.) It is easy to see that <span class="process-math">\(J\)</span> is a directed set under the quasiordering defined as <span class="process-math">\((K, x)\leq (K', x')\)</span> if and only if <span class="process-math">\(K\subseteq K'\text{.}\)</span> Define the net <span class="process-math">\(f\colon J\rightarrow X\)</span> as <span class="process-math">\(f((K, x))=x\text{.}\)</span>  We show that <span class="process-math">\(f\)</span> has no limit point. To this end, given any <span class="process-math">\(y\in Y\text{,}\)</span> we have <span class="process-math">\(y\in U_{i_0}\)</span> for some <span class="process-math">\(i_0\in I \text{.}\)</span> We will show that the net <span class="process-math">\(f\)</span> is not cofinally in <span class="process-math">\(U_{i_0}\text{.}\)</span> To this end consider the index <span class="process-math">\(j=({i_0}, x)\in J\text{,}\)</span> where <span class="process-math">\(x\in X-U_{i_0}\text{.}\)</span> For all <span class="process-math">\(j'=(K, x)\)</span> with <span class="process-math">\(j'\geq j\text{,}\)</span> we have <span class="process-math">\(K\supseteq \{i_0\}\text{,}\)</span> in which case <span class="process-math">\(f(j')=x\in X-\bigcup_{k\in K}U_k\subseteq X-U_{i_0}\text{.}\)</span> Thus there is no <span class="process-math">\(j'\geq j\)</span> satisfying <span class="process-math">\(f(j)\in U_{i_0}\text{.}\)</span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">It remains only to show that <span class="process-math">\(\phi\)</span> is surjective. Given any <span class="process-math">\((y_1,y_2)\in [0,1]\text{,}\)</span> let <span class="process-math">\(y_1=\sum_{k=1}^\infty \frac{a_k}{2^k}\)</span> and <span class="process-math">\(y_2=\sum_{k=1}\frac{b_k}{2^k}\)</span> be binary expansions of <span class="process-math">\(y_1\)</span> and <span class="process-math">\(y_2\text{.}\)</span> Let <span class="process-math">\(s=(a_1,b_1,a_2,b_2,a_3,b_3,\dots)\text{,}\)</span> and let <span class="process-math">\(x\in \mathcal{C}=h^{-1}(s)\text{.}\)</span> We have</div>
+<div class="displaymath process-math">
+\begin{align*}
+\phi(x) \amp =(\widetilde{f}_1(x),\widetilde{f}_2(x))\\
+\amp =(f_1(x),f_2(x)) \amp (x\in \mathcal{C})\\
+\amp =(g_1(h(x)), g_2(h(x))) \amp (\text{def. of } f_i)\\
+\amp =(g_1(s), g_2(s)) \amp (h(x)=s)\\
+\amp =(y_1,y_2) \amp \text{(by construction)}\text{.}
+\end{align*}
 </div>
-<span class="incontext"><a href="s_Tychonoff.html#p-997" class="internal">in-context</a></span>
+<div class="para">This proves in fact that <span class="process-math">\(\phi\vert_\mathcal{C}\)</span> is surjective.</div>
+</div>
+<span class="incontext"><a href="s_Tietze_extension.html#p-997" class="internal">in-context</a></span>
 </body>
 </html>

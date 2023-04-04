@@ -13,23 +13,27 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h3 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.4.11.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.3.4.1</span><span class="period">.</span>
 </h3>
-<div class="para logical"><ol class="lower-alpha">
-<li>
-<div class="para">First consider <span class="process-math">\(\R\)</span> with the standard topology. The interior of <span class="process-math">\(K\)</span> is empty in this case: i.e., <span class="process-math">\(K^\circ=\emptyset\text{.}\)</span> To see this, note that given any <span class="process-math">\(x=1/N\in K\)</span> and any open interval <span class="process-math">\((a,b)\)</span> containing <span class="process-math">\(x\text{,}\)</span> we can choose an <span class="process-math">\(\epsilon\leq 1/N-1/(N+1)\)</span> such that <span class="process-math">\((x-\epsilon, x+\epsilon)\subseteq (a,b)\text{;}\)</span> by design <em class="emphasis">all</em> elements of <span class="process-math">\((x-\epsilon, x+\epsilon)-\{x\}\)</span> lie outside <span class="process-math">\(K\text{.}\)</span> Thus <span class="process-math">\(x\notin K^\circ\text{,}\)</span> and <span class="process-math">\(K^\circ=\emptyset\text{.}\)</span>
+<div class="para">For <span class="process-math">\(n=1\)</span> the two metrics are just <span class="process-math">\(d(x,y)=\abs{x-y}\text{,}\)</span> the same one we used to define the standard topology on <span class="process-math">\(\R\text{.}\)</span> Epsilon balls here are just intervals of the form <span class="process-math">\((x-\epsilon, x+\epsilon)\text{.}\)</span>
+</div> <div class="para">For <span class="process-math">\(n=2,3\)</span> the Euclidean distance defined is the standard distance between two points in <span class="process-math">\(\R^2\)</span> or<span class="process-math">\(\R^3\text{.}\)</span> The set of points <span class="process-math">\(\boldy\)</span> satisfying <span class="process-math">\(d(\boldx, \boldy)=\epsilon\)</span> is thus the circle of radius <span class="process-math">\(\epsilon\)</span> centered at <span class="process-math">\(\boldx\)</span> for <span class="process-math">\(n=2\text{,}\)</span> and the sphere of radius <span class="process-math">\(\epsilon\)</span> centered at <span class="process-math">\(\boldx\)</span> for <span class="process-math">\(n=3\text{.}\)</span> It follows that an <span class="process-math">\(\epsilon\)</span>-ball <span class="process-math">\(B_\epsilon(\boldx)\)</span> is the interior of the this circle or sphere, respectively.</div> <div class="para logical">
+<div class="para">True to its name, an <span class="process-math">\(\epsilon\)</span>-ball around <span class="process-math">\(\boldx\in \R^n\)</span> is the open <span class="process-math">\(n\)</span>-cube</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/d_cartesian_product.html">
+\begin{equation*}
+\prod_{i=1}^n (x_i-\epsilon, x_i+\epsilon)\text{.}
+\end{equation*}
 </div>
-<div class="para">Next. I claim <span class="process-math">\(\overline{K}=K\cup \{0\}\text{.}\)</span> To see this, note first that <span class="process-math">\(K\cup \{0\}\)</span> is closed: it is easy to see that for any <span class="process-math">\(x\notin K\cup\{0\}\)</span> we can find an <span class="process-math">\(\epsilon\)</span> such that <span class="process-math">\((x-\epsilon, x+\epsilon)\cap (K\cup \{0\})=\emptyset\text{.}\)</span> By (2) of <a href="" class="xref" data-knowl="./knowl/th_equivalent_interior_closure.html" title="Theorem 2.4.9: Equivalent notions of interior and closure">Theorem 2.4.9</a> we have <span class="process-math">\(\overline{K}\subseteq K\cup \{0\}\text{.}\)</span> Since furthermore <span class="process-math">\(K\subseteq \overline{K}\subseteq K\cup \{0\}\)</span> and since <span class="process-math">\(K\)</span> itself is not closed, it follows that <span class="process-math">\(\overline{K}=K\cup \{0\}\text{.}\)</span>
+<div class="para">(Note that the product here is the Cartesian product of these intervals. (See <a href="" class="xref" data-knowl="./knowl/d_cartesian_product.html" title="Definition 0.1.12: Cartesian product (finite)">Definition 0.1.12</a>.)) Indeed, we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/d_cartesian_product.html">
+\begin{align*}
+\boldy\in B_\epsilon(\boldx) \amp \iff \max\{\abs{x_i-y_i}\}_{i=1}^n&lt; \epsilon \\
+\amp \iff \abs{x_i-y_i}&lt; \epsilon \text{ for all } 1\leq i\leq n\\
+\amp \iff y_i\in (x_i-\epsilon, x_i+\epsilon) \text{ for all } 1\leq i\leq n\\
+\amp \iff \boldy\in \prod_{i=1}^n (x_i-\epsilon, x_i+\epsilon)\text{.}
+\end{align*}
 </div>
-</li>
-<li>
-<div class="para">Now consider the <span class="process-math">\(K\)</span>-topology on <span class="process-math">\(\R\text{.}\)</span> We still have <span class="process-math">\(K^\circ=\emptyset\text{.}\)</span> Indeed, fix any  <span class="process-math">\(x=1/N\in K\text{,}\)</span> and take any basis element <span class="process-math">\(B\)</span> containing <span class="process-math">\(x\text{.}\)</span> We have <span class="process-math">\(B=(a,b)\)</span> or <span class="process-math">\(B=(a,b)-K\)</span> for some open interval <span class="process-math">\((a,b)\text{.}\)</span> In either case, the same argument as above shows that <span class="process-math">\(B\)</span> contains a basis element <span class="process-math">\(B'=(x-\epsilon, x+\epsilon)-\{x\}\text{,}\)</span> all of whose elements lie outside of <span class="process-math">\(K\text{.}\)</span> This shows <span class="process-math">\(x\notin K^\circ\text{,}\)</span> and hence <span class="process-math">\(K^\circ=\emptyset\text{.}\)</span>
 </div>
-<div class="para">Next, I claim that <span class="process-math">\(K\)</span> is closed in the <span class="process-math">\(K\)</span>-topology, from whence it follows that <span class="process-math">\(K=\overline{K}\text{.}\)</span> (Use (2) from <a href="" class="xref" data-knowl="./knowl/th_equivalent_interior_closure.html" title="Theorem 2.4.9: Equivalent notions of interior and closure">Theorem 2.4.9</a>.) To prove the claim, we must show, using <a href="" class="xref" data-knowl="./knowl/lemma_basis_closed.html" title="Lemma 2.4.6: Basis description of closed sets">Lemma 2.4.6</a> that for any <span class="process-math">\(x\notin K\)</span> there is a basis element (in the <span class="process-math">\(K\)</span>-topology) containing <span class="process-math">\(x\)</span> and contained in <span class="process-math">\(K^c\text{.}\)</span> There are two cases: <span class="process-math">\(x\ne 0\)</span> and <span class="process-math">\(x=0\text{.}\)</span> If <span class="process-math">\(x\ne 0\text{,}\)</span> we can find an open interval <span class="process-math">\((a,b)\)</span> such that <span class="process-math">\(x\in (a,b)\)</span> and <span class="process-math">\((a,b)\cap K=\emptyset\text{.}\)</span> Since open intervals are basis elements in the <span class="process-math">\(K\)</span>-topology, we are done in this case. Next, assume <span class="process-math">\(x=0\text{.}\)</span> In this case the basis element <span class="process-math">\(B=(-1,1)-K\)</span> satisfies <span class="process-math">\(x\in B\subseteq K^c\text{.}\)</span> Having exhausted the cases, we conclude <span class="process-math">\(K\)</span> is closed, and hence <span class="process-math">\(\overline{K}=K\text{.}\)</span>
 </div>
-</li>
-</ol></div>
-</div>
-<span class="incontext"><a href="s_closed_closure_interior.html#solution-20" class="internal">in-context</a></span>
+<span class="incontext"><a href="s_metric1.html#solution-20" class="internal">in-context</a></span>
 </body>
 </html>

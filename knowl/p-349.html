@@ -12,36 +12,41 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical">
-<div class="para">Let <span class="process-math">\(A\)</span> be a subset of the topological space <span class="process-math">\(X\text{.}\)</span> Let <span class="process-math">\(\mathcal{B}\)</span> be a basis for the topology of <span class="process-math">\(X\text{.}\)</span>
+<div class="para logical"><ol class="decimal">
+<li><div class="para logical">
+<div class="para">It is easiest to prove that the Euclidean metric is indeed a metric by first expressing it in terms of the dot product as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+d(\boldx, \boldy)=\sqrt{(\boldx-\boldy)\cdot (\boldx-\boldy)}
+\end{equation*}
 </div>
-<ol class="decimal">
-<li><div class="para">
-<span class="process-math">\(A^\circ\)</span> is the unique largest open set contained in <span class="process-math">\(A\text{.}\)</span> In other words, <span class="process-math">\(A^\circ\)</span> is the unique set satisfying the following property: if <span class="process-math">\(U\)</span> is open and <span class="process-math">\(U\subseteq A\text{,}\)</span> then <span class="process-math">\(U\subseteq A^\circ\text{.}\)</span>
-</div></li>
-<li><div class="para">
-<span class="process-math">\(\overline{A}\)</span> is the unique smallest closed set containing <span class="process-math">\(A\text{.}\)</span> In other words, <span class="process-math">\(\overline{A}\)</span> is the unique set satisfying the following property: if <span class="process-math">\(C\)</span> is closed and <span class="process-math">\(A\subseteq C\text{,}\)</span> then <span class="process-math">\(\overline{A}\subseteq C\text{.}\)</span>
+<div class="para">and then using well-known properties of the dot product, including the Cauchy-Schwarz inequality.</div>
 </div></li>
 <li><div class="para logical">
-<div class="para">We have</div>
+<div class="para">Let <span class="process-math">\(d\)</span> be the box metric. It is clear that <span class="process-math">\(d(\boldx, \boldy)\geq 0\)</span> for all <span class="process-math">\(\boldx, \boldy\in \R^n\text{.}\)</span> Furthermore, we have</div>
 <div class="displaymath process-math">
 \begin{align*}
-x \in A^\circ  \amp\iff x\in U\subseteq A \text{ for some open } U \\
-\amp \iff x\in B\subseteq A \text{ for some basis element } B\in \mathcal{B} \text{.}
+d(\boldx, \boldy)=0 \amp \iff \abs{x_i-y_i}=0 \text{ for all i}\\
+\amp \iff x_i-y_i=0 \text{ for all i} \\
+\amp \iff x_i=y_i \text{ for all i}\\
+\amp \iff \boldx=\boldy\text{.}
 \end{align*}
 </div>
-</div></li>
-<li><div class="para logical">
-<div class="para">We have</div>
+<div class="para">This proves positivity. The symmetry follows easily from the fact that <span class="process-math">\(\abs{x-y}=\abs{y-x}\text{.}\)</span> As for the triangle inequality, for all <span class="process-math">\(1\leq i\leq n\)</span> we have</div>
 <div class="displaymath process-math">
-\begin{align*}
-x \in \overline{A}  \amp\iff \text{ for all open sets } U, x\in U \implies U\cap A\ne \emptyset\\
-\amp \iff \text{ for all } B\in \mathcal{B}, x\in B \implies B\cap A\ne \emptyset\text{.}
-\end{align*}
+\begin{equation*}
+\abs{x_i-y_i}=\abs{x_i-z_i+z_i-y_i}\leq \abs{x_i-z_i}+\abs{z_i-y_i}\leq d(\boldx, \boldz)+d(\boldz,\boldy)\text{,}
+\end{equation*}
+</div>
+<div class="para">where the leftmost inequality is the triangle inequality for the absolute value, and the rightmost inequality follows from the definition of <span class="process-math">\(d\text{.}\)</span> Since the inequality holds for all <span class="process-math">\(1\leq i\leq n\text{,}\)</span> we conclude that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+d(\boldx,\boldy)=\max\{\abs{x_i-y_i}\colon 1\leq i\leq n\}\leq d(\boldx,\boldz)+d(\boldz,\boldx)\text{.}
+\end{equation*}
 </div>
 </div></li>
-</ol>
-</div>
-<span class="incontext"><a href="s_closed_closure_interior.html#p-349" class="internal">in-context</a></span>
+<li><div class="para">This is a homework exercise.</div></li>
+</ol></div>
+<span class="incontext"><a href="s_metric1.html#p-349" class="internal">in-context</a></span>
 </body>
 </html>

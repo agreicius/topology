@@ -520,7 +520,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.1",
   "title": "Homotopy",
-  "body": " Homotopy    Throughout this course will denote the interval .    Homotopy of maps   Let be continuous maps. A homotopy from to is a continuous map satisfying for all . We say is homotopic to in this case, written .    Given a homotopy from to , for each we get a function defined as . In this way we can think of a homotopy as a family of functions that varies continuously with (a shorthand way of saying that is continuous), and which continuously deforms the function to the function as ranges over .   Homotopic functions to   A subset is convex if for any elements and any , we have : , given any pair of points in , the line segment between them lies within .  If is convex, then given any continuous functions , the function defines a homotopy from to . Thus any two continuous functions from a space into are homotopic.     Nullhomotopic map   A continuous map is nullhomotopic if it is homotopic to a constant function from to .     Path homotopy   Given elements in the topological space , we denoted by the set of all paths with initial point and terminal point .  Given , a path homotopy from to is a continuous function satisfying . In other words, is a homotopy from to that further satisfies and for all . We say that is path homotopic to in this case, written .     Homotopic paths in  Let be a convex subset of , and let . Given two paths , the straight-line homotopy is easily seen to be a path homotopy: . Thus any two paths to between any two points are path homotopic.    Paths with non-convex codomain   Consider the the nonconvex set and the paths . Both are paths that begin and end at ; it is intuitively clear that cannot be continuously deformed to (while staying tethered at ) without passing through the origin at some point. In other words, the two paths are not path homotopic. This is surprisingly difficult to prove rigorously; we will get to this in the coming sections. On the other hand and are in fact homotopic: consider   Interestingly, the situation is different if we take and . Intuitively, it seems we should be able to lift the graph of up over the origin, then shrink it down to the point . Here is one explicit realization of this idea. Consider the family of curves lying on the upper hemisphere of , whose projection onto the -plane is the circle . Such a curve has parametrization , giving rise to a path homotopy from to . The Sage cell below provides a nice visualization of this family of curves.      Homotopy equivalence relation   Let and be topological spaces. Fix .    is an equivalence relation on the set of all continuous functions from to .     is an equivalence relation on .       We give a proof for (a). It is then easy to check that the same homotopies provided in this proof are path homotopies ( , satisfy ) in the context of paths in .   Reflexive  Given a continuous function , the map defined as for all is clearly a homotopy from to .    Symmetric  Let be continuous maps from to , and assume . By definition this means there is a homotopy from to , so that in particular for all . Define as . It is clear that is continuous, and we have . Thus is a homotopy from to , showing .    Transitive  Let be continuous maps from to . We assume and . By definition there is a homotopy from to , and a homotopy from to . Define . The functions and are continuous on the closed sets and , respectively, and agree on the intersection since and for all , by definition of homotopy. By the closed pasting lemma, we conclude that is well-defined and continuous. Lastly, we have for all .      Homotopy equivalence  For topological spaces , let be the set of all continuous functions. For a function we let denote its equivalence class with respect to . The set of all equivalence classes is denoted .  For , we will also use to denote its equivalence class with respect to .    Path product   Let be a topological space, and let . We define a path product operation as follows: .  The function defined is a path from to . Furthermore, if and , then . In other words, we get a well-defined operation on homotopy classes defined as .    It is easy to see, using the closed pasting lemma, that is well-defined and continuous. We show that it is well-defined on homotopy classes, as claimed.  Suppose that as witnessed by the path homotopy , and that as witnessed by the path homotopy . Define . Note first that and , since and are path homotopies. Since is continuous on and is continuous on , and since they agree on the intersection of these sets, the closed pasting lemma implies is a well-defined continuous function.  Next, we have , showing that is a homotopy from to .  Lastly, we have for all , showing that is a path homotopy.     Path product properties   Let be a topological space. For any element , we let denote the constant function for all .   Associativity  If , then .    Identities  Given , we have     Inverses  Given , let be its reverse : , . We have .        Reparametrization of path   Let . If is a continuous map satisfying and , then . In other words, a reparametrized path is homotopic to the original path.    Homework exercise.     Partitions of   Let , let be a subdivision of into subintervals , , and let , where is any continuous map satisfying and . We have .    Homework exercise.    "
+  "body": " Homotopy    Throughout this course will denote the interval .    Homotopy of maps   Let be continuous maps. A homotopy from to is a continuous map satisfying for all . We say is homotopic to in this case, written .     Given a homotopy from to , for each we get a function defined as . In this way we can think of a homotopy as a family of functions that varies continuously with (a shorthand way of saying that is continuous), and which continuously deforms the function to the function as ranges over .    Homotopic functions to   A subset is convex if for any elements and any , we have : , given any pair of points in , the line segment between them lies within .  If is convex, then given any continuous functions , the function defines a homotopy from to . Thus any two continuous functions from a space into are homotopic.     Nullhomotopic map   A continuous map is nullhomotopic if it is homotopic to a constant function from to .     Path homotopy   Given elements in the topological space , we denoted by the set of all paths with initial point and terminal point .  Given , a path homotopy from to is a continuous function satisfying . In other words, is a homotopy from to that further satisfies and for all . We say that is path homotopic to in this case, written .     Homotopic paths in  Let be a convex subset of , and let . Given two paths , the straight-line homotopy is easily seen to be a path homotopy: . Thus any two paths to between any two points are path homotopic.    Paths with non-convex codomain   Consider the the nonconvex set and the paths . Both are paths that begin and end at ; it is intuitively clear that cannot be continuously deformed to (while staying tethered at ) without passing through the origin at some point. In other words, the two paths are not path homotopic. This is surprisingly difficult to prove rigorously; we will get to this in the coming sections. On the other hand and are in fact homotopic: consider   Interestingly, the situation is different if we take and . Intuitively, it seems we should be able to lift the graph of up over the origin, then shrink it down to the point . Here is one explicit realization of this idea. Consider the family of curves lying on the upper hemisphere of , whose projection onto the -plane is the circle . Such a curve has parametrization , giving rise to a path homotopy from to . The Sage cell below provides a nice visualization of this family of curves.      Homotopy equivalence relation   Let and be topological spaces. Fix .    is an equivalence relation on the set of all continuous functions from to .     is an equivalence relation on .       We give a proof for (a). It is then easy to check that the same homotopies provided in this proof are path homotopies ( , satisfy ) in the context of paths in .   Reflexive  Given a continuous function , the map defined as for all is clearly a homotopy from to .    Symmetric  Let be continuous maps from to , and assume . By definition this means there is a homotopy from to , so that in particular for all . Define as . It is clear that is continuous, and we have . Thus is a homotopy from to , showing .    Transitive  Let be continuous maps from to . We assume and . By definition there is a homotopy from to , and a homotopy from to . Define . The functions and are continuous on the closed sets and , respectively, and agree on the intersection since and for all , by definition of homotopy. By the closed pasting lemma, we conclude that is well-defined and continuous. Lastly, we have for all .      Homotopy equivalence  For topological spaces , let be the set of all continuous functions. For a function we let denote its equivalence class with respect to . The set of all equivalence classes is denoted .  For , we will also use to denote its equivalence class with respect to .    Path product   Let be a topological space, and let . We define a path product operation as follows: .  The function defined is a path from to . Furthermore, if and , then . In other words, we get a well-defined operation on homotopy classes defined as .    It is easy to see, using the closed pasting lemma, that is well-defined and continuous. We show that it is well-defined on homotopy classes, as claimed.  Suppose that as witnessed by the path homotopy , and that as witnessed by the path homotopy . Define . Note first that and , since and are path homotopies. Since is continuous on and is continuous on , and since they agree on the intersection of these sets, the closed pasting lemma implies is a well-defined continuous function.  Next, we have , showing that is a homotopy from to .  Lastly, we have for all , showing that is a path homotopy.     Path product properties   Let be a topological space. For any element , we let denote the constant function for all .   Associativity  If , then .    Identities  Given , we have     Inverses  Given , let be its reverse : , . We have .        Associativity . Let and . After unpacking the definitions for iterated path products, we see that Define as . The pasting lemma implies is continuous, and by definition we have and . A computation shows that . In other words, . By we conclude that and thus that .   Identities . Using the definition of path product, we have Define as    Inverses . First compute      Reparametrization of path   Let . If is a continuous map satisfying and , then . In other words, a reparametrized path is homotopic to the original path.    Homework exercise.     Partitions of   Let , let be a subdivision of into subintervals , , and let , where is any continuous map satisfying and . We have .    Homework exercise.    "
 },
 {
   "id": "convention-1",
@@ -547,7 +547,7 @@ var ptx_lunr_docs = [
   "type": "Remark",
   "number": "1.1.3",
   "title": "",
-  "body": "Given a homotopy from to , for each we get a function defined as . In this way we can think of a homotopy as a family of functions that varies continuously with (a shorthand way of saying that is continuous), and which continuously deforms the function to the function as ranges over . "
+  "body": " Given a homotopy from to , for each we get a function defined as . In this way we can think of a homotopy as a family of functions that varies continuously with (a shorthand way of saying that is continuous), and which continuously deforms the function to the function as ranges over .  "
 },
 {
   "id": "eg_homotopy_convex",
@@ -628,7 +628,7 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "1.1.12",
   "title": "Path product properties.",
-  "body": " Path product properties   Let be a topological space. For any element , we let denote the constant function for all .   Associativity  If , then .    Identities  Given , we have     Inverses  Given , let be its reverse : , . We have .      "
+  "body": " Path product properties   Let be a topological space. For any element , we let denote the constant function for all .   Associativity  If , then .    Identities  Given , we have     Inverses  Given , let be its reverse : , . We have .        Associativity . Let and . After unpacking the definitions for iterated path products, we see that Define as . The pasting lemma implies is continuous, and by definition we have and . A computation shows that . In other words, . By we conclude that and thus that .   Identities . Using the definition of path product, we have Define as    Inverses . First compute    "
 },
 {
   "id": "lemma_homotopy_reparameter",
@@ -647,6 +647,186 @@ var ptx_lunr_docs = [
   "number": "1.1.14",
   "title": "Partitions of <span class=\"process-math\">\\(I\\)<\/span>.",
   "body": " Partitions of   Let , let be a subdivision of into subintervals , , and let , where is any continuous map satisfying and . We have .    Homework exercise.   "
+},
+{
+  "id": "s_fundamental_group",
+  "level": "1",
+  "url": "s_fundamental_group.html",
+  "type": "Section",
+  "number": "1.2",
+  "title": "Fundamental group",
+  "body": " Fundamental group   Group compendium   A group is a set together with a binary operation such that (i) the operation is associative, (ii) there is an identity element satisfying for all , and (iii) for all there is an inverse element satisfying .  A subgroup of a group is a subset that contains the identity element , and which is closed under the group operation: , if , then . We write in this case.  A normal subgroup of is a subgroup that satisfies for all : , is closed under conjugation . We write in this case.  Given a subgroup , we denote by the set of all left cosets of : , . Given a normal subgroup the set of cosets has a group structure given by the operation . We call the quotient of by .  A homomorphism between groups is a function satisfying for all . (Here we use subscript notation to differentiate the two different group operations at play.)  An isomorphism is an invertible homomorphism . We say and are isomorphic , denoted , if there is an isomorphism between them. (As it turns out, the inverse of an invertible group homomorphism is automatically a group homomorphism.)     Fundamental group   Given a topological space and element , the fundamental group of based at , denoted , is defined as . In other words, is the set of all path homotopy equivalence classes , where is a closed path (or loop) beginning and ending at .  The path product operation endows with the structure of a group.   Identity element  The identity element of is given by , where is the constant function for all .    Inverse elements  Given an element its group inverse is , where is the reverse of .     That the path product operation endows with the structure of a group follows directly from .     Simply connected   A topological space is simply connected if it is path connected and is trivial for all .     Fundamental group and path components   Assume . The map is an isomorphism. As a consequence, if is a path component of , then for any .    Note that the formula for is defined in terms of the path product operation. We showed in that this operation is well-defined on equivalence classes, making well defined.  We now show is a homomorphism of groups. Given , we have .  Lastly one easily shows that is invertible, with inverse .     Pointed space   Given a topological space and element , the pair is called a pointed space with base point  . Given pointed spaces and , a map of pointed spaces (or based map ) is a continuous function satisfying . We write in this case.     Fundamental group functor      Let be a map of pointed spaces. The rule defines a group homomorphism .    Given maps of pointed spaces and , we have .    Let be the identity function for all . For any , we have , the identity group homomorphism on .          It is clear that the rule defines a map from to . We must show that it is well defined on equivalence classes. Assume are path homotopic, and let be a path homotopy from to . It is easy to see that is a path homotopy from to . Thus implies , showing is a well-defined map from to .  Now we show is a homomorphism of groups. We will use the (easy to show fact) general fact that given and continuous , we have . Now, given , we have .    For any we have . This proves .    For any we have . This proves is the identity homomorphism on .        Fundamental group invariance   Let be a homemorphism, let , and let . The map is an isomorphism of groups.    If is a homemorphism, then defines a map of pointed spaces from to . Since and we have . This shows that is the inverse of , and thus that is an isomorphism.    "
+},
+{
+  "id": "d_group_defs",
+  "level": "2",
+  "url": "s_fundamental_group.html#d_group_defs",
+  "type": "Definition",
+  "number": "1.2.1",
+  "title": "Group compendium.",
+  "body": " Group compendium   A group is a set together with a binary operation such that (i) the operation is associative, (ii) there is an identity element satisfying for all , and (iii) for all there is an inverse element satisfying .  A subgroup of a group is a subset that contains the identity element , and which is closed under the group operation: , if , then . We write in this case.  A normal subgroup of is a subgroup that satisfies for all : , is closed under conjugation . We write in this case.  Given a subgroup , we denote by the set of all left cosets of : , . Given a normal subgroup the set of cosets has a group structure given by the operation . We call the quotient of by .  A homomorphism between groups is a function satisfying for all . (Here we use subscript notation to differentiate the two different group operations at play.)  An isomorphism is an invertible homomorphism . We say and are isomorphic , denoted , if there is an isomorphism between them. (As it turns out, the inverse of an invertible group homomorphism is automatically a group homomorphism.)   "
+},
+{
+  "id": "d_fundamental_group",
+  "level": "2",
+  "url": "s_fundamental_group.html#d_fundamental_group",
+  "type": "Definition",
+  "number": "1.2.2",
+  "title": "Fundamental group.",
+  "body": " Fundamental group   Given a topological space and element , the fundamental group of based at , denoted , is defined as . In other words, is the set of all path homotopy equivalence classes , where is a closed path (or loop) beginning and ending at .  The path product operation endows with the structure of a group.   Identity element  The identity element of is given by , where is the constant function for all .    Inverse elements  Given an element its group inverse is , where is the reverse of .     That the path product operation endows with the structure of a group follows directly from .   "
+},
+{
+  "id": "d_simply_connected",
+  "level": "2",
+  "url": "s_fundamental_group.html#d_simply_connected",
+  "type": "Definition",
+  "number": "1.2.3",
+  "title": "Simply connected.",
+  "body": " Simply connected   A topological space is simply connected if it is path connected and is trivial for all .   "
+},
+{
+  "id": "th_fund_group_path_connected",
+  "level": "2",
+  "url": "s_fundamental_group.html#th_fund_group_path_connected",
+  "type": "Theorem",
+  "number": "1.2.4",
+  "title": "Fundamental group and path components.",
+  "body": " Fundamental group and path components   Assume . The map is an isomorphism. As a consequence, if is a path component of , then for any .    Note that the formula for is defined in terms of the path product operation. We showed in that this operation is well-defined on equivalence classes, making well defined.  We now show is a homomorphism of groups. Given , we have .  Lastly one easily shows that is invertible, with inverse .   "
+},
+{
+  "id": "d_pointed_space",
+  "level": "2",
+  "url": "s_fundamental_group.html#d_pointed_space",
+  "type": "Definition",
+  "number": "1.2.5",
+  "title": "Pointed space.",
+  "body": " Pointed space   Given a topological space and element , the pair is called a pointed space with base point  . Given pointed spaces and , a map of pointed spaces (or based map ) is a continuous function satisfying . We write in this case.   "
+},
+{
+  "id": "th_fund_group_function",
+  "level": "2",
+  "url": "s_fundamental_group.html#th_fund_group_function",
+  "type": "Theorem",
+  "number": "1.2.6",
+  "title": "Fundamental group functor.",
+  "body": " Fundamental group functor      Let be a map of pointed spaces. The rule defines a group homomorphism .    Given maps of pointed spaces and , we have .    Let be the identity function for all . For any , we have , the identity group homomorphism on .          It is clear that the rule defines a map from to . We must show that it is well defined on equivalence classes. Assume are path homotopic, and let be a path homotopy from to . It is easy to see that is a path homotopy from to . Thus implies , showing is a well-defined map from to .  Now we show is a homomorphism of groups. We will use the (easy to show fact) general fact that given and continuous , we have . Now, given , we have .    For any we have . This proves .    For any we have . This proves is the identity homomorphism on .      "
+},
+{
+  "id": "cor_fund_group",
+  "level": "2",
+  "url": "s_fundamental_group.html#cor_fund_group",
+  "type": "Corollary",
+  "number": "1.2.7",
+  "title": "Fundamental group invariance.",
+  "body": " Fundamental group invariance   Let be a homemorphism, let , and let . The map is an isomorphism of groups.    If is a homemorphism, then defines a map of pointed spaces from to . Since and we have . This shows that is the inverse of , and thus that is an isomorphism.   "
+},
+{
+  "id": "s_covering_spaces",
+  "level": "1",
+  "url": "s_covering_spaces.html",
+  "type": "Section",
+  "number": "1.3",
+  "title": "Covering spaces",
+  "body": " Covering spaces   Covering map   Let be a surjective continuous map. A set is evenly covered by if can be written as a disjoint union of open sets . The collection and is a homeomorphism for all .  The collection is called a partition of into slices .  If every has an open neighborhood that is evenly covered by , then is called a covering map and is called a covering space of .     Trivial covering  Let be topological spaces, and suppose is discrete. The projection is a covering map. We call this a trivial covering of .   Since is discrete, is open for any . Given any open , the preimage is the disjoint union of the open sets , each of which is homeomorphic to by the map sending to . Thus all open sets of are evenly covered by .  This is called a trivial covering because the space is homeomorphic to a a disjoint union of copies of Alternatively, since is discrete, the map is a homeomorphism of with the disjoint union , where is a copy of .     Covering map  The open map defined as is a covering map.   Let , and let . We have      Covering map properties   Let be a covering map.    For all , the preimage is a discrete subspace of .    For all there exists an open set containing such that is a homeomorphism: , is a local homeomorphism .     is an open map.     is a quotient map.    If is connected and for some and , then for all . We call a -fold covering in this case.       -fold covering of  The map sending a point to is an -fold cover of .   Homework exercise.     Covering of  Recall that is the quotient space obtained by identifying elements of that are scalar multiples of one another. We showed in a homeowork that is homeomorphic to the quotient of obtained by identifying antipodal points. The corresponding quotient map is a covering map.        Not all quotient maps are covering maps  The map , defined as is not a covering.    Local homeomorphism not sufficient  The map defined as satisfies (1)-(4) of , but is not a covering map.    Covering map constructions      If and are covering maps, then the map defined as is a covering map.    If is a covering map and is a subpace, then the function is a covering map.    If is a covering map and and are homeomorphisms, then and are covering maps.        Covering of torus  Let be the usual covering of the circle. The map is a covering of the torus.    Covering of figure eight  The figure eight is the subpsace of defined as . Let be the standard covering map. We have . By , is a covering map.   "
+},
+{
+  "id": "d_evenly_covered",
+  "level": "2",
+  "url": "s_covering_spaces.html#d_evenly_covered",
+  "type": "Definition",
+  "number": "1.3.1",
+  "title": "Covering map.",
+  "body": " Covering map   Let be a surjective continuous map. A set is evenly covered by if can be written as a disjoint union of open sets . The collection and is a homeomorphism for all .  The collection is called a partition of into slices .  If every has an open neighborhood that is evenly covered by , then is called a covering map and is called a covering space of .   "
+},
+{
+  "id": "eg_trivial_cover",
+  "level": "2",
+  "url": "s_covering_spaces.html#eg_trivial_cover",
+  "type": "Example",
+  "number": "1.3.2",
+  "title": "Trivial covering.",
+  "body": " Trivial covering  Let be topological spaces, and suppose is discrete. The projection is a covering map. We call this a trivial covering of .   Since is discrete, is open for any . Given any open , the preimage is the disjoint union of the open sets , each of which is homeomorphic to by the map sending to . Thus all open sets of are evenly covered by .  This is called a trivial covering because the space is homeomorphic to a a disjoint union of copies of Alternatively, since is discrete, the map is a homeomorphism of with the disjoint union , where is a copy of .   "
+},
+{
+  "id": "eg_covering_circle",
+  "level": "2",
+  "url": "s_covering_spaces.html#eg_covering_circle",
+  "type": "Example",
+  "number": "1.3.3",
+  "title": "Covering map <span class=\"process-math\">\\(\\R\\rightarrow S^1\\)<\/span>.",
+  "body": " Covering map  The open map defined as is a covering map.   Let , and let . We have    "
+},
+{
+  "id": "th_covering_map_props",
+  "level": "2",
+  "url": "s_covering_spaces.html#th_covering_map_props",
+  "type": "Theorem",
+  "number": "1.3.4",
+  "title": "Covering map properties.",
+  "body": " Covering map properties   Let be a covering map.    For all , the preimage is a discrete subspace of .    For all there exists an open set containing such that is a homeomorphism: , is a local homeomorphism .     is an open map.     is a quotient map.    If is connected and for some and , then for all . We call a -fold covering in this case.     "
+},
+{
+  "id": "eg_nfold_covering",
+  "level": "2",
+  "url": "s_covering_spaces.html#eg_nfold_covering",
+  "type": "Example",
+  "number": "1.3.5",
+  "title": "<span class=\"process-math\">\\(n\\)<\/span>-fold covering of <span class=\"process-math\">\\(S^1\\)<\/span>.",
+  "body": " -fold covering of  The map sending a point to is an -fold cover of .   Homework exercise.   "
+},
+{
+  "id": "eg_covering_P2",
+  "level": "2",
+  "url": "s_covering_spaces.html#eg_covering_P2",
+  "type": "Example",
+  "number": "1.3.6",
+  "title": "Covering of <span class=\"process-math\">\\(\\mathbb{P}^2\\)<\/span>.",
+  "body": " Covering of  Recall that is the quotient space obtained by identifying elements of that are scalar multiples of one another. We showed in a homeowork that is homeomorphic to the quotient of obtained by identifying antipodal points. The corresponding quotient map is a covering map.      "
+},
+{
+  "id": "example-20",
+  "level": "2",
+  "url": "s_covering_spaces.html#example-20",
+  "type": "Example",
+  "number": "1.3.7",
+  "title": "Not all quotient maps are covering maps.",
+  "body": " Not all quotient maps are covering maps  The map , defined as is not a covering.  "
+},
+{
+  "id": "example-21",
+  "level": "2",
+  "url": "s_covering_spaces.html#example-21",
+  "type": "Example",
+  "number": "1.3.8",
+  "title": "Local homeomorphism not sufficient.",
+  "body": " Local homeomorphism not sufficient  The map defined as satisfies (1)-(4) of , but is not a covering map.  "
+},
+{
+  "id": "th_covering_map_construction",
+  "level": "2",
+  "url": "s_covering_spaces.html#th_covering_map_construction",
+  "type": "Theorem",
+  "number": "1.3.9",
+  "title": "Covering map constructions.",
+  "body": " Covering map constructions      If and are covering maps, then the map defined as is a covering map.    If is a covering map and is a subpace, then the function is a covering map.    If is a covering map and and are homeomorphisms, then and are covering maps.      "
+},
+{
+  "id": "eg_cover_torus",
+  "level": "2",
+  "url": "s_covering_spaces.html#eg_cover_torus",
+  "type": "Example",
+  "number": "1.3.10",
+  "title": "Covering of torus.",
+  "body": " Covering of torus  Let be the usual covering of the circle. The map is a covering of the torus.  "
+},
+{
+  "id": "eg_cover_figure8",
+  "level": "2",
+  "url": "s_covering_spaces.html#eg_cover_figure8",
+  "type": "Example",
+  "number": "1.3.11",
+  "title": "Covering of figure eight.",
+  "body": " Covering of figure eight  The figure eight is the subpsace of defined as . Let be the standard covering map. We have . By , is a covering map.  "
 },
 {
   "id": "s_top_spaces",
@@ -694,9 +874,9 @@ var ptx_lunr_docs = [
   "body": " Trivial and discrete topology Let be a set.   The collection is a topology on , called the trivial topology . This is the topology on whose only open sets are the empty set and itself.    The collection is a topology on , called the discrete topology . This is the topology on for which every subset of is an open set.        Let . By definition the given contains and , and thus axiom (1) is satisfied. Since any union or intersection involving and is equal to either or , it is clear that is closed under arbitrary unions and finite intersections. Thus axioms (2)-(3) are satisfied.    Let . By definition, is the set of all subsets of . In particular, it contains and , and thus axioms (1) is satisfied. Furthermore, since any union or intersection of subsets of is again a subset of , we see that axioms (2)-(3) are satisfied.      "
 },
 {
-  "id": "example-16",
+  "id": "example-24",
   "level": "2",
-  "url": "s_top_spaces.html#example-16",
+  "url": "s_top_spaces.html#example-24",
   "type": "Example",
   "number": "2.1.3",
   "title": "Some small topological spaces.",
@@ -721,9 +901,9 @@ var ptx_lunr_docs = [
   "body": " coarser topology  finer topology  comparable topologies  Comparable topologies   Two topologies on the set are comparable if or , and incomparable otherwise. If , we say that is coarser than , and that is finer than . When we say that is strictly coarser than and is strictly finer than .   "
 },
 {
-  "id": "example-17",
+  "id": "example-25",
   "level": "2",
-  "url": "s_top_spaces.html#example-17",
+  "url": "s_top_spaces.html#example-25",
   "type": "Example",
   "number": "2.1.5",
   "title": "Comparing trivial, discrete, cofinite topologies.",
@@ -910,9 +1090,9 @@ var ptx_lunr_docs = [
   "body": " Metric balls   Let be a metric space. Given and the -ball centered at is the subset defined as . In other words, is the set of all elements of lying within a distance of of . We call the radius of . More generally, we call a subset a -metric ball if for some and . When it is clear what the underlying metric is, we will omit and speak simply of metric balls.   "
 },
 {
-  "id": "example-24",
+  "id": "example-32",
   "level": "2",
-  "url": "s_metric1.html#example-24",
+  "url": "s_metric1.html#example-32",
   "type": "Example",
   "number": "2.3.4",
   "title": "Metric balls for Euclidean and box metrics.",
@@ -964,9 +1144,9 @@ var ptx_lunr_docs = [
   "body": "  Given a set the function defined as is a metric on , called the trivial metric .    The proof that is a metric is left as an exercise.   "
 },
 {
-  "id": "example-26",
+  "id": "example-34",
   "level": "2",
-  "url": "s_metric1.html#example-26",
+  "url": "s_metric1.html#example-34",
   "type": "Example",
   "number": "2.3.9",
   "title": "Trivial metric.",
@@ -1045,9 +1225,9 @@ var ptx_lunr_docs = [
   "body": " Basis description of closed sets   Let be a topological space with basis . A set is closed if and only if for all , there is a basis element satisfying .    By definition a set is closed if and only if its complement is open. Using , we see that is open if and only if for all there is a basis element satisfying .   "
 },
 {
-  "id": "example-29",
+  "id": "example-37",
   "level": "2",
-  "url": "s_closed_closure_interior.html#example-29",
+  "url": "s_closed_closure_interior.html#example-37",
   "type": "Example",
   "number": "2.4.7",
   "title": "Closed sets in Euclidean metric topology.",
@@ -1090,9 +1270,9 @@ var ptx_lunr_docs = [
   "body": " Interior and closure of  Let and let . Compute the interior and closure of with respect to (a) the standard topology on and (b) the -topology on .     First consider with the standard topology. The interior of is empty in this case: , . To see this, note that given any and any open interval containing , we can choose an such that ; by design all elements of lie outside . Thus , and .  Next. I claim . To see this, note first that is closed: it is easy to see that for any we can find an such that . By (2) of we have . Since furthermore and since itself is not closed, it follows that .    Now consider the -topology on . We still have . Indeed, fix any , and take any basis element containing . We have or for some open interval . In either case, the same argument as above shows that contains a basis element , all of whose elements lie outside of . This shows , and hence .  Next, I claim that is closed in the -topology, from whence it follows that . (Use (2) from .) To prove the claim, we must show, using that for any there is a basis element (in the -topology) containing and contained in . There are two cases: and . If , we can find an open interval such that and . Since open intervals are basis elements in the -topology, we are done in this case. Next, assume . In this case the basis element satisfies . Having exhausted the cases, we conclude is closed, and hence .     "
 },
 {
-  "id": "example-31",
+  "id": "example-39",
   "level": "2",
-  "url": "s_closed_closure_interior.html#example-31",
+  "url": "s_closed_closure_interior.html#example-39",
   "type": "Example",
   "number": "2.4.12",
   "title": "Interior and closure in cofinite topology.",
@@ -1396,9 +1576,9 @@ var ptx_lunr_docs = [
   "body": " Pointwise convergence   Observe that the definition of pointwise convergence makes no reference to any topology on . Below we investigate how it relates to convergence in the box and product topologies.   "
 },
 {
-  "id": "example-38",
+  "id": "example-46",
   "level": "2",
-  "url": "s_prods_convergence_metric.html#example-38",
+  "url": "s_prods_convergence_metric.html#example-46",
   "type": "Example",
   "number": "2.8.3",
   "title": "Sequences in <span class=\"process-math\">\\(\\R^\\omega\\)<\/span> and <span class=\"process-math\">\\(\\R^\\R\\)<\/span>.",
@@ -1414,9 +1594,9 @@ var ptx_lunr_docs = [
   "body": " Pointwise convergence and product topology   Let be a collection of topologies, let be their product, and let be a sequence of elements of .    If in the box or product topology, then converges to pointwise.    In the product topology we have .         Suppose in either topology. Fix and let be any open set containing . The set is an open neighborhood of in both topologies. By convergence there is an such that for all . It follows that for all . This proves that for all .    Suppose the sequence converges to pointwise. To show in the product topology it is enough to show that for any base open set of the form there is an such that if , then . Since converges to pointwise, for each , there is an such that if , then . Setting , it follows that if then for . Since for all we conclude that for all , as desired.      "
 },
 {
-  "id": "example-39",
+  "id": "example-47",
   "level": "2",
-  "url": "s_prods_convergence_metric.html#example-39",
+  "url": "s_prods_convergence_metric.html#example-47",
   "type": "Example",
   "number": "2.8.5",
   "title": "Convergent sequences in <span class=\"process-math\">\\(\\R^\\omega\\)<\/span>.",
@@ -1504,27 +1684,27 @@ var ptx_lunr_docs = [
   "body": " Preimage properties   Continuity is defined in terms of preimages of sets under a function . Thankfully, the preimage operation behaves very well with respect to our various set operations. In particular, we have the following identities, which you may make use of without further ado:    "
 },
 {
-  "id": "example-40",
+  "id": "example-48",
   "level": "2",
-  "url": "s_continuous.html#example-40",
+  "url": "s_continuous.html#example-48",
   "type": "Example",
   "number": "2.9.3",
   "title": "Continuous functions: basic examples.",
   "body": " Continuous functions: basic examples     Identity function  Given a topological space , the identity function is continuous. Here we take as the topology of both the domain and codomain.    Constant functions  Let be topological spaces. For any fixed the constant function , defined as for all is continuous.    Subspace inclusions  Let be a subspace of . The inclusion map is continuous with respect to the subspace topology on .    Maps from discrete spaces  If is equipped with the discrete topology, then any function to a topological space is continuous.    Maps to trivial spaces  If is equipped with the trivial topology, then any map from a topological space to is continous.      These are all pretty elementary. I'll prove (3). Let be a subspace and let continuous. Given any open set , we have which by definition is open in the subspace topology. Thus is continuous.   "
 },
 {
-  "id": "example-41",
+  "id": "example-49",
   "level": "2",
-  "url": "s_continuous.html#example-41",
+  "url": "s_continuous.html#example-49",
   "type": "Example",
   "number": "2.9.4",
   "title": "Non-continuous inclusion.",
   "body": " Non-continuous inclusion   Show that the identity map is not continuous. Here the topology of the domain is the standard one, and the topology on the codomain is the lower limit topology.    For any we have . If we choose to be any open set of that is not open in the standard topology, it follows that is not open in and hence that is not continuous. We may take for example.  Note: let be two topologies on the set , and for let denote the space with underlying set and topology . The same argument above can be used to show that is continuous if and only if .   "
 },
 {
-  "id": "example-42",
+  "id": "example-50",
   "level": "2",
-  "url": "s_continuous.html#example-42",
+  "url": "s_continuous.html#example-50",
   "type": "Example",
   "number": "2.9.5",
   "title": "Products and projections.",
@@ -1675,9 +1855,9 @@ var ptx_lunr_docs = [
   "body": " Topological properties   It is easy to see that the properties of being discrete, , Hausdorff, or a metric space are topological.   "
 },
 {
-  "id": "example-46",
+  "id": "example-54",
   "level": "2",
-  "url": "s_homeomorphisms.html#example-46",
+  "url": "s_homeomorphisms.html#example-54",
   "type": "Example",
   "number": "2.10.12",
   "title": "Continuous bijection onto circle.",
@@ -1819,9 +1999,9 @@ var ptx_lunr_docs = [
   "body": "  A separation of a topological space is a pair of disjoint nonempty open sets satisfying . The space is connected it it admits no separation, and disconnected otherwise.  A subset is connected (resp., disconnected ) if it is connected (resp., disconnected) with respect to the subspace topology.   "
 },
 {
-  "id": "example-49",
+  "id": "example-57",
   "level": "2",
-  "url": "s_connected1.html#example-49",
+  "url": "s_connected1.html#example-57",
   "type": "Example",
   "number": "2.12.2",
   "title": "Examples.",
@@ -1855,9 +2035,9 @@ var ptx_lunr_docs = [
   "body": " Connectedness and subspaces   Let be a topological space.   If is connected and is a separation of , then or .    If is a collection of connected subspaces of and , then is connected.    If is connected, then any satisfying is connected.     Let be a connected subspace of . It is a separation of , then or .   "
 },
 {
-  "id": "proof-49",
+  "id": "proof-54",
   "level": "2",
-  "url": "s_connected1.html#proof-49",
+  "url": "s_connected1.html#proof-54",
   "type": "Proof",
   "number": "2.12.1",
   "title": "",
@@ -1936,36 +2116,36 @@ var ptx_lunr_docs = [
   "body": " Path-connectedness and continuity   If is continuous and is path connected, then is path connected.    Given and , let be a path connecting and . The composition is then a path connecting and .   "
 },
 {
-  "id": "example-50",
+  "id": "example-58",
   "level": "2",
-  "url": "s_connected_path.html#example-50",
+  "url": "s_connected_path.html#example-58",
   "type": "Example",
   "number": "2.13.5",
   "title": "Balls in <span class=\"process-math\">\\(\\R^n\\)<\/span>.",
   "body": " Balls in   Let be Euclidean -space. For all and any , the open ball is connected, as is the closed ball defined as     It is easy to see that the straight line path defined as is a continuous function connecting any two points in . For our current purposes, we wish to show that if , then so is , for any . To this end, note that . This proves that the open ball is path connected, and hence connected. Next, it is easy to see that the closed ball is in fact the closure of the open ball. Since connectedness is preserved under closure, we conclude that the closed ball is connected.   "
 },
 {
-  "id": "example-51",
+  "id": "example-59",
   "level": "2",
-  "url": "s_connected_path.html#example-51",
+  "url": "s_connected_path.html#example-59",
   "type": "Example",
   "number": "2.13.6",
   "title": "Punctured Euclidean space <span class=\"process-math\">\\(\\R^n-\\{\\boldzero\\}\\text{:}\\)<\/span> <span class=\"process-math\">\\(n\\geq 2\\)<\/span>.",
   "body": " Punctured Euclidean space :   Let be Euclidean -space, where . The subspace is connected.    Take any . If the two vectors are not scalar multiples of one another, then the straight line path connecting them is guaranteed to lie in , using a linear independence argument. If , then since , we can find a vector that is not a scalar multiple of either vector. We can then construct a polygonal path lieing in that first connects to via a straight line path, and then connects to via a straight line path.   "
 },
 {
-  "id": "example-52",
+  "id": "example-60",
   "level": "2",
-  "url": "s_connected_path.html#example-52",
+  "url": "s_connected_path.html#example-60",
   "type": "Example",
   "number": "2.13.7",
   "title": "<span class=\"process-math\">\\(\\R\\not\\cong \\R^n\\)<\/span> for <span class=\"process-math\">\\(n\\geq 2\\)<\/span>.",
   "body": " for   Prove: if , then there is no homeomorphism from to .    Assume by contradiction that is a homeomorphism for some . It follows that the restriction is a homeomorphism. This a contradiction since is not connected ( is open and closed in ), but is connected.   "
 },
 {
-  "id": "example-53",
+  "id": "example-61",
   "level": "2",
-  "url": "s_connected_path.html#example-53",
+  "url": "s_connected_path.html#example-61",
   "type": "Example",
   "number": "2.13.8",
   "title": "The <span class=\"process-math\">\\(n\\)<\/span>-sphere.",
@@ -2674,9 +2854,9 @@ var ptx_lunr_docs = [
   "body": " is normal   Prove: is normal.    Let be disjoint closed subsets of . We can find open coverings satisfying for all . First observe that for all . Indeed, otherwise we'd have , in which case either or : both are impossible since and . We conclude that , proving that and can be separated by open sets.   "
 },
 {
-  "id": "example-67",
+  "id": "example-75",
   "level": "2",
-  "url": "s_normal.html#example-67",
+  "url": "s_normal.html#example-75",
   "type": "Example",
   "number": "2.20.2",
   "title": "<span class=\"process-math\">\\(R_\\ell\\times R_\\ell\\)<\/span> is not normal.",
@@ -2899,9 +3079,9 @@ var ptx_lunr_docs = [
   "body": " Directed set   A directed set is a pair , where is a quasiordering on that satisfies the following axiom.   Directed (D)  For all , there is a such that and .   A subset of a directed set is cofinal if for all there is a such that .   "
 },
 {
-  "id": "example-69",
+  "id": "example-77",
   "level": "2",
-  "url": "s_nets.html#example-69",
+  "url": "s_nets.html#example-77",
   "type": "Example",
   "number": "2.24.4",
   "title": "Common examples.",

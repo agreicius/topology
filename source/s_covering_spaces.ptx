@@ -16,14 +16,16 @@
   </definition>
   <example xml:id="eg_trivial_cover">
     <title>Trivial covering</title>
-    <p>
-        Let <m>X, Y</m> be topological spaces, and suppose <m>X</m> is discrete. The projection 
-        <md>
-            <mrow>\pi_Y\colon X\times Y \amp \rightarrow Y</mrow>
-            <mrow>(x,y) \amp\mapsto y </mrow>
-        </md>
-        is a covering map. We call this a <term>trivial covering</term> of <m>Y</m>. 
-    </p>
+    <statement>
+        <p>
+            Let <m>X, Y</m> be topological spaces, and suppose <m>X</m> is discrete. The projection 
+            <md>
+                <mrow>\pi_Y\colon X\times Y \amp \rightarrow Y</mrow>
+                <mrow>(x,y) \amp\mapsto y </mrow>
+            </md>
+            is a covering map. We call this a <term>trivial covering</term> of <m>Y</m>. 
+        </p>
+    </statement>
     <solution>
         <p>
             Since <m>X</m> is discrete, <m>\{x\}</m> is open for any <m>x\in X</m>. Given any open <m>U\subseteq Y</m>, the preimage <m>\pi_Y^{-1}(U)</m> is the disjoint union of the open sets <m>V_x=\{x\}\times U</m>, each of which is homeomorphic to <m>U</m> by the map <m>V_x\rightarrow U</m> sending <m>(x,y)</m> to <m>y</m>. Thus all open sets of <m>Y</m> are evenly covered by <m>\pi_Y</m>. 
@@ -40,9 +42,11 @@
   </example>
   <example xml:id="eg_covering_circle">
     <title>Covering map <m>\R\rightarrow S^1</m></title>
-    <p>
-        The open map <m>p\colon \R\rightarrow S_1</m> defined as <m>p(s)=(\cos2\pi s, \sin 2\pi s)</m> is a covering map. 
-    </p>
+    <statement>
+        <p>
+            The open map <m>p\colon \R\rightarrow S_1</m> defined as <m>p(s)=(\cos2\pi s, \sin 2\pi s)</m> is a covering map. 
+        </p>
+    </statement>
     <solution>
         <p>
             Let <m>P=(1,0)\in S^1</m>, and let <m>U=S_1-\{(-1,0)\}</m>. We have 
@@ -87,12 +91,19 @@
             </li>
         </ol>
     </statement>
+    <proof>
+        <p>
+            
+        </p>
+    </proof>
   </theorem>
   <example xml:id="eg_nfold_covering">
     <title><m>n</m>-fold covering of <m>S^1</m></title>
-    <p>
-        The map <m>p\colon S^1\rightarrow S^1</m> sending a point <m>Q=(\cos 2\pi s, \sin 2\pi s)</m> to <m>p(Q)=(\cos 2\pi ns, \sin 2\pi ns)</m> is an <m>n</m>-fold cover of <m>S^1</m>. 
-    </p>
+    <statement>
+        <p>
+            The map <m>p\colon S^1\rightarrow S^1</m> sending a point <m>Q=(\cos 2\pi s, \sin 2\pi s)</m> to <m>p(Q)=(\cos 2\pi ns, \sin 2\pi ns)</m> is an <m>n</m>-fold cover of <m>S^1</m>. 
+        </p>
+    </statement>
     <solution>
         <p>
             Homework exercise. 
@@ -101,26 +112,54 @@
   </example>
   <example xml:id="eg_covering_P2">
     <title>Covering of <m>\mathbb{P}^2</m></title>
-    <p>
-        Recall that <m>\mathbb{P}^2</m> is the quotient space obtained by identifying elements of <m>\R^3-\{(0,0,0)\}</m> that are scalar multiples of one another. We showed in a homeowork that <m>\mathbb{P}^2</m> is homeomorphic to the quotient of <m>S^2</m> obtained by identifying antipodal points. The corresponding quotient map <m>p\colon S^2\rightarrow \mathbb{P}^2</m> is a covering map. 
-    </p>
+    <statement>
+        <p>
+            Recall that <m>\mathbb{P}^2</m> is the quotient space obtained by identifying elements of <m>\R^3-\{(0,0,0)\}</m> that are scalar multiples of one another. We showed in a homeowork that <m>\mathbb{P}^2</m> is homeomorphic to the quotient of <m>S^2</m> obtained by identifying antipodal points. The corresponding quotient map <m>p\colon S^2\rightarrow \mathbb{P}^2</m> is a covering map. 
+        </p>
+    </statement>
     <solution>
         <p>
-            
+            For a point <m>P\in S^2</m>, let <m>-P</m> be its antipode: using the vector space structure of <m>\R^3</m>, if <m>P=(x,y,z)</m>, then <m>-P=(-1)(x,y,z)=(-x,-y,-z)</m>. It is easy to see that the map <m>P\mapsto -P</m> defines a homeomorphism on <m>S^2</m>. 
         </p>
+        <p> First we show that <m>p</m> is an open map. Let <m>U\subseteq S^2</m> be open. Since <m>p</m> is a quotient map, the set <m>p(U)</m> is open if and only if its preimage <m>p^{-1}(p(U))</m> is open. Since <m>p(P)=p(Q)</m> if and only if <m>P=\pm Q</m>, we see that 
+        <m>p^{-1}(p(U))=U\cup -U</m>, where <m>-U=\{-P\colon P\in U\}</m>. Since the antipodal map <m>P\mapsto -P</m> is a homeomorphism, and since <m>U</m> is open, <m>-U</m> is open. It follows that <m>p^{-1}(p(U))=U\cup -U</m> is open. We conclude that <m>p(U)</m> is open.  
+        </p>
+        <p>
+        We now show that <m>p</m> is a double covering of <m>\mathbb{P}^2</m>. Given any <m>[P]\in \mathbb{P}^2=S^2/\sim</m>, let <m>V=B_{1/2}(P)\cap S^2</m>, and let <m>U=p(V)</m>. By the argument above, we have <m>p^{-1}(U)=p^{-1}(p(V))=V\cup -V</m>, where <m>V</m> and <m>-V</m> are both open sets. Furthermore, since <m>\operatorname{diam} V\leq 1</m>, we have <m>V\cap -V=\emptyset</m>. Finally, since <m>p</m> is an open map, and since <m>p\vert_{\pm V}</m> is a bijection onto <m>U</m> (since <m>V\cap -V=\emptyset</m>) we conclude that <m>p\vert_{\pm V}</m> is a homeomorphism onto <m>U</m>. This proves <m>p</m> is a covering map. Since <m>p^{-1}(\{[P]\})=\{P, -P\}</m> for all <m>[P]\in \mathbb{P}^2</m>, we see that <m>p</m> is a double covering.  
+        </p>
+        <figure xml:id="fig_covering_P2">
+            <caption>A double cover of <m>\mathbb{P}^2</m></caption>
+            <image source="double_cover.png" width="75%">
+                <description>A double cover of <m>\mathbb{P}^2</m></description>
+            </image>
+        </figure>
     </solution>
   </example>
   <example>
     <title>Not all quotient maps are covering maps</title>
-   <p>
-    The map <m>p\colon I\rightarrow S^1 </m>, defined as <m>p(s)=(\cos 2\pi s, \sin 2\pi s)</m> is not a covering. 
-   </p>
+   <statement>
+    <p>
+        The map <m>p\colon I\rightarrow S^1 </m>, defined as <m>p(s)=(\cos 2\pi s, \sin 2\pi s)</m> is not a covering. 
+    </p>
+   </statement>
+   <proof>
+    <p>
+        The given map is not open (<m>p([0,1/2))</m> is not open in <m>S^1</m>), hence cannot be a covering map by (3) of <xref ref="th_covering_map_props"/>. Alternatively, we have <m>p^{-1}(\{(0,1)\}=\{1/4\}</m> and <m>p^{-1}(\{(1,0)\}=\{0,1\}</m>, in violation of (5) of <xref ref="th_covering_map_props"/>. 
+    </p>
+   </proof>
   </example>
   <example>
     <title>Local homeomorphism not sufficient</title>
-    <p>
-        The map <m>p\colon \R_+\rightarrow S^1</m> defined as <m>p(s)=(\cos 2\pi s, \sin 2\pi s)</m> satisfies (1)-(4) of <xref ref="th_covering_map_props"/>, but is not a covering map. 
-    </p>
+    <statement>
+        <p>
+            The map <m>p\colon \R_+\rightarrow S^1</m> defined as <m>p(s)=(\cos 2\pi s, \sin 2\pi s)</m> satisfies (1)-(4) of <xref ref="th_covering_map_props"/>, but is not a covering map. 
+        </p>
+    </statement>
+    <solution>
+        <p>
+            Since <m>p</m> is just the restriction of the covering map from <xref ref="eg_covering_circle"/> to the open set <m>\R_+</m>, we easily see that it satisfies (1)-(4). However, there is no open neighborhood of <m>(1,0)</m> that is evenly covered by <m>p</m>. Indeed, assume by contradiction that <m>U</m> was such an open neighborhood. Shrinking if necessary, we can assume that <m>U=\{(\cos 2\pi s, \sin 2\pi s)\colon s\in (-\epsilon, \epsilon)\}</m>, where <m>\epsilon &lt; 1/2</m>. But then among the slices in the preimage of <m>U</m> we would have the set <m>[0,\epsilon)</m>, and <m>p\vert_{[0,\epsilon)}</m> is not a homeomorphism onto <m>U</m>. 
+        </p>
+    </solution>
   </example>
   <theorem xml:id="th_covering_map_construction">
     <title>Covering map constructions</title>
@@ -135,11 +174,7 @@
             </li>
             <li>
                 <p>
-                    If <m>p\colon E\colon rightarrow B </m> is a covering map and <m>B_0\subseteq B</m> is a subpace, then the function 
-                    <md>
-                        <mrow> q\colon p^{-1}(B_0) \amp \rightarrow B_0 </mrow>
-                        <mrow> b \amp \mapsto p(b)</mrow>
-                    </md>
+                    If <m>p\colon E\colon \rightarrow B </m> is a covering map and <m>B_0\subseteq B</m> is a subpace, then <m>p\vert_{p^{-1}(B_0)}\colon p^{-1}(B_0)\rightarrow B_0</m>
                     is a covering map. 
                 </p>
             </li>
@@ -151,19 +186,46 @@
            </ol> 
         </p>
     </statement>
+    <proof>
+        <p>
+            We prove (1). It is clear that the map <m>p\times p'</m> is continuous and surjective. Given <m>(b,b')\in B\times B'</m>, let <m>U, U'</m> be open neighborhoods of <m>b</m> and <m>b'</m>, respectively, that are evenly covered by <m>p</m> and <m>p'</m>, respectively. Let <m>p^{-1}(U)=\bigcup_{\alpha\in I}V_\alpha</m> and <m>(p')^{-1}(U')=\bigcup_{\beta\in J}V'_{\beta}</m> be the corresponding partitions of their respective preimages into slices. We have 
+            <me> 
+                p^{-1}(U\times U')=\bigcup_{(\alpha,\beta)\in I\times J}V_{\alpha}\times V'_{\beta}
+            </me>.
+            It is easy to see that this is a disjoint union of open sets, and that 
+            <m>
+                p\times p'\vert_{V_\alpha\times V'_{\beta}}
+            </m>
+            is a homeomorphism onto <m>U\times U'</m> for all <m>(\alpha, \beta)\in I\times J</m>. Thus every element of <m>B\times B'</m> has an open neighborhood that is evenly covered by <m>p\times p'</m>. 
+        </p>
+    </proof>
   </theorem>
   <example xml:id="eg_cover_torus">
     <title>Covering of torus</title>
-    <p>
-        Let <m>p\colon \R\rightarrow S^1</m> be the usual covering of the circle. The map <m>p\times p\colon \R\times\R\rightarrow S_1\times S_1\cong T</m> is a covering of the torus. 
-    </p>
+    <statement>
+        <p>
+            Let <m>p\colon \R\rightarrow S^1</m> be the usual covering of the circle. The map <m>p\times p\colon \R\times\R\rightarrow S_1\times S_1\cong T</m> is a covering of the torus. 
+        </p>
+        <figure width="100%" xml:id="fig_cover_torus">
+            <caption>A covering of the torus</caption>
+            <image source="cover_torus.png" width="75%">
+                <description>A covering of the torus</description>
+            </image>
+        </figure>
+    </statement>
   </example>
 
   <example xml:id="eg_cover_figure8">
     <title>Covering of figure eight</title>
     <p>
-        The <term>figure eight</term> is the subpsace of <m>Y\subseteq T=S^1\times S^1</m> defined as <m>X=S^1\times \{(1,0)\}\bigcup \{(1,0)\}\times S_1</m>. Let <m>p\colon \R\times \R\rightarrow T</m> be the standard covering map. We have <m>X=p^{-1}(Y)=\R\times \Z\cup \Z\times \R</m>. By <xref ref="th_covering_map_construction"/>, <m>p\vert_X\colon X\rightarrow Y</m> is a covering map. 
+        The <term>figure eight</term> is the subpsace of <m>Y\subseteq T=S^1\times S^1</m> defined as <m>Y=S^1\times \{(1,0)\}\bigcup \{(1,0)\}\times S_1</m>, and let <m>X=\R\times \Z\cup \Z\times \R</m>, the preimage of <m>Y</m> under the covering map <m>p\times p</m> from <xref ref="eg_cover_torus"/>. By <xref ref="th_covering_map_construction"/>, <m>p\times p\vert_X\colon X\rightarrow Y</m> is a covering map. 
     </p>
+    <figure width="100%" xml:id="fig_cover_figure8">
+        <caption>A cover of the figure eight</caption>
+        <image source="cover_figure8.png" width="75%">
+            <description>A cover of the figure eight</description>
+        </image>
+    </figure>
     
   </example>
   

@@ -727,7 +727,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.3",
   "title": "Covering spaces",
-  "body": " Covering spaces   Covering map   Let be a surjective continuous map. A set is evenly covered by if can be written as a disjoint union of open sets . The collection and is a homeomorphism for all .  The collection is called a partition of into slices .  If every has an open neighborhood that is evenly covered by , then is called a covering map and is called a covering space of .     Trivial covering  Let be topological spaces, and suppose is discrete. The projection is a covering map. We call this a trivial covering of .   Since is discrete, is open for any . Given any open , the preimage is the disjoint union of the open sets , each of which is homeomorphic to by the map sending to . Thus all open sets of are evenly covered by .  This is called a trivial covering because the space is homeomorphic to a a disjoint union of copies of Alternatively, since is discrete, the map is a homeomorphism of with the disjoint union , where is a copy of .     Covering map  The open map defined as is a covering map.   Let , and let . We have      Covering map properties   Let be a covering map.    For all , the preimage is a discrete subspace of .    For all there exists an open set containing such that is a homeomorphism: , is a local homeomorphism .     is an open map.     is a quotient map.    If is connected and for some and , then for all . We call a -fold covering in this case.       -fold covering of  The map sending a point to is an -fold cover of .   Homework exercise.     Covering of  Recall that is the quotient space obtained by identifying elements of that are scalar multiples of one another. We showed in a homeowork that is homeomorphic to the quotient of obtained by identifying antipodal points. The corresponding quotient map is a covering map.        Not all quotient maps are covering maps  The map , defined as is not a covering.    Local homeomorphism not sufficient  The map defined as satisfies (1)-(4) of , but is not a covering map.    Covering map constructions      If and are covering maps, then the map defined as is a covering map.    If is a covering map and is a subpace, then the function is a covering map.    If is a covering map and and are homeomorphisms, then and are covering maps.        Covering of torus  Let be the usual covering of the circle. The map is a covering of the torus.    Covering of figure eight  The figure eight is the subpsace of defined as . Let be the standard covering map. We have . By , is a covering map.   "
+  "body": " Covering spaces   Covering map   Let be a surjective continuous map. A set is evenly covered by if can be written as a disjoint union of open sets . The collection and is a homeomorphism for all .  The collection is called a partition of into slices .  If every has an open neighborhood that is evenly covered by , then is called a covering map and is called a covering space of .     Trivial covering   Let be topological spaces, and suppose is discrete. The projection is a covering map. We call this a trivial covering of .    Since is discrete, is open for any . Given any open , the preimage is the disjoint union of the open sets , each of which is homeomorphic to by the map sending to . Thus all open sets of are evenly covered by .  This is called a trivial covering because the space is homeomorphic to a a disjoint union of copies of Alternatively, since is discrete, the map is a homeomorphism of with the disjoint union , where is a copy of .     Covering map   The open map defined as is a covering map.    Let , and let . We have      Covering map properties   Let be a covering map.    For all , the preimage is a discrete subspace of .    For all there exists an open set containing such that is a homeomorphism: , is a local homeomorphism .     is an open map.     is a quotient map.    If is connected and for some and , then for all . We call a -fold covering in this case.           -fold covering of   The map sending a point to is an -fold cover of .    Homework exercise.     Covering of   Recall that is the quotient space obtained by identifying elements of that are scalar multiples of one another. We showed in a homeowork that is homeomorphic to the quotient of obtained by identifying antipodal points. The corresponding quotient map is a covering map.    For a point , let be its antipode: using the vector space structure of , if , then . It is easy to see that the map defines a homeomorphism on .  First we show that is an open map. Let be open. Since is a quotient map, the set is open if and only if its preimage is open. Since if and only if , we see that , where . Since the antipodal map is a homeomorphism, and since is open, is open. It follows that is open. We conclude that is open.  We now show that is a double covering of . Given any , let , and let . By the argument above, we have , where and are both open sets. Furthermore, since , we have . Finally, since is an open map, and since is a bijection onto (since ) we conclude that is a homeomorphism onto . This proves is a covering map. Since for all , we see that is a double covering.   A double cover of   A double cover of       Not all quotient maps are covering maps   The map , defined as is not a covering.    The given map is not open ( is not open in ), hence cannot be a covering map by (3) of . Alternatively, we have and , in violation of (5) of .     Local homeomorphism not sufficient   The map defined as satisfies (1)-(4) of , but is not a covering map.    Since is just the restriction of the covering map from to the open set , we easily see that it satisfies (1)-(4). However, there is no open neighborhood of that is evenly covered by . Indeed, assume by contradiction that was such an open neighborhood. Shrinking if necessary, we can assume that , where . But then among the slices in the preimage of we would have the set , and is not a homeomorphism onto .     Covering map constructions      If and are covering maps, then the map defined as is a covering map.    If is a covering map and is a subpace, then is a covering map.    If is a covering map and and are homeomorphisms, then and are covering maps.       We prove (1). It is clear that the map is continuous and surjective. Given , let be open neighborhoods of and , respectively, that are evenly covered by and , respectively. Let and be the corresponding partitions of their respective preimages into slices. We have . It is easy to see that this is a disjoint union of open sets, and that is a homeomorphism onto for all . Thus every element of has an open neighborhood that is evenly covered by .     Covering of torus   Let be the usual covering of the circle. The map is a covering of the torus.   A covering of the torus   A covering of the torus       Covering of figure eight  The figure eight is the subpsace of defined as , and let , the preimage of under the covering map from . By , is a covering map.   A cover of the figure eight   A cover of the figure eight     "
 },
 {
   "id": "d_evenly_covered",
@@ -745,7 +745,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.3.2",
   "title": "Trivial covering.",
-  "body": " Trivial covering  Let be topological spaces, and suppose is discrete. The projection is a covering map. We call this a trivial covering of .   Since is discrete, is open for any . Given any open , the preimage is the disjoint union of the open sets , each of which is homeomorphic to by the map sending to . Thus all open sets of are evenly covered by .  This is called a trivial covering because the space is homeomorphic to a a disjoint union of copies of Alternatively, since is discrete, the map is a homeomorphism of with the disjoint union , where is a copy of .   "
+  "body": " Trivial covering   Let be topological spaces, and suppose is discrete. The projection is a covering map. We call this a trivial covering of .    Since is discrete, is open for any . Given any open , the preimage is the disjoint union of the open sets , each of which is homeomorphic to by the map sending to . Thus all open sets of are evenly covered by .  This is called a trivial covering because the space is homeomorphic to a a disjoint union of copies of Alternatively, since is discrete, the map is a homeomorphism of with the disjoint union , where is a copy of .   "
 },
 {
   "id": "eg_covering_circle",
@@ -754,7 +754,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.3.3",
   "title": "Covering map <span class=\"process-math\">\\(\\R\\rightarrow S^1\\)<\/span>.",
-  "body": " Covering map  The open map defined as is a covering map.   Let , and let . We have    "
+  "body": " Covering map   The open map defined as is a covering map.    Let , and let . We have    "
 },
 {
   "id": "th_covering_map_props",
@@ -763,7 +763,7 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "1.3.4",
   "title": "Covering map properties.",
-  "body": " Covering map properties   Let be a covering map.    For all , the preimage is a discrete subspace of .    For all there exists an open set containing such that is a homeomorphism: , is a local homeomorphism .     is an open map.     is a quotient map.    If is connected and for some and , then for all . We call a -fold covering in this case.     "
+  "body": " Covering map properties   Let be a covering map.    For all , the preimage is a discrete subspace of .    For all there exists an open set containing such that is a homeomorphism: , is a local homeomorphism .     is an open map.     is a quotient map.    If is connected and for some and , then for all . We call a -fold covering in this case.         "
 },
 {
   "id": "eg_nfold_covering",
@@ -772,7 +772,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.3.5",
   "title": "<span class=\"process-math\">\\(n\\)<\/span>-fold covering of <span class=\"process-math\">\\(S^1\\)<\/span>.",
-  "body": " -fold covering of  The map sending a point to is an -fold cover of .   Homework exercise.   "
+  "body": " -fold covering of   The map sending a point to is an -fold cover of .    Homework exercise.   "
 },
 {
   "id": "eg_covering_P2",
@@ -781,52 +781,52 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.3.6",
   "title": "Covering of <span class=\"process-math\">\\(\\mathbb{P}^2\\)<\/span>.",
-  "body": " Covering of  Recall that is the quotient space obtained by identifying elements of that are scalar multiples of one another. We showed in a homeowork that is homeomorphic to the quotient of obtained by identifying antipodal points. The corresponding quotient map is a covering map.      "
+  "body": " Covering of   Recall that is the quotient space obtained by identifying elements of that are scalar multiples of one another. We showed in a homeowork that is homeomorphic to the quotient of obtained by identifying antipodal points. The corresponding quotient map is a covering map.    For a point , let be its antipode: using the vector space structure of , if , then . It is easy to see that the map defines a homeomorphism on .  First we show that is an open map. Let be open. Since is a quotient map, the set is open if and only if its preimage is open. Since if and only if , we see that , where . Since the antipodal map is a homeomorphism, and since is open, is open. It follows that is open. We conclude that is open.  We now show that is a double covering of . Given any , let , and let . By the argument above, we have , where and are both open sets. Furthermore, since , we have . Finally, since is an open map, and since is a bijection onto (since ) we conclude that is a homeomorphism onto . This proves is a covering map. Since for all , we see that is a double covering.   A double cover of   A double cover of     "
 },
 {
   "id": "example-20",
   "level": "2",
   "url": "s_covering_spaces.html#example-20",
   "type": "Example",
-  "number": "1.3.7",
+  "number": "1.3.8",
   "title": "Not all quotient maps are covering maps.",
-  "body": " Not all quotient maps are covering maps  The map , defined as is not a covering.  "
+  "body": " Not all quotient maps are covering maps   The map , defined as is not a covering.    The given map is not open ( is not open in ), hence cannot be a covering map by (3) of . Alternatively, we have and , in violation of (5) of .   "
 },
 {
   "id": "example-21",
   "level": "2",
   "url": "s_covering_spaces.html#example-21",
   "type": "Example",
-  "number": "1.3.8",
+  "number": "1.3.9",
   "title": "Local homeomorphism not sufficient.",
-  "body": " Local homeomorphism not sufficient  The map defined as satisfies (1)-(4) of , but is not a covering map.  "
+  "body": " Local homeomorphism not sufficient   The map defined as satisfies (1)-(4) of , but is not a covering map.    Since is just the restriction of the covering map from to the open set , we easily see that it satisfies (1)-(4). However, there is no open neighborhood of that is evenly covered by . Indeed, assume by contradiction that was such an open neighborhood. Shrinking if necessary, we can assume that , where . But then among the slices in the preimage of we would have the set , and is not a homeomorphism onto .   "
 },
 {
   "id": "th_covering_map_construction",
   "level": "2",
   "url": "s_covering_spaces.html#th_covering_map_construction",
   "type": "Theorem",
-  "number": "1.3.9",
+  "number": "1.3.10",
   "title": "Covering map constructions.",
-  "body": " Covering map constructions      If and are covering maps, then the map defined as is a covering map.    If is a covering map and is a subpace, then the function is a covering map.    If is a covering map and and are homeomorphisms, then and are covering maps.      "
+  "body": " Covering map constructions      If and are covering maps, then the map defined as is a covering map.    If is a covering map and is a subpace, then is a covering map.    If is a covering map and and are homeomorphisms, then and are covering maps.       We prove (1). It is clear that the map is continuous and surjective. Given , let be open neighborhoods of and , respectively, that are evenly covered by and , respectively. Let and be the corresponding partitions of their respective preimages into slices. We have . It is easy to see that this is a disjoint union of open sets, and that is a homeomorphism onto for all . Thus every element of has an open neighborhood that is evenly covered by .   "
 },
 {
   "id": "eg_cover_torus",
   "level": "2",
   "url": "s_covering_spaces.html#eg_cover_torus",
   "type": "Example",
-  "number": "1.3.10",
+  "number": "1.3.11",
   "title": "Covering of torus.",
-  "body": " Covering of torus  Let be the usual covering of the circle. The map is a covering of the torus.  "
+  "body": " Covering of torus   Let be the usual covering of the circle. The map is a covering of the torus.   A covering of the torus   A covering of the torus     "
 },
 {
   "id": "eg_cover_figure8",
   "level": "2",
   "url": "s_covering_spaces.html#eg_cover_figure8",
   "type": "Example",
-  "number": "1.3.11",
+  "number": "1.3.13",
   "title": "Covering of figure eight.",
-  "body": " Covering of figure eight  The figure eight is the subpsace of defined as . Let be the standard covering map. We have . By , is a covering map.  "
+  "body": " Covering of figure eight  The figure eight is the subpsace of defined as , and let , the preimage of under the covering map from . By , is a covering map.   A cover of the figure eight   A cover of the figure eight    "
 },
 {
   "id": "s_top_spaces",
@@ -2035,9 +2035,9 @@ var ptx_lunr_docs = [
   "body": " Connectedness and subspaces   Let be a topological space.   If is connected and is a separation of , then or .    If is a collection of connected subspaces of and , then is connected.    If is connected, then any satisfying is connected.     Let be a connected subspace of . It is a separation of , then or .   "
 },
 {
-  "id": "proof-54",
+  "id": "proof-57",
   "level": "2",
-  "url": "s_connected1.html#proof-54",
+  "url": "s_connected1.html#proof-57",
   "type": "Proof",
   "number": "2.12.1",
   "title": "",

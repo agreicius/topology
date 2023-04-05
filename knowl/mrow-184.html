@@ -13,8 +13,10 @@
 <body class="ignore-math">
 <div class="displaymath process-math">
 \begin{align*}
-d_{\operatorname{uni}}\colon X\times X \amp \rightarrow \R\\
-\left((x_i)_{i\in I}, (y_i)_{i\in I}\right) \amp\mapsto  \sup\{\overline{d}(x_i,y_i)\colon i\in I\}
+\sup\{\overline{d}(y_i,x_i)\} &lt; \epsilon \amp \implies \min\{\abs{y_{i_j}-x_{i_j}},1\}&lt;  \epsilon \text{ for all } 1\leq j\leq n \\
+\amp \implies \abs{y_{i_j}-x_{i_j}}&lt;  \epsilon \text{ for all } 1\leq j\leq n \amp (\epsilon &lt; 1)\\
+\amp\implies \abs{y_{i_j}-x_{i_j}}&lt; \epsilon_{i_j} \text{ for all } 1\leq j\leq n \\
+\amp \implies y\in B
 \end{align*}
 </div>
 <span class="incontext"><a href="s_prods_convergence_metric.html#md-72" class="internal">in-context</a></span>

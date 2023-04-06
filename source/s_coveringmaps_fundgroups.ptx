@@ -1,0 +1,207 @@
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="s_coveringmaps_fundgroups">
+  <title>Lifting correspondence</title>
+<definition xml:id="d_lifting">
+    <title>Lifting</title>
+    <statement>
+        <p>
+            Let <m>p\colon Y\rightarrow Z</m> and <m>f\colon X\rightarrow Z</m> be continuous maps. A <term>lifting</term> of <m>f</m> to <m>Y</m> is a continuous map <m>\widetilde{f}\colon X\rightarrow Y</m> satisfying <m>f=p\circ\widetilde{f}</m>. 
+            <image xml:id="im_lifting" width="20%">
+                <description>Lifting diagram</description>
+                <latex-image>
+                    \begin{tikzcd}
+                        \amp Y \arrow[d,"p"]\\ 
+                    X \arrow[ur, "\widetilde{f}"] \arrow[r,"f"'] \amp Z
+                    \end{tikzcd}
+                </latex-image>
+            </image>
+        </p>
+    </statement>
+</definition> 
+<lemma xml:id="lemma_unique_lift">
+    <title>Uniqueness of liftings</title>
+    <statement>
+        <p>
+            Let <m>p\colon E\rightarrow B</m> be a covering map, let <m>X</m> be connected, and let <m>f\colon X\rightarrow Z</m> be a continuous map. If <m>g,h\colon Y\rightarrow Z</m> are liftings of <m>f</m> to <m>E</m>, and if <m>g(x_0)=h(x_0)</m> for some <m>x_0\in X</m>, then <m>g=h</m>. In other words, if <m>X</m> is connected and <m>p\colon E\rightarrow B</m> is a covering map, then a lifting of <m>f</m> to <m>E</m>, if it exists, is uniquely determined by its value at any element of <m>X</m>. 
+            <image xml:id="im_lifting_unique" width="20%">
+                <description>Unique lifting diagram</description>
+                <latex-image>
+                    \begin{tikzcd}
+                        \amp E \arrow[d,"p"]\\ 
+                    X \arrow[ur, dashed, "g","h"'] \arrow[r,"f"'] \amp B
+                    \end{tikzcd}
+                </latex-image>
+            </image>
+        </p>
+    </statement>
+    <proof>
+        <p>
+           Assume <m>g,h</m> are liftings of <m>f</m> to <m>Y</m>, satisfying <m>g(x_0)=h(x_0)</m>. Let <m>A=\{x\in X\colon g(x)=h(x)\}\subseteq X</m>. We will show that <m>A</m> is open and closed. Since <m>A\ne \emptyset</m> (<m>x_0\in A</m>) and <m>X</m> is connected, it follows that <m>A=X</m> (<xref ref="th_connected_equiv" text="global"/>) and hence that <m>g=h</m>.  
+        </p>
+        <p>
+            Take any <m>x\in X</m>, and let <m>b=f(x)=p(g(x)=p(h(x))</m>. Since <m>p</m> is a covering map, we can find an open neighborhood <m>U\ni b</m> that is evenly covered by <m>p</m>. Let <m>p^{-1}(U)=\bigcup_{\alpha\in I}V_\alpha</m> be the partition of <m>p^{-1}(U)</m> into slices. We will show that if <m>x\in A</m>, then there is an open set <m>V</m> with <m>x\in V\subseteq A</m>; and if <m>x\in X-A</m>, then there is an open set <m>V</m> with <m>x\in V\subseteq X-A</m>. It will follow that <m>A</m> is both open and closed, as desired. 
+        </p>
+        <p>
+            <term>Case: <m>x\in A</m></term>. Since <m>g(x),h(x)\in p^{-1}(b)</m>, and since <m>g(x)=h(x)</m> (by definition of <m>A</m>), we have <m>g(x), h(x)\in V_\alpha</m> for some <m>\alpha\in I</m>. Consider the open set <m>V=g^{-1}(V_\alpha)\cap h^{-1}(V_{\alpha})</m>. We have <m>x\in V</m>, since <m>g(x)=h(x)\in V_{\alpha}</m>. Furthermore, for any <m>x'\in V</m>, since <m>g(x'), h(x')\in V_{\alpha}</m>, since <m>p(g(x')=p(h(x'))=f(x')</m>, and since <m>p\vert_{V_{\alpha}</m> is a homeomorphism, we conclude that <m>g(x')=h(x')</m>. Thus <m>V\subseteq A</m>, as desired. 
+        </p>
+        <p>
+            <term>Case: <m>x\in X-A</m></term>. By definition of <m>A</m>, this means <m>g(x)\ne h(x)</m>. Since <m>g(x),h(x)\in p^{-1}(\{b\})</m>, there are <m>\alpha, \alpha'</m> such that <m>g(x)\in V_\alpha</m>, <m>h(x)\in V_{\alpha'}</m> and <m>V_\alpha\cap V_{\alpha'}=\emptyset</m>. Let <m>V=g^{-1}(V_{\alpha})\cap h^{-1}(V_{\alpha'})</m>. This is an open set containing <m>x</m>, and for all <m>x'\in V</m> we have <m>g(x')\in V_{\alpha}</m> and <m>h(x')\in V_{\alpha'}</m>. Since <m>V_\alpha\cap V_{\alpha'}=\emptyset</m>, we have <m>g(x')\ne h(x')</m>. Thus <m>V\subseteq X-A</m>.
+        </p>
+    </proof>
+</lemma>
+<theorem xml:id="th_lift_cover">
+    <title>Lifting to covering spaces</title>
+    <statement>
+        <p>
+           Let <m>p\colon E\rightarrow B</m> be a covering map. Fix <m>e_0\in E</m> and let <m>b_0=p(e_0)</m>. 
+           <ol>
+            <li>
+                <p>
+                    Every path <m>f\colon I\rightarrow B</m> satisfying <m>f(0)=b_0</m> lifts uniquely to a path <m>\widetilde{f}\colon I\rightarrow E</m> satisfying <m>\widetilde{f}(0)=e_0</m>.   
+                </p>
+            </li>
+            <li>
+                <p>
+                    Every continuous map <m>F\colon I\times I\rightarrow B</m> satisfying <m>F(0,0)=b_0</m> lifts uniquely to a continuous map <m>\widetilde{F}\colon I\times I\rightarrow E</m> satisfying <m>\widetilde{F}(0,0)=e_0</m>. Furthermore, if <m>F</m> is a path homotopy, then <m>\widetilde{F}</m> is a path homotopy.   
+                </p>
+            </li>
+            <li>
+                <p>
+                    Let <m>f,g\in P(B; b_0, b_1)</m>, and let <m>\widetilde{f}, \widetilde{g}</m> the corresponding liftings to <m>E</m> satisfying <m>\widetilde{f}(0)=\widetilde{g}(0)=e_0</m>. If <m>f\simeq_p g</m>, then <m>\widetilde{f}\simeq \widetilde{g}</m>.  
+                </p>
+            </li>
+           </ol> 
+        </p>
+    </statement>
+    <proof>
+        <title>Proof of (1)</title>
+        <p>
+            Uniqueness of the lifting follows from <xref ref="lemma_unique_lift"/>. We now prove that there is such a lifting. 
+        </p>
+        <p>
+            Let <m>\{U_\alpha\}_{\alpha\in I}</m> be a cover of <m>B</m> by open sets evenly covered by <m>p</m>. Since <m>\{f^{-1}(U_\alpha)\}_{\alpha\in I}</m> is an open cover of the compact metric space <m>I</m>, the existence of a <xref ref="d_Lebesgue_number" text="custom">Lebesgue number</xref> ensures that we can find a subdivision of <m>I</m>
+            <me>
+                s_0=0&lt; s_1&lt; \cdots &lt; s_n=1 
+            </me>
+           that is fine enough to ensure that for all <m>1\leq k\leq n</m>, we have <m>f([s_{k-1}, s_k])\subseteq U_{\alpha_k}</m> for some <m>\alpha_k\in I</m>. 
+        </p>
+        <p>
+            We now show by induction that for all <m>0\leq k\leq n</m>, the restriction <m>f\vert_{[0,s_{k}]}</m> has a lifting <m>\widetilde{f}_k\colon [0,s_k]\rightarrow E</m> satisfying <m>\widetilde{f}_k(0)=e_0</m>. It will follow that <m>\widetilde{f}=\widetilde{f}_n\colon [0,1]\rightarrow E</m> is the lifting we are after. 
+        </p>
+        <p>
+            <term>Base case: <m>k=0</m></term>. The function <m>\widetilde{f}_0\colon \{0\}\rightarrow E</m>, defined as <m>\widetilde{f}_0(0)=e_0</m> is a lifting of <m>f_0</m>. 
+        </p>
+        <p>
+            <term>Induction case</term>. Assume <m>\widetilde{f}_k\colon [0,s_k]\rightarrow E</m> is a lifting of <m>f\vert_{[0,s_k]}</m> satisfying <m>\widetilde{f}_k(0)=e_0</m>. Recall that we have <m>f([s_k, s_{k+1}])\subseteq U</m> for some open set evenly covered by <m>p</m>. Let <m>p^{-1}(U)=\bigcup_{\beta\in J} V_{\beta}</m>. Since <m>\widetilde{f}_k(s_k)\in p^{-1}(U)</m>, there is a unique slice <m>V=V_\beta</m> in this partition containing <m>\widetilde{f}_k(s_k)</m>. Since <m>p\vert_V</m> is a homeomorphism, we can define a continuous function <m>g\colon [s_k, s_{k+1}]\colon V</m> as <m>g=(p\vert_V)^{-1}\circ f</m>. Since <m>p</m> is 1-1 on <m>V</m> and since <m>p(\widetilde{f}_k(s_k))=p(g(s_k))=f(s_k)</m>, we have <m>\widetilde{f}_k(s_k)=g(s_k)</m>. By the closed pasting lemma, the function <m>\widetilde{f}_{k+1}\colon [0,s_{k+1}]\rightarrow E</m> defined as 
+            <me>
+                \widetilde{f}_{k+1}(s)=\begin{cases}
+                \widetilde{f}_k(s)\amp \text{if } s\in [0,s_{k}]\\
+                g(s) \amp \text{if } s\in [s_k, s_{k+1}]
+                \end{cases}
+            </me>
+            is continuous. That <m>\widetilde{f}_{k+1}</m> is a lifting of <m>f\vert_{[0,s_{k+1}]}</m> satisfying <m>\widetilde{f}_{k+1}(0)=e_0</m> follows from the assumed properties of <m>\widetilde{f}_k</m> and the definition of <m>g</m> as <m>(p\vert_V)^{-1}\circ f</m>. 
+        </p>
+    </proof>
+    <proof>
+        <title>Proof of (2)</title>
+        <p>
+            The argument here is essentially isomorphic to the one given above, though some minor subtleties creep in due to the slightly more complex domain in play (<m>I\times I</m> as opposed to <m>I</m>). Note first that once again the uniqueness property described follows immediately from <xref ref="lemma_unique_lift"/>. 
+        </p>
+        <p>
+            Let <m>\{U_{\alpha}\}_{\alpha\in I}</m> be a cover of <m>B</m> by open sets evenly covered by <m>p</m>. Since <m>I\times I</m> is compact, the open cover <m>\{F^{-1}(U_{\alpha)\}_{\alpha\in I}</m> has a <xref ref="d_Lebesgue_number" text="custom">Lebesgue number</xref> <m>\delta</m>. Pick a subdivision of <m>I</m> 
+            <me>
+                s_0=0&lt; s_1&lt; \cdots &lt; s_n=1 
+            </me>
+            fine enough so that the diameter of each subrectangle <m>R_{k,l}=[s_{k-1}, s_k]\times [s_{l-1}, s_{l}]</m> in the resulting subdivision of <m>I\times I</m> is less than <m>\delta</m>. It follows that for all <m>1\leq k,l\leq n</m> we have <m>F(R_{k,l})\subseteq U_\alpha</m> for some <m>\alpha\in I</m>.  
+        </p>
+        <p>
+        We now endeavor to build a lifting of <m>F</m> subrectangle by subrectangle, from the bottom row of subrectangles to the top, working from left to right along each row.
+        In more detail for each pair <m>1\leq k,l\leq n</m> let the region <m>A_{k,l}</m> be the union of the rectangle <m>R_{k,l}</m> along with all rectangles <m>R_{i,j}</m> to the left or below it.  We will show by induction that for all <m>1\leq k,l\leq n</m> there is a lifting <m>\widetilde{F}_{k,l}\colon A_{k,l}\rightarrow E</m> of <m>F\vert_{A_{k,l}}</m> satisfying <m>\widetilde{F}_{k,l}(0,0)=e_0</m>. Since <m>I\times I=A_{n,n}</m> the lifting <m>\widetilde{F}=\widetilde{F}_{n,n}</m> gives us what we want.
+        </p>
+        <p>
+            <term>Base case</term>. We have <m>A_{1,1}=R_{1,1}</m>, the lower left corner of <m>I\times I</m>. By construction, we have <m>F(R_{1,1})\subseteq U</m>, where <m>U</m> is an open set evenly covered by <m>p</m>.  Let <m>p^{-1}(U)=\bigcup_{\beta\in J}V_\beta</m> be the corresponding partition into slices, and let <m>V=V_{\beta}</m> be the slice containing <m>f(0,0)=e_0</m>. Define <m>\widetilde{f}_{1,1}\colon A_{1,1}=R_{1,1}\rightarrow E</m> as <m>\widetilde{F}_{1,1}=(p\vert_V)^{-1}\circ f</m>. It is easy to see that <m>p\circ \widetilde{F}_{1,1}(s,t)=F(s,t)</m> for all <m>(s,t)\in A_{1,1}=R_{1,1}</m>. Since <m>p</m> is 1-1 on <m>V</m> and <m>p(\widetilde{F}(0,0))=p(e_0)=b_0</m>, we see that <m>\widetilde{F}_{1,1}(0,0)=e_0</m>.
+        </p>
+        <p>
+            <term>Induction step</term>. Pick any pair <m>1\leq k,l\leq n</m> with <m>(k,l)\ne (n,n)</m> and assume that <m>\widetilde{F}_{k,l}</m> is a lifting of <m>F\vert_{A_{k,l}}</m> that satisfies <m>\widetilde{F}_{k,l}(0,0)=e_0</m>. The <q>next</q> region in our procedure is either (a) <m>A_{k+1,l}=A_{k,l}\cup R_{k+1,l}</m> if <m>k\ne n</m> (<q>move to right if you can</q>), or (b) <m>A_{1,l+1}=A_{n,l}\cup R_{1,l+1}</m> (<q>move up a row and start at left</q>). We show in case (a) that we can extend <m>\widetilde{F}_{k,l}</m> to this larger region; the argument for case (b) is very similar. 
+        </p>
+        <p>
+            In case (a) we have <m>A_{k+1,l}=A_{k,l}\cup R_{k+1,l}</m>. Let 
+            <me>
+                C=A_{k,l}\cap R_{k+1,l}=\{s_k\}\times [s_{l-1},s_l]\cup [s_k,s_{k+1}]\times {s_{l-1}}
+            </me>,
+            a connected set formed as the union of the left and bottom edges of <m>R_{k+1, l}</m>. By construction we have <m>F(R_{k+1,l})\subseteq U </m> for some open set evenly covered by <m>p</m>. Let <m>p^{-1}(U)=\bigcup_{\beta\in J} V_{\beta}</m> be its partition into slices. Since <m>C\subseteq A_{k,l}</m> and <m>C</m> is <em>connected</em>, we must have <m>\widetilde{F}_{k,l}(C)\subseteq V_\beta</m> for one of the slices <m>V=V_\beta</m>. (Otherwise we would have a separation of the connected set <m>\widetilde{F}_{k,l}(C)</m>.) Define <m>g\colon R_{k+1,l}\rightarrow E</m> as <m>g=(p\vert_V)^{-1}\circ F</m>. Arguments very similar to the ones in the previous proof show that <m>g\vert_C=\widetilde{F}_{k,l}\vert_C</m> and thus the two functions can be pasted together to form the desired lifting <m>\widetilde{F}_{k+1,l}</m> of <m>F\vert_{A_{k+1,l}}</m>. 
+        </p>
+        <p>
+            Lastly we show that if <m>F</m> is a path homotopy, then <m>\widetilde{F}</m> is a path homotopy. Assume <m>F(0,t)=b_0</m> and <m>F(1,t)=b_1</m> for all <m>t\in I</m>. We have <m>\widetilde{F}(0,0)=e_0\in p^{-1}(\{b_0\})</m> by assumption; let <m>e_1=\widetilde{F}(1,0)\in p^{-1}(\{b_1\})</m>. We must show that <m>\widetilde{F}(0,t)=e_0</m> and <m>\widetilde{F}(1,t)=e_1</m> for all <m>t\in I</m>. Let <m>H(t)=\widetilde{F}(0,t)</m>. This is a continuous function from <m>I</m> to the preimage <m>p^{-1}(\{b_0\})</m>. Since its image is connected, and since <m>p^{-1}(\{b_0\})</m> is <em>discrete</em>, this image must be a singleton. Since <m>H(0)=\widetilde{F}(0,0)=e_0</m>We conclude that <m>H(t)=\widetilde{F}(0,t)=e_0</m> for all <m>t\in I</m>. A similar argument, using <m>H(t)=\widetilde{F}(1,t)</m> shows that <m>\widetilde{F}(1,t)=e_1</m> for all <m>t\in I</m>. 
+        </p>
+    </proof>
+    <proof>
+        <title>Proof of (3)</title>
+        <p>
+            Assume <m>f\simeq_p g</m> and let <m>F\colon I\times I\rightarrow B</m> be the path homotopy that witnesses this fact. From (2) we know that <m>F</m> lifts uniquely to a path homotopy <m>\widetilde{F}\colon I\times I\rightarrow B</m> satisfying <m>\widetilde{F}(0,t)=e_0</m> for all <m>t\in I</m>. Since <m>\widetilde{F}</m> is a lifting of <m>F</m>, we have <m>p(\widetilde{F}(s,0))=F(s,0)=f(s)</m> and <m>p(\widetilde{F}(s,1))=F(s,1)=g(s)</m>. Thus the paths <m>\hat{f}(s)=\widetilde{F}(s,0)</m> and <m>\hat{g}(s)=\widetilde{F}(s,1)</m> are liftings of <m>f</m> and <m>g</m> to <m>E</m>. Since <m>\hat{f}(0)=\widetilde{F}(0,0)=e_0</m> and <m>\hat{g}(0)=\widetilde{F}(0,1)=e_0</m>, we conclude from the uniqueness property of liftings that <m>\hat{f}(s)=\widetilde{F}(s,0)=\widetilde{f}(s)</m> and <m>\hat{g}(s)=\widetilde{F}(s,1)=g(s)</m>, as desired. 
+        </p>
+    </proof>
+</theorem>
+
+<definition xml:id="d_lifting_correspondence">
+    <title>Lifting correspondence</title>
+    <statement>
+        <p>
+            Let <m>p\colon E\rightarrow B</m> be a covering map. Fix <m>e_0\in E</m> and let <m>b_0=p(e_0)</m>. The function 
+            <md>
+                <mrow>\phi\colon \pi_1(B,b_0) \amp \rightarrow p^{-1}(\{b_0\})</mrow>
+                <mrow> [f]  \amp \mapsto \widetilde{f}(1) </mrow>
+            </md>,
+            where <m>\widetilde{f}</m> is the unique lifting of <m>f</m> to <m>E</m> satisfying <m>\widetilde{f}(0)=e_0</m>, is called the <term>lifting correspondence</term> arising from the covering <m>p</m> and choice of <m>e_0\in E</m>.  
+        </p>
+    </statement>
+    <proof>
+        <p>
+            The fact that the rule <m>[f] \mapsto \widetilde{f}(1)</m> gives rise to a well-defined function of sets follows from <xref ref="th_lift_cover"/>
+        </p>
+        <p>
+            Statement (1) of this theorem guarantees the existence and uniqueness of <m>\widetilde{f}</m>. Note also that since <m>p(\widetilde{f}(1))=f(1)=b_0</m>, the value <m>\widetilde{f}(1)</m> is indeed an element of <m>p^{-1}(\{b_0\})</m>.
+        </p>
+        <p>
+            Statement (3) of the theorem ensures that if <m>[f]=[g]\in \pi_1(B,b_0)</m>, then <m>\widetilde{f}(1)=\widetilde{g}(1)</m>. Indeed, since <m>f\simeq_p g</m>, we conclude that <m>\widetilde{f}\simeq_p \widetilde{g}</m>. In particular, being path homotopic, we must have <m>\widetilde{f}(1)=\widetilde{g}(1)</m>. 
+        </p>
+    </proof>
+</definition>
+<theorem xml:id="th_lifting_correspondence">
+    <title>Lifting correspondence</title>
+    <statement>
+        <p>
+            Let <m>p\colon E\rightarrow B</m> be a covering map. Fix <m>e_0\in E</m>, let <m>b_0=p(e_0)</m>, and let 
+            <md>
+                <mrow>\phi\colon \pi_1(B,b_0) \amp \rightarrow p^{-1}(\{b_0\})</mrow>
+                <mrow> [f]  \amp \mapsto \widetilde{f}(1) </mrow>
+            </md>
+            be the resulting lifting correspondence. 
+        </p>
+        <ol>
+            <li>
+                <p>
+                    The group homomorphism <m>p_*\colon \pi_1(E,e_0)\hookrightarrow \pi_1(B,b_0)</m> is an injection. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    Let <m>H=p_*(\pi_1(E,e_0))</m>. We have <m>\phi([f])=e_0</m> if and only if <m>[f]\in H</m>. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    The lifting correspondence <m>\phi</m> gives rise to an injective map 
+                    <md>
+                        <mrow>\overline{\phi}\colon \pi_1(B,b_0)/H \amp \hookrightarrow p^{-1}(b_0)</mrow>
+                        <mrow>\overline{[f]} \amp \mapsto \phi([f])</mrow>
+                    </md>.
+                    The map <m>\overline{\phi}</m> is bijective if <m>E</m> is path connected. 
+                </p>
+            </li>
+        </ol>
+    </statement>
+</theorem>
+
+
+
+</section>

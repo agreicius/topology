@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Lifting correspondence</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Math 344-1,2">
+<meta property="book:author" content="Aaron Greicius">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
+  },
+  chtml: {
+    scale: 0.98,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.6/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="kursobjekt.html"><span class="title">Math 344-1,2:</span> <span class="subtitle">Kursobjekt</span></a></h1>
+<p class="byline">Aaron Greicius</p>
+</div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>No results.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="name">Index</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="theavatarbutton" class="name">You!</span><div id="preferences_menu_holder" class="hidden"><ol id="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="s_covering_spaces.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="c_algebraic_topology.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="c_top_spaces.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
+  \newcommand{\Q}{{\mathbb Q}}
+  \newcommand{\R}{{\mathbb R}}
+  \newcommand{\C}{{\mathbb C}}
+  \newcommand{\T}{{\mathbb T}}
+  \newcommand{\F}{{\mathbb F}}
+  \newcommand{\HH}{{\mathbb H}}
+  \newcommand{\compose}{\circ}
+  \newcommand{\bolda}{{\mathbf a}}
+  \newcommand{\boldb}{{\mathbf b}}
+  \newcommand{\boldc}{{\mathbf c}}
+  \newcommand{\boldd}{{\mathbf d}}
+  \newcommand{\bolde}{{\mathbf e}}
+  \newcommand{\boldi}{{\mathbf i}}
+  \newcommand{\boldj}{{\mathbf j}}
+  \newcommand{\boldk}{{\mathbf k}}
+  \newcommand{\boldn}{{\mathbf n}}
+  \newcommand{\boldp}{{\mathbf p}}
+  \newcommand{\boldq}{{\mathbf q}}
+  \newcommand{\boldr}{{\mathbf r}}
+  \newcommand{\bolds}{{\mathbf s}}
+  \newcommand{\boldt}{{\mathbf t}}
+  \newcommand{\boldu}{{\mathbf u}}
+  \newcommand{\boldv}{{\mathbf v}}
+  \newcommand{\boldw}{{\mathbf w}}
+  \newcommand{\boldx}{{\mathbf x}}
+  \newcommand{\boldy}{{\mathbf y}}
+  \newcommand{\boldz}{{\mathbf z}}
+  \newcommand{\boldzero}{{\mathbf 0}}
+  \newcommand{\boldmod}{\boldsymbol{ \bmod }}
+  \newcommand{\boldT}{{\mathbf T}}
+  \newcommand{\boldN}{{\mathbf N}}
+  \newcommand{\boldB}{{\mathbf B}}
+  \newcommand{\boldF}{{\mathbf F}}
+  \newcommand{\boldS}{{\mathbf S}}
+  \newcommand{\boldE}{{\mathbf E}}
+  \newcommand{\boldG}{{\mathbf G}}
+  \newcommand{\boldK}{{\mathbf K}}
+  \newcommand{\boldL}{{\mathbf L}}
+  \DeclareMathOperator{\lcm}{lcm}
+  \DeclareMathOperator{\Span}{span}
+  \DeclareMathOperator{\tr}{tr}
+  \DeclareMathOperator{\NS}{null}
+  \DeclareMathOperator{\RS}{row}
+  \DeclareMathOperator{\CS}{col}
+  \DeclareMathOperator{\im}{im}
+  \DeclareMathOperator{\range}{range}
+  \DeclareMathOperator{\rank}{rank}
+  \DeclareMathOperator{\nullity}{nullity}
+  \DeclareMathOperator{\sign}{sign}
+  \DeclareMathOperator{\Fix}{Fix}
+  \DeclareMathOperator{\Aff}{Aff}
+  \DeclareMathOperator{\Frac}{Frac}
+  \DeclareMathOperator{\Ann}{Ann}
+  \DeclareMathOperator{\Tor}{Tor}
+  \DeclareMathOperator{\id}{id}
+  \DeclareMathOperator{\mdeg}{mdeg}
+  \DeclareMathOperator{\Lt}{Lt}
+  \DeclareMathOperator{\Lc}{Lc}
+  \DeclareMathOperator{\disc}{disc}
+  \DeclareMathOperator{\Frob}{Frob}
+  \DeclareMathOperator{\adj}{adj}
+  \DeclareMathOperator{\curl}{curl}
+  \DeclareMathOperator{\grad}{grad}
+  \DeclareMathOperator{\diver}{div}
+  \DeclareMathOperator{\flux}{flux}
+  \newcommand{\surjects}{\twoheadrightarrow}
+  \newcommand{\injects}{\hookrightarrow}
+  \newcommand{\bijects}{\leftrightarrow}
+  \newcommand{\isomto}{\overset{\sim}{\rightarrow}}
+  \newcommand{\floor}[1]{\lfloor#1\rfloor}
+  \newcommand{\ceiling}[1]{\left\lceil#1\right\rceil}
+  \newcommand{\mclass}[2][m]{[#2]_{#1}}
+  \newcommand{\val}[2][]{\left\lvert #2\right\rvert_{#1}}
+  \newcommand{\abs}[2][]{\left\lvert #2\right\rvert_{#1}}
+  \newcommand{\valuation}[2][]{\left\lvert #2\right\rvert_{#1}}
+  \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+  \newcommand{\anpoly}{a_nx^n+a_{n-1}x^{n-1}\cdots +a_1x+a_0}
+  \newcommand{\anmonic}{x^n+a_{n-1}x^{n-1}\cdots +a_1x+a_0}
+  \newcommand{\bmpoly}{b_mx^m+b_{m-1}x^{m-1}\cdots +b_1x+b_0}
+  \newcommand{\pder}[2]{\frac{\partial#1}{\partial#2}}
+  \newcommand{\normalin}{\trianglelefteq}
+  \newcommand{\angvec}[1]{\langle #1\rangle}
+  \newcommand{\varpoly}[2]{#1_{#2}x^{#2}+#1_{#2-1}x^{#2-1}\cdots +#1_1x+#1_0}
+  \newcommand{\varpower}[1][a]{#1_0+#1_1x+#1_1x^2+\cdots}
+  \newcommand{\limasto}[2][x]{\lim_{#1\rightarrow #2}}
+  \newenvironment{linsys}[2][m]{
+  \begin{array}[#1]{@{}*{#2}{rc}r@{}}
+  }{
+  \end{array}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar"><nav id="ptx-toc" class="depth2"><ul class="structural">
+<li><div class="toc-item"><a href="meta_frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li>
+<div class="toc-item"><a href="c_foundations.html" class="internal"><span class="codenumber">0</span> <span class="title">Foundations</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="s_sets_functions.html" class="internal"><span class="codenumber">0.1</span> <span class="title">Sets and functions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="s_sets_functions.html#ss_sets" class="internal"><span class="title">Sets</span></a></div></li>
+<li><div class="toc-item"><a href="s_sets_functions.html#ss_functions" class="internal"><span class="title">Functions</span></a></div></li>
+<li><div class="toc-item"><a href="s_sets_functions.html#subsec-" class="internal"><span class="title">Cardinality and countability</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="s_logic.html" class="internal"><span class="codenumber">0.2</span> <span class="title">Logic</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="s_logic.html#ss_propositional_calculus" class="internal"><span class="title">Propositional logic</span></a></div></li>
+<li><div class="toc-item"><a href="s_logic.html#ss_predicate_logic" class="internal"><span class="title">Predicate logic</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="s_proof_technique.html" class="internal"><span class="codenumber">0.3</span> <span class="title">Proof techniques</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="s_proof_technique.html#ss_logical_structure" class="internal"><span class="title">Logical structure</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="s_proof_technique.html#sss_implication" class="internal"><span class="title">Implication</span></a></div></li>
+<li><div class="toc-item"><a href="s_proof_technique.html#sss_disjunction" class="internal"><span class="title">Disjunction</span></a></div></li>
+<li><div class="toc-item"><a href="s_proof_technique.html#sss_equivalence" class="internal"><span class="title">Equivalence</span></a></div></li>
+<li><div class="toc-item"><a href="s_proof_technique.html#sss_logical_chains" class="internal"><span class="title">Chains of implications/equivalences</span></a></div></li>
+<li><div class="toc-item"><a href="s_proof_technique.html#sss_proof_by_contradiction" class="internal"><span class="title">Proof by contradiction</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="s_proof_technique.html#ss_Equalities" class="internal"><span class="title">Equalities</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="s_proof_technique.html#sss_chain_equalities" class="internal"><span class="title">Chain of equalities</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="s_proof_technique.html#ss_set_properties" class="internal"><span class="title">Basic set properties</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="s_proof_technique.html#sss_set_inclusion" class="internal"><span class="title">Set inclusion</span></a></div></li>
+<li><div class="toc-item"><a href="s_proof_technique.html#sss_set_equality" class="internal"><span class="title">Set equality</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="s_proof_technique.html#ss_function_properties" class="internal"><span class="title">Basic function properties</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="s_proof_technique.html#sss_function_equality" class="internal"><span class="title">Function equality</span></a></div></li>
+<li><div class="toc-item"><a href="s_proof_technique.html#sss_injective_surjective_bijective" class="internal"><span class="title">Injective, surjective, bijective</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="s_proof_technique.html#ss_mathematical_induction" class="internal"><span class="title">Mathematical induction</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="s_proof_technique.html#sss_weak_induction" class="internal"><span class="title">Proof by induction</span></a></div></li>
+<li><div class="toc-item"><a href="s_proof_technique.html#sss_strong_induction" class="internal"><span class="title">Proof by strong induction</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="c_algebraic_topology.html" class="internal"><span class="codenumber">1</span> <span class="title">Algebraic topology</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="s_homotopy.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Homotopy</span></a></div></li>
+<li><div class="toc-item"><a href="s_fundamental_group.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Fundamental group</span></a></div></li>
+<li><div class="toc-item"><a href="s_covering_spaces.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Covering spaces</span></a></div></li>
+<li class="active"><div class="toc-item"><a href="s_coveringmaps_fundgroups.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Lifting correspondence</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="c_top_spaces.html" class="internal"><span class="codenumber">2</span> <span class="title">Point-set topology</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="s_top_spaces.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Topological spaces</span></a></div></li>
+<li><div class="toc-item"><a href="s_bases_top.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Bases for topological spaces</span></a></div></li>
+<li><div class="toc-item"><a href="s_metric1.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Metric spaces</span></a></div></li>
+<li><div class="toc-item"><a href="s_closed_closure_interior.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Closed sets, closure, and interior</span></a></div></li>
+<li><div class="toc-item"><a href="s_limitpoints_hausdorff.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Limit points and the Hausdorff property</span></a></div></li>
+<li>
+<div class="toc-item"><a href="s_subspace_finite_products.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Subspaces and products</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="s_subspace_finite_products.html#ss_subspace" class="internal"><span class="title">Subspaces</span></a></div></li>
+<li><div class="toc-item"><a href="s_subspace_finite_products.html#ss_finite_products" class="internal"><span class="title">Finite product spaces</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="s_product2.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Arbitrary products</span></a></div></li>
+<li><div class="toc-item"><a href="s_prods_convergence_metric.html" class="internal"><span class="codenumber">2.8</span> <span class="title">Convergence in product spaces</span></a></div></li>
+<li><div class="toc-item"><a href="s_continuous.html" class="internal"><span class="codenumber">2.9</span> <span class="title">Continuous functions</span></a></div></li>
+<li><div class="toc-item"><a href="s_homeomorphisms.html" class="internal"><span class="codenumber">2.10</span> <span class="title">Homeomorphisms</span></a></div></li>
+<li><div class="toc-item"><a href="s_quotients.html" class="internal"><span class="codenumber">2.11</span> <span class="title">Quotients</span></a></div></li>
+<li><div class="toc-item"><a href="s_connected1.html" class="internal"><span class="codenumber">2.12</span> <span class="title">Connected spaces</span></a></div></li>
+<li><div class="toc-item"><a href="s_connected_path.html" class="internal"><span class="codenumber">2.13</span> <span class="title">Path-connected spaces</span></a></div></li>
+<li><div class="toc-item"><a href="s_connected_components.html" class="internal"><span class="codenumber">2.14</span> <span class="title">Connected components and locally connected spaces</span></a></div></li>
+<li><div class="toc-item"><a href="s_compact_def.html" class="internal"><span class="codenumber">2.15</span> <span class="title">Compact spaces</span></a></div></li>
+<li><div class="toc-item"><a href="s_compact_metric.html" class="internal"><span class="codenumber">2.16</span> <span class="title">Compactness in metric spaces</span></a></div></li>
+<li><div class="toc-item"><a href="s_locally.html" class="internal"><span class="codenumber">2.17</span> <span class="title">Locally compact spaces and compactification</span></a></div></li>
+<li><div class="toc-item"><a href="s_countability_axioms.html" class="internal"><span class="codenumber">2.18</span> <span class="title">Countability axioms</span></a></div></li>
+<li><div class="toc-item"><a href="s_regular.html" class="internal"><span class="codenumber">2.19</span> <span class="title">Regular spaces</span></a></div></li>
+<li><div class="toc-item"><a href="s_normal.html" class="internal"><span class="codenumber">2.20</span> <span class="title">Normal spaces</span></a></div></li>
+<li><div class="toc-item"><a href="s_Urysohn_lemma.html" class="internal"><span class="codenumber">2.21</span> <span class="title">Urysohn lemma</span></a></div></li>
+<li><div class="toc-item"><a href="s_Urysohn_metrization.html" class="internal"><span class="codenumber">2.22</span> <span class="title">Urysohn metrization theorem</span></a></div></li>
+<li><div class="toc-item"><a href="s_Tietze_extension.html" class="internal"><span class="codenumber">2.23</span> <span class="title">Further applications of Urysohn</span></a></div></li>
+<li><div class="toc-item"><a href="s_nets.html" class="internal"><span class="codenumber">2.24</span> <span class="title">Nets</span></a></div></li>
+<li>
+<div class="toc-item"><a href="s_Tychonoff.html" class="internal"><span class="codenumber">2.25</span> <span class="title">Tychonoff theorem via nets</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="s_Tychonoff.html#ss_nets_compactness" class="internal"><span class="title">Nets and compactness</span></a></div></li>
+<li><div class="toc-item"><a href="s_Tychonoff.html#ss_Tychonoff" class="internal"><span class="title">Tychonoff's theorem</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter-1.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="appendix-notation.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-defs.html" class="internal"><span class="codenumber">B</span> <span class="title">Definitions</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-thms.html" class="internal"><span class="codenumber">C</span> <span class="title">Theory</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-specimens.html" class="internal"><span class="codenumber">D</span> <span class="title">Topological specimens</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-egs.html" class="internal"><span class="codenumber">E</span> <span class="title">Examples</span></a></div></li>
+<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_coveringmaps_fundgroups"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.4</span> <span class="title">Lifting correspondence</span>
+</h2>
+<article class="definition definition-like" id="d_lifting"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Lifting.</span>
+</h3> <div class="para" id="p-254">Let <span class="process-math">\(p\colon Y\rightarrow Z\)</span> and <span class="process-math">\(f\colon X\rightarrow Z\)</span> be continuous maps. A <dfn class="terminology">lifting</dfn> of <span class="process-math">\(f\)</span> to <span class="process-math">\(Y\)</span> is a continuous map <span class="process-math">\(\widetilde{f}\colon X\rightarrow Y\)</span> satisfying <span class="process-math">\(f=p\circ\widetilde{f}\text{.}\)</span> <div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="generated/latex-image/im_lifting.svg" role="img" class="contained" alt="Lifting diagram"></div>
+</div></article><article class="lemma theorem-like" id="lemma_unique_lift"><h3 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">1.4.2</span><span class="period">.</span><span class="space"> </span><span class="title">Uniqueness of liftings.</span>
+</h3>
+<div class="para" id="p-255">Let <span class="process-math">\(p\colon E\rightarrow B\)</span> be a covering map, let <span class="process-math">\(X\)</span> be connected, and let <span class="process-math">\(f\colon X\rightarrow Z\)</span> be a continuous map. If <span class="process-math">\(g,h\colon Y\rightarrow Z\)</span> are liftings of <span class="process-math">\(f\)</span> to <span class="process-math">\(E\text{,}\)</span> and if <span class="process-math">\(g(x_0)=h(x_0)\)</span> for some <span class="process-math">\(x_0\in X\text{,}\)</span> then <span class="process-math">\(g=h\text{.}\)</span> In other words, if <span class="process-math">\(X\)</span> is connected and <span class="process-math">\(p\colon E\rightarrow B\)</span> is a covering map, then a lifting of <span class="process-math">\(f\)</span> to <span class="process-math">\(E\text{,}\)</span> if it exists, is uniquely determined by its value at any element of <span class="process-math">\(X\text{.}\)</span> <div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="generated/latex-image/im_lifting_unique.svg" role="img" class="contained" alt="Unique lifting diagram"></div>
+</div></article><article class="hiddenproof" id="proof-13"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-13"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-13"><article class="hiddenproof"><div class="para" id="p-256">Assume <span class="process-math">\(g,h\)</span> are liftings of <span class="process-math">\(f\)</span> to <span class="process-math">\(Y\text{,}\)</span> satisfying <span class="process-math">\(g(x_0)=h(x_0)\text{.}\)</span> Let <span class="process-math">\(A=\{x\in X\colon g(x)=h(x)\}\subseteq X\text{.}\)</span> We will show that <span class="process-math">\(A\)</span> is open and closed. Since <span class="process-math">\(A\ne \emptyset\)</span> (<span class="process-math">\(x_0\in A\)</span>) and <span class="process-math">\(X\)</span> is connected, it follows that <span class="process-math">\(A=X\)</span> (<a href="" class="xref" data-knowl="./knowl/th_connected_equiv.html" title="Theorem 2.12.4: Connectedness equivalences">2.12.4</a>) and hence that <span class="process-math">\(g=h\text{.}\)</span>
+</div> <div class="para" id="p-257">Take any <span class="process-math">\(x\in X\text{,}\)</span> and let <span class="process-math">\(b=f(x)=p(g(x)=p(h(x))\text{.}\)</span> Since <span class="process-math">\(p\)</span> is a covering map, we can find an open neighborhood <span class="process-math">\(U\ni b\)</span> that is evenly covered by <span class="process-math">\(p\text{.}\)</span> Let <span class="process-math">\(p^{-1}(U)=\bigcup_{\alpha\in I}V_\alpha\)</span> be the partition of <span class="process-math">\(p^{-1}(U)\)</span> into slices. We will show that if <span class="process-math">\(x\in A\text{,}\)</span> then there is an open set <span class="process-math">\(V\)</span> with <span class="process-math">\(x\in V\subseteq A\text{;}\)</span> and if <span class="process-math">\(x\in X-A\text{,}\)</span> then there is an open set <span class="process-math">\(V\)</span> with <span class="process-math">\(x\in V\subseteq X-A\text{.}\)</span> It will follow that <span class="process-math">\(A\)</span> is both open and closed, as desired.</div> <div class="para" id="p-258">
+<dfn class="terminology">Case: <span class="process-math">\(x\in A\)</span></dfn>. Since <span class="process-math">\(g(x),h(x)\in p^{-1}(b)\text{,}\)</span> and since <span class="process-math">\(g(x)=h(x)\)</span> (by definition of <span class="process-math">\(A\)</span>), we have <span class="process-math">\(g(x), h(x)\in V_\alpha\)</span> for some <span class="process-math">\(\alpha\in I\text{.}\)</span> Consider the open set <span class="process-math">\(V=g^{-1}(V_\alpha)\cap h^{-1}(V_{\alpha})\text{.}\)</span> We have <span class="process-math">\(x\in V\text{,}\)</span> since <span class="process-math">\(g(x)=h(x)\in V_{\alpha}\text{.}\)</span> Furthermore, for any <span class="process-math">\(x'\in V\text{,}\)</span> since <span class="process-math">\(g(x'), h(x')\in V_{\alpha}\text{,}\)</span> since <span class="process-math">\(p(g(x')=p(h(x'))=f(x')\text{,}\)</span> and since <span class="process-math">\(p\vert_{V_{\alpha}\)</span> is a homeomorphism, we conclude that <span class="process-math">\(g(x')=h(x')\text{.}\)</span> Thus <span class="process-math">\(V\subseteq A\text{,}\)</span> as desired.</div> <div class="para" id="p-259">
+<dfn class="terminology">Case: <span class="process-math">\(x\in X-A\)</span></dfn>. By definition of <span class="process-math">\(A\text{,}\)</span> this means <span class="process-math">\(g(x)\ne h(x)\text{.}\)</span> Since <span class="process-math">\(g(x),h(x)\in p^{-1}(\{b\})\text{,}\)</span> there are <span class="process-math">\(\alpha, \alpha'\)</span> such that <span class="process-math">\(g(x)\in V_\alpha\text{,}\)</span> <span class="process-math">\(h(x)\in V_{\alpha'}\)</span> and <span class="process-math">\(V_\alpha\cap V_{\alpha'}=\emptyset\text{.}\)</span> Let <span class="process-math">\(V=g^{-1}(V_{\alpha})\cap h^{-1}(V_{\alpha'})\text{.}\)</span> This is an open set containing <span class="process-math">\(x\text{,}\)</span> and for all <span class="process-math">\(x'\in V\)</span> we have <span class="process-math">\(g(x')\in V_{\alpha}\)</span> and <span class="process-math">\(h(x')\in V_{\alpha'}\text{.}\)</span> Since <span class="process-math">\(V_\alpha\cap V_{\alpha'}=\emptyset\text{,}\)</span> we have <span class="process-math">\(g(x')\ne h(x')\text{.}\)</span> Thus <span class="process-math">\(V\subseteq X-A\text{.}\)</span>
+</div></article></div>
+<article class="theorem theorem-like" id="th_lift_cover"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Lifting to covering spaces.</span>
+</h3>
+<div class="para logical" id="p-260">
+<div class="para">Let <span class="process-math">\(p\colon E\rightarrow B\)</span> be a covering map. Fix <span class="process-math">\(e_0\in E\)</span> and let <span class="process-math">\(b_0=p(e_0)\text{.}\)</span>
+</div>
+<ol class="decimal">
+<li id="li-44"><div class="para" id="p-261">Every path <span class="process-math">\(f\colon I\rightarrow B\)</span> satisfying <span class="process-math">\(f(0)=b_0\)</span> lifts uniquely to a path <span class="process-math">\(\widetilde{f}\colon I\rightarrow E\)</span> satisfying <span class="process-math">\(\widetilde{f}(0)=e_0\text{.}\)</span>
+</div></li>
+<li id="li-45"><div class="para" id="p-262">Every continuous map <span class="process-math">\(F\colon I\times I\rightarrow B\)</span> satisfying <span class="process-math">\(F(0,0)=b_0\)</span> lifts uniquely to a continuous map <span class="process-math">\(\widetilde{F}\colon I\times I\rightarrow E\)</span> satisfying <span class="process-math">\(\widetilde{F}(0,0)=e_0\text{.}\)</span> Furthermore, if <span class="process-math">\(F\)</span> is a path homotopy, then <span class="process-math">\(\widetilde{F}\)</span> is a path homotopy.</div></li>
+<li id="li-46"><div class="para" id="p-263">Let <span class="process-math">\(f,g\in P(B; b_0, b_1)\text{,}\)</span> and let <span class="process-math">\(\widetilde{f}, \widetilde{g}\)</span> the corresponding liftings to <span class="process-math">\(E\)</span> satisfying <span class="process-math">\(\widetilde{f}(0)=\widetilde{g}(0)=e_0\text{.}\)</span> If <span class="process-math">\(f\simeq_p g\text{,}\)</span> then <span class="process-math">\(\widetilde{f}\simeq \widetilde{g}\text{.}\)</span>
+</div></li>
+</ol>
+</div></article><article class="hiddenproof" id="proof-14"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-14"><h3 class="heading"><span class="title">Proof of (1).</span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-14"><article class="hiddenproof"> <div class="para" id="p-264">Uniqueness of the lifting follows from <a href="" class="xref" data-knowl="./knowl/lemma_unique_lift.html" title="Lemma 1.4.2: Uniqueness of liftings">Lemma 1.4.2</a>. We now prove that there is such a lifting.</div> <div class="para logical" id="p-265">
+<div class="para">Let <span class="process-math">\(\{U_\alpha\}_{\alpha\in I}\)</span> be a cover of <span class="process-math">\(B\)</span> by open sets evenly covered by <span class="process-math">\(p\text{.}\)</span> Since <span class="process-math">\(\{f^{-1}(U_\alpha)\}_{\alpha\in I}\)</span> is an open cover of the compact metric space <span class="process-math">\(I\text{,}\)</span> the existence of a <a href="" class="xref" data-knowl="./knowl/d_Lebesgue_number.html" title="Definition 2.16.6: Lebesgue number">Lebesgue number</a> ensures that we can find a subdivision of <span class="process-math">\(I\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/d_Lebesgue_number.html">
+\begin{equation*}
+s_0=0&lt; s_1&lt; \cdots &lt; s_n=1 
+\end{equation*}
+</div>
+<div class="para">that is fine enough to ensure that for all <span class="process-math">\(1\leq k\leq n\text{,}\)</span> we have <span class="process-math">\(f([s_{k-1}, s_k])\subseteq U_{\alpha_k}\)</span> for some <span class="process-math">\(\alpha_k\in I\text{.}\)</span>
+</div>
+</div> <div class="para" id="p-266">We now show by induction that for all <span class="process-math">\(0\leq k\leq n\text{,}\)</span> the restriction <span class="process-math">\(f\vert_{[0,s_{k}]}\)</span> has a lifting <span class="process-math">\(\widetilde{f}_k\colon [0,s_k]\rightarrow E\)</span> satisfying <span class="process-math">\(\widetilde{f}_k(0)=e_0\text{.}\)</span> It will follow that <span class="process-math">\(\widetilde{f}=\widetilde{f}_n\colon [0,1]\rightarrow E\)</span> is the lifting we are after.</div> <div class="para" id="p-267">
+<dfn class="terminology">Base case: <span class="process-math">\(k=0\)</span></dfn>. The function <span class="process-math">\(\widetilde{f}_0\colon \{0\}\rightarrow E\text{,}\)</span> defined as <span class="process-math">\(\widetilde{f}_0(0)=e_0\)</span> is a lifting of <span class="process-math">\(f_0\text{.}\)</span>
+</div> <div class="para logical" id="p-268">
+<div class="para">
+<dfn class="terminology">Induction case</dfn>. Assume <span class="process-math">\(\widetilde{f}_k\colon [0,s_k]\rightarrow E\)</span> is a lifting of <span class="process-math">\(f\vert_{[0,s_k]}\)</span> satisfying <span class="process-math">\(\widetilde{f}_k(0)=e_0\text{.}\)</span> Recall that we have <span class="process-math">\(f([s_k, s_{k+1}])\subseteq U\)</span> for some open set evenly covered by <span class="process-math">\(p\text{.}\)</span> Let <span class="process-math">\(p^{-1}(U)=\bigcup_{\beta\in J} V_{\beta}\text{.}\)</span> Since <span class="process-math">\(\widetilde{f}_k(s_k)\in p^{-1}(U)\text{,}\)</span> there is a unique slice <span class="process-math">\(V=V_\beta\)</span> in this partition containing <span class="process-math">\(\widetilde{f}_k(s_k)\text{.}\)</span> Since <span class="process-math">\(p\vert_V\)</span> is a homeomorphism, we can define a continuous function <span class="process-math">\(g\colon [s_k, s_{k+1}]\colon V\)</span> as <span class="process-math">\(g=(p\vert_V)^{-1}\circ f\text{.}\)</span> Since <span class="process-math">\(p\)</span> is 1-1 on <span class="process-math">\(V\)</span> and since <span class="process-math">\(p(\widetilde{f}_k(s_k))=p(g(s_k))=f(s_k)\text{,}\)</span> we have <span class="process-math">\(\widetilde{f}_k(s_k)=g(s_k)\text{.}\)</span> By the closed pasting lemma, the function <span class="process-math">\(\widetilde{f}_{k+1}\colon [0,s_{k+1}]\rightarrow E\)</span> defined as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\widetilde{f}_{k+1}(s)=\begin{cases}
+\widetilde{f}_k(s)\amp \text{if } s\in [0,s_{k}]\\
+g(s) \amp \text{if } s\in [s_k, s_{k+1}]
+\end{cases}
+\end{equation*}
+</div>
+<div class="para">is continuous. That <span class="process-math">\(\widetilde{f}_{k+1}\)</span> is a lifting of <span class="process-math">\(f\vert_{[0,s_{k+1}]}\)</span> satisfying <span class="process-math">\(\widetilde{f}_{k+1}(0)=e_0\)</span> follows from the assumed properties of <span class="process-math">\(\widetilde{f}_k\)</span> and the definition of <span class="process-math">\(g\)</span> as <span class="process-math">\((p\vert_V)^{-1}\circ f\text{.}\)</span>
+</div>
+</div></article></div>
+<article class="hiddenproof" id="proof-15"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-15"><h3 class="heading"><span class="title">Proof of (2).</span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-15"><article class="hiddenproof"> <div class="para" id="p-269">The argument here is essentially isomorphic to the one given above, though some minor subtleties creep in due to the slightly more complex domain in play (<span class="process-math">\(I\times I\)</span> as opposed to <span class="process-math">\(I\)</span>). Note first that once again the uniqueness property described follows immediately from <a href="" class="xref" data-knowl="./knowl/lemma_unique_lift.html" title="Lemma 1.4.2: Uniqueness of liftings">Lemma 1.4.2</a>.</div> <div class="para logical" id="p-270">
+<div class="para">Let <span class="process-math">\(\{U_{\alpha}\}_{\alpha\in I}\)</span> be a cover of <span class="process-math">\(B\)</span> by open sets evenly covered by <span class="process-math">\(p\text{.}\)</span> Since <span class="process-math">\(I\times I\)</span> is compact, the open cover <span class="process-math">\(\{F^{-1}(U_{\alpha)\}_{\alpha\in I}\)</span> has a <a href="" class="xref" data-knowl="./knowl/d_Lebesgue_number.html" title="Definition 2.16.6: Lebesgue number">Lebesgue number</a> <span class="process-math">\(\delta\text{.}\)</span> Pick a subdivision of <span class="process-math">\(I\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/d_Lebesgue_number.html">
+\begin{equation*}
+s_0=0&lt; s_1&lt; \cdots &lt; s_n=1 
+\end{equation*}
+</div>
+<div class="para">fine enough so that the diameter of each subrectangle <span class="process-math">\(R_{k,l}=[s_{k-1}, s_k]\times [s_{l-1}, s_{l}]\)</span> in the resulting subdivision of <span class="process-math">\(I\times I\)</span> is less than <span class="process-math">\(\delta\text{.}\)</span> It follows that for all <span class="process-math">\(1\leq k,l\leq n\)</span> we have <span class="process-math">\(F(R_{k,l})\subseteq U_\alpha\)</span> for some <span class="process-math">\(\alpha\in I\text{.}\)</span>
+</div>
+</div> <div class="para" id="p-271">We now endeavor to build a lifting of <span class="process-math">\(F\)</span> subrectangle by subrectangle, from the bottom row of subrectangles to the top, working from left to right along each row. In more detail for each pair <span class="process-math">\(1\leq k,l\leq n\)</span> let the region <span class="process-math">\(A_{k,l}\)</span> be the union of the rectangle <span class="process-math">\(R_{k,l}\)</span> along with all rectangles <span class="process-math">\(R_{i,j}\)</span> to the left or below it.  We will show by induction that for all <span class="process-math">\(1\leq k,l\leq n\)</span> there is a lifting <span class="process-math">\(\widetilde{F}_{k,l}\colon A_{k,l}\rightarrow E\)</span> of <span class="process-math">\(F\vert_{A_{k,l}}\)</span> satisfying <span class="process-math">\(\widetilde{F}_{k,l}(0,0)=e_0\text{.}\)</span> Since <span class="process-math">\(I\times I=A_{n,n}\)</span> the lifting <span class="process-math">\(\widetilde{F}=\widetilde{F}_{n,n}\)</span> gives us what we want.</div> <div class="para" id="p-272">
+<dfn class="terminology">Base case</dfn>. We have <span class="process-math">\(A_{1,1}=R_{1,1}\text{,}\)</span> the lower left corner of <span class="process-math">\(I\times I\text{.}\)</span> By construction, we have <span class="process-math">\(F(R_{1,1})\subseteq U\text{,}\)</span> where <span class="process-math">\(U\)</span> is an open set evenly covered by <span class="process-math">\(p\text{.}\)</span>  Let <span class="process-math">\(p^{-1}(U)=\bigcup_{\beta\in J}V_\beta\)</span> be the corresponding partition into slices, and let <span class="process-math">\(V=V_{\beta}\)</span> be the slice containing <span class="process-math">\(f(0,0)=e_0\text{.}\)</span> Define <span class="process-math">\(\widetilde{f}_{1,1}\colon A_{1,1}=R_{1,1}\rightarrow E\)</span> as <span class="process-math">\(\widetilde{F}_{1,1}=(p\vert_V)^{-1}\circ f\text{.}\)</span> It is easy to see that <span class="process-math">\(p\circ \widetilde{F}_{1,1}(s,t)=F(s,t)\)</span> for all <span class="process-math">\((s,t)\in A_{1,1}=R_{1,1}\text{.}\)</span> Since <span class="process-math">\(p\)</span> is 1-1 on <span class="process-math">\(V\)</span> and <span class="process-math">\(p(\widetilde{F}(0,0))=p(e_0)=b_0\text{,}\)</span> we see that <span class="process-math">\(\widetilde{F}_{1,1}(0,0)=e_0\text{.}\)</span>
+</div> <div class="para" id="p-273">
+<dfn class="terminology">Induction step</dfn>. Pick any pair <span class="process-math">\(1\leq k,l\leq n\)</span> with <span class="process-math">\((k,l)\ne (n,n)\)</span> and assume that <span class="process-math">\(\widetilde{F}_{k,l}\)</span> is a lifting of <span class="process-math">\(F\vert_{A_{k,l}}\)</span> that satisfies <span class="process-math">\(\widetilde{F}_{k,l}(0,0)=e_0\text{.}\)</span> The “next” region in our procedure is either (a) <span class="process-math">\(A_{k+1,l}=A_{k,l}\cup R_{k+1,l}\)</span> if <span class="process-math">\(k\ne n\)</span> (“move to right if you can”), or (b) <span class="process-math">\(A_{1,l+1}=A_{n,l}\cup R_{1,l+1}\)</span> (“move up a row and start at left”). We show in case (a) that we can extend <span class="process-math">\(\widetilde{F}_{k,l}\)</span> to this larger region; the argument for case (b) is very similar.</div> <div class="para logical" id="p-274">
+<div class="para">In case (a) we have <span class="process-math">\(A_{k+1,l}=A_{k,l}\cup R_{k+1,l}\text{.}\)</span> Let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C=A_{k,l}\cap R_{k+1,l}=\{s_k\}\times [s_{l-1},s_l]\cup [s_k,s_{k+1}]\times {s_{l-1}}\text{,}
+\end{equation*}
+</div>
+<div class="para">a connected set formed as the union of the left and bottom edges of <span class="process-math">\(R_{k+1, l}\text{.}\)</span> By construction we have <span class="process-math">\(F(R_{k+1,l})\subseteq U \)</span> for some open set evenly covered by <span class="process-math">\(p\text{.}\)</span> Let <span class="process-math">\(p^{-1}(U)=\bigcup_{\beta\in J} V_{\beta}\)</span> be its partition into slices. Since <span class="process-math">\(C\subseteq A_{k,l}\)</span> and <span class="process-math">\(C\)</span> is <em class="emphasis">connected</em>, we must have <span class="process-math">\(\widetilde{F}_{k,l}(C)\subseteq V_\beta\)</span> for one of the slices <span class="process-math">\(V=V_\beta\text{.}\)</span> (Otherwise we would have a separation of the connected set <span class="process-math">\(\widetilde{F}_{k,l}(C)\text{.}\)</span>) Define <span class="process-math">\(g\colon R_{k+1,l}\rightarrow E\)</span> as <span class="process-math">\(g=(p\vert_V)^{-1}\circ F\text{.}\)</span> Arguments very similar to the ones in the previous proof show that <span class="process-math">\(g\vert_C=\widetilde{F}_{k,l}\vert_C\)</span> and thus the two functions can be pasted together to form the desired lifting <span class="process-math">\(\widetilde{F}_{k+1,l}\)</span> of <span class="process-math">\(F\vert_{A_{k+1,l}}\text{.}\)</span>
+</div>
+</div> <div class="para" id="p-275">Lastly we show that if <span class="process-math">\(F\)</span> is a path homotopy, then <span class="process-math">\(\widetilde{F}\)</span> is a path homotopy. Assume <span class="process-math">\(F(0,t)=b_0\)</span> and <span class="process-math">\(F(1,t)=b_1\)</span> for all <span class="process-math">\(t\in I\text{.}\)</span> We have <span class="process-math">\(\widetilde{F}(0,0)=e_0\in p^{-1}(\{b_0\})\)</span> by assumption; let <span class="process-math">\(e_1=\widetilde{F}(1,0)\in p^{-1}(\{b_1\})\text{.}\)</span> We must show that <span class="process-math">\(\widetilde{F}(0,t)=e_0\)</span> and <span class="process-math">\(\widetilde{F}(1,t)=e_1\)</span> for all <span class="process-math">\(t\in I\text{.}\)</span> Let <span class="process-math">\(H(t)=\widetilde{F}(0,t)\text{.}\)</span> This is a continuous function from <span class="process-math">\(I\)</span> to the preimage <span class="process-math">\(p^{-1}(\{b_0\})\text{.}\)</span> Since its image is connected, and since <span class="process-math">\(p^{-1}(\{b_0\})\)</span> is <em class="emphasis">discrete</em>, this image must be a singleton. Since <span class="process-math">\(H(0)=\widetilde{F}(0,0)=e_0\)</span>We conclude that <span class="process-math">\(H(t)=\widetilde{F}(0,t)=e_0\)</span> for all <span class="process-math">\(t\in I\text{.}\)</span> A similar argument, using <span class="process-math">\(H(t)=\widetilde{F}(1,t)\)</span> shows that <span class="process-math">\(\widetilde{F}(1,t)=e_1\)</span> for all <span class="process-math">\(t\in I\text{.}\)</span>
+</div></article></div>
+<article class="hiddenproof" id="proof-16"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-16"><h3 class="heading"><span class="title">Proof of (3).</span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-16"><article class="hiddenproof"> <div class="para" id="p-276">Assume <span class="process-math">\(f\simeq_p g\)</span> and let <span class="process-math">\(F\colon I\times I\rightarrow B\)</span> be the path homotopy that witnesses this fact. From (2) we know that <span class="process-math">\(F\)</span> lifts uniquely to a path homotopy <span class="process-math">\(\widetilde{F}\colon I\times I\rightarrow B\)</span> satisfying <span class="process-math">\(\widetilde{F}(0,t)=e_0\)</span> for all <span class="process-math">\(t\in I\text{.}\)</span> Since <span class="process-math">\(\widetilde{F}\)</span> is a lifting of <span class="process-math">\(F\text{,}\)</span> we have <span class="process-math">\(p(\widetilde{F}(s,0))=F(s,0)=f(s)\)</span> and <span class="process-math">\(p(\widetilde{F}(s,1))=F(s,1)=g(s)\text{.}\)</span> Thus the paths <span class="process-math">\(\hat{f}(s)=\widetilde{F}(s,0)\)</span> and <span class="process-math">\(\hat{g}(s)=\widetilde{F}(s,1)\)</span> are liftings of <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> to <span class="process-math">\(E\text{.}\)</span> Since <span class="process-math">\(\hat{f}(0)=\widetilde{F}(0,0)=e_0\)</span> and <span class="process-math">\(\hat{g}(0)=\widetilde{F}(0,1)=e_0\text{,}\)</span> we conclude from the uniqueness property of liftings that <span class="process-math">\(\hat{f}(s)=\widetilde{F}(s,0)=\widetilde{f}(s)\)</span> and <span class="process-math">\(\hat{g}(s)=\widetilde{F}(s,1)=g(s)\text{,}\)</span> as desired.</div></article></div>
+<article class="definition definition-like" id="d_lifting_correspondence"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.4.4</span><span class="period">.</span><span class="space"> </span><span class="title">Lifting correspondence.</span>
+</h3> <div class="para logical" id="p-277">
+<div class="para">Let <span class="process-math">\(p\colon E\rightarrow B\)</span> be a covering map. Fix <span class="process-math">\(e_0\in E\)</span> and let <span class="process-math">\(b_0=p(e_0)\text{.}\)</span> The function</div>
+<div class="displaymath process-math" id="md-49">
+\begin{align*}
+\phi\colon \pi_1(B,b_0) \amp \rightarrow p^{-1}(\{b_0\})\\
+[f]  \amp \mapsto \widetilde{f}(1) \text{,}
+\end{align*}
+</div>
+<div class="para">where <span class="process-math">\(\widetilde{f}\)</span> is the unique lifting of <span class="process-math">\(f\)</span> to <span class="process-math">\(E\)</span> satisfying <span class="process-math">\(\widetilde{f}(0)=e_0\text{,}\)</span> is called the <dfn class="terminology">lifting correspondence</dfn> arising from the covering <span class="process-math">\(p\)</span> and choice of <span class="process-math">\(e_0\in E\text{.}\)</span>
+</div>
+</div> <article class="hiddenproof" id="proof-17"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-17"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-17"><article class="hiddenproof"><div class="para" id="p-278">The fact that the rule <span class="process-math">\([f] \mapsto \widetilde{f}(1)\)</span> gives rise to a well-defined function of sets follows from <a href="" class="xref" data-knowl="./knowl/th_lift_cover.html" title="Theorem 1.4.3: Lifting to covering spaces">Theorem 1.4.3</a>
+</div> <div class="para" id="p-279">Statement (1) of this theorem guarantees the existence and uniqueness of <span class="process-math">\(\widetilde{f}\text{.}\)</span> Note also that since <span class="process-math">\(p(\widetilde{f}(1))=f(1)=b_0\text{,}\)</span> the value <span class="process-math">\(\widetilde{f}(1)\)</span> is indeed an element of <span class="process-math">\(p^{-1}(\{b_0\})\text{.}\)</span>
+</div> <div class="para" id="p-280">Statement (3) of the theorem ensures that if <span class="process-math">\([f]=[g]\in \pi_1(B,b_0)\text{,}\)</span> then <span class="process-math">\(\widetilde{f}(1)=\widetilde{g}(1)\text{.}\)</span> Indeed, since <span class="process-math">\(f\simeq_p g\text{,}\)</span> we conclude that <span class="process-math">\(\widetilde{f}\simeq_p \widetilde{g}\text{.}\)</span> In particular, being path homotopic, we must have <span class="process-math">\(\widetilde{f}(1)=\widetilde{g}(1)\text{.}\)</span>
+</div></article></div></article><article class="theorem theorem-like" id="th_lifting_correspondence"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.4.5</span><span class="period">.</span><span class="space"> </span><span class="title">Lifting correspondence.</span>
+</h3>
+<div class="para logical" id="p-281">
+<div class="para">Let <span class="process-math">\(p\colon E\rightarrow B\)</span> be a covering map. Fix <span class="process-math">\(e_0\in E\text{,}\)</span> let <span class="process-math">\(b_0=p(e_0)\text{,}\)</span> and let</div>
+<div class="displaymath process-math" id="md-50">
+\begin{align*}
+\phi\colon \pi_1(B,b_0) \amp \rightarrow p^{-1}(\{b_0\})\\
+[f]  \amp \mapsto \widetilde{f}(1) 
+\end{align*}
+</div>
+<div class="para">be the resulting lifting correspondence.</div>
+</div> <ol class="decimal">
+<li id="li-47"><div class="para" id="p-282">The group homomorphism <span class="process-math">\(p_*\colon \pi_1(E,e_0)\hookrightarrow \pi_1(B,b_0)\)</span> is an injection.</div></li>
+<li id="li-48"><div class="para" id="p-283">Let <span class="process-math">\(H=p_*(\pi_1(E,e_0))\text{.}\)</span> We have <span class="process-math">\(\phi([f])=e_0\)</span> if and only if <span class="process-math">\([f]\in H\text{.}\)</span>
+</div></li>
+<li id="li-49"><div class="para logical" id="p-284">
+<div class="para">The lifting correspondence <span class="process-math">\(\phi\)</span> gives rise to an injective map</div>
+<div class="displaymath process-math" id="md-51">
+\begin{align*}
+\overline{\phi}\colon \pi_1(B,b_0)/H \amp \hookrightarrow p^{-1}(b_0)\\
+\overline{[f]} \amp \mapsto \phi([f])\text{.}
+\end{align*}
+</div>
+<div class="para">The map <span class="process-math">\(\overline{\phi}\)</span> is bijective if <span class="process-math">\(E\)</span> is path connected.</div>
+</div></li>
+</ol></article></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="s_covering_spaces.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="c_top_spaces.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org"><div class="name">Authored in PreTeXt</div>
+<div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259 "></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0  472  9732 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496 A 4241 4241  0  0  1  4724  3590 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259 A 4507 4507  0  0  1  4724  9448 "></path><polyline points="5385,4299 4062,8125 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8598,3496 8598,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="850,3496 850,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="4960,9685 4488,9685 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="3070,4582 1889,6141 3070,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="6418,4582 7600,6141 6418,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8976,3590 8976,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732 "></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy"><div class="name">Powered by Runestone</div>
+<img class="logo" title="Powered by Runestone" src="https://runestone.academy/runestone/static/rectangle_badge.png" alt="Powered by Runestone"></a><a class="mathjax-logo" href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a>
+</div>
+</body>
+</html>

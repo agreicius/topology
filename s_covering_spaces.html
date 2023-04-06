@@ -190,7 +190,7 @@ window.MathJax = {
 <span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
 </ol>
 </li>
-</ol></div></button><span class="treebuttons"><a class="previous-button button" href="s_fundamental_group.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="c_algebraic_topology.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="c_top_spaces.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="s_fundamental_group.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="c_algebraic_topology.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="s_coveringmaps_fundgroups.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
 <input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
 </div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
   \newcommand{\Q}{{\mathbb Q}}
@@ -357,6 +357,7 @@ window.MathJax = {
 <li><div class="toc-item"><a href="s_homotopy.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Homotopy</span></a></div></li>
 <li><div class="toc-item"><a href="s_fundamental_group.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Fundamental group</span></a></div></li>
 <li class="active"><div class="toc-item"><a href="s_covering_spaces.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Covering spaces</span></a></div></li>
+<li><div class="toc-item"><a href="s_coveringmaps_fundgroups.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Lifting correspondence</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -474,7 +475,7 @@ p^{-1}(U) \amp = \bigcup_{n\in \Z}(n-1/2, n+1/2)
 <li id="li-39"><div class="para" id="p-234">
 <span class="process-math">\(p\)</span> is a quotient map.</div></li>
 <li id="li-40"><div class="para" id="p-235">If <span class="process-math">\(E\)</span> is connected and <span class="process-math">\(\abs{p^{-1}(\{b_0\})}=k\)</span> for some <span class="process-math">\(b_0\in B\)</span> and <span class="process-math">\(k\in \Z_+\text{,}\)</span> then <span class="process-math">\(\abs{p^{-1}(\{b\})}=k\)</span> for all <span class="process-math">\(b\in B\text{.}\)</span> We call <span class="process-math">\(p\)</span> a <dfn class="terminology"><span class="process-math">\(k\)</span>-fold covering</dfn> in this case.</div></li>
-</ol></article><article class="hiddenproof" id="proof-10"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-10"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-10"><article class="hiddenproof"><div class="para" id="p-236"></div></article></div>
+</ol></article><article class="hiddenproof" id="proof-10"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-10"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-10"><article class="hiddenproof"><div class="para" id="p-236">The proofs of these statements are left as exercises.</div></article></div>
 <article class="example example-like" id="eg_nfold_covering"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.5</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(n\)</span>-fold covering of <span class="process-math">\(S^1\)</span>.</span>
 </h3>
@@ -528,7 +529,7 @@ p^{-1}(U\times U')=\bigcup_{(\alpha,\beta)\in I\times J}V_{\alpha}\times V'_{\be
 </h3> <div class="para" id="p-253">The <dfn class="terminology">figure eight</dfn> is the subpsace of <span class="process-math">\(Y\subseteq T=S^1\times S^1\)</span> defined as <span class="process-math">\(Y=S^1\times \{(1,0)\}\bigcup \{(1,0)\}\times S_1\text{,}\)</span> and let <span class="process-math">\(X=\R\times \Z\cup \Z\times \R\text{,}\)</span> the preimage of <span class="process-math">\(Y\)</span> under the covering map <span class="process-math">\(p\times p\)</span> from <a href="" class="xref" data-knowl="./knowl/eg_cover_torus.html" title="Example 1.3.11: Covering of torus">Example 1.3.11</a>. By <a href="" class="xref" data-knowl="./knowl/th_covering_map_construction.html" title="Theorem 1.3.10: Covering map constructions">Theorem 1.3.10</a>, <span class="process-math">\(p\times p\vert_X\colon X\rightarrow Y\)</span> is a covering map.</div> <figure class="figure figure-like" id="fig_cover_figure8"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/cover_figure8.png" class="contained" alt="A cover of the figure eight"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.3.14<span class="period">.</span></span><span class="space"> </span>A cover of the figure eight</figcaption></figure></article></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="s_fundamental_group.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="c_top_spaces.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+<a class="previous-button button" href="s_fundamental_group.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="s_coveringmaps_fundgroups.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
 </div>
 <div class="ptx-page-footer">

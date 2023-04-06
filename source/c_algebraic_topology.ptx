@@ -3,5 +3,6 @@
   <xi:include  href="s_homotopy.ptx"/>
   <xi:include  href="s_fundamental_group.ptx"/>
   <xi:include  href="s_covering_spaces.ptx"/>
+  <xi:include  href="s_coveringmaps_fundgroups.ptx"/>
 
 </chapter>

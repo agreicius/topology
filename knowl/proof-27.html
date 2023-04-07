@@ -11,18 +11,28 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
+<article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
 <div class="para logical">
-<div class="para">Since <span class="process-math">\(y\in B_\epsilon(x)\text{,}\)</span> we have <span class="process-math">\(d(x,y)&lt; \epsilon\)</span> and hence <span class="process-math">\(\delta=\epsilon-d(x,y)&gt; 0\text{.}\)</span> We claim that <span class="process-math">\(B_\delta(y)\subseteq B_\epsilon(x)\text{.}\)</span> Indeed, we have</div>
+<div class="para">We show that <span class="process-math">\(\mathcal{B}_K\)</span> is a basis, treating each axiom separately.</div>
+<ol class="decimal">
+<li><div class="para">Since by definition <span class="process-math">\(\mathcal{B}_K\)</span> contains all finite open intervals, it clearly covers <span class="process-math">\(\R\text{.}\)</span>
+</div></li>
+<li>
+<div class="para">We claim that in fact given <span class="process-math">\(B_1, B_2\in \mathcal{B}_K\text{,}\)</span> their intersection <span class="process-math">\(B_1\cap B_2\)</span> is either empty or another element of <span class="process-math">\(\mathcal{B}_K\text{.}\)</span> Axiom (2) follows directly from this claim.</div>
+<div class="para logical">
+<div class="para">Why is the claim true? An element of <span class="process-math">\(\mathcal{B}\)</span> is either of the form <span class="process-math">\(I\)</span> or <span class="process-math">\(I-K\text{,}\)</span> where <span class="process-math">\(I=(a,b)\)</span> is an open interval. There are then three different cases describing intersections of two elements, as shown below. Here <span class="process-math">\(I_1, I_2\)</span> denote finite open intervals.</div>
 <div class="displaymath process-math">
 \begin{align*}
-z\in B_\delta(y)\implies d(z,x)\amp\leq d(z,y)+d(y,x)  \amp (\text{triangle ineq.})\\
-\amp &lt; \delta+(\epsilon-\delta)  \\
-\amp = \epsilon\text{.}
+I_1\cap I_2 \amp \\
+(I_1-K)\cap I_2\amp =I_1\cap I_2-K\cap I_2=I_1\cap I_2-K \\
+(I_1-K)\cap (I_2-K) \amp= (I_1-K)\cap I_2 - K\cap (I_2-K)\\
+\amp = I_1\cap I_2-K\text{.}
 \end{align*}
 </div>
-<div class="para">It follows that <span class="process-math">\(z\in B_\epsilon(x)\text{,}\)</span> proving <span class="process-math">\(B_\delta(y)\subseteq B_\epsilon(x)\text{.}\)</span>
+<div class="para">As we have already remarked, <span class="process-math">\(I_1\cap I_2\)</span> is either empty or a finite open interval <span class="process-math">\(I\text{.}\)</span> The claim now follows easily.</div>
 </div>
-</div></article><span class="incontext"><a href="s_metric1.html#proof-27" class="internal">in-context</a></span>
+</li>
+</ol>
+</div></article><span class="incontext"><a href="s_bases_top.html#proof-27" class="internal">in-context</a></span>
 </body>
 </html>

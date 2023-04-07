@@ -12,7 +12,18 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">For each set <span class="process-math">\(X\)</span> describe all subsets <span class="process-math">\(\mathcal{T}\subseteq \mathcal{P}(A)\)</span> that satisfy the axioms of <a href="" class="xref" data-knowl="./knowl/d_topology.html" title="Definition 2.1.1: Topological space">Definition 2.1.1</a>, and hence make <span class="process-math">\((X,\mathcal{T})\)</span> a topological space.</div>
+<div class="para logical">
+<div class="para">Assume <span class="process-math">\(U_i\in \mathcal{T}\)</span> for all <span class="process-math">\(i\in I\text{,}\)</span> and let <span class="process-math">\(U=\bigcup_{i\in I}U_i\text{.}\)</span> We have</div>
+<div class="displaymath process-math">
+\begin{align*}
+x\in U \amp \implies x\in U_i \text{ for some } i\in I\\
+\amp \implies (x-\epsilon, x+\epsilon)\subseteq U_i \text{ for some } i\in I, \epsilon &gt; 0\\
+\amp \implies (x-\epsilon, x+\epsilon)\subseteq U \text{ for some } i\in I, \epsilon &gt; 0 \text{.}
+\end{align*}
+</div>
+<div class="para">This shows <span class="process-math">\(U\)</span> satisfies the defining property of <span class="process-math">\(\mathcal{T}\text{,}\)</span> and hence <span class="process-math">\(U\in \mathcal{T}\text{.}\)</span>
+</div>
+</div>
 <span class="incontext"><a href="s_top_spaces.html#p-304" class="internal">in-context</a></span>
 </body>
 </html>

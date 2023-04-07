@@ -10,21 +10,26 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para">We treat each axiom separately.</div> <ol class="decimal">
-<li><div class="para">We must show <span class="process-math">\(\emptyset, X\in \mathcal{T}\text{.}\)</span> That <span class="process-math">\(\emptyset\in \mathcal{T}\)</span> is specified explicitly in the definition of <span class="process-math">\(\mathcal{T}\text{.}\)</span> Next since <span class="process-math">\(X^c=\emptyset\)</span> is finite, the set <span class="process-math">\(X\)</span> is cofinite in <span class="process-math">\(X\text{,}\)</span> and hence an element of <span class="process-math">\(\mathcal{T}\text{.}\)</span>
-</div></li>
-<li><div class="para logical">
-<div class="para">Let <span class="process-math">\(\{U_i\}_{i\in I}\)</span> be any collection of elements of <span class="process-math">\(\mathcal{T}\text{:}\)</span> i.e., for all <span class="process-math">\(i\in I\)</span> we have <span class="process-math">\(U_i=\emptyset\)</span> or <span class="process-math">\(U_i\)</span> is cofinite in <span class="process-math">\(X\text{.}\)</span> Let <span class="process-math">\(U=\bigcup_{i\in I}U_i\text{.}\)</span> If <span class="process-math">\(U_i=\emptyset\)</span> for all <span class="process-math">\(i\in I\text{,}\)</span> then <span class="process-math">\(U=\emptyset\in \mathcal{T}\text{.}\)</span> Otherwise there is an <span class="process-math">\(i_0\in I\)</span> such that <span class="process-math">\(U_{i_0}\)</span> is nonempty, hence cofinite. We have</div>
+<body class="ignore-math"><article class="hiddenproof"> <div class="para">First observe that if <span class="process-math">\(E\)</span> is path connected, then given any <span class="process-math">\(e'\in p^{-1}(\{b_0\}\text{,}\)</span> there is a path <span class="process-math">\(f\in P(E;e_0,e')\text{.}\)</span> Since <span class="process-math">\(f=\widetilde{p\circ f}\text{,}\)</span> we have <span class="process-math">\(\phi([p\circ f])=\widetilde{p\circ f}(1)=f(1)=e'\text{,}\)</span> and thus <span class="process-math">\(e'\in \im \phi\text{.}\)</span> We conclude that <span class="process-math">\(\phi\)</span> (and <span class="process-math">\(\overline{\phi}\)</span>) are surjective in this case.</div> <div class="para logical">
+<div class="para">Next, we show that if <span class="process-math">\(\phi([f])=\phi([g])\text{,}\)</span> then <span class="process-math">\([f]\in H*[g]\text{.}\)</span> Let <span class="process-math">\(\widetilde{f}, \widetilde{g}\)</span> be the unique liftings of <span class="process-math">\(f, g\)</span> satisfying <span class="process-math">\(\widetilde{f}(0)=\widetilde{g}(0)=e_0\text{.}\)</span> Since <span class="process-math">\(\phi([f])=\widetilde{f}(1)\)</span> and <span class="process-math">\(\phi([g])=\widetilde{g}(1)\text{,}\)</span> the assumption <span class="process-math">\(\phi([f])=\phi([g])\)</span> is equivalent to <span class="process-math">\(\widetilde{f}(1)=\widetilde{g}(1)=e_1\)</span> for some common element <span class="process-math">\(e_1\in p^{-1}(\{b_0\}\text{.}\)</span> Let <span class="process-math">\(\overline{\widetilde{g}}\)</span> be the reverse of <span class="process-math">\(\widetilde{g}\text{.}\)</span> Since this begins where <span class="process-math">\(\widetilde{f}\)</span> ends, we can take the path product <span class="process-math">\(\widetilde{f}*\overline{\widetilde{g}}\text{,}\)</span> which is an element of <span class="process-math">\(P(E; e_0,e_0)\text{.}\)</span>  Now we have</div>
 <div class="displaymath process-math">
 \begin{align*}
-U^c \amp = \left( \bigcup_{i\in I}U_i\right)^c \\
-\amp = \bigcap_{i\in I} U_i^c  \amp (\text{DeMorgan's law})\\
-\amp \subseteq U_{i_0}^c\text{.}
+h\amp = p\circ (\widetilde{f}*\overline{\widetilde{g}}) \\
+\amp = (p\circ\widetilde{f})*(p\circ\overline{\widetilde{g}}) \\
+\amp = f*\overline{g}\text{.}
 \end{align*}
 </div>
-<div class="para">Since <span class="process-math">\(U_{i_0}^c\)</span> is finite, it follows that <span class="process-math">\(U^c\)</span> is finite. It follows that <span class="process-math">\(U\)</span> is cofinite, and hence an element of <span class="process-math">\(\mathcal{T}\)</span> as desired.</div>
-</div></li>
-<li><div class="para">Let <span class="process-math">\(U_1, U_2\in \mathcal{T}\text{,}\)</span> and let <span class="process-math">\(U=U_1\cap U_2\text{.}\)</span> We have <span class="process-math">\(U^c=U_1^c\cap U_2^c\text{.}\)</span> Since <span class="process-math">\(U_i^c\)</span> is either finite or equal to all of <span class="process-math">\(X\)</span> for <span class="process-math">\(i=1,2\text{,}\)</span> it is clear that <span class="process-math">\(U^c\)</span> is either finite or equal to <span class="process-math">\(X\text{.}\)</span> It follows that <span class="process-math">\(U\)</span> is either cofinite or empty, and hence an element of <span class="process-math">\(\mathcal{T}\text{.}\)</span>
-</div></li>
-</ol></article></body>
+<div class="para">It follows that <span class="process-math">\([h]=p_*([\widetilde{f}*\overline{\widetilde{g}}])\in H\text{.}\)</span> Since <span class="process-math">\([h]=[f]*[\overline{g}]=[f]*[g]^{-1}\text{,}\)</span> we have <span class="process-math">\([f]=[h]*[g]\in H*[g]\text{,}\)</span> as desired.</div>
+</div> <div class="para logical">
+<div class="para">Lastly, assume <span class="process-math">\([f]\in H*[g]\text{,}\)</span> in which case <span class="process-math">\([f]=[h]*[g]=[h*g]\)</span> for some <span class="process-math">\(h=p\circ q\text{,}\)</span> where <span class="process-math">\(q\in P(E; e_0, e_0)\text{.}\)</span> We see easily that <span class="process-math">\(q*g\)</span> is well-defined (in terms of the path product) and the usual uniqueness argument shows <span class="process-math">\(q*g=\widetilde{h*g}\text{.}\)</span> We conclude that</div>
+<div class="displaymath process-math">
+\begin{align*}
+\phi([f]) \amp = \phi([h*g])\\
+\amp = \widetilde{h*g}(1)\\
+\amp =q*g(1)\\
+\amp =g(1)\text{,}
+\end{align*}
+</div>
+<div class="para">as desired.</div>
+</div></article></body>
 </html>

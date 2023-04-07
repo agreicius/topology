@@ -12,7 +12,16 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Observe first that basis elements are open in the topology <span class="process-math">\(\mathcal{T}\text{,}\)</span> essenitally by definition: i.e., we have <span class="process-math">\(\mathcal{B}\subseteq \mathcal{T}\text{.}\)</span> The forward implication <span class="process-math">\((\implies)\)</span> follows easily, since <span class="process-math">\(\mathcal{T}\subseteq \mathcal{T}'\)</span> and <span class="process-math">\(\mathcal{B}\subseteq \mathcal{T}\)</span> implies <span class="process-math">\(\mathcal{B}\subseteq \mathcal{T}'\text{.}\)</span>
+<div class="para logical">
+<div class="para">In plain English, a union of unions of elements of <span class="process-math">\(\mathcal{B}\)</span> is a union of elements of <span class="process-math">\(\mathcal{B}\text{.}\)</span> More rigorously, assume we have a collection of <span class="process-math">\(U_i\in \mathcal{T}\text{.}\)</span> By definition, for each <span class="process-math">\(i\in I\)</span> we have <span class="process-math">\(U_i=\bigcup_{j\in J_i} B_{i,j}\text{,}\)</span> where <span class="process-math">\(B_{i,j}\in \mathcal{B}\)</span> for each <span class="process-math">\(j\in J\text{.}\)</span> Thus</div>
+<div class="displaymath process-math">
+\begin{align*}
+\bigcup_{i\in I} U_i \amp = \bigcup_{i\in I}\bigcup_{j\in J_i} B_{i,j} \\
+\amp \bigcup_{(i,j)\in K} B_{i,j} \text{,}
+\end{align*}
+</div>
+<div class="para">where <span class="process-math">\(K\)</span> is the set of all pairs of the form <span class="process-math">\((i,j)\)</span> for <span class="process-math">\(i\in I\)</span> and <span class="process-math">\(j\in I_j\text{.}\)</span> Thus <span class="process-math">\(U=\bigcup_{i\in I} U_i\)</span> is a union of basis elements, and hence an element of <span class="process-math">\(\mathcal{T}\text{.}\)</span>
+</div>
 </div>
 <span class="incontext"><a href="s_bases_top.html#p-349" class="internal">in-context</a></span>
 </body>

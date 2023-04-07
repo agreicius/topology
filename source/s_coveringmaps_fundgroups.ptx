@@ -66,7 +66,7 @@
             </li>
             <li>
                 <p>
-                    Let <m>f,g\in P(B; b_0, b_1)</m>, and let <m>\widetilde{f}, \widetilde{g}</m> the corresponding liftings to <m>E</m> satisfying <m>\widetilde{f}(0)=\widetilde{g}(0)=e_0</m>. If <m>f\simeq_p g</m>, then <m>\widetilde{f}\simeq \widetilde{g}</m>.  
+                    Let <m>f,g\in P(B; b_0, b_1)</m>, and let <m>\widetilde{f}, \widetilde{g}</m> the corresponding liftings to <m>E</m> satisfying <m>\widetilde{f}(0)=\widetilde{g}(0)=e_0</m>. If <m>f\simeq_p g</m>, then <m>\widetilde{f}\simeq_p \widetilde{g}</m>.  
                 </p>
             </li>
            </ol> 
@@ -91,7 +91,7 @@
             <term>Base case: <m>k=0</m></term>. The function <m>\widetilde{f}_0\colon \{0\}\rightarrow E</m>, defined as <m>\widetilde{f}_0(0)=e_0</m> is a lifting of <m>f_0</m>. 
         </p>
         <p>
-            <term>Induction case</term>. Assume <m>\widetilde{f}_k\colon [0,s_k]\rightarrow E</m> is a lifting of <m>f\vert_{[0,s_k]}</m> satisfying <m>\widetilde{f}_k(0)=e_0</m>. Recall that we have <m>f([s_k, s_{k+1}])\subseteq U</m> for some open set evenly covered by <m>p</m>. Let <m>p^{-1}(U)=\bigcup_{\beta\in J} V_{\beta}</m>. Since <m>\widetilde{f}_k(s_k)\in p^{-1}(U)</m>, there is a unique slice <m>V=V_\beta</m> in this partition containing <m>\widetilde{f}_k(s_k)</m>. Since <m>p\vert_V</m> is a homeomorphism, we can define a continuous function <m>g\colon [s_k, s_{k+1}]\colon V</m> as <m>g=(p\vert_V)^{-1}\circ f</m>. Since <m>p</m> is 1-1 on <m>V</m> and since <m>p(\widetilde{f}_k(s_k))=p(g(s_k))=f(s_k)</m>, we have <m>\widetilde{f}_k(s_k)=g(s_k)</m>. By the closed pasting lemma, the function <m>\widetilde{f}_{k+1}\colon [0,s_{k+1}]\rightarrow E</m> defined as 
+            <term>Induction step</term>. Assume <m>\widetilde{f}_k\colon [0,s_k]\rightarrow E</m> is a lifting of <m>f\vert_{[0,s_k]}</m> satisfying <m>\widetilde{f}_k(0)=e_0</m>. Recall that we have <m>f([s_k, s_{k+1}])\subseteq U</m> for some open set evenly covered by <m>p</m>. Let <m>p^{-1}(U)=\bigcup_{\beta\in J} V_{\beta}</m>. Since <m>\widetilde{f}_k(s_k)\in p^{-1}(U)</m>, there is a unique slice <m>V=V_\beta</m> in this partition containing <m>\widetilde{f}_k(s_k)</m>. Since <m>p\vert_V</m> is a homeomorphism, we can define a continuous function <m>g\colon [s_k, s_{k+1}]\colon V</m> as <m>g=(p\vert_V)^{-1}\circ f</m>. Since <m>p</m> is 1-1 on <m>V</m> and since <m>p(\widetilde{f}_k(s_k))=p(g(s_k))=f(s_k)</m>, we have <m>\widetilde{f}_k(s_k)=g(s_k)</m>. By the closed pasting lemma, the function <m>\widetilde{f}_{k+1}\colon [0,s_{k+1}]\rightarrow E</m> defined as 
             <me>
                 \widetilde{f}_{k+1}(s)=\begin{cases}
                 \widetilde{f}_k(s)\amp \text{if } s\in [0,s_{k}]\\
@@ -185,21 +185,66 @@
             </li>
             <li>
                 <p>
-                    Let <m>H=p_*(\pi_1(E,e_0))</m>. We have <m>\phi([f])=e_0</m> if and only if <m>[f]\in H</m>. 
+                    Let <m>H=p_*(\pi_1(E,e_0))=\im p_*</m>. We have <m>\phi([f])=e_0</m> if and only if <m>[f]\in H</m>. 
                 </p>
             </li>
             <li>
                 <p>
                     The lifting correspondence <m>\phi</m> gives rise to an injective map 
                     <md>
-                        <mrow>\overline{\phi}\colon \pi_1(B,b_0)/H \amp \hookrightarrow p^{-1}(b_0)</mrow>
+                        <mrow>\overline{\phi}\colon H\backslash\pi_1(B,b_0) \amp \hookrightarrow p^{-1}(b_0)</mrow>
                         <mrow>\overline{[f]} \amp \mapsto \phi([f])</mrow>
                     </md>.
-                    The map <m>\overline{\phi}</m> is bijective if <m>E</m> is path connected. 
+                    Here <m>H\backslash \pi_1(B,b_0)</m> is the set of all <em>right cosets</em> of <m>H</m>: <ie/>, 
+                    <me>H\backslash \pi_1(B,b_0)=\{H*[f]\colon [f]\in \pi_1(B,b_0)\}</me>. 
+                    Furthermore the map <m>\overline{\phi}</m> is bijective if <m>E</m> is path connected. 
                 </p>
             </li>
         </ol>
     </statement>
+    <proof>
+        <title>Proof of (1)</title>
+        <p>
+            Since <m>p^*</m> is a group homomorphism, to show it is injective it suffices to show that <m>\ker p^*=\{e\}=\{[e_{e_0}]\}</m>. (Recall that the identity element of a fundamental group <m>\pi_1(X,x_0)</m> is <m>e=[e_{x_0}]</m>.) To this end, suppose <m>[f]\in \pi_1(E,e_0)</m> satisfies <m>p_*([f])=[\pi\circ f]=[e_{b_0}]\in \pi_1(B,b_0)</m>. It follows from the uniqueness property of liftings that  <m>f=\widetilde{p\circ f}</m> and <m>e_{e_0}=\widetilde{e_{b_0}}</m>. Since <m>p\circ f\simeq_p e_{b_{0}</m>, it follows from (3) of <xref ref="th_lift_cover"/> that <m>f\simeq_p e_{e_0}</m>, and thus <m>[f]=[e_{e_0}]</m>. This proves that if <m>p_*([f])=e </m>, then <m>[f]=e</m>: <ie/>, <m>\ker p_*=\{e\}</m>. 
+        </p>
+    </proof>
+    <proof>
+        <title>Proof of (2)</title>
+        <p>
+            We prove both implications separately. 
+        </p>
+        <p>
+            <term>Implication: <m>\Rightarrow</m></term>. Assume <m>\phi([f])=e_0</m>. By definition of <m>\phi</m> this means the unique lifting <m>\widetilde{f}</m> satisfying <m>\widetilde{f}(0)=e_0</m> also satisfies <m>\widetilde{f}(1)=e_0</m>. Thus <m>\widetilde{f}\in P(E; e_0,e_0)</m>, and we have <m>p_*[\widetilde{f}]=[p\circ \widetilde{f}]=[f]</m>. Thus <m>[f]\in \im p_*=H</m>. 
+        </p>
+        <p>
+            <term>Implication: <m>\Leftarrow</m></term>. If <m>[f]\in \im p_*</m>, then <m>[f]=[p\circ g]</m> for some <m>g\in P(E; e_0, e_0)</m>. As argued in (1), we have <m>g=\widetilde{p\circ g}</m>. Thus <m>\phi([f])=\phi([p\circ g])=g(1)=e_0</m>. 
+        </p>
+    </proof>
+    <proof>
+        <title>Proof of (3)</title>
+        <p>
+            First observe that if <m>E</m> is path connected, then given any <m>e'\in p^{-1}(\{b_0\}</m>, there is a path <m>f\in P(E;e_0,e')</m>. Since <m>f=\widetilde{p\circ f}</m>, we have <m>\phi([p\circ f])=\widetilde{p\circ f}(1)=f(1)=e'</m>, and thus <m>e'\in \im \phi</m>. We conclude that <m>\phi</m> (and <m>\overline{\phi}</m>) are surjective in this case. 
+        </p>
+        <p>
+            Next, we show that if <m>\phi([f])=\phi([g])</m>, then <m>[f]\in H*[g]</m>. Let <m>\widetilde{f}, \widetilde{g}</m> be the unique liftings of <m>f, g</m> satisfying <m>\widetilde{f}(0)=\widetilde{g}(0)=e_0</m>. Since <m>\phi([f])=\widetilde{f}(1)</m> and <m>\phi([g])=\widetilde{g}(1)</m>, the assumption <m>\phi([f])=\phi([g])</m> is equivalent to <m>\widetilde{f}(1)=\widetilde{g}(1)=e_1</m> for some common element <m>e_1\in p^{-1}(\{b_0\}</m>. Let <m>\overline{\widetilde{g}}</m> be the reverse of <m>\widetilde{g}</m>. Since this begins where <m>\widetilde{f}</m> ends, we can take the path product <m>\widetilde{f}*\overline{\widetilde{g}}</m>, which is an element of <m>P(E; e_0,e_0)</m>.  Now we have 
+            <md>
+                <mrow> h\amp = p\circ (\widetilde{f}*\overline{\widetilde{g}}) </mrow>
+                <mrow> \amp = (p\circ\widetilde{f})*(p\circ\overline{\widetilde{g}}) </mrow>
+                <mrow> \amp = f*\overline{g}</mrow>
+            </md>.
+            It follows that <m>[h]=p_*([\widetilde{f}*\overline{\widetilde{g}}])\in H</m>. Since <m>[h]=[f]*[\overline{g}]=[f]*[g]^{-1}</m>, we have <m>[f]=[h]*[g]\in H*[g]</m>, as desired. 
+        </p>
+        <p>
+            Lastly, assume <m>[f]\in H*[g]</m>, in which case <m>[f]=[h]*[g]=[h*g]</m> for some <m>h=p\circ q</m>, where <m>q\in P(E; e_0, e_0)</m>. We see easily that <m>q*g</m> is well-defined (in terms of the path product) and the usual uniqueness argument shows <m>q*g=\widetilde{h*g}</m>. We conclude that 
+            <md>
+                <mrow>\phi([f]) \amp = \phi([h*g])</mrow>
+                <mrow> \amp = \widetilde{h*g}(1)</mrow>
+                <mrow> \amp =q*g(1)</mrow>
+                <mrow> \amp =g(1)</mrow>        
+            </md>,
+            as desired. 
+        </p>
+    </proof>
 </theorem>
 
 

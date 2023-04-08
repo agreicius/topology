@@ -12,19 +12,34 @@
 </head>
 <body class="ignore-math">
 <article class="example example-like"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Some small topological spaces.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.4.6</span><span class="period">.</span><span class="space"> </span><span class="title">Fundamental group of <span class="process-math">\(S^1\)</span>.</span>
 </h3>
-<div class="para">For each set <span class="process-math">\(X\)</span> describe all subsets <span class="process-math">\(\mathcal{T}\subseteq \mathcal{P}(A)\)</span> that satisfy the axioms of <a href="" class="xref" data-knowl="./knowl/d_topology.html" title="Definition 2.1.1: Topological space">Definition 2.1.1</a>, and hence make <span class="process-math">\((X,\mathcal{T})\)</span> a topological space.</div> <ol class="decimal">
-<li>
-<span class="heading"><span class="title">Empty set.</span></span><div class="para"><span class="process-math">\(\displaystyle X=\emptyset\)</span></div>
-</li>
-<li>
-<span class="heading"><span class="title">Singleton.</span></span><div class="para"><span class="process-math">\(\displaystyle X=\{a\}\)</span></div>
-</li>
-<li>
-<span class="heading"><span class="title">Doubleton.</span></span><div class="para"><span class="process-math">\(\displaystyle X=\{a,7\}\)</span></div>
-</li>
-</ol>
-<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-13-hidden.html" title="Solution 2.1.3.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><span class="incontext"><a href="s_top_spaces.html#example-24" class="internal">in-context</a></span>
+<div class="para">Consider the covering <span class="process-math">\(p\colon \R\rightarrow S^1\)</span> defined as <span class="process-math">\(p(s)=(\cos 2\pi s, \sin 2\pi s)\text{.}\)</span> Let <span class="process-math">\(Q=(1,0)\)</span> and consider the map <span class="process-math">\(p_*\colon \pi_1(\R, 0)\rightarrow \pi_1(S^1, Q)\text{.}\)</span> Since <span class="process-math">\(\R\)</span> is path connected, and since <span class="process-math">\(\pi_1(\R, 0)\)</span> is trivial, we have <span class="process-math">\(H=p_*(\pi_1(X,0))=\{e\}\text{,}\)</span> and it follows from (3) of <a href="" class="xref" data-knowl="./knowl/th_lifting_correspondence.html" title="Theorem 1.4.5: Lifting correspondence">Theorem 1.4.5</a> that the lifting correspondence <span class="process-math">\(\phi\colon \pi_1(S^1, Q)\rightarrow p^{-1}(Q)\)</span> is a bijection onto <span class="process-math">\(p^{-1}(Q)=\Z\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">We will show that <span class="process-math">\(\phi\)</span> is in fact a group homomorphism hence an isomorphism, but before we do, it is worth making the bijective correspondence between <span class="process-math">\(\pi_1(S^1, Q)\)</span> and <span class="process-math">\(\Z\)</span> more explicit. Consider the family of loops <span class="process-math">\(\{f_n\}_{n\in \Z}\)</span> defined as <span class="process-math">\(f_n(s)=(\cos 2\pi n s, \sin 2\pi n s)\text{.}\)</span> Note that <span class="process-math">\(f_n\)</span> is a path that traverses the circle <span class="process-math">\(n\)</span> complete times traveling counterclockwise if <span class="process-math">\(n&gt; 0\)</span> and clockwise if <span class="process-math">\(n&lt; 0\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/th_lift_cover.html" title="Theorem 1.4.3: Lifting to covering spaces">Theorem 1.4.3</a> the paths <span class="process-math">\(f_n\)</span> lift uniquely to paths <span class="process-math">\(\widetilde{f}_n\)</span> satisfying <span class="process-math">\(\widetilde{f}_n(0)=0\text{.}\)</span> We see easily that <span class="process-math">\(s\mapsto = ns\)</span> is such a lifting for each <span class="process-math">\(n\text{;}\)</span> uniqueness then implies that <span class="process-math">\(\widetilde{f}_n(s)=ns\)</span> for all <span class="process-math">\(n\in \Z\text{.}\)</span> The liftings <span class="process-math">\(\widetilde{f}_n\)</span> are just the usual straight line segment parametrizations from <span class="process-math">\(0\)</span> to <span class="process-math">\(n\text{,}\)</span> and thus the lifting correspondence applied to <span class="process-math">\([f_n]\)</span> is <span class="process-math">\(\phi([f_n])=\widetilde{f}_n(1)=n\text{.}\)</span> The bijective nature of <span class="process-math">\(\phi\)</span> now implies that <span class="process-math">\([f_m]\ne [f_n]\)</span> for<span class="process-math">\(m\ne n\text{,}\)</span> and that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_lift_cover.html">
+\begin{equation*}
+\pi_1(S^1, Q)=\{[f_n]\colon n\in \Z\}\text{.}
+\end{equation*}
+</div>
+<div class="para">In other words every loop in <span class="process-math">\(S^1\)</span> is path homotopic to <span class="process-math">\(f_n\)</span> for a unique choice of <span class="process-math">\(n\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">To show <span class="process-math">\(\phi\)</span> is a group homomorphism it now suffices to show that <span class="process-math">\(\phi([f_m]*[f_n])=\phi([f_m])+\phi([f_n])=m+n\text{.}\)</span> To do so we explicitly identify the unique lifting of <span class="process-math">\(f_m*f_n\text{.}\)</span> You might have guessed that <span class="process-math">\(\widetilde{f}_m*\widetilde{f}_n\)</span> would do the trick, but notice that this path product is not even well defined since <span class="process-math">\(\widetilde{f}_m\)</span> ends at <span class="process-math">\(m\text{,}\)</span> and <span class="process-math">\(\widetilde{f}_n\)</span> begins at 0. This is easily remedied by replacing <span class="process-math">\(\widetilde{f}_n\)</span> with the function <span class="process-math">\(t_m\circ \widetilde{f}_n\text{,}\)</span> where <span class="process-math">\(t_m(s)=s+m\)</span> is the translation by <span class="process-math">\(m\)</span> map. Let <span class="process-math">\(h=\widetilde{f}_m*(t_m\circ \widetilde{f}_n)\text{.}\)</span> Since <span class="process-math">\(h(0)=0\)</span> and</div>
+<div class="displaymath process-math">
+\begin{align*}
+p\circ h\amp =(p\circ \widetilde{f}_m)*(p\circ t_m\circ \widetilde{f}_n) \\
+\amp = f_m*(p\circ \widetilde{f}_n) \amp (p\circ \widetilde{f}_m=f_m, p\circ t_m=p)\\
+\amp =f_m*f_n\text{,}
+\end{align*}
+</div>
+<div class="para">we see by uniqueness that <span class="process-math">\(h=\widetilde{f_m*f_n}\text{.}\)</span> Lastly we conclude that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi([f_m]*[f_n])=h(1)=t_m(\widetilde{f}_n(1))=m+n\text{,}
+\end{equation*}
+</div>
+<div class="para">as desired.</div>
+</div></article><span class="incontext"><a href="s_coveringmaps_fundgroups.html#example-24" class="internal">in-context</a></span>
 </body>
 </html>

@@ -13,24 +13,26 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">A <dfn class="terminology">topological space</dfn> is a pair <span class="process-math">\((X,\mathcal{T})\text{,}\)</span> where <span class="process-math">\(X\)</span> is a set, and <span class="process-math">\(\mathcal{T}\subseteq \mathcal{P}(X)\)</span> is a collection of subsets of <span class="process-math">\(X\)</span> satisfying the following axioms:</div>
-<ol class="decimal">
-<li>
-<span class="heading"><span class="title">Trivial sets.</span></span><div class="para">
-<span class="process-math">\(\emptyset\in \mathcal{T}\)</span> and <span class="process-math">\(X\in \mathcal{T}\)</span>
+<div class="para">Let <span class="process-math">\(p\times p\colon \R\times\R\rightarrow T=S^1\times S^1\)</span> defined as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_lifting_correspondence.html ./knowl/fig_path_torus.html">
+\begin{equation*}
+p\times p(s,t)=(p(s),p(t))=\left((\cos 2\pi s, \sin 2\pi s), (\cos 2\pi t, \sin 2\pi t)\right)   \text{,}
+\end{equation*}
 </div>
-</li>
-<li>
-<span class="heading"><span class="title">Closed under arbitrary unions.</span></span><div class="para">Given any collection <span class="process-math">\(\{U_i\}_{i\in I}\)</span> of elements <span class="process-math">\(U_i\in \mathcal{T}\text{,}\)</span> we have <span class="process-math">\(U=\bigcup_{i\in I}U_i\in \mathcal{T}\)</span>
+<div class="para">let <span class="process-math">\(Q=p\times p(0,0)=\left((1,0),(1,0)\right)\in T\text{.}\)</span> As in the previous example, it follows easily from (3) of <a href="" class="xref" data-knowl="./knowl/th_lifting_correspondence.html" title="Theorem 1.4.5: Lifting correspondence">Theorem 1.4.5</a> that the lifting correspondence associated to the map of pointed sets <span class="process-math">\(p\times p\colon (\R\times \R, (0,0))\rightarrow (T, Q)\)</span> is a bijection</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_lifting_correspondence.html ./knowl/fig_path_torus.html">
+\begin{equation*}
+\phi\colon \pi_1(T,Q)\rightarrow (p\times p)^{-1}(\{(0,0)\})=\Z\times \Z\text{.}
+\end{equation*}
 </div>
-</li>
-<li>
-<span class="heading"><span class="title">Closed under finite intersections.</span></span><div class="para">If <span class="process-math">\(U_1, U_2,\dots, U_n\in \mathcal{T}\text{,}\)</span> then <span class="process-math">\(U=\bigcap_{i=1}^n U_i \in \mathcal{T}\text{.}\)</span>
+<div class="para">Consider the family of loops <span class="process-math">\(\{f_{m,n}\}_{(m,n)\in \Z\times \Z}\)</span> defined as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_lifting_correspondence.html ./knowl/fig_path_torus.html">
+\begin{equation*}
+f_{m,n}(s)=(f_m(s),f_n(s))=\left((\cos 2\pi m s, \sin 2\pi m s), (\cos 2\pi n s, \sin 2\pi n s)\right)\text{.}
+\end{equation*}
 </div>
-</li>
-</ol>
-<div class="para">In this case we call <span class="process-math">\(\mathcal{T}\)</span> a <dfn class="terminology">topology</dfn> on <span class="process-math">\(X\text{,}\)</span> and an element <span class="process-math">\(U\in \mathcal{T}\)</span> is called an <dfn class="terminology">open set</dfn> of <span class="process-math">\(X\text{.}\)</span> Although technically speaking a topological space is a pair <span class="process-math">\((X,\mathcal{T})\text{,}\)</span> we often omit mention of the topology <span class="process-math">\(\mathcal{T}\)</span> if there is no risk of confusion.</div>
+<div class="para">You find a sketch of some of these loops (and their lifts) in <a href="" class="xref" data-knowl="./knowl/fig_path_torus.html" title="Figure 1.4.8">Figure 1.4.8</a>, where I have identified <span class="process-math">\(S^1\times S^1\)</span> with an embedded surface of <span class="process-math">\(\R^3\)</span> in the usual way.</div>
 </div>
-<span class="incontext"><a href="s_top_spaces.html#p-295" class="internal">in-context</a></span>
+<span class="incontext"><a href="s_coveringmaps_fundgroups.html#p-295" class="internal">in-context</a></span>
 </body>
 </html>

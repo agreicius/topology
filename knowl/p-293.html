@@ -11,8 +11,17 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">Topology can be seen as a vast generalization of this notion that abstracts away from the absolute value function, relying instead on the more abstract idea of <em class="emphasis">open sets</em>. Indeed, the notion of openness is introduced already in real analysis: a set <span class="process-math">\(U\subseteq\R\)</span> is <em class="emphasis">open</em> if for all <span class="process-math">\(x\in U\)</span> there is an <span class="process-math">\(\epsilon &gt; 0\)</span> such that if <span class="process-math">\(\abs{x-y} &lt; \epsilon\text{,}\)</span> then <span class="process-math">\(y\in U\text{.}\)</span> Intuitively, you can think of this property as stating that <span class="process-math">\(U\)</span> has a certain <em class="emphasis">roomy</em> or <em class="emphasis">generous</em> nature: if <span class="process-math">\(x\in U\text{,}\)</span> and <span class="process-math">\(y\)</span> is <em class="emphasis">sufficiently close</em> to <span class="process-math">\(x\text{,}\)</span> then <span class="process-math">\(U\)</span> has room for <span class="process-math">\(y\)</span> too. Come on in!</div>
-<span class="incontext"><a href="s_top_spaces.html#p-293" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">We will show that <span class="process-math">\(\phi\)</span> is in fact a group homomorphism hence an isomorphism, but before we do, it is worth making the bijective correspondence between <span class="process-math">\(\pi_1(S^1, Q)\)</span> and <span class="process-math">\(\Z\)</span> more explicit. Consider the family of loops <span class="process-math">\(\{f_n\}_{n\in \Z}\)</span> defined as <span class="process-math">\(f_n(s)=(\cos 2\pi n s, \sin 2\pi n s)\text{.}\)</span> Note that <span class="process-math">\(f_n\)</span> is a path that traverses the circle <span class="process-math">\(n\)</span> complete times traveling counterclockwise if <span class="process-math">\(n&gt; 0\)</span> and clockwise if <span class="process-math">\(n&lt; 0\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/th_lift_cover.html" title="Theorem 1.4.3: Lifting to covering spaces">Theorem 1.4.3</a> the paths <span class="process-math">\(f_n\)</span> lift uniquely to paths <span class="process-math">\(\widetilde{f}_n\)</span> satisfying <span class="process-math">\(\widetilde{f}_n(0)=0\text{.}\)</span> We see easily that <span class="process-math">\(s\mapsto ns\)</span> is such a lifting for each <span class="process-math">\(n\text{;}\)</span> uniqueness then implies that <span class="process-math">\(\widetilde{f}_n(s)=ns\)</span> for all <span class="process-math">\(n\in \Z\text{.}\)</span> The liftings <span class="process-math">\(\widetilde{f}_n\)</span> are just the usual straight line segment parametrizations from <span class="process-math">\(0\)</span> to <span class="process-math">\(n\text{,}\)</span> and thus the lifting correspondence applied to <span class="process-math">\([f_n]\)</span> is <span class="process-math">\(\phi([f_n])=\widetilde{f}_n(1)=n\text{.}\)</span> The bijective nature of <span class="process-math">\(\phi\)</span> now implies that <span class="process-math">\([f_m]\ne [f_n]\)</span> for<span class="process-math">\(m\ne n\text{,}\)</span> and that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_lift_cover.html">
+\begin{equation*}
+\pi_1(S^1, Q)=\{[f_n]\colon n\in \Z\}\text{.}
+\end{equation*}
+</div>
+<div class="para">In other words every loop in <span class="process-math">\(S^1\)</span> is path homotopic to <span class="process-math">\(f_n\)</span> for a unique choice of <span class="process-math">\(n\text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a href="s_coveringmaps_fundgroups.html#p-293" class="internal">in-context</a></span>
 </body>
 </html>

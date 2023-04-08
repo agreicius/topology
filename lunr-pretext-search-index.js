@@ -835,7 +835,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.4",
   "title": "Lifting correspondence",
-  "body": " Lifting correspondence   Lifting   Let and be continuous maps. A lifting of to is a continuous map satisfying .  Lifting diagram        Uniqueness of liftings   Let be a covering map, let be connected, and let be a continuous map. If are liftings of to , and if for some , then . In other words, if is connected and is a covering map, then a lifting of to , if it exists, is uniquely determined by its value at any element of .  Unique lifting diagram       Assume are liftings of to , satisfying . Let . We will show that is open and closed. Since ( ) and is connected, it follows that ( ) and hence that .  Take any , and let . Since is a covering map, we can find an open neighborhood that is evenly covered by . Let be the partition of into slices. We will show that if , then there is an open set with ; and if , then there is an open set with . It will follow that is both open and closed, as desired.   Case: . Since , and since (by definition of ), we have for some . Consider the open set . We have , since . Furthermore, for any , since , since , and since is a homeomorphism, we conclude that . Thus , as desired.   Case: . By definition of , this means . Since , there are such that , and . Let . This is an open set containing , and for all we have and . Since , we have . Thus .     Lifting to covering spaces   Let be a covering map. Fix and let .   Every path satisfying lifts uniquely to a path satisfying .    Every continuous map satisfying lifts uniquely to a continuous map satisfying . Furthermore, if is a path homotopy, then is a path homotopy.    Let , and let the corresponding liftings to satisfying . If , then .       Proof of (1)  Uniqueness of the lifting follows from . We now prove that there is such a lifting.  Let be a cover of by open sets evenly covered by . Since is an open cover of the compact metric space , the existence of a Lebesgue number ensures that we can find a subdivision of  that is fine enough to ensure that for all , we have for some .  We now show by induction that for all , the restriction has a lifting satisfying . It will follow that is the lifting we are after.   Base case: . The function , defined as is a lifting of .   Induction step . Assume is a lifting of satisfying . Recall that we have for some open set evenly covered by . Let . Since , there is a unique slice in this partition containing . Since is a homeomorphism, we can define a continuous function as . Since is 1-1 on and since , we have . By the closed pasting lemma, the function defined as is continuous. That is a lifting of satisfying follows from the assumed properties of and the definition of as .    Proof of (2)  The argument here is essentially isomorphic to the one given above, though some minor subtleties creep in due to the slightly more complex domain in play ( as opposed to ). Note first that once again the uniqueness property described follows immediately from .  Let be a cover of by open sets evenly covered by . Since is compact, the open cover has a Lebesgue number  . Pick a subdivision of  fine enough so that the diameter of each subrectangle in the resulting subdivision of is less than . It follows that for all we have for some .  We now endeavor to build a lifting of subrectangle by subrectangle, from the bottom row of subrectangles to the top, working from left to right along each row. In more detail for each pair let the region be the union of the rectangle along with all rectangles to the left or below it. We will show by induction that for all there is a lifting of satisfying . Since the lifting gives us what we want.   Base case . We have , the lower left corner of . By construction, we have , where is an open set evenly covered by . Let be the corresponding partition into slices, and let be the slice containing . Define as . It is easy to see that for all . Since is 1-1 on and , we see that .   Induction step . Pick any pair with and assume that is a lifting of that satisfies . The next region in our procedure is either (a) if ( move to right if you can ), or (b) ( move up a row and start at left ). We show in case (a) that we can extend to this larger region; the argument for case (b) is very similar.  In case (a) we have . Let , a connected set formed as the union of the left and bottom edges of . By construction we have for some open set evenly covered by . Let be its partition into slices. Since and is connected , we must have for one of the slices . (Otherwise we would have a separation of the connected set .) Define as . Arguments very similar to the ones in the previous proof show that and thus the two functions can be pasted together to form the desired lifting of .  Lastly we show that if is a path homotopy, then is a path homotopy. Assume and for all . We have by assumption; let . We must show that and for all . Let . This is a continuous function from to the preimage . Since its image is connected, and since is discrete , this image must be a singleton. Since We conclude that for all . A similar argument, using shows that for all .    Proof of (3)  Assume and let be the path homotopy that witnesses this fact. From (2) we know that lifts uniquely to a path homotopy satisfying for all . Since is a lifting of , we have and . Thus the paths and are liftings of and to . Since and , we conclude from the uniqueness property of liftings that and , as desired.     Lifting correspondence   Let be a covering map. Fix and let . The function , where is the unique lifting of to satisfying , is called the lifting correspondence arising from the covering and choice of .    The fact that the rule gives rise to a well-defined function of sets follows from   Statement (1) of this theorem guarantees the existence and uniqueness of . Note also that since , the value is indeed an element of .  Statement (3) of the theorem ensures that if , then . Indeed, since , we conclude that . In particular, being path homotopic, we must have .     Lifting correspondence   Let be a covering map. Fix , let , and let be the resulting lifting correspondence.    The group homomorphism is an injection.    Let . We have if and only if .    The lifting correspondence gives rise to an injective map . Here is the set of all right cosets of : , . Furthermore the map is bijective if is path connected.      Proof of (1)  Since is a group homomorphism, to show it is injective it suffices to show that . (Recall that the identity element of a fundamental group is .) To this end, suppose satisfies . It follows from the uniqueness property of liftings that and . Since , it follows from (3) of that , and thus . This proves that if , then : , .    Proof of (2)  We prove both implications separately.   Implication: . Assume . By definition of this means the unique lifting satisfying also satisfies . Thus , and we have . Thus .   Implication: . If , then for some . As argued in (1), we have . Thus .    Proof of (3)  First observe that if is path connected, then given any , there is a path . Since , we have , and thus . We conclude that (and ) are surjective in this case.  Next, we show that if , then . Let be the unique liftings of satisfying . Since and , the assumption is equivalent to for some common element . Let be the reverse of . Since this begins where ends, we can take the path product , which is an element of . Now we have . It follows that . Since , we have , as desired.  Lastly, assume , in which case for some , where . We see easily that is well-defined (in terms of the path product) and the usual uniqueness argument shows . We conclude that , as desired.    "
+  "body": " Lifting correspondence   Lifting   Let and be continuous maps. A lifting of to is a continuous map satisfying .  Lifting diagram        Uniqueness of liftings   Let be a covering map, let be connected, and let be a continuous map. If are liftings of to , and if for some , then . In other words, if is connected and is a covering map, then a lifting of to , if it exists, is uniquely determined by its value at any element of .  Unique lifting diagram       Assume are liftings of to , satisfying . Let . We will show that is open and closed. Since ( ) and is connected, it follows that ( ) and hence that .  Take any , and let . Since is a covering map, we can find an open neighborhood that is evenly covered by . Let be the partition of into slices. We will show that if , then there is an open set with ; and if , then there is an open set with . It will follow that is both open and closed, as desired.   Case: . Since , and since (by definition of ), we have for some . Consider the open set . We have , since . Furthermore, for any , since , since , and since is a homeomorphism, we conclude that . Thus , as desired.   Case: . By definition of , this means . Since , there are such that , and . Let . This is an open set containing , and for all we have and . Since , we have . Thus .     Lifting to covering spaces   Let be a covering map. Fix and let .   Every path satisfying lifts uniquely to a path satisfying .    Every continuous map satisfying lifts uniquely to a continuous map satisfying . Furthermore, if is a path homotopy, then is a path homotopy.    Let , and let the corresponding liftings to satisfying . If , then .       Proof of (1)  Uniqueness of the lifting follows from . We now prove that there is such a lifting.  Let be a cover of by open sets evenly covered by . Since is an open cover of the compact metric space , the existence of a Lebesgue number ensures that we can find a subdivision of  that is fine enough to ensure that for all , we have for some .  We now show by induction that for all , the restriction has a lifting satisfying . It will follow that is the lifting we are after.   Base case: . The function , defined as is a lifting of .   Induction step . Assume is a lifting of satisfying . Recall that we have for some open set evenly covered by . Let . Since , there is a unique slice in this partition containing . Since is a homeomorphism, we can define a continuous function as . Since is 1-1 on and since , we have . By the closed pasting lemma, the function defined as is continuous. That is a lifting of satisfying follows from the assumed properties of and the definition of as .    Proof of (2)  The argument here is essentially isomorphic to the one given above, though some minor subtleties creep in due to the slightly more complex domain in play ( as opposed to ). Note first that once again the uniqueness property described follows immediately from .  Let be a cover of by open sets evenly covered by . Since is compact, the open cover has a Lebesgue number  . Pick a subdivision of  fine enough so that the diameter of each subrectangle in the resulting subdivision of is less than . It follows that for all we have for some .  We now endeavor to build a lifting of subrectangle by subrectangle, from the bottom row of subrectangles to the top, working from left to right along each row. In more detail for each pair let the region be the union of the rectangle along with all rectangles to the left or below it. We will show by induction that for all there is a lifting of satisfying . Since the lifting gives us what we want.   Base case . We have , the lower left corner of . By construction, we have , where is an open set evenly covered by . Let be the corresponding partition into slices, and let be the slice containing . Define as . It is easy to see that for all . Since is 1-1 on and , we see that .   Induction step . Pick any pair with and assume that is a lifting of that satisfies . The next region in our procedure is either (a) if ( move to right if you can ), or (b) ( move up a row and start at left ). We show in case (a) that we can extend to this larger region; the argument for case (b) is very similar.  In case (a) we have . Let , a connected set formed as the union of the left and bottom edges of . By construction we have for some open set evenly covered by . Let be its partition into slices. Since and is connected , we must have for one of the slices . (Otherwise we would have a separation of the connected set .) Define as . Arguments very similar to the ones in the previous proof show that and thus the two functions can be pasted together to form the desired lifting of .  Lastly we show that if is a path homotopy, then is a path homotopy. Assume and for all . We have by assumption; let . We must show that and for all . Let . This is a continuous function from to the preimage . Since its image is connected, and since is discrete , this image must be a singleton. Since We conclude that for all . A similar argument, using shows that for all .    Proof of (3)  Assume and let be the path homotopy that witnesses this fact. From (2) we know that lifts uniquely to a path homotopy satisfying for all . Since is a lifting of , we have and . Thus the paths and are liftings of and to . Since and , we conclude from the uniqueness property of liftings that and , as desired.     Lifting correspondence   Let be a covering map. Fix and let . The function , where is the unique lifting of to satisfying , is called the lifting correspondence arising from the covering and choice of .    The fact that the rule gives rise to a well-defined function of sets follows from   Statement (1) of this theorem guarantees the existence and uniqueness of . Note also that since , the value is indeed an element of .  Statement (3) of the theorem ensures that if , then . Indeed, since , we conclude that . In particular, being path homotopic, we must have .     Lifting correspondence   Let be a covering map. Fix , let , and let be the resulting lifting correspondence.    The group homomorphism is an injection.    Let . We have if and only if .    The lifting correspondence gives rise to an injective map . Here is the set of all right cosets of : , . Furthermore the map is bijective if is path connected.      Proof of (1)  Since is a group homomorphism, to show it is injective it suffices to show that . (Recall that the identity element of a fundamental group is .) To this end, suppose satisfies . It follows from the uniqueness property of liftings that and . Since , it follows from (3) of that , and thus . This proves that if , then : , .    Proof of (2)  We prove both implications separately.   Implication: . Assume . By definition of this means the unique lifting satisfying also satisfies . Thus , and we have . Thus .   Implication: . If , then for some . As argued in (1), we have . Thus .    Proof of (3)  First observe that if is path connected, then given any , there is a path . Since , we have , and thus . We conclude that (and ) are surjective in this case.  Next, we show that if , then . Let be the unique liftings of satisfying . Since and , the assumption is equivalent to for some common element . Let be the reverse of . Since this begins where ends, we can take the path product , which is an element of . Now we have . It follows that . Since , we have , as desired.  Lastly, assume , in which case for some , where . We see easily that is well-defined (in terms of the path product) and the usual uniqueness argument shows . We conclude that , as desired.     Fundamental group of   Consider the covering defined as . Let and consider the map . Since is path connected, and since is trivial, we have , and it follows from (3) of that the lifting correspondence is a bijection onto .  We will show that is in fact a group homomorphism hence an isomorphism, but before we do, it is worth making the bijective correspondence between and more explicit. Consider the family of loops defined as . Note that is a path that traverses the circle complete times traveling counterclockwise if and clockwise if . By the paths lift uniquely to paths satisfying . We see easily that is such a lifting for each ; uniqueness then implies that for all . The liftings are just the usual straight line segment parametrizations from to , and thus the lifting correspondence applied to is . The bijective nature of now implies that for , and that . In other words every loop in is path homotopic to for a unique choice of .  To show is a group homomorphism it now suffices to show that . To do so we explicitly identify the unique lifting of . You might have guessed that would do the trick, but notice that this path product is not even well defined since ends at , and begins at 0. This is easily remedied by replacing with the function , where is the translation by operation on . Let . Since and , we see by uniqueness that . Lastly we conclude that , as desired.     Fundamental group of   Let defined as , let . As in the previous example, it follows easily from (3) of that the lifting correspondence associated to the map of pointed sets is a bijection . Consider the family of loops defined as . You find a sketch of some of these loops (and their lifts) in , where I have identified with an embedded surface of in the usual way.  As in , it is easy to see that for all we have , which is the usual line segment parametrization from to . We conclude that , from whence it follows that all loops in starting and ending at are homotopic to for a unique pair . This fact is useful in its own right, but also allows us to show that is in fact a group homomorphism, and hence an isomorphism. The proof proceeds in exactly the same manner as with : again, the only subtlety is finding the unique lift of for any two pairs . This lift turns out to be , where is the translation by operation on .  Some loops on the torus and their lifts   Some loops on the torus       "
 },
 {
   "id": "d_lifting",
@@ -883,6 +883,24 @@ var ptx_lunr_docs = [
   "body": " Lifting correspondence   Let be a covering map. Fix , let , and let be the resulting lifting correspondence.    The group homomorphism is an injection.    Let . We have if and only if .    The lifting correspondence gives rise to an injective map . Here is the set of all right cosets of : , . Furthermore the map is bijective if is path connected.      Proof of (1)  Since is a group homomorphism, to show it is injective it suffices to show that . (Recall that the identity element of a fundamental group is .) To this end, suppose satisfies . It follows from the uniqueness property of liftings that and . Since , it follows from (3) of that , and thus . This proves that if , then : , .    Proof of (2)  We prove both implications separately.   Implication: . Assume . By definition of this means the unique lifting satisfying also satisfies . Thus , and we have . Thus .   Implication: . If , then for some . As argued in (1), we have . Thus .    Proof of (3)  First observe that if is path connected, then given any , there is a path . Since , we have , and thus . We conclude that (and ) are surjective in this case.  Next, we show that if , then . Let be the unique liftings of satisfying . Since and , the assumption is equivalent to for some common element . Let be the reverse of . Since this begins where ends, we can take the path product , which is an element of . Now we have . It follows that . Since , we have , as desired.  Lastly, assume , in which case for some , where . We see easily that is well-defined (in terms of the path product) and the usual uniqueness argument shows . We conclude that , as desired.   "
 },
 {
+  "id": "eg_fund_grp_S1",
+  "level": "2",
+  "url": "s_coveringmaps_fundgroups.html#eg_fund_grp_S1",
+  "type": "Example",
+  "number": "1.4.6",
+  "title": "Fundamental group of <span class=\"process-math\">\\(S^1\\)<\/span>.",
+  "body": " Fundamental group of   Consider the covering defined as . Let and consider the map . Since is path connected, and since is trivial, we have , and it follows from (3) of that the lifting correspondence is a bijection onto .  We will show that is in fact a group homomorphism hence an isomorphism, but before we do, it is worth making the bijective correspondence between and more explicit. Consider the family of loops defined as . Note that is a path that traverses the circle complete times traveling counterclockwise if and clockwise if . By the paths lift uniquely to paths satisfying . We see easily that is such a lifting for each ; uniqueness then implies that for all . The liftings are just the usual straight line segment parametrizations from to , and thus the lifting correspondence applied to is . The bijective nature of now implies that for , and that . In other words every loop in is path homotopic to for a unique choice of .  To show is a group homomorphism it now suffices to show that . To do so we explicitly identify the unique lifting of . You might have guessed that would do the trick, but notice that this path product is not even well defined since ends at , and begins at 0. This is easily remedied by replacing with the function , where is the translation by operation on . Let . Since and , we see by uniqueness that . Lastly we conclude that , as desired.   "
+},
+{
+  "id": "eg_fund_grp_T",
+  "level": "2",
+  "url": "s_coveringmaps_fundgroups.html#eg_fund_grp_T",
+  "type": "Example",
+  "number": "1.4.7",
+  "title": "Fundamental group of <span class=\"process-math\">\\(T=S^1\\times S^1\\)<\/span>.",
+  "body": " Fundamental group of   Let defined as , let . As in the previous example, it follows easily from (3) of that the lifting correspondence associated to the map of pointed sets is a bijection . Consider the family of loops defined as . You find a sketch of some of these loops (and their lifts) in , where I have identified with an embedded surface of in the usual way.  As in , it is easy to see that for all we have , which is the usual line segment parametrization from to . We conclude that , from whence it follows that all loops in starting and ending at are homotopic to for a unique pair . This fact is useful in its own right, but also allows us to show that is in fact a group homomorphism, and hence an isomorphism. The proof proceeds in exactly the same manner as with : again, the only subtlety is finding the unique lift of for any two pairs . This lift turns out to be , where is the translation by operation on .  Some loops on the torus and their lifts   Some loops on the torus      "
+},
+{
   "id": "s_top_spaces",
   "level": "1",
   "url": "s_top_spaces.html",
@@ -928,9 +946,9 @@ var ptx_lunr_docs = [
   "body": " Trivial and discrete topology Let be a set.   The collection is a topology on , called the trivial topology . This is the topology on whose only open sets are the empty set and itself.    The collection is a topology on , called the discrete topology . This is the topology on for which every subset of is an open set.        Let . By definition the given contains and , and thus axiom (1) is satisfied. Since any union or intersection involving and is equal to either or , it is clear that is closed under arbitrary unions and finite intersections. Thus axioms (2)-(3) are satisfied.    Let . By definition, is the set of all subsets of . In particular, it contains and , and thus axioms (1) is satisfied. Furthermore, since any union or intersection of subsets of is again a subset of , we see that axioms (2)-(3) are satisfied.      "
 },
 {
-  "id": "example-24",
+  "id": "example-26",
   "level": "2",
-  "url": "s_top_spaces.html#example-24",
+  "url": "s_top_spaces.html#example-26",
   "type": "Example",
   "number": "2.1.3",
   "title": "Some small topological spaces.",
@@ -955,9 +973,9 @@ var ptx_lunr_docs = [
   "body": " coarser topology  finer topology  comparable topologies  Comparable topologies   Two topologies on the set are comparable if or , and incomparable otherwise. If , we say that is coarser than , and that is finer than . When we say that is strictly coarser than and is strictly finer than .   "
 },
 {
-  "id": "example-25",
+  "id": "example-27",
   "level": "2",
-  "url": "s_top_spaces.html#example-25",
+  "url": "s_top_spaces.html#example-27",
   "type": "Example",
   "number": "2.1.5",
   "title": "Comparing trivial, discrete, cofinite topologies.",
@@ -1144,9 +1162,9 @@ var ptx_lunr_docs = [
   "body": " Metric balls   Let be a metric space. Given and the -ball centered at is the subset defined as . In other words, is the set of all elements of lying within a distance of of . We call the radius of . More generally, we call a subset a -metric ball if for some and . When it is clear what the underlying metric is, we will omit and speak simply of metric balls.   "
 },
 {
-  "id": "example-32",
+  "id": "example-34",
   "level": "2",
-  "url": "s_metric1.html#example-32",
+  "url": "s_metric1.html#example-34",
   "type": "Example",
   "number": "2.3.4",
   "title": "Metric balls for Euclidean and box metrics.",
@@ -1198,9 +1216,9 @@ var ptx_lunr_docs = [
   "body": "  Given a set the function defined as is a metric on , called the trivial metric .    The proof that is a metric is left as an exercise.   "
 },
 {
-  "id": "example-34",
+  "id": "example-36",
   "level": "2",
-  "url": "s_metric1.html#example-34",
+  "url": "s_metric1.html#example-36",
   "type": "Example",
   "number": "2.3.9",
   "title": "Trivial metric.",
@@ -1279,9 +1297,9 @@ var ptx_lunr_docs = [
   "body": " Basis description of closed sets   Let be a topological space with basis . A set is closed if and only if for all , there is a basis element satisfying .    By definition a set is closed if and only if its complement is open. Using , we see that is open if and only if for all there is a basis element satisfying .   "
 },
 {
-  "id": "example-37",
+  "id": "example-39",
   "level": "2",
-  "url": "s_closed_closure_interior.html#example-37",
+  "url": "s_closed_closure_interior.html#example-39",
   "type": "Example",
   "number": "2.4.7",
   "title": "Closed sets in Euclidean metric topology.",
@@ -1324,9 +1342,9 @@ var ptx_lunr_docs = [
   "body": " Interior and closure of  Let and let . Compute the interior and closure of with respect to (a) the standard topology on and (b) the -topology on .     First consider with the standard topology. The interior of is empty in this case: , . To see this, note that given any and any open interval containing , we can choose an such that ; by design all elements of lie outside . Thus , and .  Next. I claim . To see this, note first that is closed: it is easy to see that for any we can find an such that . By (2) of we have . Since furthermore and since itself is not closed, it follows that .    Now consider the -topology on . We still have . Indeed, fix any , and take any basis element containing . We have or for some open interval . In either case, the same argument as above shows that contains a basis element , all of whose elements lie outside of . This shows , and hence .  Next, I claim that is closed in the -topology, from whence it follows that . (Use (2) from .) To prove the claim, we must show, using that for any there is a basis element (in the -topology) containing and contained in . There are two cases: and . If , we can find an open interval such that and . Since open intervals are basis elements in the -topology, we are done in this case. Next, assume . In this case the basis element satisfies . Having exhausted the cases, we conclude is closed, and hence .     "
 },
 {
-  "id": "example-39",
+  "id": "example-41",
   "level": "2",
-  "url": "s_closed_closure_interior.html#example-39",
+  "url": "s_closed_closure_interior.html#example-41",
   "type": "Example",
   "number": "2.4.12",
   "title": "Interior and closure in cofinite topology.",
@@ -1630,9 +1648,9 @@ var ptx_lunr_docs = [
   "body": " Pointwise convergence   Observe that the definition of pointwise convergence makes no reference to any topology on . Below we investigate how it relates to convergence in the box and product topologies.   "
 },
 {
-  "id": "example-46",
+  "id": "example-48",
   "level": "2",
-  "url": "s_prods_convergence_metric.html#example-46",
+  "url": "s_prods_convergence_metric.html#example-48",
   "type": "Example",
   "number": "2.8.3",
   "title": "Sequences in <span class=\"process-math\">\\(\\R^\\omega\\)<\/span> and <span class=\"process-math\">\\(\\R^\\R\\)<\/span>.",
@@ -1648,9 +1666,9 @@ var ptx_lunr_docs = [
   "body": " Pointwise convergence and product topology   Let be a collection of topologies, let be their product, and let be a sequence of elements of .    If in the box or product topology, then converges to pointwise.    In the product topology we have .         Suppose in either topology. Fix and let be any open set containing . The set is an open neighborhood of in both topologies. By convergence there is an such that for all . It follows that for all . This proves that for all .    Suppose the sequence converges to pointwise. To show in the product topology it is enough to show that for any base open set of the form there is an such that if , then . Since converges to pointwise, for each , there is an such that if , then . Setting , it follows that if then for . Since for all we conclude that for all , as desired.      "
 },
 {
-  "id": "example-47",
+  "id": "example-49",
   "level": "2",
-  "url": "s_prods_convergence_metric.html#example-47",
+  "url": "s_prods_convergence_metric.html#example-49",
   "type": "Example",
   "number": "2.8.5",
   "title": "Convergent sequences in <span class=\"process-math\">\\(\\R^\\omega\\)<\/span>.",
@@ -1738,27 +1756,27 @@ var ptx_lunr_docs = [
   "body": " Preimage properties   Continuity is defined in terms of preimages of sets under a function . Thankfully, the preimage operation behaves very well with respect to our various set operations. In particular, we have the following identities, which you may make use of without further ado:    "
 },
 {
-  "id": "example-48",
+  "id": "example-50",
   "level": "2",
-  "url": "s_continuous.html#example-48",
+  "url": "s_continuous.html#example-50",
   "type": "Example",
   "number": "2.9.3",
   "title": "Continuous functions: basic examples.",
   "body": " Continuous functions: basic examples     Identity function  Given a topological space , the identity function is continuous. Here we take as the topology of both the domain and codomain.    Constant functions  Let be topological spaces. For any fixed the constant function , defined as for all is continuous.    Subspace inclusions  Let be a subspace of . The inclusion map is continuous with respect to the subspace topology on .    Maps from discrete spaces  If is equipped with the discrete topology, then any function to a topological space is continuous.    Maps to trivial spaces  If is equipped with the trivial topology, then any map from a topological space to is continous.      These are all pretty elementary. I'll prove (3). Let be a subspace and let continuous. Given any open set , we have which by definition is open in the subspace topology. Thus is continuous.   "
 },
 {
-  "id": "example-49",
+  "id": "example-51",
   "level": "2",
-  "url": "s_continuous.html#example-49",
+  "url": "s_continuous.html#example-51",
   "type": "Example",
   "number": "2.9.4",
   "title": "Non-continuous inclusion.",
   "body": " Non-continuous inclusion   Show that the identity map is not continuous. Here the topology of the domain is the standard one, and the topology on the codomain is the lower limit topology.    For any we have . If we choose to be any open set of that is not open in the standard topology, it follows that is not open in and hence that is not continuous. We may take for example.  Note: let be two topologies on the set , and for let denote the space with underlying set and topology . The same argument above can be used to show that is continuous if and only if .   "
 },
 {
-  "id": "example-50",
+  "id": "example-52",
   "level": "2",
-  "url": "s_continuous.html#example-50",
+  "url": "s_continuous.html#example-52",
   "type": "Example",
   "number": "2.9.5",
   "title": "Products and projections.",
@@ -1909,9 +1927,9 @@ var ptx_lunr_docs = [
   "body": " Topological properties   It is easy to see that the properties of being discrete, , Hausdorff, or a metric space are topological.   "
 },
 {
-  "id": "example-54",
+  "id": "example-56",
   "level": "2",
-  "url": "s_homeomorphisms.html#example-54",
+  "url": "s_homeomorphisms.html#example-56",
   "type": "Example",
   "number": "2.10.12",
   "title": "Continuous bijection onto circle.",
@@ -2053,9 +2071,9 @@ var ptx_lunr_docs = [
   "body": "  A separation of a topological space is a pair of disjoint nonempty open sets satisfying . The space is connected it it admits no separation, and disconnected otherwise.  A subset is connected (resp., disconnected ) if it is connected (resp., disconnected) with respect to the subspace topology.   "
 },
 {
-  "id": "example-57",
+  "id": "example-59",
   "level": "2",
-  "url": "s_connected1.html#example-57",
+  "url": "s_connected1.html#example-59",
   "type": "Example",
   "number": "2.12.2",
   "title": "Examples.",
@@ -2170,36 +2188,36 @@ var ptx_lunr_docs = [
   "body": " Path-connectedness and continuity   If is continuous and is path connected, then is path connected.    Given and , let be a path connecting and . The composition is then a path connecting and .   "
 },
 {
-  "id": "example-58",
+  "id": "example-60",
   "level": "2",
-  "url": "s_connected_path.html#example-58",
+  "url": "s_connected_path.html#example-60",
   "type": "Example",
   "number": "2.13.5",
   "title": "Balls in <span class=\"process-math\">\\(\\R^n\\)<\/span>.",
   "body": " Balls in   Let be Euclidean -space. For all and any , the open ball is connected, as is the closed ball defined as     It is easy to see that the straight line path defined as is a continuous function connecting any two points in . For our current purposes, we wish to show that if , then so is , for any . To this end, note that . This proves that the open ball is path connected, and hence connected. Next, it is easy to see that the closed ball is in fact the closure of the open ball. Since connectedness is preserved under closure, we conclude that the closed ball is connected.   "
 },
 {
-  "id": "example-59",
+  "id": "example-61",
   "level": "2",
-  "url": "s_connected_path.html#example-59",
+  "url": "s_connected_path.html#example-61",
   "type": "Example",
   "number": "2.13.6",
   "title": "Punctured Euclidean space <span class=\"process-math\">\\(\\R^n-\\{\\boldzero\\}\\text{:}\\)<\/span> <span class=\"process-math\">\\(n\\geq 2\\)<\/span>.",
   "body": " Punctured Euclidean space :   Let be Euclidean -space, where . The subspace is connected.    Take any . If the two vectors are not scalar multiples of one another, then the straight line path connecting them is guaranteed to lie in , using a linear independence argument. If , then since , we can find a vector that is not a scalar multiple of either vector. We can then construct a polygonal path lieing in that first connects to via a straight line path, and then connects to via a straight line path.   "
 },
 {
-  "id": "example-60",
+  "id": "example-62",
   "level": "2",
-  "url": "s_connected_path.html#example-60",
+  "url": "s_connected_path.html#example-62",
   "type": "Example",
   "number": "2.13.7",
   "title": "<span class=\"process-math\">\\(\\R\\not\\cong \\R^n\\)<\/span> for <span class=\"process-math\">\\(n\\geq 2\\)<\/span>.",
   "body": " for   Prove: if , then there is no homeomorphism from to .    Assume by contradiction that is a homeomorphism for some . It follows that the restriction is a homeomorphism. This a contradiction since is not connected ( is open and closed in ), but is connected.   "
 },
 {
-  "id": "example-61",
+  "id": "example-63",
   "level": "2",
-  "url": "s_connected_path.html#example-61",
+  "url": "s_connected_path.html#example-63",
   "type": "Example",
   "number": "2.13.8",
   "title": "The <span class=\"process-math\">\\(n\\)<\/span>-sphere.",
@@ -2908,9 +2926,9 @@ var ptx_lunr_docs = [
   "body": " is normal   Prove: is normal.    Let be disjoint closed subsets of . We can find open coverings satisfying for all . First observe that for all . Indeed, otherwise we'd have , in which case either or : both are impossible since and . We conclude that , proving that and can be separated by open sets.   "
 },
 {
-  "id": "example-75",
+  "id": "example-77",
   "level": "2",
-  "url": "s_normal.html#example-75",
+  "url": "s_normal.html#example-77",
   "type": "Example",
   "number": "2.20.2",
   "title": "<span class=\"process-math\">\\(R_\\ell\\times R_\\ell\\)<\/span> is not normal.",
@@ -3133,9 +3151,9 @@ var ptx_lunr_docs = [
   "body": " Directed set   A directed set is a pair , where is a quasiordering on that satisfies the following axiom.   Directed (D)  For all , there is a such that and .   A subset of a directed set is cofinal if for all there is a such that .   "
 },
 {
-  "id": "example-77",
+  "id": "example-79",
   "level": "2",
-  "url": "s_nets.html#example-77",
+  "url": "s_nets.html#example-79",
   "type": "Example",
   "number": "2.24.4",
   "title": "Common examples.",

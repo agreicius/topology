@@ -246,7 +246,67 @@
         </p>
     </proof>
 </theorem>
-
+<example xml:id="eg_fund_grp_S1">
+    <title>Fundamental group of <m>S^1</m></title>
+    <statement>
+        <p>
+            Consider the covering <m>p\colon \R\rightarrow S^1</m> defined as <m>p(s)=(\cos 2\pi s, \sin 2\pi s)</m>. Let <m>Q=(1,0)</m> and consider the map <m>p_*\colon \pi_1(\R, 0)\rightarrow \pi_1(S^1, Q)</m>. Since <m>\R</m> is path connected, and since <m>\pi_1(\R, 0)</m> is trivial, we have <m>H=p_*(\pi_1(X,0))=\{e\}</m>, and it follows from (3) of <xref ref="th_lifting_correspondence"/> that the lifting correspondence <m>\phi\colon \pi_1(S^1, Q)\rightarrow p^{-1}(Q)</m> is a bijection onto <m>p^{-1}(Q)=\Z</m>. 
+        </p>
+        <p>
+            We will show that <m>\phi</m> is in fact a group homomorphism hence an isomorphism, but before we do, it is worth making the bijective correspondence between <m>\pi_1(S^1, Q)</m> and <m>\Z</m> more explicit. Consider the family of loops <m>\{f_n\}_{n\in \Z}</m> defined as <m>f_n(s)=(\cos 2\pi n s, \sin 2\pi n s)</m>. Note that <m>f_n</m> is a path that traverses the circle <m>n</m> complete times traveling counterclockwise if <m>n&gt; 0</m> and clockwise if <m>n&lt; 0</m>. By <xref ref="th_lift_cover"/> the paths <m>f_n</m> lift uniquely to paths <m>\widetilde{f}_n</m> satisfying <m>\widetilde{f}_n(0)=0</m>. We see easily that <m>s\mapsto ns</m> is such a lifting for each <m>n</m>; uniqueness then implies that <m>\widetilde{f}_n(s)=ns</m> for all <m>n\in \Z</m>. The liftings <m>\widetilde{f}_n</m> are just the usual straight line segment parametrizations from <m>0</m> to <m>n</m>, and thus the lifting correspondence applied to <m>[f_n]</m> is <m>\phi([f_n])=\widetilde{f}_n(1)=n</m>. The bijective nature of <m>\phi</m> now implies that <m>[f_m]\ne [f_n]</m> for<m>m\ne n</m>, and that 
+            <me>
+                \pi_1(S^1, Q)=\{[f_n]\colon n\in \Z\}
+            </me>.
+            In other words every loop in <m>S^1</m> is path homotopic to <m>f_n</m> for a unique choice of <m>n</m>. 
+        </p>
+        <p>
+            To show <m>\phi</m> is a group homomorphism it now suffices to show that <m>\phi([f_m]*[f_n])=\phi([f_m])+\phi([f_n])=m+n</m>. To do so we explicitly identify the unique lifting of <m>f_m*f_n</m>. You might have guessed that <m>\widetilde{f}_m*\widetilde{f}_n</m> would do the trick, but notice that this path product is not even well defined since <m>\widetilde{f}_m</m> ends at <m>m</m>, and <m>\widetilde{f}_n</m> begins at 0. This is easily remedied by replacing <m>\widetilde{f}_n</m> with the function <m>t_m\circ \widetilde{f}_n</m>, where <m>t_m(x)=x+m</m> is the translation by <m>m</m> operation on <m>\R</m>. Let <m>h=\widetilde{f}_m*(t_m\circ \widetilde{f}_n)</m>. Since <m>h(0)=0</m> and 
+            <md> 
+               <mrow> p\circ h\amp =(p\circ \widetilde{f}_m)*(p\circ t_m\circ \widetilde{f}_n) </mrow> 
+               <mrow> \amp = f_m*(p\circ \widetilde{f}_n) \amp (p\circ \widetilde{f}_m=f_m, p\circ t_m=p)</mrow>
+               <mrow> \amp =f_m*f_n</mrow>
+            </md>, 
+            we see by uniqueness that <m>h=\widetilde{f_m*f_n}</m>. Lastly we conclude that 
+            <me>
+                \phi([f_m]*[f_n])=h(1)=t_m(\widetilde{f}_n(1))=m+n
+            </me>, 
+            as desired.   
+        </p>
+    </statement>
+    
+</example>
+<example xml:id="eg_fund_grp_T">
+    <title>Fundamental group of <m>T=S^1\times S^1</m></title>
+    <statement>
+        <p>
+            Let <m>p\times p\colon \R\times\R\rightarrow T=S^1\times S^1</m> defined as <me>p\times p(s,t)=(p(s),p(t))=\left((\cos 2\pi s, \sin 2\pi s), (\cos 2\pi t, \sin 2\pi t)\right)   
+            </me>, 
+            let <m>Q=p\times p(0,0)=\left((1,0),(1,0)\right)\in T</m>. As in the previous example, it follows easily from (3) of <xref ref="th_lifting_correspondence"/> that the lifting correspondence associated to the map of pointed sets <m>p\times p\colon (\R\times \R, (0,0))\rightarrow (T, Q)</m> is a bijection 
+            <me>
+                \phi\colon \pi_1(T,Q)\rightarrow (p\times p)^{-1}(\{(0,0)\})=\Z\times \Z
+            </me>.
+            Consider the family of loops <m>\{f_{m,n}\}_{(m,n)\in \Z\times \Z}</m> defined as 
+            <me>
+                f_{m,n}(s)=(f_m(s),f_n(s))=\left((\cos 2\pi m s, \sin 2\pi m s), (\cos 2\pi n s, \sin 2\pi n s)\right)
+            </me>. 
+            You find a sketch of some of these loops (and their lifts) in <xref ref="fig_path_torus"/>, where I have identified <m>S^1\times S^1</m> with an embedded surface of <m>\R^3</m> in the usual way. 
+        </p>
+        <p>
+            As in <xref ref="eg_fund_grp_S1"/>, it is easy to see that for all <m>(m,n)\in \Z\times \Z</m> we have
+            <me>
+                \widetilde{f}_{m,n}(s)=(ms, ns)
+            </me>,
+            which is the usual line segment parametrization from <m>(0,0)</m> to <m>(m,n)</m>. We conclude that <m>\phi([f_{m,n}]=(m,n)</m>, from whence it follows that all loops in <m>T</m> starting and ending at <m>Q</m> are homotopic to <m>f_{m,n}</m> for a unique pair <m>(m,n)\in \Z\times \Z</m>. This fact is useful in its own right, but also allows us to show that <m>\phi</m> is in fact a group homomorphism, and hence an isomorphism. The proof proceeds in exactly the same manner as with <xref ref="eg_fund_grp_S1"/>: again, the only subtlety is finding the unique lift of <m>f_{m,n}*f_{k,l}</m> for any two pairs <m>(m,n), (k,l)\in \Z\times \Z</m>. This lift turns out to be <m>\widetilde{f}_{m,n}*(t_{(m,n)}\circ \widetilde{f}_{k,l})</m>, where <m>t_{(m,n)}(x,y)=(x+m, y+n)</m> is the translation by <m>(m,n)</m> operation on <m>\R\times \R</m>. 
+            <figure width="100%" xml:id="fig_path_torus">
+                <caption>Some loops on the torus and their lifts</caption>
+                <image source="torus_paths_lifts.png" width="75%">
+                    <description>Some loops on the torus</description>
+                </image>
+            </figure>
+        </p>
+    </statement>
+    
+</example>
 
 
 </section>

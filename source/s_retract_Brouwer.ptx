@@ -1,0 +1,148 @@
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="s_retract_Brouwer">
+  <title>Retractions and Brouwer fixed point</title>
+<definition xml:id="d_retract">
+    <title>Retraction</title>
+    <statement>
+        <p>
+            Let <m>A</m> be a subspace of <m>X</m> and let <m>j\colon A\hookrightarrow X</m> be the corresponding inclusion map. A <term>retraction</term> of <m>X</m> onto <m>A</m> is a continuous map <m>r\colon X\rightarrow A</m> satisfying <m>r\vert_A=\id</m>, or equivalently, <m>r\circ j=\id\vert_A</m>. The subspace <m>A</m> is called a <term>retract</term> of <m>X</m> in this case. 
+        </p>
+    </statement>
+</definition>
+<example>
+    <title><m>S^1</m> is retract of <m>\R^2-\{\boldzero\}</m></title>
+    <statement>
+        <p>
+            Show that <m>S^1</m> is a retract of <m>\R^2-\{\boldzero\}</m>. 
+        </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
+<definition xml:id="d_Bn">
+    <title><m>n</m>-Ball</title>
+    <statement>
+        <p>
+            Fix a positive integer <m>n</m>. We denote by <m>B^n\subseteq \R^n</m> the closed unit ball centered at <m>\boldzero</m>: <ie/>, 
+                <me>
+                    B^n=\{\boldx\in \R^n\colon \abs{\boldx}\leq 1\}
+                </me>. 
+        </p>
+    </statement>
+</definition>
+<theorem xml:id="th_S1_not_retract">
+    <title><m>S^1</m> is not a retract of <m>B^2</m></title>
+    <statement>
+        <p>
+           There is no retraction of <m>B^2</m> onto <m>S^1</m>.  
+        </p>
+    </statement>
+    <proof>
+        <p>
+            Let <m>j\colon S^1\hookrightarrow B^2</m> be the inclusion map. Assume by contradiction that there is a retraction <m>r\colon B^2\rightarrow S^1</m>. Let <m>Q=(1,0)\in S^1</m>. Since <m>r\vert_{S^1}=\id\vert_{S^1}</m>, we have <m>r(Q)=j(Q)=Q</m>. Let <m>r_*\colon \pi_1(B^2, Q)\rightarrow \pi_1(S^1, Q)</m> and <m>j_*\colon \pi_1(S^1, Q)\rightarrow \pi_1(B^2, Q)</m> be the corresponding homomorphisms of fundamental groups. Since <m>r\circ j=\id_{S_1}</m>, we have <m>r_*\circ j_*=\id</m> by <xref ref="th_fund_group_function"/>. This implies <m>r_*</m> is a surjection: a contradiction since <m>\pi_1(B^2,Q)=\{e\}</m> (<m>B^2</m> is convex) and <m>\pi_1(S^1, Q)=\Z</m>. 
+        </p>
+    </proof>
+</theorem>
+<theorem xml:id="th_nullhomotopic_S1">
+    <title>Nullhomotopies from <m>S^1</m></title>
+    <statement>
+        <p>
+            Let <m>h\colon S^1\rightarrow X </m> be a continuous map. The following statements are equivalent. 
+            <ol>
+                <li>
+                    <p>
+                        <m>h</m> is nullhomotpic.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>h</m> extends to a continuous map <m>k\colon B^2\rightarrow X</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        For all <m>Q\in S^1</m>  the map <m>h_*\colon \pi_1(S_1,Q)\rightarrow \pi_1(X,h(Q))</m> is the trivial homomorphism.  
+                    </p>
+                </li>
+            </ol>
+        </p>
+    </statement>
+    <proof>
+        <title>Proof: <m>(1)\implies (2)</m></title>
+        <p>
+            Assume <m>h\colon S^1\rightarrow X</m> is nullhomotopic to the constant function <m>e_{x_0}\colon S^1\rightarrow X</m>, and let <m>H\colon S^1\times I\rightarrow X</m> be a homotopy from <m>h</m> to <m>e_{x_0}</m>. Our basic approach is to (a) show that <m>B^2</m> is a quotient of <m>S^1\times I</m>, and <m>(b)</m> use the <xref ref="th_quotientmap_mappingprop"/> to produce the desired extension <m>k\colon B^2\rightarrow X</m>.  
+        </p>
+        <p>
+            To realize <m>B^2</m> as a quotient of <m>S^1\times I</m> we wish to map each copy <m>S^1\times \{t\}</m> of <m>S^1</m> to the circle <m>C_t\colon x^2+y^2=(1-t)^2</m> for each <m>t</m>. The map <m>q\colon S^1\times t\rightarrow B^2</m> defined as <m>q((\boldx, t))=(1-t)\boldx</m> accomplishes this for us. We see by the usual arguments that <m>q</m> is continuous, and our conceptual description of <m>q</m> shows that it is surjective. Since <m>S^2\times I</m> is compact and <m>B^2</m> is Hausdorff, the map <m>q</m> is closed, and hence a quotient map. Lastly, observe that <m>q\vert_{S^1\times \{t\}}\colon S^1\times \{t\}\rightarrow C_t</m> is bijective for all <m>t\ne 1</m>, and <m>q\vert_{S^1\times \{1\}}\colon S^1\times \{1\}\rightarrow \{\boldzero\}</m> collapses all points of <m>S^1\times \{1\}</m> to <m>\boldzero</m>. It follows that
+            <men xml:id="eq_quot_fibers">
+                q(\boldx, t)=q(\boldy,t') \iff t=t'=1 \text{ or } t=t'\ne 1 \text{ and } \boldx=\boldy
+            </men>.
+            Now return to the homotopy <m>H</m>. Since for <m>t=1</m> it satisfies <m>H(\boldx,1)=H(\boldy, 1)=x_0</m>, we see from <xref ref="eq_quot_fibers"/> that it is well-defined on the fibers of <m>q</m>. By  <xref ref="th_quotientmap_mappingprop"/> there is a continuous map <m>k\colon B^2\rightarrow X</m> satisfying <m>k(q(\boldx, t))=H(\boldx, t)</m>. Observe that <m>q(\boldx, 0)=\boldx</m> for all <m>\boldx\in S^1</m>, and hence we have <m>k(\boldx)=H(q(\boldx, 0))=k(\boldx)</m> for all <m>\boldx\in S^1</m>. This proves <m>k</m> is an extension of <m>h</m>, as desired. 
+        </p>
+    </proof>
+</theorem>
+<corollary xml:id="cor_nullhomotopic_S1">
+    <title>Some non-nullhomotopies</title>
+    <statement>
+        <p>
+           The following maps from <m>S^1</m> are not nullhomotpic: 
+           <ol>
+            <li>
+                <p>
+                    the inclusion map <m>j\colon S^1\hookrightarrow \R^2-\{\boldzero\}</m>
+                </p>
+            </li>
+            <li>
+                <p>
+                    the identity map <m>\id\colon S^1\rightarrow S^1</m>. 
+                </p>
+            </li>
+           </ol> 
+        </p>
+    </statement>
+</corollary>
+<theorem xml:id="th_nonvanishing_vectorfield">
+    <title>Nonvanishing vector fields on <m>B^2</m></title>
+    <statement>
+        <p>
+            Let 
+            <m>\boldF\colon B^2\rightarrow \R^2</m> be a continuous function: <ie/>, <m>\boldF</m> is a continuous <term>vector field</term> on <m>B^2</m>. If <m>\boldF(\boldx)\ne \boldzero</m> for all <m>\boldx\in B^2</m> (<ie/>, <m>\boldF</m> is <term>nonvanishing</term>), then there exist nonzero elements <m>\boldx_1, \boldx_2\in B^2</m> such that <m>\boldF(\boldx_1)=a\boldx_1</m> for some positive <m>a\in \R</m> and <m>\boldF(\boldx_2)=-b\boldx_2</m> for some positive <m>b\in \R</m>. In other words, there is a point in <m>B^2</m> where the vector field points directly outward, and a point where the vector field points directly inward.  
+        </p>
+    </statement>
+    <proof>
+        <p>
+            Suppose first by contradiction that there is no point where <m>\boldF</m> points inward. By assumption we have <m>\boldF\colon B^2\rightarrow \R^2-\{\boldzero\}</m>, which restricts to  continuous function <m>F\vert_{S^1}\colon S^1\rightarrow \R^2-\{\boldzero\}</m>. By <xref ref="th_nullhomotopic_S1"/> <m>\boldF\vert_{S_1}</m> is nullhomotpic. We will show that <m>\boldF\vert_{S^1}</m> is also homotopic to the inclusion <m>j\colon S^1\rightarrow \R^2-\{\boldzero\}</m>: a contradiction since <m>j</m> is not nullhomotpic by <xref ref="cor_nullhomotopic_S1"/>.     
+        </p>
+        <p>
+            By abuse of notation, we denote <m>\boldF\vert_{S^1}=\boldF</m>. To see <m>\boldF\simeq j</m>, consider the function <m>H(\boldx, t)=(1-t)\boldx+t\boldF(\boldx)</m>. It is clear that <m>H</m> defines a continuous function to <m>\R^2</m>, and we have <m>H(\boldx, 0)=\boldx</m> and <m>H(\boldx, 1)=\boldF</m>. Thus it appears we have our homotopy. However, we must show that <m>H\colon S^1\times I\rightarrow \R^2-\{\boldzero\}</m>: that is, we must show <m>H(\boldx, t)\ne \boldzero</m> for all <m>\boldx\in S^1</m> and <m>t\in I</m>. But if  <m>\boldx\in S^1</m> were an element satisfying <m>(1-t)\boldx+t\boldF(\boldx)=\boldzero</m> for some <m>t\in \R</m>, then we would have <m>t\ne 0</m> (since <m>\boldx\ne\boldzero</m>) and <m>\boldF(\boldx)=-\frac{1-t}{t}\boldx=-b\boldx</m>, where <m>b=\frac{1-t}{t}&gt; 0</m>. This is impossible by our original assumption, since then <m>\boldF</m> would point directly inward at <m>\boldx</m>. 
+        </p>
+        <p>
+            We've shown that {\em any} nonvanishing vector field on <m>B^2</m> must point directly inward at some point. Thus for any nonvanishing vector field <m>\boldF</m>, the nonvanishing vector field <m>\boldG=-\boldF</m> has a point <m>\boldx</m> in <m>B^2</m> where it points directly inward. The vector field <m>\boldF</m> then points directly outward at <m>\boldx</m>, as desired.  
+        </p>
+    </proof>
+</theorem>
+<theorem xml:id="th_Brouwer_fixed_point">
+    <title>Brouwer fixed-point theorem</title>
+    <statement>
+        <p>
+            If <m>f\colon B^2\rightarrow B^2</m> is continuous, then <m>f</m> has a fixed point: <ie/>, we have <m>f(\boldx)=\boldx</m> for some point <m>\boldx\in B^2</m>. 
+        </p>
+    </statement>
+    <proof>
+        <p>
+            Assume by contradiction that <m>f(\boldx)\ne \boldx</m> for all <m>\boldx\in B^2</m>. The map <m>\boldF(\boldx)=f(\boldx)-\boldx</m> is a then a nonvanishing vector field on <m>B^2</m>. By <xref ref="th_nonvanishing_vectorfield"/> there is a point <m>\boldx\in B^2</m> such that <m>\boldF(\boldx)=f(\boldx)-\boldx=a\boldx</m> for some positive <m>a\in \R</m>. But then <m>f(\boldx)=(a+1)\boldx\notin B^2</m>: a contradiction! Thus <m>f</m> must have a fixed point. 
+        </p>
+    </proof>
+</theorem>
+<corollary xml:id="cor_positive_eigenvalues">
+    <title>Eigenvalues of positive matrices</title>
+    <statement>
+        <p>
+            If <m>A</m> is a <m>3\times 3</m> matrix with positive entries, then <m>A</m> has a positive real eigenvalue. 
+        </p>
+    </statement>
+</corollary>
+
+</section>

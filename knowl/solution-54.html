@@ -13,17 +13,9 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h3 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.20.2.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.20.1.1</span><span class="period">.</span>
 </h3>
-<div class="para logical">
-<div class="para">See Munkres for the full proof. I'll content myself with a discussion of some of the key elements. First, let <span class="process-math">\(D=\{(x,-x)\colon x\in\R\}\subseteq \R_\ell^2\text{.}\)</span> This set is closed in <span class="process-math">\(\R^2\text{,}\)</span> and hence closed in <span class="process-math">\(\R_\ell^2\text{,}\)</span> since the left limit product topology is finer than the standard topology. Next, as we saw on a previous homework, <span class="process-math">\(D\)</span> is discrete as a subspace of <span class="process-math">\(\R_\ell^2\text{:}\)</span> if follows that every subset of <span class="process-math">\(D\text{,}\)</span> being itself closed in <span class="process-math">\(D\text{,}\)</span> is closed in <span class="process-math">\(\R_\ell^2\text{,}\)</span> using transitivity. In particular the two sets</div>
-<div class="displaymath process-math">
-\begin{align*}
-A\amp=D\cap \Q^2=\{(x,-x)\colon x\in \Q\} \amp B\amp=D-A=\{(x,-x)\colon x\notin \Q\} \text{.}
-\end{align*}
-</div>
-<div class="para">By what we said above, the disjoint sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are closed in <span class="process-math">\(\R_\ell^2\text{,}\)</span> but as it turns out you cannot separate them by open sets. The proof is not terribly difficult, but will seem somewhat convoluted without knowing about the Baire category theorem. As such, I omit it. (Munkres doesn't use this approach, choosing instead a proof by contradiction, but he outlines a proof in one of his exercises.)</div>
-</div>
+<div class="para">Let <span class="process-math">\(A, B\)</span> be disjoint closed subsets of <span class="process-math">\(\R_\ell\text{.}\)</span> We can find open coverings <span class="process-math">\(A\subseteq U=\bigcup_{a\in A}[a,x_a), B\subseteq V=\bigcup_{b\in B}[b, y_b)\)</span> satisfying <span class="process-math">\([a,x_a)\cap B=[b,y_b)\cap A=\emptyset\)</span> for all <span class="process-math">\(a\in A, b\in B\text{.}\)</span> First observe that <span class="process-math">\([a,x_a)\cap [b,x_b)=\emptyset\)</span> for all <span class="process-math">\(a\in A, b\in B\text{.}\)</span> Indeed, otherwise we'd have <span class="process-math">\([a,x_a)\cap [b,x_b)=[\max(a,b),\min(x_a,y_b))\text{,}\)</span> in which case either <span class="process-math">\(a\in [a,x_a)\cap [b,x_b) \)</span> or <span class="process-math">\(b\in [a,x_a)\cap [b,x_b)\text{:}\)</span> both are impossible since <span class="process-math">\(a\notin [b,x_b)\)</span> and <span class="process-math">\(b\notin [a,x_a)\text{.}\)</span> We conclude that <span class="process-math">\(U\cap V=\emptyset\text{,}\)</span> proving that <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> can be separated by open sets.</div>
 </div>
 <span class="incontext"><a href="s_normal.html#solution-54" class="internal">in-context</a></span>
 </body>

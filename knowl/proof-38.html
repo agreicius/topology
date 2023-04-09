@@ -11,15 +11,30 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para">Statement (1) follows from <a href="" class="xref" data-knowl="./knowl/th_Hausdorff_props.html" title="Theorem 2.5.7: Hausdorff properties">Theorem 2.5.7</a>.</div> <div class="para logical">
-<div class="para">We provide a counterexample to the claim that <span class="process-math">\(T_1\)</span> implies Hausdorff. Let <span class="process-math">\(X\)</span> be any <em class="emphasis">infinite</em> set endowed with the cofinite topology. The closed sets of <span class="process-math">\(X\)</span> are precisely the finite sets and <span class="process-math">\(X\)</span> itself, as we saw in <a href="" class="xref" data-knowl="./knowl/eg_closed_cofinite.html" title="Example 2.4.5: Closed in the cofinite topology">Example 2.4.5</a>. Thus <span class="process-math">\(X\)</span> is <span class="process-math">\(T_1\text{.}\)</span> On the other hand, <span class="process-math">\(X\)</span> is not Hausdorff. Indeed take any two distinct elements <span class="process-math">\(x, y\in X\text{.}\)</span> Let <span class="process-math">\(U_x\)</span> and <span class="process-math">\(U_y\)</span> be any pair of open neighborhoods of <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{,}\)</span> respectively. We will show that <span class="process-math">\(U_x\cap U_y\ne \emptyset\text{.}\)</span> If either of the open neighborhoods is equal to <span class="process-math">\(X\)</span> itself, the claim is obvious. Otherwise <span class="process-math">\(C=U_x^c\)</span> is a finite set that does not contain <span class="process-math">\(x\)</span> and <span class="process-math">\(D=U_y^c\)</span> is a finite set that does not contain <span class="process-math">\(y\text{.}\)</span> Since <span class="process-math">\(X\)</span> is infinite, <span class="process-math">\(X\ne C\cup D\text{,}\)</span> and hence</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_closed_cofinite.html">
-\begin{equation*}
-U_x\cap U_y=C^c\cap D^c=(C\cup D)^c\ne \emptyset\text{,}
-\end{equation*}
+<article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
+<div class="para logical">
+<div class="para">We content ourselves with a proof sketch in order to avoid getting into the weeds of elementary number theory. The positivity and symmetry axioms follow readily from simple properties of divisibility. For the triangle inequality it is enough to prove that the <span class="process-math">\(p\)</span>-adic norm <span class="process-math">\(\abs[p]{\hspace{5pt}}\)</span> satisfies the triangle inequality on <span class="process-math">\(\Z\text{:}\)</span> i.e., for all <span class="process-math">\(m,n\in\Z\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_padic_triangle_inequality.html">
+\begin{equation}
+\abs[p]{m+n}\leq \abs[p]{m}+\abs[p]{n}\tag{2.3.4}
+\end{equation}
 </div>
-<div class="para">as desired.</div>
-</div></article><span class="incontext"><a href="s_limitpoints_hausdorff.html#proof-38" class="internal">in-context</a></span>
+<div class="para">since then for any <span class="process-math">\(r,s,t\in\Z\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_padic_triangle_inequality.html">
+\begin{align*}
+d(r,s) \amp=\abs[p]{r-s} \\
+\amp=\abs[p]{r-t +t-s} \\
+\amp\leq \abs[p]{r-t}+\abs[p]{t-s}\\
+\amp \leq d(r,t)+d(t,s)\text{.}
+\end{align*}
+</div>
+<div class="para">Lastly, the inequality <a href="" class="xref" data-knowl="./knowl/eq_padic_triangle_inequality.html" title="Equation 2.3.4">(2.3.4)</a> follows from the stronger claim</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_padic_triangle_inequality.html">
+\begin{equation}
+\abs[p]{m+n}\leq \max\{\abs[p]{m}, \abs[p]{n} \}\text{,}\tag{2.3.5}
+\end{equation}
+</div>
+<div class="para">which itself follows from divisibility properties.</div>
+</div></article><span class="incontext"><a href="s_metric1.html#proof-38" class="internal">in-context</a></span>
 </body>
 </html>

@@ -1,0 +1,129 @@
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="s_surface_fund_grps">
+  <title>Fundamental groups of some surfaces</title>
+<definition xml:id="d_manifold">
+    <title>Topological manifold</title>
+    <statement>
+        <p>
+            Let <m>n</m> be a nonnegative integer. A <term>topological <m>n</m>-manifold</term> is a topological space <m>M</m> satisfying the following properties:
+            <ol marker="(i)">
+                <li>
+                    <title>Hausdorff</title>
+                    <p>
+                        <m>M</m> is Hausdorff. 
+                    </p>
+                </li>
+                <li>
+                    <title>Second countable</title>
+                    <p>
+                        <m>M</m> is second countable: <ie/>, <m>M</m> has a countable basis. 
+                    </p>
+                </li>
+                <li>
+                    <title>Locally Euclidean</title>
+                    <p>
+                       <m>M</m> is <term>locally Euclidean</term> of dimension <m>n</m>: <ie/>, every <m>m\in M</m> has an open neighborhood <m>U</m> that is homeomorphic to an open subset of <m>\R^n</m>. (We define <m>\R^0=\{\boldzero\}</m>.)
+                    </p>
+                </li>
+            </ol> 
+        A <m>1</m>-manifold is called a <term>curve</term>; a <m>2</m>-manifold is called a <term>surface</term>. 
+        </p>
+    </statement>
+</definition>
+<remark>
+    <p>
+        You might be wondering whether an <m>m</m>-manifold could also be an <m>n</m>-manifold. The answer is no, but hinges on the fact that <m>\R^m</m> is not homeomorphic to <m>\R^n</m> (invariance of domain), which is difficult to prove in full generality. However, we do know that invariance of domain holds for <m>\R^1</m> and <m>\R^2</m> (homework exercise), so the <m>n</m> in <m>n</m>-manifold is well-defined at least for <m>n=1,2</m>.  
+    </p>
+</remark>
+<example>
+    <title>Sphere, projective 2-space, torus</title>
+    <statement>
+        <p>
+            Show that <m>S^2</m>, <m>\PP^2</m>, and <m>T</m> are surfaces. 
+        </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
+<definition xml:id="d_euclidean_ball">
+    <title>Euclidean balls</title>
+    <statement>
+        <p>
+            Let <m>M</m> be an <m>n</m>-manifold. A <term>Euclidean ball</term> is an open set <m>B\subseteq M</m> that is homeomorphic to an open ball of <m>\R^n</m>. 
+        </p>
+        <p>
+            A Euclidean ball <m>B\subseteq M</m> is <term>regular</term> is there is a Euclidean ball <m>B'</m> such that (i) <m>\overline{B}\subseteq B'</m> and (ii) there is a homeomorphism of <m>\phi\colon B'\rightarrow B_{2r}(\boldzero)\subseteq \R^n</m> for some <m>r&gt; 0</m>, such that <m>\overline{B}=\phi^{-1}(\overline{B}_r(\boldzero))</m>. 
+        </p>
+    </statement>
+</definition>
+<definition xml:id="d_connected_sum">
+    <title>Connected sum of surfaces</title>
+    <statement>
+        <p>
+            For each <m>i\in \{1,2\}</m> let <m>M_i</m> be a surface and let <m>B_i\subseteq M_i</m> be a regular Euclidean ball. Furthermore, let <m>\phi\colon \partial \overline{B_1}\rightarrow \partial \overline{B_2}</m> be a homeomorphism. The <term>connected sum</term> of <m>M_1</m> and <m>M_2</m> is the quotient space <m>M_1\# M_2</m> obtained from the disjoint union <m>(M_1-B_1)\coprod (M_2-B_2)</m> by identifying <m>m</m> and <m>\phi(m)</m> for all points <m>m\in \partial\overline{B_1}</m>. 
+        </p>
+        <p>
+            It is possible to show that <m>M_1\# M_2</m> is itself a surface. 
+        </p>
+    </statement>
+</definition>
+<example xml:id="eg_double_torus">
+    <title>Double torus</title>
+    <statement>
+        <p>
+            The <term>double torus</term> (or <term>2-holed torus</term>) is the connected sum <m>T\# T</m> obtained by excising two circular patches on two copies of <m>T</m> and glueing the two surfaces together along the circular boundaries. Make this description more precise, using the quotient description of the torus.  
+        </p>
+    </statement>
+    <solution>
+        <p>
+            <p>
+                Let <m>T</m> be the torus realized as the quotient of <m>I\times I</m> by the relation <m>(0,y)\sim (1,y)</m> and <m>(x,0)\sim (x,1)</m> for all <m>x,y\in I</m>, and let <m>T_1, T_2</m> be copies of <m>T</m>
+            </p>
+        </p>
+    </solution>
+</example>
+<example xml:id="eg_figure_eight">
+    <title>Fundamental group of the figure eight</title>
+    <statement>
+        <p>
+            Let <m>X</m> be your favorite incarnation of the figure eight space. 
+        </p>
+        <ol>
+            <li>
+                <p>
+                    Show that the diagram below describes a covering map of <m>X</m>. Your argument can be somewhat informal (since no formulas are provided). 
+                    <image source="cover_figure_eight.png" width="75%">
+                        <description>Cover of figure eight</description>
+                    </image>
+                </p>
+            </li>
+            <li>
+                <p>
+                    Let <m>x_0</m> be the intersection of the two circles in the figure eight, and let <m>f,g\in P(X; x_0,x_0)</m> be the simple paths traversing the left and right hoops of <m>X</m>, with orientation as in the diagram. Use the lifting correspondence to show that <m>[f]*[g]\ne [g]*[f]</m>, and hence that <m>\pi_1(X,x_0)</m> is a nonabelian group. 
+                </p>
+            </li>
+        </ol>
+    </statement>
+</example>
+
+<example xml:id="eg_double_torus_fund_grp">
+    <title>Double torus fundamental group</title>
+    <statement>
+        <p>
+            Give an informal, yet convincing argument that there is a retraction <m>r\colon T\#T\rightarrow X</m> from the double torus <m>T\#T</m> to the figure eight space <m>X</m>. Explain why this implies <m>\pi_1(T\#T, x_0)</m> is nonabelian. 
+        </p>
+    </statement>
+</example>
+
+<theorem xml:id="th_nonhomeomorphic_surfaces">
+    <title>Some non-homeomorphic surfaces</title>
+    <statement>
+        <p>
+           The following surfaces are pairwise non-homeomorphic: <m>S^2, T, \PP^2, T\#T</m>. 
+        </p>
+    </statement>
+</theorem>
+
+</section>

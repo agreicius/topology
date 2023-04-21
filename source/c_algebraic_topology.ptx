@@ -5,5 +5,8 @@
   <xi:include  href="s_covering_spaces.ptx"/>
   <xi:include  href="s_coveringmaps_fundgroups.ptx"/>
   <xi:include  href="s_retract_Brouwer.ptx"/>
-
+  <xi:include  href="s_deformation_retract.ptx"/>
+  <xi:include  href="s_homotopy_type.ptx"/>
+  <xi:include  href="s_Sn_simply_connected.ptx"/>
+  <xi:include  href="s_surface_fund_grps.ptx"/>
 </chapter>

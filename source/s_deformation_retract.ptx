@@ -1,0 +1,143 @@
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="s_deformation_retract">
+  <title>Deformation retract</title>
+<lemma xml:id="lemma_homotopic_fund_grp">
+    <title>Homotopic maps and fundamental groups</title>
+    <statement>
+        <p>
+          Let <m>h,k\colon (X,x_0)\rightarrow (Y,y_0)</m> be maps of pointed spaces. If there is a homotopy <m>H\colon X\times I\rightarrow Y</m> from <m>h</m> to <m>k</m> satisfying <m>H(x_0,t)=y_0</m> for all <m>t\in I</m>, then we have <m>h_*=k_*</m> as group homomorphisms from <m>\pi_1(X,x_0)</m> to <m>\pi_1(Y,y_0)</m>.   
+        </p>
+    </statement>
+    <proof>
+        <p>
+            By definition of <m>h_*, k_*</m>, we must show that <m>[h\circ f]=[k\circ f]</m> for all loops <m>f\in P(X; x_0,x_0)</m>: equivalently, we must show <m>h\circ f\simeq_p k\circ f</m>. This of course is where <m>H</m> comes in. Define <m>G\colon I\times I\rightarrow Y</m> as <m>G(s,t)=H(f(s),t)</m>. We see that 
+            <md>
+                <mrow>G(s,0) \amp = H(f(s),0) \amp G(s,1)\amp = H(f(s),1) </mrow>
+                <mrow> \amp = h(f(s)) \amp \amp =k(f(s)</mrow>
+                <mrow> \amp =h\circ f(s) \amp \amp =k\circ f(s)</mrow>
+            </md>,
+            showing that <m>G</m> is a homotopy from <m>h</m> to <m>k</m>. It remains to show it is a path homotopy. This follows since 
+            <md>
+                <mrow>G(0,t) \amp = H(f(0),t)=H(x_0,t)=y_0</mrow>
+                <mrow>G(1,t) \amp =H(f(1),t)=H(x_0,t)=y_0</mrow>
+            </md>
+            for all <m>t\in I</m>.
+        </p>
+    </proof>
+</lemma>
+<theorem xml:id="th_Sn_Rn_minus_pt">
+    <title>Fundamental groups: <m>S^n</m> and <m>\R^{n+1}-\{\boldzero\}</m></title>
+    <statement>
+        <p>
+            Let <m>X=\R^{n+1}-\{\boldzero\}</m>, let <m>j\colon S^n\hookrightarrow X</m> be the inclusion map, and let <m>\boldx_0=(1,0,\dots, 0)</m>. The function 
+            <md>
+                <mrow>r\colon X \amp \rightarrow S^n</mrow>
+                <mrow>\boldx \amp \mapsto \frac{\boldx}{\norm{\boldx}}</mrow>
+            </md>
+            is a retraction map that induces an isomorphism <m>r_*\colon \pi_1(X, \boldx_0)\rightarrow \pi_1(S^n, \boldx_0)</m>. 
+        </p>
+    </statement>
+    <proof>
+        <p>
+            It is clear that the given <m>r</m> is a retraction. Letting <m>j\colon S^n\hookrightarrow X</m> be the inclusion, we have <m>r\circ j=\id_{S^n}</m> and hence <m>r_*\circ j_*=\id_{\pi_1(S^n, \boldx_0)}</m>. 
+        </p>
+        <p>
+            We are halfway to showing <m>r_*\colon \pi_1(X,\boldx_0)\rightarrow \pi_1(S^n, \boldx_0)</m>. It remains to show <m>j_*\circ r_*=\id_{\pi_1(X,\boldx_0)}</m>, and to do this we use the lemmma. Specifically we show that <m>\id_X\colon X\rightarrow X</m> and <m>j\circ r\colon X\rightarrow X</m> are homotopic via a homotopy <m>H</m> as described in <xref ref="lemma_homotopic_fund_grp"/>. Since <m>j\circ r(x)=\boldx/\norm{\boldx}
+            </m>, it is easy to see that <m>H\colon X\rightarrow I\rightarrow X</m>
+            <me>
+                H(x,t)=(1-t)\boldx+t\frac{\boldx}{\norm{\boldx}}
+            </me>
+            is a homoto\boldx_0y from <m>\id_X</m> to <m>j\circ r</m>. Furthermore, we have 
+            <me>
+                H(\boldx_0,t)=(1-t)\boldx_0+t\frac{\boldx_0}{\norm{\boldx_0}}=(1-t)\boldx_0+\boldx_0=\boldx_0
+            </me>,
+            using the fact that <m>\norm{\boldx_0}=1</m>.  
+        </p>
+    </proof>
+</theorem>
+<definition xml:id="d_deformation_retract">
+    <title>Deformation retract</title>
+    <statement>
+        <p>
+            Let <m>A</m> be a subspace of <m>X</m>. A <term>deformation retraction</term> from <m>X</m> to <m>A</m> is a homotopy <m>H\colon X\times I\rightarrow X</m> satisfying the conditions below. (It will help to think of <m>H=\{f_t\}_{t\in I}</m> in the usual way.) 
+            <ol marker="(i)">
+                <li>
+                    <p>
+                       <m>H(x,0)=x</m> for all <m>x\in X</m> (<m>f_0(x)=\id_X</m>); 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>H(x,1)\in A</m> for all <m>x\in X</m> (<m>f_1\colon X\rightarrow A</m>); 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>H(a,t)=a</m> for all <m>a\in A</m> and <m>t\in I</m> (<m>f_t\vert_A=\id_A</m> for all <m>t\in I</m>).
+                    </p>
+                </li>
+            </ol>
+            In this case <m>A</m> is called a <term>deformation retract</term> of <m>X</m>. 
+        </p>
+        <p>
+            Letting <m>r\colon X\rightarrow A</m> be defined as <m>r(x)=H(x,1)</m>, we see that <m>r</m> is a retraction from <m>X</m> to <m>A</m>, and <m>H</m> is a homotopy from <m>\id_X</m> to <m>j\circ r</m>, where <m>j\colon A\hookrightarrow X</m> is the inclusion map.
+        </p>
+    </statement>
+</definition>
+<remark>
+    <title>Deformation retract</title>
+   <p>
+    Loosely <m>A</m> is a deformation retract of <m>X</m> if there is a retraction <m>r\colon X\rightarrow A</m>, and this retraction is homotopic to the identity function on <m>X</m>. 
+   </p> 
+</remark>
+<theorem xml:id="th_deformation_retract">
+    <title>Deformation retract and fundamental groups</title>
+    <statement>
+        <p>
+            Let <m>A</m> be a deformation retract of <m>X</m>. The inclusion <m>j\colon A\rightarrow X</m> gives rise to an isomorphism <m>j_*\colon \pi_1(A,a)\rightarrow \pi_1(X,a)</m> for any <m>a\in A</m>. 
+        </p>
+    </statement>
+    <proof>
+        <p>
+            The proof is essentially identical to the one provided for <xref ref="th_Sn_Rn_minus_pt"/>. As stated in the <xref ref="d_deformation_retract"/>, the map <m>r\colon </m>
+        </p>
+    </proof>
+</theorem>
+
+<example xml:id="eg_R2">
+    <title><m>\R^3</m> minus axis</title>
+    <p>
+        Let <m>X</m> be <m>\R^3</m> with the the <m>z</m>-axis removed. Show that <m>\R^2-\{\boldzero\}</m> is a deformation retract of <m>X</m>. Conclude that <m>\pi_1(X, x_0)=\Z</m> for any <m>x_0\in X</m>. 
+    </p>
+    
+</example>
+
+<example>
+    <title><m>\R^3</m> minus circle and <m>z</m>-axis</title>
+    <p>
+        Let <m>X</m> be <m>\R^3</m> with the circle <m>x^2+y^2=1</m> in the <m>xy</m>-plane and the <m>z</m>-axis removed. Show that the torus <m>\mathcal{S}</m> obtained by revolving the circle <m>(x-1)^2+y^2=(1/2)^2</m> is a deformation retract of <m>X</m>. Conclude that <m>\pi_1(X,x_0)\cong \Z^2</m> for any <m>x_0\in X</m>.  
+    </p>    
+</example>
+
+<example xml:id="eg_doubly_eight_theta">
+    <title>Doubly punctured plane, figure eight, theta space</title>
+    <p>
+        Let <m>X=\R^2-\{P\}-\{Q\}</m>, where <m>P=(-1/2,0), Q=(1/2,0)</m>. Show that the given <m>A</m> is a deformation retract of <m>X</m>:
+        <ol>
+            <li>
+                <title>Figure eight</title>
+                <p>
+                    <m>A=C_1\cup C_2</m>, where <m>C_1\colon (x+1/2)^2+y^2=(1/2)^2</m>, <m>C_2\colon (x-1/2)^2+y^2=(1/2)^2</m>
+                </p>
+            </li>
+            <li>
+                <title>Theta space</title>
+                <p>
+                   <m>A=S^1\cup \{0\}\times [-1,1]</m> (<ie/>, circle union diameter) 
+                </p>
+            </li>
+        </ol>
+    </p>
+</example>
+
+
+</section>

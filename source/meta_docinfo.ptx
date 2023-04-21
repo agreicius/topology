@@ -21,6 +21,7 @@
       \newcommand{\C}{{\mathbb C}}
       \newcommand{\T}{{\mathbb T}}
       \newcommand{\F}{{\mathbb F}}
+      \newcommand{\PP}{{\mathbb P}}
       \newcommand{\HH}{{\mathbb H}}
       \newcommand{\compose}{\circ}
       \newcommand{\bolda}{{\mathbf a}}

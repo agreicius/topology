@@ -124,7 +124,7 @@
     </proof>
 </theorem>
 <theorem xml:id="th_Brouwer_fixed_point">
-    <title>Brouwer fixed-point theorem</title>
+    <title>Brouwer fixed-point theorem (disc)</title>
     <statement>
         <p>
             If <m>f\colon B^2\rightarrow B^2</m> is continuous, then <m>f</m> has a fixed point: <ie/>, we have <m>f(\boldx)=\boldx</m> for some point <m>\boldx\in B^2</m>. 

@@ -1,0 +1,68 @@
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="s_homotopy_type">
+  <title>Homotopty equivalence</title>
+<definition xml:id="d_homotopy_equivalence">
+    <title>Homotopy equivalence</title>
+    <statement>
+        <p>
+            A continuous function <m>f\colon X\rightarrow Y</m> is a <term>homotopy equivalence</term> if there exists a continuous map <m>g\colon Y\rightarrow X</m> such that <m>f\circ g\simeq \id_Y</m> and <m>g\circ f\simeq \id_X</m>. 
+        </p>
+        <p>
+            When this is the case <m>f</m> and <m>g</m> are called <term>homotopy inverses</term> one another; and <m>X</m> and <m>Y</m> are said to be <term>homotopy equivalent</term> and have the same <term>homotopy type</term>. 
+        </p>
+    </statement>
+</definition>
+<example xml:id="eg_deformation_retract">
+    <title>Deformation retract</title>
+    <statement>
+        <p>
+            Show that if <m>A\subseteq X</m> is a deformation retract, then the inclusion map <m>j\colon A\hookrightarrow X</m> is a homotopy equivalence. 
+        </p>
+    </statement>
+    <solution>
+        <p>
+            Let <m>H\colon X\times I\rightarrow I</m> be a deformation retraction from <m>X</m> to <m>A</m>. We have seen that the function <m>r(x)=H(x,1)</m> is a contraction to <m>A</m> satisfying <m>r\circ j=\id_A</m> (and hence <m>r\circ j\simeq \id_A</m>) and <m>j\circ r\simeq \id_X</m>.
+        </p>
+    </solution>
+</example>
+<p>
+    Our goal is to show that if <m>f\colon (X,x_0)\rightarrow (Y,y_0)</m> is a homotopy equivalence, then <m>f_*\colon \pi_1(X,x_0)\rightarrow \pi_1(Y,y_0)</m> is an isomorphism. To do so we need a strengthening of <xref ref="lemma_homotopic_fund_grp"/>. 
+</p>
+<lemma xml:id="lemmma_homotopic_fund_grp_2">
+    <title>Homotopic maps and fundamental group revisited</title>
+    <statement>
+        <p>
+           Let <m>h,k\colon X\rightarrow Y</m> be homotopic, and let <m>H</m> be a homotopy from <m>h</m> to <m>k</m>. Fix <m>x_0\in X</m>, set <m>y_0=h(x_0)</m> and <m>y_1=k(x_0)</m>, and let <m>h_*\colon \pi_1(X,x_0)\rightarrow \pi_1(Y,y_0)</m> and <m>k_*\colon \pi_1(X,x_0)\rightarrow \pi_1(Y,y_1)</m> be the corresponding group homomorphisms. We have 
+           <me>
+            k_*=\widehat{\alpha}\circ h_*
+           </me>,
+           where <m>\widehat{\alpha}\colon \pi_1(Y,y_0)\rightarrow \pi_1(Y,y_1)</m> is the group isomorphism arising from the path <m>\alpha\in P(Y; y_0,y_1)</m> defined as <m>\alpha(t)=H(x_0,t)</m>. 
+           <image xml:id="im_homotopic_fund_grp_2" width="40%">
+            <description>Commutative diagram</description>
+            <latex-image>
+                \begin{tikzcd}
+                \amp \pi_1(Y,y_1) \\ 
+            \pi_1(X,x_0) \arrow[ur, "k_*"] \arrow[r,"h_*"'] \amp \pi_1(Y,y_0) \arrow[u, "\widehat{\alpha}"']
+                \end{tikzcd}
+            </latex-image>
+           </image>
+        </p>
+    </statement>
+</lemma>
+<corollary xml:id="cor_homotopic_maps">
+    <title>Homotopic maps and fundamental groups</title>
+    <statement>
+        <p>
+            Suppose <m>h,k\colon X\rightarrow Y</m> are homotopic. Fix <m>x_0\in X</m>, let <m>y_0=h(x_0)</m> and <m>y_1=h(x_1)</m>, and let <m>h_*\colon \pi_1(X,x_0)\rightarrow (Y,y_0)</m> and <m>k_*\colon \pi_1(X,x_0)\rightarrow \pi_1(Y,y_1)</m> be the corresponding group homomorphisms. The group homomorphism <m>h_*</m> is injective (resp. surjective, resp. trivial) if and only if <m>k_*</m> is injective (resp. surjective, resp. trivial). In particular, if <m>h</m> is nullhomotopic, then <m>h_*</m> is trivial. 
+        </p>
+    </statement>
+</corollary>
+<theorem xml:id="th_homotopy_type">
+    <title>Homotopy equivalence and fundamental groups</title>
+    <statement>
+        <p>
+            Assume <m>f\colon X\rightarrow Y</m> is a homotopy equivalence. Given <m>x_0\in X</m>, let <m>y_0=f(x_0)</m>. The map <m>f_*\colon \pi_1(X,x_0)\rightarrow \pi_1(Y,y_0)</m> is an isomorphism. 
+        </p>
+    </statement>
+</theorem>
+
+</section>

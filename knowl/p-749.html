@@ -13,22 +13,15 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(X^*\)</span> be the quotient space of <span class="process-math">\(X\)</span> by the equivalence relation <span class="process-math">\(\sim\text{,}\)</span> and let <span class="process-math">\(q\colon X\rightarrow X^*\)</span> be the corresponding quotient map. Let <span class="process-math">\(g\colon X\rightarrow Z\)</span> be a continuous function that agrees on fibers of <span class="process-math">\(q\)</span> (i.e., <span class="process-math">\(x\sim x'\implies g(x)=g(x')\)</span>).</div>
-<ol class="decimal">
-<li><div class="para">There is a unique continuous function <span class="process-math">\(f\)</span> satisfying <span class="process-math">\(g=f\circ q\text{;}\)</span> and <span class="process-math">\(f\)</span> is a quotient map if and only if <span class="process-math">\(g\)</span> is a quotient map. <div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="generated/latex-image/im_quotientspace_prop.svg" role="img" class="contained"></div>
-</div></li>
-<li><div class="para logical">
-<div class="para">The function <span class="process-math">\(f\)</span> is a homeomorphism if and only if <span class="process-math">\(g\)</span> is a quotient map and satisfies</div>
+<div class="para">To see why we use the <em class="emphasis">uniqueness</em> claim in the product mapping property (twice). Indeed, the function <span class="process-math">\(f\circ g\colon X\rightarrow X\)</span> is continuous and satisfies</div>
 <div class="displaymath process-math">
 \begin{equation*}
-g(x)=g(x') \iff x\sim x' (\text{equivalently, } g(x)=g(x')\iff q(x)=q(x'))
+\pi_i\circ (g\circ f)=(\pi_i\circ g)\circ f=\pi_i'\circ f=\pi_i
 \end{equation*}
 </div>
-<div class="para">for all <span class="process-math">\(x, x'\in X\text{.}\)</span>
+<div class="para">for all <span class="process-math">\(i\in I\text{.}\)</span> But the function <span class="process-math">\(\id_X\colon X\rightarrow X\)</span> also satisfies <span class="process-math">\(\pi_i=\pi_i\circ\id_X\)</span> for all <span class="process-math">\(i\in I\text{.}\)</span> By the uniqueness claim of the product mapping property, we conclude <span class="process-math">\(\id_X=f\circ g\text{,}\)</span> as desired. The proof that <span class="process-math">\(g\circ f=\id_{X'}\)</span> is nearly identical, now applying the product mapping propery to maps into <span class="process-math">\(X'\text{.}\)</span>
 </div>
-</div></li>
-</ol>
 </div>
-<span class="incontext"><a href="s_quotients.html#p-749" class="internal">in-context</a></span>
+<span class="incontext"><a href="s_homeomorphisms.html#p-749" class="internal">in-context</a></span>
 </body>
 </html>

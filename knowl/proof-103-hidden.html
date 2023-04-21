@@ -10,25 +10,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"> <div class="para logical">
-<div class="para">First we show that for any continuous function <span class="process-math">\(f\colon A\rightarrow [-r,r]\text{,}\)</span> we can find a continuous function <span class="process-math">\(g\colon X\rightarrow [-r/3, r/3]\)</span> such that (i) <span class="process-math">\(\abs{g(x)}\leq \frac{1}{3}r\)</span> and (ii) <span class="process-math">\(\abs{g(a)-f(a)}\leq \frac{2}{3}r\)</span> for all <span class="process-math">\(a\in A\text{.}\)</span> To do so, subdivide <span class="process-math">\([-r,r]\)</span> as</div>
+<body class="ignore-math"><article class="hiddenproof"><div class="para logical">
+<div class="para">The proof of (1) is elementary. (See text.) The proof of (2) is more interesting. Assume <span class="process-math">\(\{X_i\}_{i\in I}\)</span> is a collection of completely regular spaces, and let <span class="process-math">\(X=\prod_{i\in I}X_i\text{.}\)</span> Let <span class="process-math">\(A\subseteq X\)</span> be a closed set, and let <span class="process-math">\(b=(b_i)_{i\in I}\)</span> be any element not contained in <span class="process-math">\(A\text{.}\)</span> Since <span class="process-math">\(X-A\)</span> is open, we can find a base open neighborhood of <span class="process-math">\(b\)</span> of the form <span class="process-math">\(U=\prod_{k=1}^n U_{i_k}\times \prod_{i\ne i_k}X_i\text{.}\)</span> For each <span class="process-math">\(1\leq k\leq n\)</span> let <span class="process-math">\(f_k\colon X_{i_k}\rightarrow [0,1]\)</span> be a continuous function satisfying <span class="process-math">\(f_k(b_{i_k})=1, f_k(U_{i_k}^c)=\{0\}\text{.}\)</span>  The function</div>
 <div class="displaymath process-math">
-\begin{equation*}
-[-r,r]=[-r,-r/3]\cup [-r/3,r/3]\cup [r/3,r]
-\end{equation*}
+\begin{align*}
+f\colon X \amp \rightarrow [0,1]\\
+x=(x_i)_{i\in I} \amp \mapsto \prod_{k=1}^nf_{i_k}(x_{i_k})
+\end{align*}
 </div>
-<div class="para">define <span class="process-math">\(B=f^{-1}([-r,-r/3])\)</span> and <span class="process-math">\(C=f^{-1}([r/3,r])\text{,}\)</span> and, using Urysohn's lemma, choose a continuous function <span class="process-math">\(g\colon X\rightarrow [-r/3,r/3]\)</span> such that <span class="process-math">\(g(B)=\{-r/3\}\)</span> and <span class="process-math">\(g(C)=\{r/3\}\text{.}\)</span> It is easily verified that this <span class="process-math">\(g\)</span> does the trick.</div>
-</div> <div class="para logical">
-<div class="para">Now assume we have a continuous function <span class="process-math">\(f\colon A\rightarrow [a,b]\text{.}\)</span> Letting <span class="process-math">\(\phi\colon [a,b]\rightarrow [-1,1]\text{,}\)</span> we see that <span class="process-math">\(f\)</span> extends continuously to <span class="process-math">\(X\)</span> if and only if <span class="process-math">\(\phi\circ f\)</span> extends continuously to <span class="process-math">\(X\text{.}\)</span> Thus, we may assume <span class="process-math">\(f\colon X\rightarrow [-1,1]\text{.}\)</span> We can build a sequence of continuous functions <span class="process-math">\((g_n)_{n\in \Z_+}\)</span> satisfying the following properties:</div>
-<ol class="lower-roman">
-<li><div class="para">
-<span class="process-math">\(\abs{g_n(x)}\leq \frac{1}{3}\left(\frac{2}{3}\right)^{n-1}\)</span> for all <span class="process-math">\(x\in X\text{.}\)</span>
-</div></li>
-<li><div class="para">
-<span class="process-math">\(\abs{f(a)-\sum_{k=1}^ng_k(a)}\leq \left(\frac{2}{3}\right)^n\)</span> for all <span class="process-math">\(a\in A\text{.}\)</span>
-</div></li>
-</ol>
-<div class="para">It follows from some convergence of infinite sums arguments that <span class="process-math">\(\widetilde{f}(x)=\sum_{k=1}^\infty g_k(x)\)</span> is a well-defined continuous function from <span class="process-math">\(X\)</span> to <span class="process-math">\([-1,1]\)</span> satisfying <span class="process-math">\(\widetilde{f}(a)=f(a)\)</span> for all <span class="process-math">\(a\in A\text{.}\)</span> (See Munkres for these details. Basically just the Weierstrass M-test, if that is familiar to you.)</div>
-</div> <div class="para">How dow we build this sequence? From our first paragraph, we can pick <span class="process-math">\(g_1\)</span> to be any function satisfying <span class="process-math">\(\abs{g(x)}\leq \frac{1}{3}\)</span> and <span class="process-math">\(\abs{f(a)-g_1(a)}\leq \frac{2}{3}\text{.}\)</span> Next assume we have constructed <span class="process-math">\(g_k\)</span> as specified for all <span class="process-math">\(1\leq k\leq n\text{.}\)</span> Apply the same reasoning to the function <span class="process-math">\(h=f-g_1-g_2-\cdots -g_n\text{,}\)</span> which by assumption maps to <span class="process-math">\([-(2/3)^n, (2/3)^n]\)</span> to find <span class="process-math">\(g_{n+1}\text{.}\)</span> By the recursion principle we get a sequence <span class="process-math">\((g_n)\)</span> satisfying (i) and (ii) for all <span class="process-math">\(n\text{.}\)</span>
+<div class="para">is continuous (product of continuous functions) and satisfies <span class="process-math">\(f(b)=1\)</span> and <span class="process-math">\(f(A)=\{0\}\text{.}\)</span>
+</div>
 </div></article></body>
 </html>

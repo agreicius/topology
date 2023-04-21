@@ -57,7 +57,7 @@ window.MathJax = {
     )}
   },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
 <script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -198,6 +198,7 @@ window.MathJax = {
   \newcommand{\C}{{\mathbb C}}
   \newcommand{\T}{{\mathbb T}}
   \newcommand{\F}{{\mathbb F}}
+  \newcommand{\PP}{{\mathbb P}}
   \newcommand{\HH}{{\mathbb H}}
   \newcommand{\compose}{\circ}
   \newcommand{\bolda}{{\mathbf a}}
@@ -359,6 +360,10 @@ window.MathJax = {
 <li><div class="toc-item"><a href="s_covering_spaces.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Covering spaces</span></a></div></li>
 <li><div class="toc-item"><a href="s_coveringmaps_fundgroups.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Lifting correspondence</span></a></div></li>
 <li><div class="toc-item"><a href="s_retract_Brouwer.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Retractions and Brouwer fixed point</span></a></div></li>
+<li><div class="toc-item"><a href="s_deformation_retract.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Deformation retract</span></a></div></li>
+<li><div class="toc-item"><a href="s_homotopy_type.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Homotopty equivalence</span></a></div></li>
+<li><div class="toc-item"><a href="s_Sn_simply_connected.html" class="internal"><span class="codenumber">1.8</span> <span class="title">Fundamental group of <span class="process-math">\(S^n\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="s_surface_fund_grps.html" class="internal"><span class="codenumber">1.9</span> <span class="title">Fundamental groups of some surfaces</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -475,9 +480,44 @@ window.MathJax = {
 <a href="" class="xref" data-knowl="./knowl/th_nonvanishing_vectorfield.html" title="Theorem 1.5.7: Nonvanishing vector fields on B^2">Theorem 1.5.7</a> Nonvanishing vector fields on <span class="process-math">\(B^2\)</span>
 </div>
 <div>
-<a href="" class="xref" data-knowl="./knowl/th_Brouwer_fixed_point.html" title="Theorem 1.5.8: Brouwer fixed-point theorem">Theorem 1.5.8</a> Brouwer fixed-point theorem</div>
+<a href="" class="xref" data-knowl="./knowl/th_Brouwer_fixed_point.html" title="Theorem 1.5.8: Brouwer fixed-point theorem (disc)">Theorem 1.5.8</a> Brouwer fixed-point theorem (disc)</div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/cor_positive_eigenvalues.html" title="Corollary 1.5.9: Eigenvalues of positive matrices">Corollary 1.5.9</a> Eigenvalues of positive matrices</div>
+<h4 class="heading hide-type" title="Section 1.6: Deformation retract">
+<span class="codenumber">1.6</span><span class="space"> </span><span class="title">Deformation retract</span>
+</h4>
+<div>
+<a href="" class="xref" data-knowl="./knowl/lemma_homotopic_fund_grp.html" title="Lemma 1.6.1: Homotopic maps and fundamental groups">Lemma 1.6.1</a> Homotopic maps and fundamental groups</div>
+<div>
+<a href="" class="xref" data-knowl="./knowl/th_Sn_Rn_minus_pt.html" title="Theorem 1.6.2: Fundamental groups: S^n and \R^{n+1}-\{\boldzero\}">Theorem 1.6.2</a> Fundamental groups: <span class="process-math">\(S^n\)</span> and <span class="process-math">\(\R^{n+1}-\{\boldzero\}\)</span>
+</div>
+<div>
+<a href="" class="xref" data-knowl="./knowl/th_deformation_retract.html" title="Theorem 1.6.5: Deformation retract and fundamental groups">Theorem 1.6.5</a> Deformation retract and fundamental groups</div>
+<h4 class="heading hide-type" title="Section 1.7: Homotopty equivalence">
+<span class="codenumber">1.7</span><span class="space"> </span><span class="title">Homotopty equivalence</span>
+</h4>
+<div>
+<a href="" class="xref" data-knowl="./knowl/lemmma_homotopic_fund_grp_2.html" title="Lemma 1.7.3: Homotopic maps and fundamental group revisited">Lemma 1.7.3</a> Homotopic maps and fundamental group revisited</div>
+<div>
+<a href="" class="xref" data-knowl="./knowl/cor_homotopic_maps.html" title="Corollary 1.7.4: Homotopic maps and fundamental groups">Corollary 1.7.4</a> Homotopic maps and fundamental groups</div>
+<div>
+<a href="" class="xref" data-knowl="./knowl/th_homotopy_type.html" title="Theorem 1.7.5: Homotopy equivalence and fundamental groups">Theorem 1.7.5</a> Homotopy equivalence and fundamental groups</div>
+<h4 class="heading hide-type" title="Section 1.8: Fundamental group of S^n">
+<span class="codenumber">1.8</span><span class="space"> </span><span class="title">Fundamental group of <span class="process-math">\(S^n\)</span></span>
+</h4>
+<div>
+<a href="" class="xref" data-knowl="./knowl/th_weak_Seifert_vanKampen.html" title="Theorem 1.8.1: Weak Seifert-van Kampen">Theorem 1.8.1</a> Weak Seifert-van Kampen</div>
+<div>
+<a href="" class="xref" data-knowl="./knowl/cor_Sn_simply_connected.html" title="Corollary 1.8.2: Fundamental group of S^n">Corollary 1.8.2</a> Fundamental group of <span class="process-math">\(S^n\)</span>
+</div>
+<div>
+<a href="" class="xref" data-knowl="./knowl/cor_fund_grp_Pn.html" title="Corollary 1.8.4: Fundamental group of \PP^n">Corollary 1.8.4</a> Fundamental group of <span class="process-math">\(\PP^n\)</span>
+</div>
+<h4 class="heading hide-type" title="Section 1.9: Fundamental groups of some surfaces">
+<span class="codenumber">1.9</span><span class="space"> </span><span class="title">Fundamental groups of some surfaces</span>
+</h4>
+<div>
+<a href="" class="xref" data-knowl="./knowl/th_nonhomeomorphic_surfaces.html" title="Theorem 1.9.9: Some non-homeomorphic surfaces">Theorem 1.9.9</a> Some non-homeomorphic surfaces</div>
 <h4 class="heading hide-type" title="Section 2.2: Bases for topological spaces">
 <span class="codenumber">2.2</span><span class="space"> </span><span class="title">Bases for topological spaces</span>
 </h4>
@@ -725,10 +765,8 @@ window.MathJax = {
 <a class="previous-button button" href="appendix-defs.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="appendix-specimens.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
 </div>
-<div class="ptx-page-footer">
-<a class="pretext-link" href="https://pretextbook.org"><div class="name">Authored in PreTeXt</div>
-<div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259 "></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0  472  9732 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496 A 4241 4241  0  0  1  4724  3590 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259 A 4507 4507  0  0  1  4724  9448 "></path><polyline points="5385,4299 4062,8125 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8598,3496 8598,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="850,3496 850,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="4960,9685 4488,9685 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="3070,4582 1889,6141 3070,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="6418,4582 7600,6141 6418,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8976,3590 8976,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732 "></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy"><div class="name">Powered by Runestone</div>
-<img class="logo" title="Powered by Runestone" src="https://runestone.academy/runestone/static/rectangle_badge.png" alt="Powered by Runestone"></a><a class="mathjax-logo" href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a>
+<div id="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
 </body>
 </html>

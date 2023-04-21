@@ -13,18 +13,19 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h3 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.9.5.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.8.5.1</span><span class="period">.</span>
 </h3>
 <div class="para logical">
-<div class="para">It is enough to prove (2), since it clearly implies (1). The maps <span class="process-math">\(\pi_j\)</span> are continuous in a topology <span class="process-math">\(\mathcal{T}\)</span> if and only if for all <span class="process-math">\(j\in I\)</span> and open <span class="process-math">\(U_j\subseteq X_j\)</span> the preimage <span class="process-math">\(\pi_j^{-1}(U_j)=U_j\times \prod_{i\ne j}X_i\)</span> is open in <span class="process-math">\(\mathcal{T}\text{.}\)</span> Next it clear that <span class="process-math">\(U_j\times \prod_{i\ne j}X_i\)</span> is open in <span class="process-math">\(\mathcal{T}\)</span> for all <span class="process-math">\(j\in J\)</span> if and only if</div>
-<div class="displaymath process-math">
+<div class="para">It is relatively easy to see that the sequence <span class="process-math">\(f_n\)</span> converges pointwise to <span class="process-math">\(f=(0,0,\dots)\text{.}\)</span> Since <span class="process-math">\(\R\)</span> with the standard topology is Hausdorff, it follows that this pointwise limit is unique. By <a href="" class="xref" data-knowl="./knowl/th_pointwise_convergence.html" title="Theorem 2.8.4: Pointwise convergence and product topology">Theorem 2.8.4</a>, <span class="process-math">\((f_n)\)</span> also converges in the product topology to <span class="process-math">\(f\text{.}\)</span> We claim <span class="process-math">\((f_n)\)</span> does not converge at all in the box topology. First observe, that the only candidate for the limit of this convergence is <span class="process-math">\(f=(0,0,\dots,)\text{,}\)</span> using (1) of <a href="" class="xref" data-knowl="./knowl/th_pointwise_convergence.html" title="Theorem 2.8.4: Pointwise convergence and product topology">Theorem 2.8.4</a>. Now consider the open set</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_pointwise_convergence.html ./knowl/th_pointwise_convergence.html">
 \begin{equation*}
-\cap_{k=1}^nU_{j_k}\times \prod_{i\ne j_k}X_i=\prod_{k=1}^n U_{j_k}\times \prod_{i\ne j_k}X_i
+U=(-1,1)\times (-1/2, 1/2)\times (-1/3,1/3)\times\cdots=\prod_{n=1}^\infty(-1/n, 1/n)\text{.}
 \end{equation*}
 </div>
-<div class="para">is open for any finite set <span class="process-math">\(\{j_1, j_2,\dots, j_n\}\subseteq I\text{.}\)</span> Since these sets form a basis for the product topology, we conclude that the projections are all continuous if and only if <span class="process-math">\(\mathcal{T}\)</span> is finer than the product topology.</div>
+<div class="para">We have <span class="process-math">\(f=(0,0,\dots, )\in U\text{,}\)</span> and yet not only is it not the case that the sequence <span class="process-math">\((f_n)\)</span> eventually lies in <span class="process-math">\(U\text{,}\)</span> in fact we have <span class="process-math">\(f_n\notin U\)</span> for all <span class="process-math">\(n\in \Z_+\text{.}\)</span>
 </div>
 </div>
-<span class="incontext"><a href="s_continuous.html#solution-37" class="internal">in-context</a></span>
+</div>
+<span class="incontext"><a href="s_prods_convergence_metric.html#solution-37" class="internal">in-context</a></span>
 </body>
 </html>

@@ -13,19 +13,17 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(X\)</span> be a topological space.</div>
-<ol class="decimal">
-<li>
-<span class="heading"><span class="title">Trivial sets.</span></span><div class="para">Both <span class="process-math">\(\emptyset\)</span> and <span class="process-math">\(X\)</span> are closed sets.</div>
-</li>
-<li>
-<span class="heading"><span class="title">Finite unions.</span></span><div class="para">If <span class="process-math">\(C_1, C_2,\dots , C_n\)</span> are closed, then <span class="process-math">\(\bigcup_{i=1}^n C_i\)</span> is closed.</div>
-</li>
-<li>
-<span class="heading"><span class="title">Arbitrary intersection.</span></span><div class="para">If <span class="process-math">\(\{C_i\}_{i\in I}\)</span> is a collection of closed sets, then <span class="process-math">\(\bigcap_{i\in I}C_i\)</span> is closed.</div>
-</li>
-</ol>
+<div class="para">Why is the claim true? An element of <span class="process-math">\(\mathcal{B}\)</span> is either of the form <span class="process-math">\(I\)</span> or <span class="process-math">\(I-K\text{,}\)</span> where <span class="process-math">\(I=(a,b)\)</span> is an open interval. There are then three different cases describing intersections of two elements, as shown below. Here <span class="process-math">\(I_1, I_2\)</span> denote finite open intervals.</div>
+<div class="displaymath process-math">
+\begin{align*}
+I_1\cap I_2 \amp \\
+(I_1-K)\cap I_2\amp =I_1\cap I_2-K\cap I_2=I_1\cap I_2-K \\
+(I_1-K)\cap (I_2-K) \amp= (I_1-K)\cap I_2 - K\cap (I_2-K)\\
+\amp = I_1\cap I_2-K\text{.}
+\end{align*}
 </div>
-<span class="incontext"><a href="s_closed_closure_interior.html#p-453" class="internal">in-context</a></span>
+<div class="para">As we have already remarked, <span class="process-math">\(I_1\cap I_2\)</span> is either empty or a finite open interval <span class="process-math">\(I\text{.}\)</span> The claim now follows easily.</div>
+</div>
+<span class="incontext"><a href="s_bases_top.html#p-453" class="internal">in-context</a></span>
 </body>
 </html>

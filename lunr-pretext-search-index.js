@@ -907,7 +907,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.5",
   "title": "Retractions and Brouwer fixed point",
-  "body": " Retractions and Brouwer fixed point   Retraction   Let be a subspace of and let be the corresponding inclusion map. A retraction of onto is a continuous map satisfying , or equivalently, . The subspace is called a retract of in this case.     is retract of   Show that is a retract of .         -Ball   Fix a positive integer . We denote by the closed unit ball centered at : , .     is not a retract of   There is no retraction of onto .    Let be the inclusion map. Assume by contradiction that there is a retraction . Let . Since , we have . Let and be the corresponding homomorphisms of fundamental groups. Since , we have by . This implies is a surjection: a contradiction since ( is convex) and .     Nullhomotopies from   Let be a continuous map. The following statements are equivalent.    is nullhomotpic.     extends to a continuous map .    For all the map is the trivial homomorphism.       Proof:  Assume is nullhomotopic to the constant function , and let be a homotopy from to . Our basic approach is to (a) show that is a quotient of , and use the to produce the desired extension .  To realize as a quotient of we wish to map each copy of to the circle for each . The map defined as accomplishes this for us. We see by the usual arguments that is continuous, and our conceptual description of shows that it is surjective. Since is compact and is Hausdorff, the map is closed, and hence a quotient map. Lastly, observe that is bijective for all , and collapses all points of to . It follows that . Now return to the homotopy . Since for it satisfies , we see from that it is well-defined on the fibers of . By there is a continuous map satisfying . Observe that for all , and hence we have for all . This proves is an extension of , as desired.     Some non-nullhomotopies   The following maps from are not nullhomotpic:   the inclusion map     the identity map .        Nonvanishing vector fields on   Let be a continuous function: , is a continuous vector field on . If for all ( , is nonvanishing ), then there exist nonzero elements such that for some positive and for some positive . In other words, there is a point in where the vector field points directly outward, and a point where the vector field points directly inward.    Suppose first by contradiction that there is no point where points inward. By assumption we have , which restricts to continuous function . By  is nullhomotpic. We will show that is also homotopic to the inclusion : a contradiction since is not nullhomotpic by .  By abuse of notation, we denote . To see , consider the function . It is clear that defines a continuous function to , and we have and . Thus it appears we have our homotopy. However, we must show that : that is, we must show for all and . But if were an element satisfying for some , then we would have (since ) and , where . This is impossible by our original assumption, since then would point directly inward at .  We've shown that {\\em any} nonvanishing vector field on must point directly inward at some point. Thus for any nonvanishing vector field , the nonvanishing vector field has a point in where it points directly inward. The vector field then points directly outward at , as desired.     Brouwer fixed-point theorem   If is continuous, then has a fixed point: , we have for some point .    Assume by contradiction that for all . The map is a then a nonvanishing vector field on . By there is a point such that for some positive . But then : a contradiction! Thus must have a fixed point.     Eigenvalues of positive matrices   If is a matrix with positive entries, then has a positive real eigenvalue.    "
+  "body": " Retractions and Brouwer fixed point   Retraction   Let be a subspace of and let be the corresponding inclusion map. A retraction of onto is a continuous map satisfying , or equivalently, . The subspace is called a retract of in this case.     is retract of   Show that is a retract of .         -Ball   Fix a positive integer . We denote by the closed unit ball centered at : , .     is not a retract of   There is no retraction of onto .    Let be the inclusion map. Assume by contradiction that there is a retraction . Let . Since , we have . Let and be the corresponding homomorphisms of fundamental groups. Since , we have by . This implies is a surjection: a contradiction since ( is convex) and .     Nullhomotopies from   Let be a continuous map. The following statements are equivalent.    is nullhomotpic.     extends to a continuous map .    For all the map is the trivial homomorphism.       Proof:  Assume is nullhomotopic to the constant function , and let be a homotopy from to . Our basic approach is to (a) show that is a quotient of , and use the to produce the desired extension .  To realize as a quotient of we wish to map each copy of to the circle for each . The map defined as accomplishes this for us. We see by the usual arguments that is continuous, and our conceptual description of shows that it is surjective. Since is compact and is Hausdorff, the map is closed, and hence a quotient map. Lastly, observe that is bijective for all , and collapses all points of to . It follows that . Now return to the homotopy . Since for it satisfies , we see from that it is well-defined on the fibers of . By there is a continuous map satisfying . Observe that for all , and hence we have for all . This proves is an extension of , as desired.     Some non-nullhomotopies   The following maps from are not nullhomotpic:   the inclusion map     the identity map .        Nonvanishing vector fields on   Let be a continuous function: , is a continuous vector field on . If for all ( , is nonvanishing ), then there exist nonzero elements such that for some positive and for some positive . In other words, there is a point in where the vector field points directly outward, and a point where the vector field points directly inward.    Suppose first by contradiction that there is no point where points inward. By assumption we have , which restricts to continuous function . By  is nullhomotpic. We will show that is also homotopic to the inclusion : a contradiction since is not nullhomotpic by .  By abuse of notation, we denote . To see , consider the function . It is clear that defines a continuous function to , and we have and . Thus it appears we have our homotopy. However, we must show that : that is, we must show for all and . But if were an element satisfying for some , then we would have (since ) and , where . This is impossible by our original assumption, since then would point directly inward at .  We've shown that {\\em any} nonvanishing vector field on must point directly inward at some point. Thus for any nonvanishing vector field , the nonvanishing vector field has a point in where it points directly inward. The vector field then points directly outward at , as desired.     Brouwer fixed-point theorem (disc)   If is continuous, then has a fixed point: , we have for some point .    Assume by contradiction that for all . The map is a then a nonvanishing vector field on . By there is a point such that for some positive . But then : a contradiction! Thus must have a fixed point.     Eigenvalues of positive matrices   If is a matrix with positive entries, then has a positive real eigenvalue.    "
 },
 {
   "id": "d_retract",
@@ -978,8 +978,8 @@ var ptx_lunr_docs = [
   "url": "s_retract_Brouwer.html#th_Brouwer_fixed_point",
   "type": "Theorem",
   "number": "1.5.8",
-  "title": "Brouwer fixed-point theorem.",
-  "body": " Brouwer fixed-point theorem   If is continuous, then has a fixed point: , we have for some point .    Assume by contradiction that for all . The map is a then a nonvanishing vector field on . By there is a point such that for some positive . But then : a contradiction! Thus must have a fixed point.   "
+  "title": "Brouwer fixed-point theorem (disc).",
+  "body": " Brouwer fixed-point theorem (disc)   If is continuous, then has a fixed point: , we have for some point .    Assume by contradiction that for all . The map is a then a nonvanishing vector field on . By there is a point such that for some positive . But then : a contradiction! Thus must have a fixed point.   "
 },
 {
   "id": "cor_positive_eigenvalues",
@@ -989,6 +989,276 @@ var ptx_lunr_docs = [
   "number": "1.5.9",
   "title": "Eigenvalues of positive matrices.",
   "body": " Eigenvalues of positive matrices   If is a matrix with positive entries, then has a positive real eigenvalue.   "
+},
+{
+  "id": "s_deformation_retract",
+  "level": "1",
+  "url": "s_deformation_retract.html",
+  "type": "Section",
+  "number": "1.6",
+  "title": "Deformation retract",
+  "body": " Deformation retract   Homotopic maps and fundamental groups   Let be maps of pointed spaces. If there is a homotopy from to satisfying for all , then we have as group homomorphisms from to .    By definition of , we must show that for all loops : equivalently, we must show . This of course is where comes in. Define as . We see that , showing that is a homotopy from to . It remains to show it is a path homotopy. This follows since for all .     Fundamental groups: and   Let , let be the inclusion map, and let . The function is a retraction map that induces an isomorphism .    It is clear that the given is a retraction. Letting be the inclusion, we have and hence .  We are halfway to showing . It remains to show , and to do this we use the lemmma. Specifically we show that and are homotopic via a homotopy as described in . Since , it is easy to see that  is a homoto\\boldx_0y from to . Furthermore, we have , using the fact that .     Deformation retract   Let be a subspace of . A deformation retraction from to is a homotopy satisfying the conditions below. (It will help to think of in the usual way.)    for all ( );     for all ( );     for all and ( for all ).   In this case is called a deformation retract of .  Letting be defined as , we see that is a retraction from to , and is a homotopy from to , where is the inclusion map.     Deformation retract  Loosely is a deformation retract of if there is a retraction , and this retraction is homotopic to the identity function on .    Deformation retract and fundamental groups   Let be a deformation retract of . The inclusion gives rise to an isomorphism for any .    The proof is essentially identical to the one provided for . As stated in the , the map      minus axis  Let be with the the -axis removed. Show that is a deformation retract of . Conclude that for any .    minus circle and -axis  Let be with the circle in the -plane and the -axis removed. Show that the torus obtained by revolving the circle is a deformation retract of . Conclude that for any .    Doubly punctured plane, figure eight, theta space  Let , where . Show that the given is a deformation retract of :   Figure eight   , where ,     Theta space   ( , circle union diameter)      "
+},
+{
+  "id": "lemma_homotopic_fund_grp",
+  "level": "2",
+  "url": "s_deformation_retract.html#lemma_homotopic_fund_grp",
+  "type": "Lemma",
+  "number": "1.6.1",
+  "title": "Homotopic maps and fundamental groups.",
+  "body": " Homotopic maps and fundamental groups   Let be maps of pointed spaces. If there is a homotopy from to satisfying for all , then we have as group homomorphisms from to .    By definition of , we must show that for all loops : equivalently, we must show . This of course is where comes in. Define as . We see that , showing that is a homotopy from to . It remains to show it is a path homotopy. This follows since for all .   "
+},
+{
+  "id": "th_Sn_Rn_minus_pt",
+  "level": "2",
+  "url": "s_deformation_retract.html#th_Sn_Rn_minus_pt",
+  "type": "Theorem",
+  "number": "1.6.2",
+  "title": "Fundamental groups: <span class=\"process-math\">\\(S^n\\)<\/span> and <span class=\"process-math\">\\(\\R^{n+1}-\\{\\boldzero\\}\\)<\/span>.",
+  "body": " Fundamental groups: and   Let , let be the inclusion map, and let . The function is a retraction map that induces an isomorphism .    It is clear that the given is a retraction. Letting be the inclusion, we have and hence .  We are halfway to showing . It remains to show , and to do this we use the lemmma. Specifically we show that and are homotopic via a homotopy as described in . Since , it is easy to see that  is a homoto\\boldx_0y from to . Furthermore, we have , using the fact that .   "
+},
+{
+  "id": "d_deformation_retract",
+  "level": "2",
+  "url": "s_deformation_retract.html#d_deformation_retract",
+  "type": "Definition",
+  "number": "1.6.3",
+  "title": "Deformation retract.",
+  "body": " Deformation retract   Let be a subspace of . A deformation retraction from to is a homotopy satisfying the conditions below. (It will help to think of in the usual way.)    for all ( );     for all ( );     for all and ( for all ).   In this case is called a deformation retract of .  Letting be defined as , we see that is a retraction from to , and is a homotopy from to , where is the inclusion map.   "
+},
+{
+  "id": "remark-13",
+  "level": "2",
+  "url": "s_deformation_retract.html#remark-13",
+  "type": "Remark",
+  "number": "1.6.4",
+  "title": "Deformation retract.",
+  "body": " Deformation retract  Loosely is a deformation retract of if there is a retraction , and this retraction is homotopic to the identity function on .  "
+},
+{
+  "id": "th_deformation_retract",
+  "level": "2",
+  "url": "s_deformation_retract.html#th_deformation_retract",
+  "type": "Theorem",
+  "number": "1.6.5",
+  "title": "Deformation retract and fundamental groups.",
+  "body": " Deformation retract and fundamental groups   Let be a deformation retract of . The inclusion gives rise to an isomorphism for any .    The proof is essentially identical to the one provided for . As stated in the , the map    "
+},
+{
+  "id": "eg_R2",
+  "level": "2",
+  "url": "s_deformation_retract.html#eg_R2",
+  "type": "Example",
+  "number": "1.6.6",
+  "title": "<span class=\"process-math\">\\(\\R^3\\)<\/span> minus axis.",
+  "body": " minus axis  Let be with the the -axis removed. Show that is a deformation retract of . Conclude that for any .  "
+},
+{
+  "id": "example-28",
+  "level": "2",
+  "url": "s_deformation_retract.html#example-28",
+  "type": "Example",
+  "number": "1.6.7",
+  "title": "<span class=\"process-math\">\\(\\R^3\\)<\/span> minus circle and <span class=\"process-math\">\\(z\\)<\/span>-axis.",
+  "body": " minus circle and -axis  Let be with the circle in the -plane and the -axis removed. Show that the torus obtained by revolving the circle is a deformation retract of . Conclude that for any .  "
+},
+{
+  "id": "eg_doubly_eight_theta",
+  "level": "2",
+  "url": "s_deformation_retract.html#eg_doubly_eight_theta",
+  "type": "Example",
+  "number": "1.6.8",
+  "title": "Doubly punctured plane, figure eight, theta space.",
+  "body": " Doubly punctured plane, figure eight, theta space  Let , where . Show that the given is a deformation retract of :   Figure eight   , where ,     Theta space   ( , circle union diameter)     "
+},
+{
+  "id": "s_homotopy_type",
+  "level": "1",
+  "url": "s_homotopy_type.html",
+  "type": "Section",
+  "number": "1.7",
+  "title": "Homotopty equivalence",
+  "body": " Homotopty equivalence   Homotopy equivalence   A continuous function is a homotopy equivalence if there exists a continuous map such that and .  When this is the case and are called homotopy inverses one another; and and are said to be homotopy equivalent and have the same homotopy type .     Deformation retract   Show that if is a deformation retract, then the inclusion map is a homotopy equivalence.    Let be a deformation retraction from to . We have seen that the function is a contraction to satisfying (and hence ) and .    Our goal is to show that if is a homotopy equivalence, then is an isomorphism. To do so we need a strengthening of .   Homotopic maps and fundamental group revisited   Let be homotopic, and let be a homotopy from to . Fix , set and , and let and be the corresponding group homomorphisms. We have , where is the group isomorphism arising from the path defined as .  Commutative diagram        Homotopic maps and fundamental groups   Suppose are homotopic. Fix , let and , and let and be the corresponding group homomorphisms. The group homomorphism is injective (resp. surjective, resp. trivial) if and only if is injective (resp. surjective, resp. trivial). In particular, if is nullhomotopic, then is trivial.     Homotopy equivalence and fundamental groups   Assume is a homotopy equivalence. Given , let . The map is an isomorphism.    "
+},
+{
+  "id": "d_homotopy_equivalence",
+  "level": "2",
+  "url": "s_homotopy_type.html#d_homotopy_equivalence",
+  "type": "Definition",
+  "number": "1.7.1",
+  "title": "Homotopy equivalence.",
+  "body": " Homotopy equivalence   A continuous function is a homotopy equivalence if there exists a continuous map such that and .  When this is the case and are called homotopy inverses one another; and and are said to be homotopy equivalent and have the same homotopy type .   "
+},
+{
+  "id": "eg_deformation_retract",
+  "level": "2",
+  "url": "s_homotopy_type.html#eg_deformation_retract",
+  "type": "Example",
+  "number": "1.7.2",
+  "title": "Deformation retract.",
+  "body": " Deformation retract   Show that if is a deformation retract, then the inclusion map is a homotopy equivalence.    Let be a deformation retraction from to . We have seen that the function is a contraction to satisfying (and hence ) and .   "
+},
+{
+  "id": "lemmma_homotopic_fund_grp_2",
+  "level": "2",
+  "url": "s_homotopy_type.html#lemmma_homotopic_fund_grp_2",
+  "type": "Lemma",
+  "number": "1.7.3",
+  "title": "Homotopic maps and fundamental group revisited.",
+  "body": " Homotopic maps and fundamental group revisited   Let be homotopic, and let be a homotopy from to . Fix , set and , and let and be the corresponding group homomorphisms. We have , where is the group isomorphism arising from the path defined as .  Commutative diagram      "
+},
+{
+  "id": "cor_homotopic_maps",
+  "level": "2",
+  "url": "s_homotopy_type.html#cor_homotopic_maps",
+  "type": "Corollary",
+  "number": "1.7.4",
+  "title": "Homotopic maps and fundamental groups.",
+  "body": " Homotopic maps and fundamental groups   Suppose are homotopic. Fix , let and , and let and be the corresponding group homomorphisms. The group homomorphism is injective (resp. surjective, resp. trivial) if and only if is injective (resp. surjective, resp. trivial). In particular, if is nullhomotopic, then is trivial.   "
+},
+{
+  "id": "th_homotopy_type",
+  "level": "2",
+  "url": "s_homotopy_type.html#th_homotopy_type",
+  "type": "Theorem",
+  "number": "1.7.5",
+  "title": "Homotopy equivalence and fundamental groups.",
+  "body": " Homotopy equivalence and fundamental groups   Assume is a homotopy equivalence. Given , let . The map is an isomorphism.   "
+},
+{
+  "id": "s_Sn_simply_connected",
+  "level": "1",
+  "url": "s_Sn_simply_connected.html",
+  "type": "Section",
+  "number": "1.8",
+  "title": "Fundamental group of <span class=\"process-math\">\\(S^n\\)<\/span>",
+  "body": " Fundamental group of   Weak Seifert-van Kampen   Let be an open covering, and suppose is path connected. Given any , let be the group homomorphisms corresponding to the inclusion maps , . The group is generated by the images and . In other words, for all , we have where for all we have or .     Fundamental group of   For any the -sphere  is defined as    When , we have for any .    For all we have for any .   Since is path connected for all , we conclude that is simply connected for all .    The alternate description of $S^n$ was shown in a homework exercise.     Projective space   Fix . (Real) projective -space  is the quotient space of by the equivalence relation for some .  As an alternative description, we have , where is the antipodal relation: , for all we define if and only if .     Fundamental group of   Fix .    The quotient map is a double covering of .    For all , we have .      "
+},
+{
+  "id": "th_weak_Seifert_vanKampen",
+  "level": "2",
+  "url": "s_Sn_simply_connected.html#th_weak_Seifert_vanKampen",
+  "type": "Theorem",
+  "number": "1.8.1",
+  "title": "Weak Seifert-van Kampen.",
+  "body": " Weak Seifert-van Kampen   Let be an open covering, and suppose is path connected. Given any , let be the group homomorphisms corresponding to the inclusion maps , . The group is generated by the images and . In other words, for all , we have where for all we have or .   "
+},
+{
+  "id": "cor_Sn_simply_connected",
+  "level": "2",
+  "url": "s_Sn_simply_connected.html#cor_Sn_simply_connected",
+  "type": "Corollary",
+  "number": "1.8.2",
+  "title": "Fundamental group of <span class=\"process-math\">\\(S^n\\)<\/span>.",
+  "body": " Fundamental group of   For any the -sphere  is defined as    When , we have for any .    For all we have for any .   Since is path connected for all , we conclude that is simply connected for all .    The alternate description of $S^n$ was shown in a homework exercise.   "
+},
+{
+  "id": "d_Pn",
+  "level": "2",
+  "url": "s_Sn_simply_connected.html#d_Pn",
+  "type": "Definition",
+  "number": "1.8.3",
+  "title": "Projective space.",
+  "body": " Projective space   Fix . (Real) projective -space  is the quotient space of by the equivalence relation for some .  As an alternative description, we have , where is the antipodal relation: , for all we define if and only if .   "
+},
+{
+  "id": "cor_fund_grp_Pn",
+  "level": "2",
+  "url": "s_Sn_simply_connected.html#cor_fund_grp_Pn",
+  "type": "Corollary",
+  "number": "1.8.4",
+  "title": "Fundamental group of <span class=\"process-math\">\\(\\PP^n\\)<\/span>.",
+  "body": " Fundamental group of   Fix .    The quotient map is a double covering of .    For all , we have .     "
+},
+{
+  "id": "s_surface_fund_grps",
+  "level": "1",
+  "url": "s_surface_fund_grps.html",
+  "type": "Section",
+  "number": "1.9",
+  "title": "Fundamental groups of some surfaces",
+  "body": " Fundamental groups of some surfaces   Topological manifold   Let be a nonnegative integer. A topological -manifold is a topological space satisfying the following properties:   Hausdorff   is Hausdorff.    Second countable   is second countable: , has a countable basis.    Locally Euclidean   is locally Euclidean of dimension : , every has an open neighborhood that is homeomorphic to an open subset of . (We define .)   A -manifold is called a curve ; a -manifold is called a surface .     You might be wondering whether an -manifold could also be an -manifold. The answer is no, but hinges on the fact that is not homeomorphic to (invariance of domain), which is difficult to prove in full generality. However, we do know that invariance of domain holds for and (homework exercise), so the in -manifold is well-defined at least for .    Sphere, projective 2-space, torus   Show that , , and are surfaces.         Euclidean balls   Let be an -manifold. A Euclidean ball is an open set that is homeomorphic to an open ball of .  A Euclidean ball is regular is there is a Euclidean ball such that (i) and (ii) there is a homeomorphism of for some , such that .     Connected sum of surfaces   For each let be a surface and let be a regular Euclidean ball. Furthermore, let be a homeomorphism. The connected sum of and is the quotient space obtained from the disjoint union by identifying and for all points .  It is possible to show that is itself a surface.     Double torus   The double torus (or 2-holed torus ) is the connected sum obtained by excising two circular patches on two copies of and glueing the two surfaces together along the circular boundaries. Make this description more precise, using the quotient description of the torus.     Let be the torus realized as the quotient of by the relation and for all , and let be copies of       Fundamental group of the figure eight   Let be your favorite incarnation of the figure eight space.    Show that the diagram below describes a covering map of . Your argument can be somewhat informal (since no formulas are provided).  Cover of figure eight      Let be the intersection of the two circles in the figure eight, and let be the simple paths traversing the left and right hoops of , with orientation as in the diagram. Use the lifting correspondence to show that , and hence that is a nonabelian group.       Double torus fundamental group   Give an informal, yet convincing argument that there is a retraction from the double torus to the figure eight space . Explain why this implies is nonabelian.     Some non-homeomorphic surfaces   The following surfaces are pairwise non-homeomorphic: .    "
+},
+{
+  "id": "d_manifold",
+  "level": "2",
+  "url": "s_surface_fund_grps.html#d_manifold",
+  "type": "Definition",
+  "number": "1.9.1",
+  "title": "Topological manifold.",
+  "body": " Topological manifold   Let be a nonnegative integer. A topological -manifold is a topological space satisfying the following properties:   Hausdorff   is Hausdorff.    Second countable   is second countable: , has a countable basis.    Locally Euclidean   is locally Euclidean of dimension : , every has an open neighborhood that is homeomorphic to an open subset of . (We define .)   A -manifold is called a curve ; a -manifold is called a surface .   "
+},
+{
+  "id": "remark-14",
+  "level": "2",
+  "url": "s_surface_fund_grps.html#remark-14",
+  "type": "Remark",
+  "number": "1.9.2",
+  "title": "",
+  "body": " You might be wondering whether an -manifold could also be an -manifold. The answer is no, but hinges on the fact that is not homeomorphic to (invariance of domain), which is difficult to prove in full generality. However, we do know that invariance of domain holds for and (homework exercise), so the in -manifold is well-defined at least for .  "
+},
+{
+  "id": "example-31",
+  "level": "2",
+  "url": "s_surface_fund_grps.html#example-31",
+  "type": "Example",
+  "number": "1.9.3",
+  "title": "Sphere, projective 2-space, torus.",
+  "body": " Sphere, projective 2-space, torus   Show that , , and are surfaces.       "
+},
+{
+  "id": "d_euclidean_ball",
+  "level": "2",
+  "url": "s_surface_fund_grps.html#d_euclidean_ball",
+  "type": "Definition",
+  "number": "1.9.4",
+  "title": "Euclidean balls.",
+  "body": " Euclidean balls   Let be an -manifold. A Euclidean ball is an open set that is homeomorphic to an open ball of .  A Euclidean ball is regular is there is a Euclidean ball such that (i) and (ii) there is a homeomorphism of for some , such that .   "
+},
+{
+  "id": "d_connected_sum",
+  "level": "2",
+  "url": "s_surface_fund_grps.html#d_connected_sum",
+  "type": "Definition",
+  "number": "1.9.5",
+  "title": "Connected sum of surfaces.",
+  "body": " Connected sum of surfaces   For each let be a surface and let be a regular Euclidean ball. Furthermore, let be a homeomorphism. The connected sum of and is the quotient space obtained from the disjoint union by identifying and for all points .  It is possible to show that is itself a surface.   "
+},
+{
+  "id": "eg_double_torus",
+  "level": "2",
+  "url": "s_surface_fund_grps.html#eg_double_torus",
+  "type": "Example",
+  "number": "1.9.6",
+  "title": "Double torus.",
+  "body": " Double torus   The double torus (or 2-holed torus ) is the connected sum obtained by excising two circular patches on two copies of and glueing the two surfaces together along the circular boundaries. Make this description more precise, using the quotient description of the torus.     Let be the torus realized as the quotient of by the relation and for all , and let be copies of     "
+},
+{
+  "id": "eg_figure_eight",
+  "level": "2",
+  "url": "s_surface_fund_grps.html#eg_figure_eight",
+  "type": "Example",
+  "number": "1.9.7",
+  "title": "Fundamental group of the figure eight.",
+  "body": " Fundamental group of the figure eight   Let be your favorite incarnation of the figure eight space.    Show that the diagram below describes a covering map of . Your argument can be somewhat informal (since no formulas are provided).  Cover of figure eight      Let be the intersection of the two circles in the figure eight, and let be the simple paths traversing the left and right hoops of , with orientation as in the diagram. Use the lifting correspondence to show that , and hence that is a nonabelian group.     "
+},
+{
+  "id": "eg_double_torus_fund_grp",
+  "level": "2",
+  "url": "s_surface_fund_grps.html#eg_double_torus_fund_grp",
+  "type": "Example",
+  "number": "1.9.8",
+  "title": "Double torus fundamental group.",
+  "body": " Double torus fundamental group   Give an informal, yet convincing argument that there is a retraction from the double torus to the figure eight space . Explain why this implies is nonabelian.   "
+},
+{
+  "id": "th_nonhomeomorphic_surfaces",
+  "level": "2",
+  "url": "s_surface_fund_grps.html#th_nonhomeomorphic_surfaces",
+  "type": "Theorem",
+  "number": "1.9.9",
+  "title": "Some non-homeomorphic surfaces.",
+  "body": " Some non-homeomorphic surfaces   The following surfaces are pairwise non-homeomorphic: .   "
 },
 {
   "id": "s_top_spaces",
@@ -1036,9 +1306,9 @@ var ptx_lunr_docs = [
   "body": " Trivial and discrete topology Let be a set.   The collection is a topology on , called the trivial topology . This is the topology on whose only open sets are the empty set and itself.    The collection is a topology on , called the discrete topology . This is the topology on for which every subset of is an open set.        Let . By definition the given contains and , and thus axiom (1) is satisfied. Since any union or intersection involving and is equal to either or , it is clear that is closed under arbitrary unions and finite intersections. Thus axioms (2)-(3) are satisfied.    Let . By definition, is the set of all subsets of . In particular, it contains and , and thus axioms (1) is satisfied. Furthermore, since any union or intersection of subsets of is again a subset of , we see that axioms (2)-(3) are satisfied.      "
 },
 {
-  "id": "example-27",
+  "id": "example-35",
   "level": "2",
-  "url": "s_top_spaces.html#example-27",
+  "url": "s_top_spaces.html#example-35",
   "type": "Example",
   "number": "2.1.3",
   "title": "Some small topological spaces.",
@@ -1063,9 +1333,9 @@ var ptx_lunr_docs = [
   "body": " coarser topology  finer topology  comparable topologies  Comparable topologies   Two topologies on the set are comparable if or , and incomparable otherwise. If , we say that is coarser than , and that is finer than . When we say that is strictly coarser than and is strictly finer than .   "
 },
 {
-  "id": "example-28",
+  "id": "example-36",
   "level": "2",
-  "url": "s_top_spaces.html#example-28",
+  "url": "s_top_spaces.html#example-36",
   "type": "Example",
   "number": "2.1.5",
   "title": "Comparing trivial, discrete, cofinite topologies.",
@@ -1252,9 +1522,9 @@ var ptx_lunr_docs = [
   "body": " Metric balls   Let be a metric space. Given and the -ball centered at is the subset defined as . In other words, is the set of all elements of lying within a distance of of . We call the radius of . More generally, we call a subset a -metric ball if for some and . When it is clear what the underlying metric is, we will omit and speak simply of metric balls.   "
 },
 {
-  "id": "example-35",
+  "id": "example-43",
   "level": "2",
-  "url": "s_metric1.html#example-35",
+  "url": "s_metric1.html#example-43",
   "type": "Example",
   "number": "2.3.4",
   "title": "Metric balls for Euclidean and box metrics.",
@@ -1306,9 +1576,9 @@ var ptx_lunr_docs = [
   "body": "  Given a set the function defined as is a metric on , called the trivial metric .    The proof that is a metric is left as an exercise.   "
 },
 {
-  "id": "example-37",
+  "id": "example-45",
   "level": "2",
-  "url": "s_metric1.html#example-37",
+  "url": "s_metric1.html#example-45",
   "type": "Example",
   "number": "2.3.9",
   "title": "Trivial metric.",
@@ -1387,9 +1657,9 @@ var ptx_lunr_docs = [
   "body": " Basis description of closed sets   Let be a topological space with basis . A set is closed if and only if for all , there is a basis element satisfying .    By definition a set is closed if and only if its complement is open. Using , we see that is open if and only if for all there is a basis element satisfying .   "
 },
 {
-  "id": "example-40",
+  "id": "example-48",
   "level": "2",
-  "url": "s_closed_closure_interior.html#example-40",
+  "url": "s_closed_closure_interior.html#example-48",
   "type": "Example",
   "number": "2.4.7",
   "title": "Closed sets in Euclidean metric topology.",
@@ -1432,9 +1702,9 @@ var ptx_lunr_docs = [
   "body": " Interior and closure of  Let and let . Compute the interior and closure of with respect to (a) the standard topology on and (b) the -topology on .     First consider with the standard topology. The interior of is empty in this case: , . To see this, note that given any and any open interval containing , we can choose an such that ; by design all elements of lie outside . Thus , and .  Next. I claim . To see this, note first that is closed: it is easy to see that for any we can find an such that . By (2) of we have . Since furthermore and since itself is not closed, it follows that .    Now consider the -topology on . We still have . Indeed, fix any , and take any basis element containing . We have or for some open interval . In either case, the same argument as above shows that contains a basis element , all of whose elements lie outside of . This shows , and hence .  Next, I claim that is closed in the -topology, from whence it follows that . (Use (2) from .) To prove the claim, we must show, using that for any there is a basis element (in the -topology) containing and contained in . There are two cases: and . If , we can find an open interval such that and . Since open intervals are basis elements in the -topology, we are done in this case. Next, assume . In this case the basis element satisfies . Having exhausted the cases, we conclude is closed, and hence .     "
 },
 {
-  "id": "example-42",
+  "id": "example-50",
   "level": "2",
-  "url": "s_closed_closure_interior.html#example-42",
+  "url": "s_closed_closure_interior.html#example-50",
   "type": "Example",
   "number": "2.4.12",
   "title": "Interior and closure in cofinite topology.",
@@ -1738,9 +2008,9 @@ var ptx_lunr_docs = [
   "body": " Pointwise convergence   Observe that the definition of pointwise convergence makes no reference to any topology on . Below we investigate how it relates to convergence in the box and product topologies.   "
 },
 {
-  "id": "example-49",
+  "id": "example-57",
   "level": "2",
-  "url": "s_prods_convergence_metric.html#example-49",
+  "url": "s_prods_convergence_metric.html#example-57",
   "type": "Example",
   "number": "2.8.3",
   "title": "Sequences in <span class=\"process-math\">\\(\\R^\\omega\\)<\/span> and <span class=\"process-math\">\\(\\R^\\R\\)<\/span>.",
@@ -1756,9 +2026,9 @@ var ptx_lunr_docs = [
   "body": " Pointwise convergence and product topology   Let be a collection of topologies, let be their product, and let be a sequence of elements of .    If in the box or product topology, then converges to pointwise.    In the product topology we have .         Suppose in either topology. Fix and let be any open set containing . The set is an open neighborhood of in both topologies. By convergence there is an such that for all . It follows that for all . This proves that for all .    Suppose the sequence converges to pointwise. To show in the product topology it is enough to show that for any base open set of the form there is an such that if , then . Since converges to pointwise, for each , there is an such that if , then . Setting , it follows that if then for . Since for all we conclude that for all , as desired.      "
 },
 {
-  "id": "example-50",
+  "id": "example-58",
   "level": "2",
-  "url": "s_prods_convergence_metric.html#example-50",
+  "url": "s_prods_convergence_metric.html#example-58",
   "type": "Example",
   "number": "2.8.5",
   "title": "Convergent sequences in <span class=\"process-math\">\\(\\R^\\omega\\)<\/span>.",
@@ -1846,27 +2116,27 @@ var ptx_lunr_docs = [
   "body": " Preimage properties   Continuity is defined in terms of preimages of sets under a function . Thankfully, the preimage operation behaves very well with respect to our various set operations. In particular, we have the following identities, which you may make use of without further ado:    "
 },
 {
-  "id": "example-51",
+  "id": "example-59",
   "level": "2",
-  "url": "s_continuous.html#example-51",
+  "url": "s_continuous.html#example-59",
   "type": "Example",
   "number": "2.9.3",
   "title": "Continuous functions: basic examples.",
   "body": " Continuous functions: basic examples     Identity function  Given a topological space , the identity function is continuous. Here we take as the topology of both the domain and codomain.    Constant functions  Let be topological spaces. For any fixed the constant function , defined as for all is continuous.    Subspace inclusions  Let be a subspace of . The inclusion map is continuous with respect to the subspace topology on .    Maps from discrete spaces  If is equipped with the discrete topology, then any function to a topological space is continuous.    Maps to trivial spaces  If is equipped with the trivial topology, then any map from a topological space to is continous.      These are all pretty elementary. I'll prove (3). Let be a subspace and let continuous. Given any open set , we have which by definition is open in the subspace topology. Thus is continuous.   "
 },
 {
-  "id": "example-52",
+  "id": "example-60",
   "level": "2",
-  "url": "s_continuous.html#example-52",
+  "url": "s_continuous.html#example-60",
   "type": "Example",
   "number": "2.9.4",
   "title": "Non-continuous inclusion.",
   "body": " Non-continuous inclusion   Show that the identity map is not continuous. Here the topology of the domain is the standard one, and the topology on the codomain is the lower limit topology.    For any we have . If we choose to be any open set of that is not open in the standard topology, it follows that is not open in and hence that is not continuous. We may take for example.  Note: let be two topologies on the set , and for let denote the space with underlying set and topology . The same argument above can be used to show that is continuous if and only if .   "
 },
 {
-  "id": "example-53",
+  "id": "example-61",
   "level": "2",
-  "url": "s_continuous.html#example-53",
+  "url": "s_continuous.html#example-61",
   "type": "Example",
   "number": "2.9.5",
   "title": "Products and projections.",
@@ -2017,9 +2287,9 @@ var ptx_lunr_docs = [
   "body": " Topological properties   It is easy to see that the properties of being discrete, , Hausdorff, or a metric space are topological.   "
 },
 {
-  "id": "example-57",
+  "id": "example-65",
   "level": "2",
-  "url": "s_homeomorphisms.html#example-57",
+  "url": "s_homeomorphisms.html#example-65",
   "type": "Example",
   "number": "2.10.12",
   "title": "Continuous bijection onto circle.",
@@ -2161,9 +2431,9 @@ var ptx_lunr_docs = [
   "body": "  A separation of a topological space is a pair of disjoint nonempty open sets satisfying . The space is connected it it admits no separation, and disconnected otherwise.  A subset is connected (resp., disconnected ) if it is connected (resp., disconnected) with respect to the subspace topology.   "
 },
 {
-  "id": "example-60",
+  "id": "example-68",
   "level": "2",
-  "url": "s_connected1.html#example-60",
+  "url": "s_connected1.html#example-68",
   "type": "Example",
   "number": "2.12.2",
   "title": "Examples.",
@@ -2197,9 +2467,9 @@ var ptx_lunr_docs = [
   "body": " Connectedness and subspaces   Let be a topological space.   If is connected and is a separation of , then or .    If is a collection of connected subspaces of and , then is connected.    If is connected, then any satisfying is connected.     Let be a connected subspace of . It is a separation of , then or .   "
 },
 {
-  "id": "proof-69",
+  "id": "proof-73",
   "level": "2",
-  "url": "s_connected1.html#proof-69",
+  "url": "s_connected1.html#proof-73",
   "type": "Proof",
   "number": "2.12.1",
   "title": "",
@@ -2278,36 +2548,36 @@ var ptx_lunr_docs = [
   "body": " Path-connectedness and continuity   If is continuous and is path connected, then is path connected.    Given and , let be a path connecting and . The composition is then a path connecting and .   "
 },
 {
-  "id": "example-61",
+  "id": "example-69",
   "level": "2",
-  "url": "s_connected_path.html#example-61",
+  "url": "s_connected_path.html#example-69",
   "type": "Example",
   "number": "2.13.5",
   "title": "Balls in <span class=\"process-math\">\\(\\R^n\\)<\/span>.",
   "body": " Balls in   Let be Euclidean -space. For all and any , the open ball is connected, as is the closed ball defined as     It is easy to see that the straight line path defined as is a continuous function connecting any two points in . For our current purposes, we wish to show that if , then so is , for any . To this end, note that . This proves that the open ball is path connected, and hence connected. Next, it is easy to see that the closed ball is in fact the closure of the open ball. Since connectedness is preserved under closure, we conclude that the closed ball is connected.   "
 },
 {
-  "id": "example-62",
+  "id": "example-70",
   "level": "2",
-  "url": "s_connected_path.html#example-62",
+  "url": "s_connected_path.html#example-70",
   "type": "Example",
   "number": "2.13.6",
   "title": "Punctured Euclidean space <span class=\"process-math\">\\(\\R^n-\\{\\boldzero\\}\\text{:}\\)<\/span> <span class=\"process-math\">\\(n\\geq 2\\)<\/span>.",
   "body": " Punctured Euclidean space :   Let be Euclidean -space, where . The subspace is connected.    Take any . If the two vectors are not scalar multiples of one another, then the straight line path connecting them is guaranteed to lie in , using a linear independence argument. If , then since , we can find a vector that is not a scalar multiple of either vector. We can then construct a polygonal path lieing in that first connects to via a straight line path, and then connects to via a straight line path.   "
 },
 {
-  "id": "example-63",
+  "id": "example-71",
   "level": "2",
-  "url": "s_connected_path.html#example-63",
+  "url": "s_connected_path.html#example-71",
   "type": "Example",
   "number": "2.13.7",
   "title": "<span class=\"process-math\">\\(\\R\\not\\cong \\R^n\\)<\/span> for <span class=\"process-math\">\\(n\\geq 2\\)<\/span>.",
   "body": " for   Prove: if , then there is no homeomorphism from to .    Assume by contradiction that is a homeomorphism for some . It follows that the restriction is a homeomorphism. This a contradiction since is not connected ( is open and closed in ), but is connected.   "
 },
 {
-  "id": "example-64",
+  "id": "example-72",
   "level": "2",
-  "url": "s_connected_path.html#example-64",
+  "url": "s_connected_path.html#example-72",
   "type": "Example",
   "number": "2.13.8",
   "title": "The <span class=\"process-math\">\\(n\\)<\/span>-sphere.",
@@ -2899,9 +3169,9 @@ var ptx_lunr_docs = [
   "body": " Separation axioms  The properties of being , Hausdorff, regular, or normal are called separation axioms as they articulate how various subsets can be separated by open sets. Below you find the descriptions of these properties using the Trennungsaxiom schema. A further remark about the use of regular and normal in the literature: some texts do not include the condition in these notions, and describe the properties we define as regular Hausdorff and normal regular . There is considerably less ambiguity in the literature when using the descriptions, but you should still be careful.  "
 },
 {
-  "id": "remark-31",
+  "id": "remark-33",
   "level": "2",
-  "url": "s_regular.html#remark-31",
+  "url": "s_regular.html#remark-33",
   "type": "Remark",
   "number": "2.19.4",
   "title": "Trennungsaxiom implications.",
@@ -2953,9 +3223,9 @@ var ptx_lunr_docs = [
   "body": " Locally compact implies regular   Let be locally compact and Hausdorff. Prove: is regular.    This is an easy consequence of and .   "
 },
 {
-  "id": "remark-32",
+  "id": "remark-34",
   "level": "2",
-  "url": "s_regular.html#remark-32",
+  "url": "s_regular.html#remark-34",
   "type": "Remark",
   "number": "2.19.10",
   "title": "Locally compact and non-normal.",
@@ -2989,9 +3259,9 @@ var ptx_lunr_docs = [
   "body": " Regularity: subspace and product properties      Subspaces of regular spaces are regular.    Products of regular spaces are regular.          Assume is a subspace of the regular space . We know already that subspaces of -spaces are , so is . Next take any and any set not containing that is closed in . We have for some closed set . Since and is regular, we can find disjoint open sets that separate and in . The disjoint open (in ) sets and are then a separation of and in .    We use (1) from . Given and open set containing , choose a basis element of the form containing . Since each is regular, we can find open sets satisfying . Letting , we have .      "
 },
 {
-  "id": "remark-34",
+  "id": "remark-36",
   "level": "2",
-  "url": "s_regular.html#remark-34",
+  "url": "s_regular.html#remark-36",
   "type": "Remark",
   "number": "2.19.14",
   "title": "",
@@ -3016,9 +3286,9 @@ var ptx_lunr_docs = [
   "body": " is normal   Prove: is normal.    Let be disjoint closed subsets of . We can find open coverings satisfying for all . First observe that for all . Indeed, otherwise we'd have , in which case either or : both are impossible since and . We conclude that , proving that and can be separated by open sets.   "
 },
 {
-  "id": "example-78",
+  "id": "example-86",
   "level": "2",
-  "url": "s_normal.html#example-78",
+  "url": "s_normal.html#example-86",
   "type": "Example",
   "number": "2.20.2",
   "title": "<span class=\"process-math\">\\(R_\\ell\\times R_\\ell\\)<\/span> is not normal.",
@@ -3133,9 +3403,9 @@ var ptx_lunr_docs = [
   "body": " Embedding theorem   Let be a -space. Given any collection of continuous functions satisfying the property that for all and for all open sets containing there is an such that and , the map defined as is an embedding into .     is injective  Since is , given any we can find an open set such that and . By assumption, there is some such that and . It follows that and hence that .    is continuous  This follows immediately from since each is continuous.    is embedding  Lastly, we prove that is an embedding mapping homeomorphically onto . Let be an open set containing an element , and let . Pick any such that and . Let be the projection map onto the -th coordinate, and define . Since is continuous and is open, the set is open in the subspace topology of . We claim that , proving that is an embedding. Since , we have . Similarly, if , then , from whence it follows that : otherwise we'd have .    "
 },
 {
-  "id": "remark-37",
+  "id": "remark-39",
   "level": "2",
-  "url": "s_Urysohn_metrization.html#remark-37",
+  "url": "s_Urysohn_metrization.html#remark-39",
   "type": "Remark",
   "number": "2.22.3",
   "title": "Urysohn metrization theorem.",
@@ -3241,9 +3511,9 @@ var ptx_lunr_docs = [
   "body": " Directed set   A directed set is a pair , where is a quasiordering on that satisfies the following axiom.   Directed (D)  For all , there is a such that and .   A subset of a directed set is cofinal if for all there is a such that .   "
 },
 {
-  "id": "example-80",
+  "id": "example-88",
   "level": "2",
-  "url": "s_nets.html#example-80",
+  "url": "s_nets.html#example-88",
   "type": "Example",
   "number": "2.24.4",
   "title": "Common examples.",

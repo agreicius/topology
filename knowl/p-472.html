@@ -11,8 +11,21 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">The set <span class="process-math">\(A\)</span> is closed. If <span class="process-math">\(P=(x,y)\in A^c\text{,}\)</span> then either <span class="process-math">\(x&lt; 0\)</span> or <span class="process-math">\(y&lt; 0\text{.}\)</span> Let <span class="process-math">\(\epsilon=\min\{\abs{x},\abs{y}\}\text{.}\)</span> Every element of <span class="process-math">\(B_\epsilon(P)\)</span> has either a negative <span class="process-math">\(x\)</span>-coordinate or a negative <span class="process-math">\(y\)</span>-coordinate. Hence <span class="process-math">\(P\in B_{\epsilon}(P)\subseteq A^c\text{.}\)</span> This proves <span class="process-math">\(A\)</span> is closed, using <a href="" class="xref" data-knowl="./knowl/lemma_basis_closed.html" title="Lemma 2.4.6: Basis description of closed sets">Lemma 2.4.6</a>.</div>
-<span class="incontext"><a href="s_closed_closure_interior.html#p-472" class="internal">in-context</a></span>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<div class="para logical">
+<div class="para">The function <span class="process-math">\(d\colon X\times X\rightarrow \R\)</span> defined as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+d(\boldx,\boldy)=\sqrt{(x_1-y_1)^2+(x_2-y_2)^2+\cdots +(x_n-y_n)^2}
+\end{equation*}
+</div>
+<div class="para">is a metric, called the <dfn class="terminology">Euclidean metric</dfn>. The metric space <span class="process-math">\((\R^n, d)\)</span> is called <dfn class="terminology">Euclidean <span class="process-math">\(n\)</span>-space</dfn>. The <dfn class="terminology">norm</dfn> of <span class="process-math">\(\boldx\text{,}\)</span> denoted <span class="process-math">\(\norm{\boldx}\text{,}\)</span> is defined as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\norm{\boldx}=d(\boldx, \boldzero)=\sqrt{x_1^2+x_2^2+\cdots +x_n^2}\text{.}
+\end{equation*}
+</div>
+</div>
+<span class="incontext"><a href="s_metric1.html#p-472" class="internal">in-context</a></span>
 </body>
 </html>

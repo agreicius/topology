@@ -54,7 +54,7 @@
             Let <m>M</m> be an <m>n</m>-manifold. A <term>Euclidean ball</term> is an open set <m>B\subseteq M</m> that is homeomorphic to an open ball of <m>\R^n</m>. 
         </p>
         <p>
-            A Euclidean ball <m>B\subseteq M</m> is <term>regular</term> is there is a Euclidean ball <m>B'</m> such that (i) <m>\overline{B}\subseteq B'</m> and (ii) there is a homeomorphism of <m>\phi\colon B'\rightarrow B_{2r}(\boldzero)\subseteq \R^n</m> for some <m>r&gt; 0</m>, such that <m>\overline{B}=\phi^{-1}(\overline{B}_r(\boldzero))</m>. 
+            A Euclidean ball <m>B\subseteq M</m> is <term>regular</term> if there is a Euclidean ball <m>B'</m> such that (i) <m>\overline{B}\subseteq B'</m> and (ii) there is a homeomorphism of <m>\phi\colon B'\rightarrow B_{2r}(\boldzero)\subseteq \R^n</m> for some <m>r&gt; 0</m>, such that <m>\overline{B}=\phi^{-1}(\overline{B}_r(\boldzero))</m>. 
         </p>
     </statement>
 </definition>

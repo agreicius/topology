@@ -1,0 +1,156 @@
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="s_jordan_separation">
+  <title>Jordan separation theorem</title>
+<definition xml:id="d_arc_simple_closed">
+    <title>Arcs and simple closed curves</title>
+    <statement>
+        <p>
+            An <term>arc</term> is a space that is homeomorphic to the unit interval <m>I</m>; a <term>simple closed curve</term> is a space homeomorphic to <m>S^1</m>. 
+        </p>
+    </statement>
+</definition>
+<remark xml:id="rm_arc_closed_curve">
+    <title>Arcs and simple closed curves</title>
+    <p>
+        Let <m>X</m> be a Hausdorff space. A subspace <m>C\subseteq X</m> is an arc if and only if it is the image of an injective path <m>\phi\colon I\rightarrow X</m>: since <m>I</m> is compact and <m>X</m> is Hausdorff, the map <m>\phi</m> is guaranteed to be a homeomorphism onto <m>C</m>.  Similarly, using the fact that <m>S^1</m> is homeomorphic to the quotient of <m>I</m> obtained by identifying its endpoints <m>0</m> and <m>1</m>, we see that <m>C\subseteq X</m> is a simple closed curve if and only if it is the image of a path <m>\phi</m> that is injective on <m>(0,1)</m> and satisfies <m>\phi(0)=\phi(1)</m>: again, since <m>I</m> is compact and <m>X</m> is Hausdorff, the map <m>\phi</m> is guaranteed to be closed, hence a quotient map. 
+    </p>
+</remark>
+  <definition xml:id="d_separates">
+    <statement>
+        <p>
+          Let <m>A</m> be a subspace of the connected space <m>X</m>. We say <m>A</m> separates <m>X</m> if <m>X-A</m> is not connected. Similarly, we say <m>A</m> <term>separates <m>X</m> into <m>n</m> components</term> if <m>X-A</m> has <m>n</m> connected components.   
+        </p>
+    </statement>
+</definition>
+<p>
+    The goal of the next two lectures is to prove the <em>Jordan curve theorem</em>: any simple closed curve <m>C\subseteq \R^2</m> separates <m>\R^2</m> into two components. That this statement is true seems intuitively clear, painfully obvious even: like the circle, any simple closed curve <m>C</m> should have a well-defined <q>inside</q> and <q>outside</q>, giving us exactly two components of <m>\R^2-C</m>. All the more maddening, then, that a proof of this fact turns out to be rather difficult. On the other hand, the seemingly well-behaved notion of a path has surprised us with some pathological behavior on other occasions: forget not the <xref ref="top_eg_space_filling" text='custom'>space filling curve</xref>! First we include a useful result (not officially covered last quarter) about <xref ref="d_locally_connected" text="custom">locally connected spaces </xref>. 
+</p>
+<theorem xml:id="th_locally_connected_components">
+    <title>Components in locally connected spaces</title>    
+    <statement>
+        <p>
+            Let <m>X</m> be a locally path connected space. 
+        <ol>
+            <li>
+                <p>
+                    The connected components and path components of <m>X</m> are identical. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    The components of <m>X</m> are open. 
+                </p>
+            </li>
+        </ol>
+    </p>
+
+    </statement>
+</theorem>
+<remark>
+    <title>Components of <m>\R^2-C</m></title>
+    <p>
+        Let <m>C\subseteq \R^2</m> be compact, and let <m>U=\R^2-C</m>. Let's enumerate some important facts about <m>U</m>. 
+        <ol>
+            <li>
+                <p>
+                    <m>U</m> is open, since <m>C</m> is closed, and hence locally path connected, since <m>\R^2</m> is locally path connected.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <m>U</m> is unbounded, since <m>C</m> is bounded. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    <m>U</m> has exactly one unbounded connected component. 
+                </p>
+            </li>
+        </ol>
+        To see why (2)-(3) are true, choose <m>R&gt; 0</m> such that <m>C\subseteq B_R(\boldzero)</m>. The set <m>X=\R^2-B_{R}(\boldzero)</m> is connected and unbounded, hence must lie in some unbounded connected component <m>V_\infty</m> of  <m>U</m>. Furthermore, if <m>V</m> is an unbounded connected component, then we must have <m>U\cap X\ne \emptyset</m> (essentially by the definition of unboundedness). But then <m>V\cap V_\infty\ne \emptyset </m>. Since connected components partition <m>U</m>, we must have <m>V=V_\infty</m>. 
+    </p>
+</remark>
+<lemma xml:id="lemma_components_S2_R2">
+    <title>Comparing <m>S^2</m> and <m>\R^2</m> components</title>
+    <statement>
+        <p>
+            Fix <m>P\in S^2</m> and let <m>h\colon S^2-\{P\}\rightarrow \R^2</m> be a homeomorphism. Let <m>C</m> be a compact subspace of <m>S^2</m> not containing <m>P</m>, and let <m>U</m> be a component of <m>S^2-C</m>.
+            <ol>
+                <li>
+                    <p>
+                        If <m>P\notin U</m>, then <m>h(U)</m> is a bounded component of <m>\R^2-h(C)</m>. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        If <m>P\in U</m>, then <m>h(U-\{P\})</m> is an unbounded component of <m>\R^2-h(C)</m>. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        If <m>S^2-C</m> has <m>n</m> components, then <m>\R^n-h(C)</m> has <m>n</m> components. 
+                    </p>
+                </li>
+            </ol>
+        </p>
+    </statement>
+    <proof>
+        <p>
+            Let <m>U</m> be a connected component of <m>S^2-C</m>. We first show that <m>U-\{P\}</m> is connected. This is trivial if <m>P\notin U</m>, so assume <m>P\in U</m>. Since <m>U</m> is open and <m>S^2</m> is a surface, we can find an open set <m>W</m> that is homeomorphic to an open ball in <m>\R^2</m> and which satisfies <m>x\in W\subseteq U</m>. (In fact, since <m>U</m> is a connected component and <m>W</m> is connected, if <m>P\in W</m>, then we automatically have <m>W\subseteq U</m>.) Assume by contradiction that <m>U-\{P\}</m>  is not connected, and let <m>U-\{P\}=A\cup B</m> be a separation. Note that <m>U-\{P\}</m> is itself open, and thus so are <m>A</m> and <m>B</m>. Since <m>W-\{P\}</m> is connected (homeomorphic to punctured ball) and <m>W-\{P\}\subseteq U-\{P\}</m>, it must be contained in <m>A</m> or <m>B</m>. Assume without loss of generality that <m>W-\{P\}\subseteq A</m>. But then we have <m>A\cup \{P\}=A\cup W</m> is open, and thus <m>U=(A\cup \{P\})\cup B</m> is a separation: a contradiction. 
+        </p>
+        <p>
+            Let <m>\{U_\alpha\}_{\alpha\in I}</m> be the connected components of <m>S^2-C</m>. By above, the sets <m>U_{\alpha}-\{P\}</m> are open, connected and disjoint. Thus the sets <m>V_{\alpha}=h(U_{\alpha}-\{P\})</m> are open connected and disjoint, and cover <m>\R^2-h(C)</m>. It follows that the <m>V_\alpha</m> are the components of <m>\R^2-h(C)</m>, and the correspondence 
+            <md>
+                U_\alpha\mapsto V_\alpha=h(U_\alpha-\{P\})
+            </md>
+            is a bijection between the components of <m>S^2-C</m> and the components of <m>\R^2-h(C)</m>. 
+        </p>
+        <p>
+            Lastly, let <m>U_{\alpha_0}</m> be the component of <m>S^2-C</m> containing <m>P</m>. Since <m>S^2-U_{\alpha_0}</m> is compact, <m>h(S^2-U_{\alpha_{0})=\R^2-V_{\alpha_0}</m> is bounded. Thus <m>V_{\alpha_0}=h(U_{\alpha_0}-\{P\})</m> is the unique unbounded component of <m>\R^2-h(C)</m>. 
+        </p>
+    </proof>
+</lemma>
+<lemma xml:id="lemma_nullhomotopic_to_S2">
+    <statement>
+        <p>
+            Fix points <m>P,Q\in S^2</m>. Let <m>X</m> be compact, and let <m>f\colon X\rightarrow S^2-\{P,Q\}</m>. If <m>P</m> and <m>Q</m> lie in the same component of <m>S^2-f(X)</m>, then <m>f</m> is nullhomotopic. 
+        </p>
+    </statement>
+    <proof>
+        <p>
+            Assume <m>f\colon X\rightarrow S^2-\{P,Q\}</m> where <m>X</m> is compact. Pick a homeomorphism <m>h\colon S^2-\{P\}\rightarrow \R^2</m> sending <m>Q</m> to <m>\boldzero</m>, and let <m>g=h\circ f</m>. Observe that if <m>g</m> is nullhomotopic via the homotopy <m>H\colon X\times I\rightarrow \R^2</m>, then <m>f</m> is nullhomotopic via the homotopy <m>h^{-1}\circ H</m>. Furthermore, using <xref ref="lemma_components_S2_R2"/>, we see that <m>P</m> and <m>Q</m> lie in the same component of <m>S^2-f(X)</m> if and only if <m>h(Q)=\boldzero</m> lies in the unbounded component of <m>\R^2-h(f(X))</m>. Thus it suffices to show that if <m>X</m> is compact and <m>g\colon X\rightarrow \R^2-\{\boldzero\}</m>, then <m>g</m> is nullhomotopic if <m>\boldzero</m> is in the unbounded component of <m>\R^2-f(X)</m>. We now show that this is the case.
+        </p>
+        <p>
+            Assume <m>g\colon X\rightarrow \R^2-\{\boldzero\}</m> with <m>X</m> compact, and that <m>\boldzero</m> lies in the unbounded component of <m>\R^2-\{\boldzero\}</m>. Since <m>g(X)</m> is compact, it is closed and bounded. Choose <m>R&gt; 0</m> such that <m>g(X)\subseteq B_R(\boldzero)</m>and any point <m>\boldy_0\notin B_R(\boldzero)</m>. Since <m>\R^2-g(X)</m> is an open subspace of the locally path connected space <m>\R^2</m>, it is itself locally path connected. It follows that all the components of <m>\R^2-g(X)</m> are open and path connected. Let <m>U_\infty</m> be the unbounded component of <m>\R^2-g(X)</m>. Since <m>\boldzero, \boldy_0\in U_\infty</m> there is a path <m>\alpha\in P(U_{\infty}; \boldzero, \boldy_0)</m>. The map <m>H\colon X\times I\rightarrow \R^2-\{\boldzero\}</m> defined as <m>H(x,t)=g(x)-\alpha(t)</m> is a homotopy between <m>g(x)</m> and <m>g(x)-\boldy_0</m>. (Note that for <m>t\in I</m> we have <m>g(x)-\alpha(t)\ne \boldzero</m>, since <m>\alpha(t)\in U_\infty\subseteq \R^2-g(X)</m>.) This shows that <m>g</m> is homotopic to <m>g(x)-\boldy_0</m>. Lastly, consider the map <m>G</m> on <m>X\times I</m> defined as <m>G(x,t)=tg(x)-\boldy_0</m>. Since <m>g(X)\subseteq B_R(\boldzero)</m>, we have <m>\norm{tg(x)}\leq R</m> for all <m>x\in X</m> and <m>t\in I</m>. Since <m>\norm{\boldy_0}&gt; R</m>, it follows that <m>G(x,t)=tg(x)+\boldy_0\ne \boldzero</m>. Thus <m>G\colon X\times I\rightarrow \R^2-\{\boldzero\}</m>, and it is easily seen that <m>G</m> is a homotopy from the constant function <m>e_{-\boldy_0}</m> to <m>g(x)-\boldy_0</m>. By transitivity, we conclude that <m>g</m> is nullhomotopic.  
+        </p>
+    </proof>
+</lemma>
+<theorem xml:id="th_Jordan_separation">
+    <title>Jordan separation theorem</title>
+    <statement>
+        <p>
+            If <m>A_1</m> and <m>A_2</m> are closed connected subspaces of <m>S^2</m> satisfying <m>A_1\cap A_2=\{P,Q\}</m>, where <m>P\ne Q</m>, then <m>C=A_1\cup A_2</m> separates <m>S^2</m>.  
+        </p>
+        <p>
+            In particular, if <m>C\subseteq S^2</m> is a simple closed curve, then <m>C</m> separates <m>S^2</m>.
+        </p>
+    </statement>
+    <proof>
+        <p>
+            First observe that the second statement follows from the first since any simple closed curve can be written as the union of two arcs intersecting at exactly their two endpoints. 
+        </p>
+        <p>
+            Next, observe that under the given hypotheses we have <m>C\subsetneq S^2</m>. Indeed, the space <m>C-\{P,Q\}</m> is easily seen to be disconnected, whereas the doubly punctured sphere is connected. 
+        </p>
+        <p>
+            Now assume by contradiction that <m>S^2-C</m> is connected. We will show that this implies <m>\pi_1(S^2-\{P,Q\}, R)</m> is trivial for any <m>R\ne P,Q</m>: an absurdity since <m>S^2-\{P,Q\}</m> is homeomorphic to the punctured plane, which has fundamental group isomorphic to <m>\Z</m>. 
+        </p>
+        <p>
+            Let <m>U=S^2-A_1</m> and <m>V=S^2-A_2</m>, and let <m>i\colon U\subseteq S^2-\{P,Q\}</m>, <m>j\colon V\subseteq S^2-\{P,Q\}</m> be the corresponding inclusion maps. Since <m>U\cap V=S^2-C</m> is assumed to be connected, and since <m>U</m> is locally path connected, <m>U\cap V</m> is path connected. This means the conditions for <xref ref="th_weak_Seifert_vanKampen"/> are satisfied. We will show that <m>i_*</m> and <m>j_*</m> are trivial maps, which would imply <m>S^2-\{P,Q\}</m> has trivial fundamental group. 
+        </p>
+    </proof>
+</theorem>
+
+
+
+
+</section>

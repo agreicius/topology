@@ -159,7 +159,7 @@
         </p>
         <p>
             It will suffice by symmetry to show <m>i_*</m> is trivial. Recall that <m>i_*([f])=[i\circ f]</m> for any <m>[f]\in \pi_1(U,R)=\pi_1(S^2-A_1,R)</m>. Since <m>f\colon I\rightarrow U</m> is a loop, letting <m>q\colon I\rightarrow S^1</m> be the standard quotient map, there is a map <m>h\colon S^1\rightarrow U</m> making the diagram below commutative. 
-            <image xml:id="im_separation" width="50%">
+            <image xml:id="im_separation" width="75%">
                 <description>Factorization of <m>f</m> through <m>S^1</m></description>
                 <latex-image>
                     \begin{tikzcd}

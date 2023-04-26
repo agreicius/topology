@@ -1,0 +1,50 @@
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="s_jordan_curve">
+  <title>Jordan curve theorem</title>
+    <theorem xml:id="th_compl_Seifert_vanKampen">
+        <title>Complementary Seifert-van Kampen</title>
+        <statement>
+            <p>
+                Let <m>X=U\cup V</m>, where <m>U</m> and <m>V</m> are open, and <m>U\cap V=A\cup B</m> is a separation. Assume <m>a\in A</m> and <m>b\in B</m>, and that there are paths <m>\alpha\in P(U; a, b)</m> and a path <m>\beta\in P(V; b, a)</m>. Let <m>f=\alpha*\beta\in P(X; a,a)</m>. 
+                <ol>
+                    <li>
+                        <p>
+                            The subgroup <m>\langle [f]\rangle\subseteq \pi_1(X, a)</m> is infinite cyclic. 
+
+                            Furthermore, if <m>\pi_1(X,a)\cong \Z</m>, then <m>\pi_1(X,a)=\langle [f]\rangle</m>. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Suppose <m>a'\in A</m> and we have paths <m>\gamma\in P(U; a,a')</m> and <m>\delta\in P(V; a', a)</m>. Setting <m>g=\gamma*\delta</m>, we have <m>\langle [f]\rangle\cap \langle [g]\rangle=\{e\}</m>. 
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+    </theorem>
+    
+    <theorem xml:id="th_Jordan_nonseparation_theorem">
+        <title>Nonseparation theorem</title>
+        
+        <statement>
+            <p>
+               If <m>C\subseteq S^2</m> is an arc, then <m>C</m> does not separate <m>S^2</m>. 
+            </p>
+        </statement>
+    </theorem>
+
+    <theorem xml:id="th_Jordan_curve_theorem">
+        <statement>
+            <p>
+                Let <m>C_1</m> and <m>C_2</m> be closed connected subsets of <m>S^2</m> whose intersection consists of two points. If neither <m>C_1</m> nor <m>C_2</m> separates <m>S^2</m>, then <m>C_1\cup C_2</m> separates <m>S^2</m>. 
+            </p>
+            <p>
+                As a consequence, if <m>C\subseteq S^2</m> is simple closed curve, then <m>C</m> separates <m>S^2</m> into exactly two components, <m>W_1, W_2</m>. Furthermore, we have <m>C=\partial W_1=\partial W_2</m>. 
+            </p>
+        </statement>
+    </theorem>
+    
+    
+
+
+</section>

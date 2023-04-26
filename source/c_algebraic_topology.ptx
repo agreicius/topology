@@ -10,4 +10,5 @@
   <xi:include  href="s_Sn_simply_connected.ptx"/>
   <xi:include  href="s_surface_fund_grps.ptx"/>
   <xi:include  href="s_jordan_separation.ptx"/>
+  <xi:include  href="s_jordan_curve.ptx"/>
 </chapter>

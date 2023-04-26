@@ -100,7 +100,7 @@
         <p>
             Let <m>\{U_\alpha\}_{\alpha\in I}</m> be the connected components of <m>S^2-C</m>. By above, the sets <m>U_{\alpha}-\{P\}</m> are open, connected and disjoint. Thus the sets <m>V_{\alpha}=h(U_{\alpha}-\{P\})</m> are open connected and disjoint, and cover <m>\R^2-h(C)</m>. It follows that the <m>V_\alpha</m> are the components of <m>\R^2-h(C)</m>, and the correspondence 
             <md>
-                U_\alpha\mapsto V_\alpha=h(U_\alpha-\{P\})
+              <mrow>  U_\alpha\mapsto V_\alpha=h(U_\alpha-\{P\}) </mrow>
             </md>
             is a bijection between the components of <m>S^2-C</m> and the components of <m>\R^2-h(C)</m>. 
         </p>
@@ -145,7 +145,37 @@
             Now assume by contradiction that <m>S^2-C</m> is connected. We will show that this implies <m>\pi_1(S^2-\{P,Q\}, R)</m> is trivial for any <m>R\ne P,Q</m>: an absurdity since <m>S^2-\{P,Q\}</m> is homeomorphic to the punctured plane, which has fundamental group isomorphic to <m>\Z</m>. 
         </p>
         <p>
-            Let <m>U=S^2-A_1</m> and <m>V=S^2-A_2</m>, and let <m>i\colon U\subseteq S^2-\{P,Q\}</m>, <m>j\colon V\subseteq S^2-\{P,Q\}</m> be the corresponding inclusion maps. Since <m>U\cap V=S^2-C</m> is assumed to be connected, and since <m>U</m> is locally path connected, <m>U\cap V</m> is path connected. This means the conditions for <xref ref="th_weak_Seifert_vanKampen"/> are satisfied. We will show that <m>i_*</m> and <m>j_*</m> are trivial maps, which would imply <m>S^2-\{P,Q\}</m> has trivial fundamental group. 
+            Let <m>U=S^2-A_1</m> and <m>V=S^2-A_2</m>, in which case we have 
+            <md>
+                <mrow>U\cup V \amp = S^2-(A_1\cap A_2)=S^2-\{P,Q\}</mrow>
+                <mrow>U\cap V \amp = S^2-(A_1\cup A_2)=S^2-C\ne \emptyset</mrow>
+            </md>. 
+            Since <m>U\cap V=S^2-C</m> is connected (by assumption), and since <m>S^2</m> is locally path connected, <m>U\cap V</m> is path connected. This means we are in the position to use the <xref ref="th_weak_Seifert_vanKampen" text="custom">weak Seifert-van Kampen theorem</xref>.  Let <m>i\colon U\subseteq S^2-\{P,Q\}</m> and <m>j\colon V\subseteq S^2-\{P,Q\}</m> be the inclusion maps, and pick any <m>R\in U\cap V=S^2-C</m>. We will show that 
+            <md>
+                <mrow>i_*\colon \pi_1(U, R) \amp \rightarrow \pi_1(S^2-\{P,Q\},R)</mrow>
+                <mrow>j_*\colon \pi_1(V, R) \amp \rightarrow \pi_1(S^2-\{P,Q\},R)</mrow>
+            </md> 
+            are both trivial maps, which would imply <m>S^2-\{P,Q\}</m> has trivial fundamental group: a contradiction. 
+        </p>
+        <p>
+            It will suffice by symmetry to show <m>i_*</m> is trivial. Recall that <m>i_*([f])=[i\circ f]</m> for any <m>[f]\in \pi_1(U,R)=\pi_1(S^2-A_1,R)</m>. Since <m>f\colon I\rightarrow U</m> is a loop, letting <m>q\colon I\rightarrow S^1</m> be the standard quotient map, there is a map <m>h\colon S^1\rightarrow U</m> making the diagram below commutative. 
+            <image xml:id="im_separation" width="50%">
+                <description>Factorization of <m>f</m> through <m>S^1</m></description>
+                <latex-image>
+                    \begin{tikzcd}
+                       I \arrow[r, "f"]  \arrow[d, "q"']\amp U=S^2-A_1 \arrow[r,"i", hookrightarrow]\amp S^2-\{P,Q\}\\ 
+                        S^1 \arrow[ur, "h"', dotted] \amp \amp 
+                    \end{tikzcd}
+                </latex-image>
+            </image>
+            Consider the map <m>i\circ h\colon S^1\rightarrow S^2-\{P,Q\}</m>. Its image <m>i\circ h(S^1)=h(S^1)</m> lies in <m>S^2-A_1</m>. Since <m>A_1</m> is a connected set containing <m>P</m> and <m>Q</m>, we see that these two points lie in the same component of <m>S^2-i\circ h(S^1)</m>. We conclude from <xref ref="lemma_nullhomotopic_to_S2"/> that <m>i\circ h</m> is nullhomotopic. It now follows from <xref ref="cor_homotopic_maps"/> that the map  <m>(i\circ h)_*</m> is trivial. But then we have 
+            <md>
+                <mrow>i_*([f]) \amp = [i\circ f]</mrow>
+                <mrow> \amp = [i\circ h\circ q] \amp (f=h\circ q)</mrow>
+                <mrow> \amp = (i\circ h)_*([q])</mrow>
+                <mrow> \amp = e </mrow>
+            </md>,
+            since <m>(i\circ h)_*</m> is the trivial map. This proves that <m>i_*</m> is trivial, as desired. 
         </p>
     </proof>
 </theorem>

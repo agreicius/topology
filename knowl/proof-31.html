@@ -11,23 +11,35 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
-<div class="para">We treat each axiom separately.</div> <ol class="decimal">
-<li><div class="para">We must show <span class="process-math">\(\emptyset, X\in \mathcal{T}\text{.}\)</span> That <span class="process-math">\(\emptyset\in \mathcal{T}\)</span> is specified explicitly in the definition of <span class="process-math">\(\mathcal{T}\text{.}\)</span> Next since <span class="process-math">\(X^c=\emptyset\)</span> is finite, the set <span class="process-math">\(X\)</span> is cofinite in <span class="process-math">\(X\text{,}\)</span> and hence an element of <span class="process-math">\(\mathcal{T}\text{.}\)</span>
-</div></li>
-<li><div class="para logical">
-<div class="para">Let <span class="process-math">\(\{U_i\}_{i\in I}\)</span> be any collection of elements of <span class="process-math">\(\mathcal{T}\text{:}\)</span> i.e., for all <span class="process-math">\(i\in I\)</span> we have <span class="process-math">\(U_i=\emptyset\)</span> or <span class="process-math">\(U_i\)</span> is cofinite in <span class="process-math">\(X\text{.}\)</span> Let <span class="process-math">\(U=\bigcup_{i\in I}U_i\text{.}\)</span> If <span class="process-math">\(U_i=\emptyset\)</span> for all <span class="process-math">\(i\in I\text{,}\)</span> then <span class="process-math">\(U=\emptyset\in \mathcal{T}\text{.}\)</span> Otherwise there is an <span class="process-math">\(i_0\in I\)</span> such that <span class="process-math">\(U_{i_0}\)</span> is nonempty, hence cofinite. We have</div>
-<div class="displaymath process-math">
+<article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
+<div class="para">First observe that the second statement follows from the first since any simple closed curve can be written as the union of two arcs intersecting at exactly their two endpoints.</div> <div class="para">Next, observe that under the given hypotheses we have <span class="process-math">\(C\subsetneq S^2\text{.}\)</span> Indeed, the space <span class="process-math">\(C-\{P,Q\}\)</span> is easily seen to be disconnected, whereas the doubly punctured sphere is connected.</div> <div class="para">Now assume by contradiction that <span class="process-math">\(S^2-C\)</span> is connected. We will show that this implies <span class="process-math">\(\pi_1(S^2-\{P,Q\}, R)\)</span> is trivial for any <span class="process-math">\(R\ne P,Q\text{:}\)</span> an absurdity since <span class="process-math">\(S^2-\{P,Q\}\)</span> is homeomorphic to the punctured plane, which has fundamental group isomorphic to <span class="process-math">\(\Z\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Let <span class="process-math">\(U=S^2-A_1\)</span> and <span class="process-math">\(V=S^2-A_2\text{,}\)</span> in which case we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_weak_Seifert_vanKampen.html">
 \begin{align*}
-U^c \amp = \left( \bigcup_{i\in I}U_i\right)^c \\
-\amp = \bigcap_{i\in I} U_i^c  \amp (\text{DeMorgan's law})\\
-\amp \subseteq U_{i_0}^c\text{.}
+U\cup V \amp = S^2-(A_1\cap A_2)=S^2-\{P,Q\}\\
+U\cap V \amp = S^2-(A_1\cup A_2)=S^2-C\ne \emptyset\text{.}
 \end{align*}
 </div>
-<div class="para">Since <span class="process-math">\(U_{i_0}^c\)</span> is finite, it follows that <span class="process-math">\(U^c\)</span> is finite. It follows that <span class="process-math">\(U\)</span> is cofinite, and hence an element of <span class="process-math">\(\mathcal{T}\)</span> as desired.</div>
-</div></li>
-<li><div class="para">Let <span class="process-math">\(U_1, U_2\in \mathcal{T}\text{,}\)</span> and let <span class="process-math">\(U=U_1\cap U_2\text{.}\)</span> We have <span class="process-math">\(U^c=U_1^c\cap U_2^c\text{.}\)</span> Since <span class="process-math">\(U_i^c\)</span> is either finite or equal to all of <span class="process-math">\(X\)</span> for <span class="process-math">\(i=1,2\text{,}\)</span> it is clear that <span class="process-math">\(U^c\)</span> is either finite or equal to <span class="process-math">\(X\text{.}\)</span> It follows that <span class="process-math">\(U\)</span> is either cofinite or empty, and hence an element of <span class="process-math">\(\mathcal{T}\text{.}\)</span>
-</div></li>
-</ol></article><span class="incontext"><a href="s_top_spaces.html#proof-31" class="internal">in-context</a></span>
+<div class="para">Since <span class="process-math">\(U\cap V=S^2-C\)</span> is connected (by assumption), and since <span class="process-math">\(S^2\)</span> is locally path connected, <span class="process-math">\(U\cap V\)</span> is path connected. This means we are in the position to use the <a href="" class="xref" data-knowl="./knowl/th_weak_Seifert_vanKampen.html" title="Theorem 1.8.1: Weak Seifert-van Kampen">weak Seifert-van Kampen theorem</a>.  Let <span class="process-math">\(i\colon U\subseteq S^2-\{P,Q\}\)</span> and <span class="process-math">\(j\colon V\subseteq S^2-\{P,Q\}\)</span> be the inclusion maps, and pick any <span class="process-math">\(R\in U\cap V=S^2-C\text{.}\)</span> We will show that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_weak_Seifert_vanKampen.html">
+\begin{align*}
+i_*\colon \pi_1(U, R) \amp \rightarrow \pi_1(S^2-\{P,Q\},R)\\
+j_*\colon \pi_1(V, R) \amp \rightarrow \pi_1(S^2-\{P,Q\},R)
+\end{align*}
+</div>
+<div class="para">are both trivial maps, which would imply <span class="process-math">\(S^2-\{P,Q\}\)</span> has trivial fundamental group: a contradiction.</div>
+</div> <div class="para logical">
+<div class="para">It will suffice by symmetry to show <span class="process-math">\(i_*\)</span> is trivial. Recall that <span class="process-math">\(i_*([f])=[i\circ f]\)</span> for any <span class="process-math">\([f]\in \pi_1(U,R)=\pi_1(S^2-A_1,R)\text{.}\)</span> Since <span class="process-math">\(f\colon I\rightarrow U\)</span> is a loop, letting <span class="process-math">\(q\colon I\rightarrow S^1\)</span> be the standard quotient map, there is a map <span class="process-math">\(h\colon S^1\rightarrow U\)</span> making the diagram below commutative. <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/im_separation.svg" role="img" class="contained" alt="Factorization of \(f\) through \(S^1\)"></div> Consider the map <span class="process-math">\(i\circ h\colon S^1\rightarrow S^2-\{P,Q\}\text{.}\)</span> Its image <span class="process-math">\(i\circ h(S^1)=h(S^1)\)</span> lies in <span class="process-math">\(S^2-A_1\text{.}\)</span> Since <span class="process-math">\(A_1\)</span> is a connected set containing <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\text{,}\)</span> we see that these two points lie in the same component of <span class="process-math">\(S^2-i\circ h(S^1)\text{.}\)</span> We conclude from <a href="" class="xref" data-knowl="./knowl/lemma_nullhomotopic_to_S2.html" title="Lemma 1.10.7">Lemma 1.10.7</a> that <span class="process-math">\(i\circ h\)</span> is nullhomotopic. It now follows from <a href="" class="xref" data-knowl="./knowl/cor_homotopic_maps.html" title="Corollary 1.7.4: Homotopic maps and fundamental groups">Corollary 1.7.4</a> that the map  <span class="process-math">\((i\circ h)_*\)</span> is trivial. But then we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/lemma_nullhomotopic_to_S2.html ./knowl/cor_homotopic_maps.html">
+\begin{align*}
+i_*([f]) \amp = [i\circ f]\\
+\amp = [i\circ h\circ q] \amp (f=h\circ q)\\
+\amp = (i\circ h)_*([q])\\
+\amp = e \text{,}
+\end{align*}
+</div>
+<div class="para">since <span class="process-math">\((i\circ h)_*\)</span> is the trivial map. This proves that <span class="process-math">\(i_*\)</span> is trivial, as desired.</div>
+</div></article><span class="incontext"><a href="s_jordan_separation.html#proof-31" class="internal">in-context</a></span>
 </body>
 </html>

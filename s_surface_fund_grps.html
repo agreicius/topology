@@ -190,7 +190,7 @@ window.MathJax = {
 <span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
 </ol>
 </li>
-</ol></div></button><span class="treebuttons"><a class="previous-button button" href="s_Sn_simply_connected.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="c_algebraic_topology.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="c_top_spaces.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="s_Sn_simply_connected.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="c_algebraic_topology.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="s_jordan_separation.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
 <input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
 </div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
   \newcommand{\Q}{{\mathbb Q}}
@@ -364,6 +364,8 @@ window.MathJax = {
 <li><div class="toc-item"><a href="s_homotopy_type.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Homotopty equivalence</span></a></div></li>
 <li><div class="toc-item"><a href="s_Sn_simply_connected.html" class="internal"><span class="codenumber">1.8</span> <span class="title">Fundamental group of <span class="process-math">\(S^n\)</span></span></a></div></li>
 <li class="active"><div class="toc-item"><a href="s_surface_fund_grps.html" class="internal"><span class="codenumber">1.9</span> <span class="title">Fundamental groups of some surfaces</span></a></div></li>
+<li><div class="toc-item"><a href="s_jordan_separation.html" class="internal"><span class="codenumber">1.10</span> <span class="title">Jordan separation theorem</span></a></div></li>
+<li><div class="toc-item"><a href="s_jordan_curve.html" class="internal"><span class="codenumber">1.11</span> <span class="title">Jordan curve theorem</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -455,7 +457,7 @@ window.MathJax = {
 </div></article><article class="definition definition-like" id="d_euclidean_ball"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.9.4</span><span class="period">.</span><span class="space"> </span><span class="title">Euclidean balls.</span>
 </h3> <div class="para" id="p-362">Let <span class="process-math">\(M\)</span> be an <span class="process-math">\(n\)</span>-manifold. A <dfn class="terminology">Euclidean ball</dfn> is an open set <span class="process-math">\(B\subseteq M\)</span> that is homeomorphic to an open ball of <span class="process-math">\(\R^n\text{.}\)</span>
-</div> <div class="para" id="p-363">A Euclidean ball <span class="process-math">\(B\subseteq M\)</span> is <dfn class="terminology">regular</dfn> is there is a Euclidean ball <span class="process-math">\(B'\)</span> such that (i) <span class="process-math">\(\overline{B}\subseteq B'\)</span> and (ii) there is a homeomorphism of <span class="process-math">\(\phi\colon B'\rightarrow B_{2r}(\boldzero)\subseteq \R^n\)</span> for some <span class="process-math">\(r&gt; 0\text{,}\)</span> such that <span class="process-math">\(\overline{B}=\phi^{-1}(\overline{B}_r(\boldzero))\text{.}\)</span>
+</div> <div class="para" id="p-363">A Euclidean ball <span class="process-math">\(B\subseteq M\)</span> is <dfn class="terminology">regular</dfn> if there is a Euclidean ball <span class="process-math">\(B'\)</span> such that (i) <span class="process-math">\(\overline{B}\subseteq B'\)</span> and (ii) there is a homeomorphism of <span class="process-math">\(\phi\colon B'\rightarrow B_{2r}(\boldzero)\subseteq \R^n\)</span> for some <span class="process-math">\(r&gt; 0\text{,}\)</span> such that <span class="process-math">\(\overline{B}=\phi^{-1}(\overline{B}_r(\boldzero))\text{.}\)</span>
 </div></article><article class="definition definition-like" id="d_connected_sum"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.9.5</span><span class="period">.</span><span class="space"> </span><span class="title">Connected sum of surfaces.</span>
 </h3> <div class="para" id="p-364">For each <span class="process-math">\(i\in \{1,2\}\)</span> let <span class="process-math">\(M_i\)</span> be a surface and let <span class="process-math">\(B_i\subseteq M_i\)</span> be a regular Euclidean ball. Furthermore, let <span class="process-math">\(\phi\colon \partial \overline{B_1}\rightarrow \partial \overline{B_2}\)</span> be a homeomorphism. The <dfn class="terminology">connected sum</dfn> of <span class="process-math">\(M_1\)</span> and <span class="process-math">\(M_2\)</span> is the quotient space <span class="process-math">\(M_1\# M_2\)</span> obtained from the disjoint union <span class="process-math">\((M_1-B_1)\coprod (M_2-B_2)\)</span> by identifying <span class="process-math">\(m\)</span> and <span class="process-math">\(\phi(m)\)</span> for all points <span class="process-math">\(m\in \partial\overline{B_1}\text{.}\)</span>
@@ -482,7 +484,7 @@ window.MathJax = {
 <div class="para" id="p-373">The following surfaces are pairwise non-homeomorphic: <span class="process-math">\(S^2, T, \PP^2, T\#T\text{.}\)</span>
 </div></article></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="s_Sn_simply_connected.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="c_top_spaces.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+<a class="previous-button button" href="s_Sn_simply_connected.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="s_jordan_separation.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer">

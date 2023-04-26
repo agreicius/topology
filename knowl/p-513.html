@@ -13,14 +13,14 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Assume <span class="process-math">\(C_i\)</span> is closed for <span class="process-math">\(1\leq i\leq n\text{;}\)</span> then by DeMorgan's law</div>
+<div class="para">Let <span class="process-math">\((X,d)\)</span> be a metric space. Given <span class="process-math">\(x\in X\)</span> and <span class="process-math">\(\epsilon&gt; 0\)</span> the <dfn class="terminology"><span class="process-math">\(\epsilon\)</span>-ball centered at <span class="process-math">\(x\)</span></dfn> is the subset <span class="process-math">\(B_\epsilon(x)\subseteq X\)</span> defined as</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\left(\bigcup_{i=1}^nC_i\right)^c=\bigcap_{i=1}^n C_i^c\text{,}
+B_\epsilon(x)=\{y\in X\colon d(x,y)&lt; \epsilon\}\text{.}
 \end{equation*}
 </div>
-<div class="para">which is open since <span class="process-math">\(C_i^c\)</span> is open for all <span class="process-math">\(1\leq i\leq n\)</span> and finite intersections of open sets are open. This proves (2).</div>
+<div class="para">In other words, <span class="process-math">\(B_\epsilon(x)\)</span> is the set of all elements of <span class="process-math">\(X\)</span> lying within a distance of <span class="process-math">\(\epsilon\)</span> of <span class="process-math">\(x\text{.}\)</span> We call <span class="process-math">\(\epsilon\)</span> the <dfn class="terminology">radius</dfn> of <span class="process-math">\(B_\epsilon(x)\text{.}\)</span> More generally, we call a subset <span class="process-math">\(U\subseteq X\)</span> a <dfn class="terminology"><span class="process-math">\(d\)</span>-metric ball</dfn> if <span class="process-math">\(U=B_\epsilon(x)\)</span> for some <span class="process-math">\(x\in X\)</span> and <span class="process-math">\(\epsilon&gt; 0\text{.}\)</span> When it is clear what the underlying metric is, we will omit <span class="process-math">\(d\)</span> and speak simply of metric balls.</div>
 </div>
-<span class="incontext"><a href="s_closed_closure_interior.html#p-513" class="internal">in-context</a></span>
+<span class="incontext"><a href="s_metric1.html#p-513" class="internal">in-context</a></span>
 </body>
 </html>

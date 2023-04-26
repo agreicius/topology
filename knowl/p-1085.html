@@ -13,14 +13,25 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">The first crucial step in the proof is to build a collection of open sets <span class="process-math">\(\{U_p\}_{p\in \Q}\)</span> satisfying <span class="process-math">\(\overline{U_p}\subseteq U_{q}\)</span> if <span class="process-math">\(p&lt; q\text{.}\)</span> This is done by first picking an enumeration of <span class="process-math">\(\Q\cap [0,1]=\{p_1,p_2,\dots,\}\)</span> where for convenience <span class="process-math">\(p_1=1\)</span> and <span class="process-math">\(p_2=0\text{.}\)</span> We use the enumeration to define open sets <span class="process-math">\(U_p\)</span> for each <span class="process-math">\(p\in \Q\)</span> recursively as follows. Set <span class="process-math">\(U_1=X-B\text{.}\)</span> Since <span class="process-math">\(A\subseteq U_1\text{,}\)</span> by <a href="" class="xref" data-knowl="./knowl/th_regular_normal_equivalence.html" title="Theorem 2.19.8: Regular and normal equivalences">Theorem 2.19.8</a> we can find an open <span class="process-math">\(U_0\)</span> containing <span class="process-math">\(A\)</span> such that <span class="process-math">\(\overline{U}_0\subseteq U_1\text{.}\)</span> Now take any <span class="process-math">\(n\geq 2\)</span> and assume by induction that we constructed open sets <span class="process-math">\(U_{p_1}, U_{p_2},\dots, U_{p_n}\)</span> satisfying the desired inclusion condition. Write <span class="process-math">\(p&lt; p_{n+1} &lt; q\)</span> where  <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> are the immediate predecessor and successor, respectively, of <span class="process-math">\(p_{n+1}\)</span> among the set <span class="process-math">\(\{p_1,p_2,\dots, p_n\}\text{.}\)</span> By induction we have <span class="process-math">\(\overline{U_p}\subseteq U_q\text{.}\)</span> Pick <span class="process-math">\(U_{p_{n+1}}\)</span> to be any open set satisfying</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_regular_normal_equivalence.html">
-\begin{equation*}
-\overline{U_p}\subseteq U_{p_{n+1}}\subseteq \overline{U_{p_{n+1}}}\subseteq U_q\text{.}
-\end{equation*}
+<div class="para">Let <span class="process-math">\(A,B\)</span> be disjoint closed subsets of <span class="process-math">\(X\text{.}\)</span> For each <span class="process-math">\(a\in A\)</span> we can find an <span class="process-math">\(\epsilon_a&gt; 0 \)</span> such that <span class="process-math">\(B_{\epsilon_a}(a)\cap B=\emptyset\text{.}\)</span> Similarly for each <span class="process-math">\(b\in B\)</span> we can find an <span class="process-math">\(\epsilon_b&gt; 0\)</span> such that <span class="process-math">\(B_{\epsilon_b}(b)\cap A=\emptyset\text{.}\)</span> I claim the open sets</div>
+<div class="displaymath process-math">
+\begin{align*}
+U \amp =\bigcup_{a\in A}B_{\epsilon_a/2}(a)\\
+V \amp =\bigcup_{b\in B}B_{\epsilon_b/2}(b)
+\end{align*}
 </div>
-<div class="para">Lastly define <span class="process-math">\(U_p=\emptyset\)</span> for all <span class="process-math">\(p&lt; 0\)</span> and <span class="process-math">\(U_p=X\)</span> for all <span class="process-math">\(p&gt; 0\text{.}\)</span> It is easy to see that thus defined, our collection <span class="process-math">\(\{U_p\}_{p\in \Q}\)</span> satisfies the desired inclusion condition.</div>
+<div class="para">are disjoint, proving <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are separated by open sets. Indeed if  <span class="process-math">\(x\in U\cap V\text{,}\)</span> then <span class="process-math">\(x\in B_{\epsilon_a/2}(a)\cap B_{\epsilon_b/2}(b)\)</span> for some <span class="process-math">\(a\in A\)</span> and <span class="process-math">\(b\in B\text{.}\)</span> Without loss of generality we may assume that <span class="process-math">\(\epsilon_a\geq \epsilon_b\text{.}\)</span> But then we would have</div>
+<div class="displaymath process-math">
+\begin{align*}
+d(x,b) \amp \geq d(a,b)-d(a,x) \amp (\text{triangle ineq.}) \\
+\amp \geq \epsilon_a-d(a,x) \amp (b\notin B_{\epsilon_a}(a))\\
+\amp \geq \epsilon_a/2\\
+\amp \geq \epsilon_b/2\text{.}
+\end{align*}
 </div>
-<span class="incontext"><a href="s_Urysohn_lemma.html#p-1085" class="internal">in-context</a></span>
+<div class="para">This is a contradiction since we assumed <span class="process-math">\(x\in B_{\epsilon_b/2}(b)\text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a href="s_regular.html#p-1085" class="internal">in-context</a></span>
 </body>
 </html>

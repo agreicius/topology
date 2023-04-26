@@ -1177,7 +1177,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.9",
   "title": "Fundamental groups of some surfaces",
-  "body": " Fundamental groups of some surfaces   Topological manifold   Let be a nonnegative integer. A topological -manifold is a topological space satisfying the following properties:   Hausdorff   is Hausdorff.    Second countable   is second countable: , has a countable basis.    Locally Euclidean   is locally Euclidean of dimension : , every has an open neighborhood that is homeomorphic to an open subset of . (We define .)   A -manifold is called a curve ; a -manifold is called a surface .     You might be wondering whether an -manifold could also be an -manifold. The answer is no, but hinges on the fact that is not homeomorphic to (invariance of domain), which is difficult to prove in full generality. However, we do know that invariance of domain holds for and (homework exercise), so the in -manifold is well-defined at least for .    Sphere, projective 2-space, torus   Show that , , and are surfaces.         Euclidean balls   Let be an -manifold. A Euclidean ball is an open set that is homeomorphic to an open ball of .  A Euclidean ball is regular is there is a Euclidean ball such that (i) and (ii) there is a homeomorphism of for some , such that .     Connected sum of surfaces   For each let be a surface and let be a regular Euclidean ball. Furthermore, let be a homeomorphism. The connected sum of and is the quotient space obtained from the disjoint union by identifying and for all points .  It is possible to show that is itself a surface.     Double torus   The double torus (or 2-holed torus ) is the connected sum obtained by excising two circular patches on two copies of and glueing the two surfaces together along the circular boundaries. Make this description more precise, using the quotient description of the torus.     Let be the torus realized as the quotient of by the relation and for all , and let be copies of       Fundamental group of the figure eight   Let be your favorite incarnation of the figure eight space.    Show that the diagram below describes a covering map of . Your argument can be somewhat informal (since no formulas are provided).  Cover of figure eight      Let be the intersection of the two circles in the figure eight, and let be the simple paths traversing the left and right hoops of , with orientation as in the diagram. Use the lifting correspondence to show that , and hence that is a nonabelian group.       Double torus fundamental group   Give an informal, yet convincing argument that there is a retraction from the double torus to the figure eight space . Explain why this implies is nonabelian.     Some non-homeomorphic surfaces   The following surfaces are pairwise non-homeomorphic: .    "
+  "body": " Fundamental groups of some surfaces   Topological manifold   Let be a nonnegative integer. A topological -manifold is a topological space satisfying the following properties:   Hausdorff   is Hausdorff.    Second countable   is second countable: , has a countable basis.    Locally Euclidean   is locally Euclidean of dimension : , every has an open neighborhood that is homeomorphic to an open subset of . (We define .)   A -manifold is called a curve ; a -manifold is called a surface .     You might be wondering whether an -manifold could also be an -manifold. The answer is no, but hinges on the fact that is not homeomorphic to (invariance of domain), which is difficult to prove in full generality. However, we do know that invariance of domain holds for and (homework exercise), so the in -manifold is well-defined at least for .    Sphere, projective 2-space, torus   Show that , , and are surfaces.         Euclidean balls   Let be an -manifold. A Euclidean ball is an open set that is homeomorphic to an open ball of .  A Euclidean ball is regular if there is a Euclidean ball such that (i) and (ii) there is a homeomorphism of for some , such that .     Connected sum of surfaces   For each let be a surface and let be a regular Euclidean ball. Furthermore, let be a homeomorphism. The connected sum of and is the quotient space obtained from the disjoint union by identifying and for all points .  It is possible to show that is itself a surface.     Double torus   The double torus (or 2-holed torus ) is the connected sum obtained by excising two circular patches on two copies of and glueing the two surfaces together along the circular boundaries. Make this description more precise, using the quotient description of the torus.     Let be the torus realized as the quotient of by the relation and for all , and let be copies of       Fundamental group of the figure eight   Let be your favorite incarnation of the figure eight space.    Show that the diagram below describes a covering map of . Your argument can be somewhat informal (since no formulas are provided).  Cover of figure eight      Let be the intersection of the two circles in the figure eight, and let be the simple paths traversing the left and right hoops of , with orientation as in the diagram. Use the lifting correspondence to show that , and hence that is a nonabelian group.       Double torus fundamental group   Give an informal, yet convincing argument that there is a retraction from the double torus to the figure eight space . Explain why this implies is nonabelian.     Some non-homeomorphic surfaces   The following surfaces are pairwise non-homeomorphic: .    "
 },
 {
   "id": "d_manifold",
@@ -1213,7 +1213,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "1.9.4",
   "title": "Euclidean balls.",
-  "body": " Euclidean balls   Let be an -manifold. A Euclidean ball is an open set that is homeomorphic to an open ball of .  A Euclidean ball is regular is there is a Euclidean ball such that (i) and (ii) there is a homeomorphism of for some , such that .   "
+  "body": " Euclidean balls   Let be an -manifold. A Euclidean ball is an open set that is homeomorphic to an open ball of .  A Euclidean ball is regular if there is a Euclidean ball such that (i) and (ii) there is a homeomorphism of for some , such that .   "
 },
 {
   "id": "d_connected_sum",
@@ -1259,6 +1259,123 @@ var ptx_lunr_docs = [
   "number": "1.9.9",
   "title": "Some non-homeomorphic surfaces.",
   "body": " Some non-homeomorphic surfaces   The following surfaces are pairwise non-homeomorphic: .   "
+},
+{
+  "id": "s_jordan_separation",
+  "level": "1",
+  "url": "s_jordan_separation.html",
+  "type": "Section",
+  "number": "1.10",
+  "title": "Jordan separation theorem",
+  "body": " Jordan separation theorem   Arcs and simple closed curves   An arc is a space that is homeomorphic to the unit interval ; a simple closed curve is a space homeomorphic to .     Arcs and simple closed curves  Let be a Hausdorff space. A subspace is an arc if and only if it is the image of an injective path : since is compact and is Hausdorff, the map is guaranteed to be a homeomorphism onto . Similarly, using the fact that is homeomorphic to the quotient of obtained by identifying its endpoints and , we see that is a simple closed curve if and only if it is the image of a path that is injective on and satisfies : again, since is compact and is Hausdorff, the map is guaranteed to be closed, hence a quotient map.     Let be a subspace of the connected space . We say separates if is not connected. Similarly, we say  separates into components if has connected components.    The goal of the next two lectures is to prove the Jordan curve theorem : any simple closed curve separates into two components. That this statement is true seems intuitively clear, painfully obvious even: like the circle, any simple closed curve should have a well-defined inside and outside , giving us exactly two components of . All the more maddening, then, that a proof of this fact turns out to be rather difficult. On the other hand, the seemingly well-behaved notion of a path has surprised us with some pathological behavior on other occasions: forget not the space filling curve ! First we include a useful result (not officially covered last quarter) about locally connected spaces .   Components in locally connected spaces   Let be a locally path connected space.   The connected components and path components of are identical.    The components of are open.        Components of  Let be compact, and let . Let's enumerate some important facts about .    is open, since is closed, and hence locally path connected, since is locally path connected.     is unbounded, since is bounded.     has exactly one unbounded connected component.   To see why (2)-(3) are true, choose such that . The set is connected and unbounded, hence must lie in some unbounded connected component of . Furthermore, if is an unbounded connected component, then we must have (essentially by the definition of unboundedness). But then . Since connected components partition , we must have .    Comparing and components   Fix and let be a homeomorphism. Let be a compact subspace of not containing , and let be a component of .   If , then is a bounded component of .    If , then is an unbounded component of .    If has components, then has components.       Let be a connected component of . We first show that is connected. This is trivial if , so assume . Since is open and is a surface, we can find an open set that is homeomorphic to an open ball in and which satisfies . (In fact, since is a connected component and is connected, if , then we automatically have .) Assume by contradiction that is not connected, and let be a separation. Note that is itself open, and thus so are and . Since is connected (homeomorphic to punctured ball) and , it must be contained in or . Assume without loss of generality that . But then we have is open, and thus is a separation: a contradiction.  Let be the connected components of . By above, the sets are open, connected and disjoint. Thus the sets are open connected and disjoint, and cover . It follows that the are the components of , and the correspondence is a bijection between the components of and the components of .  Lastly, let be the component of containing . Since is compact, is bounded. Thus is the unique unbounded component of .      Fix points . Let be compact, and let . If and lie in the same component of , then is nullhomotopic.    Assume where is compact. Pick a homeomorphism sending to , and let . Observe that if is nullhomotopic via the homotopy , then is nullhomotopic via the homotopy . Furthermore, using , we see that and lie in the same component of if and only if lies in the unbounded component of . Thus it suffices to show that if is compact and , then is nullhomotopic if is in the unbounded component of . We now show that this is the case.  Assume with compact, and that lies in the unbounded component of . Since is compact, it is closed and bounded. Choose such that and any point . Since is an open subspace of the locally path connected space , it is itself locally path connected. It follows that all the components of are open and path connected. Let be the unbounded component of . Since there is a path . The map defined as is a homotopy between and . (Note that for we have , since .) This shows that is homotopic to . Lastly, consider the map on defined as . Since , we have for all and . Since , it follows that . Thus , and it is easily seen that is a homotopy from the constant function to . By transitivity, we conclude that is nullhomotopic.     Jordan separation theorem   If and are closed connected subspaces of satisfying , where , then separates .  In particular, if is a simple closed curve, then separates .    First observe that the second statement follows from the first since any simple closed curve can be written as the union of two arcs intersecting at exactly their two endpoints.  Next, observe that under the given hypotheses we have . Indeed, the space is easily seen to be disconnected, whereas the doubly punctured sphere is connected.  Now assume by contradiction that is connected. We will show that this implies is trivial for any : an absurdity since is homeomorphic to the punctured plane, which has fundamental group isomorphic to .  Let and , in which case we have . Since is connected (by assumption), and since is locally path connected, is path connected. This means we are in the position to use the weak Seifert-van Kampen theorem . Let and be the inclusion maps, and pick any . We will show that are both trivial maps, which would imply has trivial fundamental group: a contradiction.  It will suffice by symmetry to show is trivial. Recall that for any . Since is a loop, letting be the standard quotient map, there is a map making the diagram below commutative.  Factorization of through   Consider the map . Its image lies in . Since is a connected set containing and , we see that these two points lie in the same component of . We conclude from that is nullhomotopic. It now follows from that the map is trivial. But then we have , since is the trivial map. This proves that is trivial, as desired.    "
+},
+{
+  "id": "d_arc_simple_closed",
+  "level": "2",
+  "url": "s_jordan_separation.html#d_arc_simple_closed",
+  "type": "Definition",
+  "number": "1.10.1",
+  "title": "Arcs and simple closed curves.",
+  "body": " Arcs and simple closed curves   An arc is a space that is homeomorphic to the unit interval ; a simple closed curve is a space homeomorphic to .   "
+},
+{
+  "id": "rm_arc_closed_curve",
+  "level": "2",
+  "url": "s_jordan_separation.html#rm_arc_closed_curve",
+  "type": "Remark",
+  "number": "1.10.2",
+  "title": "Arcs and simple closed curves.",
+  "body": " Arcs and simple closed curves  Let be a Hausdorff space. A subspace is an arc if and only if it is the image of an injective path : since is compact and is Hausdorff, the map is guaranteed to be a homeomorphism onto . Similarly, using the fact that is homeomorphic to the quotient of obtained by identifying its endpoints and , we see that is a simple closed curve if and only if it is the image of a path that is injective on and satisfies : again, since is compact and is Hausdorff, the map is guaranteed to be closed, hence a quotient map.  "
+},
+{
+  "id": "d_separates",
+  "level": "2",
+  "url": "s_jordan_separation.html#d_separates",
+  "type": "Definition",
+  "number": "1.10.3",
+  "title": "",
+  "body": "  Let be a subspace of the connected space . We say separates if is not connected. Similarly, we say  separates into components if has connected components.   "
+},
+{
+  "id": "th_locally_connected_components",
+  "level": "2",
+  "url": "s_jordan_separation.html#th_locally_connected_components",
+  "type": "Theorem",
+  "number": "1.10.4",
+  "title": "Components in locally connected spaces.",
+  "body": " Components in locally connected spaces   Let be a locally path connected space.   The connected components and path components of are identical.    The components of are open.      "
+},
+{
+  "id": "remark-16",
+  "level": "2",
+  "url": "s_jordan_separation.html#remark-16",
+  "type": "Remark",
+  "number": "1.10.5",
+  "title": "Components of <span class=\"process-math\">\\(\\R^2-C\\)<\/span>.",
+  "body": " Components of  Let be compact, and let . Let's enumerate some important facts about .    is open, since is closed, and hence locally path connected, since is locally path connected.     is unbounded, since is bounded.     has exactly one unbounded connected component.   To see why (2)-(3) are true, choose such that . The set is connected and unbounded, hence must lie in some unbounded connected component of . Furthermore, if is an unbounded connected component, then we must have (essentially by the definition of unboundedness). But then . Since connected components partition , we must have .  "
+},
+{
+  "id": "lemma_components_S2_R2",
+  "level": "2",
+  "url": "s_jordan_separation.html#lemma_components_S2_R2",
+  "type": "Lemma",
+  "number": "1.10.6",
+  "title": "Comparing <span class=\"process-math\">\\(S^2\\)<\/span> and <span class=\"process-math\">\\(\\R^2\\)<\/span> components.",
+  "body": " Comparing and components   Fix and let be a homeomorphism. Let be a compact subspace of not containing , and let be a component of .   If , then is a bounded component of .    If , then is an unbounded component of .    If has components, then has components.       Let be a connected component of . We first show that is connected. This is trivial if , so assume . Since is open and is a surface, we can find an open set that is homeomorphic to an open ball in and which satisfies . (In fact, since is a connected component and is connected, if , then we automatically have .) Assume by contradiction that is not connected, and let be a separation. Note that is itself open, and thus so are and . Since is connected (homeomorphic to punctured ball) and , it must be contained in or . Assume without loss of generality that . But then we have is open, and thus is a separation: a contradiction.  Let be the connected components of . By above, the sets are open, connected and disjoint. Thus the sets are open connected and disjoint, and cover . It follows that the are the components of , and the correspondence is a bijection between the components of and the components of .  Lastly, let be the component of containing . Since is compact, is bounded. Thus is the unique unbounded component of .   "
+},
+{
+  "id": "lemma_nullhomotopic_to_S2",
+  "level": "2",
+  "url": "s_jordan_separation.html#lemma_nullhomotopic_to_S2",
+  "type": "Lemma",
+  "number": "1.10.7",
+  "title": "",
+  "body": "  Fix points . Let be compact, and let . If and lie in the same component of , then is nullhomotopic.    Assume where is compact. Pick a homeomorphism sending to , and let . Observe that if is nullhomotopic via the homotopy , then is nullhomotopic via the homotopy . Furthermore, using , we see that and lie in the same component of if and only if lies in the unbounded component of . Thus it suffices to show that if is compact and , then is nullhomotopic if is in the unbounded component of . We now show that this is the case.  Assume with compact, and that lies in the unbounded component of . Since is compact, it is closed and bounded. Choose such that and any point . Since is an open subspace of the locally path connected space , it is itself locally path connected. It follows that all the components of are open and path connected. Let be the unbounded component of . Since there is a path . The map defined as is a homotopy between and . (Note that for we have , since .) This shows that is homotopic to . Lastly, consider the map on defined as . Since , we have for all and . Since , it follows that . Thus , and it is easily seen that is a homotopy from the constant function to . By transitivity, we conclude that is nullhomotopic.   "
+},
+{
+  "id": "th_Jordan_separation",
+  "level": "2",
+  "url": "s_jordan_separation.html#th_Jordan_separation",
+  "type": "Theorem",
+  "number": "1.10.8",
+  "title": "Jordan separation theorem.",
+  "body": " Jordan separation theorem   If and are closed connected subspaces of satisfying , where , then separates .  In particular, if is a simple closed curve, then separates .    First observe that the second statement follows from the first since any simple closed curve can be written as the union of two arcs intersecting at exactly their two endpoints.  Next, observe that under the given hypotheses we have . Indeed, the space is easily seen to be disconnected, whereas the doubly punctured sphere is connected.  Now assume by contradiction that is connected. We will show that this implies is trivial for any : an absurdity since is homeomorphic to the punctured plane, which has fundamental group isomorphic to .  Let and , in which case we have . Since is connected (by assumption), and since is locally path connected, is path connected. This means we are in the position to use the weak Seifert-van Kampen theorem . Let and be the inclusion maps, and pick any . We will show that are both trivial maps, which would imply has trivial fundamental group: a contradiction.  It will suffice by symmetry to show is trivial. Recall that for any . Since is a loop, letting be the standard quotient map, there is a map making the diagram below commutative.  Factorization of through   Consider the map . Its image lies in . Since is a connected set containing and , we see that these two points lie in the same component of . We conclude from that is nullhomotopic. It now follows from that the map is trivial. But then we have , since is the trivial map. This proves that is trivial, as desired.   "
+},
+{
+  "id": "s_jordan_curve",
+  "level": "1",
+  "url": "s_jordan_curve.html",
+  "type": "Section",
+  "number": "1.11",
+  "title": "Jordan curve theorem",
+  "body": " Jordan curve theorem   Complementary Seifert-van Kampen   Let , where and are open, and is a separation. Assume and , and that there are paths and a path . Let .   The subgroup is infinite cyclic. Furthermore, if , then .    Suppose and we have paths and . Setting , we have .        Nonseparation theorem   If is an arc, then does not separate .      Let and be closed connected subsets of whose intersection consists of two points. If neither nor separates , then separates .  As a consequence, if is simple closed curve, then separates into exactly two components, . Furthermore, we have .    "
+},
+{
+  "id": "th_compl_Seifert_vanKampen",
+  "level": "2",
+  "url": "s_jordan_curve.html#th_compl_Seifert_vanKampen",
+  "type": "Theorem",
+  "number": "1.11.1",
+  "title": "Complementary Seifert-van Kampen.",
+  "body": " Complementary Seifert-van Kampen   Let , where and are open, and is a separation. Assume and , and that there are paths and a path . Let .   The subgroup is infinite cyclic. Furthermore, if , then .    Suppose and we have paths and . Setting , we have .      "
+},
+{
+  "id": "th_Jordan_nonseparation_theorem",
+  "level": "2",
+  "url": "s_jordan_curve.html#th_Jordan_nonseparation_theorem",
+  "type": "Theorem",
+  "number": "1.11.2",
+  "title": "Nonseparation theorem.",
+  "body": " Nonseparation theorem   If is an arc, then does not separate .   "
+},
+{
+  "id": "th_Jordan_curve_theorem",
+  "level": "2",
+  "url": "s_jordan_curve.html#th_Jordan_curve_theorem",
+  "type": "Theorem",
+  "number": "1.11.3",
+  "title": "",
+  "body": "  Let and be closed connected subsets of whose intersection consists of two points. If neither nor separates , then separates .  As a consequence, if is simple closed curve, then separates into exactly two components, . Furthermore, we have .   "
 },
 {
   "id": "s_top_spaces",
@@ -2467,9 +2584,9 @@ var ptx_lunr_docs = [
   "body": " Connectedness and subspaces   Let be a topological space.   If is connected and is a separation of , then or .    If is a collection of connected subspaces of and , then is connected.    If is connected, then any satisfying is connected.     Let be a connected subspace of . It is a separation of , then or .   "
 },
 {
-  "id": "proof-73",
+  "id": "proof-76",
   "level": "2",
-  "url": "s_connected1.html#proof-73",
+  "url": "s_connected1.html#proof-76",
   "type": "Proof",
   "number": "2.12.1",
   "title": "",
@@ -3169,9 +3286,9 @@ var ptx_lunr_docs = [
   "body": " Separation axioms  The properties of being , Hausdorff, regular, or normal are called separation axioms as they articulate how various subsets can be separated by open sets. Below you find the descriptions of these properties using the Trennungsaxiom schema. A further remark about the use of regular and normal in the literature: some texts do not include the condition in these notions, and describe the properties we define as regular Hausdorff and normal regular . There is considerably less ambiguity in the literature when using the descriptions, but you should still be careful.  "
 },
 {
-  "id": "remark-33",
+  "id": "remark-35",
   "level": "2",
-  "url": "s_regular.html#remark-33",
+  "url": "s_regular.html#remark-35",
   "type": "Remark",
   "number": "2.19.4",
   "title": "Trennungsaxiom implications.",
@@ -3223,9 +3340,9 @@ var ptx_lunr_docs = [
   "body": " Locally compact implies regular   Let be locally compact and Hausdorff. Prove: is regular.    This is an easy consequence of and .   "
 },
 {
-  "id": "remark-34",
+  "id": "remark-36",
   "level": "2",
-  "url": "s_regular.html#remark-34",
+  "url": "s_regular.html#remark-36",
   "type": "Remark",
   "number": "2.19.10",
   "title": "Locally compact and non-normal.",
@@ -3259,9 +3376,9 @@ var ptx_lunr_docs = [
   "body": " Regularity: subspace and product properties      Subspaces of regular spaces are regular.    Products of regular spaces are regular.          Assume is a subspace of the regular space . We know already that subspaces of -spaces are , so is . Next take any and any set not containing that is closed in . We have for some closed set . Since and is regular, we can find disjoint open sets that separate and in . The disjoint open (in ) sets and are then a separation of and in .    We use (1) from . Given and open set containing , choose a basis element of the form containing . Since each is regular, we can find open sets satisfying . Letting , we have .      "
 },
 {
-  "id": "remark-36",
+  "id": "remark-38",
   "level": "2",
-  "url": "s_regular.html#remark-36",
+  "url": "s_regular.html#remark-38",
   "type": "Remark",
   "number": "2.19.14",
   "title": "",
@@ -3403,9 +3520,9 @@ var ptx_lunr_docs = [
   "body": " Embedding theorem   Let be a -space. Given any collection of continuous functions satisfying the property that for all and for all open sets containing there is an such that and , the map defined as is an embedding into .     is injective  Since is , given any we can find an open set such that and . By assumption, there is some such that and . It follows that and hence that .    is continuous  This follows immediately from since each is continuous.    is embedding  Lastly, we prove that is an embedding mapping homeomorphically onto . Let be an open set containing an element , and let . Pick any such that and . Let be the projection map onto the -th coordinate, and define . Since is continuous and is open, the set is open in the subspace topology of . We claim that , proving that is an embedding. Since , we have . Similarly, if , then , from whence it follows that : otherwise we'd have .    "
 },
 {
-  "id": "remark-39",
+  "id": "remark-41",
   "level": "2",
-  "url": "s_Urysohn_metrization.html#remark-39",
+  "url": "s_Urysohn_metrization.html#remark-41",
   "type": "Remark",
   "number": "2.22.3",
   "title": "Urysohn metrization theorem.",

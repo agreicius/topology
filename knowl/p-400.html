@@ -13,14 +13,22 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(X\)</span> be a set. A subset <span class="process-math">\(U\subseteq X\)</span> is <dfn class="terminology">cofinite</dfn> in <span class="process-math">\(X\)</span> if <span class="process-math">\(U^c=X-U\)</span> is finite. The collection of subsets</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\mathcal{T}=\{\emptyset\}\cup \{U\subseteq X\colon U \text{ is cofinite}\}
-\end{equation*}
+<div class="para">Let <span class="process-math">\(U=S^2-A_1\)</span> and <span class="process-math">\(V=S^2-A_2\text{,}\)</span> in which case we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_weak_Seifert_vanKampen.html">
+\begin{align*}
+U\cup V \amp = S^2-(A_1\cap A_2)=S^2-\{P,Q\}\\
+U\cap V \amp = S^2-(A_1\cup A_2)=S^2-C\ne \emptyset\text{.}
+\end{align*}
 </div>
-<div class="para">is a topology, called the <dfn class="terminology">cofinite topology</dfn>. In this topology a subset <span class="process-math">\(U\subseteq X\)</span> is open if and only if it is either empty or cofinite.</div>
+<div class="para">Since <span class="process-math">\(U\cap V=S^2-C\)</span> is connected (by assumption), and since <span class="process-math">\(S^2\)</span> is locally path connected, <span class="process-math">\(U\cap V\)</span> is path connected. This means we are in the position to use the <a href="" class="xref" data-knowl="./knowl/th_weak_Seifert_vanKampen.html" title="Theorem 1.8.1: Weak Seifert-van Kampen">weak Seifert-van Kampen theorem</a>.  Let <span class="process-math">\(i\colon U\subseteq S^2-\{P,Q\}\)</span> and <span class="process-math">\(j\colon V\subseteq S^2-\{P,Q\}\)</span> be the inclusion maps, and pick any <span class="process-math">\(R\in U\cap V=S^2-C\text{.}\)</span> We will show that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_weak_Seifert_vanKampen.html">
+\begin{align*}
+i_*\colon \pi_1(U, R) \amp \rightarrow \pi_1(S^2-\{P,Q\},R)\\
+j_*\colon \pi_1(V, R) \amp \rightarrow \pi_1(S^2-\{P,Q\},R)
+\end{align*}
 </div>
-<span class="incontext"><a href="s_top_spaces.html#p-400" class="internal">in-context</a></span>
+<div class="para">are both trivial maps, which would imply <span class="process-math">\(S^2-\{P,Q\}\)</span> has trivial fundamental group: a contradiction.</div>
+</div>
+<span class="incontext"><a href="s_jordan_separation.html#p-400" class="internal">in-context</a></span>
 </body>
 </html>

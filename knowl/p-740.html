@@ -12,8 +12,15 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">The functions <span class="process-math">\(f\colon (a,\infty)\rightarrow \R\text{,}\)</span> <span class="process-math">\(f(x)=\ln(x-a)\text{,}\)</span> and <span class="process-math">\(g\colon (-\infty, b)\rightarrow \R\text{,}\)</span> <span class="process-math">\(g(x)=\ln(b-x)\)</span> are continuous and have continuous inverses <span class="process-math">\(f^{-1}(x)=e^x+a\)</span> and <span class="process-math">\(g^{-1}(x)=b-e^{x}\text{.}\)</span>
+<div class="para logical">
+<div class="para">It is clear that (1) implies (2). Assume (2) is true. Given open <span class="process-math">\(U\subseteq Y\text{,}\)</span> we can write <span class="process-math">\(U=\bigcup_{i\in I}B_i\)</span> with <span class="process-math">\(B_i\in \mathcal{B}\text{.}\)</span> It follows that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f^{-1}(U)=\bigcup_{i\in I}f^{-1}(B_i)
+\end{equation*}
 </div>
-<span class="incontext"><a href="s_homeomorphisms.html#p-740" class="internal">in-context</a></span>
+<div class="para">is open, since by assumption each <span class="process-math">\(f^{-1}(B_i)\)</span> is open.</div>
+</div>
+<span class="incontext"><a href="s_continuous.html#p-740" class="internal">in-context</a></span>
 </body>
 </html>

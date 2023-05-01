@@ -1348,25 +1348,25 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.11",
   "title": "Jordan curve theorem",
-  "body": " Jordan curve theorem   Complementary Seifert-van Kampen   Let , where and are open, and is a separation. Assume and , and that there are paths and a path . Let .   The subgroup is infinite cyclic. Furthermore, if , then .    Suppose and we have paths and . Setting , we have .        Nonseparation theorem   If is an arc, then does not separate .      Let and be closed connected subsets of whose intersection consists of two points. If neither nor separates , then separates .  As a consequence, if is simple closed curve, then separates into exactly two components, . Furthermore, we have .    "
-},
-{
-  "id": "th_compl_Seifert_vanKampen",
-  "level": "2",
-  "url": "s_jordan_curve.html#th_compl_Seifert_vanKampen",
-  "type": "Theorem",
-  "number": "1.11.1",
-  "title": "Complementary Seifert-van Kampen.",
-  "body": " Complementary Seifert-van Kampen   Let , where and are open, and is a separation. Assume and , and that there are paths and a path . Let .   The subgroup is infinite cyclic. Furthermore, if , then .    Suppose and we have paths and . Setting , we have .      "
+  "body": " Jordan curve theorem   Nonseparation theorem   If is an arc, then does not separate .    This proof is adapted from an argument given by Ryuji Maehara in the article The Jordan curve theorem via the Brouwer fixed point theorem .  Assume by contradiction that is not connected. This means that among the connected components of , in addition to the unbounded connected component , there is a bounded component .  Now observe that we have . This is because we have for any connected component , since is open and disjoint from .  Since is bounded, we can pick an element and such that . Since is unbounded and connected, we must have and hence . Let (homeomorphic to ) and let (homeomorphic to ). Observe that .  Since is a closed subset of the normal space , the Tietze extension theorem implies that the identity function extends to retraction . Define as follows: Since , and since , the function is well-defined and continuous by the closed pasting lemma. We cannot have since for all and for all .  Finally, consider the map , where is the usual retraction map of the ball onto the circle, and is the antipodal map on .  Map without fixed point   This map has no fixed point, contradicting Brouwer's fixed point theorem. Indeed, since , any candidate for a fixed point would have to be an element of ; but for any , we have , since is the antipode of .  Since we have reached a contradiction, we conclude that must be connected.     Complementary Seifert-van Kampen   Let , where and are open, and is a separation. Assume and , and that there are paths and a path . Let .   The subgroup is infinite cyclic. Furthermore, if , then .    Suppose and we have paths and . Setting , we have .             Let and be closed connected subsets of whose intersection consists of two points. If neither nor separates , then separates .  As a consequence, if is simple closed curve, then separates into exactly two components, . Furthermore, we have .    "
 },
 {
   "id": "th_Jordan_nonseparation_theorem",
   "level": "2",
   "url": "s_jordan_curve.html#th_Jordan_nonseparation_theorem",
   "type": "Theorem",
-  "number": "1.11.2",
+  "number": "1.11.1",
   "title": "Nonseparation theorem.",
-  "body": " Nonseparation theorem   If is an arc, then does not separate .   "
+  "body": " Nonseparation theorem   If is an arc, then does not separate .    This proof is adapted from an argument given by Ryuji Maehara in the article The Jordan curve theorem via the Brouwer fixed point theorem .  Assume by contradiction that is not connected. This means that among the connected components of , in addition to the unbounded connected component , there is a bounded component .  Now observe that we have . This is because we have for any connected component , since is open and disjoint from .  Since is bounded, we can pick an element and such that . Since is unbounded and connected, we must have and hence . Let (homeomorphic to ) and let (homeomorphic to ). Observe that .  Since is a closed subset of the normal space , the Tietze extension theorem implies that the identity function extends to retraction . Define as follows: Since , and since , the function is well-defined and continuous by the closed pasting lemma. We cannot have since for all and for all .  Finally, consider the map , where is the usual retraction map of the ball onto the circle, and is the antipodal map on .  Map without fixed point   This map has no fixed point, contradicting Brouwer's fixed point theorem. Indeed, since , any candidate for a fixed point would have to be an element of ; but for any , we have , since is the antipode of .  Since we have reached a contradiction, we conclude that must be connected.   "
+},
+{
+  "id": "th_compl_Seifert_vanKampen",
+  "level": "2",
+  "url": "s_jordan_curve.html#th_compl_Seifert_vanKampen",
+  "type": "Theorem",
+  "number": "1.11.2",
+  "title": "Complementary Seifert-van Kampen.",
+  "body": " Complementary Seifert-van Kampen   Let , where and are open, and is a separation. Assume and , and that there are paths and a path . Let .   The subgroup is infinite cyclic. Furthermore, if , then .    Suppose and we have paths and . Setting , we have .          "
 },
 {
   "id": "th_Jordan_curve_theorem",
@@ -1376,6 +1376,132 @@ var ptx_lunr_docs = [
   "number": "1.11.3",
   "title": "",
   "body": "  Let and be closed connected subsets of whose intersection consists of two points. If neither nor separates , then separates .  As a consequence, if is simple closed curve, then separates into exactly two components, . Furthermore, we have .   "
+},
+{
+  "id": "s_groups_abelian",
+  "level": "1",
+  "url": "s_groups_abelian.html",
+  "type": "Section",
+  "number": "1.12",
+  "title": "Free Abelian groups",
+  "body": " Free Abelian groups   Although the main focus of this section is free abelian groups, a significant underlying theme is the concept of universal mapping properties that characterize certain group constructions. As an example, and partly as review, recall the the universal mapping property of a quotient group.      Given groups and we denote by the set of all group homomorphisms from to .     Universal property of quotient groups   Let be a normal subgroup of , denoted , and let be the quotient homomorphism defined as . The map is a bijection onto the set . In other words given any satisfying , there is a unique map satisfying .  Commutative diagram for quotient groups   In fact, we must have .     Direct product of groups   Given a family of groups, its direct product  is the group with underlying set and group operation .     Universal property of the direct product   Let be a family of groups, let .    Projections  For each the projection map is a surjective group homomorphism.    Universal mapping property  Given a group the map is a bijection. In other words, given any family of group homomorphisms , there is a unique homomorphism satisfying for all .  Commutative diagram for direct product groups   In fact, in this case we must have .    The universal mapping property characterizes up to isomorphism: , if is a group equipped with group homomorphisms for which the recipe is a bijection, then .       Direct sum of abelian groups   Given a family of abelian groups , its direct sum  is the subgroup of defined as .    The construction for the direct sum does not require that the groups be abelian. So why do we include this condition? The reason, briefly, is that the term direct sum describes not the construction of but rather the universal mapping property it satisfies among abelian groups, as described in . This property fails if the abelian condition on groups is removed. (Put another way, the notion of a direct sum is really a category theory concept.)   Universal property of direct sums   Let be a family of abelian groups.    Injections  For each the map that maps to the tuple satisfying and for all is an injective group homomorphism.    Universal mapping property  Given an abelian group the map is a bijection. In other words, given any abelian group and family of group homomorphisms , there is a unique homomorphism satisfying for all .  Commutative diagram for direct sum groups   In fact, in this case we must have .    The universal mapping property characterizes among abelian groups up to isomorphism: , if is an abelian group equipped with group homomorphisms for which the recipe is a bijection for any abelian group , then .      Let    Consider the system of maps . According to the universal mapping property, there is a unique map satisfying for all . What is ?    Fix and consider the system of maps defined as for (the zero map), and . According to the universal mapping property, there is a unique map satisfying for all . What is ?      Direct sum of subgroups   Let be a family of subgroups of the abelian group . The inclusion maps give rise to a unique group homomorphism .   Sum of subgroups  The group is the sum of the , denoted , if is surjective.    Direct sum of subgroups  The group is the direct sum of the , denoted , if is an isomorphism.        Direct sum equivalence   Let be a family of subgroups of the abelian group .   We have if and only if for all we can write for sum elements .    We have if and only if for all we can write for sum elements in a unique way.        Free abelian group   A group is a free abelian group if for some set .     Free abelian groups   Let be an abelian group. The following statements are equivalent.    is free abelian.    There is a tuple such that the map is an isomorphism.    There is a tuple such that for all we can write , where for all but finitely many , in a unique way.    There is a tuple such that for any abelian group the map is a bijection. In other words, there is a tuple such that given any abelian group and any elements , there is a unique homomorphism satisfying .        Basis of a free abelian group   Let be an abelian group. A tuple satisfying any of the equivalent conditions of is called a basis of .  In this case we define the rank of , denoted , as .    Why is well-defined? As you will show in a homework exercise, if , then . Thinking of as the finite finied , we see that is just the dimension of as a -vector space: , .    "
+},
+{
+  "id": "d_group_Hom",
+  "level": "2",
+  "url": "s_groups_abelian.html#d_group_Hom",
+  "type": "Definition",
+  "number": "1.12.1",
+  "title": "<span class=\"process-math\">\\(\\Hom(G,H)\\)<\/span>.",
+  "body": "   Given groups and we denote by the set of all group homomorphisms from to .   "
+},
+{
+  "id": "th_mapping_prop_quotient_group",
+  "level": "2",
+  "url": "s_groups_abelian.html#th_mapping_prop_quotient_group",
+  "type": "Theorem",
+  "number": "1.12.2",
+  "title": "Universal property of quotient groups.",
+  "body": " Universal property of quotient groups   Let be a normal subgroup of , denoted , and let be the quotient homomorphism defined as . The map is a bijection onto the set . In other words given any satisfying , there is a unique map satisfying .  Commutative diagram for quotient groups   In fact, we must have .   "
+},
+{
+  "id": "d_product_sum_groups",
+  "level": "2",
+  "url": "s_groups_abelian.html#d_product_sum_groups",
+  "type": "Definition",
+  "number": "1.12.3",
+  "title": "Direct product of groups.",
+  "body": " Direct product of groups   Given a family of groups, its direct product  is the group with underlying set and group operation .   "
+},
+{
+  "id": "th_universal_properties_product",
+  "level": "2",
+  "url": "s_groups_abelian.html#th_universal_properties_product",
+  "type": "Theorem",
+  "number": "1.12.4",
+  "title": "Universal property of the direct product.",
+  "body": " Universal property of the direct product   Let be a family of groups, let .    Projections  For each the projection map is a surjective group homomorphism.    Universal mapping property  Given a group the map is a bijection. In other words, given any family of group homomorphisms , there is a unique homomorphism satisfying for all .  Commutative diagram for direct product groups   In fact, in this case we must have .    The universal mapping property characterizes up to isomorphism: , if is a group equipped with group homomorphisms for which the recipe is a bijection, then .     "
+},
+{
+  "id": "d_direct_sum",
+  "level": "2",
+  "url": "s_groups_abelian.html#d_direct_sum",
+  "type": "Definition",
+  "number": "1.12.5",
+  "title": "Direct sum of abelian groups.",
+  "body": " Direct sum of abelian groups   Given a family of abelian groups , its direct sum  is the subgroup of defined as .   "
+},
+{
+  "id": "remark-17",
+  "level": "2",
+  "url": "s_groups_abelian.html#remark-17",
+  "type": "Remark",
+  "number": "1.12.6",
+  "title": "",
+  "body": "The construction for the direct sum does not require that the groups be abelian. So why do we include this condition? The reason, briefly, is that the term direct sum describes not the construction of but rather the universal mapping property it satisfies among abelian groups, as described in . This property fails if the abelian condition on groups is removed. (Put another way, the notion of a direct sum is really a category theory concept.) "
+},
+{
+  "id": "th_universal_properties_sum",
+  "level": "2",
+  "url": "s_groups_abelian.html#th_universal_properties_sum",
+  "type": "Theorem",
+  "number": "1.12.7",
+  "title": "Universal property of direct sums.",
+  "body": " Universal property of direct sums   Let be a family of abelian groups.    Injections  For each the map that maps to the tuple satisfying and for all is an injective group homomorphism.    Universal mapping property  Given an abelian group the map is a bijection. In other words, given any abelian group and family of group homomorphisms , there is a unique homomorphism satisfying for all .  Commutative diagram for direct sum groups   In fact, in this case we must have .    The universal mapping property characterizes among abelian groups up to isomorphism: , if is an abelian group equipped with group homomorphisms for which the recipe is a bijection for any abelian group , then .     "
+},
+{
+  "id": "example-35",
+  "level": "2",
+  "url": "s_groups_abelian.html#example-35",
+  "type": "Example",
+  "number": "1.12.8",
+  "title": "",
+  "body": "Let    Consider the system of maps . According to the universal mapping property, there is a unique map satisfying for all . What is ?    Fix and consider the system of maps defined as for (the zero map), and . According to the universal mapping property, there is a unique map satisfying for all . What is ?    "
+},
+{
+  "id": "d_direct_sum_of_subgroups",
+  "level": "2",
+  "url": "s_groups_abelian.html#d_direct_sum_of_subgroups",
+  "type": "Definition",
+  "number": "1.12.9",
+  "title": "Direct sum of subgroups.",
+  "body": " Direct sum of subgroups   Let be a family of subgroups of the abelian group . The inclusion maps give rise to a unique group homomorphism .   Sum of subgroups  The group is the sum of the , denoted , if is surjective.    Direct sum of subgroups  The group is the direct sum of the , denoted , if is an isomorphism.      "
+},
+{
+  "id": "th_direct_sum",
+  "level": "2",
+  "url": "s_groups_abelian.html#th_direct_sum",
+  "type": "Theorem",
+  "number": "1.12.10",
+  "title": "Direct sum equivalence.",
+  "body": " Direct sum equivalence   Let be a family of subgroups of the abelian group .   We have if and only if for all we can write for sum elements .    We have if and only if for all we can write for sum elements in a unique way.      "
+},
+{
+  "id": "d_free_abelian_group",
+  "level": "2",
+  "url": "s_groups_abelian.html#d_free_abelian_group",
+  "type": "Definition",
+  "number": "1.12.11",
+  "title": "Free abelian group.",
+  "body": " Free abelian group   A group is a free abelian group if for some set .   "
+},
+{
+  "id": "th_free_abelian_groups",
+  "level": "2",
+  "url": "s_groups_abelian.html#th_free_abelian_groups",
+  "type": "Theorem",
+  "number": "1.12.12",
+  "title": "Free abelian groups.",
+  "body": " Free abelian groups   Let be an abelian group. The following statements are equivalent.    is free abelian.    There is a tuple such that the map is an isomorphism.    There is a tuple such that for all we can write , where for all but finitely many , in a unique way.    There is a tuple such that for any abelian group the map is a bijection. In other words, there is a tuple such that given any abelian group and any elements , there is a unique homomorphism satisfying .      "
+},
+{
+  "id": "d_basis_of_free_abelian_group",
+  "level": "2",
+  "url": "s_groups_abelian.html#d_basis_of_free_abelian_group",
+  "type": "Definition",
+  "number": "1.12.13",
+  "title": "Basis of a free abelian group.",
+  "body": " Basis of a free abelian group   Let be an abelian group. A tuple satisfying any of the equivalent conditions of is called a basis of .  In this case we define the rank of , denoted , as .    Why is well-defined? As you will show in a homework exercise, if , then . Thinking of as the finite finied , we see that is just the dimension of as a -vector space: , .   "
 },
 {
   "id": "s_top_spaces",
@@ -1423,9 +1549,9 @@ var ptx_lunr_docs = [
   "body": " Trivial and discrete topology Let be a set.   The collection is a topology on , called the trivial topology . This is the topology on whose only open sets are the empty set and itself.    The collection is a topology on , called the discrete topology . This is the topology on for which every subset of is an open set.        Let . By definition the given contains and , and thus axiom (1) is satisfied. Since any union or intersection involving and is equal to either or , it is clear that is closed under arbitrary unions and finite intersections. Thus axioms (2)-(3) are satisfied.    Let . By definition, is the set of all subsets of . In particular, it contains and , and thus axioms (1) is satisfied. Furthermore, since any union or intersection of subsets of is again a subset of , we see that axioms (2)-(3) are satisfied.      "
 },
 {
-  "id": "example-35",
+  "id": "example-36",
   "level": "2",
-  "url": "s_top_spaces.html#example-35",
+  "url": "s_top_spaces.html#example-36",
   "type": "Example",
   "number": "2.1.3",
   "title": "Some small topological spaces.",
@@ -1450,9 +1576,9 @@ var ptx_lunr_docs = [
   "body": " coarser topology  finer topology  comparable topologies  Comparable topologies   Two topologies on the set are comparable if or , and incomparable otherwise. If , we say that is coarser than , and that is finer than . When we say that is strictly coarser than and is strictly finer than .   "
 },
 {
-  "id": "example-36",
+  "id": "example-37",
   "level": "2",
-  "url": "s_top_spaces.html#example-36",
+  "url": "s_top_spaces.html#example-37",
   "type": "Example",
   "number": "2.1.5",
   "title": "Comparing trivial, discrete, cofinite topologies.",
@@ -1639,9 +1765,9 @@ var ptx_lunr_docs = [
   "body": " Metric balls   Let be a metric space. Given and the -ball centered at is the subset defined as . In other words, is the set of all elements of lying within a distance of of . We call the radius of . More generally, we call a subset a -metric ball if for some and . When it is clear what the underlying metric is, we will omit and speak simply of metric balls.   "
 },
 {
-  "id": "example-43",
+  "id": "example-44",
   "level": "2",
-  "url": "s_metric1.html#example-43",
+  "url": "s_metric1.html#example-44",
   "type": "Example",
   "number": "2.3.4",
   "title": "Metric balls for Euclidean and box metrics.",
@@ -1693,9 +1819,9 @@ var ptx_lunr_docs = [
   "body": "  Given a set the function defined as is a metric on , called the trivial metric .    The proof that is a metric is left as an exercise.   "
 },
 {
-  "id": "example-45",
+  "id": "example-46",
   "level": "2",
-  "url": "s_metric1.html#example-45",
+  "url": "s_metric1.html#example-46",
   "type": "Example",
   "number": "2.3.9",
   "title": "Trivial metric.",
@@ -1774,9 +1900,9 @@ var ptx_lunr_docs = [
   "body": " Basis description of closed sets   Let be a topological space with basis . A set is closed if and only if for all , there is a basis element satisfying .    By definition a set is closed if and only if its complement is open. Using , we see that is open if and only if for all there is a basis element satisfying .   "
 },
 {
-  "id": "example-48",
+  "id": "example-49",
   "level": "2",
-  "url": "s_closed_closure_interior.html#example-48",
+  "url": "s_closed_closure_interior.html#example-49",
   "type": "Example",
   "number": "2.4.7",
   "title": "Closed sets in Euclidean metric topology.",
@@ -1819,9 +1945,9 @@ var ptx_lunr_docs = [
   "body": " Interior and closure of  Let and let . Compute the interior and closure of with respect to (a) the standard topology on and (b) the -topology on .     First consider with the standard topology. The interior of is empty in this case: , . To see this, note that given any and any open interval containing , we can choose an such that ; by design all elements of lie outside . Thus , and .  Next. I claim . To see this, note first that is closed: it is easy to see that for any we can find an such that . By (2) of we have . Since furthermore and since itself is not closed, it follows that .    Now consider the -topology on . We still have . Indeed, fix any , and take any basis element containing . We have or for some open interval . In either case, the same argument as above shows that contains a basis element , all of whose elements lie outside of . This shows , and hence .  Next, I claim that is closed in the -topology, from whence it follows that . (Use (2) from .) To prove the claim, we must show, using that for any there is a basis element (in the -topology) containing and contained in . There are two cases: and . If , we can find an open interval such that and . Since open intervals are basis elements in the -topology, we are done in this case. Next, assume . In this case the basis element satisfies . Having exhausted the cases, we conclude is closed, and hence .     "
 },
 {
-  "id": "example-50",
+  "id": "example-51",
   "level": "2",
-  "url": "s_closed_closure_interior.html#example-50",
+  "url": "s_closed_closure_interior.html#example-51",
   "type": "Example",
   "number": "2.4.12",
   "title": "Interior and closure in cofinite topology.",
@@ -2125,9 +2251,9 @@ var ptx_lunr_docs = [
   "body": " Pointwise convergence   Observe that the definition of pointwise convergence makes no reference to any topology on . Below we investigate how it relates to convergence in the box and product topologies.   "
 },
 {
-  "id": "example-57",
+  "id": "example-58",
   "level": "2",
-  "url": "s_prods_convergence_metric.html#example-57",
+  "url": "s_prods_convergence_metric.html#example-58",
   "type": "Example",
   "number": "2.8.3",
   "title": "Sequences in <span class=\"process-math\">\\(\\R^\\omega\\)<\/span> and <span class=\"process-math\">\\(\\R^\\R\\)<\/span>.",
@@ -2143,9 +2269,9 @@ var ptx_lunr_docs = [
   "body": " Pointwise convergence and product topology   Let be a collection of topologies, let be their product, and let be a sequence of elements of .    If in the box or product topology, then converges to pointwise.    In the product topology we have .         Suppose in either topology. Fix and let be any open set containing . The set is an open neighborhood of in both topologies. By convergence there is an such that for all . It follows that for all . This proves that for all .    Suppose the sequence converges to pointwise. To show in the product topology it is enough to show that for any base open set of the form there is an such that if , then . Since converges to pointwise, for each , there is an such that if , then . Setting , it follows that if then for . Since for all we conclude that for all , as desired.      "
 },
 {
-  "id": "example-58",
+  "id": "example-59",
   "level": "2",
-  "url": "s_prods_convergence_metric.html#example-58",
+  "url": "s_prods_convergence_metric.html#example-59",
   "type": "Example",
   "number": "2.8.5",
   "title": "Convergent sequences in <span class=\"process-math\">\\(\\R^\\omega\\)<\/span>.",
@@ -2233,27 +2359,27 @@ var ptx_lunr_docs = [
   "body": " Preimage properties   Continuity is defined in terms of preimages of sets under a function . Thankfully, the preimage operation behaves very well with respect to our various set operations. In particular, we have the following identities, which you may make use of without further ado:    "
 },
 {
-  "id": "example-59",
+  "id": "example-60",
   "level": "2",
-  "url": "s_continuous.html#example-59",
+  "url": "s_continuous.html#example-60",
   "type": "Example",
   "number": "2.9.3",
   "title": "Continuous functions: basic examples.",
   "body": " Continuous functions: basic examples     Identity function  Given a topological space , the identity function is continuous. Here we take as the topology of both the domain and codomain.    Constant functions  Let be topological spaces. For any fixed the constant function , defined as for all is continuous.    Subspace inclusions  Let be a subspace of . The inclusion map is continuous with respect to the subspace topology on .    Maps from discrete spaces  If is equipped with the discrete topology, then any function to a topological space is continuous.    Maps to trivial spaces  If is equipped with the trivial topology, then any map from a topological space to is continous.      These are all pretty elementary. I'll prove (3). Let be a subspace and let continuous. Given any open set , we have which by definition is open in the subspace topology. Thus is continuous.   "
 },
 {
-  "id": "example-60",
+  "id": "example-61",
   "level": "2",
-  "url": "s_continuous.html#example-60",
+  "url": "s_continuous.html#example-61",
   "type": "Example",
   "number": "2.9.4",
   "title": "Non-continuous inclusion.",
   "body": " Non-continuous inclusion   Show that the identity map is not continuous. Here the topology of the domain is the standard one, and the topology on the codomain is the lower limit topology.    For any we have . If we choose to be any open set of that is not open in the standard topology, it follows that is not open in and hence that is not continuous. We may take for example.  Note: let be two topologies on the set , and for let denote the space with underlying set and topology . The same argument above can be used to show that is continuous if and only if .   "
 },
 {
-  "id": "example-61",
+  "id": "example-62",
   "level": "2",
-  "url": "s_continuous.html#example-61",
+  "url": "s_continuous.html#example-62",
   "type": "Example",
   "number": "2.9.5",
   "title": "Products and projections.",
@@ -2404,9 +2530,9 @@ var ptx_lunr_docs = [
   "body": " Topological properties   It is easy to see that the properties of being discrete, , Hausdorff, or a metric space are topological.   "
 },
 {
-  "id": "example-65",
+  "id": "example-66",
   "level": "2",
-  "url": "s_homeomorphisms.html#example-65",
+  "url": "s_homeomorphisms.html#example-66",
   "type": "Example",
   "number": "2.10.12",
   "title": "Continuous bijection onto circle.",
@@ -2548,9 +2674,9 @@ var ptx_lunr_docs = [
   "body": "  A separation of a topological space is a pair of disjoint nonempty open sets satisfying . The space is connected it it admits no separation, and disconnected otherwise.  A subset is connected (resp., disconnected ) if it is connected (resp., disconnected) with respect to the subspace topology.   "
 },
 {
-  "id": "example-68",
+  "id": "example-69",
   "level": "2",
-  "url": "s_connected1.html#example-68",
+  "url": "s_connected1.html#example-69",
   "type": "Example",
   "number": "2.12.2",
   "title": "Examples.",
@@ -2584,9 +2710,9 @@ var ptx_lunr_docs = [
   "body": " Connectedness and subspaces   Let be a topological space.   If is connected and is a separation of , then or .    If is a collection of connected subspaces of and , then is connected.    If is connected, then any satisfying is connected.     Let be a connected subspace of . It is a separation of , then or .   "
 },
 {
-  "id": "proof-76",
+  "id": "proof-79",
   "level": "2",
-  "url": "s_connected1.html#proof-76",
+  "url": "s_connected1.html#proof-79",
   "type": "Proof",
   "number": "2.12.1",
   "title": "",
@@ -2665,36 +2791,36 @@ var ptx_lunr_docs = [
   "body": " Path-connectedness and continuity   If is continuous and is path connected, then is path connected.    Given and , let be a path connecting and . The composition is then a path connecting and .   "
 },
 {
-  "id": "example-69",
+  "id": "example-70",
   "level": "2",
-  "url": "s_connected_path.html#example-69",
+  "url": "s_connected_path.html#example-70",
   "type": "Example",
   "number": "2.13.5",
   "title": "Balls in <span class=\"process-math\">\\(\\R^n\\)<\/span>.",
   "body": " Balls in   Let be Euclidean -space. For all and any , the open ball is connected, as is the closed ball defined as     It is easy to see that the straight line path defined as is a continuous function connecting any two points in . For our current purposes, we wish to show that if , then so is , for any . To this end, note that . This proves that the open ball is path connected, and hence connected. Next, it is easy to see that the closed ball is in fact the closure of the open ball. Since connectedness is preserved under closure, we conclude that the closed ball is connected.   "
 },
 {
-  "id": "example-70",
+  "id": "example-71",
   "level": "2",
-  "url": "s_connected_path.html#example-70",
+  "url": "s_connected_path.html#example-71",
   "type": "Example",
   "number": "2.13.6",
   "title": "Punctured Euclidean space <span class=\"process-math\">\\(\\R^n-\\{\\boldzero\\}\\text{:}\\)<\/span> <span class=\"process-math\">\\(n\\geq 2\\)<\/span>.",
   "body": " Punctured Euclidean space :   Let be Euclidean -space, where . The subspace is connected.    Take any . If the two vectors are not scalar multiples of one another, then the straight line path connecting them is guaranteed to lie in , using a linear independence argument. If , then since , we can find a vector that is not a scalar multiple of either vector. We can then construct a polygonal path lieing in that first connects to via a straight line path, and then connects to via a straight line path.   "
 },
 {
-  "id": "example-71",
+  "id": "example-72",
   "level": "2",
-  "url": "s_connected_path.html#example-71",
+  "url": "s_connected_path.html#example-72",
   "type": "Example",
   "number": "2.13.7",
   "title": "<span class=\"process-math\">\\(\\R\\not\\cong \\R^n\\)<\/span> for <span class=\"process-math\">\\(n\\geq 2\\)<\/span>.",
   "body": " for   Prove: if , then there is no homeomorphism from to .    Assume by contradiction that is a homeomorphism for some . It follows that the restriction is a homeomorphism. This a contradiction since is not connected ( is open and closed in ), but is connected.   "
 },
 {
-  "id": "example-72",
+  "id": "example-73",
   "level": "2",
-  "url": "s_connected_path.html#example-72",
+  "url": "s_connected_path.html#example-73",
   "type": "Example",
   "number": "2.13.8",
   "title": "The <span class=\"process-math\">\\(n\\)<\/span>-sphere.",
@@ -3286,9 +3412,9 @@ var ptx_lunr_docs = [
   "body": " Separation axioms  The properties of being , Hausdorff, regular, or normal are called separation axioms as they articulate how various subsets can be separated by open sets. Below you find the descriptions of these properties using the Trennungsaxiom schema. A further remark about the use of regular and normal in the literature: some texts do not include the condition in these notions, and describe the properties we define as regular Hausdorff and normal regular . There is considerably less ambiguity in the literature when using the descriptions, but you should still be careful.  "
 },
 {
-  "id": "remark-35",
+  "id": "remark-36",
   "level": "2",
-  "url": "s_regular.html#remark-35",
+  "url": "s_regular.html#remark-36",
   "type": "Remark",
   "number": "2.19.4",
   "title": "Trennungsaxiom implications.",
@@ -3340,9 +3466,9 @@ var ptx_lunr_docs = [
   "body": " Locally compact implies regular   Let be locally compact and Hausdorff. Prove: is regular.    This is an easy consequence of and .   "
 },
 {
-  "id": "remark-36",
+  "id": "remark-37",
   "level": "2",
-  "url": "s_regular.html#remark-36",
+  "url": "s_regular.html#remark-37",
   "type": "Remark",
   "number": "2.19.10",
   "title": "Locally compact and non-normal.",
@@ -3376,9 +3502,9 @@ var ptx_lunr_docs = [
   "body": " Regularity: subspace and product properties      Subspaces of regular spaces are regular.    Products of regular spaces are regular.          Assume is a subspace of the regular space . We know already that subspaces of -spaces are , so is . Next take any and any set not containing that is closed in . We have for some closed set . Since and is regular, we can find disjoint open sets that separate and in . The disjoint open (in ) sets and are then a separation of and in .    We use (1) from . Given and open set containing , choose a basis element of the form containing . Since each is regular, we can find open sets satisfying . Letting , we have .      "
 },
 {
-  "id": "remark-38",
+  "id": "remark-39",
   "level": "2",
-  "url": "s_regular.html#remark-38",
+  "url": "s_regular.html#remark-39",
   "type": "Remark",
   "number": "2.19.14",
   "title": "",
@@ -3403,9 +3529,9 @@ var ptx_lunr_docs = [
   "body": " is normal   Prove: is normal.    Let be disjoint closed subsets of . We can find open coverings satisfying for all . First observe that for all . Indeed, otherwise we'd have , in which case either or : both are impossible since and . We conclude that , proving that and can be separated by open sets.   "
 },
 {
-  "id": "example-86",
+  "id": "example-87",
   "level": "2",
-  "url": "s_normal.html#example-86",
+  "url": "s_normal.html#example-87",
   "type": "Example",
   "number": "2.20.2",
   "title": "<span class=\"process-math\">\\(R_\\ell\\times R_\\ell\\)<\/span> is not normal.",
@@ -3520,9 +3646,9 @@ var ptx_lunr_docs = [
   "body": " Embedding theorem   Let be a -space. Given any collection of continuous functions satisfying the property that for all and for all open sets containing there is an such that and , the map defined as is an embedding into .     is injective  Since is , given any we can find an open set such that and . By assumption, there is some such that and . It follows that and hence that .    is continuous  This follows immediately from since each is continuous.    is embedding  Lastly, we prove that is an embedding mapping homeomorphically onto . Let be an open set containing an element , and let . Pick any such that and . Let be the projection map onto the -th coordinate, and define . Since is continuous and is open, the set is open in the subspace topology of . We claim that , proving that is an embedding. Since , we have . Similarly, if , then , from whence it follows that : otherwise we'd have .    "
 },
 {
-  "id": "remark-41",
+  "id": "remark-42",
   "level": "2",
-  "url": "s_Urysohn_metrization.html#remark-41",
+  "url": "s_Urysohn_metrization.html#remark-42",
   "type": "Remark",
   "number": "2.22.3",
   "title": "Urysohn metrization theorem.",
@@ -3628,9 +3754,9 @@ var ptx_lunr_docs = [
   "body": " Directed set   A directed set is a pair , where is a quasiordering on that satisfies the following axiom.   Directed (D)  For all , there is a such that and .   A subset of a directed set is cofinal if for all there is a such that .   "
 },
 {
-  "id": "example-88",
+  "id": "example-89",
   "level": "2",
-  "url": "s_nets.html#example-88",
+  "url": "s_nets.html#example-89",
   "type": "Example",
   "number": "2.24.4",
   "title": "Common examples.",

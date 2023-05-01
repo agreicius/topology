@@ -12,8 +12,20 @@
 </head>
 <body class="ignore-math">
 <article class="li"><h4 class="heading">
-<span class="type">Item</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span>
+<span class="type">Item</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span>
 </h4>
-<div class="para">For all <span class="process-math">\(x\in X\text{,}\)</span> we have <span class="process-math">\(x\in B_1(x)\in \mathcal{B}\text{,}\)</span> proving the first axiom of <a href="" class="xref" data-knowl="./knowl/d_basis.html" title="Definition 2.2.1: Topological basis">Definition 2.2.1</a>. Next, let <span class="process-math">\(B_1=B_{\epsilon_1}(x_1), B_2=B_{\epsilon_2}(x_2)\)</span> be two metric balls. Given <span class="process-math">\(y\in B_1\cap B_2\text{,}\)</span> there are <span class="process-math">\(\delta_1, \delta_2\)</span> such that <span class="process-math">\(B_{\delta_i}(y)\subseteq B_i\)</span> for <span class="process-math">\(i=1,2\text{.}\)</span> Setting <span class="process-math">\(\delta=\min\{\delta_1, \delta_2\}\text{,}\)</span> we have <span class="process-math">\(y\in B_\delta(y)\subseteq B_1\cap B_2\text{.}\)</span> This proves the second axiom.</div></article><span class="incontext"><a href="s_metric1.html#li-132" class="internal">in-context</a></span>
+<div class="para">We claim that in fact given <span class="process-math">\(B_1, B_2\in \mathcal{B}_K\text{,}\)</span> their intersection <span class="process-math">\(B_1\cap B_2\)</span> is either empty or another element of <span class="process-math">\(\mathcal{B}_K\text{.}\)</span> Axiom (2) follows directly from this claim.</div>
+<div class="para logical">
+<div class="para">Why is the claim true? An element of <span class="process-math">\(\mathcal{B}\)</span> is either of the form <span class="process-math">\(I\)</span> or <span class="process-math">\(I-K\text{,}\)</span> where <span class="process-math">\(I=(a,b)\)</span> is an open interval. There are then three different cases describing intersections of two elements, as shown below. Here <span class="process-math">\(I_1, I_2\)</span> denote finite open intervals.</div>
+<div class="displaymath process-math">
+\begin{align*}
+I_1\cap I_2 \amp \\
+(I_1-K)\cap I_2\amp =I_1\cap I_2-K\cap I_2=I_1\cap I_2-K \\
+(I_1-K)\cap (I_2-K) \amp= (I_1-K)\cap I_2 - K\cap (I_2-K)\\
+\amp = I_1\cap I_2-K\text{.}
+\end{align*}
+</div>
+<div class="para">As we have already remarked, <span class="process-math">\(I_1\cap I_2\)</span> is either empty or a finite open interval <span class="process-math">\(I\text{.}\)</span> The claim now follows easily.</div>
+</div></article><span class="incontext"><a href="s_bases_top.html#li-132" class="internal">in-context</a></span>
 </body>
 </html>

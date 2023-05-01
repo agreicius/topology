@@ -12,10 +12,18 @@
 </head>
 <body class="ignore-math">
 <article class="li"><h4 class="heading">
-<span class="type">Item</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span>
+<span class="type">Item</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span>
 </h4>
-<div class="para">Observe first that basis elements are open in the topology <span class="process-math">\(\mathcal{T}\text{,}\)</span> essenitally by definition: i.e., we have <span class="process-math">\(\mathcal{B}\subseteq \mathcal{T}\text{.}\)</span> The forward implication <span class="process-math">\((\implies)\)</span> follows easily, since <span class="process-math">\(\mathcal{T}\subseteq \mathcal{T}'\)</span> and <span class="process-math">\(\mathcal{B}\subseteq \mathcal{T}\)</span> implies <span class="process-math">\(\mathcal{B}\subseteq \mathcal{T}'\text{.}\)</span>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(\{U_i\}_{i\in I}\)</span> be any collection of elements of <span class="process-math">\(\mathcal{T}\text{:}\)</span> i.e., for all <span class="process-math">\(i\in I\)</span> we have <span class="process-math">\(U_i=\emptyset\)</span> or <span class="process-math">\(U_i\)</span> is cofinite in <span class="process-math">\(X\text{.}\)</span> Let <span class="process-math">\(U=\bigcup_{i\in I}U_i\text{.}\)</span> If <span class="process-math">\(U_i=\emptyset\)</span> for all <span class="process-math">\(i\in I\text{,}\)</span> then <span class="process-math">\(U=\emptyset\in \mathcal{T}\text{.}\)</span> Otherwise there is an <span class="process-math">\(i_0\in I\)</span> such that <span class="process-math">\(U_{i_0}\)</span> is nonempty, hence cofinite. We have</div>
+<div class="displaymath process-math">
+\begin{align*}
+U^c \amp = \left( \bigcup_{i\in I}U_i\right)^c \\
+\amp = \bigcap_{i\in I} U_i^c  \amp (\text{DeMorgan's law})\\
+\amp \subseteq U_{i_0}^c\text{.}
+\end{align*}
 </div>
-<div class="para">Now consider the reverse implication <span class="process-math">\((\impliedby)\text{.}\)</span> Assume <span class="process-math">\(\mathcal{B}\subseteq \mathcal{T}'\text{.}\)</span> Given an open set <span class="process-math">\(U\in \mathcal{T}\)</span> we have <span class="process-math">\(U=\bigcup_{i\in I} B_i\)</span> for some <span class="process-math">\(B_i\in \mathcal{B}\)</span> by <a href="" class="xref" data-knowl="./knowl/eq_top_generated1.html" title="Equation 2.2.1">(2.2.1)</a>. Since <span class="process-math">\(B_i\in \mathcal{T}'\)</span> for all <span class="process-math">\(i\in I\)</span> (by assumption), and since <span class="process-math">\(\mathcal{T}'\)</span> is closed under arbitrary unions, we conclude <span class="process-math">\(U\in \mathcal{T}'\text{.}\)</span> This proves <span class="process-math">\(\mathcal{T}\subseteq \mathcal{T}'\text{,}\)</span> as desired.</div></article><span class="incontext"><a href="s_bases_top.html#li-113" class="internal">in-context</a></span>
+<div class="para">Since <span class="process-math">\(U_{i_0}^c\)</span> is finite, it follows that <span class="process-math">\(U^c\)</span> is finite. It follows that <span class="process-math">\(U\)</span> is cofinite, and hence an element of <span class="process-math">\(\mathcal{T}\)</span> as desired.</div>
+</div></article><span class="incontext"><a href="s_top_spaces.html#li-113" class="internal">in-context</a></span>
 </body>
 </html>

@@ -11,12 +11,14 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/d_cartesian_product.html">
 \begin{align*}
-x \in A^\circ  \amp\iff x\in U\subseteq A \text{ for some open } U \\
-\amp \iff x\in B\subseteq A \text{ for some basis element } B\in \mathcal{B} 
+\boldy\in B_\epsilon(\boldx) \amp \iff \max\{\abs{x_i-y_i}\}_{i=1}^n&lt; \epsilon \\
+\amp \iff \abs{x_i-y_i}&lt; \epsilon \text{ for all } 1\leq i\leq n\\
+\amp \iff y_i\in (x_i-\epsilon, x_i+\epsilon) \text{ for all } 1\leq i\leq n\\
+\amp \iff \boldy\in \prod_{i=1}^n (x_i-\epsilon, x_i+\epsilon)
 \end{align*}
 </div>
-<span class="incontext"><a href="s_closed_closure_interior.html#md-77" class="internal">in-context</a></span>
+<span class="incontext"><a href="s_metric1.html#md-80" class="internal">in-context</a></span>
 </body>
 </html>

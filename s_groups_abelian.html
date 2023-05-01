@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Free Abelian groups</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Math 344-1,2">
+<meta property="book:author" content="Aaron Greicius">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
+  },
+  chtml: {
+    scale: 0.98,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.6/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="kursobjekt.html"><span class="title">Math 344-1,2:</span> <span class="subtitle">Kursobjekt</span></a></h1>
+<p class="byline">Aaron Greicius</p>
+</div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>No results.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="name">Index</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="theavatarbutton" class="name">You!</span><div id="preferences_menu_holder" class="hidden"><ol id="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="s_jordan_curve.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="c_algebraic_topology.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="c_top_spaces.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
+  \newcommand{\Q}{{\mathbb Q}}
+  \newcommand{\R}{{\mathbb R}}
+  \newcommand{\C}{{\mathbb C}}
+  \newcommand{\T}{{\mathbb T}}
+  \newcommand{\F}{{\mathbb F}}
+  \newcommand{\PP}{{\mathbb P}}
+  \newcommand{\HH}{{\mathbb H}}
+  \newcommand{\compose}{\circ}
+  \newcommand{\bolda}{{\mathbf a}}
+  \newcommand{\boldb}{{\mathbf b}}
+  \newcommand{\boldc}{{\mathbf c}}
+  \newcommand{\boldd}{{\mathbf d}}
+  \newcommand{\bolde}{{\mathbf e}}
+  \newcommand{\boldi}{{\mathbf i}}
+  \newcommand{\boldj}{{\mathbf j}}
+  \newcommand{\boldk}{{\mathbf k}}
+  \newcommand{\boldn}{{\mathbf n}}
+  \newcommand{\boldp}{{\mathbf p}}
+  \newcommand{\boldq}{{\mathbf q}}
+  \newcommand{\boldr}{{\mathbf r}}
+  \newcommand{\bolds}{{\mathbf s}}
+  \newcommand{\boldt}{{\mathbf t}}
+  \newcommand{\boldu}{{\mathbf u}}
+  \newcommand{\boldv}{{\mathbf v}}
+  \newcommand{\boldw}{{\mathbf w}}
+  \newcommand{\boldx}{{\mathbf x}}
+  \newcommand{\boldy}{{\mathbf y}}
+  \newcommand{\boldz}{{\mathbf z}}
+  \newcommand{\boldzero}{{\mathbf 0}}
+  \newcommand{\boldmod}{\boldsymbol{ \bmod }}
+  \newcommand{\boldT}{{\mathbf T}}
+  \newcommand{\boldN}{{\mathbf N}}
+  \newcommand{\boldB}{{\mathbf B}}
+  \newcommand{\boldF}{{\mathbf F}}
+  \newcommand{\boldS}{{\mathbf S}}
+  \newcommand{\boldE}{{\mathbf E}}
+  \newcommand{\boldG}{{\mathbf G}}
+  \newcommand{\boldK}{{\mathbf K}}
+  \newcommand{\boldL}{{\mathbf L}}
+  \DeclareMathOperator{\lcm}{lcm}
+  \DeclareMathOperator{\Span}{span}
+  \DeclareMathOperator{\tr}{tr}
+  \DeclareMathOperator{\NS}{null}
+  \DeclareMathOperator{\RS}{row}
+  \DeclareMathOperator{\CS}{col}
+  \DeclareMathOperator{\im}{im}
+  \DeclareMathOperator{\range}{range}
+  \DeclareMathOperator{\rank}{rank}
+  \DeclareMathOperator{\nullity}{nullity}
+  \DeclareMathOperator{\sign}{sign}
+  \DeclareMathOperator{\Fix}{Fix}
+  \DeclareMathOperator{\Aff}{Aff}
+  \DeclareMathOperator{\Frac}{Frac}
+  \DeclareMathOperator{\Ann}{Ann}
+  \DeclareMathOperator{\Tor}{Tor}
+  \DeclareMathOperator{\id}{id}
+  \DeclareMathOperator{\mdeg}{mdeg}
+  \DeclareMathOperator{\Lt}{Lt}
+  \DeclareMathOperator{\Lc}{Lc}
+  \DeclareMathOperator{\disc}{disc}
+  \DeclareMathOperator{\Frob}{Frob}
+  \DeclareMathOperator{\adj}{adj}
+  \DeclareMathOperator{\curl}{curl}
+  \DeclareMathOperator{\grad}{grad}
+  \DeclareMathOperator{\diver}{div}
+  \DeclareMathOperator{\flux}{flux}
+  \DeclareMathOperator{\Hom}{Hom}
+
+  \newcommand{\surjects}{\twoheadrightarrow}
+  \newcommand{\injects}{\hookrightarrow}
+  \newcommand{\bijects}{\leftrightarrow}
+  \newcommand{\isomto}{\overset{\sim}{\rightarrow}}
+  \newcommand{\floor}[1]{\lfloor#1\rfloor}
+  \newcommand{\ceiling}[1]{\left\lceil#1\right\rceil}
+  \newcommand{\mclass}[2][m]{[#2]_{#1}}
+  \newcommand{\val}[2][]{\left\lvert #2\right\rvert_{#1}}
+  \newcommand{\abs}[2][]{\left\lvert #2\right\rvert_{#1}}
+  \newcommand{\valuation}[2][]{\left\lvert #2\right\rvert_{#1}}
+  \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+  \newcommand{\anpoly}{a_nx^n+a_{n-1}x^{n-1}\cdots +a_1x+a_0}
+  \newcommand{\anmonic}{x^n+a_{n-1}x^{n-1}\cdots +a_1x+a_0}
+  \newcommand{\bmpoly}{b_mx^m+b_{m-1}x^{m-1}\cdots +b_1x+b_0}
+  \newcommand{\pder}[2]{\frac{\partial#1}{\partial#2}}
+  \newcommand{\normalin}{\trianglelefteq}
+  \newcommand{\angvec}[1]{\langle #1\rangle}
+  \newcommand{\varpoly}[2]{#1_{#2}x^{#2}+#1_{#2-1}x^{#2-1}\cdots +#1_1x+#1_0}
+  \newcommand{\varpower}[1][a]{#1_0+#1_1x+#1_1x^2+\cdots}
+  \newcommand{\limasto}[2][x]{\lim_{#1\rightarrow #2}}
+  \newenvironment{linsys}[2][m]{
+  \begin{array}[#1]{@{}*{#2}{rc}r@{}}
+  }{
+  \end{array}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar"><nav id="ptx-toc" class="depth2"><ul class="structural">
+<li><div class="toc-item"><a href="meta_frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li>
+<div class="toc-item"><a href="c_foundations.html" class="internal"><span class="codenumber">0</span> <span class="title">Foundations</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="s_sets_functions.html" class="internal"><span class="codenumber">0.1</span> <span class="title">Sets and functions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="s_sets_functions.html#ss_sets" class="internal"><span class="title">Sets</span></a></div></li>
+<li><div class="toc-item"><a href="s_sets_functions.html#ss_functions" class="internal"><span class="title">Functions</span></a></div></li>
+<li><div class="toc-item"><a href="s_sets_functions.html#subsec-" class="internal"><span class="title">Cardinality and countability</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="s_logic.html" class="internal"><span class="codenumber">0.2</span> <span class="title">Logic</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="s_logic.html#ss_propositional_calculus" class="internal"><span class="title">Propositional logic</span></a></div></li>
+<li><div class="toc-item"><a href="s_logic.html#ss_predicate_logic" class="internal"><span class="title">Predicate logic</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="s_proof_technique.html" class="internal"><span class="codenumber">0.3</span> <span class="title">Proof techniques</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="s_proof_technique.html#ss_logical_structure" class="internal"><span class="title">Logical structure</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="s_proof_technique.html#sss_implication" class="internal"><span class="title">Implication</span></a></div></li>
+<li><div class="toc-item"><a href="s_proof_technique.html#sss_disjunction" class="internal"><span class="title">Disjunction</span></a></div></li>
+<li><div class="toc-item"><a href="s_proof_technique.html#sss_equivalence" class="internal"><span class="title">Equivalence</span></a></div></li>
+<li><div class="toc-item"><a href="s_proof_technique.html#sss_logical_chains" class="internal"><span class="title">Chains of implications/equivalences</span></a></div></li>
+<li><div class="toc-item"><a href="s_proof_technique.html#sss_proof_by_contradiction" class="internal"><span class="title">Proof by contradiction</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="s_proof_technique.html#ss_Equalities" class="internal"><span class="title">Equalities</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="s_proof_technique.html#sss_chain_equalities" class="internal"><span class="title">Chain of equalities</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="s_proof_technique.html#ss_set_properties" class="internal"><span class="title">Basic set properties</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="s_proof_technique.html#sss_set_inclusion" class="internal"><span class="title">Set inclusion</span></a></div></li>
+<li><div class="toc-item"><a href="s_proof_technique.html#sss_set_equality" class="internal"><span class="title">Set equality</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="s_proof_technique.html#ss_function_properties" class="internal"><span class="title">Basic function properties</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="s_proof_technique.html#sss_function_equality" class="internal"><span class="title">Function equality</span></a></div></li>
+<li><div class="toc-item"><a href="s_proof_technique.html#sss_injective_surjective_bijective" class="internal"><span class="title">Injective, surjective, bijective</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="s_proof_technique.html#ss_mathematical_induction" class="internal"><span class="title">Mathematical induction</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="s_proof_technique.html#sss_weak_induction" class="internal"><span class="title">Proof by induction</span></a></div></li>
+<li><div class="toc-item"><a href="s_proof_technique.html#sss_strong_induction" class="internal"><span class="title">Proof by strong induction</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="c_algebraic_topology.html" class="internal"><span class="codenumber">1</span> <span class="title">Algebraic topology</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="s_homotopy.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Homotopy</span></a></div></li>
+<li><div class="toc-item"><a href="s_fundamental_group.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Fundamental group</span></a></div></li>
+<li><div class="toc-item"><a href="s_covering_spaces.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Covering spaces</span></a></div></li>
+<li><div class="toc-item"><a href="s_coveringmaps_fundgroups.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Lifting correspondence</span></a></div></li>
+<li><div class="toc-item"><a href="s_retract_Brouwer.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Retractions and Brouwer fixed point</span></a></div></li>
+<li><div class="toc-item"><a href="s_deformation_retract.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Deformation retract</span></a></div></li>
+<li><div class="toc-item"><a href="s_homotopy_type.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Homotopty equivalence</span></a></div></li>
+<li><div class="toc-item"><a href="s_Sn_simply_connected.html" class="internal"><span class="codenumber">1.8</span> <span class="title">Fundamental group of <span class="process-math">\(S^n\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="s_surface_fund_grps.html" class="internal"><span class="codenumber">1.9</span> <span class="title">Fundamental groups of some surfaces</span></a></div></li>
+<li><div class="toc-item"><a href="s_jordan_separation.html" class="internal"><span class="codenumber">1.10</span> <span class="title">Jordan separation theorem</span></a></div></li>
+<li><div class="toc-item"><a href="s_jordan_curve.html" class="internal"><span class="codenumber">1.11</span> <span class="title">Jordan curve theorem</span></a></div></li>
+<li class="active"><div class="toc-item"><a href="s_groups_abelian.html" class="internal"><span class="codenumber">1.12</span> <span class="title">Free Abelian groups</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="c_top_spaces.html" class="internal"><span class="codenumber">2</span> <span class="title">Point-set topology</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="s_top_spaces.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Topological spaces</span></a></div></li>
+<li><div class="toc-item"><a href="s_bases_top.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Bases for topological spaces</span></a></div></li>
+<li><div class="toc-item"><a href="s_metric1.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Metric spaces</span></a></div></li>
+<li><div class="toc-item"><a href="s_closed_closure_interior.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Closed sets, closure, and interior</span></a></div></li>
+<li><div class="toc-item"><a href="s_limitpoints_hausdorff.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Limit points and the Hausdorff property</span></a></div></li>
+<li>
+<div class="toc-item"><a href="s_subspace_finite_products.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Subspaces and products</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="s_subspace_finite_products.html#ss_subspace" class="internal"><span class="title">Subspaces</span></a></div></li>
+<li><div class="toc-item"><a href="s_subspace_finite_products.html#ss_finite_products" class="internal"><span class="title">Finite product spaces</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="s_product2.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Arbitrary products</span></a></div></li>
+<li><div class="toc-item"><a href="s_prods_convergence_metric.html" class="internal"><span class="codenumber">2.8</span> <span class="title">Convergence in product spaces</span></a></div></li>
+<li><div class="toc-item"><a href="s_continuous.html" class="internal"><span class="codenumber">2.9</span> <span class="title">Continuous functions</span></a></div></li>
+<li><div class="toc-item"><a href="s_homeomorphisms.html" class="internal"><span class="codenumber">2.10</span> <span class="title">Homeomorphisms</span></a></div></li>
+<li><div class="toc-item"><a href="s_quotients.html" class="internal"><span class="codenumber">2.11</span> <span class="title">Quotients</span></a></div></li>
+<li><div class="toc-item"><a href="s_connected1.html" class="internal"><span class="codenumber">2.12</span> <span class="title">Connected spaces</span></a></div></li>
+<li><div class="toc-item"><a href="s_connected_path.html" class="internal"><span class="codenumber">2.13</span> <span class="title">Path-connected spaces</span></a></div></li>
+<li><div class="toc-item"><a href="s_connected_components.html" class="internal"><span class="codenumber">2.14</span> <span class="title">Connected components and locally connected spaces</span></a></div></li>
+<li><div class="toc-item"><a href="s_compact_def.html" class="internal"><span class="codenumber">2.15</span> <span class="title">Compact spaces</span></a></div></li>
+<li><div class="toc-item"><a href="s_compact_metric.html" class="internal"><span class="codenumber">2.16</span> <span class="title">Compactness in metric spaces</span></a></div></li>
+<li><div class="toc-item"><a href="s_locally.html" class="internal"><span class="codenumber">2.17</span> <span class="title">Locally compact spaces and compactification</span></a></div></li>
+<li><div class="toc-item"><a href="s_countability_axioms.html" class="internal"><span class="codenumber">2.18</span> <span class="title">Countability axioms</span></a></div></li>
+<li><div class="toc-item"><a href="s_regular.html" class="internal"><span class="codenumber">2.19</span> <span class="title">Regular spaces</span></a></div></li>
+<li><div class="toc-item"><a href="s_normal.html" class="internal"><span class="codenumber">2.20</span> <span class="title">Normal spaces</span></a></div></li>
+<li><div class="toc-item"><a href="s_Urysohn_lemma.html" class="internal"><span class="codenumber">2.21</span> <span class="title">Urysohn lemma</span></a></div></li>
+<li><div class="toc-item"><a href="s_Urysohn_metrization.html" class="internal"><span class="codenumber">2.22</span> <span class="title">Urysohn metrization theorem</span></a></div></li>
+<li><div class="toc-item"><a href="s_Tietze_extension.html" class="internal"><span class="codenumber">2.23</span> <span class="title">Further applications of Urysohn</span></a></div></li>
+<li><div class="toc-item"><a href="s_nets.html" class="internal"><span class="codenumber">2.24</span> <span class="title">Nets</span></a></div></li>
+<li>
+<div class="toc-item"><a href="s_Tychonoff.html" class="internal"><span class="codenumber">2.25</span> <span class="title">Tychonoff theorem via nets</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="s_Tychonoff.html#ss_nets_compactness" class="internal"><span class="title">Nets and compactness</span></a></div></li>
+<li><div class="toc-item"><a href="s_Tychonoff.html#ss_Tychonoff" class="internal"><span class="title">Tychonoff's theorem</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter-1.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="appendix-notation.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-defs.html" class="internal"><span class="codenumber">B</span> <span class="title">Definitions</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-thms.html" class="internal"><span class="codenumber">C</span> <span class="title">Theory</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-specimens.html" class="internal"><span class="codenumber">D</span> <span class="title">Topological specimens</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-egs.html" class="internal"><span class="codenumber">E</span> <span class="title">Examples</span></a></div></li>
+<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_groups_abelian"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.12</span> <span class="title">Free Abelian groups</span>
+</h2>
+<section class="introduction" id="introduction-6"><div class="para" id="p-416">Although the main focus of this section is free abelian groups, a significant underlying theme is the concept of <em class="emphasis">universal mapping properties</em> that characterize certain group constructions. As an example, and partly as review, recall the the universal mapping property of a quotient group.</div></section><article class="definition definition-like" id="d_group_Hom"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.12.1</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\Hom(G,H)\)</span>.</span>
+</h3> <div class="para" id="p-417">Given groups <span class="process-math">\(G\)</span> and <span class="process-math">\(H\)</span> we denote by <span class="process-math">\(\Hom(G,H)\)</span> the set of all group homomorphisms from <span class="process-math">\(G\)</span> to <span class="process-math">\(H\text{.}\)</span>
+</div></article><article class="theorem theorem-like" id="th_mapping_prop_quotient_group"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.12.2</span><span class="period">.</span><span class="space"> </span><span class="title">Universal property of quotient groups.</span>
+</h3>
+<div class="para logical" id="p-418">
+<div class="para">Let <span class="process-math">\(N\)</span> be a normal subgroup of <span class="process-math">\(G\text{,}\)</span> denoted <span class="process-math">\(N\trianglelefteq G\text{,}\)</span> and let <span class="process-math">\(q\colon G\rightarrow G/N\)</span> be the quotient homomorphism defined as <span class="process-math">\(q(g)=gN\text{.}\)</span> The map</div>
+<div class="displaymath process-math" id="md-64">
+\begin{align*}
+\Hom(G/N, H) \amp \rightarrow \Hom(G,H)\\
+\overline{\phi} \amp \mapsto \phi=\overline{\phi}\circ q
+\end{align*}
+</div>
+<div class="para">is a bijection onto the set</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\{\phi\in \Hom(G,H)\colon N\subseteq \ker\phi\}\text{.}
+\end{equation*}
+</div>
+<div class="para">In other words given any <span class="process-math">\(\phi\in \Hom(G,H)\)</span> satisfying <span class="process-math">\(N\leq \ker\phi\text{,}\)</span> there is a unique map <span class="process-math">\(\overline{\phi}\in \Hom(G/N, H)\)</span> satisfying <span class="process-math">\(\overline{\phi}\circ q=\phi\text{.}\)</span> <div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/latex-image/im_quot_grp_prop.svg" role="img" class="contained" alt="Commutative diagram for quotient groups"></div> In fact, we must have <span class="process-math">\(\overline{\phi}(gN)=\phi(g)\text{.}\)</span>
+</div>
+</div></article><article class="definition definition-like" id="d_product_sum_groups"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.12.3</span><span class="period">.</span><span class="space"> </span><span class="title">Direct product of groups.</span>
+</h3> <div class="para logical" id="p-419">
+<div class="para">Given a family  <span class="process-math">\(\{G_\alpha\}_{\alpha\in I}\)</span> of groups, its <dfn class="terminology">direct product</dfn> <span class="process-math">\(\prod_{\alpha\in I}G_\alpha\)</span> is the group with underlying set</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\prod_{\alpha\in I}G_{\alpha}=\{(g_\alpha)_{\alpha\in I}\colon g_\alpha\in G_\alpha\}
+\end{equation*}
+</div>
+<div class="para">and group operation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(g_\alpha)\cdot (h_\alpha)=(g_\alpha\cdot h_{\alpha})\text{.}
+\end{equation*}
+</div>
+</div></article><article class="theorem theorem-like" id="th_universal_properties_product"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.12.4</span><span class="period">.</span><span class="space"> </span><span class="title">Universal property of the direct product.</span>
+</h3>
+<div class="para" id="p-420">Let <span class="process-math">\(\{G_\alpha}_{\alpha\in I\}\)</span> be a family of groups, let <span class="process-math">\(G=\prod G_\alpha\text{.}\)</span>
+</div> <ol class="decimal">
+<li id="li-79">
+<span class="heading"><span class="title">Projections.</span></span><div class="para" id="p-421">For each <span class="process-math">\(\alpha\in I\)</span> the projection map <span class="process-math">\(\pi_\alpha\colon \prod G_\alpha\rightarrow G_\alpha\)</span> is a surjective group homomorphism.</div>
+</li>
+<li id="li-80">
+<span class="heading"><span class="title">Universal mapping property.</span></span><div class="para logical" id="p-422">
+<div class="para">Given a group <span class="process-math">\(H\)</span> the map</div>
+<div class="displaymath process-math" id="md-65">
+\begin{align*}
+\Hom(H, \prod G_\alpha) \amp\longleftrightarrow \prod\Hom(H, G_\alpha) \\
+\phi \amp \mapsto (\pi_\alpha\circ \phi)_{\alpha\in I}
+\end{align*}
+</div>
+<div class="para">is a bijection. In other words, given any family of group homomorphisms <span class="process-math">\(\phi_\alpha\colon H\rightarrow G_\alpha\text{,}\)</span> there is a unique homomorphism <span class="process-math">\(\phi\colon H\rightarrow G\)</span> satisfying <span class="process-math">\(\phi_\alpha=\pi_\alpha\circ\phi\)</span> for all <span class="process-math">\(\alpha\in I\text{.}\)</span> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/im_prod_grp_prop.svg" role="img" class="contained" alt="Commutative diagram for direct product groups"></div> In fact, in this case we must have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi(h)=(\phi_\alpha(h))_{\alpha\in I}\text{.}
+\end{equation*}
+</div>
+</div>
+</li>
+<li id="li-81"><div class="para logical" id="p-423">
+<div class="para">The universal mapping property characterizes <span class="process-math">\(\prod G_\alpha\)</span> up to isomorphism: i.e., if <span class="process-math">\(G\)</span> is a group equipped with group homomorphisms <span class="process-math">\(\pi_\alpha'\colon G\rightarrow G_\alpha\)</span> for which the recipe</div>
+<div class="displaymath process-math" id="md-66">
+\begin{align*}
+\Hom(H, G) \amp\longleftrightarrow \prod\Hom(H,G) \\
+\phi \amp \mapsto (\pi_\alpha'\circ \phi)_{\alpha\in I}
+\end{align*}
+</div>
+<div class="para">is a bijection, then <span class="process-math">\(G\cong \prod G_\alpha\text{.}\)</span>
+</div>
+</div></li>
+</ol></article><article class="definition definition-like" id="d_direct_sum"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.12.5</span><span class="period">.</span><span class="space"> </span><span class="title">Direct sum of abelian groups.</span>
+</h3> <div class="para logical" id="p-424">
+<div class="para">Given a family <span class="process-math">\(\{A_\alpha\}_{\alpha\in I}\)</span> of <em class="emphasis">abelian groups</em>, its <dfn class="terminology">direct sum</dfn> <span class="process-math">\(\oplus_{\alpha\in I}A_\alpha\)</span> is the subgroup of <span class="process-math">\(\prod_{\alpha\in I}A_\alpha\)</span> defined as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\bigoplus\limits_{\alpha\in I}A_\alpha=\{(g_\alpha)\in \prod_{\alpha\in I}A_\alpha\colon g_{\alpha}=0_\alpha \text{ for all but finitely many } \alpha\}\text{.}
+\end{equation*}
+</div>
+</div></article><article class="remark remark-like" id="remark-17"><h3 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.12.6</span><span class="period">.</span>
+</h3>The construction for the direct sum does not require that the groups <span class="process-math">\(A_\alpha\)</span> be abelian. So why do we include this condition? The reason, briefly, is that the term “direct sum” describes not the construction of <span class="process-math">\(\bigoplus A_\alpha\)</span> but rather the universal mapping property it satisfies among abelian groups, as described in <a href="" class="xref" data-knowl="./knowl/th_universal_properties_sum.html" title="Theorem 1.12.7: Universal property of direct sums">Theorem 1.12.7</a>. This property fails if the abelian condition on groups is removed. (Put another way, the notion of a direct sum is really a category theory concept.)</article><article class="theorem theorem-like" id="th_universal_properties_sum"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.12.7</span><span class="period">.</span><span class="space"> </span><span class="title">Universal property of direct sums.</span>
+</h3>
+<div class="para" id="p-425">Let <span class="process-math">\(\{A_\alpha\}_{\alpha\in I}\)</span> be a family of abelian groups.</div> <ol class="decimal">
+<li id="li-82">
+<span class="heading"><span class="title">Injections.</span></span><div class="para" id="p-426">For each <span class="process-math">\(\alpha\in I\)</span> the map <span class="process-math">\(i_\alpha\colon A_\alpha\rightarrow \bigoplus A_\alpha\)</span> that maps <span class="process-math">\(g_\alpha\)</span> to the tuple <span class="process-math">\(g\in \bigoplus A_\alpha\)</span> satisfying <span class="process-math">\(\pi_\alpha(g)=g_\alpha\)</span> and <span class="process-math">\(\pi_{\alpha'}(g)=0_{\alpha'}\)</span> for all <span class="process-math">\(\alpha'\ne \alpha\)</span> is an injective group homomorphism.</div>
+</li>
+<li id="li-83">
+<span class="heading"><span class="title">Universal mapping property.</span></span><div class="para logical" id="p-427">
+<div class="para">Given an abelian group <span class="process-math">\(A\)</span> the map</div>
+<div class="displaymath process-math" id="md-67">
+\begin{align*}
+\Hom(\bigoplus A_\alpha,A) \amp\longleftrightarrow \prod\Hom( A_\alpha,A) \\
+\phi \amp \mapsto (\phi\circ i_\alpha)_{\alpha\in I}
+\end{align*}
+</div>
+<div class="para">is a bijection. In other words, given any abelian group <span class="process-math">\(A\)</span> and family of group homomorphisms <span class="process-math">\(\phi_\alpha\colon A_\alpha\rightarrow A\text{,}\)</span> there is a unique homomorphism <span class="process-math">\(\phi\colon \bigoplus A_\alpha\rightarrow A\)</span> satisfying <span class="process-math">\(j_\alpha=\phi\circ i_\alpha\)</span> for all <span class="process-math">\(\alpha\in I\text{.}\)</span> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/im_sum_grp_prop.svg" role="img" class="contained" alt="Commutative diagram for direct sum groups"></div> In fact, in this case we must have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi((g_\alpha)_{\alpha\in I})=\sum_{\alpha\in I}\phi_\alpha(g_\alpha)\text{.}
+\end{equation*}
+</div>
+</div>
+</li>
+<li id="li-84"><div class="para logical" id="p-428">
+<div class="para">The universal mapping property characterizes <span class="process-math">\(\bigoplus A_\alpha\)</span> among abelian groups up to isomorphism: i.e., if <span class="process-math">\(G\)</span> is an abelian group equipped with group homomorphisms <span class="process-math">\(i_\alpha'\colon A_\alpha\rightarrow G\)</span> for which the recipe</div>
+<div class="displaymath process-math" id="md-68">
+\begin{align*}
+\Hom(G,A) \amp\longleftrightarrow \prod\Hom(G,A) \\
+\phi \amp \mapsto (\phi\circ i_\alpha')_{\alpha\in I}
+\end{align*}
+</div>
+<div class="para">is a bijection for any abelian group <span class="process-math">\(A\text{,}\)</span> then <span class="process-math">\(G\cong \bigoplus A_\alpha\text{.}\)</span>
+</div>
+</div></li>
+</ol></article><article class="example example-like" id="example-35"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.12.8</span><span class="period">.</span>
+</h3>Let <span class="process-math">\(G=\oplus_{\alpha\in I} A_\alpha\)</span> <ol class="decimal">
+<li id="li-85"><div class="para" id="p-429">Consider the system of maps <span class="process-math">\(i_\alpha\colon A_\alpha\rightarrow G\text{.}\)</span> According to the universal mapping property, there is a unique map <span class="process-math">\(\phi\colon G\rightarrow G\)</span> satisfying <span class="process-math">\(i_\alpha=\phi\circ i_\alpha\)</span> for all <span class="process-math">\(\alpha\text{.}\)</span> What is <span class="process-math">\(\phi\text{?}\)</span>
+</div></li>
+<li id="li-86"><div class="para" id="p-430">Fix <span class="process-math">\(\alpha_0\in I\)</span> and consider the system of maps <span class="process-math">\(j_\alpha\colon A_\alpha\rightarrow A_{\alpha_0}\)</span> defined as <span class="process-math">\(j_{\alpha}=0_{A_\alpha}\)</span> for <span class="process-math">\(\alpha\ne \alpha_0\)</span> (the zero map), and <span class="process-math">\(j_{\alpha_0}=\id_{A_{\alpha_0}}\text{.}\)</span> According to the universal mapping property, there is a unique map <span class="process-math">\(\phi\colon G\rightarrow A_{\alpha_0}\)</span> satisfying <span class="process-math">\(j_\alpha=\phi\circ i_\alpha\)</span> for all <span class="process-math">\(\alpha\text{.}\)</span> What is <span class="process-math">\(\phi\text{?}\)</span>
+</div></li>
+</ol></article><article class="definition definition-like" id="d_direct_sum_of_subgroups"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.12.9</span><span class="period">.</span><span class="space"> </span><span class="title">Direct sum of subgroups.</span>
+</h3> <div class="para logical" id="p-431">
+<div class="para">Let <span class="process-math">\(\{A_\alpha\}_{\alpha\in I}\)</span> be a family of subgroups of the abelian group <span class="process-math">\(G\text{.}\)</span> The inclusion maps <span class="process-math">\(j_\alpha\colon A_\alpha\rightarrow G\)</span> give rise to a unique group homomorphism <span class="process-math">\(\phi\colon \bigoplus A_\alpha\rightarrow G\text{.}\)</span>
+</div>
+<ol class="decimal">
+<li id="li-87">
+<span class="heading"><span class="title">Sum of subgroups.</span></span><div class="para" id="p-432">The group <span class="process-math">\(G\)</span> is the  of the <span class="process-math">\(A_\alpha\text{,}\)</span> denoted <span class="process-math">\(G=\sum A_\alpha\text{,}\)</span> if <span class="process-math">\(\phi\)</span> is surjective.</div>
+</li>
+<li id="li-88">
+<span class="heading"><span class="title">Direct sum of subgroups.</span></span><div class="para" id="p-433">The group <span class="process-math">\(G\)</span> is the  of the <span class="process-math">\(A_\alpha\text{,}\)</span> denoted <span class="process-math">\(G=\bigoplus A_\alpha\text{,}\)</span> if <span class="process-math">\(\phi\)</span> is an isomorphism.</div>
+</li>
+</ol>
+</div></article><article class="theorem theorem-like" id="th_direct_sum"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.12.10</span><span class="period">.</span><span class="space"> </span><span class="title">Direct sum equivalence.</span>
+</h3>
+<div class="para logical" id="p-434">
+<div class="para">Let <span class="process-math">\(\{A_\alpha\}_{\alpha\in I}\)</span> be a family of subgroups of the abelian group <span class="process-math">\(G\text{.}\)</span>
+</div>
+<ol class="decimal">
+<li id="li-89"><div class="para" id="p-435">We have <span class="process-math">\(G=\sum A_\alpha\)</span> if and only if for all <span class="process-math">\(g\in G\)</span> we can write <span class="process-math">\(g=\sum_{k=1}^ng_{\alpha_k}\)</span> for sum elements <span class="process-math">\(g_{\alpha_k}\in A_{\alpha_k}\text{.}\)</span>
+</div></li>
+<li id="li-90"><div class="para" id="p-436">We have <span class="process-math">\(G\cong \bigoplus A_\alpha\)</span> if and only if for all <span class="process-math">\(g\in G\)</span> we can write <span class="process-math">\(g=\sum_{k=1}^ng_{\alpha_k}\)</span> for sum elements <span class="process-math">\(g_{\alpha_k}\in A_{\alpha_k}\)</span> in a unique way.</div></li>
+</ol>
+</div></article><article class="definition definition-like" id="d_free_abelian_group"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.12.11</span><span class="period">.</span><span class="space"> </span><span class="title">Free abelian group.</span>
+</h3> <div class="para" id="p-437">A group <span class="process-math">\(G\)</span> is a <dfn class="terminology">free abelian group</dfn> if <span class="process-math">\(G\cong \bigoplus\limits_{\alpha\in I}\Z\)</span> for some set <span class="process-math">\(I\text{.}\)</span>
+</div></article><article class="theorem theorem-like" id="th_free_abelian_groups"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.12.12</span><span class="period">.</span><span class="space"> </span><span class="title">Free abelian groups.</span>
+</h3>
+<div class="para logical" id="p-438">
+<div class="para">Let <span class="process-math">\(G\)</span> be an abelian group. The following statements are equivalent.</div>
+<ol class="decimal">
+<li id="li-91"><div class="para" id="p-439">
+<span class="process-math">\(G\)</span> is free abelian.</div></li>
+<li id="li-92"><div class="para logical" id="p-440">
+<div class="para">There is a tuple <span class="process-math">\((g_\alpha)_{\alpha\in I}\in \prod_{\alpha\in I}G\)</span> such that the map</div>
+<div class="displaymath process-math" id="md-69">
+\begin{align*}
+\bigoplus_{\alpha\in I}\Z \amp \rightarrow G\\
+(m_{\alpha}) \amp \mapsto \sum_{\alpha\in I} m_\alpha g_\alpha
+\end{align*}
+</div>
+<div class="para">is an isomorphism.</div>
+</div></li>
+<li id="li-93"><div class="para" id="p-441">There is a tuple <span class="process-math">\((g_\alpha)_{\alpha\in I}\in \prod_{\alpha\in I}G\)</span> such that for all <span class="process-math">\(g\in G\)</span> we can write <span class="process-math">\(g=\sum_{\alpha\in I}m_{\alpha}g_\alpha\text{,}\)</span> where <span class="process-math">\(m_\alpha=0\)</span> for all but finitely many <span class="process-math">\(\alpha\in I\text{,}\)</span> in a unique way.</div></li>
+<li id="li-94"><div class="para logical" id="p-442">
+<div class="para">There is a tuple <span class="process-math">\((g_\alpha)_{\alpha\in I}\in \prod_{\alpha\in I}G\)</span> such that for any abelian group <span class="process-math">\(A\)</span> the map</div>
+<div class="displaymath process-math" id="md-70">
+\begin{align*}
+\Hom(G,A) \amp \rightarrow  \prod_{\alpha\in I}\Hom(G,A) \\
+\phi \amp \mapsto (\phi(g_\alpha))_{\alpha\in I}
+\end{align*}
+</div>
+<div class="para">is a bijection. In other words, there is a tuple <span class="process-math">\((g_\alpha)_{\alpha\in I}\)</span> such that given any abelian group <span class="process-math">\(A\)</span> and any elements <span class="process-math">\(h_\alpha\in A\text{,}\)</span> there is a unique homomorphism <span class="process-math">\(\phi\colon G\rightarrow A\)</span> satisfying <span class="process-math">\(\phi(g_\alpha)=h_\alpha\text{.}\)</span>
+</div>
+</div></li>
+</ol>
+</div></article><article class="definition definition-like" id="d_basis_of_free_abelian_group"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.12.13</span><span class="period">.</span><span class="space"> </span><span class="title">Basis of a free abelian group.</span>
+</h3> <div class="para" id="p-443">Let <span class="process-math">\(G\)</span> be an abelian group. A tuple <span class="process-math">\((g_\alpha)_{\alpha\in I}\)</span> satisfying any of the equivalent conditions of <a href="" class="xref" data-knowl="./knowl/th_free_abelian_groups.html" title="Theorem 1.12.12: Free abelian groups">Theorem 1.12.12</a> is called a <dfn class="terminology">basis</dfn> of <span class="process-math">\(G\text{.}\)</span>
+</div> <div class="para" id="p-444">In this case we define the <dfn class="terminology">rank</dfn> of <span class="process-math">\(G\text{,}\)</span> denoted <span class="process-math">\(\rank G\text{,}\)</span> as <span class="process-math">\(\rank G=\abs{I}\text{.}\)</span>
+</div> <article class="hiddenproof" id="proof-34"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-34"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-34"><article class="hiddenproof"><div class="para" id="p-445">Why is <span class="process-math">\(\rank G\)</span> well-defined? As you will show in a homework exercise, if <span class="process-math">\(G\cong\oplus_{\alpha\in I}\Z\text{,}\)</span> then <span class="process-math">\(G/2G\cong \oplus_{k\in I}\Z/2\Z\text{.}\)</span> Thinking of <span class="process-math">\(\Z/2\Z\)</span> as the finite finied <span class="process-math">\(\F_2\text{,}\)</span> we see that <span class="process-math">\(\abs{I}\)</span> is just the dimension of <span class="process-math">\(G/2G\)</span> as a <span class="process-math">\(\F_2\)</span>-vector space: i.e., <span class="process-math">\(\rank G=\dim_{\F_2}G/2G\text{.}\)</span>
+</div></article></div></article></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="s_jordan_curve.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="c_top_spaces.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

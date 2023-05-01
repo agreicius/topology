@@ -11,8 +11,22 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">For each set <span class="process-math">\(X\)</span> describe all subsets <span class="process-math">\(\mathcal{T}\subseteq \mathcal{P}(A)\)</span> that satisfy the axioms of <a href="" class="xref" data-knowl="./knowl/d_topology.html" title="Definition 2.1.1: Topological space">Definition 2.1.1</a>, and hence make <span class="process-math">\((X,\mathcal{T})\)</span> a topological space.</div>
-<span class="incontext"><a href="s_top_spaces.html#p-427" class="internal">in-context</a></span>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<div class="para logical">
+<div class="para">Given an abelian group <span class="process-math">\(A\)</span> the map</div>
+<div class="displaymath process-math">
+\begin{align*}
+\Hom(\bigoplus A_\alpha,A) \amp\longleftrightarrow \prod\Hom( A_\alpha,A) \\
+\phi \amp \mapsto (\phi\circ i_\alpha)_{\alpha\in I}
+\end{align*}
+</div>
+<div class="para">is a bijection. In other words, given any abelian group <span class="process-math">\(A\)</span> and family of group homomorphisms <span class="process-math">\(\phi_\alpha\colon A_\alpha\rightarrow A\text{,}\)</span> there is a unique homomorphism <span class="process-math">\(\phi\colon \bigoplus A_\alpha\rightarrow A\)</span> satisfying <span class="process-math">\(j_\alpha=\phi\circ i_\alpha\)</span> for all <span class="process-math">\(\alpha\in I\text{.}\)</span> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/im_sum_grp_prop.svg" role="img" class="contained" alt="Commutative diagram for direct sum groups"></div> In fact, in this case we must have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi((g_\alpha)_{\alpha\in I})=\sum_{\alpha\in I}\phi_\alpha(g_\alpha)\text{.}
+\end{equation*}
+</div>
+</div>
+<span class="incontext"><a href="s_groups_abelian.html#p-427" class="internal">in-context</a></span>
 </body>
 </html>

@@ -82,6 +82,8 @@
       \DeclareMathOperator{\grad}{grad}
       \DeclareMathOperator{\diver}{div}
       \DeclareMathOperator{\flux}{flux}
+      \DeclareMathOperator{\Hom}{Hom}
+
       \newcommand{\surjects}{\twoheadrightarrow}
       \newcommand{\injects}{\hookrightarrow}
       \newcommand{\bijects}{\leftrightarrow}

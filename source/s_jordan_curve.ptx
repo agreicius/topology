@@ -1,5 +1,59 @@
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="s_jordan_curve">
   <title>Jordan curve theorem</title>
+
+  <theorem xml:id="th_Jordan_nonseparation_theorem">
+    <title>Nonseparation theorem</title>
+    <statement>
+        <p>
+           If <m>C\subseteq S^2</m> is an arc, then <m>C</m> does not separate <m>S^2</m>. 
+        </p>
+    </statement>
+    <proof>
+        <p>
+            This proof is adapted from an argument given by Ryuji Maehara in the article <url href="mathscinet.ams.org/mathscinet-getitem?mr=769530">The Jordan curve theorem via the Brouwer fixed point theorem</url>. 
+        </p>
+        <p>
+            Assume by contradiction that <m>\R^2-C</m> is not connected. This means that among the connected components of <m>\R^2-C</m>, in addition to the unbounded connected component <m>U_\infty</m>, there is a bounded component <m>U</m>.  
+        </p>
+        <p>
+            Now observe that we have <m>\partial U=\overline{U}-U\subseteq C</m>. This is because we have <m>\overline{U}\cap U'=\emptyset</m> for any connected component <m>U'\ne U</m>, since <m>U'</m> is open and disjoint from <m>U</m>. 
+        </p>
+        <p>
+            Since <m>C</m> is bounded, we can pick an element <m>\boldu\in U</m> and <m>R&gt; 0</m> such that <m>C\subseteq B_R(\boldu)</m>. Since <m>\R^2-B_R(\boldu)</m> is unbounded and connected, we must have <m>\R^2-B_R(\boldu)\subseteq U_\infty</m> and hence <m>U\subseteq B_R(\boldu)</m>. Let <m>B=\overline{B}_R(\boldu)</m> (homeomorphic to <m>B^2</m>) and let <m>S=\partial B</m> (homeomorphic to <m>S^1</m>). Observe that <m>S\subseteq U_\infty</m>. 
+        </p>
+        <p>
+            Since <m>C</m> is a closed subset of the normal space <m>B</m>, the <xref ref="th_Tietze_extension" text="custom">Tietze extension theorem</xref> implies that the identity function <m>\id\colon C\rightarrow C</m> extends to retraction <m>r\colon B\rightarrow C</m>. Define <m>f\colon B\rightarrow B-\{\boldu\}</m> as follows:
+            <me>
+                f(\boldx)=\begin{cases}
+                r(\boldx) \amp \text{if } \boldx\in \overline{U} \\ 
+                \boldx    \amp \text{if } \boldx\in B-U.
+                \end{cases}
+            </me>
+            Since <m>\overline{U}\cap U^c=\partial U\subseteq C</m>, and since <m>r\vert_C=\id</m>, the function <m>f</m> is well-defined and continuous by the closed pasting lemma. We cannot have <m>f(\boldx)=\boldu</m> since <m>\boldr(\boldx)\in C</m> for all <m>\boldx\in \overline{U}</m> and <m>f(\boldx)=\boldx</m> for all <m>\boldx\notin U</m>. 
+        </p>
+        <p>
+            Finally, consider the map <m>a\circ p\circ f\colon B\rightarrow S\subseteq B</m>, where <m>p\colon B-\{\boldu\}\rightarrow S</m> is the usual retraction map of the ball onto the circle, and <m>a\colon S\rightarrow S</m> is the antipodal map on <m>S</m>. 
+            <image xml:id="im_map_without_fixed_point" width="50%">
+                <description>Map without fixed point</description>
+                <latex-image>
+                    \begin{tikzcd}
+                        B \arrow[r, "f"] \arrow[rrr,bend right=30, "a\circ p\circ f"'] \amp B-\{\boldu\} \arrow[r,"p"]\amp S \arrow[r,"a"] \amp S\subseteq B
+                    \end{tikzcd}
+                </latex-image>
+            </image>
+            This map has no fixed point, contradicting Brouwer's fixed point theorem. Indeed, since <m>a\circ p\circ f(B)\subseteq S</m>, any candidate for a fixed point would have to be an element of <m>S</m>; but for any <m>\boldx\in S</m>, we have 
+            <md>
+                <mrow> a(p(f(\boldx)))\amp =a(p(\boldx)) \amp (f\vert_S=\id) </mrow>
+                <mrow> \amp =a(\boldx) \amp (p\vert_S=\id)</mrow>
+                <mrow> \amp \ne \boldx</mrow>
+            </md>,
+            since <m>a(\boldx)</m> is the antipode of <m>\boldx</m>. 
+        </p>
+        <p>
+            Since we have reached a contradiction, we conclude that <m>\R^2-C</m> must be connected. 
+        </p>
+    </proof>
+</theorem>
     <theorem xml:id="th_compl_Seifert_vanKampen">
         <title>Complementary Seifert-van Kampen</title>
         <statement>
@@ -21,17 +75,14 @@
                 </ol>
             </p>
         </statement>
+        <proof>
+            <p>
+                
+            </p>
+        </proof>
     </theorem>
     
-    <theorem xml:id="th_Jordan_nonseparation_theorem">
-        <title>Nonseparation theorem</title>
-        
-        <statement>
-            <p>
-               If <m>C\subseteq S^2</m> is an arc, then <m>C</m> does not separate <m>S^2</m>. 
-            </p>
-        </statement>
-    </theorem>
+    
 
     <theorem xml:id="th_Jordan_curve_theorem">
         <statement>

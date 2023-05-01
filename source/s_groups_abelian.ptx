@@ -1,0 +1,296 @@
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="s_groups_abelian">
+  <title>Free Abelian groups</title>
+<introduction>
+    <p>
+        Although the main focus of this section is free abelian groups, a significant underlying theme is the concept of <em>universal mapping properties</em> that characterize certain group constructions. As an example, and partly as review, recall the the universal mapping property of a quotient group. 
+    </p>
+</introduction>
+<definition xml:id="d_group_Hom">
+    <title><m>\Hom(G,H)</m></title>
+    <statement>
+        <p>
+            Given groups <m>G</m> and <m>H</m> we denote by <m>\Hom(G,H)</m> the set of all group homomorphisms from <m>G</m> to <m>H</m>. 
+        </p>
+    </statement>
+</definition>
+
+<theorem xml:id="th_mapping_prop_quotient_group">
+    <title>Universal property of quotient groups</title>
+    <statement>
+        <p>
+            Let <m>N</m> be a normal subgroup of <m>G</m>, denoted <m>N\trianglelefteq G</m>, and let <m>q\colon G\rightarrow G/N</m> be the quotient homomorphism defined as <m>q(g)=gN</m>. The map  
+            <md>
+                <mrow>\Hom(G/N, H) \amp \rightarrow \Hom(G,H)</mrow>
+                <mrow>\overline{\phi} \amp \mapsto \phi=\overline{\phi}\circ q</mrow>
+            </md> 
+            is a bijection onto the set 
+            <me>
+                \{\phi\in \Hom(G,H)\colon N\subseteq \ker\phi\}
+            </me>.
+            In other words given any <m>\phi\in \Hom(G,H)</m> satisfying <m>N\leq \ker\phi</m>, there is a unique map <m>\overline{\phi}\in \Hom(G/N, H)</m> satisfying <m>\overline{\phi}\circ q=\phi</m>. 
+        <image xml:id="im_quot_grp_prop" width="35%">
+            <description>Commutative diagram for quotient groups</description>
+            <latex-image>
+                \begin{tikzcd}
+                    G \arrow[rr, "\phi"] \arrow[dr,"q"'] \amp \amp H \\ 
+                        \amp G/N\arrow[ru, dotted,"\exists!\overline{\phi}"']
+                \end{tikzcd}
+            </latex-image>
+        </image>
+        In fact, we must have <m>\overline{\phi}(gN)=\phi(g)</m>.
+        </p>
+    </statement>
+</theorem>
+
+
+<definition xml:id="d_product_sum_groups">
+<title>Direct product of groups</title>
+    <statement>
+        <p>
+            Given a family  <m>\{G_\alpha\}_{\alpha\in I}</m> of groups, its <term>direct product</term> <m>\prod_{\alpha\in I}G_\alpha</m> is the group with underlying set 
+            <me>
+                \prod_{\alpha\in I}G_{\alpha}=\{(g_\alpha)_{\alpha\in I}\colon g_\alpha\in G_\alpha\}
+            </me>
+            and group operation 
+            <me>
+                (g_\alpha)\cdot (h_\alpha)=(g_\alpha\cdot h_{\alpha})
+            </me>.
+        </p>
+    </statement>
+</definition>
+
+<theorem xml:id="th_universal_properties_product">
+    <title>Universal property of the direct product</title>
+    <statement>
+        <p>
+            Let <m>\{G_\alpha}_{\alpha\in I\}</m> be a family of groups, let <m>G=\prod G_\alpha</m>. 
+        </p>
+        <ol>
+            <li>
+                <title>Projections</title>
+                <p>
+                    For each <m>\alpha\in I</m> the projection map <m>\pi_\alpha\colon \prod G_\alpha\rightarrow G_\alpha</m> is a surjective group homomorphism.
+                </p>
+            </li>
+            <li>
+                <title>Universal mapping property</title>
+                <p>
+                     Given a group <m>H</m> the map
+                    <md>
+                        <mrow>\Hom(H, \prod G_\alpha) \amp\longleftrightarrow \prod\Hom(H, G_\alpha) </mrow>
+                        <mrow>\phi \amp \mapsto (\pi_\alpha\circ \phi)_{\alpha\in I}</mrow>
+                    </md>
+                    is a bijection. In other words, given any family of group homomorphisms <m>\phi_\alpha\colon H\rightarrow G_\alpha</m>, there is a unique homomorphism <m>\phi\colon H\rightarrow G</m> satisfying <m>\phi_\alpha=\pi_\alpha\circ\phi</m> for all <m>\alpha\in I</m>. 
+            <image xml:id="im_prod_grp_prop" width="50%">
+            <description>Commutative diagram for direct product groups</description>
+            <latex-image>
+                \begin{tikzcd}
+                    H \arrow[rr, dotted, "\exists!\phi"] \arrow[dr,"\phi_\alpha"'] \amp \amp \prod G_\alpha \arrow[dl, "\pi_\alpha"]\\ 
+                        \amp G_\alpha
+                \end{tikzcd}
+            </latex-image>
+        </image>   
+        In fact, in this case we must have 
+                    <me>
+                        \phi(h)=(\phi_\alpha(h))_{\alpha\in I}
+                    </me>.    
+            </p>
+            </li>
+            <li>
+                <p>
+                    The universal mapping property characterizes <m>\prod G_\alpha</m> up to isomorphism: <ie/>, if <m>G</m> is a group equipped with group homomorphisms <m>\pi_\alpha'\colon G\rightarrow G_\alpha</m> for which the recipe 
+                    <md>
+                        <mrow>\Hom(H, G) \amp\longleftrightarrow \prod\Hom(H,G) </mrow>
+                        <mrow>\phi \amp \mapsto (\pi_\alpha'\circ \phi)_{\alpha\in I}</mrow>
+                    </md>
+                    is a bijection, then <m>G\cong \prod G_\alpha</m>. 
+                </p>
+            </li>
+        </ol>
+    </statement>
+</theorem>
+<definition xml:id="d_direct_sum">
+    <title>Direct sum of abelian groups</title>
+    <statement>
+        <p>
+            Given a family <m>\{A_\alpha\}_{\alpha\in I}</m> of <em>abelian groups</em>, its <term>direct sum</term> <m>\oplus_{\alpha\in I}A_\alpha</m> is the subgroup of <m>\prod_{\alpha\in I}A_\alpha</m> defined as 
+            <me>
+                \bigoplus\limits_{\alpha\in I}A_\alpha=\{(g_\alpha)\in \prod_{\alpha\in I}A_\alpha\colon g_{\alpha}=0_\alpha \text{ for all but finitely many } \alpha\}
+            </me>. 
+        </p>
+    </statement>
+</definition>
+<remark>
+    The construction for the direct sum does not require that the groups <m>A_\alpha</m> be abelian. So why do we include this condition? The reason, briefly, is that the term <q>direct sum</q> describes not the construction of <m>\bigoplus A_\alpha</m> but rather the universal mapping property it satisfies among abelian groups, as described in <xref ref="th_universal_properties_sum"/>. This property fails if the abelian condition on groups is removed. (Put another way, the notion of a direct sum is really a category theory concept.) 
+</remark>
+<theorem xml:id="th_universal_properties_sum">
+    <title>Universal property of direct sums</title>
+    <statement>
+        <p>
+            Let <m>\{A_\alpha\}_{\alpha\in I}</m> be a family of abelian groups.
+        </p>
+        <ol>
+            <li>
+                <title>Injections</title>
+                <p>
+                    For each <m>\alpha\in I</m> the map <m>i_\alpha\colon A_\alpha\rightarrow \bigoplus A_\alpha</m> that maps <m>g_\alpha</m> to the tuple <m>g\in \bigoplus A_\alpha</m> satisfying <m>\pi_\alpha(g)=g_\alpha</m> and <m>\pi_{\alpha'}(g)=0_{\alpha'}</m> for all <m>\alpha'\ne \alpha</m> is an injective group homomorphism. 
+                </p>
+            </li>
+            <li>
+                <title>Universal mapping property</title>
+                <p>
+                     Given an abelian group <m>A</m> the map
+                    <md>
+                        <mrow>\Hom(\bigoplus A_\alpha,A) \amp\longleftrightarrow \prod\Hom( A_\alpha,A) </mrow>
+                        <mrow>\phi \amp \mapsto (\phi\circ i_\alpha)_{\alpha\in I}</mrow>
+                    </md>
+                    is a bijection. In other words, given any abelian group <m>A</m> and family of group homomorphisms <m>\phi_\alpha\colon A_\alpha\rightarrow A</m>, there is a unique homomorphism <m>\phi\colon \bigoplus A_\alpha\rightarrow A</m> satisfying <m>j_\alpha=\phi\circ i_\alpha</m> for all <m>\alpha\in I</m>. 
+                <image xml:id="im_sum_grp_prop" width="50%">
+            <description>Commutative diagram for direct sum groups</description>
+            <latex-image>
+                \begin{tikzcd}
+                    \bigoplus\limits_{\alpha\in I}A_\alpha \arrow[rr, dotted, "\exists!\phi"] \amp \amp  H\\ 
+                        \amp A_\alpha\arrow[ul,"i_\alpha"] \arrow[ur, "\phi_\alpha"']
+                \end{tikzcd}
+            </latex-image>
+        </image>
+        In fact, in this case we must have 
+                    <me>\phi((g_\alpha)_{\alpha\in I})=\sum_{\alpha\in I}\phi_\alpha(g_\alpha)</me>.
+        </p>
+            </li>
+            <li>
+                <p>
+                    The universal mapping property characterizes <m>\bigoplus A_\alpha</m> among abelian groups up to isomorphism: <ie/>, if <m>G</m> is an abelian group equipped with group homomorphisms <m>i_\alpha'\colon A_\alpha\rightarrow G</m> for which the recipe 
+                    <md>
+                        <mrow>\Hom(G,A) \amp\longleftrightarrow \prod\Hom(G,A) </mrow>
+                        <mrow>\phi \amp \mapsto (\phi\circ i_\alpha')_{\alpha\in I}</mrow>
+                    </md>
+                    is a bijection for any abelian group <m>A</m>, then <m>G\cong \bigoplus A_\alpha</m>. 
+                </p>
+            </li>
+        </ol>
+    </statement>
+</theorem>
+<example>
+Let <m>G=\oplus_{\alpha\in I} A_\alpha</m>
+<ol>
+    <li>
+        <p>
+           Consider the system of maps <m>i_\alpha\colon A_\alpha\rightarrow G</m>. According to the universal mapping property, there is a unique map <m>\phi\colon G\rightarrow G</m> satisfying <m>i_\alpha=\phi\circ i_\alpha</m> for all <m>\alpha</m>. What is <m>\phi</m>? 
+        </p>
+    </li>
+    <li>
+        <p>
+            Fix <m>\alpha_0\in I</m> and consider the system of maps <m>j_\alpha\colon A_\alpha\rightarrow A_{\alpha_0}</m> defined as <m>j_{\alpha}=0_{A_\alpha}</m> for <m>\alpha\ne \alpha_0</m> (the zero map), and <m>j_{\alpha_0}=\id_{A_{\alpha_0}}</m>. According to the universal mapping property, there is a unique map <m>\phi\colon G\rightarrow A_{\alpha_0}</m> satisfying <m>j_\alpha=\phi\circ i_\alpha</m> for all <m>\alpha</m>. What is <m>\phi</m>? 
+        </p>
+    </li>
+</ol>
+</example>
+<definition xml:id="d_direct_sum_of_subgroups">
+<title>Direct sum of subgroups</title>
+    <statement>
+        <p>
+            Let <m>\{A_\alpha\}_{\alpha\in I}</m> be a family of subgroups of the abelian group <m>G</m>. The inclusion maps <m>j_\alpha\colon A_\alpha\rightarrow G</m> give rise to a unique group homomorphism <m>\phi\colon \bigoplus A_\alpha\rightarrow G</m>.  
+            <ol>
+                <li>
+                    <title>Sum of subgroups</title>
+                    <p>
+                        The group <m>G</m> is the <title>sum</title> of the <m>A_\alpha</m>, denoted <m>G=\sum A_\alpha</m>, if <m>\phi</m> is surjective. 
+                    </p>
+                </li>
+                <li>
+                    <title>Direct sum of subgroups</title>
+                    <p>
+                        The group <m>G</m> is the <title>direct sum</title> of the <m>A_\alpha</m>, denoted <m>G=\bigoplus A_\alpha</m>, if <m>\phi</m> is an isomorphism.  
+                    </p>
+                </li>
+            </ol>
+        </p>
+    </statement>
+</definition>
+<theorem xml:id="th_direct_sum">
+    <title>Direct sum equivalence</title>
+    <statement>
+        <p>
+            Let <m>\{A_\alpha\}_{\alpha\in I}</m> be a family of subgroups of the abelian group <m>G</m>. 
+            <ol>
+                <li>
+                    <p>
+                        We have <m>G=\sum A_\alpha</m> if and only if for all <m>g\in G</m> we can write <m>g=\sum_{k=1}^ng_{\alpha_k}</m> for sum elements <m>g_{\alpha_k}\in A_{\alpha_k}</m>. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        We have <m>G\cong \bigoplus A_\alpha</m> if and only if for all <m>g\in G</m> we can write <m>g=\sum_{k=1}^ng_{\alpha_k}</m> for sum elements <m>g_{\alpha_k}\in A_{\alpha_k}</m> in a unique way. 
+                    </p>
+                </li>
+            </ol>
+        </p>
+    </statement>
+</theorem>
+<definition xml:id="d_free_abelian_group">
+    <title>Free abelian group</title>
+    <statement>
+        <p>
+            A group <m>G</m> is a <term>free abelian group</term> if <m>G\cong \bigoplus\limits_{\alpha\in I}\Z</m> for some set <m>I</m>. 
+        </p>
+    </statement>
+</definition>
+<theorem xml:id="th_free_abelian_groups">
+    <title>Free abelian groups</title>
+    <statement>
+        <p>
+            Let <m>G</m> be an abelian group. The following statements are equivalent. 
+            <ol>
+                <li>
+                    <p>
+                        <m>G</m> is free abelian. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        There is a tuple <m>(g_\alpha)_{\alpha\in I}\in \prod_{\alpha\in I}G</m> such that the map 
+                        <md>
+                            <mrow>\bigoplus_{\alpha\in I}\Z \amp \rightarrow G</mrow>
+                            <mrow>(m_{\alpha}) \amp \mapsto \sum_{\alpha\in I} m_\alpha g_\alpha</mrow>
+                        </md>
+                        is an isomorphism. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        There is a tuple <m>(g_\alpha)_{\alpha\in I}\in \prod_{\alpha\in I}G</m> such that for all <m>g\in G</m> we can write <m>g=\sum_{\alpha\in I}m_{\alpha}g_\alpha</m>, where <m>m_\alpha=0</m> for all but finitely many <m>\alpha\in I</m>, in a unique way. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        There is a tuple <m>(g_\alpha)_{\alpha\in I}\in \prod_{\alpha\in I}G</m> such that for any abelian group <m>A</m> the map 
+                        <md>
+                            <mrow>\Hom(G,A) \amp \rightarrow  \prod_{\alpha\in I}\Hom(G,A) </mrow>
+                            <mrow>\phi \amp \mapsto (\phi(g_\alpha))_{\alpha\in I}</mrow>
+                        </md>
+                        is a bijection. In other words, there is a tuple <m>(g_\alpha)_{\alpha\in I}</m> such that given any abelian group <m>A</m> and any elements <m>h_\alpha\in A</m>, there is a unique homomorphism <m>\phi\colon G\rightarrow A</m> satisfying <m>\phi(g_\alpha)=h_\alpha</m>. 
+                    </p>
+                </li>
+            </ol>
+        </p>
+    </statement>
+</theorem>
+<definition xml:id="d_basis_of_free_abelian_group">
+    <title>Basis of a free abelian group</title>
+    <statement>
+        <p>
+            Let <m>G</m> be an abelian group. A tuple <m>(g_\alpha)_{\alpha\in I}</m> satisfying any of the equivalent conditions of <xref ref="th_free_abelian_groups"/> is called a <term>basis</term> of <m>G</m>.  
+        </p>
+        <p>
+            In this case we define the <term>rank</term> of <m>G</m>, denoted <m>\rank G</m>, as <m>\rank G=\abs{I}</m>. 
+        </p>
+    </statement>
+    <proof>
+        <p>
+            Why is <m>\rank G</m> well-defined? As you will show in a homework exercise, if <m>G\cong\oplus_{\alpha\in I}\Z</m>, then <m>G/2G\cong \oplus_{k\in I}\Z/2\Z</m>. Thinking of <m>\Z/2\Z</m> as the finite finied <m>\F_2</m>, we see that <m>\abs{I}</m> is just the dimension of <m>G/2G</m> as a <m>\F_2</m>-vector space: <ie/>, <m>\rank G=\dim_{\F_2}G/2G</m>. 
+        </p>
+    </proof>
+</definition>
+
+</section>

@@ -63,7 +63,7 @@
     <title>Universal property of the direct product</title>
     <statement>
         <p>
-            Let <m>\{G_\alpha}_{\alpha\in I\}</m> be a family of groups, let <m>G=\prod G_\alpha</m>. 
+            Let <m>\{G_\alpha\}_{\alpha\in I}</m> be a family of groups, let <m>G=\prod G_\alpha</m>. 
         </p>
         <ol>
             <li>
@@ -91,16 +91,16 @@
             </latex-image>
         </image>   
         In fact, in this case we must have 
-                    <me>
+                    <men xml:id="eq_direct_prod">
                         \phi(h)=(\phi_\alpha(h))_{\alpha\in I}
-                    </me>.    
+                    </men>.    
             </p>
             </li>
             <li>
                 <p>
                     The universal mapping property characterizes <m>\prod G_\alpha</m> up to isomorphism: <ie/>, if <m>G</m> is a group equipped with group homomorphisms <m>\pi_\alpha'\colon G\rightarrow G_\alpha</m> for which the recipe 
                     <md>
-                        <mrow>\Hom(H, G) \amp\longleftrightarrow \prod\Hom(H,G) </mrow>
+                        <mrow>\Hom(H, G) \amp\longleftrightarrow \prod\Hom(H,G_\alpha) </mrow>
                         <mrow>\phi \amp \mapsto (\pi_\alpha'\circ \phi)_{\alpha\in I}</mrow>
                     </md>
                     is a bijection, then <m>G\cong \prod G_\alpha</m>. 
@@ -108,6 +108,11 @@
             </li>
         </ol>
     </statement>
+    <proof>
+        <p>
+            The proof of this theorem is very similar to that of <xref ref="th_universal_properties_sum"/>. You are encouraged to adapt that proof. 
+        </p>
+    </proof>
 </theorem>
 <definition xml:id="d_direct_sum">
     <title>Direct sum of abelian groups</title>
@@ -136,7 +141,7 @@
                     For each <m>\alpha\in I</m> the map <m>i_\alpha\colon A_\alpha\rightarrow \bigoplus A_\alpha</m> that maps <m>g_\alpha</m> to the tuple <m>g\in \bigoplus A_\alpha</m> satisfying <m>\pi_\alpha(g)=g_\alpha</m> and <m>\pi_{\alpha'}(g)=0_{\alpha'}</m> for all <m>\alpha'\ne \alpha</m> is an injective group homomorphism. 
                 </p>
             </li>
-            <li>
+            <li xml:id="prop_direct_sum">
                 <title>Universal mapping property</title>
                 <p>
                      Given an abelian group <m>A</m> the map
@@ -144,25 +149,25 @@
                         <mrow>\Hom(\bigoplus A_\alpha,A) \amp\longleftrightarrow \prod\Hom( A_\alpha,A) </mrow>
                         <mrow>\phi \amp \mapsto (\phi\circ i_\alpha)_{\alpha\in I}</mrow>
                     </md>
-                    is a bijection. In other words, given any abelian group <m>A</m> and family of group homomorphisms <m>\phi_\alpha\colon A_\alpha\rightarrow A</m>, there is a unique homomorphism <m>\phi\colon \bigoplus A_\alpha\rightarrow A</m> satisfying <m>j_\alpha=\phi\circ i_\alpha</m> for all <m>\alpha\in I</m>. 
+                    is a bijection. In other words, given any abelian group <m>A</m> and family of group homomorphisms <m>\phi_\alpha\colon A_\alpha\rightarrow A</m>, there is a unique homomorphism <m>\phi\colon \bigoplus A_\alpha\rightarrow A</m> satisfying <m>\phi_\alpha=\phi\circ i_\alpha</m> for all <m>\alpha\in I</m>. 
                 <image xml:id="im_sum_grp_prop" width="50%">
             <description>Commutative diagram for direct sum groups</description>
             <latex-image>
                 \begin{tikzcd}
-                    \bigoplus\limits_{\alpha\in I}A_\alpha \arrow[rr, dotted, "\exists!\phi"] \amp \amp  H\\ 
+                    \bigoplus\limits_{\alpha\in I}A_\alpha \arrow[rr, dotted, "\exists!\phi"] \amp \amp  A\\ 
                         \amp A_\alpha\arrow[ul,"i_\alpha"] \arrow[ur, "\phi_\alpha"']
                 \end{tikzcd}
             </latex-image>
         </image>
         In fact, in this case we must have 
-                    <me>\phi((g_\alpha)_{\alpha\in I})=\sum_{\alpha\in I}\phi_\alpha(g_\alpha)</me>.
+                    <men xml:id="eq_direct_sum">\phi((g_\alpha)_{\alpha\in I})=\sum_{\alpha\in I}\phi_\alpha(g_\alpha)</men>.
         </p>
             </li>
             <li>
                 <p>
                     The universal mapping property characterizes <m>\bigoplus A_\alpha</m> among abelian groups up to isomorphism: <ie/>, if <m>G</m> is an abelian group equipped with group homomorphisms <m>i_\alpha'\colon A_\alpha\rightarrow G</m> for which the recipe 
                     <md>
-                        <mrow>\Hom(G,A) \amp\longleftrightarrow \prod\Hom(G,A) </mrow>
+                        <mrow>\Hom(G,A) \amp\longleftrightarrow \prod\Hom(A_\alpha,A) </mrow>
                         <mrow>\phi \amp \mapsto (\phi\circ i_\alpha')_{\alpha\in I}</mrow>
                     </md>
                     is a bijection for any abelian group <m>A</m>, then <m>G\cong \bigoplus A_\alpha</m>. 
@@ -171,8 +176,48 @@
         </ol>
     </statement>
 </theorem>
+<proof>
+    <p>
+        <ol>
+            <li>
+                <p>
+                    This is easy to see. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    Suppose we are given an abelian group <m>A</m> and homomorphisms <m>\phi_\alpha\colon A_\alpha \rightarrow A</m>. First we show there is <em>at most</em> one such homomorphism <m>\phi\colon \bigoplus A_\alpha\rightarrow A</m>. Indeed, since by assumption <m>\phi</m> satisfies <m>\phi_\alpha=\phi\circ i_\alpha</m> for all <m>\alpha</m>, we must have
+                    <md>
+                        <mrow>\phi\left( (g_\alpha)_{\alpha\in I}\right) \amp = \phi\left(\sum_{\alpha\in I}i_\alpha(g_\alpha) \right) </mrow>
+                        <mrow> \amp = \sum_{\alpha\in I}\phi(i_\alpha(g_\alpha)) \amp (\phi \text{ is homo.})</mrow>
+                        <mrow> \amp =\sum_{\alpha\in I}\phi_\alpha(g_\alpha) \amp (\phi_\alpha=\phi\circ i_\alpha)</mrow>
+                    </md>.
+                Thus, if such a <m>\phi</m> exists, it must satisfy <xref ref="eq_direct_sum"/>. It remains only to show that the formula in <xref ref="eq_direct_sum"/> actually defines a homomorphism. This is straightforward and left to the reader. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    Suppose <m>G</m> is an abelian group equipped with maps <m>i_\alpha'\colon A_\alpha\rightarrow G</m> satisfying the given property. By the universal mapping property of <m>\oplus A_\alpha</m> there is a homomorphism <m>\phi\colon \bigoplus A_\alpha\rightarrow G</m> satisfying <me>i_\alpha'=\phi\circ i_\alpha</me>
+                    for all <m>\alpha\in I</m>. Since the group <m>G</m> and maps <m>i_{\alpha}'</m> also satisfies the universal mapping property, the maps <m>i_\alpha\colon A_\alpha\rightarrow \bigoplus A_{\alpha}</m> gives rise to a homomorphism <m>\psi\colon G\rightarrow \bigoplus A_{\alpha}</m> satisfying 
+                    <me>
+                        i_\alpha=\psi\circ i_\alpha'
+                    </me>
+                    for all <m>\alpha\in I</m>. We claim that <m>\phi\circ\psi=\id_G</m> and <m>\psi\circ\phi=\id_{\oplus A_{\alpha}}</m>, from whence it follows that <m>\phi</m> (and <m>\psi</m>) is an isomorphism. To see why these two equalities hold, we use the uniqueness claim in the universal mapping property. For example, we have 
+                    <md>
+                        <mrow>(\phi\circ \psi)\circ i_\alpha' \amp =\phi(\psi\circ i_\alpha')</mrow>
+                        <mrow> \amp= \phi\circ i_\alpha \amp (\psi\circ i_{\alpha'}=i_\alpha)</mrow>
+                        <mrow> \amp = i_\alpha' \amp (\phi\circ i_\alpha=i_{\alpha'})</mrow>
+                    </md>
+                    for all <m>\alpha</m>. Since <m>\id_G</m> also satisfies <m>\id_G\circ i_{\alpha}'=i_\alpha'</m> for all <m>\alpha\in I</m>, we conclude that <m>\phi\circ \psi=\id_G</m>. The argument for <m>\psi\circ \phi</m> is exactly similar. 
+                </p>
+            </li>
+        </ol>
+    </p>
+</proof>
 <example>
-Let <m>G=\oplus_{\alpha\in I} A_\alpha</m>
+<statement>
+    <p>
+       Let <m>G=\bigoplus\limits_{\alpha\in I} A_\alpha</m>
 <ol>
     <li>
         <p>
@@ -184,7 +229,33 @@ Let <m>G=\oplus_{\alpha\in I} A_\alpha</m>
             Fix <m>\alpha_0\in I</m> and consider the system of maps <m>j_\alpha\colon A_\alpha\rightarrow A_{\alpha_0}</m> defined as <m>j_{\alpha}=0_{A_\alpha}</m> for <m>\alpha\ne \alpha_0</m> (the zero map), and <m>j_{\alpha_0}=\id_{A_{\alpha_0}}</m>. According to the universal mapping property, there is a unique map <m>\phi\colon G\rightarrow A_{\alpha_0}</m> satisfying <m>j_\alpha=\phi\circ i_\alpha</m> for all <m>\alpha</m>. What is <m>\phi</m>? 
         </p>
     </li>
-</ol>
+</ol> 
+    </p>
+</statement>
+<proof>
+    <p>
+       <ol>
+        <li>
+            <p>
+                Since <m>\id_G</m> satisfies <m>\id_G\circ i_\alpha=i_\alpha</m> for all <m>\alpha\in I</m>, we see by uniqueness that <m>\phi=\id_G</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                Consider the projection map <m>\pi_{\alpha_0}</m>. It is easy to see, using the definition of <m>i_{\alpha_0}</m> that 
+                <me>
+                    \pi_{\alpha_0}\circ i_{\alpha}=\begin{cases}
+                    0 \amp \text{if } \alpha\ne \alpha_0 \\ 
+                    i_{\alpha_0} \amp \text{if } \alpha=\alpha_0.
+                    \end{cases}
+                </me>
+                Using the definition of <m>\phi_\alpha</m>, we conclude that <m>\phi\circ i_\alpha=\phi_\alpha</m> for all <m>\alpha\in I</m>. It follows from uniqueness that <m>\phi=\pi_\alpha</m>. 
+            </p>
+        </li>
+       </ol>
+    </p>
+</proof>
+
 </example>
 <definition xml:id="d_direct_sum_of_subgroups">
 <title>Direct sum of subgroups</title>
@@ -216,17 +287,27 @@ Let <m>G=\oplus_{\alpha\in I} A_\alpha</m>
             <ol>
                 <li>
                     <p>
-                        We have <m>G=\sum A_\alpha</m> if and only if for all <m>g\in G</m> we can write <m>g=\sum_{k=1}^ng_{\alpha_k}</m> for sum elements <m>g_{\alpha_k}\in A_{\alpha_k}</m>. 
+                        We have <m>G=\sum A_\alpha</m> if and only if for all <m>g\in G</m> we can write <m>g=\sum_{k=1}^ng_{\alpha_k}</m> for some elements <m>g_{\alpha_k}\in A_{\alpha_k}</m>. 
                     </p>
                 </li>
                 <li>
                     <p>
-                        We have <m>G\cong \bigoplus A_\alpha</m> if and only if for all <m>g\in G</m> we can write <m>g=\sum_{k=1}^ng_{\alpha_k}</m> for sum elements <m>g_{\alpha_k}\in A_{\alpha_k}</m> in a unique way. 
+                        We have <m>G\cong \bigoplus A_\alpha</m> if and only if for all <m>g\in G</m> we can write <m>g=\sum_{k=1}^ng_{\alpha_k}</m> for some elements <m>g_{\alpha_k}\in A_{\alpha_k}</m> in a unique way. 
                     </p>
                 </li>
             </ol>
         </p>
     </statement>
+    <proof>
+        <p>
+            According to <xref ref="eq_direct_sum"/> the map <m>\phi\circ \oplus A_\alpha\rightarrow G</m> coming from the inclusions <m>j\colon A_\alpha\hookrightarrow G_\alpha</m> has formula 
+            <md>
+                <mrow>\phi((g_\alpha)) \amp = \sum_{\alpha\in I}j_\alpha(g_\alpha)</mrow>
+                <mrow> \amp = \sum_{\alpha\in I}g_\alpha \amp (j_\alpha=\id\vert_{A_\alpha})</mrow> 
+            </md>.
+            From this it is clear that <m>\phi</m> is surjective if and only if every element <m>g\in G</m> can be so written, and bijective if and only if this expression is unique. The result follows. 
+        </p>
+    </proof>
 </theorem>
 <definition xml:id="d_free_abelian_group">
     <title>Free abelian group</title>
@@ -249,7 +330,7 @@ Let <m>G=\oplus_{\alpha\in I} A_\alpha</m>
                 </li>
                 <li>
                     <p>
-                        There is a tuple <m>(g_\alpha)_{\alpha\in I}\in \prod_{\alpha\in I}G</m> such that the map 
+                        There is a set <m>I</m> and tuple <m>(g_\alpha)_{\alpha\in I}\in \prod_{\alpha\in I}G</m> such that the map 
                         <md>
                             <mrow>\bigoplus_{\alpha\in I}\Z \amp \rightarrow G</mrow>
                             <mrow>(m_{\alpha}) \amp \mapsto \sum_{\alpha\in I} m_\alpha g_\alpha</mrow>
@@ -259,14 +340,14 @@ Let <m>G=\oplus_{\alpha\in I} A_\alpha</m>
                 </li>
                 <li>
                     <p>
-                        There is a tuple <m>(g_\alpha)_{\alpha\in I}\in \prod_{\alpha\in I}G</m> such that for all <m>g\in G</m> we can write <m>g=\sum_{\alpha\in I}m_{\alpha}g_\alpha</m>, where <m>m_\alpha=0</m> for all but finitely many <m>\alpha\in I</m>, in a unique way. 
+                        There is a set <m>I</m> and tuple <m>(g_\alpha)_{\alpha\in I}\in \prod_{\alpha\in I}G</m> such that for all <m>g\in G</m> we can write <m>g=\sum_{\alpha\in I}m_{\alpha}g_\alpha</m>, where <m>m_\alpha=0</m> for all but finitely many <m>\alpha\in I</m>, in a unique way. 
                     </p>
                 </li>
                 <li>
                     <p>
-                        There is a tuple <m>(g_\alpha)_{\alpha\in I}\in \prod_{\alpha\in I}G</m> such that for any abelian group <m>A</m> the map 
+                        There is a set <m>I</m> and tuple <m>(g_\alpha)_{\alpha\in I}\in \prod_{\alpha\in I}G</m> such that for any abelian group <m>A</m> the map 
                         <md>
-                            <mrow>\Hom(G,A) \amp \rightarrow  \prod_{\alpha\in I}\Hom(G,A) </mrow>
+                            <mrow>\Hom(G,A) \amp \rightarrow  \prod_{\alpha\in I} A </mrow>
                             <mrow>\phi \amp \mapsto (\phi(g_\alpha))_{\alpha\in I}</mrow>
                         </md>
                         is a bijection. In other words, there is a tuple <m>(g_\alpha)_{\alpha\in I}</m> such that given any abelian group <m>A</m> and any elements <m>h_\alpha\in A</m>, there is a unique homomorphism <m>\phi\colon G\rightarrow A</m> satisfying <m>\phi(g_\alpha)=h_\alpha</m>. 
@@ -275,6 +356,59 @@ Let <m>G=\oplus_{\alpha\in I} A_\alpha</m>
             </ol>
         </p>
     </statement>
+    <proof>
+        <p>
+            <m>(1)\implies (2)</m>. If <m>G</m> is free abelian, there is an isomorphism <m>\phi\colon \bigoplus_{\alpha\in I}\Z\rightarrow G</m>. Let <m>\phi_\alpha=\phi\circ i_\alpha</m> and let <m>g_{\alpha}=\phi_\alpha(1)</m>. From <xref ref="eq_direct_sum"/> we have  
+            <md>
+                <mrow>\phi((m_\alpha))\amp = \sum_{\alpha\in I} \phi_\alpha(m_\alpha) </mrow>
+                <mrow> \amp = \sum_{\alpha\in I}m_\alpha\phi_\alpha(1) \amp (\phi_\alpha \text{ a homo.})</mrow>
+                <mrow> \amp =\sum_{\alpha\in I}m_\alpha g_\alpha</mrow>
+            </md>.
+        </p>
+        <p>
+            <m>(2)\implies (3)</m>. This is clear. 
+        </p>
+        <p>
+            <m>(3)\implies (4)</m>. Since for any <m>g</m> we can write <m>g=\sum_{\alpha\in I}m_\alpha g_\alpha</m>, given a homomorphism <m>\phi\colon G\rightarrow A</m> we have 
+            <md>
+                <mrow>\phi(g) \amp =\phi\left( \sum_{\alpha\in I}m_\alpha g_\alpha\right)</mrow>
+                <mrow> \amp = \sum_{\alpha\in I}m_\alpha\phi(g_\alpha)</mrow>
+            </md>.
+            Thus <m>\phi</m> is completely determined by its values <m>(\phi(g_\alpha))_{\alpha\in I}</m>. Furthermore, given any tuple <m>(a_\alpha)_{\alpha\in I}</m> it is easy to see that the function <m>\phi\colon G\rightarrow A</m> defined as
+                <me>
+                    \phi(g)=\phi \left( \sum_{\alpha\in I}m_\alpha g_\alpha\right)=\sum_{\alpha\in I}m_\alpha a_\alpha
+                </me>
+            is well-defined and a group homomorphism.
+        </p>
+        <p>
+            <m>(4)\implies (1)</m>. Given such a tuple <m>(g_\alpha)_{\alpha\in I}</m>, we define group homomorphisms <m>\phi_\alpha\colon \Z\rightarrow G</m> as <m>\phi_{\alpha}(m)=mg_\alpha</m>. This gives rise to a group homomorphism <m>\phi\colon \oplus_{\alpha\in I}\Z\rightarrow G</m> satisfying 
+            <me>
+                \phi_\alpha=\phi\circ i_\alpha
+            </me>
+            for all <m>\alpha\in I</m>. Next, for all <m>\alpha\in I</m> let <m>\bolde_\alpha=i_\alpha(1)</m>: this is the tuple in <m>\bigoplus_{\alpha\in I}\Z</m> whose <m>\alpha</m>-th component is <m>1</m>, and whose every other component is 0. The property described in (4) guarantees that there is a unique homomorphism <m>\psi\colon G\rightarrow \bigoplus_{\alpha\in I}\Z</m> sending <m>g_\alpha</m> to <m>\psi(g_\alpha)=\bolde_\alpha</m>. We will show that <m>\phi</m> and <m>\psi</m> are inverses of each other, and hence that <m>G\cong \bigoplus_{\alpha\in I}\Z</m>.
+        </p>
+        <p>
+            <m>\psi\circ\phi=\id</m>. We have <m>\psi\circ\phi\colon \bigoplus \Z\rightarrow \bigoplus \Z</m>. Using the universal mapping property of <m>\bigoplus_{\alpha\in I} \Z</m>, if we show that <m>(\psi\circ\phi)\circ i_\alpha=i_\alpha</m> for all <m>\alpha\in I</m>, we conclude that <m>\psi\circ\phi=\id</m>. For any <m>m\in \Z</m> we have 
+            <md>
+                <mrow>(\psi\circ\phi)\circ i_\alpha (m) \amp=\psi(\phi\circ i_\alpha(m)) </mrow>
+                <mrow> \amp =\psi(\phi_\alpha(m))</mrow>
+                <mrow> \amp=\psi(mg_\alpha) </mrow>
+                <mrow> \amp =m\psi(g_\alpha)</mrow>
+                <mrow> \amp =mi_\alpha(1)</mrow>
+                <mrow> \amp =i_\alpha(m)</mrow>
+            </md>.
+            This shows that <m>(\psi\circ\phi)\circ i_\alpha=i_\alpha</m>, and thus <m>\psi\circ\phi=\id</m>, as desired. 
+        </p>
+        <p>
+            <m>\phi\circ\psi=\id</m>. Since <m>\phi\circ\psi\colon G\rightarrow G</m>,  using the uniqueness condition in the property described in (4), we need only show that <m>\phi\circ \psi (g_\alpha)=g_\alpha</m> for all <m>\alpha\in I</m>. We have 
+            <md>
+                <mrow>\phi\circ \psi (g_\alpha) \amp=\phi(\psi (g_\alpha)) </mrow>
+                <mrow> \amp =\phi(i_\alpha(1))</mrow>
+                <mrow> \amp = g_\alpha</mrow>
+            </md>,
+            as desired. 
+        </p>
+    </proof>
 </theorem>
 <definition xml:id="d_basis_of_free_abelian_group">
     <title>Basis of a free abelian group</title>
@@ -288,7 +422,7 @@ Let <m>G=\oplus_{\alpha\in I} A_\alpha</m>
     </statement>
     <proof>
         <p>
-            Why is <m>\rank G</m> well-defined? As you will show in a homework exercise, if <m>G\cong\oplus_{\alpha\in I}\Z</m>, then <m>G/2G\cong \oplus_{k\in I}\Z/2\Z</m>. Thinking of <m>\Z/2\Z</m> as the finite finied <m>\F_2</m>, we see that <m>\abs{I}</m> is just the dimension of <m>G/2G</m> as a <m>\F_2</m>-vector space: <ie/>, <m>\rank G=\dim_{\F_2}G/2G</m>. 
+            Why is <m>\rank G</m> well-defined? As you will show in a homework exercise, if <m>G\cong\oplus_{\alpha\in I}\Z</m>, then <m>G/2G\cong \bigoplus_{k\in I}\Z/2\Z</m>. Thinking of <m>\Z/2\Z</m> as the finite field <m>\F_2</m>, we see that <m>\abs{I}</m> is just the dimension of <m>G/2G</m> as a <m>\F_2</m>-vector space: <ie/>, <m>\rank G=\dim_{\F_2}G/2G</m>. 
         </p>
     </proof>
 </definition>

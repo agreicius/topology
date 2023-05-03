@@ -14,7 +14,7 @@
 <article class="theorem theorem-like"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.12.4</span><span class="period">.</span><span class="space"> </span><span class="title">Universal property of the direct product.</span>
 </h3>
-<div class="para">Let <span class="process-math">\(\{G_\alpha}_{\alpha\in I\}\)</span> be a family of groups, let <span class="process-math">\(G=\prod G_\alpha\text{.}\)</span>
+<div class="para">Let <span class="process-math">\(\{G_\alpha\}_{\alpha\in I}\)</span> be a family of groups, let <span class="process-math">\(G=\prod G_\alpha\text{.}\)</span>
 </div> <ol class="decimal">
 <li>
 <span class="heading"><span class="title">Projections.</span></span><div class="para">For each <span class="process-math">\(\alpha\in I\)</span> the projection map <span class="process-math">\(\pi_\alpha\colon \prod G_\alpha\rightarrow G_\alpha\)</span> is a surjective group homomorphism.</div>
@@ -30,9 +30,9 @@
 </div>
 <div class="para">is a bijection. In other words, given any family of group homomorphisms <span class="process-math">\(\phi_\alpha\colon H\rightarrow G_\alpha\text{,}\)</span> there is a unique homomorphism <span class="process-math">\(\phi\colon H\rightarrow G\)</span> satisfying <span class="process-math">\(\phi_\alpha=\pi_\alpha\circ\phi\)</span> for all <span class="process-math">\(\alpha\in I\text{.}\)</span> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/im_prod_grp_prop.svg" role="img" class="contained" alt="Commutative diagram for direct product groups"></div> In fact, in this case we must have</div>
 <div class="displaymath process-math">
-\begin{equation*}
-\phi(h)=(\phi_\alpha(h))_{\alpha\in I}\text{.}
-\end{equation*}
+\begin{equation}
+\phi(h)=(\phi_\alpha(h))_{\alpha\in I}\text{.}\tag{1.12.1}
+\end{equation}
 </div>
 </div>
 </li>
@@ -40,13 +40,13 @@
 <div class="para">The universal mapping property characterizes <span class="process-math">\(\prod G_\alpha\)</span> up to isomorphism: i.e., if <span class="process-math">\(G\)</span> is a group equipped with group homomorphisms <span class="process-math">\(\pi_\alpha'\colon G\rightarrow G_\alpha\)</span> for which the recipe</div>
 <div class="displaymath process-math">
 \begin{align*}
-\Hom(H, G) \amp\longleftrightarrow \prod\Hom(H,G) \\
+\Hom(H, G) \amp\longleftrightarrow \prod\Hom(H,G_\alpha) \\
 \phi \amp \mapsto (\pi_\alpha'\circ \phi)_{\alpha\in I}
 \end{align*}
 </div>
 <div class="para">is a bijection, then <span class="process-math">\(G\cong \prod G_\alpha\text{.}\)</span>
 </div>
 </div></li>
-</ol></article><span class="incontext"><a href="s_groups_abelian.html#th_universal_properties_product" class="internal">in-context</a></span>
+</ol></article><article class="hiddenproof"><a href="" class="proof-knowl original" data-knowl="./knowl/proof-34-hidden.html" title="Proof 1.12.4.1"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><span class="incontext"><a href="s_groups_abelian.html#th_universal_properties_product" class="internal">in-context</a></span>
 </body>
 </html>

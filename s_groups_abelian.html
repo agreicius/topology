@@ -57,7 +57,7 @@ window.MathJax = {
     )}
   },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
 <script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -190,7 +190,7 @@ window.MathJax = {
 <span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
 </ol>
 </li>
-</ol></div></button><span class="treebuttons"><a class="previous-button button" href="s_jordan_curve.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="c_algebraic_topology.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="c_top_spaces.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="s_jordan_curve.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="c_algebraic_topology.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="s_groups_free_products.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
 <input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
 </div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
   \newcommand{\Q}{{\mathbb Q}}
@@ -369,6 +369,7 @@ window.MathJax = {
 <li><div class="toc-item"><a href="s_jordan_separation.html" class="internal"><span class="codenumber">1.10</span> <span class="title">Jordan separation theorem</span></a></div></li>
 <li><div class="toc-item"><a href="s_jordan_curve.html" class="internal"><span class="codenumber">1.11</span> <span class="title">Jordan curve theorem</span></a></div></li>
 <li class="active"><div class="toc-item"><a href="s_groups_abelian.html" class="internal"><span class="codenumber">1.12</span> <span class="title">Free Abelian groups</span></a></div></li>
+<li><div class="toc-item"><a href="s_groups_free_products.html" class="internal"><span class="codenumber">1.13</span> <span class="title">Free products</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -468,7 +469,7 @@ window.MathJax = {
 </div></article><article class="theorem theorem-like" id="th_universal_properties_product"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.12.4</span><span class="period">.</span><span class="space"> </span><span class="title">Universal property of the direct product.</span>
 </h3>
-<div class="para" id="p-420">Let <span class="process-math">\(\{G_\alpha}_{\alpha\in I\}\)</span> be a family of groups, let <span class="process-math">\(G=\prod G_\alpha\text{.}\)</span>
+<div class="para" id="p-420">Let <span class="process-math">\(\{G_\alpha\}_{\alpha\in I}\)</span> be a family of groups, let <span class="process-math">\(G=\prod G_\alpha\text{.}\)</span>
 </div> <ol class="decimal">
 <li id="li-79">
 <span class="heading"><span class="title">Projections.</span></span><div class="para" id="p-421">For each <span class="process-math">\(\alpha\in I\)</span> the projection map <span class="process-math">\(\pi_\alpha\colon \prod G_\alpha\rightarrow G_\alpha\)</span> is a surjective group homomorphism.</div>
@@ -483,10 +484,10 @@ window.MathJax = {
 \end{align*}
 </div>
 <div class="para">is a bijection. In other words, given any family of group homomorphisms <span class="process-math">\(\phi_\alpha\colon H\rightarrow G_\alpha\text{,}\)</span> there is a unique homomorphism <span class="process-math">\(\phi\colon H\rightarrow G\)</span> satisfying <span class="process-math">\(\phi_\alpha=\pi_\alpha\circ\phi\)</span> for all <span class="process-math">\(\alpha\in I\text{.}\)</span> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/im_prod_grp_prop.svg" role="img" class="contained" alt="Commutative diagram for direct product groups"></div> In fact, in this case we must have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\phi(h)=(\phi_\alpha(h))_{\alpha\in I}\text{.}
-\end{equation*}
+<div class="displaymath process-math" id="eq_direct_prod">
+\begin{equation}
+\phi(h)=(\phi_\alpha(h))_{\alpha\in I}\text{.}\tag{1.12.1}
+\end{equation}
 </div>
 </div>
 </li>
@@ -494,16 +495,17 @@ window.MathJax = {
 <div class="para">The universal mapping property characterizes <span class="process-math">\(\prod G_\alpha\)</span> up to isomorphism: i.e., if <span class="process-math">\(G\)</span> is a group equipped with group homomorphisms <span class="process-math">\(\pi_\alpha'\colon G\rightarrow G_\alpha\)</span> for which the recipe</div>
 <div class="displaymath process-math" id="md-66">
 \begin{align*}
-\Hom(H, G) \amp\longleftrightarrow \prod\Hom(H,G) \\
+\Hom(H, G) \amp\longleftrightarrow \prod\Hom(H,G_\alpha) \\
 \phi \amp \mapsto (\pi_\alpha'\circ \phi)_{\alpha\in I}
 \end{align*}
 </div>
 <div class="para">is a bijection, then <span class="process-math">\(G\cong \prod G_\alpha\text{.}\)</span>
 </div>
 </div></li>
-</ol></article><article class="definition definition-like" id="d_direct_sum"><h3 class="heading">
+</ol></article><article class="hiddenproof" id="proof-34"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-34"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-34"><article class="hiddenproof"><div class="para" id="p-424">The proof of this theorem is very similar to that of <a href="" class="xref" data-knowl="./knowl/th_universal_properties_sum.html" title="Theorem 1.12.7: Universal property of direct sums">Theorem 1.12.7</a>. You are encouraged to adapt that proof.</div></article></div>
+<article class="definition definition-like" id="d_direct_sum"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.12.5</span><span class="period">.</span><span class="space"> </span><span class="title">Direct sum of abelian groups.</span>
-</h3> <div class="para logical" id="p-424">
+</h3> <div class="para logical" id="p-425">
 <div class="para">Given a family <span class="process-math">\(\{A_\alpha\}_{\alpha\in I}\)</span> of <em class="emphasis">abelian groups</em>, its <dfn class="terminology">direct sum</dfn> <span class="process-math">\(\oplus_{\alpha\in I}A_\alpha\)</span> is the subgroup of <span class="process-math">\(\prod_{\alpha\in I}A_\alpha\)</span> defined as</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -515,12 +517,12 @@ window.MathJax = {
 </h3>The construction for the direct sum does not require that the groups <span class="process-math">\(A_\alpha\)</span> be abelian. So why do we include this condition? The reason, briefly, is that the term “direct sum” describes not the construction of <span class="process-math">\(\bigoplus A_\alpha\)</span> but rather the universal mapping property it satisfies among abelian groups, as described in <a href="" class="xref" data-knowl="./knowl/th_universal_properties_sum.html" title="Theorem 1.12.7: Universal property of direct sums">Theorem 1.12.7</a>. This property fails if the abelian condition on groups is removed. (Put another way, the notion of a direct sum is really a category theory concept.)</article><article class="theorem theorem-like" id="th_universal_properties_sum"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.12.7</span><span class="period">.</span><span class="space"> </span><span class="title">Universal property of direct sums.</span>
 </h3>
-<div class="para" id="p-425">Let <span class="process-math">\(\{A_\alpha\}_{\alpha\in I}\)</span> be a family of abelian groups.</div> <ol class="decimal">
+<div class="para" id="p-426">Let <span class="process-math">\(\{A_\alpha\}_{\alpha\in I}\)</span> be a family of abelian groups.</div> <ol class="decimal">
 <li id="li-82">
-<span class="heading"><span class="title">Injections.</span></span><div class="para" id="p-426">For each <span class="process-math">\(\alpha\in I\)</span> the map <span class="process-math">\(i_\alpha\colon A_\alpha\rightarrow \bigoplus A_\alpha\)</span> that maps <span class="process-math">\(g_\alpha\)</span> to the tuple <span class="process-math">\(g\in \bigoplus A_\alpha\)</span> satisfying <span class="process-math">\(\pi_\alpha(g)=g_\alpha\)</span> and <span class="process-math">\(\pi_{\alpha'}(g)=0_{\alpha'}\)</span> for all <span class="process-math">\(\alpha'\ne \alpha\)</span> is an injective group homomorphism.</div>
+<span class="heading"><span class="title">Injections.</span></span><div class="para" id="p-427">For each <span class="process-math">\(\alpha\in I\)</span> the map <span class="process-math">\(i_\alpha\colon A_\alpha\rightarrow \bigoplus A_\alpha\)</span> that maps <span class="process-math">\(g_\alpha\)</span> to the tuple <span class="process-math">\(g\in \bigoplus A_\alpha\)</span> satisfying <span class="process-math">\(\pi_\alpha(g)=g_\alpha\)</span> and <span class="process-math">\(\pi_{\alpha'}(g)=0_{\alpha'}\)</span> for all <span class="process-math">\(\alpha'\ne \alpha\)</span> is an injective group homomorphism.</div>
 </li>
-<li id="li-83">
-<span class="heading"><span class="title">Universal mapping property.</span></span><div class="para logical" id="p-427">
+<li id="prop_direct_sum">
+<span class="heading"><span class="title">Universal mapping property.</span></span><div class="para logical" id="p-428">
 <div class="para">Given an abelian group <span class="process-math">\(A\)</span> the map</div>
 <div class="displaymath process-math" id="md-67">
 \begin{align*}
@@ -528,70 +530,122 @@ window.MathJax = {
 \phi \amp \mapsto (\phi\circ i_\alpha)_{\alpha\in I}
 \end{align*}
 </div>
-<div class="para">is a bijection. In other words, given any abelian group <span class="process-math">\(A\)</span> and family of group homomorphisms <span class="process-math">\(\phi_\alpha\colon A_\alpha\rightarrow A\text{,}\)</span> there is a unique homomorphism <span class="process-math">\(\phi\colon \bigoplus A_\alpha\rightarrow A\)</span> satisfying <span class="process-math">\(j_\alpha=\phi\circ i_\alpha\)</span> for all <span class="process-math">\(\alpha\in I\text{.}\)</span> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/im_sum_grp_prop.svg" role="img" class="contained" alt="Commutative diagram for direct sum groups"></div> In fact, in this case we must have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\phi((g_\alpha)_{\alpha\in I})=\sum_{\alpha\in I}\phi_\alpha(g_\alpha)\text{.}
-\end{equation*}
+<div class="para">is a bijection. In other words, given any abelian group <span class="process-math">\(A\)</span> and family of group homomorphisms <span class="process-math">\(\phi_\alpha\colon A_\alpha\rightarrow A\text{,}\)</span> there is a unique homomorphism <span class="process-math">\(\phi\colon \bigoplus A_\alpha\rightarrow A\)</span> satisfying <span class="process-math">\(\phi_\alpha=\phi\circ i_\alpha\)</span> for all <span class="process-math">\(\alpha\in I\text{.}\)</span> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/im_sum_grp_prop.svg" role="img" class="contained" alt="Commutative diagram for direct sum groups"></div> In fact, in this case we must have</div>
+<div class="displaymath process-math" id="eq_direct_sum">
+\begin{equation}
+\phi((g_\alpha)_{\alpha\in I})=\sum_{\alpha\in I}\phi_\alpha(g_\alpha)\text{.}\tag{1.12.2}
+\end{equation}
 </div>
 </div>
 </li>
-<li id="li-84"><div class="para logical" id="p-428">
+<li id="li-84"><div class="para logical" id="p-429">
 <div class="para">The universal mapping property characterizes <span class="process-math">\(\bigoplus A_\alpha\)</span> among abelian groups up to isomorphism: i.e., if <span class="process-math">\(G\)</span> is an abelian group equipped with group homomorphisms <span class="process-math">\(i_\alpha'\colon A_\alpha\rightarrow G\)</span> for which the recipe</div>
 <div class="displaymath process-math" id="md-68">
 \begin{align*}
-\Hom(G,A) \amp\longleftrightarrow \prod\Hom(G,A) \\
+\Hom(G,A) \amp\longleftrightarrow \prod\Hom(A_\alpha,A) \\
 \phi \amp \mapsto (\phi\circ i_\alpha')_{\alpha\in I}
 \end{align*}
 </div>
 <div class="para">is a bijection for any abelian group <span class="process-math">\(A\text{,}\)</span> then <span class="process-math">\(G\cong \bigoplus A_\alpha\text{.}\)</span>
 </div>
 </div></li>
-</ol></article><article class="example example-like" id="example-35"><h3 class="heading">
+</ol></article><article class="hiddenproof" id="proof-35"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-35"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-35"><article class="hiddenproof"><div class="para logical" id="p-430"><ol class="decimal">
+<li id="li-85"><div class="para" id="p-431">This is easy to see.</div></li>
+<li id="li-86"><div class="para logical" id="p-432">
+<div class="para">Suppose we are given an abelian group <span class="process-math">\(A\)</span> and homomorphisms <span class="process-math">\(\phi_\alpha\colon A_\alpha \rightarrow A\text{.}\)</span> First we show there is <em class="emphasis">at most</em> one such homomorphism <span class="process-math">\(\phi\colon \bigoplus A_\alpha\rightarrow A\text{.}\)</span> Indeed, since by assumption <span class="process-math">\(\phi\)</span> satisfies <span class="process-math">\(\phi_\alpha=\phi\circ i_\alpha\)</span> for all <span class="process-math">\(\alpha\text{,}\)</span> we must have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_direct_sum.html ./knowl/eq_direct_sum.html" id="md-69">
+\begin{align*}
+\phi\left( (g_\alpha)_{\alpha\in I}\right) \amp = \phi\left(\sum_{\alpha\in I}i_\alpha(g_\alpha) \right) \\
+\amp = \sum_{\alpha\in I}\phi(i_\alpha(g_\alpha)) \amp (\phi \text{ is homo.})\\
+\amp =\sum_{\alpha\in I}\phi_\alpha(g_\alpha) \amp (\phi_\alpha=\phi\circ i_\alpha)\text{.}
+\end{align*}
+</div>
+<div class="para">Thus, if such a <span class="process-math">\(\phi\)</span> exists, it must satisfy <a href="" class="xref" data-knowl="./knowl/eq_direct_sum.html" title="Equation 1.12.2">(1.12.2)</a>. It remains only to show that the formula in <a href="" class="xref" data-knowl="./knowl/eq_direct_sum.html" title="Equation 1.12.2">(1.12.2)</a> actually defines a homomorphism. This is straightforward and left to the reader.</div>
+</div></li>
+<li id="li-87"><div class="para logical" id="p-433">
+<div class="para">Suppose <span class="process-math">\(G\)</span> is an abelian group equipped with maps <span class="process-math">\(i_\alpha'\colon A_\alpha\rightarrow G\)</span> satisfying the given property. By the universal mapping property of <span class="process-math">\(\oplus A_\alpha\)</span> there is a homomorphism <span class="process-math">\(\phi\colon \bigoplus A_\alpha\rightarrow G\)</span> satisfying</div>
+<div class="displaymath process-math">
+\begin{equation*}
+i_\alpha'=\phi\circ i_\alpha
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(\alpha\in I\text{.}\)</span> Since the group <span class="process-math">\(G\)</span> and maps <span class="process-math">\(i_{\alpha}'\)</span> also satisfies the universal mapping property, the maps <span class="process-math">\(i_\alpha\colon A_\alpha\rightarrow \bigoplus A_{\alpha}\)</span> gives rise to a homomorphism <span class="process-math">\(\psi\colon G\rightarrow \bigoplus A_{\alpha}\)</span> satisfying</div>
+<div class="displaymath process-math">
+\begin{equation*}
+i_\alpha=\psi\circ i_\alpha'
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(\alpha\in I\text{.}\)</span> We claim that <span class="process-math">\(\phi\circ\psi=\id_G\)</span> and <span class="process-math">\(\psi\circ\phi=\id_{\oplus A_{\alpha}}\text{,}\)</span> from whence it follows that <span class="process-math">\(\phi\)</span> (and <span class="process-math">\(\psi\)</span>) is an isomorphism. To see why these two equalities hold, we use the uniqueness claim in the universal mapping property. For example, we have</div>
+<div class="displaymath process-math" id="md-70">
+\begin{align*}
+(\phi\circ \psi)\circ i_\alpha' \amp =\phi(\psi\circ i_\alpha')\\
+\amp= \phi\circ i_\alpha \amp (\psi\circ i_{\alpha'}=i_\alpha)\\
+\amp = i_\alpha' \amp (\phi\circ i_\alpha=i_{\alpha'})
+\end{align*}
+</div>
+<div class="para">for all <span class="process-math">\(\alpha\text{.}\)</span> Since <span class="process-math">\(\id_G\)</span> also satisfies <span class="process-math">\(\id_G\circ i_{\alpha}'=i_\alpha'\)</span> for all <span class="process-math">\(\alpha\in I\text{,}\)</span> we conclude that <span class="process-math">\(\phi\circ \psi=\id_G\text{.}\)</span> The argument for <span class="process-math">\(\psi\circ \phi\)</span> is exactly similar.</div>
+</div></li>
+</ol></div></article></div>
+<article class="example example-like" id="example-35"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.12.8</span><span class="period">.</span>
-</h3>Let <span class="process-math">\(G=\oplus_{\alpha\in I} A_\alpha\)</span> <ol class="decimal">
-<li id="li-85"><div class="para" id="p-429">Consider the system of maps <span class="process-math">\(i_\alpha\colon A_\alpha\rightarrow G\text{.}\)</span> According to the universal mapping property, there is a unique map <span class="process-math">\(\phi\colon G\rightarrow G\)</span> satisfying <span class="process-math">\(i_\alpha=\phi\circ i_\alpha\)</span> for all <span class="process-math">\(\alpha\text{.}\)</span> What is <span class="process-math">\(\phi\text{?}\)</span>
+</h3>
+<div class="para logical" id="p-434">
+<div class="para">Let <span class="process-math">\(G=\bigoplus\limits_{\alpha\in I} A_\alpha\)</span>
+</div>
+<ol class="decimal">
+<li id="li-88"><div class="para" id="p-435">Consider the system of maps <span class="process-math">\(i_\alpha\colon A_\alpha\rightarrow G\text{.}\)</span> According to the universal mapping property, there is a unique map <span class="process-math">\(\phi\colon G\rightarrow G\)</span> satisfying <span class="process-math">\(i_\alpha=\phi\circ i_\alpha\)</span> for all <span class="process-math">\(\alpha\text{.}\)</span> What is <span class="process-math">\(\phi\text{?}\)</span>
 </div></li>
-<li id="li-86"><div class="para" id="p-430">Fix <span class="process-math">\(\alpha_0\in I\)</span> and consider the system of maps <span class="process-math">\(j_\alpha\colon A_\alpha\rightarrow A_{\alpha_0}\)</span> defined as <span class="process-math">\(j_{\alpha}=0_{A_\alpha}\)</span> for <span class="process-math">\(\alpha\ne \alpha_0\)</span> (the zero map), and <span class="process-math">\(j_{\alpha_0}=\id_{A_{\alpha_0}}\text{.}\)</span> According to the universal mapping property, there is a unique map <span class="process-math">\(\phi\colon G\rightarrow A_{\alpha_0}\)</span> satisfying <span class="process-math">\(j_\alpha=\phi\circ i_\alpha\)</span> for all <span class="process-math">\(\alpha\text{.}\)</span> What is <span class="process-math">\(\phi\text{?}\)</span>
+<li id="li-89"><div class="para" id="p-436">Fix <span class="process-math">\(\alpha_0\in I\)</span> and consider the system of maps <span class="process-math">\(j_\alpha\colon A_\alpha\rightarrow A_{\alpha_0}\)</span> defined as <span class="process-math">\(j_{\alpha}=0_{A_\alpha}\)</span> for <span class="process-math">\(\alpha\ne \alpha_0\)</span> (the zero map), and <span class="process-math">\(j_{\alpha_0}=\id_{A_{\alpha_0}}\text{.}\)</span> According to the universal mapping property, there is a unique map <span class="process-math">\(\phi\colon G\rightarrow A_{\alpha_0}\)</span> satisfying <span class="process-math">\(j_\alpha=\phi\circ i_\alpha\)</span> for all <span class="process-math">\(\alpha\text{.}\)</span> What is <span class="process-math">\(\phi\text{?}\)</span>
 </div></li>
-</ol></article><article class="definition definition-like" id="d_direct_sum_of_subgroups"><h3 class="heading">
+</ol>
+</div></article><article class="definition definition-like" id="d_direct_sum_of_subgroups"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.12.9</span><span class="period">.</span><span class="space"> </span><span class="title">Direct sum of subgroups.</span>
-</h3> <div class="para logical" id="p-431">
+</h3> <div class="para logical" id="p-440">
 <div class="para">Let <span class="process-math">\(\{A_\alpha\}_{\alpha\in I}\)</span> be a family of subgroups of the abelian group <span class="process-math">\(G\text{.}\)</span> The inclusion maps <span class="process-math">\(j_\alpha\colon A_\alpha\rightarrow G\)</span> give rise to a unique group homomorphism <span class="process-math">\(\phi\colon \bigoplus A_\alpha\rightarrow G\text{.}\)</span>
 </div>
 <ol class="decimal">
-<li id="li-87">
-<span class="heading"><span class="title">Sum of subgroups.</span></span><div class="para" id="p-432">The group <span class="process-math">\(G\)</span> is the  of the <span class="process-math">\(A_\alpha\text{,}\)</span> denoted <span class="process-math">\(G=\sum A_\alpha\text{,}\)</span> if <span class="process-math">\(\phi\)</span> is surjective.</div>
+<li id="li-92">
+<span class="heading"><span class="title">Sum of subgroups.</span></span><div class="para" id="p-441">The group <span class="process-math">\(G\)</span> is the  of the <span class="process-math">\(A_\alpha\text{,}\)</span> denoted <span class="process-math">\(G=\sum A_\alpha\text{,}\)</span> if <span class="process-math">\(\phi\)</span> is surjective.</div>
 </li>
-<li id="li-88">
-<span class="heading"><span class="title">Direct sum of subgroups.</span></span><div class="para" id="p-433">The group <span class="process-math">\(G\)</span> is the  of the <span class="process-math">\(A_\alpha\text{,}\)</span> denoted <span class="process-math">\(G=\bigoplus A_\alpha\text{,}\)</span> if <span class="process-math">\(\phi\)</span> is an isomorphism.</div>
+<li id="li-93">
+<span class="heading"><span class="title">Direct sum of subgroups.</span></span><div class="para" id="p-442">The group <span class="process-math">\(G\)</span> is the  of the <span class="process-math">\(A_\alpha\text{,}\)</span> denoted <span class="process-math">\(G=\bigoplus A_\alpha\text{,}\)</span> if <span class="process-math">\(\phi\)</span> is an isomorphism.</div>
 </li>
 </ol>
 </div></article><article class="theorem theorem-like" id="th_direct_sum"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.12.10</span><span class="period">.</span><span class="space"> </span><span class="title">Direct sum equivalence.</span>
 </h3>
-<div class="para logical" id="p-434">
+<div class="para logical" id="p-443">
 <div class="para">Let <span class="process-math">\(\{A_\alpha\}_{\alpha\in I}\)</span> be a family of subgroups of the abelian group <span class="process-math">\(G\text{.}\)</span>
 </div>
 <ol class="decimal">
-<li id="li-89"><div class="para" id="p-435">We have <span class="process-math">\(G=\sum A_\alpha\)</span> if and only if for all <span class="process-math">\(g\in G\)</span> we can write <span class="process-math">\(g=\sum_{k=1}^ng_{\alpha_k}\)</span> for sum elements <span class="process-math">\(g_{\alpha_k}\in A_{\alpha_k}\text{.}\)</span>
+<li id="li-94"><div class="para" id="p-444">We have <span class="process-math">\(G=\sum A_\alpha\)</span> if and only if for all <span class="process-math">\(g\in G\)</span> we can write <span class="process-math">\(g=\sum_{k=1}^ng_{\alpha_k}\)</span> for some elements <span class="process-math">\(g_{\alpha_k}\in A_{\alpha_k}\text{.}\)</span>
 </div></li>
-<li id="li-90"><div class="para" id="p-436">We have <span class="process-math">\(G\cong \bigoplus A_\alpha\)</span> if and only if for all <span class="process-math">\(g\in G\)</span> we can write <span class="process-math">\(g=\sum_{k=1}^ng_{\alpha_k}\)</span> for sum elements <span class="process-math">\(g_{\alpha_k}\in A_{\alpha_k}\)</span> in a unique way.</div></li>
+<li id="li-95"><div class="para" id="p-445">We have <span class="process-math">\(G\cong \bigoplus A_\alpha\)</span> if and only if for all <span class="process-math">\(g\in G\)</span> we can write <span class="process-math">\(g=\sum_{k=1}^ng_{\alpha_k}\)</span> for some elements <span class="process-math">\(g_{\alpha_k}\in A_{\alpha_k}\)</span> in a unique way.</div></li>
 </ol>
-</div></article><article class="definition definition-like" id="d_free_abelian_group"><h3 class="heading">
+</div></article><article class="hiddenproof" id="proof-37"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-37"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-37"><article class="hiddenproof"><div class="para logical" id="p-446">
+<div class="para">According to <a href="" class="xref" data-knowl="./knowl/eq_direct_sum.html" title="Equation 1.12.2">(1.12.2)</a> the map <span class="process-math">\(\phi\circ \oplus A_\alpha\rightarrow G\)</span> coming from the inclusions <span class="process-math">\(j\colon A_\alpha\hookrightarrow G_\alpha\)</span> has formula</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_direct_sum.html" id="md-71">
+\begin{align*}
+\phi((g_\alpha)) \amp = \sum_{\alpha\in I}j_\alpha(g_\alpha)\\
+\amp = \sum_{\alpha\in I}g_\alpha \amp (j_\alpha=\id\vert_{A_\alpha})\text{.}
+\end{align*}
+</div>
+<div class="para">From this it is clear that <span class="process-math">\(\phi\)</span> is surjective if and only if every element <span class="process-math">\(g\in G\)</span> can be so written, and bijective if and only if this expression is unique. The result follows.</div>
+</div></article></div>
+<article class="definition definition-like" id="d_free_abelian_group"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.12.11</span><span class="period">.</span><span class="space"> </span><span class="title">Free abelian group.</span>
-</h3> <div class="para" id="p-437">A group <span class="process-math">\(G\)</span> is a <dfn class="terminology">free abelian group</dfn> if <span class="process-math">\(G\cong \bigoplus\limits_{\alpha\in I}\Z\)</span> for some set <span class="process-math">\(I\text{.}\)</span>
+</h3> <div class="para" id="p-447">A group <span class="process-math">\(G\)</span> is a <dfn class="terminology">free abelian group</dfn> if <span class="process-math">\(G\cong \bigoplus\limits_{\alpha\in I}\Z\)</span> for some set <span class="process-math">\(I\text{.}\)</span>
 </div></article><article class="theorem theorem-like" id="th_free_abelian_groups"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.12.12</span><span class="period">.</span><span class="space"> </span><span class="title">Free abelian groups.</span>
 </h3>
-<div class="para logical" id="p-438">
+<div class="para logical" id="p-448">
 <div class="para">Let <span class="process-math">\(G\)</span> be an abelian group. The following statements are equivalent.</div>
 <ol class="decimal">
-<li id="li-91"><div class="para" id="p-439">
+<li id="li-96"><div class="para" id="p-449">
 <span class="process-math">\(G\)</span> is free abelian.</div></li>
-<li id="li-92"><div class="para logical" id="p-440">
-<div class="para">There is a tuple <span class="process-math">\((g_\alpha)_{\alpha\in I}\in \prod_{\alpha\in I}G\)</span> such that the map</div>
-<div class="displaymath process-math" id="md-69">
+<li id="li-97"><div class="para logical" id="p-450">
+<div class="para">There is a set <span class="process-math">\(I\)</span> and tuple <span class="process-math">\((g_\alpha)_{\alpha\in I}\in \prod_{\alpha\in I}G\)</span> such that the map</div>
+<div class="displaymath process-math" id="md-72">
 \begin{align*}
 \bigoplus_{\alpha\in I}\Z \amp \rightarrow G\\
 (m_{\alpha}) \amp \mapsto \sum_{\alpha\in I} m_\alpha g_\alpha
@@ -599,12 +653,12 @@ window.MathJax = {
 </div>
 <div class="para">is an isomorphism.</div>
 </div></li>
-<li id="li-93"><div class="para" id="p-441">There is a tuple <span class="process-math">\((g_\alpha)_{\alpha\in I}\in \prod_{\alpha\in I}G\)</span> such that for all <span class="process-math">\(g\in G\)</span> we can write <span class="process-math">\(g=\sum_{\alpha\in I}m_{\alpha}g_\alpha\text{,}\)</span> where <span class="process-math">\(m_\alpha=0\)</span> for all but finitely many <span class="process-math">\(\alpha\in I\text{,}\)</span> in a unique way.</div></li>
-<li id="li-94"><div class="para logical" id="p-442">
-<div class="para">There is a tuple <span class="process-math">\((g_\alpha)_{\alpha\in I}\in \prod_{\alpha\in I}G\)</span> such that for any abelian group <span class="process-math">\(A\)</span> the map</div>
-<div class="displaymath process-math" id="md-70">
+<li id="li-98"><div class="para" id="p-451">There is a set <span class="process-math">\(I\)</span> and tuple <span class="process-math">\((g_\alpha)_{\alpha\in I}\in \prod_{\alpha\in I}G\)</span> such that for all <span class="process-math">\(g\in G\)</span> we can write <span class="process-math">\(g=\sum_{\alpha\in I}m_{\alpha}g_\alpha\text{,}\)</span> where <span class="process-math">\(m_\alpha=0\)</span> for all but finitely many <span class="process-math">\(\alpha\in I\text{,}\)</span> in a unique way.</div></li>
+<li id="li-99"><div class="para logical" id="p-452">
+<div class="para">There is a set <span class="process-math">\(I\)</span> and tuple <span class="process-math">\((g_\alpha)_{\alpha\in I}\in \prod_{\alpha\in I}G\)</span> such that for any abelian group <span class="process-math">\(A\)</span> the map</div>
+<div class="displaymath process-math" id="md-73">
 \begin{align*}
-\Hom(G,A) \amp \rightarrow  \prod_{\alpha\in I}\Hom(G,A) \\
+\Hom(G,A) \amp \rightarrow  \prod_{\alpha\in I} A \\
 \phi \amp \mapsto (\phi(g_\alpha))_{\alpha\in I}
 \end{align*}
 </div>
@@ -612,18 +666,83 @@ window.MathJax = {
 </div>
 </div></li>
 </ol>
-</div></article><article class="definition definition-like" id="d_basis_of_free_abelian_group"><h3 class="heading">
+</div></article><article class="hiddenproof" id="proof-38"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-38"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-38"><article class="hiddenproof"><div class="para logical" id="p-453">
+<div class="para">
+<span class="process-math">\((1)\implies (2)\text{.}\)</span> If <span class="process-math">\(G\)</span> is free abelian, there is an isomorphism <span class="process-math">\(\phi\colon \bigoplus_{\alpha\in I}\Z\rightarrow G\text{.}\)</span> Let <span class="process-math">\(\phi_\alpha=\phi\circ i_\alpha\)</span> and let <span class="process-math">\(g_{\alpha}=\phi_\alpha(1)\text{.}\)</span> From <a href="" class="xref" data-knowl="./knowl/eq_direct_sum.html" title="Equation 1.12.2">(1.12.2)</a> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_direct_sum.html" id="md-74">
+\begin{align*}
+\phi((m_\alpha))\amp = \sum_{\alpha\in I} \phi_\alpha(m_\alpha) \\
+\amp = \sum_{\alpha\in I}m_\alpha\phi_\alpha(1) \amp (\phi_\alpha \text{ a homo.})\\
+\amp =\sum_{\alpha\in I}m_\alpha g_\alpha\text{.}
+\end{align*}
+</div>
+</div> <div class="para" id="p-454">
+<span class="process-math">\((2)\implies (3)\text{.}\)</span> This is clear.</div> <div class="para logical" id="p-455">
+<div class="para">
+<span class="process-math">\((3)\implies (4)\text{.}\)</span> Since for any <span class="process-math">\(g\)</span> we can write <span class="process-math">\(g=\sum_{\alpha\in I}m_\alpha g_\alpha\text{,}\)</span> given a homomorphism <span class="process-math">\(\phi\colon G\rightarrow A\)</span> we have</div>
+<div class="displaymath process-math" id="md-75">
+\begin{align*}
+\phi(g) \amp =\phi\left( \sum_{\alpha\in I}m_\alpha g_\alpha\right)\\
+\amp = \sum_{\alpha\in I}m_\alpha\phi(g_\alpha)\text{.}
+\end{align*}
+</div>
+<div class="para">Thus <span class="process-math">\(\phi\)</span> is completely determined by its values <span class="process-math">\((\phi(g_\alpha))_{\alpha\in I}\text{.}\)</span> Furthermore, given any tuple <span class="process-math">\((a_\alpha)_{\alpha\in I}\)</span> it is easy to see that the function <span class="process-math">\(\phi\colon G\rightarrow A\)</span> defined as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi(g)=\phi \left( \sum_{\alpha\in I}m_\alpha g_\alpha\right)=\sum_{\alpha\in I}m_\alpha a_\alpha
+\end{equation*}
+</div>
+<div class="para">is well-defined and a group homomorphism.</div>
+</div> <div class="para logical" id="p-456">
+<div class="para">
+<span class="process-math">\((4)\implies (1)\text{.}\)</span> Given such a tuple <span class="process-math">\((g_\alpha)_{\alpha\in I}\text{,}\)</span> we define group homomorphisms <span class="process-math">\(\phi_\alpha\colon \Z\rightarrow G\)</span> as <span class="process-math">\(\phi_{\alpha}(m)=mg_\alpha\text{.}\)</span> This gives rise to a group homomorphism <span class="process-math">\(\phi\colon \oplus_{\alpha\in I}\Z\rightarrow G\)</span> satisfying</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi_\alpha=\phi\circ i_\alpha
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(\alpha\in I\text{.}\)</span> Next, for all <span class="process-math">\(\alpha\in I\)</span> let <span class="process-math">\(\bolde_\alpha=i_\alpha(1)\text{:}\)</span> this is the tuple in <span class="process-math">\(\bigoplus_{\alpha\in I}\Z\)</span> whose <span class="process-math">\(\alpha\)</span>-th component is <span class="process-math">\(1\text{,}\)</span> and whose every other component is 0. The property described in (4) guarantees that there is a unique homomorphism <span class="process-math">\(\psi\colon G\rightarrow \bigoplus_{\alpha\in I}\Z\)</span> sending <span class="process-math">\(g_\alpha\)</span> to <span class="process-math">\(\psi(g_\alpha)=\bolde_\alpha\text{.}\)</span> We will show that <span class="process-math">\(\phi\)</span> and <span class="process-math">\(\psi\)</span> are inverses of each other, and hence that <span class="process-math">\(G\cong \bigoplus_{\alpha\in I}\Z\text{.}\)</span>
+</div>
+</div> <div class="para logical" id="p-457">
+<div class="para">
+<span class="process-math">\(\psi\circ\phi=\id\text{.}\)</span> We have <span class="process-math">\(\psi\circ\phi\colon \bigoplus \Z\rightarrow \bigoplus \Z\text{.}\)</span> Using the universal mapping property of <span class="process-math">\(\bigoplus_{\alpha\in I} \Z\text{,}\)</span> if we show that <span class="process-math">\((\psi\circ\phi)\circ i_\alpha=i_\alpha\)</span> for all <span class="process-math">\(\alpha\in I\text{,}\)</span> we conclude that <span class="process-math">\(\psi\circ\phi=\id\text{.}\)</span> For any <span class="process-math">\(m\in \Z\)</span> we have</div>
+<div class="displaymath process-math" id="md-76">
+\begin{align*}
+(\psi\circ\phi)\circ i_\alpha (m) \amp=\psi(\phi\circ i_\alpha(m)) \\
+\amp =\psi(\phi_\alpha(m))\\
+\amp=\psi(mg_\alpha) \\
+\amp =m\psi(g_\alpha)\\
+\amp =mi_\alpha(1)\\
+\amp =i_\alpha(m)\text{.}
+\end{align*}
+</div>
+<div class="para">This shows that <span class="process-math">\((\psi\circ\phi)\circ i_\alpha=i_\alpha\text{,}\)</span> and thus <span class="process-math">\(\psi\circ\phi=\id\text{,}\)</span> as desired.</div>
+</div> <div class="para logical" id="p-458">
+<div class="para">
+<span class="process-math">\(\phi\circ\psi=\id\text{.}\)</span> Since <span class="process-math">\(\phi\circ\psi\colon G\rightarrow G\text{,}\)</span>  using the uniqueness condition in the property described in (4), we need only show that <span class="process-math">\(\phi\circ \psi (g_\alpha)=g_\alpha\)</span> for all <span class="process-math">\(\alpha\in I\text{.}\)</span> We have</div>
+<div class="displaymath process-math" id="md-77">
+\begin{align*}
+\phi\circ \psi (g_\alpha) \amp=\phi(\psi (g_\alpha)) \\
+\amp =\phi(i_\alpha(1))\\
+\amp = g_\alpha\text{,}
+\end{align*}
+</div>
+<div class="para">as desired.</div>
+</div></article></div>
+<article class="definition definition-like" id="d_basis_of_free_abelian_group"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.12.13</span><span class="period">.</span><span class="space"> </span><span class="title">Basis of a free abelian group.</span>
-</h3> <div class="para" id="p-443">Let <span class="process-math">\(G\)</span> be an abelian group. A tuple <span class="process-math">\((g_\alpha)_{\alpha\in I}\)</span> satisfying any of the equivalent conditions of <a href="" class="xref" data-knowl="./knowl/th_free_abelian_groups.html" title="Theorem 1.12.12: Free abelian groups">Theorem 1.12.12</a> is called a <dfn class="terminology">basis</dfn> of <span class="process-math">\(G\text{.}\)</span>
-</div> <div class="para" id="p-444">In this case we define the <dfn class="terminology">rank</dfn> of <span class="process-math">\(G\text{,}\)</span> denoted <span class="process-math">\(\rank G\text{,}\)</span> as <span class="process-math">\(\rank G=\abs{I}\text{.}\)</span>
-</div> <article class="hiddenproof" id="proof-34"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-34"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-34"><article class="hiddenproof"><div class="para" id="p-445">Why is <span class="process-math">\(\rank G\)</span> well-defined? As you will show in a homework exercise, if <span class="process-math">\(G\cong\oplus_{\alpha\in I}\Z\text{,}\)</span> then <span class="process-math">\(G/2G\cong \oplus_{k\in I}\Z/2\Z\text{.}\)</span> Thinking of <span class="process-math">\(\Z/2\Z\)</span> as the finite finied <span class="process-math">\(\F_2\text{,}\)</span> we see that <span class="process-math">\(\abs{I}\)</span> is just the dimension of <span class="process-math">\(G/2G\)</span> as a <span class="process-math">\(\F_2\)</span>-vector space: i.e., <span class="process-math">\(\rank G=\dim_{\F_2}G/2G\text{.}\)</span>
+</h3> <div class="para" id="p-459">Let <span class="process-math">\(G\)</span> be an abelian group. A tuple <span class="process-math">\((g_\alpha)_{\alpha\in I}\)</span> satisfying any of the equivalent conditions of <a href="" class="xref" data-knowl="./knowl/th_free_abelian_groups.html" title="Theorem 1.12.12: Free abelian groups">Theorem 1.12.12</a> is called a <dfn class="terminology">basis</dfn> of <span class="process-math">\(G\text{.}\)</span>
+</div> <div class="para" id="p-460">In this case we define the <dfn class="terminology">rank</dfn> of <span class="process-math">\(G\text{,}\)</span> denoted <span class="process-math">\(\rank G\text{,}\)</span> as <span class="process-math">\(\rank G=\abs{I}\text{.}\)</span>
+</div> <article class="hiddenproof" id="proof-39"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-39"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-39"><article class="hiddenproof"><div class="para" id="p-461">Why is <span class="process-math">\(\rank G\)</span> well-defined? As you will show in a homework exercise, if <span class="process-math">\(G\cong\oplus_{\alpha\in I}\Z\text{,}\)</span> then <span class="process-math">\(G/2G\cong \oplus_{k\in I}\Z/2\Z\text{.}\)</span> Thinking of <span class="process-math">\(\Z/2\Z\)</span> as the finite field <span class="process-math">\(\F_2\text{,}\)</span> we see that <span class="process-math">\(\abs{I}\)</span> is just the dimension of <span class="process-math">\(G/2G\)</span> as a <span class="process-math">\(\F_2\)</span>-vector space: i.e., <span class="process-math">\(\rank G=\dim_{\F_2}G/2G\text{.}\)</span>
 </div></article></div></article></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="s_jordan_curve.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="c_top_spaces.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+<a class="previous-button button" href="s_jordan_curve.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="s_groups_free_products.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
 </div>
-<div id="ptx-page-footer">
-<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+<div class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org"><div class="name">Authored in PreTeXt</div>
+<div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259 "></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0  472  9732 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496 A 4241 4241  0  0  1  4724  3590 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259 A 4507 4507  0  0  1  4724  9448 "></path><polyline points="5385,4299 4062,8125 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8598,3496 8598,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="850,3496 850,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="4960,9685 4488,9685 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="3070,4582 1889,6141 3070,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="6418,4582 7600,6141 6418,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8976,3590 8976,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732 "></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy"><div class="name">Powered by Runestone</div>
+<img class="logo" title="Powered by Runestone" src="https://runestone.academy/runestone/static/rectangle_badge.png" alt="Powered by Runestone"></a><a class="mathjax-logo" href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a>
 </div>
 </body>
 </html>

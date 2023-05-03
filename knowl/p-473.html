@@ -12,7 +12,21 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">We treat each axiom separately.</div>
-<span class="incontext"><a href="s_top_spaces.html#p-473" class="internal">in-context</a></span>
+<div class="para logical">
+<div class="para">Fix <span class="process-math">\(\alpha\in I\text{.}\)</span> We now define a map <span class="process-math">\(i_\alpha G_\alpha\rightarrow S_W\)</span> that associates to each element <span class="process-math">\(g\in G_\alpha\)</span> a permutation <span class="process-math">\(\sigma_g\colon W\rightarrow W\in S_W\text{.}\)</span> The permutation <span class="process-math">\(\sigma_g=i_\alpha(g)\)</span> is defined as follows:</div>
+<div class="displaymath process-math">
+\begin{align*}
+\sigma_e \amp =\id_W \\
+\sigma_g((g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n}))\amp =\begin{cases}
+(g) \amp \text{if } n=0 \\ 
+(g,g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n}) \amp \text{if } n\ne 0 \text{ and } \alpha\ne \alpha_1 \\ 
+(gg_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n})\amp \text{if } n\ne 0 \text{ and } \alpha=\alpha_1 \text{ and } g_{\alpha_1}\ne g^{-1} \\ 
+(g_{\alpha_2},\dots, g_{\alpha_n}) \amp \text{otherwise}.
+\end{cases}  \amp (\text{for } g\ne e) 
+\end{align*}
+</div>
+<div class="para">It is now straightforward, if somewhat tedious, to show that <span class="process-math">\(\sigma_{gh}=\sigma_g\circ \sigma_{h}\)</span> for all <span class="process-math">\(g,h\in G_\alpha\text{,}\)</span> whence it follows that <span class="process-math">\(\sigma_g\)</span> is indeed a bijection with inverse <span class="process-math">\(\sigma_g^{-1}=\sigma_{g^{-1}\text{,}\)</span> and finally that <span class="process-math">\(i_\alpha\colon G_\alpha\rightarrow S_W\)</span> is a group homomorphism.</div>
+</div>
+<span class="incontext"><a href="s_groups_free_products.html#p-473" class="internal">in-context</a></span>
 </body>
 </html>

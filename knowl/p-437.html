@@ -12,8 +12,23 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">A group <span class="process-math">\(G\)</span> is a <dfn class="terminology">free abelian group</dfn> if <span class="process-math">\(G\cong \bigoplus\limits_{\alpha\in I}\Z\)</span> for some set <span class="process-math">\(I\text{.}\)</span>
+<div class="para logical"><ol class="decimal">
+<li><div class="para">Since <span class="process-math">\(\id_G\)</span> satisfies <span class="process-math">\(\id_G\circ i_\alpha=i_\alpha\)</span> for all <span class="process-math">\(\alpha\in I\text{,}\)</span> we see by uniqueness that <span class="process-math">\(\phi=\id_G\text{.}\)</span>
+</div></li>
+<li><div class="para logical">
+<div class="para">Consider the projection map <span class="process-math">\(\pi_{\alpha_0}\text{.}\)</span> It is easy to see, using the definition of <span class="process-math">\(i_{\alpha_0}\)</span> that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\pi_{\alpha_0}\circ i_{\alpha}=\begin{cases}
+0 \amp \text{if } \alpha\ne \alpha_0 \\ 
+i_{\alpha_0} \amp \text{if } \alpha=\alpha_0.
+\end{cases}
+\end{equation*}
 </div>
+<div class="para">Using the definition of <span class="process-math">\(\phi_\alpha\text{,}\)</span> we conclude that <span class="process-math">\(\phi\circ i_\alpha=\phi_\alpha\)</span> for all <span class="process-math">\(\alpha\in I\text{.}\)</span> It follows from uniqueness that <span class="process-math">\(\phi=\pi_\alpha\text{.}\)</span>
+</div>
+</div></li>
+</ol></div>
 <span class="incontext"><a href="s_groups_abelian.html#p-437" class="internal">in-context</a></span>
 </body>
 </html>

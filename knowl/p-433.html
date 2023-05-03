@@ -11,8 +11,30 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">The group <span class="process-math">\(G\)</span> is the  of the <span class="process-math">\(A_\alpha\text{,}\)</span> denoted <span class="process-math">\(G=\bigoplus A_\alpha\text{,}\)</span> if <span class="process-math">\(\phi\)</span> is an isomorphism.</div>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para logical">
+<div class="para">Suppose <span class="process-math">\(G\)</span> is an abelian group equipped with maps <span class="process-math">\(i_\alpha'\colon A_\alpha\rightarrow G\)</span> satisfying the given property. By the universal mapping property of <span class="process-math">\(\oplus A_\alpha\)</span> there is a homomorphism <span class="process-math">\(\phi\colon \bigoplus A_\alpha\rightarrow G\)</span> satisfying</div>
+<div class="displaymath process-math">
+\begin{equation*}
+i_\alpha'=\phi\circ i_\alpha
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(\alpha\in I\text{.}\)</span> Since the group <span class="process-math">\(G\)</span> and maps <span class="process-math">\(i_{\alpha}'\)</span> also satisfies the universal mapping property, the maps <span class="process-math">\(i_\alpha\colon A_\alpha\rightarrow \bigoplus A_{\alpha}\)</span> gives rise to a homomorphism <span class="process-math">\(\psi\colon G\rightarrow \bigoplus A_{\alpha}\)</span> satisfying</div>
+<div class="displaymath process-math">
+\begin{equation*}
+i_\alpha=\psi\circ i_\alpha'
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(\alpha\in I\text{.}\)</span> We claim that <span class="process-math">\(\phi\circ\psi=\id_G\)</span> and <span class="process-math">\(\psi\circ\phi=\id_{\oplus A_{\alpha}}\text{,}\)</span> from whence it follows that <span class="process-math">\(\phi\)</span> (and <span class="process-math">\(\psi\)</span>) is an isomorphism. To see why these two equalities hold, we use the uniqueness claim in the universal mapping property. For example, we have</div>
+<div class="displaymath process-math">
+\begin{align*}
+(\phi\circ \psi)\circ i_\alpha' \amp =\phi(\psi\circ i_\alpha')\\
+\amp= \phi\circ i_\alpha \amp (\psi\circ i_{\alpha'}=i_\alpha)\\
+\amp = i_\alpha' \amp (\phi\circ i_\alpha=i_{\alpha'})
+\end{align*}
+</div>
+<div class="para">for all <span class="process-math">\(\alpha\text{.}\)</span> Since <span class="process-math">\(\id_G\)</span> also satisfies <span class="process-math">\(\id_G\circ i_{\alpha}'=i_\alpha'\)</span> for all <span class="process-math">\(\alpha\in I\text{,}\)</span> we conclude that <span class="process-math">\(\phi\circ \psi=\id_G\text{.}\)</span> The argument for <span class="process-math">\(\psi\circ \phi\)</span> is exactly similar.</div>
+</div>
 <span class="incontext"><a href="s_groups_abelian.html#p-433" class="internal">in-context</a></span>
 </body>
 </html>

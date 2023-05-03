@@ -1384,7 +1384,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.12",
   "title": "Free Abelian groups",
-  "body": " Free Abelian groups   Although the main focus of this section is free abelian groups, a significant underlying theme is the concept of universal mapping properties that characterize certain group constructions. As an example, and partly as review, recall the the universal mapping property of a quotient group.      Given groups and we denote by the set of all group homomorphisms from to .     Universal property of quotient groups   Let be a normal subgroup of , denoted , and let be the quotient homomorphism defined as . The map is a bijection onto the set . In other words given any satisfying , there is a unique map satisfying .  Commutative diagram for quotient groups   In fact, we must have .     Direct product of groups   Given a family of groups, its direct product  is the group with underlying set and group operation .     Universal property of the direct product   Let be a family of groups, let .    Projections  For each the projection map is a surjective group homomorphism.    Universal mapping property  Given a group the map is a bijection. In other words, given any family of group homomorphisms , there is a unique homomorphism satisfying for all .  Commutative diagram for direct product groups   In fact, in this case we must have .    The universal mapping property characterizes up to isomorphism: , if is a group equipped with group homomorphisms for which the recipe is a bijection, then .       Direct sum of abelian groups   Given a family of abelian groups , its direct sum  is the subgroup of defined as .    The construction for the direct sum does not require that the groups be abelian. So why do we include this condition? The reason, briefly, is that the term direct sum describes not the construction of but rather the universal mapping property it satisfies among abelian groups, as described in . This property fails if the abelian condition on groups is removed. (Put another way, the notion of a direct sum is really a category theory concept.)   Universal property of direct sums   Let be a family of abelian groups.    Injections  For each the map that maps to the tuple satisfying and for all is an injective group homomorphism.    Universal mapping property  Given an abelian group the map is a bijection. In other words, given any abelian group and family of group homomorphisms , there is a unique homomorphism satisfying for all .  Commutative diagram for direct sum groups   In fact, in this case we must have .    The universal mapping property characterizes among abelian groups up to isomorphism: , if is an abelian group equipped with group homomorphisms for which the recipe is a bijection for any abelian group , then .      Let    Consider the system of maps . According to the universal mapping property, there is a unique map satisfying for all . What is ?    Fix and consider the system of maps defined as for (the zero map), and . According to the universal mapping property, there is a unique map satisfying for all . What is ?      Direct sum of subgroups   Let be a family of subgroups of the abelian group . The inclusion maps give rise to a unique group homomorphism .   Sum of subgroups  The group is the sum of the , denoted , if is surjective.    Direct sum of subgroups  The group is the direct sum of the , denoted , if is an isomorphism.        Direct sum equivalence   Let be a family of subgroups of the abelian group .   We have if and only if for all we can write for sum elements .    We have if and only if for all we can write for sum elements in a unique way.        Free abelian group   A group is a free abelian group if for some set .     Free abelian groups   Let be an abelian group. The following statements are equivalent.    is free abelian.    There is a tuple such that the map is an isomorphism.    There is a tuple such that for all we can write , where for all but finitely many , in a unique way.    There is a tuple such that for any abelian group the map is a bijection. In other words, there is a tuple such that given any abelian group and any elements , there is a unique homomorphism satisfying .        Basis of a free abelian group   Let be an abelian group. A tuple satisfying any of the equivalent conditions of is called a basis of .  In this case we define the rank of , denoted , as .    Why is well-defined? As you will show in a homework exercise, if , then . Thinking of as the finite finied , we see that is just the dimension of as a -vector space: , .    "
+  "body": " Free Abelian groups   Although the main focus of this section is free abelian groups, a significant underlying theme is the concept of universal mapping properties that characterize certain group constructions. As an example, and partly as review, recall the the universal mapping property of a quotient group.      Given groups and we denote by the set of all group homomorphisms from to .     Universal property of quotient groups   Let be a normal subgroup of , denoted , and let be the quotient homomorphism defined as . The map is a bijection onto the set . In other words given any satisfying , there is a unique map satisfying .  Commutative diagram for quotient groups   In fact, we must have .     Direct product of groups   Given a family of groups, its direct product  is the group with underlying set and group operation .     Universal property of the direct product   Let be a family of groups, let .    Projections  For each the projection map is a surjective group homomorphism.    Universal mapping property  Given a group the map is a bijection. In other words, given any family of group homomorphisms , there is a unique homomorphism satisfying for all .  Commutative diagram for direct product groups   In fact, in this case we must have .    The universal mapping property characterizes up to isomorphism: , if is a group equipped with group homomorphisms for which the recipe is a bijection, then .      The proof of this theorem is very similar to that of . You are encouraged to adapt that proof.     Direct sum of abelian groups   Given a family of abelian groups , its direct sum  is the subgroup of defined as .    The construction for the direct sum does not require that the groups be abelian. So why do we include this condition? The reason, briefly, is that the term direct sum describes not the construction of but rather the universal mapping property it satisfies among abelian groups, as described in . This property fails if the abelian condition on groups is removed. (Put another way, the notion of a direct sum is really a category theory concept.)   Universal property of direct sums   Let be a family of abelian groups.    Injections  For each the map that maps to the tuple satisfying and for all is an injective group homomorphism.    Universal mapping property  Given an abelian group the map is a bijection. In other words, given any abelian group and family of group homomorphisms , there is a unique homomorphism satisfying for all .  Commutative diagram for direct sum groups   In fact, in this case we must have .    The universal mapping property characterizes among abelian groups up to isomorphism: , if is an abelian group equipped with group homomorphisms for which the recipe is a bijection for any abelian group , then .          This is easy to see.    Suppose we are given an abelian group and homomorphisms . First we show there is at most one such homomorphism . Indeed, since by assumption satisfies for all , we must have . Thus, if such a exists, it must satisfy . It remains only to show that the formula in actually defines a homomorphism. This is straightforward and left to the reader.    Suppose is an abelian group equipped with maps satisfying the given property. By the universal mapping property of there is a homomorphism satisfying for all . Since the group and maps also satisfies the universal mapping property, the maps gives rise to a homomorphism satisfying for all . We claim that and , from whence it follows that (and ) is an isomorphism. To see why these two equalities hold, we use the uniqueness claim in the universal mapping property. For example, we have for all . Since also satisfies for all , we conclude that . The argument for is exactly similar.        Let    Consider the system of maps . According to the universal mapping property, there is a unique map satisfying for all . What is ?    Fix and consider the system of maps defined as for (the zero map), and . According to the universal mapping property, there is a unique map satisfying for all . What is ?          Since satisfies for all , we see by uniqueness that .    Consider the projection map . It is easy to see, using the definition of that Using the definition of , we conclude that for all . It follows from uniqueness that .        Direct sum of subgroups   Let be a family of subgroups of the abelian group . The inclusion maps give rise to a unique group homomorphism .   Sum of subgroups  The group is the sum of the , denoted , if is surjective.    Direct sum of subgroups  The group is the direct sum of the , denoted , if is an isomorphism.        Direct sum equivalence   Let be a family of subgroups of the abelian group .   We have if and only if for all we can write for some elements .    We have if and only if for all we can write for some elements in a unique way.       According to the map coming from the inclusions has formula . From this it is clear that is surjective if and only if every element can be so written, and bijective if and only if this expression is unique. The result follows.     Free abelian group   A group is a free abelian group if for some set .     Free abelian groups   Let be an abelian group. The following statements are equivalent.    is free abelian.    There is a set and tuple such that the map is an isomorphism.    There is a set and tuple such that for all we can write , where for all but finitely many , in a unique way.    There is a set and tuple such that for any abelian group the map is a bijection. In other words, there is a tuple such that given any abelian group and any elements , there is a unique homomorphism satisfying .        . If is free abelian, there is an isomorphism . Let and let . From we have .   . This is clear.   . Since for any we can write , given a homomorphism we have . Thus is completely determined by its values . Furthermore, given any tuple it is easy to see that the function defined as is well-defined and a group homomorphism.   . Given such a tuple , we define group homomorphisms as . This gives rise to a group homomorphism satisfying for all . Next, for all let : this is the tuple in whose -th component is , and whose every other component is 0. The property described in (4) guarantees that there is a unique homomorphism sending to . We will show that and are inverses of each other, and hence that .   . We have . Using the universal mapping property of , if we show that for all , we conclude that . For any we have . This shows that , and thus , as desired.   . Since , using the uniqueness condition in the property described in (4), we need only show that for all . We have , as desired.     Basis of a free abelian group   Let be an abelian group. A tuple satisfying any of the equivalent conditions of is called a basis of .  In this case we define the rank of , denoted , as .    Why is well-defined? As you will show in a homework exercise, if , then . Thinking of as the finite field , we see that is just the dimension of as a -vector space: , .    "
 },
 {
   "id": "d_group_Hom",
@@ -1420,7 +1420,7 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "1.12.4",
   "title": "Universal property of the direct product.",
-  "body": " Universal property of the direct product   Let be a family of groups, let .    Projections  For each the projection map is a surjective group homomorphism.    Universal mapping property  Given a group the map is a bijection. In other words, given any family of group homomorphisms , there is a unique homomorphism satisfying for all .  Commutative diagram for direct product groups   In fact, in this case we must have .    The universal mapping property characterizes up to isomorphism: , if is a group equipped with group homomorphisms for which the recipe is a bijection, then .     "
+  "body": " Universal property of the direct product   Let be a family of groups, let .    Projections  For each the projection map is a surjective group homomorphism.    Universal mapping property  Given a group the map is a bijection. In other words, given any family of group homomorphisms , there is a unique homomorphism satisfying for all .  Commutative diagram for direct product groups   In fact, in this case we must have .    The universal mapping property characterizes up to isomorphism: , if is a group equipped with group homomorphisms for which the recipe is a bijection, then .      The proof of this theorem is very similar to that of . You are encouraged to adapt that proof.   "
 },
 {
   "id": "d_direct_sum",
@@ -1450,13 +1450,22 @@ var ptx_lunr_docs = [
   "body": " Universal property of direct sums   Let be a family of abelian groups.    Injections  For each the map that maps to the tuple satisfying and for all is an injective group homomorphism.    Universal mapping property  Given an abelian group the map is a bijection. In other words, given any abelian group and family of group homomorphisms , there is a unique homomorphism satisfying for all .  Commutative diagram for direct sum groups   In fact, in this case we must have .    The universal mapping property characterizes among abelian groups up to isomorphism: , if is an abelian group equipped with group homomorphisms for which the recipe is a bijection for any abelian group , then .     "
 },
 {
+  "id": "proof-35",
+  "level": "2",
+  "url": "s_groups_abelian.html#proof-35",
+  "type": "Proof",
+  "number": "1.12.1",
+  "title": "",
+  "body": "    This is easy to see.    Suppose we are given an abelian group and homomorphisms . First we show there is at most one such homomorphism . Indeed, since by assumption satisfies for all , we must have . Thus, if such a exists, it must satisfy . It remains only to show that the formula in actually defines a homomorphism. This is straightforward and left to the reader.    Suppose is an abelian group equipped with maps satisfying the given property. By the universal mapping property of there is a homomorphism satisfying for all . Since the group and maps also satisfies the universal mapping property, the maps gives rise to a homomorphism satisfying for all . We claim that and , from whence it follows that (and ) is an isomorphism. To see why these two equalities hold, we use the uniqueness claim in the universal mapping property. For example, we have for all . Since also satisfies for all , we conclude that . The argument for is exactly similar.     "
+},
+{
   "id": "example-35",
   "level": "2",
   "url": "s_groups_abelian.html#example-35",
   "type": "Example",
   "number": "1.12.8",
   "title": "",
-  "body": "Let    Consider the system of maps . According to the universal mapping property, there is a unique map satisfying for all . What is ?    Fix and consider the system of maps defined as for (the zero map), and . According to the universal mapping property, there is a unique map satisfying for all . What is ?    "
+  "body": "  Let    Consider the system of maps . According to the universal mapping property, there is a unique map satisfying for all . What is ?    Fix and consider the system of maps defined as for (the zero map), and . According to the universal mapping property, there is a unique map satisfying for all . What is ?          Since satisfies for all , we see by uniqueness that .    Consider the projection map . It is easy to see, using the definition of that Using the definition of , we conclude that for all . It follows from uniqueness that .      "
 },
 {
   "id": "d_direct_sum_of_subgroups",
@@ -1474,7 +1483,7 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "1.12.10",
   "title": "Direct sum equivalence.",
-  "body": " Direct sum equivalence   Let be a family of subgroups of the abelian group .   We have if and only if for all we can write for sum elements .    We have if and only if for all we can write for sum elements in a unique way.      "
+  "body": " Direct sum equivalence   Let be a family of subgroups of the abelian group .   We have if and only if for all we can write for some elements .    We have if and only if for all we can write for some elements in a unique way.       According to the map coming from the inclusions has formula . From this it is clear that is surjective if and only if every element can be so written, and bijective if and only if this expression is unique. The result follows.   "
 },
 {
   "id": "d_free_abelian_group",
@@ -1492,7 +1501,7 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "1.12.12",
   "title": "Free abelian groups.",
-  "body": " Free abelian groups   Let be an abelian group. The following statements are equivalent.    is free abelian.    There is a tuple such that the map is an isomorphism.    There is a tuple such that for all we can write , where for all but finitely many , in a unique way.    There is a tuple such that for any abelian group the map is a bijection. In other words, there is a tuple such that given any abelian group and any elements , there is a unique homomorphism satisfying .      "
+  "body": " Free abelian groups   Let be an abelian group. The following statements are equivalent.    is free abelian.    There is a set and tuple such that the map is an isomorphism.    There is a set and tuple such that for all we can write , where for all but finitely many , in a unique way.    There is a set and tuple such that for any abelian group the map is a bijection. In other words, there is a tuple such that given any abelian group and any elements , there is a unique homomorphism satisfying .        . If is free abelian, there is an isomorphism . Let and let . From we have .   . This is clear.   . Since for any we can write , given a homomorphism we have . Thus is completely determined by its values . Furthermore, given any tuple it is easy to see that the function defined as is well-defined and a group homomorphism.   . Given such a tuple , we define group homomorphisms as . This gives rise to a group homomorphism satisfying for all . Next, for all let : this is the tuple in whose -th component is , and whose every other component is 0. The property described in (4) guarantees that there is a unique homomorphism sending to . We will show that and are inverses of each other, and hence that .   . We have . Using the universal mapping property of , if we show that for all , we conclude that . For any we have . This shows that , and thus , as desired.   . Since , using the uniqueness condition in the property described in (4), we need only show that for all . We have , as desired.   "
 },
 {
   "id": "d_basis_of_free_abelian_group",
@@ -1501,7 +1510,79 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "1.12.13",
   "title": "Basis of a free abelian group.",
-  "body": " Basis of a free abelian group   Let be an abelian group. A tuple satisfying any of the equivalent conditions of is called a basis of .  In this case we define the rank of , denoted , as .    Why is well-defined? As you will show in a homework exercise, if , then . Thinking of as the finite finied , we see that is just the dimension of as a -vector space: , .   "
+  "body": " Basis of a free abelian group   Let be an abelian group. A tuple satisfying any of the equivalent conditions of is called a basis of .  In this case we define the rank of , denoted , as .    Why is well-defined? As you will show in a homework exercise, if , then . Thinking of as the finite field , we see that is just the dimension of as a -vector space: , .   "
+},
+{
+  "id": "s_groups_free_products",
+  "level": "1",
+  "url": "s_groups_free_products.html",
+  "type": "Section",
+  "number": "1.13",
+  "title": "Free products",
+  "body": " Free products   Free product of groups   Let be a family of groups. A free product of the groups is a pair , consisting of a group and a family of group homomorphisms , that satisfies the following universal mapping property :   Universal mapping property  If is any group, and if is any family of group homomorphisms, then there is a unique group homomorphism satisfying for all .  Commutative diagram for free products      As we will see, such a group is unique up to isomorphism. We will write to denote a free product of the . When is finite, we write to denote a free product of the .     Free product properties   Let be a family of groups.    If is a free product, then is injective for all .    If and are both free products of the , then .      We now endeavor to show that free products of groups exist. Essentially, we will build a group whose elements consist of reduced words on the alphabet  .   Words and reduced words   Let be a family of groups, and let be the disjoint union of their underlying sets. Given an integer , a word of length on the \\alphabet  is an -tuple where for all . The empty word is the empty sequence , the unique tuple in of length 0.  A word is reduced if either is empty, or , where for all and for all .    We could attempt to define the free product of a family as the set of all reduced words on the alphabet , where given reduced words and we define their product to be the result of simplifying the concatenated word by repeatedly fusing any two adjacent terms that happen to live in the same group . This is a fairly concrete construction, but the proof that this operation is associative is a nightmare! The construction in the proof below is a sneaky way of avoiding this hassle, often called the trick of van der Waerden .   Free products exist   Given a family of groups , a free product exists.    Let be the disjoint union of the , let be the set of all reduced words on , and let be the set of all permutations of . In other words, is the set of all bijections , a group under function composition.  Fix . We now define a map that associates to each element a permutation . The permutation is defined as follows: It is now straightforward, if somewhat tedious, to show that for all , whence it follows that is indeed a bijection with inverse , and finally that is a group homomorphism.     Products of free products   If and , then .     Least normal subgroup   Let be a subset of the group . The least normal subgroup containing is the intersection of all normal subgroups of that contain . Equivalently, the least normal subgroup containing is the unique normal subgroup such that (i) and (ii) if , then .     Quotients of free products   Let with accompanying maps , . For each , we identify with its image . Given normal subgroups for , we have , where is the smallest normal subgroup of containing and .    "
+},
+{
+  "id": "d_free_product",
+  "level": "2",
+  "url": "s_groups_free_products.html#d_free_product",
+  "type": "Definition",
+  "number": "1.13.1",
+  "title": "Free product of groups.",
+  "body": " Free product of groups   Let be a family of groups. A free product of the groups is a pair , consisting of a group and a family of group homomorphisms , that satisfies the following universal mapping property :   Universal mapping property  If is any group, and if is any family of group homomorphisms, then there is a unique group homomorphism satisfying for all .  Commutative diagram for free products      As we will see, such a group is unique up to isomorphism. We will write to denote a free product of the . When is finite, we write to denote a free product of the .   "
+},
+{
+  "id": "th_free_prod_props",
+  "level": "2",
+  "url": "s_groups_free_products.html#th_free_prod_props",
+  "type": "Theorem",
+  "number": "1.13.2",
+  "title": "Free product properties.",
+  "body": " Free product properties   Let be a family of groups.    If is a free product, then is injective for all .    If and are both free products of the , then .     "
+},
+{
+  "id": "d_words",
+  "level": "2",
+  "url": "s_groups_free_products.html#d_words",
+  "type": "Definition",
+  "number": "1.13.3",
+  "title": "Words and reduced words.",
+  "body": " Words and reduced words   Let be a family of groups, and let be the disjoint union of their underlying sets. Given an integer , a word of length on the \\alphabet  is an -tuple where for all . The empty word is the empty sequence , the unique tuple in of length 0.  A word is reduced if either is empty, or , where for all and for all .   "
+},
+{
+  "id": "th_free_products_exist",
+  "level": "2",
+  "url": "s_groups_free_products.html#th_free_products_exist",
+  "type": "Theorem",
+  "number": "1.13.4",
+  "title": "Free products exist.",
+  "body": " Free products exist   Given a family of groups , a free product exists.    Let be the disjoint union of the , let be the set of all reduced words on , and let be the set of all permutations of . In other words, is the set of all bijections , a group under function composition.  Fix . We now define a map that associates to each element a permutation . The permutation is defined as follows: It is now straightforward, if somewhat tedious, to show that for all , whence it follows that is indeed a bijection with inverse , and finally that is a group homomorphism.   "
+},
+{
+  "id": "th_products_free_products",
+  "level": "2",
+  "url": "s_groups_free_products.html#th_products_free_products",
+  "type": "Theorem",
+  "number": "1.13.5",
+  "title": "Products of free products.",
+  "body": " Products of free products   If and , then .   "
+},
+{
+  "id": "d_least_normal_subgroup",
+  "level": "2",
+  "url": "s_groups_free_products.html#d_least_normal_subgroup",
+  "type": "Definition",
+  "number": "1.13.6",
+  "title": "Least normal subgroup.",
+  "body": " Least normal subgroup   Let be a subset of the group . The least normal subgroup containing is the intersection of all normal subgroups of that contain . Equivalently, the least normal subgroup containing is the unique normal subgroup such that (i) and (ii) if , then .   "
+},
+{
+  "id": "th_quot_free_prod",
+  "level": "2",
+  "url": "s_groups_free_products.html#th_quot_free_prod",
+  "type": "Theorem",
+  "number": "1.13.7",
+  "title": "Quotients of free products.",
+  "body": " Quotients of free products   Let with accompanying maps , . For each , we identify with its image . Given normal subgroups for , we have , where is the smallest normal subgroup of containing and .   "
 },
 {
   "id": "s_top_spaces",
@@ -2710,9 +2791,9 @@ var ptx_lunr_docs = [
   "body": " Connectedness and subspaces   Let be a topological space.   If is connected and is a separation of , then or .    If is a collection of connected subspaces of and , then is connected.    If is connected, then any satisfying is connected.     Let be a connected subspace of . It is a separation of , then or .   "
 },
 {
-  "id": "proof-79",
+  "id": "proof-85",
   "level": "2",
-  "url": "s_connected1.html#proof-79",
+  "url": "s_connected1.html#proof-85",
   "type": "Proof",
   "number": "2.12.1",
   "title": "",

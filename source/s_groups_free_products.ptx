@@ -1,0 +1,128 @@
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="s_groups_free_products">
+  <title>Free products</title>
+<definition xml:id="d_free_product">
+    <title>Free product of groups</title>
+    <statement>
+        <p>
+           Let <m>\{G_\alpha\}_{\alpha\in I}</m> be a family of groups. A <term>free product</term> of the groups <m>G_\alpha</m> is a pair <m>(G, \{i_\alpha\colon G_\alpha\rightarrow G\})</m>, consisting of a group <m>G</m> and a family of group homomorphisms <m>i_\alpha\colon G_\alpha\rightarrow G</m>, that satisfies the following <term>universal mapping property</term>:
+           <ul>
+            <li xml:id="prop_universal_free_prod">
+                <title>Universal mapping property</title>
+                <p>
+                    If <m>H</m> is any group, and if <m>\{\phi_\alpha\colon G_\alpha\rightarrow H\}_{\alpha\in I}</m> is any family of group homomorphisms, then there is a unique group homomorphism <m>\phi\colon G\rightarrow H</m> satisfying 
+                    <me>
+                        i_\alpha\circ\phi=\phi_\alpha
+                    </me>
+                    for all <m>\alpha\in I</m>. 
+                <image xml:id="im_free_prod" width="35%">
+                <description>Commutative diagram for free products</description>
+                <latex-image>
+                \begin{tikzcd}
+                    G \arrow[rr, dotted, "\exists!\phi"] \amp \amp  H\\ 
+                        \amp G_\alpha\arrow[ul,"i_\alpha"] \arrow[ur, "\phi_\alpha"']
+                \end{tikzcd}
+                </latex-image>
+                </image>
+                    
+                </p>
+            </li>
+           </ul>
+           As we will see, such a group <m>G</m> is unique up to isomorphism. We will write <m>\prod_{\alpha\in I}^*G_\alpha</m> to denote a free product of the <m>G_\alpha</m>. When <m>I=\{\alpha_1,\alpha_2,\dots, \alpha_n\}</m> is finite, we write <m>G_{\alpha_1}*G_{\alpha_2}*\cdots *G_{\alpha_n}</m> to denote a free product of the <m>G_{\alpha_k}</m>.  
+        </p>
+    </statement>
+</definition>
+<theorem xml:id="th_free_prod_props">
+    <title>Free product properties</title>
+    <statement>
+        <p>
+            Let <m>\{G_\alpha\}_{\alpha\in I}</m> be a family of groups. 
+        </p>
+        <ol>
+            <li>
+                <p>
+                    If <m>(G,\{i_\alpha\colon G_\alpha\colon G\})</m> is a free product, then <m>i_\alpha</m> is injective for all <m>\alpha\in I</m>. 
+                </p>
+            </li>
+            <li>
+                <p>
+                   If <m>(G, \{i_\alpha\colon G_\alpha\rightarrow G)\})</m> and <m>(G', \{i_\alpha'\colon G_\alpha\rightarrow G'\})</m> are both free products of the <m>G_\alpha</m>, then <m>G\cong G'</m>. 
+                </p>
+            </li>
+        </ol>
+    </statement>
+</theorem>
+<p>
+    We now endeavor to show that free products of groups exist. Essentially, we will build a group <m>G\cong \prod\limits_{\alpha\in I}^* G_\alpha</m> whose elements consist of <em>reduced words on the alphabet</em> <m>\coprod G_\alpha</m>. 
+</p>
+<definition xml:id="d_words">
+    <title>Words and reduced words</title>
+    <statement>
+        <p>
+           Let <m>\{G_\alpha\}_{\alpha\in I}</m> be a family of groups, and let <m>\mathcal{A}=\coprod G_\alpha</m> be the disjoint union of their underlying sets. Given an integer <m>n\geq 0</m>, a <term>word</term> of <term>length <m>n</m></term> on the <term>\alphabet</term> <m>\mathcal{A}</m> is an <m>n</m>-tuple <m>w=(g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n})</m> where <m>g_{\alpha_k}\in G_{\alpha_k}</m> for all <m>1\leq k\leq n</m>. The <term>empty word</term> is the empty sequence <m>()</m>, the unique tuple in <m>\mathcal{A}</m> of length 0.   
+        </p>
+        <p>
+            A word <m>w</m> is <term>reduced</term> if either <m>w=()</m> is empty, or <m>w=(g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n})</m>, where <m>g_{\alpha_k}\ne e_{\alpha_k}</m> for all <m>1\leq k\leq n</m> and <m>\alpha_{k}\ne \alpha_{k+1}</m> for all <m>1\leq k\leq n-1</m>. 
+        </p>
+    </statement>
+</definition>
+<p>
+    We could attempt to define the free product of a family <m>\{G_\alpha\}_{\alpha\in I}</m> as the set <m>W</m> of all reduced words on the alphabet <m>\mathcal{A}=\coprod G_\alpha</m>, where given reduced words <m>w=(g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n})</m> and <m>u=(h_{\beta_1},h_{\beta_2},\dots, h_{beta_m})</m> we define their product <m>w*u</m> to be the result of <q>simplifying</q> the concatenated word <m>(g_{\alpha_1},\dots, g_{\alpha_n}, h_{\beta_1},\dots, h_{\beta_m})</m> by repeatedly <q>fusing</q> any two adjacent terms that happen to live in the same group <m>G_\alpha\subseteq \mathcal{A}</m>. This is a fairly concrete construction, but the proof that this operation is associative is a nightmare! The construction in the proof below is a sneaky way of avoiding this hassle, often called <em>the trick of van der Waerden</em>. 
+</p>
+<theorem xml:id="th_free_products_exist">
+    <title>Free products exist</title>
+    <statement>
+        <p>
+            Given a family of groups <m>\{G_\alpha\}_{\alpha\in I}</m>, a free product <m>G\cong \prod\limits_{\alpha\in I}^*G_\alpha</m> exists. 
+        </p>
+    </statement>
+    <proof>
+        <p>
+            Let <m>\mathcal{A}</m> be the disjoint union of the <m>G_\alpha</m>, let <m>W</m> be the set of all reduced words on <m>\mathcal{A}</m>, and let <m>S_W</m> be the set of all permutations of <m>W</m>. In other words, <m>S_W</m> is the set of all bijections <m>\sigma\colon W\rightarrow W</m>, a group under function composition.  
+        </p>
+        <p>
+            Fix <m>\alpha\in I</m>. We now define a map <m>i_\alpha G_\alpha\rightarrow S_W</m> that associates to each element <m>g\in G_\alpha</m> a permutation <m>\sigma_g\colon W\rightarrow W\in S_W</m>. The permutation <m>\sigma_g=i_\alpha(g)</m> is defined as follows:
+            <md>
+                <mrow>\sigma_e \amp =\id_W </mrow>
+                <mrow> \sigma_g((g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n}))\amp =\begin{cases}
+                (g) \amp \text{if } n=0 \\ 
+                (g,g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n}) \amp \text{if } n\ne 0 \text{ and } \alpha\ne \alpha_1 \\ 
+                (gg_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n})\amp \text{if } n\ne 0 \text{ and } \alpha=\alpha_1 \text{ and } g_{\alpha_1}\ne g^{-1} \\ 
+                (g_{\alpha_2},\dots, g_{\alpha_n}) \amp \text{otherwise}.
+                \end{cases}  \amp (\text{for } g\ne e) </mrow>
+            </md>
+        It is now straightforward, if somewhat tedious, to show that <m>\sigma_{gh}=\sigma_g\circ \sigma_{h}</m> for all <m>g,h\in G_\alpha</m>, whence it follows that <m>\sigma_g</m> is indeed a bijection with inverse <m>\sigma_g^{-1}=\sigma_{g^{-1}</m>, and finally that <m>i_\alpha\colon G_\alpha\rightarrow S_W</m> is a group homomorphism. 
+        </p>
+    </proof>
+</theorem>
+
+<theorem xml:id="th_products_free_products">
+    <title>Products of free products</title>
+    <statement>
+        <p>
+            If <m>G=\prod\limits_{\alpha\in I}^* G_\alpha</m> and <m>H\cong \prod\limits_{\alpha'\in J}^*G_{\alpha'}</m>, then <m>G*H\cong \prod\limits_{\alpha\in I\cup J}^* G_\alpha</m>.
+        </p>
+    </statement>
+</theorem>
+<definition xml:id="d_least_normal_subgroup">
+    <title>Least normal subgroup</title>
+    <statement>
+        <p>
+            Let <m>S</m> be a subset of the group <m>G</m>. The <term>least normal subgroup</term> containing <m>S</m> is the intersection of all normal subgroups of <m>G</m> that contain <m>S</m>. Equivalently, the least normal subgroup containing <m>S</m> is the unique normal subgroup <m>N\normalin G</m> such that (i) <m>S\subseteq N</m> and (ii) if <m>S\subseteq N'\normalin G</m>, then <m>N\subseteq N'</m>.  
+        </p>
+    </statement>
+</definition>
+<theorem xml:id="th_quot_free_prod">
+    <title>Quotients of free products</title>
+    <statement>
+        <p>
+            Let <m>G=G_1*G_2</m> with accompanying maps <m>i_k\colon G_k\rightarrow G</m>, <m>1\leq k\leq 2</m>. For each <m>1\leq k\leq 2</m>, we identify <m>G_k</m> with its image <m>i_k(G_k)\leq G</m>. Given normal subgroups <m>N_k\normalin G_k</m> for <m>k\in \{1,2\}</m>, we have 
+            <me>
+                G_1/N_1 * G_2/N_2\cong G/N
+            </me>,
+            where <m>N\normalin G</m> is the smallest normal subgroup of <m>G</m> containing <m>N_1</m> and <m>N_2</m>.              
+        </p>
+    </statement>
+</theorem>
+
+
+</section>

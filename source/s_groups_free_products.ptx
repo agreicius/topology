@@ -222,9 +222,60 @@
     <title>Products of free products</title>
     <statement>
         <p>
-            If <m>G=\prod\limits_{\alpha\in I}^* G_\alpha</m> and <m>H\cong \prod\limits_{\alpha'\in J}^*G_{\alpha'}</m>, then <m>G*H\cong \prod\limits_{\alpha\in I\coprod J}^* G_\alpha</m>.
+            If <m>G=\prod\limits_{\alpha\in I}^* G_\alpha</m> and <m>H\cong \prod\limits_{\alpha'\in J}^*G_{\alpha'}</m>, then <m>G*H\cong \prod\limits_{\alpha\in I\sqcup J}^* G_\alpha</m>.
         </p>
     </statement>
+    <proof>
+        <p>
+            First we give names to some of the maps our various free products come equipped with.
+            <md>
+                <mrow>i\colon G \amp \rightarrow G*H</mrow>
+                <mrow>i'\colon H \amp \rightarrow G*H</mrow>
+                <mrow>i_\alpha\colon G_\alpha \amp \rightarrow G</mrow>
+                <mrow>i_{\alpha'}\colon G_{\alpha'} \amp \rightarrow H</mrow>
+            </md>.
+           Furthermore for each <m>\beta\in I\sqcup J</m> we define 
+           <me>
+            j_{\beta}=\begin{cases}
+            i\circ i_{\alpha}\amp \text{if } \beta=\alpha\in I\\
+            i'\circ i_{\alpha'}\amp \text{if } \beta=\alpha'\in J.
+            \end{cases}
+           </me>
+           We now show that <m>(G*H, \{j_\beta\colon G_\beta\rightarrow G*H\})</m> is a free product of <m>\{G_\beta\}_{\beta\in I\sqcup J}</m> by verifying that it satisfies the <xref ref="prop_universal_free_prod" text="custom">universal mapping property</xref>. Let <m>T</m> be any group equipped with a collection of homomorphisms <m>\{\phi_\beta\colon G_\beta\rightarrow T\}_{\beta\in I\sqcup J}</m>. The subcollections <m>\{\phi_\alpha\}_{\alpha\in I}</m> and <m>\{\phi_{\alpha'}\}_{\alpha'\in J}</m> give rise to maps <m>\phi\colon G\rightarrow T</m> and <m>\phi'\colon H\rightarrow T</m> making the diagram below commutative. 
+            <image xml:id="im_free_prod_A" width="35%">
+                <description>A commutative diagram</description>
+                <latex-image>
+                    \begin{tikzcd}
+                        \amp G_{\alpha'} \arrow[dl,"i_\alpha"'] \arrow[ddr,"\phi_{\alpha'}"] \amp \\ 
+                        H \arrow[drr,"\phi'"] \amp \\ 
+                        \amp \amp T\\
+                        G\arrow[urr,"\phi"'] \amp \\ 
+                        \amp G_{\alpha} \arrow[ul,"i_\alpha"] \arrow[uur,"\phi_\alpha"'] \amp
+                    \end{tikzcd}
+                </latex-image>
+            </image>
+            The universal mapping property for <m>G*H</m> now guarantees a unique map <m>\widehat{\phi}\colon G*H\rightarrow T</m> that makes the new triangles in the commutative diagram below commutative. 
+            <image xml:id="im_free_prod_B" width="50%">
+                <description>Another commutative diagram</description>
+                <latex-image>
+                    \begin{tikzcd}
+                       \amp \amp G_{\alpha'} \arrow[dl,"i_\alpha"'] \arrow[ddr,"\phi_{\alpha'}"] \amp \\ 
+                     \amp   H \arrow[dl,"i'"'] \arrow[drr,"\phi'"] \amp \\ 
+                    G*H\arrow[rrr,dotted,"\exists! \overline{\phi}"]  \amp  \amp \amp T\\
+                       \amp G\arrow[urr,"\phi"'] \arrow[ul,"i"] \amp \\ 
+                      \amp  \amp G_{\alpha} \arrow[ul,"i_\alpha"] \arrow[uur,"\phi_\alpha"'] \amp
+                    \end{tikzcd}
+                </latex-image>
+            </image>
+            But then we have  
+            <md>
+                <mrow>\overline{\phi}\circ j_\alpha \amp =\overline{\phi}\circ i\circ i_\alpha</mrow>
+                <mrow> \amp = \phi\circ i_\alpha \amp (\overline{\phi}\circ i=\phi</mrow>
+                <mrow> \amp = \phi_\alpha</mrow>
+            </md>
+            for all <m>\alpha\in I</m>. An identical argument shows, <m>\overline{\phi}\circ j_{\alpha'}=\phi_{\alpha'}</m> for all <m>\alpha'\in J</m>. Lastly, the uniqueness of <m>\overline{\phi}</m> is guaranteed by its arising uniquely from the maps <m>\phi, \phi'</m>, which themselves arise uniquely from the maps <m>\phi_\alpha</m> and <m>\phi_{\alpha'}</m>. 
+        </p>
+    </proof>
 </theorem>
 <definition xml:id="d_least_normal_subgroup">
     <title>Least normal subgroup</title>

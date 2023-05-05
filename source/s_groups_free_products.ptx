@@ -4,7 +4,7 @@
     <title>Free product of groups</title>
     <statement>
         <p>
-           Let <m>\{G_\alpha\}_{\alpha\in I}</m> be a family of groups. A <term>free product</term> of the groups <m>G_\alpha</m> is a pair <m>(G, \{i_\alpha\colon G_\alpha\rightarrow G\})</m>, consisting of a group <m>G</m> and a family of group homomorphisms <m>i_\alpha\colon G_\alpha\rightarrow G</m>, that satisfies the following <term>universal mapping property</term>:
+            A <term>free product</term> of a family of groups <m>\{G_\alpha\}_{\alpha\in I}</m> is a pair <m>(G, \{i_\alpha\colon G_\alpha\rightarrow G\})</m> consisting of a group <m>G</m> and a family of group homomorphisms <m>i_\alpha\colon G_\alpha\rightarrow G</m> satisfying the following <term>universal mapping property</term>:
            <ul>
             <li xml:id="prop_universal_free_prod">
                 <title>Universal mapping property</title>
@@ -27,7 +27,7 @@
                 </p>
             </li>
            </ul>
-           As we will see, such a group <m>G</m> is unique up to isomorphism. We will write <m>\prod_{\alpha\in I}^*G_\alpha</m> to denote a free product of the <m>G_\alpha</m>. When <m>I=\{\alpha_1,\alpha_2,\dots, \alpha_n\}</m> is finite, we write <m>G_{\alpha_1}*G_{\alpha_2}*\cdots *G_{\alpha_n}</m> to denote a free product of the <m>G_{\alpha_k}</m>.  
+           As we will see, such a group <m>G</m> is unique up to isomorphism. We will write <m>\prod_{\alpha\in I}^*G_\alpha</m> to denote a free product of <m>\{G_\alpha\}_{\alpha\in I}</m>. When <m>I=\{\alpha_1,\alpha_2,\dots, \alpha_n\}</m> is finite, we write <m>G_{\alpha_1}*G_{\alpha_2}*\cdots *G_{\alpha_n}</m> to denote a free product of the <m>G_{\alpha_k}</m>.  
         </p>
     </statement>
 </definition>
@@ -40,34 +40,63 @@
         <ol>
             <li>
                 <p>
-                    If <m>(G,\{i_\alpha\colon G_\alpha\colon G\})</m> is a free product, then <m>i_\alpha</m> is injective for all <m>\alpha\in I</m>. 
+                    If <m>(G,\{i_\alpha\colon G_\alpha\rightarrow G\})</m> is a free product of <m>\{G_\alpha\}_{\alpha\in I}</m>, then <m>i_\alpha</m> is injective for all <m>\alpha\in I</m>. 
                 </p>
             </li>
             <li>
                 <p>
-                   If <m>(G, \{i_\alpha\colon G_\alpha\rightarrow G)\})</m> and <m>(G', \{i_\alpha'\colon G_\alpha\rightarrow G'\})</m> are both free products of the <m>G_\alpha</m>, then <m>G\cong G'</m>. 
+                   If <m>(G, \{i_\alpha\colon G_\alpha\rightarrow G)\})</m> and <m>(G', \{i_\alpha'\colon G_\alpha\rightarrow G'\})</m> are both free products of <m>\{G_\alpha\}_{\alpha\in I}</m>, then <m>G\cong G'</m>. 
                 </p>
             </li>
         </ol>
     </statement>
+    <proof>
+        <p>
+            <ol>
+                <li>
+                    <p>
+                        Fix <m>\alpha\in I</m>. We use the <xref ref="prop_universal_free_prod" text="custom">universal mapping property</xref>, setting <m>H=A_{\alpha}</m>, letting <m>\phi_{\alpha'}\colon A_{\alpha'}\rightarrow A_\alpha</m> be the zero map for all <m>\alpha'\ne \alpha</m>, and letting <m>\phi_\alpha\colon A_\alpha\rightarrow A_{\alpha}</m> be the identity map <m>\phi_\alpha=\id_{A_{\alpha}}</m>. We conclude there is a map <m>\phi\colon G\rightarrow A_\alpha</m> satisfying <m>\id_{A_\alpha}=\phi\circ i_\alpha</m>. Since <m>\id_{A_\alpha}</m> is injective, the map <m>i_\alpha</m> must be injective.  
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        The proof here is very similar to the one from <xref ref="th_free_prod_props"/>. Since <m>G</m> is a free product, the maps <m>i_\alpha'\colon G_\alpha\rightarrow G'</m> give rise to a homomorphism <m>\phi\circ G\rightarrow G'</m> satisfying <me>i_\alpha'=\phi\circ i_\alpha
+                        </me>
+                         for all <m>\alpha\in I</m>.  And since <m>G'</m> is a free product, the maps <m>i_\alpha\colon G_\alpha\rightarrow G</m> give rise to a homormorphism <m>\psi\colon G'\rightarrow G</m> satisfying 
+                         <me>
+                            i_\alpha=\psi\circ i_\alpha'
+                         </me>
+                         for all <m>\alpha\in I</m>. It is then straightforward to show that 
+                         <md>
+                            <mrow>(\psi\circ\phi)\circ i_\alpha \amp = i_\alpha</mrow>
+                            <mrow>(\phi\circ\psi)\circ i_{\alpha'} \amp =i_{\alpha'}</mrow>
+                         </md>
+                         for all <m>\alpha\in I</m>, from whence it follows from the uniqueness condition of the <xref ref="prop_universal_free_prod" text="custom">universal mapping property </xref> that 
+                         <md>
+                            <mrow>\psi\circ\phi \amp = \id_G</mrow>
+                            <mrow>\phi\circ\psi \amp =\id_{G'}</mrow>
+                         </md>.                         
+                    </p>
+                </li>
+            </ol>
+        </p>
+    </proof>
 </theorem>
 <p>
-    We now endeavor to show that free products of groups exist. Essentially, we will build a group <m>G\cong \prod\limits_{\alpha\in I}^* G_\alpha</m> whose elements consist of <em>reduced words on the alphabet</em> <m>\coprod G_\alpha</m>. 
+    We now endeavor to show that free products of groups exist. Our construction is fairly concrete in the end: essentially, we will build a group <m>G\cong \prod\limits_{\alpha\in I}^* G_\alpha</m> whose elements are certain types of words built from letters ranging over the elements of the groups <m>G_\alpha</m>. We make this precise below.  
 </p>
 <definition xml:id="d_words">
     <title>Words and reduced words</title>
     <statement>
         <p>
-           Let <m>\{G_\alpha\}_{\alpha\in I}</m> be a family of groups, and let <m>\mathcal{A}=\coprod G_\alpha</m> be the disjoint union of their underlying sets. Given an integer <m>n\geq 0</m>, a <term>word</term> of <term>length <m>n</m></term> on the <term>\alphabet</term> <m>\mathcal{A}</m> is an <m>n</m>-tuple <m>w=(g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n})</m> where <m>g_{\alpha_k}\in G_{\alpha_k}</m> for all <m>1\leq k\leq n</m>. The <term>empty word</term> is the empty sequence <m>()</m>, the unique tuple in <m>\mathcal{A}</m> of length 0.   
+           Let <m>\{G_\alpha\}_{\alpha\in I}</m> be a family of groups, and let <m>\mathcal{A}=\coprod G_\alpha</m> be the disjoint union of their underlying sets. Given an integer <m>n\geq 0</m>, a <term>word</term> of <term>length <m>n</m></term> on the <term>alphabet</term> <m>\mathcal{A}</m> is an <m>n</m>-tuple <m>w=(g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n})</m> where <m>g_{\alpha_k}\in G_{\alpha_k}</m> for all <m>1\leq k\leq n</m>. The <term>empty word</term> is the empty sequence <m>()</m>, the unique tuple on <m>\mathcal{A}</m> of length 0.   
         </p>
         <p>
-            A word <m>w</m> is <term>reduced</term> if either <m>w=()</m> is empty, or <m>w=(g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n})</m>, where <m>g_{\alpha_k}\ne e_{\alpha_k}</m> for all <m>1\leq k\leq n</m> and <m>\alpha_{k}\ne \alpha_{k+1}</m> for all <m>1\leq k\leq n-1</m>. 
+            A word <m>w</m> is <term>reduced</term> if either <m>w=()</m> or <m>w=(g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n})</m>, where <m>g_{\alpha_k}\ne e_{\alpha_k}</m> for all <m>1\leq k\leq n</m> and <m>\alpha_{k}\ne \alpha_{k+1}</m> for all <m>1\leq k\leq n-1</m>. 
         </p>
     </statement>
 </definition>
-<p>
-    We could attempt to define the free product of a family <m>\{G_\alpha\}_{\alpha\in I}</m> as the set <m>W</m> of all reduced words on the alphabet <m>\mathcal{A}=\coprod G_\alpha</m>, where given reduced words <m>w=(g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n})</m> and <m>u=(h_{\beta_1},h_{\beta_2},\dots, h_{beta_m})</m> we define their product <m>w*u</m> to be the result of <q>simplifying</q> the concatenated word <m>(g_{\alpha_1},\dots, g_{\alpha_n}, h_{\beta_1},\dots, h_{\beta_m})</m> by repeatedly <q>fusing</q> any two adjacent terms that happen to live in the same group <m>G_\alpha\subseteq \mathcal{A}</m>. This is a fairly concrete construction, but the proof that this operation is associative is a nightmare! The construction in the proof below is a sneaky way of avoiding this hassle, often called <em>the trick of van der Waerden</em>. 
-</p>
+
 <theorem xml:id="th_free_products_exist">
     <title>Free products exist</title>
     <statement>
@@ -77,21 +106,115 @@
     </statement>
     <proof>
         <p>
-            Let <m>\mathcal{A}</m> be the disjoint union of the <m>G_\alpha</m>, let <m>W</m> be the set of all reduced words on <m>\mathcal{A}</m>, and let <m>S_W</m> be the set of all permutations of <m>W</m>. In other words, <m>S_W</m> is the set of all bijections <m>\sigma\colon W\rightarrow W</m>, a group under function composition.  
-        </p>
-        <p>
-            Fix <m>\alpha\in I</m>. We now define a map <m>i_\alpha G_\alpha\rightarrow S_W</m> that associates to each element <m>g\in G_\alpha</m> a permutation <m>\sigma_g\colon W\rightarrow W\in S_W</m>. The permutation <m>\sigma_g=i_\alpha(g)</m> is defined as follows:
-            <md>
-                <mrow>\sigma_e \amp =\id_W </mrow>
-                <mrow> \sigma_g((g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n}))\amp =\begin{cases}
-                (g) \amp \text{if } n=0 \\ 
-                (g,g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n}) \amp \text{if } n\ne 0 \text{ and } \alpha\ne \alpha_1 \\ 
-                (gg_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n})\amp \text{if } n\ne 0 \text{ and } \alpha=\alpha_1 \text{ and } g_{\alpha_1}\ne g^{-1} \\ 
-                (g_{\alpha_2},\dots, g_{\alpha_n}) \amp \text{otherwise}.
-                \end{cases}  \amp (\text{for } g\ne e) </mrow>
-            </md>
-        It is now straightforward, if somewhat tedious, to show that <m>\sigma_{gh}=\sigma_g\circ \sigma_{h}</m> for all <m>g,h\in G_\alpha</m>, whence it follows that <m>\sigma_g</m> is indeed a bijection with inverse <m>\sigma_g^{-1}=\sigma_{g^{-1}</m>, and finally that <m>i_\alpha\colon G_\alpha\rightarrow S_W</m> is a group homomorphism. 
-        </p>
+            Let <m>G</m> be the set of all reduced words on the alphabet <m>\mathcal{A}=\coprod G_\alpha</m>. We wish to define a group operation on <m>G</m>. A natural guess for an operation would be sequence concatenation; however, the concatenation of two reduced words is not necessarily a reduced word. This is easily corrected by defining our group operation <m>*\colon G\times G\rightarrow G</m> recursively as follows. 
+            <ul>
+                <li>
+                    <p>
+                        For any <m>w\in G</m>, define <m>()*w=w*()=w</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Given <m>w=(g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n})</m> and <m>u=(h_{\beta_1}, h_{\beta_2},\dots, h_{\beta_m})</m> with <m>n,m\geq 1</m>, define 
+                        <me>
+                            w*u=\begin{cases}
+                (g_{\alpha_1},\dots, g_{\alpha_n},h_{\beta_1},\dots, h_{\beta_m}) \amp \text{if } \alpha_n\ne \beta_1 \\ 
+                (g_{\alpha_1},\dots, g_{\alpha_n}h_{\beta_1},\dots, h_{\beta_m}) \amp \text{if } \alpha_n=\beta_1 \text{ and } h_{\beta_1}\ne g_{\alpha_n}^{-1} \\ 
+                (g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_{n-1}})*(h_{\beta_1}, h_{\beta_2},\dots, h_{\beta_{m-1}}) \amp \text{if } \alpha_n=\beta_1 \text{ and } h_{\beta_1}=g_{\alpha_n}^{-1}.
+                \end{cases}
+                        </me>
+                    </p>
+                </li>
+            </ul>
+            It is easy to show by induction on the maximum length of  <m>w</m> and <m>u</m> that <m>w*u</m> is reduced. However, it is quite difficult to show that <m>*</m> is actually a group operation directly! Specifically, the associative property is somewhat of a nightmare to verify. We will do so <em>indirectly</em>, using what is often called <em>the trick of van der Waerden</em>.
+            </p>
+            <proof>
+                <title>Proof that <m>*</m> is a group operation</title>
+                <p>
+                 It is easy to see that the trivial word <m>()</m> is an identity element with respect to <m>*</m>. Furthermore, if <m>w=(g_1,g_2,\dots, g_n)</m> is a reduced word of length <m>n\geq 1</m>, the word <m>w^{-1}=(g_n^{-1}, \dots, g_1^{-1})</m> clearly satisfies <m>w^{-1}u=()</m> if and only if <m>u=w</m>. It follows that every element of <m>G</m> has a two-sided inverse with respect to <m>*</m>. The only diffficult thing to show is that <m>*</m> is associative, as mentioned above.  This is where the trick of van der Waerden comes in.   
+                </p>
+                <p>
+                     Let <m>S_G</m> be the set of all permutations of <m>G</m>. In other words, <m>S_G</m> is the set of all bijections <m>\sigma\colon G\rightarrow G</m>: a group under function composition. We will define an injection <m>i\colon G\hookrightarrow S_G</m> that satisfies <m>i(w*u)=i(w)\circ i(u)</m> for all reduced words <m>w,u\in G</m>. Since composition <m>\circ</m> is an associative operation on <m>S_G</m>, it will then follow that <m>*</m> is an associative operation on <m>G</m>.  
+                </p>
+                <p>
+                    Before getting to the function <m>i</m>, we first define for any <m>g\in G_\alpha</m> a map <m>\sigma_g\colon G\rightarrow G</m> as follows. 
+                    <ol>
+                        <li>
+                            <p>
+                                <m>\sigma_e=\id_G</m>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>\sigma_g(())=(g)</m>  if <m>g\ne e</m>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>\sigma_g((g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n}))= (g,g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n})</m> if <m>g\ne e</m> and <m>\alpha\ne \alpha_1</m>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>\sigma_g((g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n}))
+                                = (gg_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n})</m> if <m>g\ne e</m> and <m>\alpha=\alpha_1</m> and <m>g\ne g_{\alpha_1}^{-1}</m>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>\sigma_g((g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n}))= (g_{\alpha_2},\dots, g_{\alpha_n})</m> if <m>g\ne e</m> and <m>\alpha=\alpha_1</m> and <m>g=g_{\alpha_1}^{-1}</m>. 
+                            </p>
+                        </li>
+                    </ol>
+                    It is now a straightforward exercise to show that if <m>g,h\in G_{\alpha}</m>, then <m>\sigma_g\circ \sigma_h=\sigma_{gh}</m>. Indeed, this is obvious if <m>g=e</m> or <m>h=e</m>; otherwise, one shows directly that <m>\sigma_g(\sigma_h(w))=\sigma_{gh}(w)</m> for any reduced word <m>w=(g_1,g_2,\dots, g_n)</m>, treating cases (2)-(5) in the definition above separately. For example, if <m>g_1=h^{-1}\in G_\alpha</m>, then we have 
+                    <md>
+                        <mrow>\sigma_g(\sigma_h(w)) \amp =\sigma_g(g_2,\dots, g_n)=(g,g_2,\dots, g_n) \amp (g_2\notin G_{\alpha})</mrow>
+                        <mrow>\sigma_{gh}(w) \amp =(ghg_1,g_2,\dots,g_n)=(g,g_2,\dots, g_n) </mrow>
+                    </md>. 
+                    From the property <m>\sigma_{g}\circ\sigma_{h}=\sigma_{gh}</m> it now follows that <m>\sigma_g</m> is invertible for any <m>g\in G_\alpha</m>. Indeed, we have
+                    <me>\sigma_{g}\circ\sigma_{g^{-1}}=\sigma_{g^{-1}}\circ \sigma_g=\sigma_e=\id_G</me>.
+                    Thus <m>\sigma_g\in S_G</m> for all <m>g\in G_\alpha</m>. 
+                    </p>
+                    <p>We now define <m>i\colon G\rightarrow S_G</m> as follows:
+                    <md>
+                        <mrow> i(()) \amp =\sigma_e=\id_G</mrow>
+                        <mrow> i((g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n}) \amp=\sigma_{g_{\alpha_1}}\circ \sigma_{g_{\alpha_2}}\cdots \circ \sigma_{\alpha_{n}}</mrow>
+                    </md>.
+                    The fact that <m>i(w*u)=i(w)*i(u)</m> for any reduced words <m>w,u\in G</m> now follows from our definition of <m>*</m> and the fact that <m>\sigma_g\circ \sigma_h=\sigma_{gh}</m> for any <m>g,h\in G_{\alpha}</m>.
+                </p>
+                <p>
+                    Lastly, we must show that <m>i</m> is injective. We first observe that <m>i(w)=i(())</m> if and only if <m>w=()</m>. Indeed, for any nontrivial reduced word <m>w=(g_1,g_2,\dots, g_n)</m> we have 
+                    <me>
+                        \sigma_{g_{\alpha_1}}\circ \sigma_{g_{\alpha_2}}\cdots \circ \sigma_{g_{\alpha_n}}(())=(g_1,g_2,\dots, g_n)
+                    </me>,
+                    and thus <m>i(w)\ne i(())=\id_G</m>. Now suppose that <m>w=(g_1,g_2,\dots, g_n)</m> and <m>u=(h_1,h_2,\dots, h_m)</m> are two nontrivial words with <m>i(w)=i(u)</m>. Letting <m>u^{-1}=(h_m^{-1}, h_{m-1}^{-1}, \dots, h_1^{-1})</m> (see above), we have 
+                    <md>
+                        <mrow>i(w)=i(u) \amp \implies i(u^{-1})\circ i(w)=i(u^{-1})\circ i(u)</mrow>
+                        <mrow> \amp \implies i(u^{-1}*w)=i(u^{-1}*u)</mrow>
+                        <mrow> \amp \implies i(u^{-1}*w)=i(())</mrow>
+                        <mrow> \amp \implies i(u^{-1}*w)=\id_G</mrow>
+                    </md>.
+                    Since <m>i(u^{-1}*w)=i(())=\id_G</m>, it follows from our observation above that <m>u^{-1}*w=()</m>, and hence that <m>w=u</m>.  
+                </p> 
+            </proof>
+            <p>
+                Knowing that <m>G</m> is a group with operation <m>*</m> as above, we now show that <m>G</m> is a free product of <m>\{G_\alpha\}_{\alpha\in I}</m>. 
+            </p>
+            <p>First, for all <m>\alpha\in I</m> we define <m>i_\alpha\colon G_{\alpha}\rightarrow G</m> as follows: <m>i_\alpha(e)=()</m>, and <m>i_\alpha{g)=(g)</m>, a reduced word of length one, if <m>g\ne e</m>. It is easy to see that <m>i_\alpha</m> is a group homomorphism. 
+            </p>
+            <p>
+                Next we verify that <m>(G, \{i_\alpha\colon G_{\alpha}\rightarrow G\})</m> satisfies the universal mapping property. Given a group <m>H</m> and family of homomorphisms <m>\phi_\alpha\colon G_{\alpha}\rightarrow H</m>, define <m>\phi\colon G\rightarrow H</m> as follows:
+                <md>
+                    <mrow>\phi(()) \amp = e</mrow>
+                    <mrow>\phi((g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n})) \amp = i_{\alpha_1}(g_{\alpha_1))i_{\alpha_2}(g_{\alpha_2)\cdots i_{\alpha_n}(g_{\alpha_n})</mrow>
+                </md>.
+                It is clear that any homomorphism <m>\phi</m> satisfying <m>\phi_{\alpha}=\phi\circ i_\alpha</m> must be so defined, since <m>i_{\alpha}(g)=(g)</m>, and since for any reduced word <m>w=(g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n})</m> we have 
+                <me>w=(g_{\alpha_1})*(g_{\alpha_2})*\cdots* (g_{\alpha_n})=i_{\alpha_1}(g_{\alpha_1})*i_{\alpha_2}(g_{\alpha_2})*\cdots *i_{\alpha_n}(g_{\alpha_n)</me>. 
+                This proves uniqueness of <m>\phi</m>. 
+            </p>
+            <p>
+                It remains only to show that <m>\phi</m> is in fact a group homomorphism. This is a straightforward, if somewhat tedious exercise of going through the different cases in the recursive description of <m>w*u</m> above and showing that in each case we have <m>\phi(w*u)=\phi(w)*\phi(u)</m>.
+            </p>
     </proof>
 </theorem>
 
@@ -99,7 +222,7 @@
     <title>Products of free products</title>
     <statement>
         <p>
-            If <m>G=\prod\limits_{\alpha\in I}^* G_\alpha</m> and <m>H\cong \prod\limits_{\alpha'\in J}^*G_{\alpha'}</m>, then <m>G*H\cong \prod\limits_{\alpha\in I\cup J}^* G_\alpha</m>.
+            If <m>G=\prod\limits_{\alpha\in I}^* G_\alpha</m> and <m>H\cong \prod\limits_{\alpha'\in J}^*G_{\alpha'}</m>, then <m>G*H\cong \prod\limits_{\alpha\in I\coprod J}^* G_\alpha</m>.
         </p>
     </statement>
 </theorem>

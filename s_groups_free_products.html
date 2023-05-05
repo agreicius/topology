@@ -57,7 +57,7 @@ window.MathJax = {
     )}
   },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
 <script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -432,7 +432,7 @@ window.MathJax = {
 <article class="definition definition-like" id="d_free_product"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.13.1</span><span class="period">.</span><span class="space"> </span><span class="title">Free product of groups.</span>
 </h3> <div class="para logical" id="p-462">
-<div class="para">Let <span class="process-math">\(\{G_\alpha\}_{\alpha\in I}\)</span> be a family of groups. A <dfn class="terminology">free product</dfn> of the groups <span class="process-math">\(G_\alpha\)</span> is a pair <span class="process-math">\((G, \{i_\alpha\colon G_\alpha\rightarrow G\})\text{,}\)</span> consisting of a group <span class="process-math">\(G\)</span> and a family of group homomorphisms <span class="process-math">\(i_\alpha\colon G_\alpha\rightarrow G\text{,}\)</span> that satisfies the following <dfn class="terminology">universal mapping property</dfn>:</div>
+<div class="para">A <dfn class="terminology">free product</dfn> of a family of groups <span class="process-math">\(\{G_\alpha\}_{\alpha\in I}\)</span> is a pair <span class="process-math">\((G, \{i_\alpha\colon G_\alpha\rightarrow G\})\)</span> consisting of a group <span class="process-math">\(G\)</span> and a family of group homomorphisms <span class="process-math">\(i_\alpha\colon G_\alpha\rightarrow G\)</span> satisfying the following <dfn class="terminology">universal mapping property</dfn>:</div>
 <ul class="disc"><li id="prop_universal_free_prod">
 <span class="heading"><span class="title">Universal mapping property.</span></span><div class="para logical" id="p-463">
 <div class="para">If <span class="process-math">\(H\)</span> is any group, and if <span class="process-math">\(\{\phi_\alpha\colon G_\alpha\rightarrow H\}_{\alpha\in I}\)</span> is any family of group homomorphisms, then there is a unique group homomorphism <span class="process-math">\(\phi\colon G\rightarrow H\)</span> satisfying</div>
@@ -445,51 +445,165 @@ i_\alpha\circ\phi=\phi_\alpha
 </div>
 </div>
 </li></ul>
-<div class="para">As we will see, such a group <span class="process-math">\(G\)</span> is unique up to isomorphism. We will write <span class="process-math">\(\prod_{\alpha\in I}^*G_\alpha\)</span> to denote a free product of the <span class="process-math">\(G_\alpha\text{.}\)</span> When <span class="process-math">\(I=\{\alpha_1,\alpha_2,\dots, \alpha_n\}\)</span> is finite, we write <span class="process-math">\(G_{\alpha_1}*G_{\alpha_2}*\cdots *G_{\alpha_n}\)</span> to denote a free product of the <span class="process-math">\(G_{\alpha_k}\text{.}\)</span>
+<div class="para">As we will see, such a group <span class="process-math">\(G\)</span> is unique up to isomorphism. We will write <span class="process-math">\(\prod_{\alpha\in I}^*G_\alpha\)</span> to denote a free product of <span class="process-math">\(\{G_\alpha\}_{\alpha\in I}\text{.}\)</span> When <span class="process-math">\(I=\{\alpha_1,\alpha_2,\dots, \alpha_n\}\)</span> is finite, we write <span class="process-math">\(G_{\alpha_1}*G_{\alpha_2}*\cdots *G_{\alpha_n}\)</span> to denote a free product of the <span class="process-math">\(G_{\alpha_k}\text{.}\)</span>
 </div>
 </div></article><article class="theorem theorem-like" id="th_free_prod_props"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.13.2</span><span class="period">.</span><span class="space"> </span><span class="title">Free product properties.</span>
 </h3>
 <div class="para" id="p-464">Let <span class="process-math">\(\{G_\alpha\}_{\alpha\in I}\)</span> be a family of groups.</div> <ol class="decimal">
-<li id="li-101"><div class="para" id="p-465">If <span class="process-math">\((G,\{i_\alpha\colon G_\alpha\colon G\})\)</span> is a free product, then <span class="process-math">\(i_\alpha\)</span> is injective for all <span class="process-math">\(\alpha\in I\text{.}\)</span>
+<li id="li-101"><div class="para" id="p-465">If <span class="process-math">\((G,\{i_\alpha\colon G_\alpha\rightarrow G\})\)</span> is a free product of <span class="process-math">\(\{G_\alpha\}_{\alpha\in I}\text{,}\)</span> then <span class="process-math">\(i_\alpha\)</span> is injective for all <span class="process-math">\(\alpha\in I\text{.}\)</span>
 </div></li>
-<li id="li-102"><div class="para" id="p-466">If <span class="process-math">\((G, \{i_\alpha\colon G_\alpha\rightarrow G)\})\)</span> and <span class="process-math">\((G', \{i_\alpha'\colon G_\alpha\rightarrow G'\})\)</span> are both free products of the <span class="process-math">\(G_\alpha\text{,}\)</span> then <span class="process-math">\(G\cong G'\text{.}\)</span>
+<li id="li-102"><div class="para" id="p-466">If <span class="process-math">\((G, \{i_\alpha\colon G_\alpha\rightarrow G)\})\)</span> and <span class="process-math">\((G', \{i_\alpha'\colon G_\alpha\rightarrow G'\})\)</span> are both free products of <span class="process-math">\(\{G_\alpha\}_{\alpha\in I}\text{,}\)</span> then <span class="process-math">\(G\cong G'\text{.}\)</span>
 </div></li>
-</ol></article><div class="para" id="p-467">We now endeavor to show that free products of groups exist. Essentially, we will build a group <span class="process-math">\(G\cong \prod\limits_{\alpha\in I}^* G_\alpha\)</span> whose elements consist of <em class="emphasis">reduced words on the alphabet</em> <span class="process-math">\(\coprod G_\alpha\text{.}\)</span>
+</ol></article><article class="hiddenproof" id="proof-40"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-40"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-40"><article class="hiddenproof"><div class="para logical" id="p-467"><ol class="decimal">
+<li id="li-103"><div class="para" id="p-468">Fix <span class="process-math">\(\alpha\in I\text{.}\)</span> We use the <a href="" class="xref" data-knowl="./knowl/prop_universal_free_prod.html" title="Item: Universal mapping property">universal mapping property</a>, setting <span class="process-math">\(H=A_{\alpha}\text{,}\)</span> letting <span class="process-math">\(\phi_{\alpha'}\colon A_{\alpha'}\rightarrow A_\alpha\)</span> be the zero map for all <span class="process-math">\(\alpha'\ne \alpha\text{,}\)</span> and letting <span class="process-math">\(\phi_\alpha\colon A_\alpha\rightarrow A_{\alpha}\)</span> be the identity map <span class="process-math">\(\phi_\alpha=\id_{A_{\alpha}}\text{.}\)</span> We conclude there is a map <span class="process-math">\(\phi\colon G\rightarrow A_\alpha\)</span> satisfying <span class="process-math">\(\id_{A_\alpha}=\phi\circ i_\alpha\text{.}\)</span> Since <span class="process-math">\(\id_{A_\alpha}\)</span> is injective, the map <span class="process-math">\(i_\alpha\)</span> must be injective.</div></li>
+<li id="li-104"><div class="para logical" id="p-469">
+<div class="para">The proof here is very similar to the one from <a href="" class="xref" data-knowl="./knowl/th_free_prod_props.html" title="Theorem 1.13.2: Free product properties">Theorem 1.13.2</a>. Since <span class="process-math">\(G\)</span> is a free product, the maps <span class="process-math">\(i_\alpha'\colon G_\alpha\rightarrow G'\)</span> give rise to a homomorphism <span class="process-math">\(\phi\circ G\rightarrow G'\)</span> satisfying</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_free_prod_props.html ./knowl/prop_universal_free_prod.html">
+\begin{equation*}
+i_\alpha'=\phi\circ i_\alpha
+\end{equation*}
 </div>
-<article class="definition definition-like" id="d_words"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.13.3</span><span class="period">.</span><span class="space"> </span><span class="title">Words and reduced words.</span>
-</h3> <div class="para" id="p-468">Let <span class="process-math">\(\{G_\alpha\}_{\alpha\in I}\)</span> be a family of groups, and let <span class="process-math">\(\mathcal{A}=\coprod G_\alpha\)</span> be the disjoint union of their underlying sets. Given an integer <span class="process-math">\(n\geq 0\text{,}\)</span> a <dfn class="terminology">word</dfn> of <dfn class="terminology">length <span class="process-math">\(n\)</span></dfn> on the <dfn class="terminology">\alphabet</dfn> <span class="process-math">\(\mathcal{A}\)</span> is an <span class="process-math">\(n\)</span>-tuple <span class="process-math">\(w=(g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n})\)</span> where <span class="process-math">\(g_{\alpha_k}\in G_{\alpha_k}\)</span> for all <span class="process-math">\(1\leq k\leq n\text{.}\)</span> The <dfn class="terminology">empty word</dfn> is the empty sequence <span class="process-math">\(()\text{,}\)</span> the unique tuple in <span class="process-math">\(\mathcal{A}\)</span> of length 0.</div> <div class="para" id="p-469">A word <span class="process-math">\(w\)</span> is <dfn class="terminology">reduced</dfn> if either <span class="process-math">\(w=()\)</span> is empty, or <span class="process-math">\(w=(g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n})\text{,}\)</span> where <span class="process-math">\(g_{\alpha_k}\ne e_{\alpha_k}\)</span> for all <span class="process-math">\(1\leq k\leq n\)</span> and <span class="process-math">\(\alpha_{k}\ne \alpha_{k+1}\)</span> for all <span class="process-math">\(1\leq k\leq n-1\text{.}\)</span>
-</div></article><div class="para" id="p-470">We could attempt to define the free product of a family <span class="process-math">\(\{G_\alpha\}_{\alpha\in I}\)</span> as the set <span class="process-math">\(W\)</span> of all reduced words on the alphabet <span class="process-math">\(\mathcal{A}=\coprod G_\alpha\text{,}\)</span> where given reduced words <span class="process-math">\(w=(g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n})\)</span> and <span class="process-math">\(u=(h_{\beta_1},h_{\beta_2},\dots, h_{beta_m})\)</span> we define their product <span class="process-math">\(w*u\)</span> to be the result of “simplifying” the concatenated word <span class="process-math">\((g_{\alpha_1},\dots, g_{\alpha_n}, h_{\beta_1},\dots, h_{\beta_m})\)</span> by repeatedly “fusing” any two adjacent terms that happen to live in the same group <span class="process-math">\(G_\alpha\subseteq \mathcal{A}\text{.}\)</span> This is a fairly concrete construction, but the proof that this operation is associative is a nightmare! The construction in the proof below is a sneaky way of avoiding this hassle, often called <em class="emphasis">the trick of van der Waerden</em>.</div>
-<article class="theorem theorem-like" id="th_free_products_exist"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.13.4</span><span class="period">.</span><span class="space"> </span><span class="title">Free products exist.</span>
-</h3>
-<div class="para" id="p-471">Given a family of groups <span class="process-math">\(\{G_\alpha\}_{\alpha\in I}\text{,}\)</span> a free product <span class="process-math">\(G\cong \prod\limits_{\alpha\in I}^*G_\alpha\)</span> exists.</div></article><article class="hiddenproof" id="proof-40"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-40"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-40"><article class="hiddenproof"><div class="para" id="p-472">Let <span class="process-math">\(\mathcal{A}\)</span> be the disjoint union of the <span class="process-math">\(G_\alpha\text{,}\)</span> let <span class="process-math">\(W\)</span> be the set of all reduced words on <span class="process-math">\(\mathcal{A}\text{,}\)</span> and let <span class="process-math">\(S_W\)</span> be the set of all permutations of <span class="process-math">\(W\text{.}\)</span> In other words, <span class="process-math">\(S_W\)</span> is the set of all bijections <span class="process-math">\(\sigma\colon W\rightarrow W\text{,}\)</span> a group under function composition.</div> <div class="para logical" id="p-473">
-<div class="para">Fix <span class="process-math">\(\alpha\in I\text{.}\)</span> We now define a map <span class="process-math">\(i_\alpha G_\alpha\rightarrow S_W\)</span> that associates to each element <span class="process-math">\(g\in G_\alpha\)</span> a permutation <span class="process-math">\(\sigma_g\colon W\rightarrow W\in S_W\text{.}\)</span> The permutation <span class="process-math">\(\sigma_g=i_\alpha(g)\)</span> is defined as follows:</div>
-<div class="displaymath process-math" id="md-78">
+<div class="para">for all <span class="process-math">\(\alpha\in I\text{.}\)</span>  And since <span class="process-math">\(G'\)</span> is a free product, the maps <span class="process-math">\(i_\alpha\colon G_\alpha\rightarrow G\)</span> give rise to a homormorphism <span class="process-math">\(\psi\colon G'\rightarrow G\)</span> satisfying</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_free_prod_props.html ./knowl/prop_universal_free_prod.html">
+\begin{equation*}
+i_\alpha=\psi\circ i_\alpha'
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(\alpha\in I\text{.}\)</span> It is then straightforward to show that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_free_prod_props.html ./knowl/prop_universal_free_prod.html" id="md-78">
 \begin{align*}
-\sigma_e \amp =\id_W \\
-\sigma_g((g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n}))\amp =\begin{cases}
-(g) \amp \text{if } n=0 \\ 
-(g,g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n}) \amp \text{if } n\ne 0 \text{ and } \alpha\ne \alpha_1 \\ 
-(gg_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n})\amp \text{if } n\ne 0 \text{ and } \alpha=\alpha_1 \text{ and } g_{\alpha_1}\ne g^{-1} \\ 
-(g_{\alpha_2},\dots, g_{\alpha_n}) \amp \text{otherwise}.
-\end{cases}  \amp (\text{for } g\ne e) 
+(\psi\circ\phi)\circ i_\alpha \amp = i_\alpha\\
+(\phi\circ\psi)\circ i_{\alpha'} \amp =i_{\alpha'}
 \end{align*}
 </div>
-<div class="para">It is now straightforward, if somewhat tedious, to show that <span class="process-math">\(\sigma_{gh}=\sigma_g\circ \sigma_{h}\)</span> for all <span class="process-math">\(g,h\in G_\alpha\text{,}\)</span> whence it follows that <span class="process-math">\(\sigma_g\)</span> is indeed a bijection with inverse <span class="process-math">\(\sigma_g^{-1}=\sigma_{g^{-1}\text{,}\)</span> and finally that <span class="process-math">\(i_\alpha\colon G_\alpha\rightarrow S_W\)</span> is a group homomorphism.</div>
+<div class="para">for all <span class="process-math">\(\alpha\in I\text{,}\)</span> from whence it follows from the uniqueness condition of the <a href="" class="xref" data-knowl="./knowl/prop_universal_free_prod.html" title="Item: Universal mapping property">universal mapping property</a> that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_free_prod_props.html ./knowl/prop_universal_free_prod.html" id="md-79">
+\begin{align*}
+\psi\circ\phi \amp = \id_G\\
+\phi\circ\psi \amp =\id_{G'}\text{.}
+\end{align*}
+</div>
+</div></li>
+</ol></div></article></div>
+<div class="para" id="p-470">We now endeavor to show that free products of groups exist. Our construction is fairly concrete in the end: essentially, we will build a group <span class="process-math">\(G\cong \prod\limits_{\alpha\in I}^* G_\alpha\)</span> whose elements are certain types of words built from letters ranging over the elements of the groups <span class="process-math">\(G_\alpha\text{.}\)</span> We make this precise below.</div>
+<article class="definition definition-like" id="d_words"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.13.3</span><span class="period">.</span><span class="space"> </span><span class="title">Words and reduced words.</span>
+</h3> <div class="para" id="p-471">Let <span class="process-math">\(\{G_\alpha\}_{\alpha\in I}\)</span> be a family of groups, and let <span class="process-math">\(\mathcal{A}=\coprod G_\alpha\)</span> be the disjoint union of their underlying sets. Given an integer <span class="process-math">\(n\geq 0\text{,}\)</span> a <dfn class="terminology">word</dfn> of <dfn class="terminology">length <span class="process-math">\(n\)</span></dfn> on the <dfn class="terminology">alphabet</dfn> <span class="process-math">\(\mathcal{A}\)</span> is an <span class="process-math">\(n\)</span>-tuple <span class="process-math">\(w=(g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n})\)</span> where <span class="process-math">\(g_{\alpha_k}\in G_{\alpha_k}\)</span> for all <span class="process-math">\(1\leq k\leq n\text{.}\)</span> The <dfn class="terminology">empty word</dfn> is the empty sequence <span class="process-math">\(()\text{,}\)</span> the unique tuple on <span class="process-math">\(\mathcal{A}\)</span> of length 0.</div> <div class="para" id="p-472">A word <span class="process-math">\(w\)</span> is <dfn class="terminology">reduced</dfn> if either <span class="process-math">\(w=()\)</span> or <span class="process-math">\(w=(g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n})\text{,}\)</span> where <span class="process-math">\(g_{\alpha_k}\ne e_{\alpha_k}\)</span> for all <span class="process-math">\(1\leq k\leq n\)</span> and <span class="process-math">\(\alpha_{k}\ne \alpha_{k+1}\)</span> for all <span class="process-math">\(1\leq k\leq n-1\text{.}\)</span>
+</div></article><article class="theorem theorem-like" id="th_free_products_exist"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.13.4</span><span class="period">.</span><span class="space"> </span><span class="title">Free products exist.</span>
+</h3>
+<div class="para" id="p-473">Given a family of groups <span class="process-math">\(\{G_\alpha\}_{\alpha\in I}\text{,}\)</span> a free product <span class="process-math">\(G\cong \prod\limits_{\alpha\in I}^*G_\alpha\)</span> exists.</div></article><article class="hiddenproof" id="proof-41"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-41"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-41"><article class="hiddenproof"><div class="para logical" id="p-474">
+<div class="para">Let <span class="process-math">\(G\)</span> be the set of all reduced words on the alphabet <span class="process-math">\(\mathcal{A}=\coprod G_\alpha\text{.}\)</span> We wish to define a group operation on <span class="process-math">\(G\text{.}\)</span> A natural guess for an operation would be sequence concatenation; however, the concatenation of two reduced words is not necessarily a reduced word. This is easily corrected by defining our group operation <span class="process-math">\(*\colon G\times G\rightarrow G\)</span> recursively as follows.</div>
+<ul class="disc">
+<li id="li-105"><div class="para" id="p-475">For any <span class="process-math">\(w\in G\text{,}\)</span> define <span class="process-math">\(()*w=w*()=w\text{.}\)</span>
+</div></li>
+<li id="li-106"><div class="para logical" id="p-476">
+<div class="para">Given <span class="process-math">\(w=(g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n})\)</span> and <span class="process-math">\(u=(h_{\beta_1}, h_{\beta_2},\dots, h_{\beta_m})\)</span> with <span class="process-math">\(n,m\geq 1\text{,}\)</span> define</div>
+<div class="displaymath process-math">
+\begin{equation*}
+w*u=\begin{cases}
+(g_{\alpha_1},\dots, g_{\alpha_n},h_{\beta_1},\dots, h_{\beta_m}) \amp \text{if } \alpha_n\ne \beta_1 \\ 
+(g_{\alpha_1},\dots, g_{\alpha_n}h_{\beta_1},\dots, h_{\beta_m}) \amp \text{if } \alpha_n=\beta_1 \text{ and } h_{\beta_1}\ne g_{\alpha_n}^{-1} \\ 
+(g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_{n-1}})*(h_{\beta_1}, h_{\beta_2},\dots, h_{\beta_{m-1}}) \amp \text{if } \alpha_n=\beta_1 \text{ and } h_{\beta_1}=g_{\alpha_n}^{-1}.
+\end{cases}
+\end{equation*}
+</div>
+</div></li>
+</ul>
+<div class="para">It is easy to show by induction on the maximum length of  <span class="process-math">\(w\)</span> and <span class="process-math">\(u\)</span> that <span class="process-math">\(w*u\)</span> is reduced. However, it is quite difficult to show that <span class="process-math">\(*\)</span> is actually a group operation directly! Specifically, the associative property is somewhat of a nightmare to verify. We will do so <em class="emphasis">indirectly</em>, using what is often called <em class="emphasis">the trick of van der Waerden</em>.</div>
+</div> <article class="hiddenproof" id="proof-42"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-42"><h4 class="heading"><span class="title">Proof that <span class="process-math">\(*\)</span> is a group operation.</span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-42"><article class="hiddenproof"> <div class="para" id="p-477">It is easy to see that the trivial word <span class="process-math">\(()\)</span> is an identity element with respect to <span class="process-math">\(*\text{.}\)</span> Furthermore, if <span class="process-math">\(w=(g_1,g_2,\dots, g_n)\)</span> is a reduced word of length <span class="process-math">\(n\geq 1\text{,}\)</span> the word <span class="process-math">\(w^{-1}=(g_n^{-1}, \dots, g_1^{-1})\)</span> clearly satisfies <span class="process-math">\(w^{-1}u=()\)</span> if and only if <span class="process-math">\(u=w\text{.}\)</span> It follows that every element of <span class="process-math">\(G\)</span> has a two-sided inverse with respect to <span class="process-math">\(*\text{.}\)</span> The only diffficult thing to show is that <span class="process-math">\(*\)</span> is associative, as mentioned above.  This is where the trick of van der Waerden comes in.</div> <div class="para" id="p-478">Let <span class="process-math">\(S_G\)</span> be the set of all permutations of <span class="process-math">\(G\text{.}\)</span> In other words, <span class="process-math">\(S_G\)</span> is the set of all bijections <span class="process-math">\(\sigma\colon G\rightarrow G\text{:}\)</span> a group under function composition. We will define an injection <span class="process-math">\(i\colon G\hookrightarrow S_G\)</span> that satisfies <span class="process-math">\(i(w*u)=i(w)\circ i(u)\)</span> for all reduced words <span class="process-math">\(w,u\in G\text{.}\)</span> Since composition <span class="process-math">\(\circ\)</span> is an associative operation on <span class="process-math">\(S_G\text{,}\)</span> it will then follow that <span class="process-math">\(*\)</span> is an associative operation on <span class="process-math">\(G\text{.}\)</span>
+</div> <div class="para logical" id="p-479">
+<div class="para">Before getting to the function <span class="process-math">\(i\text{,}\)</span> we first define for any <span class="process-math">\(g\in G_\alpha\)</span> a map <span class="process-math">\(\sigma_g\colon G\rightarrow G\)</span> as follows.</div>
+<ol class="decimal">
+<li id="li-107"><div class="para" id="p-480"><span class="process-math">\(\displaystyle \sigma_e=\id_G\)</span></div></li>
+<li id="li-108"><div class="para" id="p-481">
+<span class="process-math">\(\sigma_g(())=(g)\)</span>  if <span class="process-math">\(g\ne e\text{.}\)</span>
+</div></li>
+<li id="li-109"><div class="para" id="p-482">
+<span class="process-math">\(\sigma_g((g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n}))= (g,g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n})\)</span> if <span class="process-math">\(g\ne e\)</span> and <span class="process-math">\(\alpha\ne \alpha_1\text{.}\)</span>
+</div></li>
+<li id="li-110"><div class="para" id="p-483">
+<span class="process-math">\(\sigma_g((g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n}))
+= (gg_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n})\)</span> if <span class="process-math">\(g\ne e\)</span> and <span class="process-math">\(\alpha=\alpha_1\)</span> and <span class="process-math">\(g\ne g_{\alpha_1}^{-1}\text{.}\)</span>
+</div></li>
+<li id="li-111"><div class="para" id="p-484">
+<span class="process-math">\(\sigma_g((g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n}))= (g_{\alpha_2},\dots, g_{\alpha_n})\)</span> if <span class="process-math">\(g\ne e\)</span> and <span class="process-math">\(\alpha=\alpha_1\)</span> and <span class="process-math">\(g=g_{\alpha_1}^{-1}\text{.}\)</span>
+</div></li>
+</ol>
+<div class="para">It is now a straightforward exercise to show that if <span class="process-math">\(g,h\in G_{\alpha}\text{,}\)</span> then <span class="process-math">\(\sigma_g\circ \sigma_h=\sigma_{gh}\text{.}\)</span> Indeed, this is obvious if <span class="process-math">\(g=e\)</span> or <span class="process-math">\(h=e\text{;}\)</span> otherwise, one shows directly that <span class="process-math">\(\sigma_g(\sigma_h(w))=\sigma_{gh}(w)\)</span> for any reduced word <span class="process-math">\(w=(g_1,g_2,\dots, g_n)\text{,}\)</span> treating cases (2)-(5) in the definition above separately. For example, if <span class="process-math">\(g_1=h^{-1}\in G_\alpha\text{,}\)</span> then we have</div>
+<div class="displaymath process-math" id="md-80">
+\begin{align*}
+\sigma_g(\sigma_h(w)) \amp =\sigma_g(g_2,\dots, g_n)=(g,g_2,\dots, g_n) \amp (g_2\notin G_{\alpha})\\
+\sigma_{gh}(w) \amp =(ghg_1,g_2,\dots,g_n)=(g,g_2,\dots, g_n) \text{.}
+\end{align*}
+</div>
+<div class="para">From the property <span class="process-math">\(\sigma_{g}\circ\sigma_{h}=\sigma_{gh}\)</span> it now follows that <span class="process-math">\(\sigma_g\)</span> is invertible for any <span class="process-math">\(g\in G_\alpha\text{.}\)</span> Indeed, we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sigma_{g}\circ\sigma_{g^{-1}}=\sigma_{g^{-1}}\circ \sigma_g=\sigma_e=\id_G\text{.}
+\end{equation*}
+</div>
+<div class="para">Thus <span class="process-math">\(\sigma_g\in S_G\)</span> for all <span class="process-math">\(g\in G_\alpha\text{.}\)</span>
+</div>
+</div> <div class="para logical" id="p-485">
+<div class="para">We now define <span class="process-math">\(i\colon G\rightarrow S_G\)</span> as follows:</div>
+<div class="displaymath process-math" id="md-81">
+\begin{align*}
+i(()) \amp =\sigma_e=\id_G\\
+i((g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n}) \amp=\sigma_{g_{\alpha_1}}\circ \sigma_{g_{\alpha_2}}\cdots \circ \sigma_{\alpha_{n}}\text{.}
+\end{align*}
+</div>
+<div class="para">The fact that <span class="process-math">\(i(w*u)=i(w)*i(u)\)</span> for any reduced words <span class="process-math">\(w,u\in G\)</span> now follows from our definition of <span class="process-math">\(*\)</span> and the fact that <span class="process-math">\(\sigma_g\circ \sigma_h=\sigma_{gh}\)</span> for any <span class="process-math">\(g,h\in G_{\alpha}\text{.}\)</span>
+</div>
+</div> <div class="para logical" id="p-486">
+<div class="para">Lastly, we must show that <span class="process-math">\(i\)</span> is injective. We first observe that <span class="process-math">\(i(w)=i(())\)</span> if and only if <span class="process-math">\(w=()\text{.}\)</span> Indeed, for any nontrivial reduced word <span class="process-math">\(w=(g_1,g_2,\dots, g_n)\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sigma_{g_{\alpha_1}}\circ \sigma_{g_{\alpha_2}}\cdots \circ \sigma_{g_{\alpha_n}}(())=(g_1,g_2,\dots, g_n)\text{,}
+\end{equation*}
+</div>
+<div class="para">and thus <span class="process-math">\(i(w)\ne i(())=\id_G\text{.}\)</span> Now suppose that <span class="process-math">\(w=(g_1,g_2,\dots, g_n)\)</span> and <span class="process-math">\(u=(h_1,h_2,\dots, h_m)\)</span> are two nontrivial words with <span class="process-math">\(i(w)=i(u)\text{.}\)</span> Letting <span class="process-math">\(u^{-1}=(h_m^{-1}, h_{m-1}^{-1}, \dots, h_1^{-1})\)</span> (see above), we have</div>
+<div class="displaymath process-math" id="md-82">
+\begin{align*}
+i(w)=i(u) \amp \implies i(u^{-1})\circ i(w)=i(u^{-1})\circ i(u)\\
+\amp \implies i(u^{-1}*w)=i(u^{-1}*u)\\
+\amp \implies i(u^{-1}*w)=i(())\\
+\amp \implies i(u^{-1}*w)=\id_G\text{.}
+\end{align*}
+</div>
+<div class="para">Since <span class="process-math">\(i(u^{-1}*w)=i(())=\id_G\text{,}\)</span> it follows from our observation above that <span class="process-math">\(u^{-1}*w=()\text{,}\)</span> and hence that <span class="process-math">\(w=u\text{.}\)</span>
+</div>
+</div></article></div> <div class="para" id="p-487">Knowing that <span class="process-math">\(G\)</span> is a group with operation <span class="process-math">\(*\)</span> as above, we now show that <span class="process-math">\(G\)</span> is a free product of <span class="process-math">\(\{G_\alpha\}_{\alpha\in I}\text{.}\)</span>
+</div> <div class="para" id="p-488">First, for all <span class="process-math">\(\alpha\in I\)</span> we define <span class="process-math">\(i_\alpha\colon G_{\alpha}\rightarrow G\)</span> as follows: <span class="process-math">\(i_\alpha(e)=()\text{,}\)</span> and <span class="process-math">\(i_\alpha{g)=(g)\text{,}\)</span> a reduced word of length one, if <span class="process-math">\(g\ne e\text{.}\)</span> It is easy to see that <span class="process-math">\(i_\alpha\)</span> is a group homomorphism.</div> <div class="para logical" id="p-489">
+<div class="para">Next we verify that <span class="process-math">\((G, \{i_\alpha\colon G_{\alpha}\rightarrow G\})\)</span> satisfies the universal mapping property. Given a group <span class="process-math">\(H\)</span> and family of homomorphisms <span class="process-math">\(\phi_\alpha\colon G_{\alpha}\rightarrow H\text{,}\)</span> define <span class="process-math">\(\phi\colon G\rightarrow H\)</span> as follows:</div>
+<div class="displaymath process-math" id="md-83">
+\begin{align*}
+\phi(()) \amp = e\\
+\phi((g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n})) \amp = i_{\alpha_1}(g_{\alpha_1))i_{\alpha_2}(g_{\alpha_2)\cdots i_{\alpha_n}(g_{\alpha_n})\text{.}
+\end{align*}
+</div>
+<div class="para">It is clear that any homomorphism <span class="process-math">\(\phi\)</span> satisfying <span class="process-math">\(\phi_{\alpha}=\phi\circ i_\alpha\)</span> must be so defined, since <span class="process-math">\(i_{\alpha}(g)=(g)\text{,}\)</span> and since for any reduced word <span class="process-math">\(w=(g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n})\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+w=(g_{\alpha_1})*(g_{\alpha_2})*\cdots* (g_{\alpha_n})=i_{\alpha_1}(g_{\alpha_1})*i_{\alpha_2}(g_{\alpha_2})*\cdots *i_{\alpha_n}(g_{\alpha_n)\text{.}
+\end{equation*}
+</div>
+<div class="para">This proves uniqueness of <span class="process-math">\(\phi\text{.}\)</span>
+</div>
+</div> <div class="para" id="p-490">It remains only to show that <span class="process-math">\(\phi\)</span> is in fact a group homomorphism. This is a straightforward, if somewhat tedious exercise of going through the different cases in the recursive description of <span class="process-math">\(w*u\)</span> above and showing that in each case we have <span class="process-math">\(\phi(w*u)=\phi(w)*\phi(u)\text{.}\)</span>
 </div></article></div>
 <article class="theorem theorem-like" id="th_products_free_products"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.13.5</span><span class="period">.</span><span class="space"> </span><span class="title">Products of free products.</span>
 </h3>
-<div class="para" id="p-474">If <span class="process-math">\(G=\prod\limits_{\alpha\in I}^* G_\alpha\)</span> and <span class="process-math">\(H\cong \prod\limits_{\alpha'\in J}^*G_{\alpha'}\text{,}\)</span> then <span class="process-math">\(G*H\cong \prod\limits_{\alpha\in I\cup J}^* G_\alpha\text{.}\)</span>
+<div class="para" id="p-491">If <span class="process-math">\(G=\prod\limits_{\alpha\in I}^* G_\alpha\)</span> and <span class="process-math">\(H\cong \prod\limits_{\alpha'\in J}^*G_{\alpha'}\text{,}\)</span> then <span class="process-math">\(G*H\cong \prod\limits_{\alpha\in I\coprod J}^* G_\alpha\text{.}\)</span>
 </div></article><article class="definition definition-like" id="d_least_normal_subgroup"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.13.6</span><span class="period">.</span><span class="space"> </span><span class="title">Least normal subgroup.</span>
-</h3> <div class="para" id="p-475">Let <span class="process-math">\(S\)</span> be a subset of the group <span class="process-math">\(G\text{.}\)</span> The <dfn class="terminology">least normal subgroup</dfn> containing <span class="process-math">\(S\)</span> is the intersection of all normal subgroups of <span class="process-math">\(G\)</span> that contain <span class="process-math">\(S\text{.}\)</span> Equivalently, the least normal subgroup containing <span class="process-math">\(S\)</span> is the unique normal subgroup <span class="process-math">\(N\normalin G\)</span> such that (i) <span class="process-math">\(S\subseteq N\)</span> and (ii) if <span class="process-math">\(S\subseteq N'\normalin G\text{,}\)</span> then <span class="process-math">\(N\subseteq N'\text{.}\)</span>
+</h3> <div class="para" id="p-492">Let <span class="process-math">\(S\)</span> be a subset of the group <span class="process-math">\(G\text{.}\)</span> The <dfn class="terminology">least normal subgroup</dfn> containing <span class="process-math">\(S\)</span> is the intersection of all normal subgroups of <span class="process-math">\(G\)</span> that contain <span class="process-math">\(S\text{.}\)</span> Equivalently, the least normal subgroup containing <span class="process-math">\(S\)</span> is the unique normal subgroup <span class="process-math">\(N\normalin G\)</span> such that (i) <span class="process-math">\(S\subseteq N\)</span> and (ii) if <span class="process-math">\(S\subseteq N'\normalin G\text{,}\)</span> then <span class="process-math">\(N\subseteq N'\text{.}\)</span>
 </div></article><article class="theorem theorem-like" id="th_quot_free_prod"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.13.7</span><span class="period">.</span><span class="space"> </span><span class="title">Quotients of free products.</span>
 </h3>
-<div class="para logical" id="p-476">
+<div class="para logical" id="p-493">
 <div class="para">Let <span class="process-math">\(G=G_1*G_2\)</span> with accompanying maps <span class="process-math">\(i_k\colon G_k\rightarrow G\text{,}\)</span> <span class="process-math">\(1\leq k\leq 2\text{.}\)</span> For each <span class="process-math">\(1\leq k\leq 2\text{,}\)</span> we identify <span class="process-math">\(G_k\)</span> with its image <span class="process-math">\(i_k(G_k)\leq G\text{.}\)</span> Given normal subgroups <span class="process-math">\(N_k\normalin G_k\)</span> for <span class="process-math">\(k\in \{1,2\}\text{,}\)</span> we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -503,10 +617,8 @@ G_1/N_1 * G_2/N_2\cong G/N\text{,}
 <a class="previous-button button" href="s_groups_abelian.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="c_top_spaces.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
 </div>
-<div class="ptx-page-footer">
-<a class="pretext-link" href="https://pretextbook.org"><div class="name">Authored in PreTeXt</div>
-<div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259 "></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0  472  9732 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496 A 4241 4241  0  0  1  4724  3590 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259 A 4507 4507  0  0  1  4724  9448 "></path><polyline points="5385,4299 4062,8125 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8598,3496 8598,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="850,3496 850,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="4960,9685 4488,9685 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="3070,4582 1889,6141 3070,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="6418,4582 7600,6141 6418,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8976,3590 8976,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732 "></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy"><div class="name">Powered by Runestone</div>
-<img class="logo" title="Powered by Runestone" src="https://runestone.academy/runestone/static/rectangle_badge.png" alt="Powered by Runestone"></a><a class="mathjax-logo" href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a>
+<div id="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
 </body>
 </html>

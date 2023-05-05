@@ -12,20 +12,36 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para">Let <span class="process-math">\(\mathcal{A}\)</span> be the disjoint union of the <span class="process-math">\(G_\alpha\text{,}\)</span> let <span class="process-math">\(W\)</span> be the set of all reduced words on <span class="process-math">\(\mathcal{A}\text{,}\)</span> and let <span class="process-math">\(S_W\)</span> be the set of all permutations of <span class="process-math">\(W\text{.}\)</span> In other words, <span class="process-math">\(S_W\)</span> is the set of all bijections <span class="process-math">\(\sigma\colon W\rightarrow W\text{,}\)</span> a group under function composition.</div> <div class="para logical">
-<div class="para">Fix <span class="process-math">\(\alpha\in I\text{.}\)</span> We now define a map <span class="process-math">\(i_\alpha G_\alpha\rightarrow S_W\)</span> that associates to each element <span class="process-math">\(g\in G_\alpha\)</span> a permutation <span class="process-math">\(\sigma_g\colon W\rightarrow W\in S_W\text{.}\)</span> The permutation <span class="process-math">\(\sigma_g=i_\alpha(g)\)</span> is defined as follows:</div>
-<div class="displaymath process-math">
+<div class="para logical"><ol class="decimal">
+<li><div class="para">Fix <span class="process-math">\(\alpha\in I\text{.}\)</span> We use the <a href="" class="xref" data-knowl="./knowl/prop_universal_free_prod.html" title="Item: Universal mapping property">universal mapping property</a>, setting <span class="process-math">\(H=A_{\alpha}\text{,}\)</span> letting <span class="process-math">\(\phi_{\alpha'}\colon A_{\alpha'}\rightarrow A_\alpha\)</span> be the zero map for all <span class="process-math">\(\alpha'\ne \alpha\text{,}\)</span> and letting <span class="process-math">\(\phi_\alpha\colon A_\alpha\rightarrow A_{\alpha}\)</span> be the identity map <span class="process-math">\(\phi_\alpha=\id_{A_{\alpha}}\text{.}\)</span> We conclude there is a map <span class="process-math">\(\phi\colon G\rightarrow A_\alpha\)</span> satisfying <span class="process-math">\(\id_{A_\alpha}=\phi\circ i_\alpha\text{.}\)</span> Since <span class="process-math">\(\id_{A_\alpha}\)</span> is injective, the map <span class="process-math">\(i_\alpha\)</span> must be injective.</div></li>
+<li><div class="para logical">
+<div class="para">The proof here is very similar to the one from <a href="" class="xref" data-knowl="./knowl/th_free_prod_props.html" title="Theorem 1.13.2: Free product properties">Theorem 1.13.2</a>. Since <span class="process-math">\(G\)</span> is a free product, the maps <span class="process-math">\(i_\alpha'\colon G_\alpha\rightarrow G'\)</span> give rise to a homomorphism <span class="process-math">\(\phi\circ G\rightarrow G'\)</span> satisfying</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_free_prod_props.html ./knowl/prop_universal_free_prod.html">
+\begin{equation*}
+i_\alpha'=\phi\circ i_\alpha
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(\alpha\in I\text{.}\)</span>  And since <span class="process-math">\(G'\)</span> is a free product, the maps <span class="process-math">\(i_\alpha\colon G_\alpha\rightarrow G\)</span> give rise to a homormorphism <span class="process-math">\(\psi\colon G'\rightarrow G\)</span> satisfying</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_free_prod_props.html ./knowl/prop_universal_free_prod.html">
+\begin{equation*}
+i_\alpha=\psi\circ i_\alpha'
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(\alpha\in I\text{.}\)</span> It is then straightforward to show that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_free_prod_props.html ./knowl/prop_universal_free_prod.html">
 \begin{align*}
-\sigma_e \amp =\id_W \\
-\sigma_g((g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n}))\amp =\begin{cases}
-(g) \amp \text{if } n=0 \\ 
-(g,g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n}) \amp \text{if } n\ne 0 \text{ and } \alpha\ne \alpha_1 \\ 
-(gg_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n})\amp \text{if } n\ne 0 \text{ and } \alpha=\alpha_1 \text{ and } g_{\alpha_1}\ne g^{-1} \\ 
-(g_{\alpha_2},\dots, g_{\alpha_n}) \amp \text{otherwise}.
-\end{cases}  \amp (\text{for } g\ne e) 
+(\psi\circ\phi)\circ i_\alpha \amp = i_\alpha\\
+(\phi\circ\psi)\circ i_{\alpha'} \amp =i_{\alpha'}
 \end{align*}
 </div>
-<div class="para">It is now straightforward, if somewhat tedious, to show that <span class="process-math">\(\sigma_{gh}=\sigma_g\circ \sigma_{h}\)</span> for all <span class="process-math">\(g,h\in G_\alpha\text{,}\)</span> whence it follows that <span class="process-math">\(\sigma_g\)</span> is indeed a bijection with inverse <span class="process-math">\(\sigma_g^{-1}=\sigma_{g^{-1}\text{,}\)</span> and finally that <span class="process-math">\(i_\alpha\colon G_\alpha\rightarrow S_W\)</span> is a group homomorphism.</div>
-</div></article><span class="incontext"><a href="s_groups_free_products.html#proof-40" class="internal">in-context</a></span>
+<div class="para">for all <span class="process-math">\(\alpha\in I\text{,}\)</span> from whence it follows from the uniqueness condition of the <a href="" class="xref" data-knowl="./knowl/prop_universal_free_prod.html" title="Item: Universal mapping property">universal mapping property</a> that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_free_prod_props.html ./knowl/prop_universal_free_prod.html">
+\begin{align*}
+\psi\circ\phi \amp = \id_G\\
+\phi\circ\psi \amp =\id_{G'}\text{.}
+\end{align*}
+</div>
+</div></li>
+</ol></div></article><span class="incontext"><a href="s_groups_free_products.html#proof-40" class="internal">in-context</a></span>
 </body>
 </html>

@@ -12,7 +12,33 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">A word <span class="process-math">\(w\)</span> is <dfn class="terminology">reduced</dfn> if either <span class="process-math">\(w=()\)</span> is empty, or <span class="process-math">\(w=(g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n})\text{,}\)</span> where <span class="process-math">\(g_{\alpha_k}\ne e_{\alpha_k}\)</span> for all <span class="process-math">\(1\leq k\leq n\)</span> and <span class="process-math">\(\alpha_{k}\ne \alpha_{k+1}\)</span> for all <span class="process-math">\(1\leq k\leq n-1\text{.}\)</span>
+<div class="para logical">
+<div class="para">The proof here is very similar to the one from <a href="" class="xref" data-knowl="./knowl/th_free_prod_props.html" title="Theorem 1.13.2: Free product properties">Theorem 1.13.2</a>. Since <span class="process-math">\(G\)</span> is a free product, the maps <span class="process-math">\(i_\alpha'\colon G_\alpha\rightarrow G'\)</span> give rise to a homomorphism <span class="process-math">\(\phi\circ G\rightarrow G'\)</span> satisfying</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_free_prod_props.html ./knowl/prop_universal_free_prod.html">
+\begin{equation*}
+i_\alpha'=\phi\circ i_\alpha
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(\alpha\in I\text{.}\)</span>  And since <span class="process-math">\(G'\)</span> is a free product, the maps <span class="process-math">\(i_\alpha\colon G_\alpha\rightarrow G\)</span> give rise to a homormorphism <span class="process-math">\(\psi\colon G'\rightarrow G\)</span> satisfying</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_free_prod_props.html ./knowl/prop_universal_free_prod.html">
+\begin{equation*}
+i_\alpha=\psi\circ i_\alpha'
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(\alpha\in I\text{.}\)</span> It is then straightforward to show that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_free_prod_props.html ./knowl/prop_universal_free_prod.html">
+\begin{align*}
+(\psi\circ\phi)\circ i_\alpha \amp = i_\alpha\\
+(\phi\circ\psi)\circ i_{\alpha'} \amp =i_{\alpha'}
+\end{align*}
+</div>
+<div class="para">for all <span class="process-math">\(\alpha\in I\text{,}\)</span> from whence it follows from the uniqueness condition of the <a href="" class="xref" data-knowl="./knowl/prop_universal_free_prod.html" title="Item: Universal mapping property">universal mapping property</a> that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_free_prod_props.html ./knowl/prop_universal_free_prod.html">
+\begin{align*}
+\psi\circ\phi \amp = \id_G\\
+\phi\circ\psi \amp =\id_{G'}\text{.}
+\end{align*}
+</div>
 </div>
 <span class="incontext"><a href="s_groups_free_products.html#p-469" class="internal">in-context</a></span>
 </body>

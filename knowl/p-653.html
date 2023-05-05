@@ -12,7 +12,35 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Next. I claim <span class="process-math">\(\overline{K}=K\cup \{0\}\text{.}\)</span> To see this, note first that <span class="process-math">\(K\cup \{0\}\)</span> is closed: it is easy to see that for any <span class="process-math">\(x\notin K\cup\{0\}\)</span> we can find an <span class="process-math">\(\epsilon\)</span> such that <span class="process-math">\((x-\epsilon, x+\epsilon)\cap (K\cup \{0\})=\emptyset\text{.}\)</span> By (2) of <a href="" class="xref" data-knowl="./knowl/th_equivalent_interior_closure.html" title="Theorem 2.4.9: Equivalent notions of interior and closure">Theorem 2.4.9</a> we have <span class="process-math">\(\overline{K}\subseteq K\cup \{0\}\text{.}\)</span> Since furthermore <span class="process-math">\(K\subseteq \overline{K}\subseteq K\cup \{0\}\)</span> and since <span class="process-math">\(K\)</span> itself is not closed, it follows that <span class="process-math">\(\overline{K}=K\cup \{0\}\text{.}\)</span>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(A\)</span> be a subset of the topological space <span class="process-math">\(X\text{.}\)</span> Let <span class="process-math">\(\mathcal{B}\)</span> be a basis for the topology of <span class="process-math">\(X\text{.}\)</span>
+</div>
+<ol class="decimal">
+<li><div class="para">
+<span class="process-math">\(A^\circ\)</span> is the unique largest open set contained in <span class="process-math">\(A\text{.}\)</span> In other words, <span class="process-math">\(A^\circ\)</span> is the unique set satisfying the following property: if <span class="process-math">\(U\)</span> is open and <span class="process-math">\(U\subseteq A\text{,}\)</span> then <span class="process-math">\(U\subseteq A^\circ\text{.}\)</span>
+</div></li>
+<li><div class="para">
+<span class="process-math">\(\overline{A}\)</span> is the unique smallest closed set containing <span class="process-math">\(A\text{.}\)</span> In other words, <span class="process-math">\(\overline{A}\)</span> is the unique set satisfying the following property: if <span class="process-math">\(C\)</span> is closed and <span class="process-math">\(A\subseteq C\text{,}\)</span> then <span class="process-math">\(\overline{A}\subseteq C\text{.}\)</span>
+</div></li>
+<li><div class="para logical">
+<div class="para">We have</div>
+<div class="displaymath process-math">
+\begin{align*}
+x \in A^\circ  \amp\iff x\in U\subseteq A \text{ for some open } U \\
+\amp \iff x\in B\subseteq A \text{ for some basis element } B\in \mathcal{B} \text{.}
+\end{align*}
+</div>
+</div></li>
+<li><div class="para logical">
+<div class="para">We have</div>
+<div class="displaymath process-math">
+\begin{align*}
+x \in \overline{A}  \amp\iff \text{ for all open sets } U, x\in U \implies U\cap A\ne \emptyset\\
+\amp \iff \text{ for all } B\in \mathcal{B}, x\in B \implies B\cap A\ne \emptyset\text{.}
+\end{align*}
+</div>
+</div></li>
+</ol>
 </div>
 <span class="incontext"><a href="s_closed_closure_interior.html#p-653" class="internal">in-context</a></span>
 </body>

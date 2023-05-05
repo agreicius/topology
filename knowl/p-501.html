@@ -12,7 +12,15 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">When <span class="process-math">\(X=\{a\}\text{,}\)</span> we have <span class="process-math">\(\mathcal{P}(X)=\{\emptyset, \{a\}\}\text{.}\)</span> Since by axiom (1) a topology <span class="process-math">\(\mathcal{T}\)</span> on <span class="process-math">\(X\)</span> must contain both <span class="process-math">\(\emptyset\)</span> and <span class="process-math">\(X=\{a\}\text{,}\)</span> we see the only option is <span class="process-math">\(\mathcal{T}=\{\emptyset, \{a\}\}\text{,}\)</span> which again is none other than the discrete topology. We conclude that <span class="process-math">\(\mathcal{T}=\{\emptyset, \{a\}\}\)</span> is the unique topology on <span class="process-math">\(\{a\}\text{.}\)</span> (Note: again in this case the trival and discrete topologies are equal.)</div>
+<div class="para logical">
+<div class="para">Using induction, we can show that if <span class="process-math">\(\mathcal{T}\)</span> satisfies axiom (3) for any <em class="emphasis">two</em> elements of <span class="process-math">\(\mathcal{T}\text{,}\)</span> then it satisfies it for any <span class="process-math">\(n\)</span> elements, for <span class="process-math">\(n\)</span> arbitrary. In other words if we replace axiom (3) with</div>
+<dl class="description-list">
+<dt>(3')</dt>
+<dd><div class="para">If <span class="process-math">\(U_1, U_2\in \mathcal{T}\text{,}\)</span> then <span class="process-math">\(U=U_1\cap U_2\in \mathcal{T}\)</span>
+</div></dd>
+</dl>
+<div class="para">, we get an equivalent definition of a toplogical space. When verifying whether a given <span class="process-math">\((X,\mathcal{T})\)</span> is a topological space it may be more convenient to use axiom (3') as opposed to axiom (3).</div>
+</div>
 <span class="incontext"><a href="s_top_spaces.html#p-501" class="internal">in-context</a></span>
 </body>
 </html>

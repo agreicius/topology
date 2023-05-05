@@ -13,17 +13,22 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Assume <span class="process-math">\(U_i\in \mathcal{T}\)</span> for all <span class="process-math">\(i\in I\text{,}\)</span> and let <span class="process-math">\(U=\bigcup_{i\in I}U_i\text{.}\)</span> We have</div>
+<div class="para">Next we verify that <span class="process-math">\((G, \{i_\alpha\colon G_{\alpha}\rightarrow G\})\)</span> satisfies the universal mapping property. Given a group <span class="process-math">\(H\)</span> and family of homomorphisms <span class="process-math">\(\phi_\alpha\colon G_{\alpha}\rightarrow H\text{,}\)</span> define <span class="process-math">\(\phi\colon G\rightarrow H\)</span> as follows:</div>
 <div class="displaymath process-math">
 \begin{align*}
-x\in U \amp \implies x\in U_i \text{ for some } i\in I\\
-\amp \implies (x-\epsilon, x+\epsilon)\subseteq U_i \text{ for some } i\in I, \epsilon &gt; 0\\
-\amp \implies (x-\epsilon, x+\epsilon)\subseteq U \text{ for some } i\in I, \epsilon &gt; 0 \text{.}
+\phi(()) \amp = e\\
+\phi((g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n})) \amp = i_{\alpha_1}(g_{\alpha_1))i_{\alpha_2}(g_{\alpha_2)\cdots i_{\alpha_n}(g_{\alpha_n})\text{.}
 \end{align*}
 </div>
-<div class="para">This shows <span class="process-math">\(U\)</span> satisfies the defining property of <span class="process-math">\(\mathcal{T}\text{,}\)</span> and hence <span class="process-math">\(U\in \mathcal{T}\text{.}\)</span>
+<div class="para">It is clear that any homomorphism <span class="process-math">\(\phi\)</span> satisfying <span class="process-math">\(\phi_{\alpha}=\phi\circ i_\alpha\)</span> must be so defined, since <span class="process-math">\(i_{\alpha}(g)=(g)\text{,}\)</span> and since for any reduced word <span class="process-math">\(w=(g_{\alpha_1},g_{\alpha_2},\dots, g_{\alpha_n})\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+w=(g_{\alpha_1})*(g_{\alpha_2})*\cdots* (g_{\alpha_n})=i_{\alpha_1}(g_{\alpha_1})*i_{\alpha_2}(g_{\alpha_2})*\cdots *i_{\alpha_n}(g_{\alpha_n)\text{.}
+\end{equation*}
+</div>
+<div class="para">This proves uniqueness of <span class="process-math">\(\phi\text{.}\)</span>
 </div>
 </div>
-<span class="incontext"><a href="s_top_spaces.html#p-489" class="internal">in-context</a></span>
+<span class="incontext"><a href="s_groups_free_products.html#p-489" class="internal">in-context</a></span>
 </body>
 </html>

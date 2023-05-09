@@ -1,0 +1,155 @@
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="s_groups_free">
+  <title>Free groups</title>
+  <definition xml:id="d_free_groups">
+    <title>Free group</title>
+    <statement>
+        <p>
+            A group <m>G</m> is free if it is isomorphic to a free product of copies of <m>\Z</m>: <ie/>, if <m>G\cong \prod\limits_{\alpha\in I}^*\Z</m> for some set <m>I</m>. 
+        </p>
+        <p>
+            Given an indexed set <m>\{a_\alpha\}_{\alpha\in I}</m>, we let <m>G_\alpha=\langle a_\alpha\rangle</m> be the infinite cyclic group with generator <m>a_\alpha</m> (hence <m>G_\alpha\cong \Z</m>), and we call <m>\prod\limits_{\alpha\in I}^*G_\alpha\cong \prod\limits_{\alpha\in I}^*\Z</m> the <term>free group on the elements</term> <m>a_\alpha</m>. 
+        </p>
+    </statement>
+  </definition>
+  <theorem xml:id="th_free_groups">
+    <title>Free groups</title>
+    <statement>
+       <p>
+            Let <m>G</m> be a group. The following are equivalent.
+              <ol>
+                <li>
+                    <p>
+                        <m>G</m> is a free group. 
+                    </p>
+                </li> 
+                <li>
+                    <p>
+                        There is a family <m>\{g_\alpha\}_{\alpha\in I}</m> of elements of <m>G</m> such that for all <m>g\in G</m> we can write 
+                        <me>
+                            g=\prod_{k=1}^ng_{\alpha_1}^{m_1}g_{\alpha_2}^{m_2}\cdots g_{\alpha_n}^{m_n}
+                        </me>,
+                        where <m>m_k\in \Z</m> for all <m>1\leq k\leq n</m>; and furthermore this expression is unique if <m>\alpha_j\ne \alpha_k</m> for all <m>j\ne k</m> and <m>m_k\ne 0</m> for all <m>1\leq k\leq n</m>. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        There is a family <m>\{g_\alpha\}_{\alpha\in I}</m> of elements of <m>G</m> such that given any group <m>H</m> and collection <m>\{h_\alpha\}_{\alpha\in I}</m> of elements of <m>H</m>, there is a unique homomorphism <m>\phi\colon G\rightarrow H</m> satisfying <m>\phi(g_{\alpha})=h_\alpha</m>. 
+                    </p>
+                </li>
+            </ol>
+        </p>
+    </statement>
+  </theorem>
+  <definition xml:id="d_freely_generated">
+    <title>Freely generated</title>
+    <statement>
+        <p>
+           Let <m>G</m> be a group. A tuple <m>(g_\alpha)_{\alpha\in I}</m> satisfying the conditions of <xref ref="th_free_groups"/> is called a <term>system of free generators</term>. We say that <m>G</m> is <term>freely generated</term> by the <m>g_\alpha</m> in this case. 
+        </p>
+    </statement>
+  </definition>
+  <theorem xml:id="th_quotients_of_free_groups">
+    <title>Quotients of free groups</title>
+    <statement>
+        <p>
+        Any group <m>G</m> is isomorphic to a quotient of a free group: <ie/>, we have <m>G\cong F/N</m> for some free group <m>F</m> and normal subgroup <m>N\normalin F</m>. 
+        </p>
+    </statement>
+  </theorem>
+  <definition xml:id="d_group_presentation">
+  <title>Group presentation</title>
+    <statement>
+        <p>
+            Let <m>F</m> be the free group on the elements <m>X=\{a_\alpha\}_{\alpha\in I}</m>. Let <m>Y</m> be an subset of <m>F</m>. We denote by <m>\langle X\vert Y\rangle</m> the quotient <m>F/N</m>, where <m>N\normalin F</m> is the least normal subgroup containing <m>Y</m>. We say <m>\langle X\vert Y\rangle</m> is a <term>presentation</term> of a group <m>G'</m> with <term>generators</term>  <m>X</m> and <term>relations</term> <m>Y</m> if <m>G'\cong F/N</m>. 
+        </p>
+    </statement>
+  </definition>
+  <remark>
+<p>
+    The relations <m>Y</m> in a group presentation <m>\langle X\vert Y\rangle</m> should be thought of as elements that get sent to the identity in the quotient <m>F/N</m>. For example, if <m>abab^{-1}</m> is an element of <m>Y</m> then the element <m>\overline{a}\overline{b}\overline{a}\overline{b}^{-1}=e</m> in the quotient <m>G/N</m>. Equivalently, this means <m>\overline{b}\overline{a}=\overline{a}^{-1}\overline{b}</m>. As an abuse of notation, we sometimes include the equality <m>ba=a^{-1}b</m> among the elements of <m>Y</m> to emphasize that this relation holds in the quotient. In other words, we write <m>\langle a, b\vert ba=a^{-1}b\rangle</m> instead of <m>\langle a,b\vert abab^{-1}\rangle</m>
+</p>
+  </remark>
+  <example xml:id="eg_presentation">
+  <title>Presentations of groups</title>
+  Identify a familiar group with given presentation. Justify your answer. 
+  <ol>
+    <li>
+        <p>
+            <m>\langle a\vert a^6\rangle</m>
+        </p>
+    </li>
+    <li>
+        <p>
+            <m>\langle a,b \vert a^2=b^3=e, ba=a^{-1}b\rangle</m>
+        </p>
+    </li>
+  </ol>
+  </example>
+  <definition xml:id="d_commutator_subgroup">
+  <title>Commutator subgroup</title>
+    <statement>
+        <p>
+            Let <m>G</m> be a group. The <term>commutator</term> <m>[g,h]</m> of elements <m>g,h\in G</m> is defined as <m>[g,h]=ghg^{-1}h^{-1}</m>. The <term>commutator subgroup</term> of <m>G</m>, denoted <m>[G,G]</m> is the subgroup of <m>G</m> generated by the set of all commutators in <m>G</m>. 
+        </p>
+    </statement>
+  </definition>
+  <theorem xml:id="th_commutator_abelianization">
+    <title>Commutator and abelianization</title>
+    <statement>
+        <p>
+            Let <m>G</m> be a group. 
+            <ol>
+                <li>
+                    <p>
+                        <m>[G,G]</m> is a normal subgroup of <m>G</m>. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        The quotient <m>G/[G,G]</m> is abelian. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Let <m>q\colon G\rightarrow G/[G,G]</m> be the quotient map. The group <m>G/[G,G]</m> is the <term>largest abelian quotient</term> of <m>G</m>, as defined by the following universal property: if <m>A</m> is an abelian group and <m>\phi\colon G\rightarrow A</m> is a homomorphism, there is a unique homomorphism <m>\overline{\phi}\colon G/[G,G]\rightarrow A</m> satisfying <m>\phi=\overline{\phi}\circ q</m>. 
+                    </p>
+                </li>
+            </ol>
+        </p>
+    </statement>
+  </theorem>
+  <definition xml:id="d_abelianlization">
+  <title>Abelianization</title>
+    <statement>
+        <p>
+            The quotient group <m>G/[G,G]</m> is called the the <term>abelianization</term>  of <m>G</m>. 
+        </p>
+    </statement>
+  </definition>
+  <theorem xml:id="th_free_group_abelianization">
+    <title>Abelianization of free group</title>
+    <statement>
+        <p>
+          Suppose <m>G</m> is freely generated by the collection <m>\{g_\alpha\}_{\alpha\in \}</m>. Let <m>q\colon G\rightarrow G/[G,G]</m> be the quotient map, and denote <m>q(g)=\overline{g}</m> for all <m>g\in G</m>. The abelianization <m>G/[G,G]</m> is a free abelian group with basis <m>\{\overline{g}_{\alpha}\}_{\alpha\in I}</m>.   
+        </p>
+    </statement>
+  </theorem>
+  <corollary xml:id="cor_free_group">
+  <title>Free group</title>
+  <title>Rank of free group</title>
+    <statement>
+        <p>
+            Let <m>G</m> and <m>H</m> be free groups with systems of free generators <m>\{g_\alpha\}_{\alpha\in I}</m> and <m>\{h_\beta\}_{\beta\in J}</m>, respectively. We have <m>G\cong H</m> if and only if <m>\abs{I}=\abs{J}</m>. 
+        </p>
+    </statement>
+  </corollary>
+  <definition xml:id="d_rank_free_group">
+    <title>Rank of free group</title>
+    <statement>
+        <p>
+            The <term>rank</term> of a free group <m>G</m>, denoted <m>\rank G</m>, is the cardinality of any system free generators of <m>G</m>. 
+        </p>
+    </statement>
+  </definition>
+  
+</section>

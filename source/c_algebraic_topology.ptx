@@ -13,4 +13,5 @@
   <xi:include  href="s_jordan_curve.ptx"/>
   <xi:include  href="s_groups_abelian.ptx"/>
   <xi:include  href="s_groups_free_products.ptx"/>
+   <xi:include  href="s_groups_free.ptx"/>
 </chapter>

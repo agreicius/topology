@@ -13,49 +13,27 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(X=\R^n\text{,}\)</span> where <span class="process-math">\(n\)</span> is a positive integer. Let <span class="process-math">\(\boldx=(x_1,x_2,\dots, x_n), \boldy=(y_1,y_2,\dots, y_n)\text{.}\)</span>
-</div>
+<div class="para">We show that <span class="process-math">\(\mathcal{B}_K\)</span> is a basis, treating each axiom separately.</div>
 <ol class="decimal">
+<li><div class="para">Since by definition <span class="process-math">\(\mathcal{B}_K\)</span> contains all finite open intervals, it clearly covers <span class="process-math">\(\R\text{.}\)</span>
+</div></li>
 <li>
-<span class="heading"><span class="title">Euclidean metric.</span></span><div class="para logical">
-<div class="para">The function <span class="process-math">\(d\colon X\times X\rightarrow \R\)</span> defined as</div>
+<div class="para">We claim that in fact given <span class="process-math">\(B_1, B_2\in \mathcal{B}_K\text{,}\)</span> their intersection <span class="process-math">\(B_1\cap B_2\)</span> is either empty or another element of <span class="process-math">\(\mathcal{B}_K\text{.}\)</span> Axiom (2) follows directly from this claim.</div>
+<div class="para logical">
+<div class="para">Why is the claim true? An element of <span class="process-math">\(\mathcal{B}\)</span> is either of the form <span class="process-math">\(I\)</span> or <span class="process-math">\(I-K\text{,}\)</span> where <span class="process-math">\(I=(a,b)\)</span> is an open interval. There are then three different cases describing intersections of two elements, as shown below. Here <span class="process-math">\(I_1, I_2\)</span> denote finite open intervals.</div>
 <div class="displaymath process-math">
-\begin{equation*}
-d(\boldx,\boldy)=\sqrt{(x_1-y_1)^2+(x_2-y_2)^2+\cdots +(x_n-y_n)^2}
-\end{equation*}
+\begin{align*}
+I_1\cap I_2 \amp \\
+(I_1-K)\cap I_2\amp =I_1\cap I_2-K\cap I_2=I_1\cap I_2-K \\
+(I_1-K)\cap (I_2-K) \amp= (I_1-K)\cap I_2 - K\cap (I_2-K)\\
+\amp = I_1\cap I_2-K\text{.}
+\end{align*}
 </div>
-<div class="para">is a metric, called the <dfn class="terminology">Euclidean metric</dfn>. The metric space <span class="process-math">\((\R^n, d)\)</span> is called <dfn class="terminology">Euclidean <span class="process-math">\(n\)</span>-space</dfn>. The <dfn class="terminology">norm</dfn> of <span class="process-math">\(\boldx\text{,}\)</span> denoted <span class="process-math">\(\norm{\boldx}\text{,}\)</span> is defined as</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\norm{\boldx}=d(\boldx, \boldzero)=\sqrt{x_1^2+x_2^2+\cdots +x_n^2}\text{.}
-\end{equation*}
-</div>
-</div>
-</li>
-<li>
-<span class="heading"><span class="title">Box metric.</span></span><div class="para logical">
-<div class="para">The function <span class="process-math">\(d\colon X\times X\rightarrow \R\)</span> defined as</div>
-<div class="displaymath process-math">
-\begin{equation*}
-d(\boldx,\boldy)=\max\{\abs{x_1-y_1},\abs{x_2-y_2},\dots, \abs{x_n-y_n}\}
-\end{equation*}
-</div>
-<div class="para">is a metric, called the <dfn class="terminology">box metric</dfn> (or <dfn class="terminology">square metric</dfn>).</div>
-</div>
-</li>
-<li>
-<span class="heading"><span class="title">Taxicab metric.</span></span><div class="para logical">
-<div class="para">The function <span class="process-math">\(d\colon X\times X\rightarrow \R\)</span> defined as</div>
-<div class="displaymath process-math">
-\begin{equation*}
-d(\boldx,\boldy)=\abs{x_1-y_1}+\abs{x_2-y_2}+\dots +\abs{x_n-y_n}
-\end{equation*}
-</div>
-<div class="para">is a metric, called the <dfn class="terminology">taxicab metric</dfn>.</div>
+<div class="para">As we have already remarked, <span class="process-math">\(I_1\cap I_2\)</span> is either empty or a finite open interval <span class="process-math">\(I\text{.}\)</span> The claim now follows easily.</div>
 </div>
 </li>
 </ol>
 </div>
-<span class="incontext"><a href="s_metric1.html#p-592" class="internal">in-context</a></span>
+<span class="incontext"><a href="s_bases_top.html#p-592" class="internal">in-context</a></span>
 </body>
 </html>

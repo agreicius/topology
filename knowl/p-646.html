@@ -12,18 +12,16 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical"><ol class="decimal">
-<li>
-<div class="para">The set <span class="process-math">\(A\)</span> is not open: any open ball containing the point <span class="process-math">\((0,1)\)</span> contains points with negative <span class="process-math">\(x\)</span>-coordinate. Hence there is no open ball containing <span class="process-math">\((0,1)\)</span> that is contained in <span class="process-math">\(A\text{.}\)</span>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(\Z\)</span> be the set of integers. Let <span class="process-math">\(\mathcal{P}=\{2, 3, 5, 7, 11,\dots\}\)</span> be the set of prime integers. The <em class="emphasis">fundamental theorem of arithmetic</em> states that any nonzero integer <span class="process-math">\(n\in \Z\)</span> can be factored in unique was as a product of primes in the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+n=\pm \prod_{p\in \mathcal{P}} p^{v_p(n)}\text{,}
+\end{equation*}
 </div>
-<div class="para">The set <span class="process-math">\(A\)</span> is closed. If <span class="process-math">\(P=(x,y)\in A^c\text{,}\)</span> then either <span class="process-math">\(x&lt; 0\)</span> or <span class="process-math">\(y&lt; 0\text{.}\)</span> Let <span class="process-math">\(\epsilon=\min\{\abs{x},\abs{y}\}\text{.}\)</span> Every element of <span class="process-math">\(B_\epsilon(P)\)</span> has either a negative <span class="process-math">\(x\)</span>-coordinate or a negative <span class="process-math">\(y\)</span>-coordinate. Hence <span class="process-math">\(P\in B_{\epsilon}(P)\subseteq A^c\text{.}\)</span> This proves <span class="process-math">\(A\)</span> is closed, using <a href="" class="xref" data-knowl="./knowl/lemma_basis_closed.html" title="Lemma 2.4.6: Basis description of closed sets">Lemma 2.4.6</a>.</div>
-</li>
-<li>
-<div class="para">Again, the set <span class="process-math">\(A\)</span> is not open, as witnessed by <span class="process-math">\((0,1)\in A\text{.}\)</span>
+<div class="para">where <span class="process-math">\(v_p(n)\)</span> is a nonnegative integer, and <span class="process-math">\(v_p(n)=0\)</span> for all but finitely many primes <span class="process-math">\(p\text{.}\)</span> We call <span class="process-math">\(v_p(n)\)</span> the <dfn class="terminology">valuation</dfn> of <span class="process-math">\(n\)</span> at the prime <span class="process-math">\(p\text{;}\)</span> it tells us the highest power of <span class="process-math">\(p\)</span> dividing <span class="process-math">\(n\text{.}\)</span>
 </div>
-<div class="para">The set <span class="process-math">\(A^c\)</span> is also not open. Take <span class="process-math">\(P=(1,0)\in A^c\text{.}\)</span> Any open ball containing <span class="process-math">\(P\)</span> contains points with positive <span class="process-math">\(y\)</span>-coordinate. Thus there is no open ball containing <span class="process-math">\(P\)</span> and contained in <span class="process-math">\(A^c\text{.}\)</span> We conclude that <span class="process-math">\(A\)</span> is not closed, using <a href="" class="xref" data-knowl="./knowl/lemma_basis_closed.html" title="Lemma 2.4.6: Basis description of closed sets">Lemma 2.4.6</a>.</div>
-</li>
-</ol></div>
-<span class="incontext"><a href="s_closed_closure_interior.html#p-646" class="internal">in-context</a></span>
+</div>
+<span class="incontext"><a href="s_metric1.html#p-646" class="internal">in-context</a></span>
 </body>
 </html>

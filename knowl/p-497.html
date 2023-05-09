@@ -11,8 +11,26 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">We view the the three conditions of <a href="" class="xref" data-knowl="./knowl/d_topology.html" title="Definition 2.1.1: Topological space">Definition 2.1.1</a> as an attempt at axiomatizing this notion of openness (or roominess). This is the starting point of topology. The generality of this approach is part of topology's great power. We can define a notion of open sets on any set <span class="process-math">\(X\)</span> whatsoever: i.e., we can choose a collection of subsets (called a <em class="emphasis">topology</em>) that satisfies the axioms of <a href="" class="xref" data-knowl="./knowl/d_topology.html" title="Definition 2.1.1: Topological space">Definition 2.1.1</a>. Furthermore, for a given set <span class="process-math">\(X\)</span> there are typically many distinct ways of making this choice; your topology on <span class="process-math">\(X\)</span> can be tailor-made to suit your particular needs. Beyond this generality and flexibility, the other key to topology's effectiveness is its ability to transport to any topological space the concepts of continuity, limits, connectedness, and compactness familiar to us from real analysis.  Once a set is given the structure of a topological space, these notions can be used as powerful tools for investigating its properties. It is for this reason that topology plays an important role in essentially all mathematical fields: analysis, geometry, algebraic geometry, number theory, etc.</div>
-<span class="incontext"><a href="s_top_spaces.html#p-497" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(G\)</span> be a group. The following are equivalent.</div>
+<ol class="decimal">
+<li><div class="para">
+<span class="process-math">\(G\)</span> is a free group.</div></li>
+<li><div class="para logical">
+<div class="para">There is a family <span class="process-math">\(\{g_\alpha\}_{\alpha\in I}\)</span> of elements of <span class="process-math">\(G\)</span> such that for all <span class="process-math">\(g\in G\)</span> we can write</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g=\prod_{k=1}^ng_{\alpha_1}^{m_1}g_{\alpha_2}^{m_2}\cdots g_{\alpha_n}^{m_n}\text{,}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(m_k\in \Z\)</span> for all <span class="process-math">\(1\leq k\leq n\text{;}\)</span> and furthermore this expression is unique if <span class="process-math">\(\alpha_j\ne \alpha_k\)</span> for all <span class="process-math">\(j\ne k\)</span> and <span class="process-math">\(m_k\ne 0\)</span> for all <span class="process-math">\(1\leq k\leq n\text{.}\)</span>
+</div>
+</div></li>
+<li><div class="para">There is a family <span class="process-math">\(\{g_\alpha\}_{\alpha\in I}\)</span> of elements of <span class="process-math">\(G\)</span> such that given any group <span class="process-math">\(H\)</span> and collection <span class="process-math">\(\{h_\alpha\}_{\alpha\in I}\)</span> of elements of <span class="process-math">\(H\text{,}\)</span> there is a unique homomorphism <span class="process-math">\(\phi\colon G\rightarrow H\)</span> satisfying <span class="process-math">\(\phi(g_{\alpha})=h_\alpha\text{.}\)</span>
+</div></li>
+</ol>
+</div>
+<span class="incontext"><a href="s_groups_free.html#p-497" class="internal">in-context</a></span>
 </body>
 </html>

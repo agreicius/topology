@@ -13,16 +13,15 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Why is the claim true? An element of <span class="process-math">\(\mathcal{B}\)</span> is either of the form <span class="process-math">\(I\)</span> or <span class="process-math">\(I-K\text{,}\)</span> where <span class="process-math">\(I=(a,b)\)</span> is an open interval. There are then three different cases describing intersections of two elements, as shown below. Here <span class="process-math">\(I_1, I_2\)</span> denote finite open intervals.</div>
-<div class="displaymath process-math">
+<div class="para">It is enough to show that <span class="process-math">\(U, V\in \mathcal{T}\implies U\cap V\in \mathcal{T}\text{.}\)</span> (See <a href="" class="xref" data-knowl="./knowl/rm_def_top.html" title="Remark 2.1.2: Equivalent alternative to axiom (3)">Remark 2.1.2</a>.) Assume <span class="process-math">\(U=\bigcup_{i\in I}B_i\text{,}\)</span> <span class="process-math">\(V=\bigcup_{j\in J}B_j\text{,}\)</span> where <span class="process-math">\(B_i, B_j\in \mathcal{B}\)</span> for all <span class="process-math">\(i\in I, j\in J\text{.}\)</span> We have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/rm_def_top.html ./knowl/rm_alt_axiom2.html">
 \begin{align*}
-I_1\cap I_2 \amp \\
-(I_1-K)\cap I_2\amp =I_1\cap I_2-K\cap I_2=I_1\cap I_2-K \\
-(I_1-K)\cap (I_2-K) \amp= (I_1-K)\cap I_2 - K\cap (I_2-K)\\
-\amp = I_1\cap I_2-K\text{.}
+U\cap V \amp= \left(\bigcup_{i\in I}B_i \right) \cap \left( \bigcup_{j\in J}B_j\right) \\
+\amp = \bigcup_{(i,j)\in I\times J} B_i\cap B_j \text{.}
 \end{align*}
 </div>
-<div class="para">As we have already remarked, <span class="process-math">\(I_1\cap I_2\)</span> is either empty or a finite open interval <span class="process-math">\(I\text{.}\)</span> The claim now follows easily.</div>
+<div class="para">Now by axiom (2') for bases (see <a href="" class="xref" data-knowl="./knowl/rm_alt_axiom2.html" title="Remark 2.2.2: Equivalent alternative to axiom (2)">Remark 2.2.2</a>), each <span class="process-math">\(B_i\cap B_j\)</span> is a union of basis elements, and hence is an element <span class="process-math">\(U_{i,j}\in \mathcal{T}\text{.}\)</span> We have already shown that <span class="process-math">\(\mathcal{T}\)</span> is closed under arbitrary unions. Thus <span class="process-math">\(U\cap V\)</span> is an element of <span class="process-math">\(\mathcal{T}\text{.}\)</span>
+</div>
 </div>
 <span class="incontext"><a href="s_bases_top.html#p-574" class="internal">in-context</a></span>
 </body>

@@ -14,4 +14,5 @@
   <xi:include  href="s_groups_abelian.ptx"/>
   <xi:include  href="s_groups_free_products.ptx"/>
    <xi:include  href="s_groups_free.ptx"/>
+   <xi:include  href="s_seifert_van_kampen.ptx"/>
 </chapter>

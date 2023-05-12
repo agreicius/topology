@@ -1,0 +1,316 @@
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="s_seifert_van_kampen">
+  <title>Seifert-van Kampen theorem</title>
+  <definition xml:id="d_pushout_group">
+    <title>Pushouts of groups</title>
+    <statement>
+        <p>
+           A <term>pushout</term> (or <term>fibered coproduct</term>) of a pair of group homomorphisms <m>g_1\colon G_0\rightarrow G_1</m> and <m>g_2\colon G_0\rightarrow G_2</m> is a group <m>G</m> equipped with homomorphisms <m>f_1\colon G_1\rightarrow G</m> and <m>f_2\colon G_2\rightarrow G</m> satisfying <m>f_1\circ g_1=f_2\circ g_2</m> and the following <term>universal mapping property of pushouts</term>:
+           <ul>
+            <li xml:id="prop_universal_pushout">
+                <title>Universal mapping property of pushouts</title>
+                <p>
+                    If <m>H</m> is a group and <m>\phi_1\colon G_1\rightarrow H</m> and <m>\phi_2\colon G_2\rightarrow H</m> are homomorphisms satisfying
+                    <me>
+                        \phi_1\circ g_1=\phi_2\circ g_2
+                    </me>,
+                    then there is a unique homomorphism <m>\phi\colon G\rightarrow H</m> satisfying 
+                    <me>
+                        \phi_k=\phi\circ f_k
+                    </me>
+                    for <m>1\leq k\leq 2</m>.  
+                </p>
+            </li>
+           </ul>
+           <image xml:id="im_pushout" width="50%">
+            <description>Pushout commutative diagram</description>
+            <latex-image>
+               \begin{tikzcd}
+ \amp G_1 \arrow[dr,"f_1"] \arrow[rrd, bend left=30, "\phi_1"] \\
+G_0 \arrow[ur, "g_1"] \arrow[dr,"g_2"'] \amp \amp G \arrow[r, dotted, "\exists! \phi"] \amp H\\
+ \amp G_2	\arrow[ur,"f_2"'] \arrow[rru, bend right=30, "\phi_2"']
+\end{tikzcd}
+
+            </latex-image>
+           </image>
+    As we will see, a pushout <m>G</m> is unique up to isomorphism. We write <m>G_1\sqcup_{G_0} G_2</m> to denote a pushout of the maps <m>g_1\colon G_0\rightarrow G_1</m> and <m>g_2\colon G_0\rightarrow G_2</m>. 
+        </p>
+    </statement>
+  </definition>
+  <theorem xml:id="th_pushouts">
+    <title>Pushouts</title>
+    <statement>
+        <p>
+            Let <m>g_1\colon G_0\rightarrow G_1</m> and <m>g_2\colon G_0\rightarrow G_2</m> be group homomorphisms. 
+            <ol>
+                    <li>
+                        <p>
+                            If <m>G</m> and <m>G'</m> are pushouts of the homomorphisms  <m>g_k\colon G_0\rightarrow G_k</m>, then <m>G\cong G'</m>. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                        Let <m>G_1*G_2</m> be a free product of <m>G_1</m> and <m>G_2</m>, and identify <m>G_1</m> and <m>G_2</m> as subgroups of <m>G_1*G_2</m> as usual. The quotient <m>G_1*G_2/N</m> is a pushout of the homomorphisms <m>g_k\colon G_0\rightarrow G_k</m>, where <m>N</m> is the least normal subgroup of <m>G_1*G_2</m> containing the set
+                        <me>
+                            \{\left(g_1(g)\right)^{-1}g_2(g)\colon g\in G_0\}
+                        </me>.
+                    </p>
+                </li>
+            </ol>
+        </p>
+    </statement>
+  </theorem>
+  <theorem xml:id="th_seifert_van_kampen">
+    <title>Seifert-van Kampen theorem</title>
+    <statement>
+        <p>
+            Let <m>X=U\cup V</m> be an open covering where <m>U</m>, <m>V</m>, and <m>U\cap V</m> are path connected.  In the diagram below, each of the homomorphisms <m>i_1,i_2,j_1,j_2</m> of fundamental groups is induced by the corresponding inclusion of topological spaces. We have 
+            <me>\pi_1(X,x_0)\cong \pi_1(U,x_0)\sqcup_{\pi_1(U\cap V, x_0)} \pi_1(V,x_0)
+            </me>.
+            In more detail, given any group <m>H</m> and homomorphisms <m>\phi_1\colon \pi_1(U,x_0)\rightarrow H</m> and <m>\phi_2\colon \pi_1(V,x_0)\rightarrow H</m> satisfying <m>\phi_1\circ i_1=\phi_2\circ i_2</m>, there is a unique homomorphism <m>\phi\colon \pi_1(X,x_0)\rightarrow H</m> satisfying <m>\phi_k=\phi\circ j_k</m> for <m>1\leq k\leq 2</m>.
+            <image xml:id="im_seifert_van_kampen" width="75%">
+                <description>Commutative diagram for Seifert-van Kampen theorem</description>
+                <latex-image>
+               \begin{tikzcd}
+ \amp \pi_1(U,x_0) \arrow[dr,"j_1"] \arrow[rrd, bend left=30, "\phi_1"] \\
+\pi_1(U\cap V, x_0) \arrow[ur, "i_1"] \arrow[dr,"i_2"'] \amp \amp \pi_1(X,x_0) \arrow[r, dotted, "\exists! \phi"] \amp H\\
+ \amp \pi_1(V,x_0)	\arrow[ur,"j_2"'] \arrow[rru, bend right=30, "\phi_2"']
+\end{tikzcd}
+
+            </latex-image>
+            </image>
+        </p>
+    </statement>
+    <proof>
+        <p>
+            First we introduce some useful notation. For a path <m>f\in P(X)</m>, we write <m>[f]</m> to denote the path homotopy equivalence class of <m>f</m> in <m>X</m>; if <m>f(I)\subseteq W</m> for <m>W\in \{U, V, U\cap V\}</m>, then we write <m>[f]_W</m> to denote the path homotopy equivalance class of <m>f</m> in <m>W</m>. In particular, assuming <m>f</m> is a loop based on <m>x_0</m>, we have 
+            <md>
+                <mrow> i_1([f]_{U\cap V}) \amp = [f]_{U} \amp i_2([f]_{U\cap V}) \amp =[f]_{V}</mrow>
+                <mrow>j_1([f]_U) \amp = [f] \amp j_2([f]_V)=[f]</mrow>
+            </md>
+            whenever these expressions make sense.
+        </p>
+        <proof>
+            <title>Uniqueness of <m>\phi</m></title>
+            <p>
+                We can see by the <xref ref="th_weak_Seifert_vanKampen" text="custom">weak Seifert-van Kampen theorem</xref> that there is <em>at most</em> one <m>\phi</m> satisfying the given conditions. Indeed, given any <m>[f]\in \pi_1(X,x_0)</m>, we have 
+            <me>[f]=[g_1]*[g_2]*\cdots *[g_n]</me>, 
+            where <m>[g_k]=j_1([g_k]_U)</m> or <m>[g_j]=j_2([g_k]_V)</m> for all <m>1\leq k\leq n</m>. But then since <m>\phi</m> is a group homomorphism, we must have 
+            <md>
+                <mrow>\phi([f]) \amp =\phi([g_1])*\phi([g_2])*\cdots *\phi([g_n])</mrow>
+            </md>
+            where 
+            <me>
+                \phi([g_k])=\begin{cases}
+                \phi(j_1([g_k]_U))=\phi_1([g_k]_U) \amp \text{if } g_k\in P(U; x_0,x_0) \\ 
+                \phi(j_2([g_k]_V))=\phi_2([g_k]_V) \amp \text{if } g_k\in P(V; x_0,x_0).
+                \end{cases}
+            </me>
+            Thus the homomorphism <m>\phi</m> is uniquely determined by the homomorphisms <m>\phi_1\colon \pi_1(U,x_0)\rightarrow H</m> and <m>\phi_2\colon \pi_1(V,x_0)\rightarrow H</m>. 
+        </p> 
+        </proof>
+        <proof>
+            <title>Existence of <m>\phi</m></title>
+            <p>
+               We will define <m>\phi</m> by first constructing a function <m>\tau\colon P(X)\rightarrow H</m> that satisfies the following conditions:
+               <mdn>
+                <mrow xml:id="eq_SvK_1"> [f]=[g] \amp \implies \tau([f])=\tau([g])</mrow>
+                <mrow xml:id="eq_SvK_2"> \tau(f*g)\amp =\tau(f)*\tau(g) </mrow>
+                <mrow xml:id="eq_SvK_3"> \tau(f)\amp =\phi_1([f]) \text{ for all } f\in P(U; x_0,x_0) </mrow>
+                <mrow xml:id="eq_SvK_4"> \tau([f]_V)\amp =\phi_2([f]) \text{ for all } f\in P(V; x_0,x_0) </mrow>
+               </mdn>.
+            With such a <m>\tau</m> in hand, we let <m>\phi\colon \pi_1(X,x_0)\rightarrow H</m> be defined as 
+            <m>\phi([f])=\tau(f)</m>. It is clear from properties <xref first="eq_SvK_1" last="eq_SvK_2"/> that <m>\phi</m> is a homomorphism; and properties <xref first="eq_SvK_3" last="eq_SvK_4"/> guarantee that <m>\phi\circ f_k=\phi_k</m> for <m>1\leq k\leq 2</m>. 
+            </p>
+            <p>
+                Our construction of <m>\tau</m> proceeds by building up the domain of definition of <m>\tau</m> step by step: from <m>D_1=P(U; x_0,x_0)\cup P(V; x_0,x_0)</m> to <m>D_2=P(U)\cup P(V)</m> to <m>D=P(X)</m>. 
+            </p>
+            <proof>
+                <title>Construction: <m>\tau\vert_{D_1}</m>, <m>D_1=P(U; x_0,x_0)\cup P(V; x_0,x_0)</m></title> 
+                <p>
+                  If <m>f</m> is a path based on <m>x_0</m> lying either in <m>U</m> or <m>V</m>, we define 
+                  <me>
+                    \tau\vert_{D_1}([f])=\begin{cases}
+                    \phi_1([f]_U)\amp \text{if } f\in P(U;x_0,x_0)\\ 
+                    \phi_2([f]_V)\amp \text{if } f\in P(V; x_0,x_0).
+                    \end{cases}
+                  </me>
+                Observe that <m>\tau\vert_{D_1}</m> satisfies the following relative versions of properties <xref first="eq_SvK_1" last="eq_SvK_2"/>:
+                <mdn>
+                    <mrow xml:id="eq_SvK_1a">[f]_W=[g]_W \amp \implies \tau\vert_{D_1}(f)=\tau\vert_{D_1}(g) \text{ for all } f,g\in P(W;x_0,x_0)</mrow>
+                    <mrow xml:id="eq_SvK_2a">\tau\vert_{D_1}(f*g) \amp = \tau\vert_{D_1}(f)\tau\vert_{D_1}(g) \text{ for all } f,g\in P(W; x_0,x_0)</mrow>         
+                </mdn>,
+                where <m>W=U</m> or <m>W=V</m>. 
+                </p>
+            </proof>
+            <proof>
+                <title>Construction: <m>\tau\vert_{D_2}</m>, <m>D_2=P(U)\cup P(V)</m></title> 
+                <p>
+                First we fix a family of paths <m>\{\alpha_x\}_{x\in X}</m> satisfying the following conditions:
+                <ol>
+                    <li>
+                        <p>
+                            <m>\alpha_x\in P(X; x_0, x)</m> (<ie/>, <m>\alpha_x</m> is a path from <m>x_0</m> to <m>x</m>),
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\alpha_{x_0}=e_{x_0}</m>,
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>x\in W\implies \alpha_x\in P(W; x_0, x)</m> for <m>W\in \{U, V, U\cap V\}</m>.
+                        </p>
+                    </li>
+                </ol>
+                This is where we use the condition that <m>U</m>, <m>V</m>, and <m>U\cap V</m> are all path connected (and that <m>X=U\cup V</m>). 
+                </p>
+                <p>
+                    Next, given a path (not necessarily a loop) <m>f\in P(W)</m>, where <m>W=U</m> or <m>W=V</m>,  we define <m>\tau\vert_{D_2}(f)=\tau\vert_{D_1}(\alpha_x*f*\overline{\alpha}_y)</m>. Note that the right-hand side here makes sense since <m>\alpha_x*f*\overline{\alpha}_y\in P(W; x_0,x_0</m>.  It is now a straightforward exercise to show that <m>\tau\vert_{D_2}</m> satisfies the following properties:
+                    <mdn>
+                        <mrow xml:id="eq_D_2_extend">\tau\vert_{D_2}(f)\amp= \tau\vert_{D_1}(f) \text{ for all } f\in P(W; x_0,x_0)</mrow>
+                        <mrow xml:id="eq_SvK_1b"> [f]=[g]\amp \implies \tau(f)=\tau(g) \text{ for all } f,g\in P(W)</mrow>
+                        <mrow xml:id="eq_SvK_2b">\tau(f*g) \amp =\tau(f)\tau(g) \text{ for all } f,g\in P(W)</mrow>
+                    </mdn>,
+                    where <m>W=U</m> or <m>W=V</m>. For example, <xref ref="eq_SvK_1b"/> follows from the fact that if <m>f</m> and <m>g</m> are homotopic in <m>W</m>, then so are <m>\alpha_x*f*\overline{\alpha}_y</m> and <m>\alpha_x*g*\overline{\alpha}_y</m>. And <xref ref="eq_SvK_2b"/> can be shown as follows: if <m>f\in P(W; x,y)</m> and <m>g\in P(W; y,z)</m>, then we have 
+                    <md>
+                        <mrow>\tau\vert_{D_2}(f*g) \amp = \tau\vert_{D_1}(\alpha_x*f*g*\overline{\alpha}_z)</mrow>
+                        <mrow> \amp =\tau\vert_{D_1}(\alpha_x*f*\overline{\alpha}_y*\alpha_y*g*\overline{\alpha}_z) \amp <xref ref="eq_SvK_1a"/></mrow>
+                        <mrow> \amp=\tau\vert_{D_1}(\alpha_x*f*\overline{\alpha}_y)\tau\vert_{D_1}(\alpha_y*g*\overline{\alpha}_z) \amp <xref ref="eq_SvK_2a"/></mrow>
+                        <mrow> \amp =\tau\vert_{D_2}(f)\tau\vert_{D_2}(g)</mrow>
+                    </md>
+                </p>
+            </proof>
+            <proof>
+                <title>Construction: <m>\tau</m>, <m>D=P(X)</m></title> 
+                <p>
+                   We now define <m>\tau\colon P(X)\rightarrow H</m>.  Given <m>f\in P(X)</m>, since <m>f^{-1}(U)\cup f^{-1}(V)</m> is an open cover of the compact set <m>I=[0,1]</m>, by <xref ref="cor_Lebesgue_number"/> we can find a partition 
+                   <me>
+                    0=s_0&lt; s_1 &lt; \cdots &lt; s_n=1
+                   </me>
+                    such that for all <m>1\leq k\leq n</m> we have <m>f([s_{k-1},s_k])\subseteq U</m> or <m>f([s_{k-1},s_k])\subseteq V</m>. Let <m>\phi_k\colon I\rightarrow [s_{k-1}, s_k]</m> be the <q>positive linear map</q> from <m>I</m> to <m>[s_{k-1}, s_k]</m>  (<m>\phi(t)=(s_k-s{k-1})t+s_{k-1}</m>), and let <m>f_k=f\circ \phi_k</m>. We define 
+                    <me>
+                    \tau(f)=\tau\vert_{D_2}(f_1)\tau\vert_{D_2}(f_2)\cdots \tau\vert_{D_2}(f_n)
+                    </me>. 
+                    We must show that <m>\tau</m> is well-defined, agrees with <m>\tau\vert_{D_2}</m> and satisfies <xref first="eq_SvK_1" last="eq_SvK_2"/>.
+                    </p>
+                    <case>
+                    <title><m>\tau</m> is well-defined and agrees with <m>\tau\vert_{D_2}</m></title>
+                    <p>
+                      First we show that <m>\tau</m> is well-defined: <ie/>, that our definition does not depend on our choice of partition of <m>I</m>. Since any two partitions have a common refinement, it is suffices to show that refining our partition by one additional endpoint does not affect our definition of <m>\tau(f)</m>. Suppose we split the <m>k</m>-th subinterval as 
+                    <me>
+                        s_{k-1}&lt; s_* &lt; s_k
+                    </me>,
+                    and let <m>f_{k'}=f\circ \phi'</m>, where <m>\phi'</m> is the positive linear map from <m>I</m> to <m>[s_{k-1},s_*]</m>, and let <m>f_{k''}=f\circ \phi''</m>, where <m>\phi''</m> is the positive linear map from <m>I</m> to <m>[s_{*},s_k]</m>. Since <m>f_{k'}, f_{k''}\in P(W)</m> for <m>W=U</m> or <m>W=V</m>, we have 
+                    <md>
+                        <mrow> \tau(f)\amp= \tau\vert_{D_2}(f_1)\cdots\tau\vert_{D_2}(f_{k'})\tau\vert_{D_2}(f_{k'''})\tau\vert_{D_2}(f_{k+1})\cdots \tau\vert_{D_2}(f_n) </mrow>
+                        <mrow> \amp= \tau\vert_{D_2}(f_1)\cdots\tau\vert_{D_2}(f_{k'}*f_{k''})\tau\vert_{D_2}(f_{k+1})\cdots \tau\vert_{D_2}(f_n)</mrow>
+                        <mrow> \amp = \tau\vert_{D_2}(f_1)\cdots\tau\vert_{D_2}(f_{l})\tau\vert_{D_2}(f_{k+1})\cdots \tau\vert_{D_2}(f_n)</mrow>
+                    </md>,
+                    where the last equality holds because <m>[f_k]=[f_{k'}*f_{k''}]</m> and <xref ref="eq_SvK_1b"/>.   
+                    </p>
+                    <p>
+                        It is clear that <m>\tau</m> agrees with <m>\tau\vert_{D_2}</m> since for a path <m>f\in P(W)</m>, where <m>W=U</m> or <m>W=V</m>, we may choose as our partition 
+                        <me>
+                            s_0=0&lt; s_1=1
+                        </me>,
+                    in which case <m>\tau(f)=\tau\vert_{D_{2}}(f_1)=\tau\vert_{D_2}(f)</m>. 
+                    </p>
+                    </case>
+                    <case>
+                    <title><m>\tau</m> satisfies <xref ref="eq_SvK_1"/></title>
+                    
+                    <p>
+                    Assume <m>f,g\in P(X; x,y)</m> and <m>[f]=[g]</m>. Let <m>F\colon I\times I\rightarrow X</m> be a path homotopy from <m>f</m> to <m>g</m>. Again, using <xref ref="cor_Lebesgue_number"/>, we can find partitions 
+                    <md>
+                        <mrow>0=s_0 \amp &lt; s_1 &lt; \dots &lt; s_n=1 </mrow>
+                        <mrow>0=t_0 \amp &lt; t_1 &lt; \dots &lt; t_n=1 </mrow>
+                    </md>
+                    such that for each subrectangle <m>R_{k,l}=[s_{k-1}, s_k]\times [t_{l-1},t_l]</m> of <m>I\times I</m>, we have <m>F(R_{k,l})\subseteq W</m>, where  <m>W=U</m> or <m>W=V</m>. For each <m>(k,l)</m> with <m>1 \leq k\leq n</m> and <m>0\leq l\leq n</m>, let <m>h_{k,l}</m> be the horizontal path in <m>I\times I</m> from <m>(s_{k-1}, t_l)</m> to <m>(s_k, t_l)</m>; similarly define <m>v_{k,l}</m> to be the vertical path from <m>(s_{k}, t_{l-1})</m> to <m>(s_k,t_l)</m> for all pairs <m>(k,l)</m> with <m>0\leq k\leq n</m> and <m>1\leq l\leq n</m>. Lastly, define 
+                    <md>
+                        <mrow>f_{k,l} \amp =F\circ h_{k,l}</mrow>
+                        <mrow>\gamma_{k,l} \amp =F\circ v_{k,l}</mrow>
+                    </md>
+                    for all pairs <m>(k,l)</m> for which these expressions make sense. Fix a pair <m>(k,l)</m> with <m>1\leq k,l\leq n</m>. The polygonal paths <m>h_{k,l-1}*v_{k,l}</m> and <m>v_{k-1,l}*h_{k,l}</m> respectively traverse the bottom-and-right segment and left-and-top segment of the rectangle <m>R_{k,l}</m>. Since the rectangle is convex, these paths are homotopic in <m>R_{k,l}</m>. Composing with <m>F</m> gives us a homotopy of <m>f_{k,l-1}*\gamma_{k,l}</m> and <m>\gamma_{k-1,l}*f_{k,l}</m> in <m>F(R_{k,l})\subseteq W</m>. Using properties of <m>\tau\vert_{D_2}</m>, we conclude that 
+                    <me>
+                        \tau\vert_{D_2}(f_{k,l-1})\tau\vert_{D_2}(\gamma_{k,l})=\tau\vert_{D_2}(\gamma_{k-1,l})\tau\vert_{D_2}(f_{k,l})
+                    </me>
+                    and hence that 
+                    <me>
+                    \tau\vert_{D_2}(f_{k,l-1})=\tau\vert_{D_2}(\gamma_{k-1,l})\tau\vert_{D_2}(f_{k,l})\tau\vert_{D_2}(\gamma_{k,l})^{-1}
+                    </me>.
+                    Let <m>f_{l}(s)=F(s,t_l)</m> for all <m>0\leq j\leq n</m>. So in particular, we have <m>f_{0}(s)=F(s,0)=f(s)</m> and <m>f_n(s)=F(s,1)=g(s)</m>. Note that using our notation from above, we have 
+                    <me>
+                        (f_l)_{k}=f_j\circ \phi_k=F\circ h_{k,l}=f_{k,l}
+                    </me>. 
+                    It follows, using our definition of <m>\tau</m> that for all <m>1\leq l\leq n</m>, we have 
+                    <md>
+                        <mrow>\tau(f_{l-1}) \amp =\tau\vert_{D_2}(f_{1,l-1})\tau\vert_{D_2}(f_{2,l-1})\cdots \tau\vert_{D_2}(f_{n,l-1})</mrow>
+                        <mrow> \amp = (\tau\vert_{D_2}(\gamma_{0,l})\tau\vert_{D_2}(f_{1,l})\tau\vert_{D_2}(\gamma_{1,l})^{-1})(\tau\vert_{D_2}(\gamma_{1,l})\tau\vert_{D_2}(f_{2,l})\tau\vert_{D_2}(\gamma_{2,l})^{-1})\cdots (\tau\vert_{D_2}(\gamma_{n-1,l})\tau\vert_{D_2}(f_{n,l})\tau\vert_{D_2}(\gamma_{n,l})^{-1}) </mrow>
+                        <mrow> \amp = \tau\vert_{D_2}(e_{x})(\tau\vert_{D_2}(f_{1,l})\tau\vert_{D_2}(f_{2,l})\cdots \tau\vert_{D_2}(f_{n,l}))\tau\vert_{D_2}(e_y)</mrow>
+                        <mrow> \amp = \tau\vert_{D_2}(f_{1,l})\tau\vert_{D_2}(f_{2,l})\cdots\tau\vert_{D_2}(f_{n,l})</mrow>
+                        <mrow> \amp = \tau(f_l)</mrow>
+                    </md>.
+                    We conclude that <m>\tau(f)=\tau(f_{0})=\tau(f_{n})=\tau(g)</m>, as desired. 
+                    </p>
+                    </case>
+                    <case>
+                    <title><m>\tau</m> satisfies <xref ref="eq_SvK_2"/></title>
+                    <p>
+                        
+                    </p>
+
+                    </case>
+                    
+            </proof>
+
+        </proof>
+           
+    </proof>
+  </theorem>
+  <corollary xml:id="cor_Seifert_vanKampen">
+  <title>Seifert-van Kampen:classical</title>
+    <statement>
+        <p>
+           Let <m>X=U\cup V</m> be an open covering where <m>U</m>, <m>V</m>, and <m>U\cap V</m> are path connected. With notation as in the Seifert-van Kampen theorem, we have  
+           <me>
+            \pi_1(X,x_0)\cong \pi_1(U,x_0)*\pi_1(V,x_0)/N
+           </me>,
+            where <m>N</m> is the least normal subgroup of <m>\pi_1(U,x_0)*\pi_1(V,x_0)</m> containing the set 
+            <me>
+                \{(i_1([f]))^{-1}i_2([f])\colon [f]\in \pi_1(U\cap V, x_0)\}
+            </me>.
+        </p>
+    </statement>
+  </corollary>
+  <corollary xml:id="cor_Seifert_vanKampen_simplyconnected">
+  <title>Seifert-van Kampen: special cases</title>
+    <statement>
+        <p>
+           Let <m>X=U\cup V</m> be an open covering where <m>U</m>, <m>V</m>, and <m>U\cap V</m> are path connected. Let <m>j_1,j_2</m> be as in the Seifert-van Kampen theorem. 
+        </p>
+        <ol>
+            <li>
+                <p>
+                    If <m>U</m> and <m>V</m> are simply connected, then <m>X</m> is simply connected. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    If <m>U\cap V</m> is simply connected, then <m>\pi_1(X,x_0)\cong \pi_1(U,x_0)* \pi_1(V,x_0)</m>. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    If <m>V</m> is simply connected, then <m>\pi_1(X,x_0)\cong \pi_1(U,x_0)/N</m>, where <m>N</m> is the least normal subgroup of <m>\pi_1(U,x_0)</m> containing <m>i_1(\pi_1(U\cap V, x_0))</m>. 
+                </p>
+            </li>
+        </ol>
+    </statement>
+    <proof>
+        <p>
+            
+        </p>
+    </proof>
+  </corollary>
+  </section>

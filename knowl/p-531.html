@@ -12,7 +12,25 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">The collection <span class="process-math">\(\mathcal{T}=\mathcal{P}(X)\)</span> is a topology on <span class="process-math">\(X\text{,}\)</span> called the <dfn class="terminology">discrete topology</dfn>. This is the topology on <span class="process-math">\(X\)</span> for which every subset of <span class="process-math">\(X\)</span> is an open set.</div>
-<span class="incontext"><a href="s_top_spaces.html#p-531" class="internal">in-context</a></span>
+<div class="para logical">
+<div class="para">Next, given a path (not necessarily a loop) <span class="process-math">\(f\in P(W)\text{,}\)</span> where <span class="process-math">\(W=U\)</span> or <span class="process-math">\(W=V\text{,}\)</span>  we define <span class="process-math">\(\tau\vert_{D_2}(f)=\tau\vert_{D_1}(\alpha_x*f*\overline{\alpha}_y)\text{.}\)</span> Note that the right-hand side here makes sense since <span class="process-math">\(\alpha_x*f*\overline{\alpha}_y\in P(W; x_0,x_0\text{.}\)</span>  It is now a straightforward exercise to show that <span class="process-math">\(\tau\vert_{D_2}\)</span> satisfies the following properties:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_SvK_1b.html ./knowl/eq_SvK_2b.html ./knowl/eq_SvK_1a.html ./knowl/eq_SvK_2a.html">
+\begin{align}
+\tau\vert_{D_2}(f)\amp= \tau\vert_{D_1}(f) \text{ for all } f\in P(W; x_0,x_0)\tag{1.15.7}\\
+[f]=[g]\amp \implies \tau(f)=\tau(g) \text{ for all } f,g\in P(W)\tag{1.15.8}\\
+\tau(f*g) \amp =\tau(f)\tau(g) \text{ for all } f,g\in P(W)\text{,}\tag{1.15.9}
+\end{align}
+</div>
+<div class="para">where <span class="process-math">\(W=U\)</span> or <span class="process-math">\(W=V\text{.}\)</span> For example, <a href="" class="xref" data-knowl="./knowl/eq_SvK_1b.html" title="Equation 1.15.8">(1.15.8)</a> follows from the fact that if <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are homotopic in <span class="process-math">\(W\text{,}\)</span> then so are <span class="process-math">\(\alpha_x*f*\overline{\alpha}_y\)</span> and <span class="process-math">\(\alpha_x*g*\overline{\alpha}_y\text{.}\)</span> And <a href="" class="xref" data-knowl="./knowl/eq_SvK_2b.html" title="Equation 1.15.9">(1.15.9)</a> can be shown as follows: if <span class="process-math">\(f\in P(W; x,y)\)</span> and <span class="process-math">\(g\in P(W; y,z)\text{,}\)</span> then we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_SvK_1b.html ./knowl/eq_SvK_2b.html ./knowl/eq_SvK_1a.html ./knowl/eq_SvK_2a.html">
+\begin{align*}
+\tau\vert_{D_2}(f*g) \amp = \tau\vert_{D_1}(\alpha_x*f*g*\overline{\alpha}_z)\\
+\amp =\tau\vert_{D_1}(\alpha_x*f*\overline{\alpha}_y*\alpha_y*g*\overline{\alpha}_z) \amp \knowl{./knowl/eq_SvK_1a.html}{\text{(1.15.5)}}\\
+\amp=\tau\vert_{D_1}(\alpha_x*f*\overline{\alpha}_y)\tau\vert_{D_1}(\alpha_y*g*\overline{\alpha}_z) \amp \knowl{./knowl/eq_SvK_2a.html}{\text{(1.15.6)}}\\
+\amp =\tau\vert_{D_2}(f)\tau\vert_{D_2}(g)
+\end{align*}
+</div>
+</div>
+<span class="incontext"><a href="s_seifert_van_kampen.html#p-531" class="internal">in-context</a></span>
 </body>
 </html>

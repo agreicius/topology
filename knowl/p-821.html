@@ -13,14 +13,21 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(X=\R^I\)</span> for some set <span class="process-math">\(I\text{,}\)</span> where <span class="process-math">\(\R\)</span> is equipped with the standard topology, and let <span class="process-math">\(\mathcal{T}_{\operatorname{prod}}, \mathcal{T}_{\operatorname{uni}}, \mathcal{T}_{\operatorname{box}}\)</span> be the product, uniform, and box topologies on <span class="process-math">\(\R\text{.}\)</span> We have</div>
+<div class="para">Axiom 1. Given <span class="process-math">\(x=(x_i)_{i\in I}\in X\text{,}\)</span> we can find basis elements <span class="process-math">\(B_i\in \mathcal{B}_{i}\)</span> containing <span class="process-math">\(x_i\text{.}\)</span> We have</div>
+<div class="displaymath process-math">
+\begin{align*}
+x \amp\in B=\prod_{i\in I}B_i\in \mathcal{B}_{\operatorname{box}} \\
+x \amp\in B=\prod_{i\in I}X_i \in \mathcal{B}_{\operatorname{prod}} \text{.}
+\end{align*}
+</div>
+<div class="para">Axiom 2. This axiom follows readily from the set theoretic fact that</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\mathcal{T}_{\operatorname{prod}}\subseteq \mathcal{T}_{\operatorname{uni}}\subseteq  \mathcal{T}_{\operatorname{box}}\text{.}
+\prod_{i\in I}U_i \cap \prod_{i\in I} V_i=\prod_{i\in I}U_i\cap V_i\text{.}
 \end{equation*}
 </div>
-<div class="para">When <span class="process-math">\(I\)</span> is infinite these inclusions are all strict.</div>
+<div class="para">I'll leave the details to you.</div>
 </div>
-<span class="incontext"><a href="s_prods_convergence_metric.html#p-821" class="internal">in-context</a></span>
+<span class="incontext"><a href="s_product2.html#p-821" class="internal">in-context</a></span>
 </body>
 </html>

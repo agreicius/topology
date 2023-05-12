@@ -13,14 +13,30 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Using induction, we can show that if <span class="process-math">\(\mathcal{T}\)</span> satisfies axiom (3) for any <em class="emphasis">two</em> elements of <span class="process-math">\(\mathcal{T}\text{,}\)</span> then it satisfies it for any <span class="process-math">\(n\)</span> elements, for <span class="process-math">\(n\)</span> arbitrary. In other words if we replace axiom (3) with</div>
-<dl class="description-list">
-<dt>(3')</dt>
-<dd><div class="para">If <span class="process-math">\(U_1, U_2\in \mathcal{T}\text{,}\)</span> then <span class="process-math">\(U=U_1\cap U_2\in \mathcal{T}\)</span>
-</div></dd>
-</dl>
-<div class="para">, we get an equivalent definition of a toplogical space. When verifying whether a given <span class="process-math">\((X,\mathcal{T})\)</span> is a topological space it may be more convenient to use axiom (3') as opposed to axiom (3).</div>
+<div class="para">We can see by the <a href="" class="xref" data-knowl="./knowl/th_weak_Seifert_vanKampen.html" title="Theorem 1.8.1: Weak Seifert-van Kampen">weak Seifert-van Kampen theorem</a> that there is <em class="emphasis">at most</em> one <span class="process-math">\(\phi\)</span> satisfying the given conditions. Indeed, given any <span class="process-math">\([f]\in \pi_1(X,x_0)\text{,}\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_weak_Seifert_vanKampen.html">
+\begin{equation*}
+[f]=[g_1]*[g_2]*\cdots *[g_n]\text{,}
+\end{equation*}
 </div>
-<span class="incontext"><a href="s_top_spaces.html#p-523" class="internal">in-context</a></span>
+<div class="para">where <span class="process-math">\([g_k]=j_1([g_k]_U)\)</span> or <span class="process-math">\([g_j]=j_2([g_k]_V)\)</span> for all <span class="process-math">\(1\leq k\leq n\text{.}\)</span> But then since <span class="process-math">\(\phi\)</span> is a group homomorphism, we must have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_weak_Seifert_vanKampen.html">
+\begin{align*}
+\phi([f]) \amp =\phi([g_1])*\phi([g_2])*\cdots *\phi([g_n])
+\end{align*}
+</div>
+<div class="para">where</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_weak_Seifert_vanKampen.html">
+\begin{equation*}
+\phi([g_k])=\begin{cases}
+\phi(j_1([g_k]_U))=\phi_1([g_k]_U) \amp \text{if } g_k\in P(U; x_0,x_0) \\ 
+\phi(j_2([g_k]_V))=\phi_2([g_k]_V) \amp \text{if } g_k\in P(V; x_0,x_0).
+\end{cases}
+\end{equation*}
+</div>
+<div class="para">Thus the homomorphism <span class="process-math">\(\phi\)</span> is uniquely determined by the homomorphisms <span class="process-math">\(\phi_1\colon \pi_1(U,x_0)\rightarrow H\)</span> and <span class="process-math">\(\phi_2\colon \pi_1(V,x_0)\rightarrow H\text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a href="s_seifert_van_kampen.html#p-523" class="internal">in-context</a></span>
 </body>
 </html>

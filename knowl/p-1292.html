@@ -13,19 +13,18 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(X\)</span> be a topological space.</div>
-<ol class="decimal">
-<li>
-<div class="para">The closure <span class="process-math">\(\overline{A}\)</span> of any set <span class="process-math">\(A\)</span> is the set of all <span class="process-math">\(x\in X\)</span> for which there is a net <span class="process-math">\(f\colon I\rightarrow A\)</span> such that <span class="process-math">\(x_i\rightarrow x\text{.}\)</span>
+<div class="para">It remains only to show that <span class="process-math">\(\phi\)</span> is surjective. Given any <span class="process-math">\((y_1,y_2)\in [0,1]\text{,}\)</span> let <span class="process-math">\(y_1=\sum_{k=1}^\infty \frac{a_k}{2^k}\)</span> and <span class="process-math">\(y_2=\sum_{k=1}\frac{b_k}{2^k}\)</span> be binary expansions of <span class="process-math">\(y_1\)</span> and <span class="process-math">\(y_2\text{.}\)</span> Let <span class="process-math">\(s=(a_1,b_1,a_2,b_2,a_3,b_3,\dots)\text{,}\)</span> and let <span class="process-math">\(x\in \mathcal{C}=h^{-1}(s)\text{.}\)</span> We have</div>
+<div class="displaymath process-math">
+\begin{align*}
+\phi(x) \amp =(\widetilde{f}_1(x),\widetilde{f}_2(x))\\
+\amp =(f_1(x),f_2(x)) \amp (x\in \mathcal{C})\\
+\amp =(g_1(h(x)), g_2(h(x))) \amp (\text{def. of } f_i)\\
+\amp =(g_1(s), g_2(s)) \amp (h(x)=s)\\
+\amp =(y_1,y_2) \amp \text{(by construction)}\text{.}
+\end{align*}
 </div>
-<div class="para">It follows that a subset <span class="process-math">\(A\)</span> is closed if and only if it contains all limits of all convergent nets in <span class="process-math">\(A\text{.}\)</span>
+<div class="para">This proves in fact that <span class="process-math">\(\phi\vert_\mathcal{C}\)</span> is surjective.</div>
 </div>
-</li>
-<li><div class="para">A function <span class="process-math">\(f\colon X\rightarrow Y\)</span> is continuous if and only if for all convergent nets <span class="process-math">\(h\colon I\rightarrow X\)</span> the net <span class="process-math">\(f\circ h\colon I\rightarrow Y\)</span> is convergent.</div></li>
-<li><div class="para">The space <span class="process-math">\(X\)</span> is Hausdorff if and only if every net in <span class="process-math">\(X\)</span> converges to at most one element in <span class="process-math">\(X\text{.}\)</span>
-</div></li>
-</ol>
-</div>
-<span class="incontext"><a href="s_nets.html#p-1292" class="internal">in-context</a></span>
+<span class="incontext"><a href="s_Tietze_extension.html#p-1292" class="internal">in-context</a></span>
 </body>
 </html>

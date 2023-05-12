@@ -11,23 +11,19 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
-<div class="para">We treat each axiom separately.</div> <ol class="decimal">
-<li><div class="para">We must show <span class="process-math">\(\emptyset, X\in \mathcal{T}\text{.}\)</span> That <span class="process-math">\(\emptyset\in \mathcal{T}\)</span> is specified explicitly in the definition of <span class="process-math">\(\mathcal{T}\text{.}\)</span> Next since <span class="process-math">\(X^c=\emptyset\)</span> is finite, the set <span class="process-math">\(X\)</span> is cofinite in <span class="process-math">\(X\text{,}\)</span> and hence an element of <span class="process-math">\(\mathcal{T}\text{.}\)</span>
-</div></li>
-<li><div class="para logical">
-<div class="para">Let <span class="process-math">\(\{U_i\}_{i\in I}\)</span> be any collection of elements of <span class="process-math">\(\mathcal{T}\text{:}\)</span> i.e., for all <span class="process-math">\(i\in I\)</span> we have <span class="process-math">\(U_i=\emptyset\)</span> or <span class="process-math">\(U_i\)</span> is cofinite in <span class="process-math">\(X\text{.}\)</span> Let <span class="process-math">\(U=\bigcup_{i\in I}U_i\text{.}\)</span> If <span class="process-math">\(U_i=\emptyset\)</span> for all <span class="process-math">\(i\in I\text{,}\)</span> then <span class="process-math">\(U=\emptyset\in \mathcal{T}\text{.}\)</span> Otherwise there is an <span class="process-math">\(i_0\in I\)</span> such that <span class="process-math">\(U_{i_0}\)</span> is nonempty, hence cofinite. We have</div>
-<div class="displaymath process-math">
-\begin{align*}
-U^c \amp = \left( \bigcup_{i\in I}U_i\right)^c \\
-\amp = \bigcap_{i\in I} U_i^c  \amp (\text{DeMorgan's law})\\
-\amp \subseteq U_{i_0}^c\text{.}
-\end{align*}
+<article class="hiddenproof"><h4 class="heading"><span class="title">Existence of <span class="process-math">\(\phi\)</span>.</span></h4> <div class="para logical">
+<div class="para">We will define <span class="process-math">\(\phi\)</span> by first constructing a function <span class="process-math">\(\tau\colon P(X)\rightarrow H\)</span> that satisfies the following conditions:</div>
+<div class="displaymath process-math" data-contains-math-knowls=" ">
+\begin{align}
+[f]=[g] \amp \implies \tau([f])=\tau([g])\tag{1.15.1}\\
+\tau(f*g)\amp =\tau(f)*\tau(g) \tag{1.15.2}\\
+\tau(f)\amp =\phi_1([f]) \text{ for all } f\in P(U; x_0,x_0) \tag{1.15.3}\\
+\tau([f]_V)\amp =\phi_2([f]) \text{ for all } f\in P(V; x_0,x_0) \text{.}\tag{1.15.4}
+\end{align}
 </div>
-<div class="para">Since <span class="process-math">\(U_{i_0}^c\)</span> is finite, it follows that <span class="process-math">\(U^c\)</span> is finite. It follows that <span class="process-math">\(U\)</span> is cofinite, and hence an element of <span class="process-math">\(\mathcal{T}\)</span> as desired.</div>
-</div></li>
-<li><div class="para">Let <span class="process-math">\(U_1, U_2\in \mathcal{T}\text{,}\)</span> and let <span class="process-math">\(U=U_1\cap U_2\text{.}\)</span> We have <span class="process-math">\(U^c=U_1^c\cap U_2^c\text{.}\)</span> Since <span class="process-math">\(U_i^c\)</span> is either finite or equal to all of <span class="process-math">\(X\)</span> for <span class="process-math">\(i=1,2\text{,}\)</span> it is clear that <span class="process-math">\(U^c\)</span> is either finite or equal to <span class="process-math">\(X\text{.}\)</span> It follows that <span class="process-math">\(U\)</span> is either cofinite or empty, and hence an element of <span class="process-math">\(\mathcal{T}\text{.}\)</span>
-</div></li>
-</ol></article><span class="incontext"><a href="s_top_spaces.html#proof-46" class="internal">in-context</a></span>
+<div class="para">With such a <span class="process-math">\(\tau\)</span> in hand, we let <span class="process-math">\(\phi\colon \pi_1(X,x_0)\rightarrow H\)</span> be defined as <span class="process-math">\(\phi([f])=\tau(f)\text{.}\)</span> It is clear from properties <a href="" class="xref" data-knowl="./knowl/eq_SvK_1.html" title="Equation 1.15.1">(1.15.1)–(1.15.2)</a> that <span class="process-math">\(\phi\)</span> is a homomorphism; and properties <a href="" class="xref" data-knowl="./knowl/eq_SvK_3.html" title="Equation 1.15.3">(1.15.3)–(1.15.4)</a> guarantee that <span class="process-math">\(\phi\circ f_k=\phi_k\)</span> for <span class="process-math">\(1\leq k\leq 2\text{.}\)</span>
+</div>
+</div> <div class="para">Our construction of <span class="process-math">\(\tau\)</span> proceeds by building up the domain of definition of <span class="process-math">\(\tau\)</span> step by step: from <span class="process-math">\(D_1=P(U; x_0,x_0)\cup P(V; x_0,x_0)\)</span> to <span class="process-math">\(D_2=P(U)\cup P(V)\)</span> to <span class="process-math">\(D=P(X)\text{.}\)</span>
+</div> <article class="hiddenproof"><a href="" class="proof-knowl original" data-knowl="./knowl/proof-47-hidden.html" title="Proof 1.15.3.1.2.1: Construction: \tau\vert_{D_1} D_1=P(U; x_0,x_0)\cup P(V; x_0,x_0)"><h4 class="heading"><span class="title">Construction: <span class="process-math">\(\tau\vert_{D_1}\text{,}\)</span> <span class="process-math">\(D_1=P(U; x_0,x_0)\cup P(V; x_0,x_0)\)</span>.</span></h4></a></article> <article class="hiddenproof"><a href="" class="proof-knowl original" data-knowl="./knowl/proof-48-hidden.html" title="Proof 1.15.3.1.2.2: Construction: \tau\vert_{D_2} D_2=P(U)\cup P(V)"><h4 class="heading"><span class="title">Construction: <span class="process-math">\(\tau\vert_{D_2}\text{,}\)</span> <span class="process-math">\(D_2=P(U)\cup P(V)\)</span>.</span></h4></a></article> <article class="hiddenproof"><a href="" class="proof-knowl original" data-knowl="./knowl/proof-49-hidden.html" title="Proof 1.15.3.1.2.3: Construction: \tau D=P(X)"><h4 class="heading"><span class="title">Construction: <span class="process-math">\(\tau\text{,}\)</span> <span class="process-math">\(D=P(X)\)</span>.</span></h4></a></article></article><span class="incontext"><a href="s_seifert_van_kampen.html#proof-46" class="internal">in-context</a></span>
 </body>
 </html>

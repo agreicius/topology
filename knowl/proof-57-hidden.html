@@ -11,27 +11,25 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><article class="hiddenproof"><div class="para logical">
-<div class="para">We content ourselves with a proof sketch in order to avoid getting into the weeds of elementary number theory. The positivity and symmetry axioms follow readily from simple properties of divisibility. For the triangle inequality it is enough to prove that the <span class="process-math">\(p\)</span>-adic norm <span class="process-math">\(\abs[p]{\hspace{5pt}}\)</span> satisfies the triangle inequality on <span class="process-math">\(\Z\text{:}\)</span> i.e., for all <span class="process-math">\(m,n\in\Z\)</span> we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_padic_triangle_inequality.html">
-\begin{equation}
-\abs[p]{m+n}\leq \abs[p]{m}+\abs[p]{n}\tag{2.3.4}
-\end{equation}
-</div>
-<div class="para">since then for any <span class="process-math">\(r,s,t\in\Z\)</span> we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_padic_triangle_inequality.html">
+<div class="para">We show that <span class="process-math">\(\mathcal{B}_K\)</span> is a basis, treating each axiom separately.</div>
+<ol class="decimal">
+<li><div class="para">Since by definition <span class="process-math">\(\mathcal{B}_K\)</span> contains all finite open intervals, it clearly covers <span class="process-math">\(\R\text{.}\)</span>
+</div></li>
+<li>
+<div class="para">We claim that in fact given <span class="process-math">\(B_1, B_2\in \mathcal{B}_K\text{,}\)</span> their intersection <span class="process-math">\(B_1\cap B_2\)</span> is either empty or another element of <span class="process-math">\(\mathcal{B}_K\text{.}\)</span> Axiom (2) follows directly from this claim.</div>
+<div class="para logical">
+<div class="para">Why is the claim true? An element of <span class="process-math">\(\mathcal{B}\)</span> is either of the form <span class="process-math">\(I\)</span> or <span class="process-math">\(I-K\text{,}\)</span> where <span class="process-math">\(I=(a,b)\)</span> is an open interval. There are then three different cases describing intersections of two elements, as shown below. Here <span class="process-math">\(I_1, I_2\)</span> denote finite open intervals.</div>
+<div class="displaymath process-math">
 \begin{align*}
-d(r,s) \amp=\abs[p]{r-s} \\
-\amp=\abs[p]{r-t +t-s} \\
-\amp\leq \abs[p]{r-t}+\abs[p]{t-s}\\
-\amp \leq d(r,t)+d(t,s)\text{.}
+I_1\cap I_2 \amp \\
+(I_1-K)\cap I_2\amp =I_1\cap I_2-K\cap I_2=I_1\cap I_2-K \\
+(I_1-K)\cap (I_2-K) \amp= (I_1-K)\cap I_2 - K\cap (I_2-K)\\
+\amp = I_1\cap I_2-K\text{.}
 \end{align*}
 </div>
-<div class="para">Lastly, the inequality <a href="" class="xref" data-knowl="./knowl/eq_padic_triangle_inequality.html" title="Equation 2.3.4">(2.3.4)</a> follows from the stronger claim</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_padic_triangle_inequality.html">
-\begin{equation}
-\abs[p]{m+n}\leq \max\{\abs[p]{m}, \abs[p]{n} \}\text{,}\tag{2.3.5}
-\end{equation}
+<div class="para">As we have already remarked, <span class="process-math">\(I_1\cap I_2\)</span> is either empty or a finite open interval <span class="process-math">\(I\text{.}\)</span> The claim now follows easily.</div>
 </div>
-<div class="para">which itself follows from divisibility properties.</div>
+</li>
+</ol>
 </div></article></body>
 </html>

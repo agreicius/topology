@@ -1711,6 +1711,60 @@ var ptx_lunr_docs = [
   "body": " Rank of free group   The rank of a free group , denoted , is the cardinality of any system free generators of .   "
 },
 {
+  "id": "s_seifert_van_kampen",
+  "level": "1",
+  "url": "s_seifert_van_kampen.html",
+  "type": "Section",
+  "number": "1.15",
+  "title": "Seifert-van Kampen theorem",
+  "body": " Seifert-van Kampen theorem   Pushouts of groups   A pushout (or fibered coproduct ) of a pair of group homomorphisms and is a group equipped with homomorphisms and satisfying and the following universal mapping property of pushouts :   Universal mapping property of pushouts  If is a group and and are homomorphisms satisfying , then there is a unique homomorphism satisfying for .     Pushout commutative diagram   As we will see, a pushout is unique up to isomorphism. We write to denote a pushout of the maps and .     Pushouts   Let and be group homomorphisms.   If and are pushouts of the homomorphisms , then .    Let be a free product of and , and identify and as subgroups of as usual. The quotient is a pushout of the homomorphisms , where is the least normal subgroup of containing the set .        Seifert-van Kampen theorem   Let be an open covering where , , and are path connected. In the diagram below, each of the homomorphisms of fundamental groups is induced by the corresponding inclusion of topological spaces. We have . In more detail, given any group and homomorphisms and satisfying , there is a unique homomorphism satisfying for .  Commutative diagram for Seifert-van Kampen theorem       First we introduce some useful notation. For a path , we write to denote the path homotopy equivalence class of in ; if for , then we write to denote the path homotopy equivalance class of in . In particular, assuming is a loop based on , we have whenever these expressions make sense.   Uniqueness of  We can see by the weak Seifert-van Kampen theorem that there is at most one satisfying the given conditions. Indeed, given any , we have , where or for all . But then since is a group homomorphism, we must have where Thus the homomorphism is uniquely determined by the homomorphisms and .    Existence of  We will define by first constructing a function that satisfies the following conditions: . With such a in hand, we let be defined as . It is clear from properties that is a homomorphism; and properties guarantee that for .  Our construction of proceeds by building up the domain of definition of step by step: from to to .   Construction: ,  If is a path based on lying either in or , we define Observe that satisfies the following relative versions of properties : , where or .    Construction: ,  First we fix a family of paths satisfying the following conditions:    ( , is a path from to ),     ,     for .   This is where we use the condition that , , and are all path connected (and that ).  Next, given a path (not necessarily a loop) , where or , we define . Note that the right-hand side here makes sense since . It is now a straightforward exercise to show that satisfies the following properties: , where or . For example, follows from the fact that if and are homotopic in , then so are and . And can be shown as follows: if and , then we have     Construction: ,  We now define . Given , since is an open cover of the compact set , by we can find a partition such that for all we have or . Let be the positive linear map from to ( ), and let . We define . We must show that is well-defined, agrees with and satisfies .   is well-defined and agrees with  First we show that is well-defined: , that our definition does not depend on our choice of partition of . Since any two partitions have a common refinement, it is suffices to show that refining our partition by one additional endpoint does not affect our definition of . Suppose we split the -th subinterval as , and let , where is the positive linear map from to , and let , where is the positive linear map from to . Since for or , we have , where the last equality holds because and .  It is clear that agrees with since for a path , where or , we may choose as our partition , in which case .    satisfies  Assume and . Let be a path homotopy from to . Again, using , we can find partitions such that for each subrectangle of , we have , where or . For each with and , let be the horizontal path in from to ; similarly define to be the vertical path from to for all pairs with and . Lastly, define for all pairs for which these expressions make sense. Fix a pair with . The polygonal paths and respectively traverse the bottom-and-right segment and left-and-top segment of the rectangle . Since the rectangle is convex, these paths are homotopic in . Composing with gives us a homotopy of and in . Using properties of , we conclude that and hence that . Let for all . So in particular, we have and . Note that using our notation from above, we have . It follows, using our definition of that for all , we have . We conclude that , as desired.    satisfies          Seifert-van Kampen:classical   Let be an open covering where , , and are path connected. With notation as in the Seifert-van Kampen theorem, we have , where is the least normal subgroup of containing the set .     Seifert-van Kampen: special cases   Let be an open covering where , , and are path connected. Let be as in the Seifert-van Kampen theorem.    If and are simply connected, then is simply connected.    If is simply connected, then .    If is simply connected, then , where is the least normal subgroup of containing .          "
+},
+{
+  "id": "d_pushout_group",
+  "level": "2",
+  "url": "s_seifert_van_kampen.html#d_pushout_group",
+  "type": "Definition",
+  "number": "1.15.1",
+  "title": "Pushouts of groups.",
+  "body": " Pushouts of groups   A pushout (or fibered coproduct ) of a pair of group homomorphisms and is a group equipped with homomorphisms and satisfying and the following universal mapping property of pushouts :   Universal mapping property of pushouts  If is a group and and are homomorphisms satisfying , then there is a unique homomorphism satisfying for .     Pushout commutative diagram   As we will see, a pushout is unique up to isomorphism. We write to denote a pushout of the maps and .   "
+},
+{
+  "id": "th_pushouts",
+  "level": "2",
+  "url": "s_seifert_van_kampen.html#th_pushouts",
+  "type": "Theorem",
+  "number": "1.15.2",
+  "title": "Pushouts.",
+  "body": " Pushouts   Let and be group homomorphisms.   If and are pushouts of the homomorphisms , then .    Let be a free product of and , and identify and as subgroups of as usual. The quotient is a pushout of the homomorphisms , where is the least normal subgroup of containing the set .      "
+},
+{
+  "id": "th_seifert_van_kampen",
+  "level": "2",
+  "url": "s_seifert_van_kampen.html#th_seifert_van_kampen",
+  "type": "Theorem",
+  "number": "1.15.3",
+  "title": "Seifert-van Kampen theorem.",
+  "body": " Seifert-van Kampen theorem   Let be an open covering where , , and are path connected. In the diagram below, each of the homomorphisms of fundamental groups is induced by the corresponding inclusion of topological spaces. We have . In more detail, given any group and homomorphisms and satisfying , there is a unique homomorphism satisfying for .  Commutative diagram for Seifert-van Kampen theorem       First we introduce some useful notation. For a path , we write to denote the path homotopy equivalence class of in ; if for , then we write to denote the path homotopy equivalance class of in . In particular, assuming is a loop based on , we have whenever these expressions make sense.   Uniqueness of  We can see by the weak Seifert-van Kampen theorem that there is at most one satisfying the given conditions. Indeed, given any , we have , where or for all . But then since is a group homomorphism, we must have where Thus the homomorphism is uniquely determined by the homomorphisms and .    Existence of  We will define by first constructing a function that satisfies the following conditions: . With such a in hand, we let be defined as . It is clear from properties that is a homomorphism; and properties guarantee that for .  Our construction of proceeds by building up the domain of definition of step by step: from to to .   Construction: ,  If is a path based on lying either in or , we define Observe that satisfies the following relative versions of properties : , where or .    Construction: ,  First we fix a family of paths satisfying the following conditions:    ( , is a path from to ),     ,     for .   This is where we use the condition that , , and are all path connected (and that ).  Next, given a path (not necessarily a loop) , where or , we define . Note that the right-hand side here makes sense since . It is now a straightforward exercise to show that satisfies the following properties: , where or . For example, follows from the fact that if and are homotopic in , then so are and . And can be shown as follows: if and , then we have     Construction: ,  We now define . Given , since is an open cover of the compact set , by we can find a partition such that for all we have or . Let be the positive linear map from to ( ), and let . We define . We must show that is well-defined, agrees with and satisfies .   is well-defined and agrees with  First we show that is well-defined: , that our definition does not depend on our choice of partition of . Since any two partitions have a common refinement, it is suffices to show that refining our partition by one additional endpoint does not affect our definition of . Suppose we split the -th subinterval as , and let , where is the positive linear map from to , and let , where is the positive linear map from to . Since for or , we have , where the last equality holds because and .  It is clear that agrees with since for a path , where or , we may choose as our partition , in which case .    satisfies  Assume and . Let be a path homotopy from to . Again, using , we can find partitions such that for each subrectangle of , we have , where or . For each with and , let be the horizontal path in from to ; similarly define to be the vertical path from to for all pairs with and . Lastly, define for all pairs for which these expressions make sense. Fix a pair with . The polygonal paths and respectively traverse the bottom-and-right segment and left-and-top segment of the rectangle . Since the rectangle is convex, these paths are homotopic in . Composing with gives us a homotopy of and in . Using properties of , we conclude that and hence that . Let for all . So in particular, we have and . Note that using our notation from above, we have . It follows, using our definition of that for all , we have . We conclude that , as desired.    satisfies        "
+},
+{
+  "id": "cor_Seifert_vanKampen",
+  "level": "2",
+  "url": "s_seifert_van_kampen.html#cor_Seifert_vanKampen",
+  "type": "Corollary",
+  "number": "1.15.4",
+  "title": "Seifert-van Kampen:classical.",
+  "body": " Seifert-van Kampen:classical   Let be an open covering where , , and are path connected. With notation as in the Seifert-van Kampen theorem, we have , where is the least normal subgroup of containing the set .   "
+},
+{
+  "id": "cor_Seifert_vanKampen_simplyconnected",
+  "level": "2",
+  "url": "s_seifert_van_kampen.html#cor_Seifert_vanKampen_simplyconnected",
+  "type": "Corollary",
+  "number": "1.15.5",
+  "title": "Seifert-van Kampen: special cases.",
+  "body": " Seifert-van Kampen: special cases   Let be an open covering where , , and are path connected. Let be as in the Seifert-van Kampen theorem.    If and are simply connected, then is simply connected.    If is simply connected, then .    If is simply connected, then , where is the least normal subgroup of containing .         "
+},
+{
   "id": "s_top_spaces",
   "level": "1",
   "url": "s_top_spaces.html",
@@ -2917,9 +2971,9 @@ var ptx_lunr_docs = [
   "body": " Connectedness and subspaces   Let be a topological space.   If is connected and is a separation of , then or .    If is a collection of connected subspaces of and , then is connected.    If is connected, then any satisfying is connected.     Let be a connected subspace of . It is a separation of , then or .   "
 },
 {
-  "id": "proof-88",
+  "id": "proof-95",
   "level": "2",
-  "url": "s_connected1.html#proof-88",
+  "url": "s_connected1.html#proof-95",
   "type": "Proof",
   "number": "2.12.1",
   "title": "",

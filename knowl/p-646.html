@@ -13,13 +13,26 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(\Z\)</span> be the set of integers. Let <span class="process-math">\(\mathcal{P}=\{2, 3, 5, 7, 11,\dots\}\)</span> be the set of prime integers. The <em class="emphasis">fundamental theorem of arithmetic</em> states that any nonzero integer <span class="process-math">\(n\in \Z\)</span> can be factored in unique was as a product of primes in the form</div>
+<div class="para">Let <span class="process-math">\(d\)</span> be the box metric. It is clear that <span class="process-math">\(d(\boldx, \boldy)\geq 0\)</span> for all <span class="process-math">\(\boldx, \boldy\in \R^n\text{.}\)</span> Furthermore, we have</div>
+<div class="displaymath process-math">
+\begin{align*}
+d(\boldx, \boldy)=0 \amp \iff \abs{x_i-y_i}=0 \text{ for all i}\\
+\amp \iff x_i-y_i=0 \text{ for all i} \\
+\amp \iff x_i=y_i \text{ for all i}\\
+\amp \iff \boldx=\boldy\text{.}
+\end{align*}
+</div>
+<div class="para">This proves positivity. The symmetry follows easily from the fact that <span class="process-math">\(\abs{x-y}=\abs{y-x}\text{.}\)</span> As for the triangle inequality, for all <span class="process-math">\(1\leq i\leq n\)</span> we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
-n=\pm \prod_{p\in \mathcal{P}} p^{v_p(n)}\text{,}
+\abs{x_i-y_i}=\abs{x_i-z_i+z_i-y_i}\leq \abs{x_i-z_i}+\abs{z_i-y_i}\leq d(\boldx, \boldz)+d(\boldz,\boldy)\text{,}
 \end{equation*}
 </div>
-<div class="para">where <span class="process-math">\(v_p(n)\)</span> is a nonnegative integer, and <span class="process-math">\(v_p(n)=0\)</span> for all but finitely many primes <span class="process-math">\(p\text{.}\)</span> We call <span class="process-math">\(v_p(n)\)</span> the <dfn class="terminology">valuation</dfn> of <span class="process-math">\(n\)</span> at the prime <span class="process-math">\(p\text{;}\)</span> it tells us the highest power of <span class="process-math">\(p\)</span> dividing <span class="process-math">\(n\text{.}\)</span>
+<div class="para">where the leftmost inequality is the triangle inequality for the absolute value, and the rightmost inequality follows from the definition of <span class="process-math">\(d\text{.}\)</span> Since the inequality holds for all <span class="process-math">\(1\leq i\leq n\text{,}\)</span> we conclude that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+d(\boldx,\boldy)=\max\{\abs{x_i-y_i}\colon 1\leq i\leq n\}\leq d(\boldx,\boldz)+d(\boldz,\boldx)\text{.}
+\end{equation*}
 </div>
 </div>
 <span class="incontext"><a href="s_metric1.html#p-646" class="internal">in-context</a></span>

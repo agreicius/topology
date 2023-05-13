@@ -58,6 +58,11 @@ G_0 \arrow[ur, "g_1"] \arrow[dr,"g_2"'] \amp \amp G \arrow[r, dotted, "\exists! 
             </ol>
         </p>
     </statement>
+    <proof>
+        <p>
+            Homework exercise. 
+        </p>
+    </proof>
   </theorem>
   <theorem xml:id="th_seifert_van_kampen">
     <title>Seifert-van Kampen theorem</title>
@@ -94,7 +99,7 @@ G_0 \arrow[ur, "g_1"] \arrow[dr,"g_2"'] \amp \amp G \arrow[r, dotted, "\exists! 
             <p>
                 We can see by the <xref ref="th_weak_Seifert_vanKampen" text="custom">weak Seifert-van Kampen theorem</xref> that there is <em>at most</em> one <m>\phi</m> satisfying the given conditions. Indeed, given any <m>[f]\in \pi_1(X,x_0)</m>, we have 
             <me>[f]=[g_1]*[g_2]*\cdots *[g_n]</me>, 
-            where <m>[g_k]=j_1([g_k]_U)</m> or <m>[g_j]=j_2([g_k]_V)</m> for all <m>1\leq k\leq n</m>. But then since <m>\phi</m> is a group homomorphism, we must have 
+            where <m>[g_k]=j_1([g_k]_U)</m> or <m>[g_k]=j_2([g_k]_V)</m> for all <m>1\leq k\leq n</m>. But then since <m>\phi</m> is a group homomorphism, we must have 
             <md>
                 <mrow>\phi([f]) \amp =\phi([g_1])*\phi([g_2])*\cdots *\phi([g_n])</mrow>
             </md>
@@ -111,15 +116,15 @@ G_0 \arrow[ur, "g_1"] \arrow[dr,"g_2"'] \amp \amp G \arrow[r, dotted, "\exists! 
         <proof>
             <title>Existence of <m>\phi</m></title>
             <p>
-               We will define <m>\phi</m> by first constructing a function <m>\tau\colon P(X)\rightarrow H</m> that satisfies the following conditions:
+               We will define <m>\phi</m> by constructing a function <m>\tau\colon P(X)\rightarrow H</m> that satisfies the following conditions:
                <mdn>
                 <mrow xml:id="eq_SvK_1"> [f]=[g] \amp \implies \tau([f])=\tau([g])</mrow>
                 <mrow xml:id="eq_SvK_2"> \tau(f*g)\amp =\tau(f)*\tau(g) </mrow>
-                <mrow xml:id="eq_SvK_3"> \tau(f)\amp =\phi_1([f]) \text{ for all } f\in P(U; x_0,x_0) </mrow>
-                <mrow xml:id="eq_SvK_4"> \tau([f]_V)\amp =\phi_2([f]) \text{ for all } f\in P(V; x_0,x_0) </mrow>
+                <mrow xml:id="eq_SvK_3"> \tau(f)\amp =\phi_1([f]_U) \text{ for all } f\in P(U; x_0,x_0) </mrow>
+                <mrow xml:id="eq_SvK_4"> \tau(f)\amp =\phi_2([f]_V) \text{ for all } f\in P(V; x_0,x_0) </mrow>
                </mdn>.
             With such a <m>\tau</m> in hand, we let <m>\phi\colon \pi_1(X,x_0)\rightarrow H</m> be defined as 
-            <m>\phi([f])=\tau(f)</m>. It is clear from properties <xref first="eq_SvK_1" last="eq_SvK_2"/> that <m>\phi</m> is a homomorphism; and properties <xref first="eq_SvK_3" last="eq_SvK_4"/> guarantee that <m>\phi\circ f_k=\phi_k</m> for <m>1\leq k\leq 2</m>. 
+            <m>\phi([f])=\tau(f)</m>. It is clear from properties <xref first="eq_SvK_1" last="eq_SvK_2"/> that <m>\phi</m> is a homomorphism; and properties <xref first="eq_SvK_3" last="eq_SvK_4"/> guarantee that <m>\phi\circ j_k=\phi_k</m> for <m>1\leq k\leq 2</m>. 
             </p>
             <p>
                 Our construction of <m>\tau</m> proceeds by building up the domain of definition of <m>\tau</m> step by step: from <m>D_1=P(U; x_0,x_0)\cup P(V; x_0,x_0)</m> to <m>D_2=P(U)\cup P(V)</m> to <m>D=P(X)</m>. 
@@ -169,8 +174,8 @@ G_0 \arrow[ur, "g_1"] \arrow[dr,"g_2"'] \amp \amp G \arrow[r, dotted, "\exists! 
                     Next, given a path (not necessarily a loop) <m>f\in P(W)</m>, where <m>W=U</m> or <m>W=V</m>,  we define <m>\tau\vert_{D_2}(f)=\tau\vert_{D_1}(\alpha_x*f*\overline{\alpha}_y)</m>. Note that the right-hand side here makes sense since <m>\alpha_x*f*\overline{\alpha}_y\in P(W; x_0,x_0</m>.  It is now a straightforward exercise to show that <m>\tau\vert_{D_2}</m> satisfies the following properties:
                     <mdn>
                         <mrow xml:id="eq_D_2_extend">\tau\vert_{D_2}(f)\amp= \tau\vert_{D_1}(f) \text{ for all } f\in P(W; x_0,x_0)</mrow>
-                        <mrow xml:id="eq_SvK_1b"> [f]=[g]\amp \implies \tau(f)=\tau(g) \text{ for all } f,g\in P(W)</mrow>
-                        <mrow xml:id="eq_SvK_2b">\tau(f*g) \amp =\tau(f)\tau(g) \text{ for all } f,g\in P(W)</mrow>
+                        <mrow xml:id="eq_SvK_1b"> [f]=[g]\amp \implies \tau\vert_{D_2}(f)=\tau\vert_{D_2}(g) \text{ for all } f,g\in P(W)</mrow>
+                        <mrow xml:id="eq_SvK_2b">\tau\vert_{D_2}(f*g) \amp =\tau\vert_{D_2}(f)\tau\vert_{D_2}(g) \text{ for all } f,g\in P(W)</mrow>
                     </mdn>,
                     where <m>W=U</m> or <m>W=V</m>. For example, <xref ref="eq_SvK_1b"/> follows from the fact that if <m>f</m> and <m>g</m> are homotopic in <m>W</m>, then so are <m>\alpha_x*f*\overline{\alpha}_y</m> and <m>\alpha_x*g*\overline{\alpha}_y</m>. And <xref ref="eq_SvK_2b"/> can be shown as follows: if <m>f\in P(W; x,y)</m> and <m>g\in P(W; y,z)</m>, then we have 
                     <md>
@@ -188,38 +193,40 @@ G_0 \arrow[ur, "g_1"] \arrow[dr,"g_2"'] \amp \amp G \arrow[r, dotted, "\exists! 
                    <me>
                     0=s_0&lt; s_1 &lt; \cdots &lt; s_n=1
                    </me>
-                    such that for all <m>1\leq k\leq n</m> we have <m>f([s_{k-1},s_k])\subseteq U</m> or <m>f([s_{k-1},s_k])\subseteq V</m>. Let <m>\phi_k\colon I\rightarrow [s_{k-1}, s_k]</m> be the <q>positive linear map</q> from <m>I</m> to <m>[s_{k-1}, s_k]</m>  (<m>\phi(t)=(s_k-s{k-1})t+s_{k-1}</m>), and let <m>f_k=f\circ \phi_k</m>. We define 
-                    <me>
-                    \tau(f)=\tau\vert_{D_2}(f_1)\tau\vert_{D_2}(f_2)\cdots \tau\vert_{D_2}(f_n)
-                    </me>. 
+                    such that for all <m>1\leq k\leq n</m> we have <m>f([s_{k-1},s_k])\subseteq U</m> or <m>f([s_{k-1},s_k])\subseteq V</m>. Let <m>\phi_k\colon I\rightarrow [s_{k-1}, s_k]</m> be the <q>positive linear map</q> from <m>I</m> to <m>[s_{k-1}, s_k]</m>  (<ie/>, <m>\phi_k(t)=(s_k-s_{k-1})t+s_{k-1}</m>), and let <m>f_k=f\circ \phi_k</m>. We define 
+                    <men xml:id="eq_def_tau">
+                    \tau(f)=\prod_{k=1}^n\tau\vert_{D_2}(f_k)
+                    </men>. 
                     We must show that <m>\tau</m> is well-defined, agrees with <m>\tau\vert_{D_2}</m> and satisfies <xref first="eq_SvK_1" last="eq_SvK_2"/>.
                     </p>
                     <case>
                     <title><m>\tau</m> is well-defined and agrees with <m>\tau\vert_{D_2}</m></title>
                     <p>
-                      First we show that <m>\tau</m> is well-defined: <ie/>, that our definition does not depend on our choice of partition of <m>I</m>. Since any two partitions have a common refinement, it is suffices to show that refining our partition by one additional endpoint does not affect our definition of <m>\tau(f)</m>. Suppose we split the <m>k</m>-th subinterval as 
+                      First we show that <m>\tau</m> is well-defined: <ie/>, that our definition does not depend on our choice of partition of <m>I</m>. Since any two partitions have a common refinement, it suffices to show that refining our partition by one additional endpoint does not affect our definition of <m>\tau(f)</m>. Suppose we split the <m>k</m>-th subinterval as 
                     <me>
                         s_{k-1}&lt; s_* &lt; s_k
                     </me>,
                     and let <m>f_{k'}=f\circ \phi'</m>, where <m>\phi'</m> is the positive linear map from <m>I</m> to <m>[s_{k-1},s_*]</m>, and let <m>f_{k''}=f\circ \phi''</m>, where <m>\phi''</m> is the positive linear map from <m>I</m> to <m>[s_{*},s_k]</m>. Since <m>f_{k'}, f_{k''}\in P(W)</m> for <m>W=U</m> or <m>W=V</m>, we have 
                     <md>
-                        <mrow> \tau(f)\amp= \tau\vert_{D_2}(f_1)\cdots\tau\vert_{D_2}(f_{k'})\tau\vert_{D_2}(f_{k'''})\tau\vert_{D_2}(f_{k+1})\cdots \tau\vert_{D_2}(f_n) </mrow>
-                        <mrow> \amp= \tau\vert_{D_2}(f_1)\cdots\tau\vert_{D_2}(f_{k'}*f_{k''})\tau\vert_{D_2}(f_{k+1})\cdots \tau\vert_{D_2}(f_n)</mrow>
-                        <mrow> \amp = \tau\vert_{D_2}(f_1)\cdots\tau\vert_{D_2}(f_{l})\tau\vert_{D_2}(f_{k+1})\cdots \tau\vert_{D_2}(f_n)</mrow>
+                        <mrow> \tau(f)\amp= \prod_{l=1}^{k-1}\tau\vert_{D_2}(f_l)\cdot\left(\tau\vert_{D_2}(f_{k'})\cdot\tau\vert_{D_2}(f_{k''})\right)\cdot \prod_{l=k+1}^n\tau\vert_{D_2}(f_{l}) </mrow>
+                        <mrow> \amp= \prod_{l=1}^{k-1}\tau\vert_{D_2}(f_l)\cdot\tau\vert_{D_2}(f_{k'}*f_{k''})\cdot \prod_{l=k+1}^{n}\tau\vert_{D_2}(f_l)</mrow>
+                        <mrow> \amp = \prod_{l=1}^{n}\tau\vert_{D_2}(f_l)</mrow>
                     </md>,
-                    where the last equality holds because <m>[f_k]=[f_{k'}*f_{k''}]</m> and <xref ref="eq_SvK_1b"/>.   
+                    where the last equality holds because <m>[f_k]=[f_{k'}*f_{k''}]</m> and property <xref ref="eq_SvK_1b"/>.   
                     </p>
                     <p>
                         It is clear that <m>\tau</m> agrees with <m>\tau\vert_{D_2}</m> since for a path <m>f\in P(W)</m>, where <m>W=U</m> or <m>W=V</m>, we may choose as our partition 
                         <me>
                             s_0=0&lt; s_1=1
                         </me>,
-                    in which case <m>\tau(f)=\tau\vert_{D_{2}}(f_1)=\tau\vert_{D_2}(f)</m>. 
+                    in which case <m>\tau(f)=\tau\vert_{D_{2}}(f_1)=\tau\vert_{D_2}(f)</m>.
+                    </p>
+                    <p>
+                        In particular since <m>\tau</m> agrees with our earlier definition of <m>\tau\vert_{D_1}</m>, where <m>D_1=P(U; x_0,x_0)\cup P(V; x_0,x_0)</m>, properties <xref first="eq_SvK_3" last="eq_SvK_4"/> are automatically satisfied. 
                     </p>
                     </case>
                     <case>
                     <title><m>\tau</m> satisfies <xref ref="eq_SvK_1"/></title>
-                    
                     <p>
                     Assume <m>f,g\in P(X; x,y)</m> and <m>[f]=[g]</m>. Let <m>F\colon I\times I\rightarrow X</m> be a path homotopy from <m>f</m> to <m>g</m>. Again, using <xref ref="cor_Lebesgue_number"/>, we can find partitions 
                     <md>
@@ -236,19 +243,19 @@ G_0 \arrow[ur, "g_1"] \arrow[dr,"g_2"'] \amp \amp G \arrow[r, dotted, "\exists! 
                         \tau\vert_{D_2}(f_{k,l-1})\tau\vert_{D_2}(\gamma_{k,l})=\tau\vert_{D_2}(\gamma_{k-1,l})\tau\vert_{D_2}(f_{k,l})
                     </me>
                     and hence that 
-                    <me>
+                    <men xml:id="eq_conj">
                     \tau\vert_{D_2}(f_{k,l-1})=\tau\vert_{D_2}(\gamma_{k-1,l})\tau\vert_{D_2}(f_{k,l})\tau\vert_{D_2}(\gamma_{k,l})^{-1}
-                    </me>.
-                    Let <m>f_{l}(s)=F(s,t_l)</m> for all <m>0\leq j\leq n</m>. So in particular, we have <m>f_{0}(s)=F(s,0)=f(s)</m> and <m>f_n(s)=F(s,1)=g(s)</m>. Note that using our notation from above, we have 
+                    </men>.
+                    Let <m>f_{l}(s)=F(s,t_l)</m> for all <m>0\leq j\leq n</m>. So in particular, we have <m>f_{0}(s)=F(s,0)=f(s)</m> and <m>f_n(s)=F(s,1)=g(s)</m>. Note that  we have 
                     <me>
-                        (f_l)_{k}=f_j\circ \phi_k=F\circ h_{k,l}=f_{k,l}
+                        f_j\circ \phi_k=F\circ h_{k,l}=f_{k,l}
                     </me>. 
-                    It follows, using our definition of <m>\tau</m> that for all <m>1\leq l\leq n</m>, we have 
+                    It follows, using our <xref ref="eq_def_tau" text="custom">definition of <m>\tau</m></xref> that for all <m>1\leq l\leq n</m>, we have 
                     <md>
-                        <mrow>\tau(f_{l-1}) \amp =\tau\vert_{D_2}(f_{1,l-1})\tau\vert_{D_2}(f_{2,l-1})\cdots \tau\vert_{D_2}(f_{n,l-1})</mrow>
-                        <mrow> \amp = (\tau\vert_{D_2}(\gamma_{0,l})\tau\vert_{D_2}(f_{1,l})\tau\vert_{D_2}(\gamma_{1,l})^{-1})(\tau\vert_{D_2}(\gamma_{1,l})\tau\vert_{D_2}(f_{2,l})\tau\vert_{D_2}(\gamma_{2,l})^{-1})\cdots (\tau\vert_{D_2}(\gamma_{n-1,l})\tau\vert_{D_2}(f_{n,l})\tau\vert_{D_2}(\gamma_{n,l})^{-1}) </mrow>
-                        <mrow> \amp = \tau\vert_{D_2}(e_{x})(\tau\vert_{D_2}(f_{1,l})\tau\vert_{D_2}(f_{2,l})\cdots \tau\vert_{D_2}(f_{n,l}))\tau\vert_{D_2}(e_y)</mrow>
-                        <mrow> \amp = \tau\vert_{D_2}(f_{1,l})\tau\vert_{D_2}(f_{2,l})\cdots\tau\vert_{D_2}(f_{n,l})</mrow>
+                        <mrow>\tau(f_{l-1}) \amp =\prod_{k=1}^n\tau\vert_{D_2}(f_{k,l-1})</mrow>
+                        <mrow> \amp = \prod_{k=1}^n(\tau\vert_{D_2}(\gamma_{k-1,l})\tau\vert_{D_2}(f_{k,l})\tau\vert_{D_2}(\gamma_{k,l})^{-1}) \amp <xref ref="eq_conj"/></mrow>
+                        <mrow> \amp = \tau\vert_{D_2}(e_{x})\cdot \prod_{k=1}^n\tau\vert_{D_2}(f_{k,l})\cdot \tau\vert_{D_2}(e_y) \amp \text{(cancellation)}</mrow>
+                        <mrow> \amp = \prod_{k=1}^n\tau\vert_{D_2}(f_{k,l}) \amp (\tau\vert_{D_2}(e_x)=\tau\vert_{D_2}(e_y)=e)</mrow>
                         <mrow> \amp = \tau(f_l)</mrow>
                     </md>.
                     We conclude that <m>\tau(f)=\tau(f_{0})=\tau(f_{n})=\tau(g)</m>, as desired. 
@@ -257,7 +264,40 @@ G_0 \arrow[ur, "g_1"] \arrow[dr,"g_2"'] \amp \amp G \arrow[r, dotted, "\exists! 
                     <case>
                     <title><m>\tau</m> satisfies <xref ref="eq_SvK_2"/></title>
                     <p>
-                        
+                       Let <m>f\in P(X; x,y)</m> and <m>g\in P(X; y,z)</m>. We prove that <m>\tau(f*g)=\tau(f)\tau(g)</m>. We choose a partition 
+                       <me>
+                        0=s_0&lt; s_1 &lt; \dots &lt; s_n=1
+                       </me>
+                        such that <m>s_k=1/2</m> for some <m>1\leq k\leq n</m> and for all <m>1\leq l\leq n</m> we have <m>f([s_{l-1}, s_l])\subseteq W</m>, where <m>W=U</m> or <m>W=V</m>. As above, we let <m>\phi_l\colon I\rightarrow [s_{l-1}, s_l]</m> be the positive linear map from <m>I</m> onto <m>[s_{l-1}, s_l]</m>. First observe, using the definition of <m>*</m>, that 
+                        <md>
+                            <mrow>f*g\circ\phi_l(s) \amp= 
+                            \begin{cases}
+                              f(2\phi_l(s)) \amp \text{if } l\leq k\\ 
+                              g(2\phi_l(s)-1) \amp \text{if } l\geq k+1
+                              \end{cases}
+                             </mrow>
+                        </md>
+                        By definition, we have 
+                        <md>
+                            <mrow>\tau(f*g) \amp=\prod_{l=1}^n\tau\vert_{D_2}(f*g\circ \phi_l) </mrow>
+                            <mrow> \amp = \prod_{l=1}^k\tau\vert_{D_2}(f\circ (2\phi_l))\cdot \prod_{l=k+1}^n\tau\vert_{D_2}(g\circ (2\phi_l-1)) \amp (\text{def. of } *) </mrow>
+                            <mrow> \amp = \tau(f)\tau(g) </mrow>
+                        </md>.
+                        The last equality here follows as the functions  
+                        <md>
+                            <mrow>2\phi_l\colon I\amp \rightarrow [2s_{l-1},2s_l] \amp (l\leq k)</mrow>
+                            <mrow>(2\phi_l-1)\colon I\amp \rightarrow [2s_{l-1}-1,2s_l-1] \amp (l\geq k+1)</mrow>
+                        </md>
+                        are the positive linear maps corresponding to the two partitions  
+                        <md>
+                            <mrow>0=2s_0 \amp &lt; 2s_{1} &lt; \dots &lt; 2s_{k}=1 </mrow>
+                            <mrow>0=2s_{k}-1 \amp &lt; 2s_{k+1}-1 &lt; \dots &lt; 2s_{n}-1=1 </mrow>
+                        </md>.
+                        The <xref ref="eq_def_tau" text="custom">definition of <m>\tau</m></xref> now implies 
+                        <md>
+                            <mrow>\tau(f) \amp =\prod_{l=1}^k\tau\vert_{D_2}(f\circ (2\phi_l))</mrow>
+                            <mrow>\tau(g) \amp =\prod_{l=k+1}^n\tau\vert_{D_2}(g\circ (2\phi_l-1))</mrow>
+                        </md>.
                     </p>
 
                     </case>
@@ -269,7 +309,7 @@ G_0 \arrow[ur, "g_1"] \arrow[dr,"g_2"'] \amp \amp G \arrow[r, dotted, "\exists! 
     </proof>
   </theorem>
   <corollary xml:id="cor_Seifert_vanKampen">
-  <title>Seifert-van Kampen:classical</title>
+  <title>Seifert-van Kampen: classical</title>
     <statement>
         <p>
            Let <m>X=U\cup V</m> be an open covering where <m>U</m>, <m>V</m>, and <m>U\cap V</m> are path connected. With notation as in the Seifert-van Kampen theorem, we have  
@@ -282,6 +322,11 @@ G_0 \arrow[ur, "g_1"] \arrow[dr,"g_2"'] \amp \amp G \arrow[r, dotted, "\exists! 
             </me>.
         </p>
     </statement>
+    <proof>
+        <p>
+            This follows directly from <xref ref="th_seifert_van_kampen"/> and <xref ref="th_pushouts"/>.
+        </p>
+    </proof>
   </corollary>
   <corollary xml:id="cor_Seifert_vanKampen_simplyconnected">
   <title>Seifert-van Kampen: special cases</title>
@@ -309,7 +354,7 @@ G_0 \arrow[ur, "g_1"] \arrow[dr,"g_2"'] \amp \amp G \arrow[r, dotted, "\exists! 
     </statement>
     <proof>
         <p>
-            
+          This follows directly from  the explicit description  of <m>\pi_1(X,x_0)</m> given in <xref ref="cor_Seifert_vanKampen"/>. 
         </p>
     </proof>
   </corollary>

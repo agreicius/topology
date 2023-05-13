@@ -11,15 +11,15 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_def_tau.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_Lebesgue_number.html ./knowl/eq_def_tau.html ./knowl/eq_conj.html">
 \begin{align*}
-f*g\circ\phi_l(s) \amp= 
-\begin{cases}
-f(2\phi_l(s)) \amp \text{if } l\leq k\\ 
-g(2\phi_l(s)-1) \amp \text{if } l\geq k+1
-\end{cases}
+\tau(f_{l-1}) \amp =\prod_{k=1}^n\tau\vert_{D_2}(f_{k,l-1})\\
+\amp = \prod_{k=1}^n(\tau\vert_{D_2}(\gamma_{k-1,l})\tau\vert_{D_2}(f_{k,l})\tau\vert_{D_2}(\gamma_{k,l})^{-1}) \amp \knowl{./knowl/eq_conj.html}{\text{(1.15.11)}}\\
+\amp = \tau\vert_{D_2}(e_{x})\cdot \prod_{k=1}^n\tau\vert_{D_2}(f_{k,l})\cdot \tau\vert_{D_2}(e_y) \amp \text{(cancellation)}\\
+\amp = \prod_{k=1}^n\tau\vert_{D_2}(f_{k,l}) \amp (\tau\vert_{D_2}(e_x)=\tau\vert_{D_2}(e_y)=e)\\
+\amp = \tau(f_l)
 \end{align*}
 </div>
-<span class="incontext"><a href="s_seifert_van_kampen.html#md-93" class="internal">in-context</a></span>
+<span class="incontext"><a href="s_seifert_van_kampen.html#md-92" class="internal">in-context</a></span>
 </body>
 </html>

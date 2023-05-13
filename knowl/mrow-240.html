@@ -13,10 +13,11 @@
 <body class="ignore-math">
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_def_tau.html">
 \begin{align*}
-2\phi_l\colon I\amp \rightarrow [2s_{l-1},2s_l] \amp (l\leq k)\\
-(2\phi_l-1)\colon I\amp \rightarrow [2s_{l-1}-1,2s_l-1] \amp (l\geq k+1)
+\tau(f*g) \amp=\prod_{l=1}^n\tau\vert_{D_2}(f*g\circ \phi_l) \\
+\amp = \prod_{l=1}^k\tau\vert_{D_2}(f\circ (2\phi_l))\cdot \prod_{l=k+1}^n\tau\vert_{D_2}(g\circ (2\phi_l-1)) \amp (\text{def. of } *) \\
+\amp = \tau(f)\tau(g) 
 \end{align*}
 </div>
-<span class="incontext"><a href="s_seifert_van_kampen.html#md-95" class="internal">in-context</a></span>
+<span class="incontext"><a href="s_seifert_van_kampen.html#md-94" class="internal">in-context</a></span>
 </body>
 </html>

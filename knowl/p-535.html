@@ -13,49 +13,14 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Assume <span class="process-math">\(f,g\in P(X; x,y)\)</span> and <span class="process-math">\([f]=[g]\text{.}\)</span> Let <span class="process-math">\(F\colon I\times I\rightarrow X\)</span> be a path homotopy from <span class="process-math">\(f\)</span> to <span class="process-math">\(g\text{.}\)</span> Again, using <a href="" class="xref" data-knowl="./knowl/cor_Lebesgue_number.html" title="Corollary 2.16.7: Lebesgue number">Corollary 2.16.7</a>, we can find partitions</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_Lebesgue_number.html">
-\begin{align*}
-0=s_0 \amp &lt; s_1 &lt; \dots &lt; s_n=1 \\
-0=t_0 \amp &lt; t_1 &lt; \dots &lt; t_n=1 
-\end{align*}
-</div>
-<div class="para">such that for each subrectangle <span class="process-math">\(R_{k,l}=[s_{k-1}, s_k]\times [t_{l-1},t_l]\)</span> of <span class="process-math">\(I\times I\text{,}\)</span> we have <span class="process-math">\(F(R_{k,l})\subseteq W\text{,}\)</span> where  <span class="process-math">\(W=U\)</span> or <span class="process-math">\(W=V\text{.}\)</span> For each <span class="process-math">\((k,l)\)</span> with <span class="process-math">\(1 \leq k\leq n\)</span> and <span class="process-math">\(0\leq l\leq n\text{,}\)</span> let <span class="process-math">\(h_{k,l}\)</span> be the horizontal path in <span class="process-math">\(I\times I\)</span> from <span class="process-math">\((s_{k-1}, t_l)\)</span> to <span class="process-math">\((s_k, t_l)\text{;}\)</span> similarly define <span class="process-math">\(v_{k,l}\)</span> to be the vertical path from <span class="process-math">\((s_{k}, t_{l-1})\)</span> to <span class="process-math">\((s_k,t_l)\)</span> for all pairs <span class="process-math">\((k,l)\)</span> with <span class="process-math">\(0\leq k\leq n\)</span> and <span class="process-math">\(1\leq l\leq n\text{.}\)</span> Lastly, define</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_Lebesgue_number.html">
-\begin{align*}
-f_{k,l} \amp =F\circ h_{k,l}\\
-\gamma_{k,l} \amp =F\circ v_{k,l}
-\end{align*}
-</div>
-<div class="para">for all pairs <span class="process-math">\((k,l)\)</span> for which these expressions make sense. Fix a pair <span class="process-math">\((k,l)\)</span> with <span class="process-math">\(1\leq k,l\leq n\text{.}\)</span> The polygonal paths <span class="process-math">\(h_{k,l-1}*v_{k,l}\)</span> and <span class="process-math">\(v_{k-1,l}*h_{k,l}\)</span> respectively traverse the bottom-and-right segment and left-and-top segment of the rectangle <span class="process-math">\(R_{k,l}\text{.}\)</span> Since the rectangle is convex, these paths are homotopic in <span class="process-math">\(R_{k,l}\text{.}\)</span> Composing with <span class="process-math">\(F\)</span> gives us a homotopy of <span class="process-math">\(f_{k,l-1}*\gamma_{k,l}\)</span> and <span class="process-math">\(\gamma_{k-1,l}*f_{k,l}\)</span> in <span class="process-math">\(F(R_{k,l})\subseteq W\text{.}\)</span> Using properties of <span class="process-math">\(\tau\vert_{D_2}\text{,}\)</span> we conclude that</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_Lebesgue_number.html">
+<div class="para">It is clear that <span class="process-math">\(\tau\)</span> agrees with <span class="process-math">\(\tau\vert_{D_2}\)</span> since for a path <span class="process-math">\(f\in P(W)\text{,}\)</span> where <span class="process-math">\(W=U\)</span> or <span class="process-math">\(W=V\text{,}\)</span> we may choose as our partition</div>
+<div class="displaymath process-math">
 \begin{equation*}
-\tau\vert_{D_2}(f_{k,l-1})\tau\vert_{D_2}(\gamma_{k,l})=\tau\vert_{D_2}(\gamma_{k-1,l})\tau\vert_{D_2}(f_{k,l})
+s_0=0&lt; s_1=1\text{,}
 \end{equation*}
 </div>
-<div class="para">and hence that</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_Lebesgue_number.html">
-\begin{equation*}
-\tau\vert_{D_2}(f_{k,l-1})=\tau\vert_{D_2}(\gamma_{k-1,l})\tau\vert_{D_2}(f_{k,l})\tau\vert_{D_2}(\gamma_{k,l})^{-1}\text{.}
-\end{equation*}
+<div class="para">in which case <span class="process-math">\(\tau(f)=\tau\vert_{D_{2}}(f_1)=\tau\vert_{D_2}(f)\text{.}\)</span>
 </div>
-<div class="para">Let <span class="process-math">\(f_{l}(s)=F(s,t_l)\)</span> for all <span class="process-math">\(0\leq j\leq n\text{.}\)</span> So in particular, we have <span class="process-math">\(f_{0}(s)=F(s,0)=f(s)\)</span> and <span class="process-math">\(f_n(s)=F(s,1)=g(s)\text{.}\)</span> Note that using our notation from above, we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_Lebesgue_number.html">
-\begin{equation*}
-(f_l)_{k}=f_j\circ \phi_k=F\circ h_{k,l}=f_{k,l}\text{.}
-\end{equation*}
-</div>
-<div class="para">It follows, using our definition of <span class="process-math">\(\tau\)</span> that for all <span class="process-math">\(1\leq l\leq n\text{,}\)</span> we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_Lebesgue_number.html">
-\begin{align*}
-\tau(f_{l-1}) \amp =\tau\vert_{D_2}(f_{1,l-1})\tau\vert_{D_2}(f_{2,l-1})\cdots \tau\vert_{D_2}(f_{n,l-1})\\
-\amp = (\tau\vert_{D_2}(\gamma_{0,l})\tau\vert_{D_2}(f_{1,l})\tau\vert_{D_2}(\gamma_{1,l})^{-1})(\tau\vert_{D_2}(\gamma_{1,l})\tau\vert_{D_2}(f_{2,l})\tau\vert_{D_2}(\gamma_{2,l})^{-1})\cdots (\tau\vert_{D_2}(\gamma_{n-1,l})\tau\vert_{D_2}(f_{n,l})\tau\vert_{D_2}(\gamma_{n,l})^{-1}) \\
-\amp = \tau\vert_{D_2}(e_{x})(\tau\vert_{D_2}(f_{1,l})\tau\vert_{D_2}(f_{2,l})\cdots \tau\vert_{D_2}(f_{n,l}))\tau\vert_{D_2}(e_y)\\
-\amp = \tau\vert_{D_2}(f_{1,l})\tau\vert_{D_2}(f_{2,l})\cdots\tau\vert_{D_2}(f_{n,l})\\
-\amp = \tau(f_l)\text{.}
-\end{align*}
-</div>
-<div class="para">We conclude that <span class="process-math">\(\tau(f)=\tau(f_{0})=\tau(f_{n})=\tau(g)\text{,}\)</span> as desired.</div>
 </div>
 <span class="incontext"><a href="s_seifert_van_kampen.html#p-535" class="internal">in-context</a></span>
 </body>

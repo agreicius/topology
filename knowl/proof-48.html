@@ -11,34 +11,24 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h4 class="heading"><span class="title">Construction: <span class="process-math">\(\tau\vert_{D_2}\text{,}\)</span> <span class="process-math">\(D_2=P(U)\cup P(V)\)</span>.</span></h4> <div class="para logical">
-<div class="para">First we fix a family of paths <span class="process-math">\(\{\alpha_x\}_{x\in X}\)</span> satisfying the following conditions:</div>
-<ol class="decimal">
-<li><div class="para">
-<span class="process-math">\(\alpha_x\in P(X; x_0, x)\)</span> (i.e., <span class="process-math">\(\alpha_x\)</span> is a path from <span class="process-math">\(x_0\)</span> to <span class="process-math">\(x\)</span>),</div></li>
-<li><div class="para"><span class="process-math">\(\alpha_{x_0}=e_{x_0}\text{,}\)</span></div></li>
-<li><div class="para">
-<span class="process-math">\(x\in W\implies \alpha_x\in P(W; x_0, x)\)</span> for <span class="process-math">\(W\in \{U, V, U\cap V\}\text{.}\)</span>
-</div></li>
-</ol>
-<div class="para">This is where we use the condition that <span class="process-math">\(U\text{,}\)</span> <span class="process-math">\(V\text{,}\)</span> and <span class="process-math">\(U\cap V\)</span> are all path connected (and that <span class="process-math">\(X=U\cup V\)</span>).</div>
-</div> <div class="para logical">
-<div class="para">Next, given a path (not necessarily a loop) <span class="process-math">\(f\in P(W)\text{,}\)</span> where <span class="process-math">\(W=U\)</span> or <span class="process-math">\(W=V\text{,}\)</span>  we define <span class="process-math">\(\tau\vert_{D_2}(f)=\tau\vert_{D_1}(\alpha_x*f*\overline{\alpha}_y)\text{.}\)</span> Note that the right-hand side here makes sense since <span class="process-math">\(\alpha_x*f*\overline{\alpha}_y\in P(W; x_0,x_0\text{.}\)</span>  It is now a straightforward exercise to show that <span class="process-math">\(\tau\vert_{D_2}\)</span> satisfies the following properties:</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_SvK_1b.html ./knowl/eq_SvK_2b.html ./knowl/eq_SvK_1a.html ./knowl/eq_SvK_2a.html">
+<article class="hiddenproof"><h4 class="heading"><span class="title">Construction: <span class="process-math">\(\tau\vert_{D_1}\text{,}\)</span> <span class="process-math">\(D_1=P(U; x_0,x_0)\cup P(V; x_0,x_0)\)</span>.</span></h4> <div class="para logical">
+<div class="para">If <span class="process-math">\(f\)</span> is a path based on <span class="process-math">\(x_0\)</span> lying either in <span class="process-math">\(U\)</span> or <span class="process-math">\(V\text{,}\)</span> we define</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\tau\vert_{D_1}([f])=\begin{cases}
+\phi_1([f]_U)\amp \text{if } f\in P(U;x_0,x_0)\\ 
+\phi_2([f]_V)\amp \text{if } f\in P(V; x_0,x_0).
+\end{cases}
+\end{equation*}
+</div>
+<div class="para">Observe that <span class="process-math">\(\tau\vert_{D_1}\)</span> satisfies the following relative versions of properties <a href="" class="xref" data-knowl="./knowl/eq_SvK_1.html" title="Equation 1.15.1">(1.15.1)–(1.15.2)</a>:</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{align}
-\tau\vert_{D_2}(f)\amp= \tau\vert_{D_1}(f) \text{ for all } f\in P(W; x_0,x_0)\tag{1.15.7}\\
-[f]=[g]\amp \implies \tau(f)=\tau(g) \text{ for all } f,g\in P(W)\tag{1.15.8}\\
-\tau(f*g) \amp =\tau(f)\tau(g) \text{ for all } f,g\in P(W)\text{,}\tag{1.15.9}
+[f]_W=[g]_W \amp \implies \tau\vert_{D_1}(f)=\tau\vert_{D_1}(g) \text{ for all } f,g\in P(W;x_0,x_0)\tag{1.15.5}\\
+\tau\vert_{D_1}(f*g) \amp = \tau\vert_{D_1}(f)\tau\vert_{D_1}(g) \text{ for all } f,g\in P(W; x_0,x_0)\text{,}\tag{1.15.6}
 \end{align}
 </div>
-<div class="para">where <span class="process-math">\(W=U\)</span> or <span class="process-math">\(W=V\text{.}\)</span> For example, <a href="" class="xref" data-knowl="./knowl/eq_SvK_1b.html" title="Equation 1.15.8">(1.15.8)</a> follows from the fact that if <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are homotopic in <span class="process-math">\(W\text{,}\)</span> then so are <span class="process-math">\(\alpha_x*f*\overline{\alpha}_y\)</span> and <span class="process-math">\(\alpha_x*g*\overline{\alpha}_y\text{.}\)</span> And <a href="" class="xref" data-knowl="./knowl/eq_SvK_2b.html" title="Equation 1.15.9">(1.15.9)</a> can be shown as follows: if <span class="process-math">\(f\in P(W; x,y)\)</span> and <span class="process-math">\(g\in P(W; y,z)\text{,}\)</span> then we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_SvK_1b.html ./knowl/eq_SvK_2b.html ./knowl/eq_SvK_1a.html ./knowl/eq_SvK_2a.html">
-\begin{align*}
-\tau\vert_{D_2}(f*g) \amp = \tau\vert_{D_1}(\alpha_x*f*g*\overline{\alpha}_z)\\
-\amp =\tau\vert_{D_1}(\alpha_x*f*\overline{\alpha}_y*\alpha_y*g*\overline{\alpha}_z) \amp \knowl{./knowl/eq_SvK_1a.html}{\text{(1.15.5)}}\\
-\amp=\tau\vert_{D_1}(\alpha_x*f*\overline{\alpha}_y)\tau\vert_{D_1}(\alpha_y*g*\overline{\alpha}_z) \amp \knowl{./knowl/eq_SvK_2a.html}{\text{(1.15.6)}}\\
-\amp =\tau\vert_{D_2}(f)\tau\vert_{D_2}(g)
-\end{align*}
+<div class="para">where <span class="process-math">\(W=U\)</span> or <span class="process-math">\(W=V\text{.}\)</span>
 </div>
 </div></article><span class="incontext"><a href="s_seifert_van_kampen.html#proof-48" class="internal">in-context</a></span>
 </body>

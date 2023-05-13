@@ -13,11 +13,13 @@
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(Y\)</span> be a subspace of <span class="process-math">\(X\text{.}\)</span> Prove:</div>
+<div class="para">Let <span class="process-math">\(C\subseteq Y\text{.}\)</span> We have</div>
 <div class="displaymath process-math">
 \begin{align*}
-U\text{ open in } Y \amp\not\!\!\!\!\implies U \text{ open in } X \\
-C\text{ closed in } Y \amp\not\!\!\!\!\implies C \text{ closed in } X 
+C \text{ closed in } Y \amp \iff Y-C \text{ open in } Y \\
+\amp\iff Y-C=U\cap Y \text{ for some open } U\subseteq X\\
+\amp \iff C=(X-U)\cap Y \text{ for some open } U\subseteq X\\
+\amp \iff C=C'\cap Y \text{ for some closed } C'\subseteq X\text{.}
 \end{align*}
 </div>
 </div>

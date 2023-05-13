@@ -13,9 +13,9 @@
 <body class="ignore-math">
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_SvK_1b.html">
 \begin{align*}
-\tau(f)\amp= \tau\vert_{D_2}(f_1)\cdots\tau\vert_{D_2}(f_{k'})\tau\vert_{D_2}(f_{k'''})\tau\vert_{D_2}(f_{k+1})\cdots \tau\vert_{D_2}(f_n) \\
-\amp= \tau\vert_{D_2}(f_1)\cdots\tau\vert_{D_2}(f_{k'}*f_{k''})\tau\vert_{D_2}(f_{k+1})\cdots \tau\vert_{D_2}(f_n)\\
-\amp = \tau\vert_{D_2}(f_1)\cdots\tau\vert_{D_2}(f_{l})\tau\vert_{D_2}(f_{k+1})\cdots \tau\vert_{D_2}(f_n)
+\tau(f)\amp= \prod_{l=1}^{k-1}\tau\vert_{D_2}(f_l)\cdot\left(\tau\vert_{D_2}(f_{k'})\cdot\tau\vert_{D_2}(f_{k''})\right)\cdot \prod_{l=k+1}^n\tau\vert_{D_2}(f_{l}) \\
+\amp= \prod_{l=1}^{k-1}\tau\vert_{D_2}(f_l)\cdot\tau\vert_{D_2}(f_{k'}*f_{k''})\cdot \prod_{l=k+1}^{n}\tau\vert_{D_2}(f_l)\\
+\amp = \prod_{l=1}^{n}\tau\vert_{D_2}(f_l)
 \end{align*}
 </div>
 <span class="incontext"><a href="s_seifert_van_kampen.html#md-89" class="internal">in-context</a></span>

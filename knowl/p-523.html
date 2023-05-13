@@ -13,29 +13,14 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">We can see by the <a href="" class="xref" data-knowl="./knowl/th_weak_Seifert_vanKampen.html" title="Theorem 1.8.1: Weak Seifert-van Kampen">weak Seifert-van Kampen theorem</a> that there is <em class="emphasis">at most</em> one <span class="process-math">\(\phi\)</span> satisfying the given conditions. Indeed, given any <span class="process-math">\([f]\in \pi_1(X,x_0)\text{,}\)</span> we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_weak_Seifert_vanKampen.html">
-\begin{equation*}
-[f]=[g_1]*[g_2]*\cdots *[g_n]\text{,}
-\end{equation*}
-</div>
-<div class="para">where <span class="process-math">\([g_k]=j_1([g_k]_U)\)</span> or <span class="process-math">\([g_j]=j_2([g_k]_V)\)</span> for all <span class="process-math">\(1\leq k\leq n\text{.}\)</span> But then since <span class="process-math">\(\phi\)</span> is a group homomorphism, we must have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_weak_Seifert_vanKampen.html">
+<div class="para">First we introduce some useful notation. For a path <span class="process-math">\(f\in P(X)\text{,}\)</span> we write <span class="process-math">\([f]\)</span> to denote the path homotopy equivalence class of <span class="process-math">\(f\)</span> in <span class="process-math">\(X\text{;}\)</span> if <span class="process-math">\(f(I)\subseteq W\)</span> for <span class="process-math">\(W\in \{U, V, U\cap V\}\text{,}\)</span> then we write <span class="process-math">\([f]_W\)</span> to denote the path homotopy equivalance class of <span class="process-math">\(f\)</span> in <span class="process-math">\(W\text{.}\)</span> In particular, assuming <span class="process-math">\(f\)</span> is a loop based on <span class="process-math">\(x_0\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
 \begin{align*}
-\phi([f]) \amp =\phi([g_1])*\phi([g_2])*\cdots *\phi([g_n])
+i_1([f]_{U\cap V}) \amp = [f]_{U} \amp i_2([f]_{U\cap V}) \amp =[f]_{V}\\
+j_1([f]_U) \amp = [f] \amp j_2([f]_V)=[f]
 \end{align*}
 </div>
-<div class="para">where</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_weak_Seifert_vanKampen.html">
-\begin{equation*}
-\phi([g_k])=\begin{cases}
-\phi(j_1([g_k]_U))=\phi_1([g_k]_U) \amp \text{if } g_k\in P(U; x_0,x_0) \\ 
-\phi(j_2([g_k]_V))=\phi_2([g_k]_V) \amp \text{if } g_k\in P(V; x_0,x_0).
-\end{cases}
-\end{equation*}
-</div>
-<div class="para">Thus the homomorphism <span class="process-math">\(\phi\)</span> is uniquely determined by the homomorphisms <span class="process-math">\(\phi_1\colon \pi_1(U,x_0)\rightarrow H\)</span> and <span class="process-math">\(\phi_2\colon \pi_1(V,x_0)\rightarrow H\text{.}\)</span>
-</div>
+<div class="para">whenever these expressions make sense.</div>
 </div>
 <span class="incontext"><a href="s_seifert_van_kampen.html#p-523" class="internal">in-context</a></span>
 </body>

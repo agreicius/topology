@@ -11,12 +11,12 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_Lebesgue_number.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_Lebesgue_number.html ./knowl/eq_def_tau.html ./knowl/eq_conj.html">
 \begin{align*}
-\tau(f_{l-1}) \amp =\tau\vert_{D_2}(f_{1,l-1})\tau\vert_{D_2}(f_{2,l-1})\cdots \tau\vert_{D_2}(f_{n,l-1})\\
-\amp = (\tau\vert_{D_2}(\gamma_{0,l})\tau\vert_{D_2}(f_{1,l})\tau\vert_{D_2}(\gamma_{1,l})^{-1})(\tau\vert_{D_2}(\gamma_{1,l})\tau\vert_{D_2}(f_{2,l})\tau\vert_{D_2}(\gamma_{2,l})^{-1})\cdots (\tau\vert_{D_2}(\gamma_{n-1,l})\tau\vert_{D_2}(f_{n,l})\tau\vert_{D_2}(\gamma_{n,l})^{-1}) \\
-\amp = \tau\vert_{D_2}(e_{x})(\tau\vert_{D_2}(f_{1,l})\tau\vert_{D_2}(f_{2,l})\cdots \tau\vert_{D_2}(f_{n,l}))\tau\vert_{D_2}(e_y)\\
-\amp = \tau\vert_{D_2}(f_{1,l})\tau\vert_{D_2}(f_{2,l})\cdots\tau\vert_{D_2}(f_{n,l})\\
+\tau(f_{l-1}) \amp =\prod_{k=1}^n\tau\vert_{D_2}(f_{k,l-1})\\
+\amp = \prod_{k=1}^n(\tau\vert_{D_2}(\gamma_{k-1,l})\tau\vert_{D_2}(f_{k,l})\tau\vert_{D_2}(\gamma_{k,l})^{-1}) \amp \knowl{./knowl/eq_conj.html}{\text{(1.15.11)}}\\
+\amp = \tau\vert_{D_2}(e_{x})\cdot \prod_{k=1}^n\tau\vert_{D_2}(f_{k,l})\cdot \tau\vert_{D_2}(e_y) \amp \text{(cancellation)}\\
+\amp = \prod_{k=1}^n\tau\vert_{D_2}(f_{k,l}) \amp (\tau\vert_{D_2}(e_x)=\tau\vert_{D_2}(e_y)=e)\\
 \amp = \tau(f_l)
 \end{align*}
 </div>

@@ -13,15 +13,15 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(\{X_i\}_{i\in I}\)</span> be a collection of topological spaces, let <span class="process-math">\(X=\prod_{i\in I}X_i\text{,}\)</span> and let <span class="process-math">\((f_n)_{n=1}^\infty\)</span> be a sequence of elements of <span class="process-math">\(X\text{:}\)</span> i.e., using tuple notation, for each <span class="process-math">\(n\in \Z_+\)</span> we have</div>
+<div class="para">We prove the equality by showing</div>
 <div class="displaymath process-math">
 \begin{equation*}
-f_n=(x_{n,i})_{i\in I}\text{,}
+x\notin \prod_{i\in I}\overline{A_i} \iff x\notin \overline{\prod_{i\in I}A_i}\text{.}
 \end{equation*}
 </div>
-<div class="para">where <span class="process-math">\(x_{n,i}=f_n(i)\in X_i\text{.}\)</span> The sequence <span class="process-math">\((f_n)_{n=1}^\infty\)</span> <dfn class="terminology">converges pointwise</dfn> to an element <span class="process-math">\(f=(x_i)\in X\)</span> if for all <span class="process-math">\(i\in I\)</span> we have <span class="process-math">\(x_{n,i}\rightarrow x_i\text{:}\)</span> i.e., <span class="process-math">\(f_n(i)\rightarrow f(i)\text{.}\)</span>
+<div class="para">
+<span class="process-math">\((\implies)\text{.}\)</span> If <span class="process-math">\(x=(x_i)_{i\in I}\notin \prod_{i\in I}\overline{A_i}\text{,}\)</span> there is an index <span class="process-math">\(i_0\in I\)</span> such that <span class="process-math">\(x_{i_0}\notin \overline{A_{i_0}}\text{,}\)</span> and thus an open set <span class="process-math">\(U_{i_0}\ni x_{i_0}\)</span> such that <span class="process-math">\(U_{i_0}\cap A_{i_0}=\emptyset\text{.}\)</span> The set <span class="process-math">\(U_{i_0}\times \prod_{i\ne i_0}X_i\)</span> is open in both topologies (box and product), contains <span class="process-math">\(x=(x_i)_{i\in I}\text{,}\)</span> and is disjoint with <span class="process-math">\(\prod_{i\in I}A_i\text{.}\)</span> We conclude that <span class="process-math">\(x\notin \overline{\prod_{i\in I}A_i}\)</span> in both topologies.</div>
 </div>
-</div>
-<span class="incontext"><a href="s_prods_convergence_metric.html#p-827" class="internal">in-context</a></span>
+<span class="incontext"><a href="s_product2.html#p-827" class="internal">in-context</a></span>
 </body>
 </html>

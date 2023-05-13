@@ -13,21 +13,19 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">First we show that <span class="process-math">\(\tau\)</span> is well-defined: i.e., that our definition does not depend on our choice of partition of <span class="process-math">\(I\text{.}\)</span> Since any two partitions have a common refinement, it is suffices to show that refining our partition by one additional endpoint does not affect our definition of <span class="process-math">\(\tau(f)\text{.}\)</span> Suppose we split the <span class="process-math">\(k\)</span>-th subinterval as</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_SvK_1b.html">
+<div class="para">We now define <span class="process-math">\(\tau\colon P(X)\rightarrow H\text{.}\)</span>  Given <span class="process-math">\(f\in P(X)\text{,}\)</span> since <span class="process-math">\(f^{-1}(U)\cup f^{-1}(V)\)</span> is an open cover of the compact set <span class="process-math">\(I=[0,1]\text{,}\)</span> by <a href="" class="xref" data-knowl="./knowl/cor_Lebesgue_number.html" title="Corollary 2.16.7: Lebesgue number">Corollary 2.16.7</a> we can find a partition</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_Lebesgue_number.html ">
 \begin{equation*}
-s_{k-1}&lt; s_* &lt; s_k\text{,}
+0=s_0&lt; s_1 &lt; \cdots &lt; s_n=1
 \end{equation*}
 </div>
-<div class="para">and let <span class="process-math">\(f_{k'}=f\circ \phi'\text{,}\)</span> where <span class="process-math">\(\phi'\)</span> is the positive linear map from <span class="process-math">\(I\)</span> to <span class="process-math">\([s_{k-1},s_*]\text{,}\)</span> and let <span class="process-math">\(f_{k''}=f\circ \phi''\text{,}\)</span> where <span class="process-math">\(\phi''\)</span> is the positive linear map from <span class="process-math">\(I\)</span> to <span class="process-math">\([s_{*},s_k]\text{.}\)</span> Since <span class="process-math">\(f_{k'}, f_{k''}\in P(W)\)</span> for <span class="process-math">\(W=U\)</span> or <span class="process-math">\(W=V\text{,}\)</span> we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_SvK_1b.html">
-\begin{align*}
-\tau(f)\amp= \tau\vert_{D_2}(f_1)\cdots\tau\vert_{D_2}(f_{k'})\tau\vert_{D_2}(f_{k'''})\tau\vert_{D_2}(f_{k+1})\cdots \tau\vert_{D_2}(f_n) \\
-\amp= \tau\vert_{D_2}(f_1)\cdots\tau\vert_{D_2}(f_{k'}*f_{k''})\tau\vert_{D_2}(f_{k+1})\cdots \tau\vert_{D_2}(f_n)\\
-\amp = \tau\vert_{D_2}(f_1)\cdots\tau\vert_{D_2}(f_{l})\tau\vert_{D_2}(f_{k+1})\cdots \tau\vert_{D_2}(f_n)\text{,}
-\end{align*}
+<div class="para">such that for all <span class="process-math">\(1\leq k\leq n\)</span> we have <span class="process-math">\(f([s_{k-1},s_k])\subseteq U\)</span> or <span class="process-math">\(f([s_{k-1},s_k])\subseteq V\text{.}\)</span> Let <span class="process-math">\(\phi_k\colon I\rightarrow [s_{k-1}, s_k]\)</span> be the “positive linear map” from <span class="process-math">\(I\)</span> to <span class="process-math">\([s_{k-1}, s_k]\)</span>  (i.e., <span class="process-math">\(\phi_k(t)=(s_k-s_{k-1})t+s_{k-1}\)</span>), and let <span class="process-math">\(f_k=f\circ \phi_k\text{.}\)</span> We define</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_Lebesgue_number.html ">
+\begin{equation}
+\tau(f)=\prod_{k=1}^n\tau\vert_{D_2}(f_k)\text{.}\tag{1.15.10}
+\end{equation}
 </div>
-<div class="para">where the last equality holds because <span class="process-math">\([f_k]=[f_{k'}*f_{k''}]\)</span> and <a href="" class="xref" data-knowl="./knowl/eq_SvK_1b.html" title="Equation 1.15.8">(1.15.8)</a>.</div>
+<div class="para">We must show that <span class="process-math">\(\tau\)</span> is well-defined, agrees with <span class="process-math">\(\tau\vert_{D_2}\)</span> and satisfies <a href="" class="xref" data-knowl="./knowl/eq_SvK_1.html" title="Equation 1.15.1">(1.15.1)–(1.15.2)</a>.</div>
 </div>
 <span class="incontext"><a href="s_seifert_van_kampen.html#p-533" class="internal">in-context</a></span>
 </body>

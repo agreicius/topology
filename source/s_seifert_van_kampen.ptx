@@ -87,7 +87,7 @@ G_0 \arrow[ur, "g_1"] \arrow[dr,"g_2"'] \amp \amp G \arrow[r, dotted, "\exists! 
     </statement>
     <proof>
         <p>
-            First we introduce some useful notation. For a path <m>f\in P(X)</m>, we write <m>[f]</m> to denote the path homotopy equivalence class of <m>f</m> in <m>X</m>; if <m>f(I)\subseteq W</m> for <m>W\in \{U, V, U\cap V\}</m>, then we write <m>[f]_W</m> to denote the path homotopy equivalance class of <m>f</m> in <m>W</m>. We can use this notation to describe our maps <m>i_1,i_2,j_1,j_2</m> as follows: 
+            First we introduce some useful notation. For a path <m>f\in P(X)</m>, we write <m>[f]</m> to denote the path homotopy equivalence class of <m>f</m> in <m>X</m>; if <m>f\in P(W)\subseteq P(X)</m> for <m>W\in \{U, V, U\cap V\}</m>, then we write <m>[f]_W</m> to denote the path homotopy equivalance class of <m>f</m> in <m>W</m>. We can use this notation to describe our maps <m>i_1,i_2,j_1,j_2</m> as follows: 
             <md>
                 <mrow> i_1([f]_{U\cap V}) \amp = [f]_{U} \amp i_2([f]_{U\cap V}) \amp =[f]_{V} \amp (f\in P(U\cap V))</mrow>
                 <mrow>j_1([f]_U) \amp = [f] \amp \amp \amp (f\in P(U)) </mrow>

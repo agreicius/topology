@@ -12,7 +12,15 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">For all <span class="process-math">\(x\in X\text{,}\)</span> we have <span class="process-math">\(x\in B_1(x)\in \mathcal{B}\text{,}\)</span> proving the first axiom of <a href="" class="xref" data-knowl="./knowl/d_basis.html" title="Definition 2.2.1: Topological basis">Definition 2.2.1</a>. Next, let <span class="process-math">\(B_1=B_{\epsilon_1}(x_1), B_2=B_{\epsilon_2}(x_2)\)</span> be two metric balls. Given <span class="process-math">\(y\in B_1\cap B_2\text{,}\)</span> there are <span class="process-math">\(\delta_1, \delta_2\)</span> such that <span class="process-math">\(B_{\delta_i}(y)\subseteq B_i\)</span> for <span class="process-math">\(i=1,2\text{.}\)</span> Setting <span class="process-math">\(\delta=\min\{\delta_1, \delta_2\}\text{,}\)</span> we have <span class="process-math">\(y\in B_\delta(y)\subseteq B_1\cap B_2\text{.}\)</span> This proves the second axiom.</div>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\((X,d)\)</span> be a metric space. Given <span class="process-math">\(x\in X\)</span> and <span class="process-math">\(\epsilon&gt; 0\)</span> the <dfn class="terminology"><span class="process-math">\(\epsilon\)</span>-ball centered at <span class="process-math">\(x\)</span></dfn> is the subset <span class="process-math">\(B_\epsilon(x)\subseteq X\)</span> defined as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+B_\epsilon(x)=\{y\in X\colon d(x,y)&lt; \epsilon\}\text{.}
+\end{equation*}
+</div>
+<div class="para">In other words, <span class="process-math">\(B_\epsilon(x)\)</span> is the set of all elements of <span class="process-math">\(X\)</span> lying within a distance of <span class="process-math">\(\epsilon\)</span> of <span class="process-math">\(x\text{.}\)</span> We call <span class="process-math">\(\epsilon\)</span> the <dfn class="terminology">radius</dfn> of <span class="process-math">\(B_\epsilon(x)\text{.}\)</span> More generally, we call a subset <span class="process-math">\(U\subseteq X\)</span> a <dfn class="terminology"><span class="process-math">\(d\)</span>-metric ball</dfn> if <span class="process-math">\(U=B_\epsilon(x)\)</span> for some <span class="process-math">\(x\in X\)</span> and <span class="process-math">\(\epsilon&gt; 0\text{.}\)</span> When it is clear what the underlying metric is, we will omit <span class="process-math">\(d\)</span> and speak simply of metric balls.</div>
+</div>
 <span class="incontext"><a href="s_metric1.html#p-661" class="internal">in-context</a></span>
 </body>
 </html>

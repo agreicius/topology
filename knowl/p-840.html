@@ -12,7 +12,15 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Suppose <span class="process-math">\(f_n\rightarrow f\)</span> in either topology. Fix <span class="process-math">\(i\in I\)</span> and let <span class="process-math">\(U_i\ni f(i)\)</span> be any open set containing <span class="process-math">\(f(i)\in X_i\text{.}\)</span> The set <span class="process-math">\(U=U_i\times \prod_{j\ne i}U_j\)</span> is an open neighborhood of <span class="process-math">\(f\)</span> in both topologies. By convergence there is an <span class="process-math">\(N\)</span> such that <span class="process-math">\(f_n\in U\)</span> for all <span class="process-math">\(n\geq N\text{.}\)</span> It follows that <span class="process-math">\(f_n(i)\in U_i\)</span> for all <span class="process-math">\(n\geq N\text{.}\)</span> This proves that <span class="process-math">\(f_n(i)\rightarrow f(i)\)</span> for all <span class="process-math">\(i\in I\text{.}\)</span>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(\{X_i\}_{i\in I}\)</span> be a collection of topological spaces, let <span class="process-math">\(X=\prod_{i\in I}X_i\text{,}\)</span> and let <span class="process-math">\((f_n)_{n=1}^\infty\)</span> be a sequence of elements of <span class="process-math">\(X\text{:}\)</span> i.e., using tuple notation, for each <span class="process-math">\(n\in \Z_+\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f_n=(x_{n,i})_{i\in I}\text{,}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(x_{n,i}=f_n(i)\in X_i\text{.}\)</span> The sequence <span class="process-math">\((f_n)_{n=1}^\infty\)</span> <dfn class="terminology">converges pointwise</dfn> to an element <span class="process-math">\(f=(x_i)\in X\)</span> if for all <span class="process-math">\(i\in I\)</span> we have <span class="process-math">\(x_{n,i}\rightarrow x_i\text{:}\)</span> i.e., <span class="process-math">\(f_n(i)\rightarrow f(i)\text{.}\)</span>
+</div>
 </div>
 <span class="incontext"><a href="s_prods_convergence_metric.html#p-840" class="internal">in-context</a></span>
 </body>

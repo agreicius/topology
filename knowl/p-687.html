@@ -13,15 +13,24 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">In general, given a set <span class="process-math">\(X\)</span> the set complement operation <span class="process-math">\(Y\mapsto Y^c=X-Y\)</span> is defines a bijection</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/d_closed_set.html ./knowl/th_closed_props.html">
-\begin{align*}
-\mathcal{P}(X) \amp \leftrightarrow \mathcal{P}(X) \\
-Y \amp \mapsto Y^c \text{,}
-\end{align*}
+<div class="para">Now fix a prime integer <span class="process-math">\(p\text{.}\)</span> For <span class="process-math">\(n\in\Z\)</span> we define its <dfn class="terminology"><span class="process-math">\(p\)</span>-adic norm</dfn> <span class="process-math">\(\abs[p]{n}\)</span> as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\abs[p]{n}=\begin{cases}
+0\amp\text{if } n=0\\
+p^{-v_p(n)}\amp\text{if } n\ne 0
+\end{cases}\text{.}
+\end{equation*}
 </div>
-<div class="para">that is self-inverse: i.e., we have <span class="process-math">\((Y^c)^c=Y\)</span> for all subsets <span class="process-math">\(Y\subseteq X\text{.}\)</span> It follows from the <a href="" class="xref" data-knowl="./knowl/d_closed_set.html" title="Definition 2.4.1: Closed sets">Definition 2.4.1</a> that the closed sets of <span class="process-math">\(X\)</span> are in bijective correspondence with the open sets, and thus that a topology on <span class="process-math">\(X\)</span> is uniquely determined by specifying any collection of sets satisfying (1)-(3) from <a href="" class="xref" data-knowl="./knowl/th_closed_props.html" title="Theorem 2.4.2: Property of closed sets">Theorem 2.4.2</a>. In other words, a topology is determined by specifying either its open sets or its closed sets.</div>
+<div class="para">The function <span class="process-math">\(d\colon \Z\times\Z\rightarrow \R\)</span> defined as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+d(m,n)=\abs[p]{m-n}
+\end{equation*}
 </div>
-<span class="incontext"><a href="s_closed_closure_interior.html#p-687" class="internal">in-context</a></span>
+<div class="para">is a metric on <span class="process-math">\(\Z\text{,}\)</span> called the <span class="process-math">\(p\)</span>-adic metric. Integers <span class="process-math">\(m,n\in\Z\)</span> are close to one another with respect to this metric if their difference is highly divisible by <span class="process-math">\(p\text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a href="s_metric1.html#p-687" class="internal">in-context</a></span>
 </body>
 </html>

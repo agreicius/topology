@@ -1765,6 +1765,96 @@ var ptx_lunr_docs = [
   "body": " Seifert-van Kampen: special cases   Let be an open covering where , , and are path connected. Let be as in the Seifert-van Kampen theorem.    If and are simply connected, then is simply connected.    If is simply connected, then .    If is simply connected, then , where is the least normal subgroup of containing .      This follows directly from the explicit description of given in .   "
 },
 {
+  "id": "s_wedge_of_circles",
+  "level": "1",
+  "url": "s_wedge_of_circles.html",
+  "type": "Section",
+  "number": "1.16",
+  "title": "Wedge of circles",
+  "body": " Wedge of circles   Wedge of circles   A wedge of circles is a Hausdorff space for which we have , where is homeomorphic to for all , and there is an element such that for all .     Wedge of cirles   For each positive integer , let be the circle with equation . For any positive integer , the subspace is a wedge of circles.     Wedge of circles   Let be a wedge of circles, let , and for each let be a loop whose path homotopy equivalence class in generates . We have , and is a system of free generators of .     Wedge of circles   Let be a family of subspaces of the space satisfying . The topology of is coherent with respect to if for all subsets we have closed if and only if is closed in for all . Equivalently, the topology is coherent with respect to the if for all subsets we have open if and only if is open in for all .  A wedge of circles is a space such that (i) for some family of subspaces where each is homeomorphic to , (ii) there is an element such that for all , and (iii) is coherent with respect to .     Wedge of circles   Let be a wedge of circles, let , and for each let be a loop whose path homotopy equivalence class in generates . We have , and is a system of free generators of .    "
+},
+{
+  "id": "d_wege_of_n_circls",
+  "level": "2",
+  "url": "s_wedge_of_circles.html#d_wege_of_n_circls",
+  "type": "Definition",
+  "number": "1.16.1",
+  "title": "Wedge of <span class=\"process-math\">\\(n\\)<\/span> circles.",
+  "body": " Wedge of circles   A wedge of circles is a Hausdorff space for which we have , where is homeomorphic to for all , and there is an element such that for all .   "
+},
+{
+  "id": "eg_wedge_of_n_circles",
+  "level": "2",
+  "url": "s_wedge_of_circles.html#eg_wedge_of_n_circles",
+  "type": "Example",
+  "number": "1.16.2",
+  "title": "Wedge of <span class=\"process-math\">\\(n\\)<\/span> cirles.",
+  "body": " Wedge of cirles   For each positive integer , let be the circle with equation . For any positive integer , the subspace is a wedge of circles.   "
+},
+{
+  "id": "th_wedge_of_n_circles",
+  "level": "2",
+  "url": "s_wedge_of_circles.html#th_wedge_of_n_circles",
+  "type": "Theorem",
+  "number": "1.16.3",
+  "title": "Wedge of <span class=\"process-math\">\\(n\\)<\/span> circles.",
+  "body": " Wedge of circles   Let be a wedge of circles, let , and for each let be a loop whose path homotopy equivalence class in generates . We have , and is a system of free generators of .   "
+},
+{
+  "id": "d_wedge_of_circles",
+  "level": "2",
+  "url": "s_wedge_of_circles.html#d_wedge_of_circles",
+  "type": "Definition",
+  "number": "1.16.4",
+  "title": "Wedge of circles.",
+  "body": " Wedge of circles   Let be a family of subspaces of the space satisfying . The topology of is coherent with respect to if for all subsets we have closed if and only if is closed in for all . Equivalently, the topology is coherent with respect to the if for all subsets we have open if and only if is open in for all .  A wedge of circles is a space such that (i) for some family of subspaces where each is homeomorphic to , (ii) there is an element such that for all , and (iii) is coherent with respect to .   "
+},
+{
+  "id": "th_wedge_of_circles",
+  "level": "2",
+  "url": "s_wedge_of_circles.html#th_wedge_of_circles",
+  "type": "Theorem",
+  "number": "1.16.5",
+  "title": "Wedge of circles.",
+  "body": " Wedge of circles   Let be a wedge of circles, let , and for each let be a loop whose path homotopy equivalence class in generates . We have , and is a system of free generators of .   "
+},
+{
+  "id": "s_adjoin_2cell",
+  "level": "1",
+  "url": "s_adjoin_2cell.html",
+  "type": "Section",
+  "number": "1.17",
+  "title": "Adjoining a 2-cell",
+  "body": " Adjoining a 2-cell   2-cell   A 2-cell is a space that is homeomorphic to the closed disc . Given a 2-cell with homeomorphism , we denote by the image of the boundary of ; and we denote by the set , which is the image of the open disc under .     Adjoining a 2-cell   Let be a closed path-connected subspace of the Hausdorff space , and suppose there is a 2-cell and map such that (i) and (ii) is a bijection onto . Fix any point , let , and define to be the restriction of to .  The map induced by the inclusion is surjective and its kernel is the least normal subgroup of containing . Equivalently, if is a loop such that generated , then is the least normal subgroup of containing .     Adjoining a 2-cell   Let be a closed path-connected subspace of the Hausdorff space . We say is obtained from by adjoining a 2-cell if there is a 2-cell and map such that and is a bijection onto .    "
+},
+{
+  "id": "d_2cell",
+  "level": "2",
+  "url": "s_adjoin_2cell.html#d_2cell",
+  "type": "Definition",
+  "number": "1.17.1",
+  "title": "2-cell.",
+  "body": " 2-cell   A 2-cell is a space that is homeomorphic to the closed disc . Given a 2-cell with homeomorphism , we denote by the image of the boundary of ; and we denote by the set , which is the image of the open disc under .   "
+},
+{
+  "id": "th_adjoining_2cell",
+  "level": "2",
+  "url": "s_adjoin_2cell.html#th_adjoining_2cell",
+  "type": "Theorem",
+  "number": "1.17.2",
+  "title": "Adjoining a 2-cell.",
+  "body": " Adjoining a 2-cell   Let be a closed path-connected subspace of the Hausdorff space , and suppose there is a 2-cell and map such that (i) and (ii) is a bijection onto . Fix any point , let , and define to be the restriction of to .  The map induced by the inclusion is surjective and its kernel is the least normal subgroup of containing . Equivalently, if is a loop such that generated , then is the least normal subgroup of containing .   "
+},
+{
+  "id": "d_adjoining_2cell",
+  "level": "2",
+  "url": "s_adjoin_2cell.html#d_adjoining_2cell",
+  "type": "Definition",
+  "number": "1.17.3",
+  "title": "Adjoining a 2-cell.",
+  "body": " Adjoining a 2-cell   Let be a closed path-connected subspace of the Hausdorff space . We say is obtained from by adjoining a 2-cell if there is a 2-cell and map such that and is a bijection onto .   "
+},
+{
   "id": "s_top_spaces",
   "level": "1",
   "url": "s_top_spaces.html",
@@ -1810,9 +1900,9 @@ var ptx_lunr_docs = [
   "body": " Trivial and discrete topology Let be a set.   The collection is a topology on , called the trivial topology . This is the topology on whose only open sets are the empty set and itself.    The collection is a topology on , called the discrete topology . This is the topology on for which every subset of is an open set.        Let . By definition the given contains and , and thus axiom (1) is satisfied. Since any union or intersection involving and is equal to either or , it is clear that is closed under arbitrary unions and finite intersections. Thus axioms (2)-(3) are satisfied.    Let . By definition, is the set of all subsets of . In particular, it contains and , and thus axioms (1) is satisfied. Furthermore, since any union or intersection of subsets of is again a subset of , we see that axioms (2)-(3) are satisfied.      "
 },
 {
-  "id": "example-37",
+  "id": "example-38",
   "level": "2",
-  "url": "s_top_spaces.html#example-37",
+  "url": "s_top_spaces.html#example-38",
   "type": "Example",
   "number": "2.1.3",
   "title": "Some small topological spaces.",
@@ -1837,9 +1927,9 @@ var ptx_lunr_docs = [
   "body": " coarser topology  finer topology  comparable topologies  Comparable topologies   Two topologies on the set are comparable if or , and incomparable otherwise. If , we say that is coarser than , and that is finer than . When we say that is strictly coarser than and is strictly finer than .   "
 },
 {
-  "id": "example-38",
+  "id": "example-39",
   "level": "2",
-  "url": "s_top_spaces.html#example-38",
+  "url": "s_top_spaces.html#example-39",
   "type": "Example",
   "number": "2.1.5",
   "title": "Comparing trivial, discrete, cofinite topologies.",
@@ -2026,9 +2116,9 @@ var ptx_lunr_docs = [
   "body": " Metric balls   Let be a metric space. Given and the -ball centered at is the subset defined as . In other words, is the set of all elements of lying within a distance of of . We call the radius of . More generally, we call a subset a -metric ball if for some and . When it is clear what the underlying metric is, we will omit and speak simply of metric balls.   "
 },
 {
-  "id": "example-45",
+  "id": "example-46",
   "level": "2",
-  "url": "s_metric1.html#example-45",
+  "url": "s_metric1.html#example-46",
   "type": "Example",
   "number": "2.3.4",
   "title": "Metric balls for Euclidean and box metrics.",
@@ -2080,9 +2170,9 @@ var ptx_lunr_docs = [
   "body": "  Given a set the function defined as is a metric on , called the trivial metric .    The proof that is a metric is left as an exercise.   "
 },
 {
-  "id": "example-47",
+  "id": "example-48",
   "level": "2",
-  "url": "s_metric1.html#example-47",
+  "url": "s_metric1.html#example-48",
   "type": "Example",
   "number": "2.3.9",
   "title": "Trivial metric.",
@@ -2161,9 +2251,9 @@ var ptx_lunr_docs = [
   "body": " Basis description of closed sets   Let be a topological space with basis . A set is closed if and only if for all , there is a basis element satisfying .    By definition a set is closed if and only if its complement is open. Using , we see that is open if and only if for all there is a basis element satisfying .   "
 },
 {
-  "id": "example-50",
+  "id": "example-51",
   "level": "2",
-  "url": "s_closed_closure_interior.html#example-50",
+  "url": "s_closed_closure_interior.html#example-51",
   "type": "Example",
   "number": "2.4.7",
   "title": "Closed sets in Euclidean metric topology.",
@@ -2206,9 +2296,9 @@ var ptx_lunr_docs = [
   "body": " Interior and closure of  Let and let . Compute the interior and closure of with respect to (a) the standard topology on and (b) the -topology on .     First consider with the standard topology. The interior of is empty in this case: , . To see this, note that given any and any open interval containing , we can choose an such that ; by design all elements of lie outside . Thus , and .  Next. I claim . To see this, note first that is closed: it is easy to see that for any we can find an such that . By (2) of we have . Since furthermore and since itself is not closed, it follows that .    Now consider the -topology on . We still have . Indeed, fix any , and take any basis element containing . We have or for some open interval . In either case, the same argument as above shows that contains a basis element , all of whose elements lie outside of . This shows , and hence .  Next, I claim that is closed in the -topology, from whence it follows that . (Use (2) from .) To prove the claim, we must show, using that for any there is a basis element (in the -topology) containing and contained in . There are two cases: and . If , we can find an open interval such that and . Since open intervals are basis elements in the -topology, we are done in this case. Next, assume . In this case the basis element satisfies . Having exhausted the cases, we conclude is closed, and hence .     "
 },
 {
-  "id": "example-52",
+  "id": "example-53",
   "level": "2",
-  "url": "s_closed_closure_interior.html#example-52",
+  "url": "s_closed_closure_interior.html#example-53",
   "type": "Example",
   "number": "2.4.12",
   "title": "Interior and closure in cofinite topology.",
@@ -2512,9 +2602,9 @@ var ptx_lunr_docs = [
   "body": " Pointwise convergence   Observe that the definition of pointwise convergence makes no reference to any topology on . Below we investigate how it relates to convergence in the box and product topologies.   "
 },
 {
-  "id": "example-59",
+  "id": "example-60",
   "level": "2",
-  "url": "s_prods_convergence_metric.html#example-59",
+  "url": "s_prods_convergence_metric.html#example-60",
   "type": "Example",
   "number": "2.8.3",
   "title": "Sequences in <span class=\"process-math\">\\(\\R^\\omega\\)<\/span> and <span class=\"process-math\">\\(\\R^\\R\\)<\/span>.",
@@ -2530,9 +2620,9 @@ var ptx_lunr_docs = [
   "body": " Pointwise convergence and product topology   Let be a collection of topologies, let be their product, and let be a sequence of elements of .    If in the box or product topology, then converges to pointwise.    In the product topology we have .         Suppose in either topology. Fix and let be any open set containing . The set is an open neighborhood of in both topologies. By convergence there is an such that for all . It follows that for all . This proves that for all .    Suppose the sequence converges to pointwise. To show in the product topology it is enough to show that for any base open set of the form there is an such that if , then . Since converges to pointwise, for each , there is an such that if , then . Setting , it follows that if then for . Since for all we conclude that for all , as desired.      "
 },
 {
-  "id": "example-60",
+  "id": "example-61",
   "level": "2",
-  "url": "s_prods_convergence_metric.html#example-60",
+  "url": "s_prods_convergence_metric.html#example-61",
   "type": "Example",
   "number": "2.8.5",
   "title": "Convergent sequences in <span class=\"process-math\">\\(\\R^\\omega\\)<\/span>.",
@@ -2620,27 +2710,27 @@ var ptx_lunr_docs = [
   "body": " Preimage properties   Continuity is defined in terms of preimages of sets under a function . Thankfully, the preimage operation behaves very well with respect to our various set operations. In particular, we have the following identities, which you may make use of without further ado:    "
 },
 {
-  "id": "example-61",
+  "id": "example-62",
   "level": "2",
-  "url": "s_continuous.html#example-61",
+  "url": "s_continuous.html#example-62",
   "type": "Example",
   "number": "2.9.3",
   "title": "Continuous functions: basic examples.",
   "body": " Continuous functions: basic examples     Identity function  Given a topological space , the identity function is continuous. Here we take as the topology of both the domain and codomain.    Constant functions  Let be topological spaces. For any fixed the constant function , defined as for all is continuous.    Subspace inclusions  Let be a subspace of . The inclusion map is continuous with respect to the subspace topology on .    Maps from discrete spaces  If is equipped with the discrete topology, then any function to a topological space is continuous.    Maps to trivial spaces  If is equipped with the trivial topology, then any map from a topological space to is continous.      These are all pretty elementary. I'll prove (3). Let be a subspace and let continuous. Given any open set , we have which by definition is open in the subspace topology. Thus is continuous.   "
 },
 {
-  "id": "example-62",
+  "id": "example-63",
   "level": "2",
-  "url": "s_continuous.html#example-62",
+  "url": "s_continuous.html#example-63",
   "type": "Example",
   "number": "2.9.4",
   "title": "Non-continuous inclusion.",
   "body": " Non-continuous inclusion   Show that the identity map is not continuous. Here the topology of the domain is the standard one, and the topology on the codomain is the lower limit topology.    For any we have . If we choose to be any open set of that is not open in the standard topology, it follows that is not open in and hence that is not continuous. We may take for example.  Note: let be two topologies on the set , and for let denote the space with underlying set and topology . The same argument above can be used to show that is continuous if and only if .   "
 },
 {
-  "id": "example-63",
+  "id": "example-64",
   "level": "2",
-  "url": "s_continuous.html#example-63",
+  "url": "s_continuous.html#example-64",
   "type": "Example",
   "number": "2.9.5",
   "title": "Products and projections.",
@@ -2791,9 +2881,9 @@ var ptx_lunr_docs = [
   "body": " Topological properties   It is easy to see that the properties of being discrete, , Hausdorff, or a metric space are topological.   "
 },
 {
-  "id": "example-67",
+  "id": "example-68",
   "level": "2",
-  "url": "s_homeomorphisms.html#example-67",
+  "url": "s_homeomorphisms.html#example-68",
   "type": "Example",
   "number": "2.10.12",
   "title": "Continuous bijection onto circle.",
@@ -2935,9 +3025,9 @@ var ptx_lunr_docs = [
   "body": "  A separation of a topological space is a pair of disjoint nonempty open sets satisfying . The space is connected it it admits no separation, and disconnected otherwise.  A subset is connected (resp., disconnected ) if it is connected (resp., disconnected) with respect to the subspace topology.   "
 },
 {
-  "id": "example-70",
+  "id": "example-71",
   "level": "2",
-  "url": "s_connected1.html#example-70",
+  "url": "s_connected1.html#example-71",
   "type": "Example",
   "number": "2.12.2",
   "title": "Examples.",
@@ -3052,36 +3142,36 @@ var ptx_lunr_docs = [
   "body": " Path-connectedness and continuity   If is continuous and is path connected, then is path connected.    Given and , let be a path connecting and . The composition is then a path connecting and .   "
 },
 {
-  "id": "example-71",
+  "id": "example-72",
   "level": "2",
-  "url": "s_connected_path.html#example-71",
+  "url": "s_connected_path.html#example-72",
   "type": "Example",
   "number": "2.13.5",
   "title": "Balls in <span class=\"process-math\">\\(\\R^n\\)<\/span>.",
   "body": " Balls in   Let be Euclidean -space. For all and any , the open ball is connected, as is the closed ball defined as     It is easy to see that the straight line path defined as is a continuous function connecting any two points in . For our current purposes, we wish to show that if , then so is , for any . To this end, note that . This proves that the open ball is path connected, and hence connected. Next, it is easy to see that the closed ball is in fact the closure of the open ball. Since connectedness is preserved under closure, we conclude that the closed ball is connected.   "
 },
 {
-  "id": "example-72",
+  "id": "example-73",
   "level": "2",
-  "url": "s_connected_path.html#example-72",
+  "url": "s_connected_path.html#example-73",
   "type": "Example",
   "number": "2.13.6",
   "title": "Punctured Euclidean space <span class=\"process-math\">\\(\\R^n-\\{\\boldzero\\}\\text{:}\\)<\/span> <span class=\"process-math\">\\(n\\geq 2\\)<\/span>.",
   "body": " Punctured Euclidean space :   Let be Euclidean -space, where . The subspace is connected.    Take any . If the two vectors are not scalar multiples of one another, then the straight line path connecting them is guaranteed to lie in , using a linear independence argument. If , then since , we can find a vector that is not a scalar multiple of either vector. We can then construct a polygonal path lieing in that first connects to via a straight line path, and then connects to via a straight line path.   "
 },
 {
-  "id": "example-73",
+  "id": "example-74",
   "level": "2",
-  "url": "s_connected_path.html#example-73",
+  "url": "s_connected_path.html#example-74",
   "type": "Example",
   "number": "2.13.7",
   "title": "<span class=\"process-math\">\\(\\R\\not\\cong \\R^n\\)<\/span> for <span class=\"process-math\">\\(n\\geq 2\\)<\/span>.",
   "body": " for   Prove: if , then there is no homeomorphism from to .    Assume by contradiction that is a homeomorphism for some . It follows that the restriction is a homeomorphism. This a contradiction since is not connected ( is open and closed in ), but is connected.   "
 },
 {
-  "id": "example-74",
+  "id": "example-75",
   "level": "2",
-  "url": "s_connected_path.html#example-74",
+  "url": "s_connected_path.html#example-75",
   "type": "Example",
   "number": "2.13.8",
   "title": "The <span class=\"process-math\">\\(n\\)<\/span>-sphere.",
@@ -3790,9 +3880,9 @@ var ptx_lunr_docs = [
   "body": " is normal   Prove: is normal.    Let be disjoint closed subsets of . We can find open coverings satisfying for all . First observe that for all . Indeed, otherwise we'd have , in which case either or : both are impossible since and . We conclude that , proving that and can be separated by open sets.   "
 },
 {
-  "id": "example-88",
+  "id": "example-89",
   "level": "2",
-  "url": "s_normal.html#example-88",
+  "url": "s_normal.html#example-89",
   "type": "Example",
   "number": "2.20.2",
   "title": "<span class=\"process-math\">\\(R_\\ell\\times R_\\ell\\)<\/span> is not normal.",
@@ -4015,9 +4105,9 @@ var ptx_lunr_docs = [
   "body": " Directed set   A directed set is a pair , where is a quasiordering on that satisfies the following axiom.   Directed (D)  For all , there is a such that and .   A subset of a directed set is cofinal if for all there is a such that .   "
 },
 {
-  "id": "example-90",
+  "id": "example-91",
   "level": "2",
-  "url": "s_nets.html#example-90",
+  "url": "s_nets.html#example-91",
   "type": "Example",
   "number": "2.24.4",
   "title": "Common examples.",

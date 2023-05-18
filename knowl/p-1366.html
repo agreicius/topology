@@ -12,7 +12,14 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">Let <span class="process-math">\(X, Y\)</span> be topological spaces, and assume <span class="process-math">\(Y\)</span> is compact. Let <span class="process-math">\(f=((x_i, y_i))_{i\in I}\)</span> be a net in <span class="process-math">\(X\times Y\text{,}\)</span> and let <span class="process-math">\(\pi_X\colon X\times Y\rightarrow X\)</span> be the projection onto <span class="process-math">\(X\)</span> map. If <span class="process-math">\(x\in X\)</span> is a limit point of the net <span class="process-math">\(\pi_X\circ f=(x_i)_{i\in I}\text{,}\)</span> then there is a <span class="process-math">\(y\in Y\)</span> such that <span class="process-math">\((x,y)\)</span> is a limit point of <span class="process-math">\(f\text{.}\)</span>
+<div class="para logical">
+<div class="para">Assume Tychonoff's theorem is true. We will prove the following equivalent formulation of the axiom of choice:</div>
+<div class="displaymath process-math">
+\begin{equation}
+X_i\ne\emptyset \text{ for all } i\in I \implies X=\prod_{i\in I}X_i\ne \emptyset\text{.}\tag{2.25.1}
+\end{equation}
+</div>
+<div class="para">Given a collection <span class="process-math">\(\{X_i\}_{i\in I}\)</span> of nonempty sets, let <span class="process-math">\(Y_i=X_i\sqcup \{P_i\}\)</span> the result of adding one additional point, <span class="process-math">\(P_i\text{,}\)</span> to each <span class="process-math">\(X_i\text{.}\)</span> Why do we do this? Add the marked point <span class="process-math">\(P_i\)</span> to the <span class="process-math">\(i\)</span>-th component space gives us a foothold, as it were, allowing us to find elements in the product without invoking the axiom of choice in the process: we can always “choose” the <span class="process-math">\(i\)</span>-th entry to be this special element <span class="process-math">\(P_i\text{.}\)</span> We will use Tychonoff's theorem to show that <span class="process-math">\(X\)</span> is a nonempty subset of <span class="process-math">\(Y\text{.}\)</span> To do so, we need to give the sets <span class="process-math">\(Y_i\)</span> a <em class="emphasis">compact</em> topological structure: this is accomplished by declaring the topology on <span class="process-math">\(Y_i\)</span> to be <span class="process-math">\(\mathcal{T}_i=\{\emptyset, X_i, \{P_i\}, Y_i\}\text{.}\)</span> (Check that this is a topology.) This clearly makes <span class="process-math">\(Y_i\)</span> compact, since <span class="process-math">\(\mathcal{T}_i\)</span> only contains four open sets. Note also that <span class="process-math">\(X_i=Y_i-\{P_i\}\)</span> is closed with respect to this topology.</div>
 </div>
 <span class="incontext"><a href="s_Tychonoff.html#p-1366" class="internal">in-context</a></span>
 </body>

@@ -1,0 +1,34 @@
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="s_adjoin_2cell">
+  <title>Adjoining a 2-cell</title>
+    <definition xml:id="d_2cell">
+        <title>2-cell</title>
+        <statement>
+            <p>
+              A <term>2-cell</term> is a space <m>B</m> that is homeomorphic to the closed disc <m>B^2</m>. Given a 2-cell <m>B</m> with homeomorphism <m>\phi\colon S^1\rightarrow B</m>, we denote by <m>\operatorname{Bd} B</m> the image <m>\phi(S^1)</m> of the boundary of <m>B^2</m>; and we denote by <m>\operatorname{Int} B</m> the set <m>B-\operatorname{Bd} B</m>, which is the image of the open disc <m>B^2-S^1</m> under <m>\phi</m>. 
+            </p>
+        </statement>
+    </definition>
+    
+    <theorem xml:id="th_adjoining_2cell">
+        <title>Adjoining a 2-cell</title>
+        <statement>
+            <p>
+               Let <m>A</m> be a closed path-connected subspace of the Hausdorff space <m>X</m>, and suppose there is a 2-cell <m>B</m> and map <m>h\colon B\rightarrow X</m> such that (i) <m>h(\operatorname{Bd} B)\subseteq A</m> and (ii) <m>h\vert_{\operatorname{Int} B}</m> is a bijection onto <m>X-A</m>. Fix any point <m>p\in \operatorname{Bd} B</m>, let <m>a=h(p)</m>, and define <m>k\colon (\operatorname{Bd} B,p)\rightarrow (A,a)</m> to be the restriction of <m>h</m> to <m>\operatorname{Bd} B</m>. 
+            </p>
+            <p>
+                The map <m>i_*\colon \pi_1(A,a)\rightarrow \pi_1(X,a)</m> induced by the inclusion <m>A\subseteq X</m> is surjective and its kernel <m>N</m> is the least normal subgroup of <m>\pi_1(A,a)</m> containing <m>k_*(\pi_1(\operatorname{Bd} B, p)</m>. Equivalently, if <m>f\in P(\operatorname{Bd} B; p,p)</m> is a loop such that <m>[f]</m> generated <m>\pi_1(\operatorname{Bd} B, p)</m>, then <m>\ker i_*</m> is the least normal subgroup of <m>\pi_1(A,a)</m> containing <m>k_*([f])</m>. 
+            </p>
+        </statement>
+    </theorem>
+    
+    <definition xml:id="d_adjoining_2cell">
+        <title>Adjoining a 2-cell</title>
+        <statement>
+            <p>
+                Let <m>A</m> be a closed path-connected subspace of the Hausdorff space <m>X</m>. We say <m>X</m> is obtained from <m>A</m> by <term>adjoining a 2-cell</term> if there is a 2-cell <m>B</m> and map <m>h\colon B\rightarrow X</m> such that <m>h(\operatorname{Bd} B)\subseteq A </m> and <m>h\vert_{\operatorname{Int} B}</m> is a bijection onto <m>X-A</m>. 
+            </p>
+        </statement>
+    </definition>
+    
+    
+    </section>

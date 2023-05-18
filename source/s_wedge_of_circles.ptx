@@ -1,0 +1,57 @@
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="s_wedge_of_circles">
+  <title>Wedge of circles</title>
+    <definition xml:id="d_wege_of_n_circls">
+        <title>Wedge of <m>n</m> circles</title>
+        <statement>
+            <p>
+               A <term>wedge of <m>n</m> circles</term> is a Hausdorff space <m>X</m> for which we have <m>X=\bigcup_{k=1}^n C_k</m>, where <m>C_k</m> is homeomorphic to <m>S^1</m> for all <m>1\leq k\leq n</m>, and there is an element <m>p\in X</m> such that <m>C_j\cap C_k=\{p\}</m> for all <m>j\ne k</m>.
+            </p>
+        </statement>
+    </definition>
+    <example xml:id="eg_wedge_of_n_circles">
+    <title>Wedge of <m>n</m> cirles</title>
+    <statement>
+        <p>
+            For each positive integer <m>n</m>, let <m>C_n\subseteq \R^2</m> be the circle with equation <m>(x-n)^2+y^2=n^2</m>. For any positive integer <m>n</m>, the subspace <m>X=\bigcup_{k=1}^n C_k</m> is a wedge of <m>n</m> circles. 
+        </p>
+    </statement>
+    </example>
+
+    <theorem xml:id="th_wedge_of_n_circles">
+        <title>Wedge of <m>n</m> circles</title>
+        <statement>
+            <p>
+                Let <m>X=\bigcup_{k=1}^nC_k</m> be a wedge of circles, let <m>\{p\}=\bigcap_{k=1}^nC_k</m>, and for each <m>1\leq k\leq n</m> let <m>f_k\in P(C_k; p, p)</m> be a loop whose path homotopy equivalence class <m>[f_k]</m> in <m>C_k</m> generates <m>\pi_1(C_k, p)\cong \Z</m>. We have  
+                <me>
+                    \pi_1(X,p)\cong \underset{n \text{ times}}{\underbrace{\Z *\Z*\cdots * \Z}}
+                </me>,
+                and <m>\{[f_k]\}_{k=1}^n</m> is a system of free generators of  <m>\pi_1(X,p)</m>. 
+            </p>
+        </statement>
+    </theorem>
+    <definition xml:id="d_wedge_of_circles">
+        <title>Wedge of circles</title>
+        <statement>
+            <p>
+               Let <m>\{X_\alpha\}_{\alpha\in I}</m> be a family of subspaces of the space <m>X</m> satisfying <m>X=\bigcup_{\alpha\in I}X_\alpha</m>. The topology of <m>X</m> is <term>coherent</term> with respect to <m>\{X_\alpha\}_{\alpha\in I}</m> if for all subsets <m>A\subseteq X</m> we have <m>A</m> closed if and only if <m>A\cap X_{\alpha}</m> is closed in <m>X_\alpha</m> for all <m>\alpha\in I</m>. Equivalently, the topology is coherent with respect to the <m>X_\alpha</m> if for all subsets <m>A\subseteq X</m> we have <m>A</m> open if and only if <m>A\cap X_{\alpha}</m> is open in <m>X_\alpha</m> for all <m>\alpha\in I</m>. 
+            </p>
+            <p>
+                A <term>wedge of circles</term> is a space <m>X</m> such that (i) <m>X=\bigcup_{\alpha\in I} C_\alpha</m> for some family of subspaces <m>\{C_{\alpha}\}_{\alpha\in I}</m> where each <m>C_\alpha</m> is homeomorphic to <m>S^1</m>, (ii) there is an element <m>p\in X</m> such that <m>C_\alpha\cap C_{\alpha'}=\{p\}</m> for all <m>\alpha\ne \alpha'</m>, and (iii) <m>X</m> is coherent with respect to <m>\{C_\alpha\}_{\alpha\in I}</m>. 
+            </p>
+        </statement>
+    </definition>
+
+    <theorem xml:id="th_wedge_of_circles">
+        <title>Wedge of circles</title>
+         <statement>
+            <p>
+                Let <m>X=\bigcup_{\alpha\in I} C_\alpha</m> be a wedge of circles, let <m>\{p\}=\bigcap_{\alpha\in I}C_k</m>, and for each <m>\alpha\in I</m> let <m>f_\alpha\in P(C_\alpha; p, p)</m> be a loop whose path homotopy equivalence class <m>[f_\alpha]</m> in <m>C_\alpha</m> generates <m>\pi_1(C_\alpha, p)\cong \Z</m>. We have  
+                <me>
+                    \pi_1(X,p)\cong \prod\limits_{\alpha\in I}^*\Z
+                </me>,
+                and <m>\{[f_\alpha]\}_{\alpha\in I}</m> is a system of free generators of  <m>\pi_1(X,p)</m>. 
+            </p>
+        </statement>
+    </theorem>
+    
+</section>

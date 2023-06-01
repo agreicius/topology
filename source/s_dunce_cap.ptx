@@ -1,0 +1,66 @@
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="s_dunce_cap">
+  <title><m>n</m>-fold dunce caps</title>
+    <definition xml:id="d_dunce_cap">
+        <title><m>n</m>-fold dunce cap</title>
+        <statement>
+            <p>
+              Fix a positive integer <m>n</m>, let <m>\alpha=2\pi/n</m>, and let <m>f_\alpha\colon S^1\rightarrow S^1</m> be the rotation by <m>\alpha</m> map: <ie/>, for a point <m>P=(\cos \theta, \sin \theta)\in S^1</m>, we have <m>f_\alpha(P)=(\cos(\theta+2\pi/n), \sin(\theta+2\pi/n))</m>. 
+            </p>
+            <p>
+                The <term><m>n</m>-fold dunce cap</term> is the quotient <m>X</m> of <m>B^2</m> obtained by identifying any two points <m>P,Q\in S^1</m> satisfying <m>f_\alpha(P)=f_{\alpha}(Q)</m>. 
+            </p>
+        </statement>
+    </definition>
+    <lemma xml:id="lemmma_quotient_normality">
+        <title>Normality of quotients</title>
+        <statement>
+            <p>
+                Let <m>q\colon X\rightarrow Y</m> be a closed quotient map. If <m>X</m> is normal, then <m>Y</m> is normal. 
+            </p>
+        </statement>
+        <proof>
+            <p>
+                First we show that <m>Y</m> is a <m>T_1</m>-space. Since <m>q</m> is surjective, for all <m>y\in Y</m> we have <m>y=q(x)</m> for some <m>x\in X</m>. Since <m>X</m> is <m>T_1</m>, the set <m>\{x\}</m> is closed. Since <m>q</m> is a closed map, the set <m>\{y}=q(\{x\})</m> is closed. Thus <m>Y</m> is <m>T_1</m>.  
+            </p>
+            <p>
+                We use the <xref ref="th_regular_normal_equivalence" text="custom">alternate formulation of normality</xref>. Consider an inclusion <m>A\subseteq U\subseteq Y</m>, where <m>A</m> is closed and <m>U</m> is open. Taking preimages under <m>q</m> yields an inclusion <m>q^{-1}(A)\subseteq q^{-1}(U)</m>, where <m>q^{-1}(A)</m> is closed and <m>q^{-1}(U)</m> is open. Since <m>X</m> is normal there is an open set <m>W</m> satisfying <m>q^{-1}(A)\subseteq W\subseteq q^{-1}(U)</m>. 
+            </p>
+            <p>
+                It is not necessarily true that <m>q(W)</m> is open, since we can not guarantee that <m>W</m> is saturated.  However, since <m>X-W</m> is closed and <m>q</m> is a closed map, the image <m>q(X-W)</m> is closed in <m>Y</m>. Let <m>V=Y-q(X-W)</m>. Since <m>q(X-W)\supseteq q(X-q^{-1}(U))=X-U</m> (we use here that <m>q</m> is surjective), we have <m>V\subseteq U</m>. Since <m>f^{-1}(A)\subseteq W</m>, we see that <m>A\cap q(X-W)=\emptyset</m>, and thus <m>A\subseteq V</m>. We conclude that <m>V</m> is an open set satisfying <m>A\subseteq V\subseteq U</m>, showing that <m>Y</m> is normal. 
+            </p>
+        </proof>
+    </lemma>
+    <theorem xml:id="th_fund_grp_dunce">
+        <title>Dunce cap fundamental group</title>
+        <statement>
+            <p>
+                Let <m>X</m> be the <m>n</m>-fold dunces cap, let <m>h\colon B^2\rightarrow X </m> be the quotient map, and let <m>A=h(S^1)</m>. 
+            </p>
+            <ol>
+                <li>
+                    <p>
+                        The space <m>X</m> is Hausdorff and path connected, the subspace <m>A</m> is closed and path connected, and <m>X</m> is obtained from <m>A</m> by adjoining a 2-cell via the map <m>h</m>. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                       We have <m>\pi_1(X,x_0)\cong \Z/n\Z</m> for any <m>x_0\in X</m>. 
+                    </p>
+                </li>
+            </ol>
+        </statement>
+        <proof>
+            <title>Proof of (1)</title>
+            <p>
+                
+            </p>
+        </proof>
+        <proof>
+            <title>Proof of (2)</title>
+            <p>
+                
+            </p>
+        </proof>
+    </theorem>
+    
+      </section>

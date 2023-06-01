@@ -1,0 +1,104 @@
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="s_surface_classification">
+  <title>Classification of surfaces</title>
+ <definition xml:id="d_equivalent_labelling_schemes">
+ <title>Equivalent labelling schemes</title>
+    <statement>
+        <p>
+            Two labelling schemes <m>w_1,w_2,\dots, w_n</m> and <m>w_1', w_2',\dots, w_m'</m> are <term>equivalent</term> if their corresponding quotient spaces are homeomorphic. In this case we write 
+            <me>
+                w_1,w_2,\dots, w_n\sim w_1', w_2',\dots, w_m'
+            </me>.            
+        </p>
+    </statement>
+ </definition>
+ <theorem xml:id="th_elementary_operations">
+    <title>Elementary operations</title>
+    <statement>
+        <p>
+            Each of the following procedures, called <term>elementary operations</term>, when applied to a labelling scheme <m>w_1, w_2,\dots, w_m</m>, produces an equivalent labelling scheme. 
+            <ol>
+                <li>
+                    <title>Cut/Paste</title>
+                    <p>
+                        Cut any <m>w_k</m>, replacing it with <m>y_0c^{-1}, cy_1</m>, where <m>w_k=y_0y_1</m>, each <m>y_i</m> has length at least two, and <m>c</m> does not appear as a label in the original labelling scheme.  
+                    </p>
+                    <p>
+                        Past any two elements $w_j=y_0c^{-1}, w_k=cy_1$, together, replacing them with $w=y_0y_1$, provided each <m>y_i</m> has length at least two, and <m>c</m> does not occur anywhere else in the labelling scheme.  
+                    </p>
+                </li>
+                <li>
+                    <title>Relabel base/flip exponent</title>
+                    <p>
+                        Fix a label <m>c</m> occurring in the scheme. Replace all occurrences <m>c^\epsilon</m> with <m>d^\epsilon</m>, where <m>d</m> is a label not occurring in the original labelling scheme. 
+                    </p>
+                    <p>
+                        Fix a label <m>c</m> occurring in the scheme. Replace all occurrences of <m>c^\epsilon</m> with <m>c^{-\epsilon}</m>.   
+                    </p>
+                </li>
+                <li>
+                    <title>Cycle</title>
+                    <p>
+                        Replace any <m>w_k=a_1^{\epsilon_1}a_2^{\epsilon_2}\cdots a_r^{\epsilon_r}</m> with <m>w_k'=a_{\sigma(1)}^{\epsilon_{\sigma(1)}}a_{\sigma(2)}^{\epsilon_{\sigma(2)}}\cdots a_{\sigma(r)}^{\epsilon_{\sigma(r)}}</m>, where <m>\sigma</m> is any <em>cyclic</em> permutation of <m>\{1,2,\dots, n\}</m>. 
+                    </p>
+                </li>
+                <li>
+                    <title>Flip</title>
+                    <p>
+                        Replace any <m>w_k=a_1^{\epsilon_1}a_2^{\epsilon_2}\cdots a_r^{\epsilon_r}</m> with its <term>formal inverse</term> <m>w_k^{-1}=a_r^{-\epsilon_r}a_{r-1}^{-\epsilon_{r-1}}\cdots a_1^{-\epsilon_1}</m>. 
+                    </p>
+                </li>
+                <li>
+                    <title>Fusion/Fission</title>
+                    <p>
+                        Assuming labels <m>a,b</m> always occur in the labelling scheme either as <m>ab</m> or <m>b^{-1}a^{-1}</m>, replace each instance of <m>ab</m> with <m>c</m> and each instance of <m>b^{-1}a^{-1}</m> with <m>c^{-1}</m>, provided <m>c</m> does not occur in the original labelling scheme, and that the resulting polygons all have length at least <m>3</m>. 
+                    </p>
+                    <p>
+                        Replace all instances of <m>c</m> with <m>ab</m> and all instances of <m>c^{-1}</m> with <m>b^{-1}a^{-1}</m>, assuming <m>a</m> and <m>b</m> do not occur in the original labelling scheme. 
+                    </p>
+                </li>
+                <li>
+                    <title>Cancel/uncancel</title>
+                    <p>
+                        Replace any <m>w_k=y_0cc^{-1}y_1</m> with <m>w_k'=y_0y_1</m>, provided <m>c</m> does not occur anywhere else in the labelling scheme and <m>w_k</m> has length at least 5. 
+                    </p>
+                    <p>
+                        Replace any <m>w_k=y_0y_1</m> with <m>w_k'=y_0cc^{-1}y_1</m>, provided <m>c</m> does not occur in the original labelling scheme. 
+                    </p>
+                </li>
+            </ol>
+        </p>
+    </statement>
+ </theorem>
+
+ <theorem xml:id="th_abelianization_of_quotient">
+    <title>Abelianization of quotients</title>
+    <statement>
+        <p>
+            Let <m>N</m> be a normal subgroup of the group <m>G</m>, and let <m>q\colon G\rightarrow G/N</m> and <m>q_{\ab}\colon G\rightarrow G/[G,G]=G^{\ab}</m> be the quotient homomorphisms. We have  
+            <me>
+                (G/N)^{\ab}\cong G^{\ab}/q_{\ab}(N).
+            </me>
+        </p>
+    </statement>
+ </theorem>
+ <theorem xml:id="th_classification_theorem_distinct">
+    <title>Non-homeomorphic surfaces</title>
+    <statement>
+        <p>
+          Let <m>T_n</m> denote the <m>n</m>-fold torus, and let <m>P_m</m> denote the <m>m</m>-fold projective plane. The surfaces <m>S^2, T_1,T_2,\dots, P_1, P_2,\dots </m> are pairwise non-homeomorphic.   
+        </p>
+    </statement>
+ </theorem>
+ <theorem xml:id="th_classification_theorem">
+    <title>Classification theorem</title>
+    <statement>
+        <p>
+            Let <m>T_n</m> denote the <m>n</m>-fold torus, and let <m>P_m</m> denote the <m>m</m>-fold projective plane. If <m>X</m> is a compact 2-manifold (<ie/>, a surface), then <m>X</m> is homemorphic to exactly one of the following surfaces: <m>S^2</m>, <m>T_n</m> for some <m>n\geq 1</m>, <m>P_m</m> for some <m>m\geq 1</m>. 
+        </p>
+    </statement>
+ </theorem>
+ 
+ 
+ 
+ 
+ </section>

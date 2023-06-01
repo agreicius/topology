@@ -29,6 +29,30 @@
             </p>
         </statement>
     </definition>
+    <example xml:id="eg_torus_revisited">
+    <title>Torus revisited (again)</title>
+    <statement>
+        <p>
+            Fix any <m>R &gt; 1 </m>The map <m>q\colon I\times I\rightarrow T\subseteq \R^3</m> defined as 
+            <me>
+                h(s,t)=\left((R+\cos 2\pi t)\cos 2\pi s, (R+\cos 2\pi t)\sin 2\pi s,\sin \2\pi t\right)
+            </me>
+           provides a realization of the torus as a closed subspace of <m>\R^3</m>. The space <m>B=I\times I</m> is a <m>2-cell</m>, with <m>\operatorname{Bd} B</m> equal to the square perimeter of <m>I\times I</m>. Let <m>A=h(\operatorname{Bd} B)</m>. 
+        <ol>
+            <li>
+                <p>
+                    Show that <m>T</m> is obtained from <m>A</m> by adjoining a <m>2</m>-cell via <m>h</m>. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    Use the adjoining a 2-cell theorem to compute <m>\pi_1(T,P)</m> for any point <m>P\in T</m>.
+                </p>
+            </li>
+        </ol>
+        </p>
+    </statement>
+    </example>
     
     
     </section>

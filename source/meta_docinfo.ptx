@@ -83,6 +83,8 @@
       \DeclareMathOperator{\diver}{div}
       \DeclareMathOperator{\flux}{flux}
       \DeclareMathOperator{\Hom}{Hom}
+      \DeclareMathOperator{\ab}{ab}
+
 
       \newcommand{\surjects}{\twoheadrightarrow}
       \newcommand{\injects}{\hookrightarrow}

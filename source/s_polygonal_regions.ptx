@@ -1,0 +1,165 @@
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="s_polygonal_regions">
+  <title>Pasted polygonal regions</title>
+    <definition xml:id="d_polygonal_region">
+        <title>Polygonal region</title>
+        <statement>
+            <p>
+             Let <m>C\subseteq \R^2</m> be the the circle with equation <m>(x-a)^2+(y-b)^2=R^2</m>. Given integer <m>n\geq 3</m> and angles 
+             <me>
+                \theta_0 &lt; \theta_1 &lt; \dots &lt; \theta_n=\theta_0+2\pi 
+             </me>
+             we consider the <m>n</m> distinct points on $C$ given by 
+             <me>
+                p_k=(a,b)+R(\cos\theta_k, \sin\theta_k)
+             </me>,
+             for <m>0\leq k\leq n</m>. 
+            </p>
+            <p>
+                Next for each <m>1\leq k\leq n</m>, let <m>H_k</m> be the closed half-plane containing <m>\{p_k\}_{k=1}^n</m> whose boundary is the line <m>\ell</m> determined by <m>\{p_{k-1}, p_{k}\}</m>. The <term>polygonal region</term> determined by <m>p_1,p_2,\dots, p_n=p_0</m> is the region <m>P</m> defined as 
+                <me>
+                    P=H_1\cap H_2\cap\cdots \cap H_n
+                </me>. 
+                For all <m>1\leq k\leq n</m> the point <m>p_k</m> is called a <term>vertex</term> of <m>P</m>, and the line segment between <m>p_{k-1}</m> and <m>p_{k}</m> is called an <term>edge</term> of <m>P</m>. 
+            </p>
+        </statement>
+    </definition>
+    <definition xml:id="d_orientation">
+        <title>Oriented line segment</title>
+        <statement>
+            <p>
+                An <term>orientation</term> of a line segment <m>L\subseteq \R^2</m> is an ordering of its endpoints as a pair <m>(p,q)</m>. In this case <m>p</m> is called the <term>initial point</term>, and <m>q</m> the <term>final point</term> of <m>L</m>. We will denote by <m>L_{p,q}</m> the oriented line segment with initial point <m>p</m> and final point <m>q</m>. 
+            </p>
+            <p>
+                Given two oriented line segments <m>L_{p,q}</m> and <m>L_{p',q'}</m> the <term>positive linear map</term> of <m>L_{p,q}</m> onto <m>L_{p',q'}</m> is the unique homeomorphism <m>h</m> satisfying 
+                <me>
+                    h((1-t)p+tq)=(1-t)p'+tq'
+                </me>
+                for all <m>t\in [0,1]</m>. 
+            </p>
+        </statement>
+    </definition>
+    <remark>
+        If <m>P</m> is the polygonal region corresponding to points <m>p_1, p_2,\dots, p_n=p_0</m>, and <m>P'</m> is the polygonal region corresponding to points <m>p_1',p_2',\dots, p_n'=p_0'</m>, then there is a homeomorphism <m>h\rightarrow P\rightarrow P'</m> whose restriction to the oriented edge <m>L_{p_{k-1},p_{k}}</m> is the positive linear map from <m>L_{p_{k-1},p_k}</m> to <m>L_{p_{k-1}',p_k'}</m>.  
+    </remark>
+    <definition xml:id="d_oriented_labelling">
+        <title>Oriented labelling</title>
+        
+        <statement>
+            <p>
+              Let <m>P</m> be a polygonal region corresponding to points <m>p_1,p_2,\dots, p_n=p_0</m>, for each <m>1\leq k\leq n</m> let <m>E_k</m> be the edge between <m>p_{k-1}</m> and <m>p_k</m>, and let <m>E=\{E_1,E_2,\dots, E_n\}</m> be the set of edges of <m>P</m>. A <term>labelling</term> of the edges of <m>P</m> is a function 
+              <me>
+                \ell\colon E\rightarrow S 
+              </me>.
+              For each <m>E_k\in E</m>, we call <m>\ell(E_k)\in S</m> the <term>label</term> of <m>E_k</m>. 
+            </p>
+            <p>
+                An <term>oriented labelling</term> of the edges of <m>P</m> is a function 
+                <me>
+                    \ell\colon E\rightarrow S\times \{1,-1\}
+                </me>.
+                For each <m>E_k\in E</m> the <term>assigned orientation</term> of <m>E_k</m> with respect to <m>\ell</m> is <m>(p_{k-1}, p_k)</m> if <m>\ell(E_k)=(s,1)</m>, and <m>(p_k,p_{k-1})</m> if <m>\ell(E_k)=(s,-1)</m>. 
+            </p>
+            <p>
+                Given an oriented labelling <m>l</m> of <m>P</m>, the corresponding <term>labelling scheme of length <m>n</m></term> is the expression 
+                <me>
+                     s_1^{\epsilon_1} s_2^{\epsilon_2}\cdots s_n^{\epsilon_n}
+                </me>,
+                where for all <m>1\leq k\leq n</m> we have <m>\ell(E_k)=(s_k, \epsilon_k)</m>. In other words, <m>s_k</m> is the label of edge <m>E_k</m>, and <m>\epsilon_k</m> indicates its orientation. 
+            </p>
+        </statement>
+    </definition>
+
+    <definition xml:id="d_pasted_polygonal_region">
+        <title>Pasted polygonal region</title>
+        <statement>
+            <p>
+                Let <m>P</m> be a polygonal region corresponding to points <m>p_1,p_2,\dots, p_n=p_0</m> and let 
+                <me>
+                    w=s_1^{\epsilon_1} s_2^{\epsilon_2}\cdots s_n^{\epsilon_n}
+                </me>
+                be a labelling scheme corresponding to an oriented labelling of the edges of <m>P</m>. The space <m>X</m> obtained by <term>pasting the edges of <m>P</m> together</term> according to the labelling scheme <m>w</m> is the quotient obtained by identifying points on any two oriented edges <m>E_j=L_{p,q}</m> and <m>E_{k}=L_{p',q'}</m> that have the same label according to the positive linear map <m>h\colon L_{p,q}\rightarrow L_{p',q'}</m>.
+            </p>
+            <p>
+                More generally, given pairwise disjoint polygonal regions <m>P_1,P_2,\dots, P_r</m> with labelling schemes <m>w_1,w_2,\dots, w_n</m>, the space obtained by pasting together the edges of the <m>P_k</m> is the quotient obtained from <m>\bigcup_{k=1}^r P_k</m> by identifying points on edges with the same labels as above. 
+            </p>
+        </statement>
+    </definition>
+    <theorem xml:id="th_pasted_polygonal_regions">
+        <title>Pasted polygonal regions</title>
+        <statement>
+            <p>
+                If <m>X</m> is obtained by pasting together the edges of polygonal regions according to labelling schemes, then <m>X</m> is a compact Hausdorff space. 
+            </p>
+        </statement>
+    </theorem>
+    <theorem xml:id="th_pasted_polygonal_regions_fund_grp">
+        <title>Pasted polygonal fundamental groups</title>
+        <statement>
+            <p>
+                Let <m>X</m> be obtained by pasting together the edges of a polygon <m>P</m> according to the labelling scheme 
+                <me>
+                     w=a_{i_1}^{\epsilon_1} a_{i_2}^{\epsilon_2}\cdots a_{i_n}^{\epsilon_n}
+                </me>,
+                let <m>\{a_1,a_2,\dots, a_m\}</m> be the distinct labels occurring in <m>w</m>,
+                and let <m>q\colon P\rightarrow X </m> be the quotient map. If <m>q</m> maps all vertices of <m>P</m> to a single point <m>x_0\in X</m>, then 
+                <me>
+                    \pi_1(X,x_0)=\langle a_1,a_2,\dots, a_m\vert a_{i_1}^{\epsilon_1} a_{i_2}^{\epsilon_2}\cdots a_{i_n}^{\epsilon_n}\rangle
+                </me>.
+            </p>
+        </statement>
+    </theorem>
+    <definition xml:id="d_nfold_torus">
+        <title><m>n</m>-fold torus</title>
+        <statement>
+            <p>
+                Fix an integer <m>n\geq 1</m>. Let <m>\{a_1,a_2,\dots, a_n\}</m> and <m>\{b_1,b_2,\dots, b_n\}</m> be disjoint sets of cardinality <m>n</m>, and let <m>X</m> be the space obtained by pasting together the edges of a polygon according to the labelling scheme 
+                <me>
+                    w=a_1b_1a_1^{-1}b_{1}^{-1}a_2b_2a_2^{-1}b_2^{-1}\cdots a_nb_na_{n}^{-1}b_{n}^{-1}
+                </me>.
+                We call <m>X</m> an <term><m>n</m>-fold connected sum of tori</term>, or simply the <term><m>n</m>-fold torus</term>, denoted  <m>T\# T\# \cdots \# T</m>.              
+            </p>
+        </statement>
+    </definition>
+
+    <definition xml:id="d_mfold_projective_plane">
+        <title><m>m</m>-fold projective plane</title>
+        <statement>
+            <p>
+                Fix an integer <m>m\geq 2</m>. Let <m>a_1,a_2,\dots, a_m</m> be distinct labels, and let <m>X</m> be the space obtained by pasting together the edges of a polygon according to the labelling scheme 
+                <me>
+                    w=a_1a_1a_2a_2\cdots a_ma_m
+                </me>.
+                We call <m>X</m> an <term><m>m</m>-fold connected sum of projective planes</term>, or simply the <term><m>m</m>-fold projective plane</term>, denoted <m>P^2\# P^2\cdots P^2</m>.              
+            </p>
+        </statement>
+    </definition>
+    
+    <corollary xml:id="th_torus_projective_plane">
+        <title>Fundamental group of <m>n</m>-fold torus and <m>m</m>-fold projective plane</title>
+        <statement>
+            <p>
+                Let <m>X</m> be the space obtained by pasting together the edges of a polygon <m>P</m> according to the labelling scheme <m>w</m>, and suppose all vertices get mapped to a single point <m>x_0\in X</m>. 
+                <ol>
+                    <li>
+                        <title><m>n</m>-fold torus</title>
+                        <p>
+                           If <m>X</m> is an <m>n</m>-fold torus, then 
+                           <me>
+                            \pi_1(X,x_0)=\langle a_1,b_1,a_2,b_2,\dots , a_n,b_n\vert [a_1,b_1][a_2,b_2]\cdots [a_n,b_n]\rangle
+                           </me>.  
+                        </p>
+                    </li>
+                    <li>
+                        <title><m>m</m>-fold projective plane</title>
+                        <p>
+                           If <m>X</m> is an <m>m</m>-fold projective plane, then 
+                           <me>
+                            \pi_1(X,x_0)=\langle a_1,a_2,\dots , a_m\vert a_1^2a_2^2\cdots a_m^2\rangle
+                           </me>.  
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+    </corollary>
+    </section>

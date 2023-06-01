@@ -17,4 +17,9 @@
    <xi:include  href="s_seifert_van_kampen.ptx"/>
    <xi:include  href="s_wedge_of_circles.ptx"/>
    <xi:include  href="s_adjoin_2cell.ptx"/>
+   <xi:include  href="s_dunce_cap.ptx"/>
+   <xi:include  href="s_polygonal_regions.ptx"/>
+  <xi:include  href="s_surface_classification.ptx"/>
+   <xi:include  href="s_covering_classification.ptx"/>
+
 </chapter>

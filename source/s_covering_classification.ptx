@@ -1,0 +1,90 @@
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="s_covering_classification">
+  <title>Classification of covering spaces</title>
+ <definition xml:id="d_map_of_coverings">
+ <title>Maps of coverings</title>
+    <statement>
+        <p>
+            Let <m>p\colon E\rightarrow B</m> and <m>p'\colon E'\rightarrow B</m> be covering maps. A <term>map of coverings</term> is a continuous function <m>h\colon E\rightarrow E'</m> satisfying <m>p=p'\circ h</m>. 
+            <image xml:id="im_map_of_coverings" width="50%">
+                <description>Map of coverings</description>
+                <latex-image>
+                    \begin{tikzcd}
+                        E \arrow[rr,"h"] \arrow[rd,"p"'] \amp  \amp E' \arrow[ld,"p'"] \\ 
+                        \amp B 
+                    \end{tikzcd}
+                </latex-image>
+            </image>  
+            An <term>equivalence of covering maps</term> is a map of coverings that is a homeomorphism. The two covering maps <m>p</m> and <m>p'</m> are <term>equivalent</term> if there is an equivalence of covering maps from <m>E</m> to <m>E'</m>.       
+        </p>
+    </statement>
+ </definition>
+ <theorem xml:id="th_covering_spaces">
+    <title>Covering spaces</title>
+    <statement>
+        <p>
+        Let <m>p\colon E\rightarrow B</m> be a covering map satisfying <m>p(e_0)=b_0</m>. Assume <m>E</m> and <m>B</m> are path connected and locally path connected.           
+        </p>
+        <ol>
+            <li>
+                <title>Lifting criterion</title>
+                <p>
+                    Assume <m>Y</m> is path connected and locally path connected. If <m>f</m> is a continuous map satisfying <m>f(y_0)=b_0</m>, then <m>f</m> lifts to a map <m>\widetilde{f}\colon Y\rightarrow E</m> satisfying <m>\widetilde{f}(y_0)=e_0</m> if and only if 
+                    <me>
+                        f_*(\pi_1(Y,y_0))\subseteq p_*(\pi_1(E,e_0))
+                    </me>.
+                    Furthermore, the lifting <m>\widetilde{f}</m>, if it exists, is unique: <ie/>, there is at most one lifting <m>\widetilde{f}</m> satisfying <m>\widetilde{f}(y_0)=e_0</m>.
+                </p>
+            </li>
+            <li>
+                <title>Equivalence of based coverings</title>
+                <p>
+                    Let <m>p'\colon E'\rightarrow B</m> be another covering map satisfying <m>p(e_0')=b_0</m>. Assume <m>E'</m> is path connected and locally path connected. There is an equivalence of covering maps <m>h\colon E\rightarrow E'</m> satisfying <m>h(e_0)=e_0'</m> if and only if 
+                    <me>
+                        p_*(\pi_1(E,e_0))=p_*'(\pi_1(E',e_0'))
+                    </me>.
+                    Furthermore, the equivalence <m>h</m>, if it exists, is unique.   
+                </p>
+            </li>
+            <li>
+                <title>Equivalence of coverings</title>
+                <p>
+                    Let <m>p'\colon E'\rightarrow B</m> be another covering map satisfying <m>p'(e_0')=b_0</m>. Assume <m>E'</m> is path connected and locally path connected. There is an equivalence of covering maps <m>h\colon E\rightarrow E'</m> if and only if the subgroups  
+                    <md>
+                        <mrow> H\amp =p_*(\pi_1(E,e_0))\amp H'\amp=p_*'(\pi_1(E',e_0')) </mrow> 
+                    </md>
+                    are conjugate. 
+                </p>
+            </li>
+        </ol>
+    </statement>
+ </theorem>
+
+ <definition xml:id="d_universal_covering_space">
+    <title>Universal covering space</title>
+    <statement>
+        <p>
+            Let <m>B</m> be path connected and locally path connected. If <m>p\colon E\rightarrow B</m> is a covering map and <m>E</m> is simply connected, then <m>E</m> is called the <term>universal covering space</term> of <m>B</m>. 
+        </p>
+    </statement>
+ </definition>
+
+ <definition xml:id="d_semilocally_simply_connected">
+    <title>Semilocally simply connected</title>
+    <statement>
+        <p>
+            A space <m>B</m> is <term>semilocally simply connected</term> if for each <m>b\in B</m> there is a neighborhood <m>U</m> of <m>b</m> such that the homomorphism <m>i_*\colon \pi_1(U,b)\rightarrow \pi_1(B,b) </m> induced by inclusion is trivial. 
+        </p>
+    </statement>
+ </definition>
+
+ <theorem xml:id="th_universal_covering">
+    <title>Universal covering space</title>
+    <statement>
+        <p>
+            Let <m>B</m> be path connected and locally path connected. There is a universal covering space of <m>B</m> if and only if <m>B</m> is semilocally simply connected. 
+        </p>
+    </statement>
+ </theorem>
+ 
+
+ </section>

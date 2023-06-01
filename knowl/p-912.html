@@ -12,7 +12,17 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">You may have met analogs of the homeomorphism in other areas of mathematics: e.g., in linear algebra or group theory. In category theory it is what is called an <em class="emphasis">isomorphism</em>. The basic idea is that once you decide what the “structure-preserving” maps are between objects (continuous functions for topological spaces, linear transformations for vector spaces, homomorphisms for groups), an isomorphism is essentially just an <em class="emphasis">invertible</em> structure-preserving map: a vector space isomorphism is an invertible linear transformation; a group isomorphism is an invertible group homomorphism. The only subtlety is that you want the inverse of this invertible function to also be structure preserving! For linear transformations and group homomorphisms this is automatic. Not so for continuous functions! The inverse of an invertible continuous function need not be continuous, as the example below illustrates.</div>
-<span class="incontext"><a href="s_homeomorphisms.html#p-912" class="internal">in-context</a></span>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(X=\R^I\)</span> for some set <span class="process-math">\(I\text{,}\)</span> where <span class="process-math">\(\R\)</span> is equipped with the standard topology. Let <span class="process-math">\(\overline{d}(x,y)=\min\{\abs{x-y},1\}\)</span> for all <span class="process-math">\(x,y\in \R\text{.}\)</span> The function</div>
+<div class="displaymath process-math">
+\begin{align*}
+d_{\operatorname{uni}}\colon X\times X \amp \rightarrow \R\\
+\left((x_i)_{i\in I}, (y_i)_{i\in I}\right) \amp\mapsto  \sup\{\overline{d}(x_i,y_i)\colon i\in I\}
+\end{align*}
+</div>
+<div class="para">is a metric called the <dfn class="terminology">uniform metric</dfn> on <span class="process-math">\(X\text{.}\)</span> The <dfn class="terminology">uniform topology</dfn> is the topology induced by <span class="process-math">\(d_{\operatorname{uni}}\text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a href="s_prods_convergence_metric.html#p-912" class="internal">in-context</a></span>
 </body>
 </html>

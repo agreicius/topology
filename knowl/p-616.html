@@ -13,16 +13,14 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(\mathcal{B}\subseteq \mathcal{P}(X)\)</span> be a basis in the set <span class="process-math">\(X\text{.}\)</span> The topology</div>
-<div class="displaymath process-math">
-\begin{align}
-\mathcal{T}\amp =\{U\subseteq X\colon U=\bigcup_{i\in I}B_i \text{ for some elements } B_i\in \mathcal{B}\} \tag{2.2.1}\\
-\amp = \{U\subseteq X\colon \text{ for all } x\in U \text{ there exists } B\in \mathcal{B} \text{ s.t. } x\in B\subseteq U\}\tag{2.2.2}
-\end{align}
+<div class="para">Using induction, we can show that if <span class="process-math">\(\mathcal{T}\)</span> satisfies axiom (3) for any <em class="emphasis">two</em> elements of <span class="process-math">\(\mathcal{T}\text{,}\)</span> then it satisfies it for any <span class="process-math">\(n\)</span> elements, for <span class="process-math">\(n\)</span> arbitrary. In other words if we replace axiom (3) with</div>
+<dl class="description-list">
+<dt>(3')</dt>
+<dd><div class="para">If <span class="process-math">\(U_1, U_2\in \mathcal{T}\text{,}\)</span> then <span class="process-math">\(U=U_1\cap U_2\in \mathcal{T}\)</span>
+</div></dd>
+</dl>
+<div class="para">, we get an equivalent definition of a toplogical space. When verifying whether a given <span class="process-math">\((X,\mathcal{T})\)</span> is a topological space it may be more convenient to use axiom (3') as opposed to axiom (3).</div>
 </div>
-<div class="para">is called the <dfn class="terminology">topology generated</dfn> by <span class="process-math">\(\mathcal{B}\text{.}\)</span> Similarly, we call <span class="process-math">\(\mathcal{B}\)</span> a basis for <span class="process-math">\(\mathcal{T}\text{.}\)</span>
-</div>
-</div>
-<span class="incontext"><a href="s_bases_top.html#p-616" class="internal">in-context</a></span>
+<span class="incontext"><a href="s_top_spaces.html#p-616" class="internal">in-context</a></span>
 </body>
 </html>

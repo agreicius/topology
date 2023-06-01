@@ -11,8 +11,30 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para">Statements (1)-(2): properties of open (resp. closed) sets imply that <span class="process-math">\(A^\circ\)</span> is open and <span class="process-math">\(\overline{A}\)</span> is closed. Furthermore, by definition of <span class="process-math">\(A^\circ\)</span> (resp. <span class="process-math">\(\overline{A}\)</span>) along with simple properties of union/intersection it follows that if <span class="process-math">\(U\)</span> is open and <span class="process-math">\(U\subseteq A\text{,}\)</span> then <span class="process-math">\(U\subseteq A^\circ\text{;}\)</span> and if <span class="process-math">\(C\)</span> is closed containing <span class="process-math">\(A\text{,}\)</span> then <span class="process-math">\(\overline{A}\subseteq C\text{.}\)</span>
-</div> <div class="para">The first equivalence in (3) follows from the definition of <span class="process-math">\(A^\circ\)</span> as a union. The second equivalence follows from the fact that any <span class="process-math">\(U\)</span> is covered by basis elements.</div> <div class="para">We prove (4) as a chain of equivalences. Call the three statements (i), (ii), (iii).</div> <div class="para">Assume <span class="process-math">\(x\in \overline{A}\text{.}\)</span>  If <span class="process-math">\(U\)</span> is an open set satisfying <span class="process-math">\(U\cap A=\emptyset\text{,}\)</span> then <span class="process-math">\(C=U^c\)</span> is a closed set containing <span class="process-math">\(A\text{,}\)</span> and hence contains <span class="process-math">\(x\text{.}\)</span> It follows that any open set containing <span class="process-math">\(x\)</span> intersects <span class="process-math">\(A\)</span> nontrivially. This proves (i) <span class="process-math">\(\implies\)</span> (ii).</div> <div class="para">Clearly (ii) implies (iii), since any basis element is an open set.</div> <div class="para">Assume (iii). If <span class="process-math">\(C\)</span> is a closed set containing <span class="process-math">\(A\text{,}\)</span> then <span class="process-math">\(U=C^c\)</span> is an open set satisfying <span class="process-math">\(U\cap A=\emptyset\text{.}\)</span> It follows from (iii) that <span class="process-math">\(x\notin U\text{,}\)</span> and hence that <span class="process-math">\(x\in C\)</span> for all closed sets <span class="process-math">\(C\)</span> containing <span class="process-math">\(A\text{.}\)</span> It follows that <span class="process-math">\(x\in \overline{A}\text{,}\)</span> the intersection of these sets.</div></article><span class="incontext"><a href="s_closed_closure_interior.html#proof-69" class="internal">in-context</a></span>
+<article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
+<div class="para logical">
+<div class="para">We content ourselves with a proof sketch in order to avoid getting into the weeds of elementary number theory. The positivity and symmetry axioms follow readily from simple properties of divisibility. For the triangle inequality it is enough to prove that the <span class="process-math">\(p\)</span>-adic norm <span class="process-math">\(\abs[p]{\hspace{5pt}}\)</span> satisfies the triangle inequality on <span class="process-math">\(\Z\text{:}\)</span> i.e., for all <span class="process-math">\(m,n\in\Z\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_padic_triangle_inequality.html">
+\begin{equation}
+\abs[p]{m+n}\leq \abs[p]{m}+\abs[p]{n}\tag{2.3.4}
+\end{equation}
+</div>
+<div class="para">since then for any <span class="process-math">\(r,s,t\in\Z\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_padic_triangle_inequality.html">
+\begin{align*}
+d(r,s) \amp=\abs[p]{r-s} \\
+\amp=\abs[p]{r-t +t-s} \\
+\amp\leq \abs[p]{r-t}+\abs[p]{t-s}\\
+\amp \leq d(r,t)+d(t,s)\text{.}
+\end{align*}
+</div>
+<div class="para">Lastly, the inequality <a href="" class="xref" data-knowl="./knowl/eq_padic_triangle_inequality.html" title="Equation 2.3.4">(2.3.4)</a> follows from the stronger claim</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_padic_triangle_inequality.html">
+\begin{equation}
+\abs[p]{m+n}\leq \max\{\abs[p]{m}, \abs[p]{n} \}\text{,}\tag{2.3.5}
+\end{equation}
+</div>
+<div class="para">which itself follows from divisibility properties.</div>
+</div></article><span class="incontext"><a href="s_metric1.html#proof-69" class="internal">in-context</a></span>
 </body>
 </html>

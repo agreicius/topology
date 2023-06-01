@@ -12,7 +12,23 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Next, I claim that <span class="process-math">\(X=\overline{Y}\text{.}\)</span> Indeed, given any <span class="process-math">\(z=(z_1,z_2,\dots, )\)</span> and any open base element <span class="process-math">\(U=\prod_{n=1}^NU_n\times \prod_{n=N+1}^\infty X_n\)</span> containing <span class="process-math">\(z\text{,}\)</span> we have <span class="process-math">\((z_1,z_2,\dots, z_N, x_{N+1},x_{N+2},\dots)\in U\cap X_N\subseteq Y\text{.}\)</span> Since connectedness is preserved under closure, we conclude that <span class="process-math">\(X\)</span> is connected.</div>
-<span class="incontext"><a href="s_connected1.html#p-1039" class="internal">in-context</a></span>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(X^*\)</span> be the quotient space of <span class="process-math">\(X\)</span> by the equivalence relation <span class="process-math">\(\sim\text{,}\)</span> and let <span class="process-math">\(q\colon X\rightarrow X^*\)</span> be the corresponding quotient map. Let <span class="process-math">\(g\colon X\rightarrow Z\)</span> be a continuous function that agrees on fibers of <span class="process-math">\(q\)</span> (i.e., <span class="process-math">\(x\sim x'\implies g(x)=g(x')\)</span>).</div>
+<ol class="decimal">
+<li><div class="para">There is a unique continuous function <span class="process-math">\(f\)</span> satisfying <span class="process-math">\(g=f\circ q\text{;}\)</span> and <span class="process-math">\(f\)</span> is a quotient map if and only if <span class="process-math">\(g\)</span> is a quotient map. <div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="generated/latex-image/im_quotientspace_prop.svg" role="img" class="contained"></div>
+</div></li>
+<li><div class="para logical">
+<div class="para">The function <span class="process-math">\(f\)</span> is a homeomorphism if and only if <span class="process-math">\(g\)</span> is a quotient map and satisfies</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g(x)=g(x') \iff x\sim x' (\text{equivalently, } g(x)=g(x')\iff q(x)=q(x'))
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(x, x'\in X\text{.}\)</span>
+</div>
+</div></li>
+</ol>
+</div>
+<span class="incontext"><a href="s_quotients.html#p-1039" class="internal">in-context</a></span>
 </body>
 </html>

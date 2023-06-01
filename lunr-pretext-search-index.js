@@ -1825,7 +1825,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.17",
   "title": "Adjoining a 2-cell",
-  "body": " Adjoining a 2-cell   2-cell   A 2-cell is a space that is homeomorphic to the closed disc . Given a 2-cell with homeomorphism , we denote by the image of the boundary of ; and we denote by the set , which is the image of the open disc under .     Adjoining a 2-cell   Let be a closed path-connected subspace of the Hausdorff space , and suppose there is a 2-cell and map such that (i) and (ii) is a bijection onto . Fix any point , let , and define to be the restriction of to .  The map induced by the inclusion is surjective and its kernel is the least normal subgroup of containing . Equivalently, if is a loop such that generated , then is the least normal subgroup of containing .     Adjoining a 2-cell   Let be a closed path-connected subspace of the Hausdorff space . We say is obtained from by adjoining a 2-cell if there is a 2-cell and map such that and is a bijection onto .    "
+  "body": " Adjoining a 2-cell   2-cell   A 2-cell is a space that is homeomorphic to the closed disc . Given a 2-cell with homeomorphism , we denote by the image of the boundary of ; and we denote by the set , which is the image of the open disc under .     Adjoining a 2-cell   Let be a closed path-connected subspace of the Hausdorff space , and suppose there is a 2-cell and map such that (i) and (ii) is a bijection onto . Fix any point , let , and define to be the restriction of to .  The map induced by the inclusion is surjective and its kernel is the least normal subgroup of containing . Equivalently, if is a loop such that generated , then is the least normal subgroup of containing .     Adjoining a 2-cell   Let be a closed path-connected subspace of the Hausdorff space . We say is obtained from by adjoining a 2-cell if there is a 2-cell and map such that and is a bijection onto .     Torus revisited (again)   Fix any The map defined as provides a realization of the torus as a closed subspace of . The space is a , with equal to the square perimeter of . Let .   Show that is obtained from by adjoining a -cell via .    Use the adjoining a 2-cell theorem to compute for any point .       "
 },
 {
   "id": "d_2cell",
@@ -1853,6 +1853,258 @@ var ptx_lunr_docs = [
   "number": "1.17.3",
   "title": "Adjoining a 2-cell.",
   "body": " Adjoining a 2-cell   Let be a closed path-connected subspace of the Hausdorff space . We say is obtained from by adjoining a 2-cell if there is a 2-cell and map such that and is a bijection onto .   "
+},
+{
+  "id": "eg_torus_revisited",
+  "level": "2",
+  "url": "s_adjoin_2cell.html#eg_torus_revisited",
+  "type": "Example",
+  "number": "1.17.4",
+  "title": "Torus revisited (again).",
+  "body": " Torus revisited (again)   Fix any The map defined as provides a realization of the torus as a closed subspace of . The space is a , with equal to the square perimeter of . Let .   Show that is obtained from by adjoining a -cell via .    Use the adjoining a 2-cell theorem to compute for any point .      "
+},
+{
+  "id": "s_dunce_cap",
+  "level": "1",
+  "url": "s_dunce_cap.html",
+  "type": "Section",
+  "number": "1.18",
+  "title": "<span class=\"process-math\">\\(n\\)<\/span>-fold dunce caps",
+  "body": " -fold dunce caps   -fold dunce cap   Fix a positive integer , let , and let be the rotation by map: , for a point , we have .  The -fold dunce cap is the quotient of obtained by identifying any two points satisfying .     Normality of quotients   Let be a closed quotient map. If is normal, then is normal.    First we show that is a -space. Since is surjective, for all we have for some . Since is , the set is closed. Since is a closed map, the set is closed. Thus is .  We use the alternate formulation of normality . Consider an inclusion , where is closed and is open. Taking preimages under yields an inclusion , where is closed and is open. Since is normal there is an open set satisfying .  It is not necessarily true that is open, since we can not guarantee that is saturated. However, since is closed and is a closed map, the image is closed in . Let . Since (we use here that is surjective), we have . Since , we see that , and thus . We conclude that is an open set satisfying , showing that is normal.     Dunce cap fundamental group   Let be the -fold dunces cap, let be the quotient map, and let .    The space is Hausdorff and path connected, the subspace is closed and path connected, and is obtained from by adjoining a 2-cell via the map .    We have for any .      Proof of (1)      Proof of (2)      "
+},
+{
+  "id": "d_dunce_cap",
+  "level": "2",
+  "url": "s_dunce_cap.html#d_dunce_cap",
+  "type": "Definition",
+  "number": "1.18.1",
+  "title": "<span class=\"process-math\">\\(n\\)<\/span>-fold dunce cap.",
+  "body": " -fold dunce cap   Fix a positive integer , let , and let be the rotation by map: , for a point , we have .  The -fold dunce cap is the quotient of obtained by identifying any two points satisfying .   "
+},
+{
+  "id": "lemmma_quotient_normality",
+  "level": "2",
+  "url": "s_dunce_cap.html#lemmma_quotient_normality",
+  "type": "Lemma",
+  "number": "1.18.2",
+  "title": "Normality of quotients.",
+  "body": " Normality of quotients   Let be a closed quotient map. If is normal, then is normal.    First we show that is a -space. Since is surjective, for all we have for some . Since is , the set is closed. Since is a closed map, the set is closed. Thus is .  We use the alternate formulation of normality . Consider an inclusion , where is closed and is open. Taking preimages under yields an inclusion , where is closed and is open. Since is normal there is an open set satisfying .  It is not necessarily true that is open, since we can not guarantee that is saturated. However, since is closed and is a closed map, the image is closed in . Let . Since (we use here that is surjective), we have . Since , we see that , and thus . We conclude that is an open set satisfying , showing that is normal.   "
+},
+{
+  "id": "th_fund_grp_dunce",
+  "level": "2",
+  "url": "s_dunce_cap.html#th_fund_grp_dunce",
+  "type": "Theorem",
+  "number": "1.18.3",
+  "title": "Dunce cap fundamental group.",
+  "body": " Dunce cap fundamental group   Let be the -fold dunces cap, let be the quotient map, and let .    The space is Hausdorff and path connected, the subspace is closed and path connected, and is obtained from by adjoining a 2-cell via the map .    We have for any .      Proof of (1)      Proof of (2)     "
+},
+{
+  "id": "s_polygonal_regions",
+  "level": "1",
+  "url": "s_polygonal_regions.html",
+  "type": "Section",
+  "number": "1.19",
+  "title": "Pasted polygonal regions",
+  "body": " Pasted polygonal regions   Polygonal region   Let be the the circle with equation . Given integer and angles we consider the distinct points on $C$ given by , for .  Next for each , let be the closed half-plane containing whose boundary is the line determined by . The polygonal region determined by is the region defined as . For all the point is called a vertex of , and the line segment between and is called an edge of .     Oriented line segment   An orientation of a line segment is an ordering of its endpoints as a pair . In this case is called the initial point , and the final point of . We will denote by the oriented line segment with initial point and final point .  Given two oriented line segments and the positive linear map of onto is the unique homeomorphism satisfying for all .    If is the polygonal region corresponding to points , and is the polygonal region corresponding to points , then there is a homeomorphism whose restriction to the oriented edge is the positive linear map from to .   Oriented labelling   Let be a polygonal region corresponding to points , for each let be the edge between and , and let be the set of edges of . A labelling of the edges of is a function . For each , we call the label of .  An oriented labelling of the edges of is a function . For each the assigned orientation of with respect to is if , and if .  Given an oriented labelling of , the corresponding labelling scheme of length is the expression , where for all we have . In other words, is the label of edge , and indicates its orientation.     Pasted polygonal region   Let be a polygonal region corresponding to points and let be a labelling scheme corresponding to an oriented labelling of the edges of . The space obtained by pasting the edges of together according to the labelling scheme is the quotient obtained by identifying points on any two oriented edges and that have the same label according to the positive linear map .  More generally, given pairwise disjoint polygonal regions with labelling schemes , the space obtained by pasting together the edges of the is the quotient obtained from by identifying points on edges with the same labels as above.     Pasted polygonal regions   If is obtained by pasting together the edges of polygonal regions according to labelling schemes, then is a compact Hausdorff space.     Pasted polygonal fundamental groups   Let be obtained by pasting together the edges of a polygon according to the labelling scheme , let be the distinct labels occurring in , and let be the quotient map. If maps all vertices of to a single point , then .     -fold torus   Fix an integer . Let and be disjoint sets of cardinality , and let be the space obtained by pasting together the edges of a polygon according to the labelling scheme . We call an -fold connected sum of tori , or simply the -fold torus , denoted .     -fold projective plane   Fix an integer . Let be distinct labels, and let be the space obtained by pasting together the edges of a polygon according to the labelling scheme . We call an -fold connected sum of projective planes , or simply the -fold projective plane , denoted .     Fundamental group of -fold torus and -fold projective plane   Let be the space obtained by pasting together the edges of a polygon according to the labelling scheme , and suppose all vertices get mapped to a single point .   -fold torus  If is an -fold torus, then .    -fold projective plane  If is an -fold projective plane, then .       "
+},
+{
+  "id": "d_polygonal_region",
+  "level": "2",
+  "url": "s_polygonal_regions.html#d_polygonal_region",
+  "type": "Definition",
+  "number": "1.19.1",
+  "title": "Polygonal region.",
+  "body": " Polygonal region   Let be the the circle with equation . Given integer and angles we consider the distinct points on $C$ given by , for .  Next for each , let be the closed half-plane containing whose boundary is the line determined by . The polygonal region determined by is the region defined as . For all the point is called a vertex of , and the line segment between and is called an edge of .   "
+},
+{
+  "id": "d_orientation",
+  "level": "2",
+  "url": "s_polygonal_regions.html#d_orientation",
+  "type": "Definition",
+  "number": "1.19.2",
+  "title": "Oriented line segment.",
+  "body": " Oriented line segment   An orientation of a line segment is an ordering of its endpoints as a pair . In this case is called the initial point , and the final point of . We will denote by the oriented line segment with initial point and final point .  Given two oriented line segments and the positive linear map of onto is the unique homeomorphism satisfying for all .   "
+},
+{
+  "id": "remark-19",
+  "level": "2",
+  "url": "s_polygonal_regions.html#remark-19",
+  "type": "Remark",
+  "number": "1.19.3",
+  "title": "",
+  "body": "If is the polygonal region corresponding to points , and is the polygonal region corresponding to points , then there is a homeomorphism whose restriction to the oriented edge is the positive linear map from to . "
+},
+{
+  "id": "d_oriented_labelling",
+  "level": "2",
+  "url": "s_polygonal_regions.html#d_oriented_labelling",
+  "type": "Definition",
+  "number": "1.19.4",
+  "title": "Oriented labelling.",
+  "body": " Oriented labelling   Let be a polygonal region corresponding to points , for each let be the edge between and , and let be the set of edges of . A labelling of the edges of is a function . For each , we call the label of .  An oriented labelling of the edges of is a function . For each the assigned orientation of with respect to is if , and if .  Given an oriented labelling of , the corresponding labelling scheme of length is the expression , where for all we have . In other words, is the label of edge , and indicates its orientation.   "
+},
+{
+  "id": "d_pasted_polygonal_region",
+  "level": "2",
+  "url": "s_polygonal_regions.html#d_pasted_polygonal_region",
+  "type": "Definition",
+  "number": "1.19.5",
+  "title": "Pasted polygonal region.",
+  "body": " Pasted polygonal region   Let be a polygonal region corresponding to points and let be a labelling scheme corresponding to an oriented labelling of the edges of . The space obtained by pasting the edges of together according to the labelling scheme is the quotient obtained by identifying points on any two oriented edges and that have the same label according to the positive linear map .  More generally, given pairwise disjoint polygonal regions with labelling schemes , the space obtained by pasting together the edges of the is the quotient obtained from by identifying points on edges with the same labels as above.   "
+},
+{
+  "id": "th_pasted_polygonal_regions",
+  "level": "2",
+  "url": "s_polygonal_regions.html#th_pasted_polygonal_regions",
+  "type": "Theorem",
+  "number": "1.19.6",
+  "title": "Pasted polygonal regions.",
+  "body": " Pasted polygonal regions   If is obtained by pasting together the edges of polygonal regions according to labelling schemes, then is a compact Hausdorff space.   "
+},
+{
+  "id": "th_pasted_polygonal_regions_fund_grp",
+  "level": "2",
+  "url": "s_polygonal_regions.html#th_pasted_polygonal_regions_fund_grp",
+  "type": "Theorem",
+  "number": "1.19.7",
+  "title": "Pasted polygonal fundamental groups.",
+  "body": " Pasted polygonal fundamental groups   Let be obtained by pasting together the edges of a polygon according to the labelling scheme , let be the distinct labels occurring in , and let be the quotient map. If maps all vertices of to a single point , then .   "
+},
+{
+  "id": "d_nfold_torus",
+  "level": "2",
+  "url": "s_polygonal_regions.html#d_nfold_torus",
+  "type": "Definition",
+  "number": "1.19.8",
+  "title": "<span class=\"process-math\">\\(n\\)<\/span>-fold torus.",
+  "body": " -fold torus   Fix an integer . Let and be disjoint sets of cardinality , and let be the space obtained by pasting together the edges of a polygon according to the labelling scheme . We call an -fold connected sum of tori , or simply the -fold torus , denoted .   "
+},
+{
+  "id": "d_mfold_projective_plane",
+  "level": "2",
+  "url": "s_polygonal_regions.html#d_mfold_projective_plane",
+  "type": "Definition",
+  "number": "1.19.9",
+  "title": "<span class=\"process-math\">\\(m\\)<\/span>-fold projective plane.",
+  "body": " -fold projective plane   Fix an integer . Let be distinct labels, and let be the space obtained by pasting together the edges of a polygon according to the labelling scheme . We call an -fold connected sum of projective planes , or simply the -fold projective plane , denoted .   "
+},
+{
+  "id": "th_torus_projective_plane",
+  "level": "2",
+  "url": "s_polygonal_regions.html#th_torus_projective_plane",
+  "type": "Corollary",
+  "number": "1.19.10",
+  "title": "Fundamental group of <span class=\"process-math\">\\(n\\)<\/span>-fold torus and <span class=\"process-math\">\\(m\\)<\/span>-fold projective plane.",
+  "body": " Fundamental group of -fold torus and -fold projective plane   Let be the space obtained by pasting together the edges of a polygon according to the labelling scheme , and suppose all vertices get mapped to a single point .   -fold torus  If is an -fold torus, then .    -fold projective plane  If is an -fold projective plane, then .      "
+},
+{
+  "id": "s_surface_classification",
+  "level": "1",
+  "url": "s_surface_classification.html",
+  "type": "Section",
+  "number": "1.20",
+  "title": "Classification of surfaces",
+  "body": " Classification of surfaces   Equivalent labelling schemes   Two labelling schemes and are equivalent if their corresponding quotient spaces are homeomorphic. In this case we write .     Elementary operations   Each of the following procedures, called elementary operations , when applied to a labelling scheme , produces an equivalent labelling scheme.   Cut\/Paste  Cut any , replacing it with , where , each has length at least two, and does not appear as a label in the original labelling scheme.  Past any two elements $w_j=y_0c^{-1}, w_k=cy_1$, together, replacing them with $w=y_0y_1$, provided each has length at least two, and does not occur anywhere else in the labelling scheme.    Relabel base\/flip exponent  Fix a label occurring in the scheme. Replace all occurrences with , where is a label not occurring in the original labelling scheme.  Fix a label occurring in the scheme. Replace all occurrences of with .    Cycle  Replace any with , where is any cyclic permutation of .    Flip  Replace any with its formal inverse  .    Fusion\/Fission  Assuming labels always occur in the labelling scheme either as or , replace each instance of with and each instance of with , provided does not occur in the original labelling scheme, and that the resulting polygons all have length at least .  Replace all instances of with and all instances of with , assuming and do not occur in the original labelling scheme.    Cancel\/uncancel  Replace any with , provided does not occur anywhere else in the labelling scheme and has length at least 5.  Replace any with , provided does not occur in the original labelling scheme.        Abelianization of quotients   Let be a normal subgroup of the group , and let and be the quotient homomorphisms. We have      Non-homeomorphic surfaces   Let denote the -fold torus, and let denote the -fold projective plane. The surfaces are pairwise non-homeomorphic.     Classification theorem   Let denote the -fold torus, and let denote the -fold projective plane. If is a compact 2-manifold ( , a surface), then is homemorphic to exactly one of the following surfaces: , for some , for some .    "
+},
+{
+  "id": "d_equivalent_labelling_schemes",
+  "level": "2",
+  "url": "s_surface_classification.html#d_equivalent_labelling_schemes",
+  "type": "Definition",
+  "number": "1.20.1",
+  "title": "Equivalent labelling schemes.",
+  "body": " Equivalent labelling schemes   Two labelling schemes and are equivalent if their corresponding quotient spaces are homeomorphic. In this case we write .   "
+},
+{
+  "id": "th_elementary_operations",
+  "level": "2",
+  "url": "s_surface_classification.html#th_elementary_operations",
+  "type": "Theorem",
+  "number": "1.20.2",
+  "title": "Elementary operations.",
+  "body": " Elementary operations   Each of the following procedures, called elementary operations , when applied to a labelling scheme , produces an equivalent labelling scheme.   Cut\/Paste  Cut any , replacing it with , where , each has length at least two, and does not appear as a label in the original labelling scheme.  Past any two elements $w_j=y_0c^{-1}, w_k=cy_1$, together, replacing them with $w=y_0y_1$, provided each has length at least two, and does not occur anywhere else in the labelling scheme.    Relabel base\/flip exponent  Fix a label occurring in the scheme. Replace all occurrences with , where is a label not occurring in the original labelling scheme.  Fix a label occurring in the scheme. Replace all occurrences of with .    Cycle  Replace any with , where is any cyclic permutation of .    Flip  Replace any with its formal inverse  .    Fusion\/Fission  Assuming labels always occur in the labelling scheme either as or , replace each instance of with and each instance of with , provided does not occur in the original labelling scheme, and that the resulting polygons all have length at least .  Replace all instances of with and all instances of with , assuming and do not occur in the original labelling scheme.    Cancel\/uncancel  Replace any with , provided does not occur anywhere else in the labelling scheme and has length at least 5.  Replace any with , provided does not occur in the original labelling scheme.      "
+},
+{
+  "id": "th_abelianization_of_quotient",
+  "level": "2",
+  "url": "s_surface_classification.html#th_abelianization_of_quotient",
+  "type": "Theorem",
+  "number": "1.20.3",
+  "title": "Abelianization of quotients.",
+  "body": " Abelianization of quotients   Let be a normal subgroup of the group , and let and be the quotient homomorphisms. We have    "
+},
+{
+  "id": "th_classification_theorem_distinct",
+  "level": "2",
+  "url": "s_surface_classification.html#th_classification_theorem_distinct",
+  "type": "Theorem",
+  "number": "1.20.4",
+  "title": "Non-homeomorphic surfaces.",
+  "body": " Non-homeomorphic surfaces   Let denote the -fold torus, and let denote the -fold projective plane. The surfaces are pairwise non-homeomorphic.   "
+},
+{
+  "id": "th_classification_theorem",
+  "level": "2",
+  "url": "s_surface_classification.html#th_classification_theorem",
+  "type": "Theorem",
+  "number": "1.20.5",
+  "title": "Classification theorem.",
+  "body": " Classification theorem   Let denote the -fold torus, and let denote the -fold projective plane. If is a compact 2-manifold ( , a surface), then is homemorphic to exactly one of the following surfaces: , for some , for some .   "
+},
+{
+  "id": "s_covering_classification",
+  "level": "1",
+  "url": "s_covering_classification.html",
+  "type": "Section",
+  "number": "1.21",
+  "title": "Classification of covering spaces",
+  "body": " Classification of covering spaces   Maps of coverings   Let and be covering maps. A map of coverings is a continuous function satisfying .  Map of coverings   An equivalence of covering maps is a map of coverings that is a homeomorphism. The two covering maps and are equivalent if there is an equivalence of covering maps from to .     Covering spaces   Let be a covering map satisfying . Assume and are path connected and locally path connected.    Lifting criterion  Assume is path connected and locally path connected. If is a continuous map satisfying , then lifts to a map satisfying if and only if . Furthermore, the lifting , if it exists, is unique: , there is at most one lifting satisfying .    Equivalence of based coverings  Let be another covering map satisfying . Assume is path connected and locally path connected. There is an equivalence of covering maps satisfying if and only if . Furthermore, the equivalence , if it exists, is unique.    Equivalence of coverings  Let be another covering map satisfying . Assume is path connected and locally path connected. There is an equivalence of covering maps if and only if the subgroups are equal.       Universal covering space   Let be path connected and locally path connected. If is a covering map and is simply connected, then is called the universal covering space of .     Semilocally simply connected   A space is semilocally simply connected if for each there is a neighborhood of such that the homomorphism induced by inclusion is trivial.     Universal covering space   Let be path connected and locally path connected. There is a universal covering space of if and only if is semilocally simply connected.    "
+},
+{
+  "id": "d_map_of_coverings",
+  "level": "2",
+  "url": "s_covering_classification.html#d_map_of_coverings",
+  "type": "Definition",
+  "number": "1.21.1",
+  "title": "Maps of coverings.",
+  "body": " Maps of coverings   Let and be covering maps. A map of coverings is a continuous function satisfying .  Map of coverings   An equivalence of covering maps is a map of coverings that is a homeomorphism. The two covering maps and are equivalent if there is an equivalence of covering maps from to .   "
+},
+{
+  "id": "th_covering_spaces",
+  "level": "2",
+  "url": "s_covering_classification.html#th_covering_spaces",
+  "type": "Theorem",
+  "number": "1.21.2",
+  "title": "Covering spaces.",
+  "body": " Covering spaces   Let be a covering map satisfying . Assume and are path connected and locally path connected.    Lifting criterion  Assume is path connected and locally path connected. If is a continuous map satisfying , then lifts to a map satisfying if and only if . Furthermore, the lifting , if it exists, is unique: , there is at most one lifting satisfying .    Equivalence of based coverings  Let be another covering map satisfying . Assume is path connected and locally path connected. There is an equivalence of covering maps satisfying if and only if . Furthermore, the equivalence , if it exists, is unique.    Equivalence of coverings  Let be another covering map satisfying . Assume is path connected and locally path connected. There is an equivalence of covering maps if and only if the subgroups are equal.     "
+},
+{
+  "id": "d_universal_covering_space",
+  "level": "2",
+  "url": "s_covering_classification.html#d_universal_covering_space",
+  "type": "Definition",
+  "number": "1.21.3",
+  "title": "Universal covering space.",
+  "body": " Universal covering space   Let be path connected and locally path connected. If is a covering map and is simply connected, then is called the universal covering space of .   "
+},
+{
+  "id": "d_semilocally_simply_connected",
+  "level": "2",
+  "url": "s_covering_classification.html#d_semilocally_simply_connected",
+  "type": "Definition",
+  "number": "1.21.4",
+  "title": "Semilocally simply connected.",
+  "body": " Semilocally simply connected   A space is semilocally simply connected if for each there is a neighborhood of such that the homomorphism induced by inclusion is trivial.   "
+},
+{
+  "id": "th_universal_covering",
+  "level": "2",
+  "url": "s_covering_classification.html#th_universal_covering",
+  "type": "Theorem",
+  "number": "1.21.5",
+  "title": "Universal covering space.",
+  "body": " Universal covering space   Let be path connected and locally path connected. There is a universal covering space of if and only if is semilocally simply connected.   "
 },
 {
   "id": "s_top_spaces",
@@ -1900,9 +2152,9 @@ var ptx_lunr_docs = [
   "body": " Trivial and discrete topology Let be a set.   The collection is a topology on , called the trivial topology . This is the topology on whose only open sets are the empty set and itself.    The collection is a topology on , called the discrete topology . This is the topology on for which every subset of is an open set.        Let . By definition the given contains and , and thus axiom (1) is satisfied. Since any union or intersection involving and is equal to either or , it is clear that is closed under arbitrary unions and finite intersections. Thus axioms (2)-(3) are satisfied.    Let . By definition, is the set of all subsets of . In particular, it contains and , and thus axioms (1) is satisfied. Furthermore, since any union or intersection of subsets of is again a subset of , we see that axioms (2)-(3) are satisfied.      "
 },
 {
-  "id": "example-38",
+  "id": "example-39",
   "level": "2",
-  "url": "s_top_spaces.html#example-38",
+  "url": "s_top_spaces.html#example-39",
   "type": "Example",
   "number": "2.1.3",
   "title": "Some small topological spaces.",
@@ -1927,9 +2179,9 @@ var ptx_lunr_docs = [
   "body": " coarser topology  finer topology  comparable topologies  Comparable topologies   Two topologies on the set are comparable if or , and incomparable otherwise. If , we say that is coarser than , and that is finer than . When we say that is strictly coarser than and is strictly finer than .   "
 },
 {
-  "id": "example-39",
+  "id": "example-40",
   "level": "2",
-  "url": "s_top_spaces.html#example-39",
+  "url": "s_top_spaces.html#example-40",
   "type": "Example",
   "number": "2.1.5",
   "title": "Comparing trivial, discrete, cofinite topologies.",
@@ -2116,9 +2368,9 @@ var ptx_lunr_docs = [
   "body": " Metric balls   Let be a metric space. Given and the -ball centered at is the subset defined as . In other words, is the set of all elements of lying within a distance of of . We call the radius of . More generally, we call a subset a -metric ball if for some and . When it is clear what the underlying metric is, we will omit and speak simply of metric balls.   "
 },
 {
-  "id": "example-46",
+  "id": "example-47",
   "level": "2",
-  "url": "s_metric1.html#example-46",
+  "url": "s_metric1.html#example-47",
   "type": "Example",
   "number": "2.3.4",
   "title": "Metric balls for Euclidean and box metrics.",
@@ -2170,9 +2422,9 @@ var ptx_lunr_docs = [
   "body": "  Given a set the function defined as is a metric on , called the trivial metric .    The proof that is a metric is left as an exercise.   "
 },
 {
-  "id": "example-48",
+  "id": "example-49",
   "level": "2",
-  "url": "s_metric1.html#example-48",
+  "url": "s_metric1.html#example-49",
   "type": "Example",
   "number": "2.3.9",
   "title": "Trivial metric.",
@@ -2251,9 +2503,9 @@ var ptx_lunr_docs = [
   "body": " Basis description of closed sets   Let be a topological space with basis . A set is closed if and only if for all , there is a basis element satisfying .    By definition a set is closed if and only if its complement is open. Using , we see that is open if and only if for all there is a basis element satisfying .   "
 },
 {
-  "id": "example-51",
+  "id": "example-52",
   "level": "2",
-  "url": "s_closed_closure_interior.html#example-51",
+  "url": "s_closed_closure_interior.html#example-52",
   "type": "Example",
   "number": "2.4.7",
   "title": "Closed sets in Euclidean metric topology.",
@@ -2296,9 +2548,9 @@ var ptx_lunr_docs = [
   "body": " Interior and closure of  Let and let . Compute the interior and closure of with respect to (a) the standard topology on and (b) the -topology on .     First consider with the standard topology. The interior of is empty in this case: , . To see this, note that given any and any open interval containing , we can choose an such that ; by design all elements of lie outside . Thus , and .  Next. I claim . To see this, note first that is closed: it is easy to see that for any we can find an such that . By (2) of we have . Since furthermore and since itself is not closed, it follows that .    Now consider the -topology on . We still have . Indeed, fix any , and take any basis element containing . We have or for some open interval . In either case, the same argument as above shows that contains a basis element , all of whose elements lie outside of . This shows , and hence .  Next, I claim that is closed in the -topology, from whence it follows that . (Use (2) from .) To prove the claim, we must show, using that for any there is a basis element (in the -topology) containing and contained in . There are two cases: and . If , we can find an open interval such that and . Since open intervals are basis elements in the -topology, we are done in this case. Next, assume . In this case the basis element satisfies . Having exhausted the cases, we conclude is closed, and hence .     "
 },
 {
-  "id": "example-53",
+  "id": "example-54",
   "level": "2",
-  "url": "s_closed_closure_interior.html#example-53",
+  "url": "s_closed_closure_interior.html#example-54",
   "type": "Example",
   "number": "2.4.12",
   "title": "Interior and closure in cofinite topology.",
@@ -2602,9 +2854,9 @@ var ptx_lunr_docs = [
   "body": " Pointwise convergence   Observe that the definition of pointwise convergence makes no reference to any topology on . Below we investigate how it relates to convergence in the box and product topologies.   "
 },
 {
-  "id": "example-60",
+  "id": "example-61",
   "level": "2",
-  "url": "s_prods_convergence_metric.html#example-60",
+  "url": "s_prods_convergence_metric.html#example-61",
   "type": "Example",
   "number": "2.8.3",
   "title": "Sequences in <span class=\"process-math\">\\(\\R^\\omega\\)<\/span> and <span class=\"process-math\">\\(\\R^\\R\\)<\/span>.",
@@ -2620,9 +2872,9 @@ var ptx_lunr_docs = [
   "body": " Pointwise convergence and product topology   Let be a collection of topologies, let be their product, and let be a sequence of elements of .    If in the box or product topology, then converges to pointwise.    In the product topology we have .         Suppose in either topology. Fix and let be any open set containing . The set is an open neighborhood of in both topologies. By convergence there is an such that for all . It follows that for all . This proves that for all .    Suppose the sequence converges to pointwise. To show in the product topology it is enough to show that for any base open set of the form there is an such that if , then . Since converges to pointwise, for each , there is an such that if , then . Setting , it follows that if then for . Since for all we conclude that for all , as desired.      "
 },
 {
-  "id": "example-61",
+  "id": "example-62",
   "level": "2",
-  "url": "s_prods_convergence_metric.html#example-61",
+  "url": "s_prods_convergence_metric.html#example-62",
   "type": "Example",
   "number": "2.8.5",
   "title": "Convergent sequences in <span class=\"process-math\">\\(\\R^\\omega\\)<\/span>.",
@@ -2710,27 +2962,27 @@ var ptx_lunr_docs = [
   "body": " Preimage properties   Continuity is defined in terms of preimages of sets under a function . Thankfully, the preimage operation behaves very well with respect to our various set operations. In particular, we have the following identities, which you may make use of without further ado:    "
 },
 {
-  "id": "example-62",
+  "id": "example-63",
   "level": "2",
-  "url": "s_continuous.html#example-62",
+  "url": "s_continuous.html#example-63",
   "type": "Example",
   "number": "2.9.3",
   "title": "Continuous functions: basic examples.",
   "body": " Continuous functions: basic examples     Identity function  Given a topological space , the identity function is continuous. Here we take as the topology of both the domain and codomain.    Constant functions  Let be topological spaces. For any fixed the constant function , defined as for all is continuous.    Subspace inclusions  Let be a subspace of . The inclusion map is continuous with respect to the subspace topology on .    Maps from discrete spaces  If is equipped with the discrete topology, then any function to a topological space is continuous.    Maps to trivial spaces  If is equipped with the trivial topology, then any map from a topological space to is continous.      These are all pretty elementary. I'll prove (3). Let be a subspace and let continuous. Given any open set , we have which by definition is open in the subspace topology. Thus is continuous.   "
 },
 {
-  "id": "example-63",
+  "id": "example-64",
   "level": "2",
-  "url": "s_continuous.html#example-63",
+  "url": "s_continuous.html#example-64",
   "type": "Example",
   "number": "2.9.4",
   "title": "Non-continuous inclusion.",
   "body": " Non-continuous inclusion   Show that the identity map is not continuous. Here the topology of the domain is the standard one, and the topology on the codomain is the lower limit topology.    For any we have . If we choose to be any open set of that is not open in the standard topology, it follows that is not open in and hence that is not continuous. We may take for example.  Note: let be two topologies on the set , and for let denote the space with underlying set and topology . The same argument above can be used to show that is continuous if and only if .   "
 },
 {
-  "id": "example-64",
+  "id": "example-65",
   "level": "2",
-  "url": "s_continuous.html#example-64",
+  "url": "s_continuous.html#example-65",
   "type": "Example",
   "number": "2.9.5",
   "title": "Products and projections.",
@@ -2881,9 +3133,9 @@ var ptx_lunr_docs = [
   "body": " Topological properties   It is easy to see that the properties of being discrete, , Hausdorff, or a metric space are topological.   "
 },
 {
-  "id": "example-68",
+  "id": "example-69",
   "level": "2",
-  "url": "s_homeomorphisms.html#example-68",
+  "url": "s_homeomorphisms.html#example-69",
   "type": "Example",
   "number": "2.10.12",
   "title": "Continuous bijection onto circle.",
@@ -3025,9 +3277,9 @@ var ptx_lunr_docs = [
   "body": "  A separation of a topological space is a pair of disjoint nonempty open sets satisfying . The space is connected it it admits no separation, and disconnected otherwise.  A subset is connected (resp., disconnected ) if it is connected (resp., disconnected) with respect to the subspace topology.   "
 },
 {
-  "id": "example-71",
+  "id": "example-72",
   "level": "2",
-  "url": "s_connected1.html#example-71",
+  "url": "s_connected1.html#example-72",
   "type": "Example",
   "number": "2.12.2",
   "title": "Examples.",
@@ -3061,9 +3313,9 @@ var ptx_lunr_docs = [
   "body": " Connectedness and subspaces   Let be a topological space.   If is connected and is a separation of , then or .    If is a collection of connected subspaces of and , then is connected.    If is connected, then any satisfying is connected.     Let be a connected subspace of . It is a separation of , then or .   "
 },
 {
-  "id": "proof-97",
+  "id": "proof-100",
   "level": "2",
-  "url": "s_connected1.html#proof-97",
+  "url": "s_connected1.html#proof-100",
   "type": "Proof",
   "number": "2.12.1",
   "title": "",
@@ -3142,36 +3394,36 @@ var ptx_lunr_docs = [
   "body": " Path-connectedness and continuity   If is continuous and is path connected, then is path connected.    Given and , let be a path connecting and . The composition is then a path connecting and .   "
 },
 {
-  "id": "example-72",
+  "id": "example-73",
   "level": "2",
-  "url": "s_connected_path.html#example-72",
+  "url": "s_connected_path.html#example-73",
   "type": "Example",
   "number": "2.13.5",
   "title": "Balls in <span class=\"process-math\">\\(\\R^n\\)<\/span>.",
   "body": " Balls in   Let be Euclidean -space. For all and any , the open ball is connected, as is the closed ball defined as     It is easy to see that the straight line path defined as is a continuous function connecting any two points in . For our current purposes, we wish to show that if , then so is , for any . To this end, note that . This proves that the open ball is path connected, and hence connected. Next, it is easy to see that the closed ball is in fact the closure of the open ball. Since connectedness is preserved under closure, we conclude that the closed ball is connected.   "
 },
 {
-  "id": "example-73",
+  "id": "example-74",
   "level": "2",
-  "url": "s_connected_path.html#example-73",
+  "url": "s_connected_path.html#example-74",
   "type": "Example",
   "number": "2.13.6",
   "title": "Punctured Euclidean space <span class=\"process-math\">\\(\\R^n-\\{\\boldzero\\}\\text{:}\\)<\/span> <span class=\"process-math\">\\(n\\geq 2\\)<\/span>.",
   "body": " Punctured Euclidean space :   Let be Euclidean -space, where . The subspace is connected.    Take any . If the two vectors are not scalar multiples of one another, then the straight line path connecting them is guaranteed to lie in , using a linear independence argument. If , then since , we can find a vector that is not a scalar multiple of either vector. We can then construct a polygonal path lieing in that first connects to via a straight line path, and then connects to via a straight line path.   "
 },
 {
-  "id": "example-74",
+  "id": "example-75",
   "level": "2",
-  "url": "s_connected_path.html#example-74",
+  "url": "s_connected_path.html#example-75",
   "type": "Example",
   "number": "2.13.7",
   "title": "<span class=\"process-math\">\\(\\R\\not\\cong \\R^n\\)<\/span> for <span class=\"process-math\">\\(n\\geq 2\\)<\/span>.",
   "body": " for   Prove: if , then there is no homeomorphism from to .    Assume by contradiction that is a homeomorphism for some . It follows that the restriction is a homeomorphism. This a contradiction since is not connected ( is open and closed in ), but is connected.   "
 },
 {
-  "id": "example-75",
+  "id": "example-76",
   "level": "2",
-  "url": "s_connected_path.html#example-75",
+  "url": "s_connected_path.html#example-76",
   "type": "Example",
   "number": "2.13.8",
   "title": "The <span class=\"process-math\">\\(n\\)<\/span>-sphere.",
@@ -3763,9 +4015,9 @@ var ptx_lunr_docs = [
   "body": " Separation axioms  The properties of being , Hausdorff, regular, or normal are called separation axioms as they articulate how various subsets can be separated by open sets. Below you find the descriptions of these properties using the Trennungsaxiom schema. A further remark about the use of regular and normal in the literature: some texts do not include the condition in these notions, and describe the properties we define as regular Hausdorff and normal regular . There is considerably less ambiguity in the literature when using the descriptions, but you should still be careful.  "
 },
 {
-  "id": "remark-37",
+  "id": "remark-38",
   "level": "2",
-  "url": "s_regular.html#remark-37",
+  "url": "s_regular.html#remark-38",
   "type": "Remark",
   "number": "2.19.4",
   "title": "Trennungsaxiom implications.",
@@ -3817,9 +4069,9 @@ var ptx_lunr_docs = [
   "body": " Locally compact implies regular   Let be locally compact and Hausdorff. Prove: is regular.    This is an easy consequence of and .   "
 },
 {
-  "id": "remark-38",
+  "id": "remark-39",
   "level": "2",
-  "url": "s_regular.html#remark-38",
+  "url": "s_regular.html#remark-39",
   "type": "Remark",
   "number": "2.19.10",
   "title": "Locally compact and non-normal.",
@@ -3853,9 +4105,9 @@ var ptx_lunr_docs = [
   "body": " Regularity: subspace and product properties      Subspaces of regular spaces are regular.    Products of regular spaces are regular.          Assume is a subspace of the regular space . We know already that subspaces of -spaces are , so is . Next take any and any set not containing that is closed in . We have for some closed set . Since and is regular, we can find disjoint open sets that separate and in . The disjoint open (in ) sets and are then a separation of and in .    We use (1) from . Given and open set containing , choose a basis element of the form containing . Since each is regular, we can find open sets satisfying . Letting , we have .      "
 },
 {
-  "id": "remark-40",
+  "id": "remark-41",
   "level": "2",
-  "url": "s_regular.html#remark-40",
+  "url": "s_regular.html#remark-41",
   "type": "Remark",
   "number": "2.19.14",
   "title": "",
@@ -3880,9 +4132,9 @@ var ptx_lunr_docs = [
   "body": " is normal   Prove: is normal.    Let be disjoint closed subsets of . We can find open coverings satisfying for all . First observe that for all . Indeed, otherwise we'd have , in which case either or : both are impossible since and . We conclude that , proving that and can be separated by open sets.   "
 },
 {
-  "id": "example-89",
+  "id": "example-90",
   "level": "2",
-  "url": "s_normal.html#example-89",
+  "url": "s_normal.html#example-90",
   "type": "Example",
   "number": "2.20.2",
   "title": "<span class=\"process-math\">\\(R_\\ell\\times R_\\ell\\)<\/span> is not normal.",
@@ -3997,9 +4249,9 @@ var ptx_lunr_docs = [
   "body": " Embedding theorem   Let be a -space. Given any collection of continuous functions satisfying the property that for all and for all open sets containing there is an such that and , the map defined as is an embedding into .     is injective  Since is , given any we can find an open set such that and . By assumption, there is some such that and . It follows that and hence that .    is continuous  This follows immediately from since each is continuous.    is embedding  Lastly, we prove that is an embedding mapping homeomorphically onto . Let be an open set containing an element , and let . Pick any such that and . Let be the projection map onto the -th coordinate, and define . Since is continuous and is open, the set is open in the subspace topology of . We claim that , proving that is an embedding. Since , we have . Similarly, if , then , from whence it follows that : otherwise we'd have .    "
 },
 {
-  "id": "remark-43",
+  "id": "remark-44",
   "level": "2",
-  "url": "s_Urysohn_metrization.html#remark-43",
+  "url": "s_Urysohn_metrization.html#remark-44",
   "type": "Remark",
   "number": "2.22.3",
   "title": "Urysohn metrization theorem.",
@@ -4105,9 +4357,9 @@ var ptx_lunr_docs = [
   "body": " Directed set   A directed set is a pair , where is a quasiordering on that satisfies the following axiom.   Directed (D)  For all , there is a such that and .   A subset of a directed set is cofinal if for all there is a such that .   "
 },
 {
-  "id": "example-91",
+  "id": "example-92",
   "level": "2",
-  "url": "s_nets.html#example-91",
+  "url": "s_nets.html#example-92",
   "type": "Example",
   "number": "2.24.4",
   "title": "Common examples.",

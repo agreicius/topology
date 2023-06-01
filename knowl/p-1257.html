@@ -12,7 +12,15 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Let <span class="process-math">\(A, B\)</span> be disjoint closed subsets of <span class="process-math">\(\R_\ell\text{.}\)</span> We can find open coverings <span class="process-math">\(A\subseteq U=\bigcup_{a\in A}[a,x_a), B\subseteq V=\bigcup_{b\in B}[b, y_b)\)</span> satisfying <span class="process-math">\([a,x_a)\cap B=[b,y_b)\cap A=\emptyset\)</span> for all <span class="process-math">\(a\in A, b\in B\text{.}\)</span> First observe that <span class="process-math">\([a,x_a)\cap [b,x_b)=\emptyset\)</span> for all <span class="process-math">\(a\in A, b\in B\text{.}\)</span> Indeed, otherwise we'd have <span class="process-math">\([a,x_a)\cap [b,x_b)=[\max(a,b),\min(x_a,y_b))\text{,}\)</span> in which case either <span class="process-math">\(a\in [a,x_a)\cap [b,x_b) \)</span> or <span class="process-math">\(b\in [a,x_a)\cap [b,x_b)\text{:}\)</span> both are impossible since <span class="process-math">\(a\notin [b,x_b)\)</span> and <span class="process-math">\(b\notin [a,x_a)\text{.}\)</span> We conclude that <span class="process-math">\(U\cap V=\emptyset\text{,}\)</span> proving that <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> can be separated by open sets.</div>
-<span class="incontext"><a href="s_normal.html#p-1257" class="internal">in-context</a></span>
+<div class="para logical">
+<div class="para">For each <span class="process-math">\(\boldx\in \Q^n\text{,}\)</span> let <span class="process-math">\(\mathcal{B}_\boldx=\{B_{1/n}(\boldx)\colon n\in \Z_+\}\text{.}\)</span> The set</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathcal{B}=\bigcup_{\boldx\in \Q^n}\mathcal{B}_\boldx\text{,}
+\end{equation*}
+</div>
+<div class="para">being a countable union of countable sets, is countable. I claim it is a basis. It suffices to show that given any <span class="process-math">\(\boldy=(y_1,y_2,\dots, y_n)\in \R^n\)</span> and <span class="process-math">\(\epsilon &gt; 0\text{,}\)</span> we can find a <span class="process-math">\(B_{1/m}(\boldx)\in \mathcal{B}\)</span> such that <span class="process-math">\(y\in B_{1/m}(\boldx)\subseteq B_\epsilon(\boldy)\text{.}\)</span> To this end pick <span class="process-math">\(m\in \Z_+\)</span> such that <span class="process-math">\(1/m&lt; \epsilon/2\)</span> and pick <span class="process-math">\(\boldx\in \Q^n\)</span>  such that <span class="process-math">\(\abs{x_i-y_i}&lt; 1/mn\text{,}\)</span> so that <span class="process-math">\(d(\boldx, \boldy)&lt; 1/m&lt; \epsilon/2\text{.}\)</span> It follows that <span class="process-math">\(\boldy\in B_{1/m}(\boldx)\subseteq B_{\epsilon}(\boldy)\text{,}\)</span> as desired.</div>
+</div>
+<span class="incontext"><a href="s_countability_axioms.html#p-1257" class="internal">in-context</a></span>
 </body>
 </html>

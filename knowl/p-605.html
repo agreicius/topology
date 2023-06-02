@@ -11,16 +11,37 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(p'\colon E'\rightarrow B\)</span> be another covering map satisfying <span class="process-math">\(p'(e_0')=b_0\text{.}\)</span> Assume <span class="process-math">\(E'\)</span> is path connected and locally path connected. There is an equivalence of covering maps <span class="process-math">\(h\colon E\rightarrow E'\)</span> if and only if the subgroups</div>
+<div class="para">Finally, consider <span class="process-math">\(P_m\text{.}\)</span> Let <span class="process-math">\(X=\{a_1,a_2,\dots, a_m\}\text{.}\)</span> An argument very similar to the preceding one implies</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(\pi_1(P_m,p))^{\ab}\cong F(X)^{\ab}/\lns(\{a_1^2a_2^2\cdots a_m^2\})\cong F(X)^{\ab}/\angvec{\overline{a_1}^2\overline{a_2}^2\cdots \overline{a_m}^2}\text{,}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\overline{a_k}\)</span> denotes the image of <span class="process-math">\(a_k\)</span> in the abelianization <span class="process-math">\(F(X)^{\ab}\text{.}\)</span> (Note that all subgroups in <span class="process-math">\(F(X)^{\ab}\)</span> are normal since the group is abelian. This is why we can dispence with the <span class="process-math">\(\lns\)</span> operator.) Let <span class="process-math">\(\bolde_1, \bolde_2,\dots, \bolde_{m}\)</span> be the standard basis of <span class="process-math">\(\Z^m\text{.}\)</span> (In other words, <span class="process-math">\(\bolde_k\)</span> is the <span class="process-math">\(m\)</span>-tuple containing a one in the <span class="process-math">\(k\)</span>-th entry, and zeros elsewhere.) Since <span class="process-math">\(\{\overline{a}_k\}_{k=1}^m\)</span> forms a basis of  <span class="process-math">\(F(X)^{\ab}\)</span> as a free abelian group, there is an isomorphism</div>
+<div class="displaymath process-math">
+\begin{equation*}
+F(X)^{\ab}/(\angvec{\overline{a_1}^2\overline{a_2}^2\cdots \overline{a_m}^2})\isomto\Z^m/\angvec{2(\bolde_1+\bolde_2+\cdots +\bolde_m)}
+\end{equation*}
+</div>
+<div class="para">obtained by sending <span class="process-math">\(\overline{a_k}\)</span> to <span class="process-math">\(\bolde_k\text{.}\)</span> Next, it is easy to see that</div>
 <div class="displaymath process-math">
 \begin{align*}
-H\amp =p_*(\pi_1(E,e_0))\amp H'\amp=p_*'(\pi_1(E',e_0')) 
+\bolde_1' \amp = \bolde_1+\bolde_2+\cdots +\bolde_m\\
+\bolde_2' \amp = \bolde_2\\
+\amp \vdots \\
+\bolde_m'\amp =\bolde_m 
 \end{align*}
 </div>
-<div class="para">are conjugate.</div>
+<div class="para">is another basis of <span class="process-math">\(\bigoplus_{k=1}^m\Z\text{.}\)</span> It follows that the isomorphism of <span class="process-math">\(\Z^m\)</span>sending <span class="process-math">\(\bolde_k'\)</span> to <span class="process-math">\(\bolde_k\)</span> for all <span class="process-math">\(1\leq k\leq m\)</span> gives rise to an isomorphism</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Z^m/\angvec{2(\bolde_1+\bolde_2+\cdots +\bolde_m)}\isomto \Z^m/\angvec{2\bolde_1}\cong \Z/2\Z\oplus \Z^{m-1}\text{,}
+\end{equation*}
 </div>
-<span class="incontext"><a href="s_covering_classification.html#p-605" class="internal">in-context</a></span>
+<div class="para">as desired.</div>
+</div>
+<span class="incontext"><a href="s_surface_classification.html#p-605" class="internal">in-context</a></span>
 </body>
 </html>

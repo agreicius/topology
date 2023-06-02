@@ -11,17 +11,18 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Assume <span class="process-math">\(Y\)</span> is path connected and locally path connected. If <span class="process-math">\(f\)</span> is a continuous map satisfying <span class="process-math">\(f(y_0)=b_0\text{,}\)</span> then <span class="process-math">\(f\)</span> lifts to a map <span class="process-math">\(\widetilde{f}\colon Y\rightarrow E\)</span> satisfying <span class="process-math">\(\widetilde{f}(y_0)=e_0\)</span> if and only if</div>
-<div class="displaymath process-math">
-\begin{equation*}
-f_*(\pi_1(Y,y_0))\subseteq p_*(\pi_1(E,e_0))\text{.}
-\end{equation*}
+<div class="para">We now turn to the computation of these abelianizations. Recall that we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_abelianization_of_quotient.html">
+\begin{align*}
+\pi_1(S^2,p) \amp \cong \{e\} \text{ for all } p\in S^1\\
+\pi_1(T_n,p) \amp \cong \angvec{a_1,b_1,a_2,b_2\dots, a_n,b_n\vert [a_1,b_1][a_2,b_2]\cdots[a_n,b_n]} \text{ for all } p\in T_n\\
+\pi_1(P_m,p) \amp \cong \angvec{a_1,a_2,\dots, a_m\vert a_1^2a_2^2\cdots a_m^2} \text{ for all } p\in P_m\text{.}
+\end{align*}
 </div>
-<div class="para">Furthermore, the lifting <span class="process-math">\(\widetilde{f}\text{,}\)</span> if it exists, is unique: i.e., there is at most one lifting <span class="process-math">\(\widetilde{f}\)</span> satisfying <span class="process-math">\(\widetilde{f}(y_0)=e_0\text{.}\)</span>
+<div class="para">Clearly we thus have <span class="process-math">\((\pi_1(S^2, p))^{\ab}=\{e\}\text{.}\)</span> We will use <a href="" class="xref" data-knowl="./knowl/th_abelianization_of_quotient.html" title="Theorem 1.20.3: Abelianization of quotients">Theorem 1.20.3</a> for the remaining statements. To relate this result more directly to our given finite presentations, we will make use of the following claim (which you are invited to prove): if <span class="process-math">\(q\colon G\rightarrow G'\)</span> is a surjective homomorphism and <span class="process-math">\(Y\subseteq G\text{,}\)</span> then <span class="process-math">\(q(\lns(Y))=\lns(q(Y))\text{,}\)</span> where <span class="process-math">\(\lns(Y)\)</span> denotes the least normal subgroup containing the set set <span class="process-math">\(Y\text{.}\)</span> (A hint for proving this fact: use the correspondence theorem to relate normal subgroups of <span class="process-math">\(G'\)</span> with normal subgroups of <span class="process-math">\(G\text{.}\)</span>)</div>
 </div>
-</div>
-<span class="incontext"><a href="s_covering_classification.html#p-603" class="internal">in-context</a></span>
+<span class="incontext"><a href="s_surface_classification.html#p-603" class="internal">in-context</a></span>
 </body>
 </html>

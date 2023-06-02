@@ -11,16 +11,19 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(p'\colon E'\rightarrow B\)</span> be another covering map satisfying <span class="process-math">\(p(e_0')=b_0\text{.}\)</span> Assume <span class="process-math">\(E'\)</span> is path connected and locally path connected. There is an equivalence of covering maps <span class="process-math">\(h\colon E\rightarrow E'\)</span> satisfying <span class="process-math">\(h(e_0)=e_0'\)</span> if and only if</div>
-<div class="displaymath process-math">
-\begin{equation*}
-p_*(\pi_1(E,e_0))=p_*'(\pi_1(E',e_0'))\text{.}
-\end{equation*}
+<div class="para">Now consider <span class="process-math">\(T_n\text{.}\)</span> Let <span class="process-math">\(X=\{a_1,b_1,a_2,b_2,\dots, a_n,b_n\}\text{,}\)</span> let <span class="process-math">\(F(X)\)</span> be the free group on <span class="process-math">\(X\text{,}\)</span> let <span class="process-math">\(Y=\{[a_1,b_1][a_2,b_2]\cdots [a_n,b_n]\}\text{,}\)</span> and let <span class="process-math">\(q\colon F(X)/\lns(Y)\rightarrow (F(X)/\lns(Y))^{\ab}\)</span> be the quotient map. We have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_abelianization_of_quotient.html ./knowl/th_free_group_abelianization.html">
+\begin{align*}
+(\pi_1(T_n,p))^{\ab} \amp \cong (F(\{a_1,b_1,\dots, a_n,b_n\})/\lns(Y))^{\ab}\\
+\amp \cong (F(X))^{\ab}/q(\lns(Y)) \amp \knowl{./knowl/th_abelianization_of_quotient.html}{\text{1.20.3}}\\
+\amp \cong (F(X))^{\ab}/\lns(q(Y)) \amp \text{(see claim)}\\
+\amp \cong F(X)^{\ab}\text{,}
+\end{align*}
 </div>
-<div class="para">Furthermore, the equivalence <span class="process-math">\(h\text{,}\)</span> if it exists, is unique.</div>
+<div class="para">where the last line follows since <span class="process-math">\(q([w,w'])=e\in F(X)^{\ab}\)</span> for any elements <span class="process-math">\(w,w'\in F(X)\text{.}\)</span> Finally, by <a href="" class="xref" data-knowl="./knowl/th_free_group_abelianization.html" title="Theorem 1.14.11: Abelianization of free group">Theorem 1.14.11</a> <span class="process-math">\(F(X)^{\ab}\)</span> is a free abelian group of rank <span class="process-math">\(2n\text{:}\)</span> and in fact, the image of the system of free generators <span class="process-math">\(\{a_1,b_1,\dots, a_n,b_n\}\)</span> is a basis of <span class="process-math">\(F(X)^{\ab}\)</span> as a free abelian group. We conclude that <span class="process-math">\((\pi_1(T_n,p))^{\ab}\cong \Z^{2n}\text{,}\)</span> as claimed.</div>
 </div>
-<span class="incontext"><a href="s_covering_classification.html#p-604" class="internal">in-context</a></span>
+<span class="incontext"><a href="s_surface_classification.html#p-604" class="internal">in-context</a></span>
 </body>
 </html>

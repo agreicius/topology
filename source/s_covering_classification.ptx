@@ -5,7 +5,7 @@
     <statement>
         <p>
             Let <m>p\colon E\rightarrow B</m> and <m>p'\colon E'\rightarrow B</m> be covering maps. A <term>map of coverings</term> is a continuous function <m>h\colon E\rightarrow E'</m> satisfying <m>p=p'\circ h</m>. 
-            <image xml:id="im_map_of_coverings" width="50%">
+            <image xml:id="im_map_of_coverings" width="35%">
                 <description>Map of coverings</description>
                 <latex-image>
                     \begin{tikzcd}
@@ -58,16 +58,74 @@
         </ol>
     </statement>
  </theorem>
+<lemma xml:id="lemma_lifting_coverings">
+    <title>Liftings of coverings</title>
+    <statement>
+        <p>
+            Let <m>p\colon E\rightarrow B</m> and <m>p'\colon E'\rightarrow B</m> be coverings, and assume that <m>E</m>, <m>E'</m>, and <m>B</m> are path connected and locally path connected. Any map of coverings <m>h\colon E\rightarrow E'</m> is itself a covering.  
+        </p>
+    </statement>
+</lemma>
+<corollary xml:id="cor_covering_spaces">
+    <title>Covering spaces</title>
+    <statement>
+        <p>
+            Let <m>p\colon E\rightarrow B</m> and <m>p'\colon E'\rightarrow B</m> be coverings. Assume <m>E</m>, <m>E'</m>, and <m>B</m> are path connected and locally path connected. 
+            <ol>
+                <li>
+                    <p>
+                        Let <m>p(e_0)=b_0</m> and <m>p'(e_0')=b_0'</m>. There is a covering <m>h\colon E\rightarrow E'</m> satisfying <m>p=p'\circ h</m> and <m>h(e_0)=e_0'</m> if and only if
+                        <me>
+                            p_*(\pi_1(E,e_0))\leq p_*'(\pi_1(E',e_0'))
+                        </me>. 
+                        Furthermore, the covering <m>h</m> is unique in this case. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Let <m>p(e_0)=b_0</m> and <m>p'(e_0')=b_0'</m>. There is a covering <m>h\colon E\rightarrow E'</m> satisfying <m>p=p'\circ h</m> if and only if the subgroup <m>p_*(\pi_1(E,e_0))</m> is contained in a conjugate of the subgroup <m>p_*'(\pi_1(E',e_0'))</m>. 
+                    </p>
+                </li>
+            </ol>
+        </p>
+    </statement>
+    <proof>
+        <p>
+            The corollary follows pretty much directly from <xref ref="th_covering_spaces"/> and <xref ref="lemma_lifting_coverings"/>.
+        </p>
+    </proof>
+</corollary>
 
  <definition xml:id="d_universal_covering_space">
     <title>Universal covering space</title>
     <statement>
         <p>
-            Let <m>B</m> be path connected and locally path connected. If <m>p\colon E\rightarrow B</m> is a covering map and <m>E</m> is simply connected, then <m>E</m> is called the <term>universal covering space</term> of <m>B</m>. 
+            Let <m>B</m> be path connected and locally path connected. If <m>p\colon E\rightarrow B</m> is a covering map and <m>E</m> is simply connected, then <m>p</m> is called a <term>universal covering</term> of <m>B</m>, and <m>E</m> is called the <term>universal covering space</term> of <m>B</m>. 
         </p>
     </statement>
  </definition>
-
+ <remark>
+ <title>Universal covering space is locally path connected</title>
+    <p>
+        If <m>B</m> is path connected and locally path connected and <m>p\colon E\rightarrow B</m> where <m>E</m> is path connected, then it turns out that <m>E</m> is also locally path connected (thanks to <m>p</m> being a covering map). Thus a universal covering space of <m>B</m> is automatically path connected (since it is simply connected) and locally path connected (thanks to the covering map <m>p</m>). 
+    </p>
+ </remark>
+ <remark>
+    <title>Universal covering space</title>
+    <p>
+        Let <m>p\colon (E,e_0)\rightarrow (B,b_0)</m> be a universal covering.
+    </p>
+    <p>
+         If <m>p'\colon (E',e_0')\rightarrow (B,b_0)</m> is another universal covering, then we have <m>\pi_1(E,e_0)=\pi_1(E',e_0')=\{e\}</m> and thus <m>p_*(\pi_1(E,e_0))=p_*'(\pi_1(E', e_0'))=\{e\}</m>. It follows from <xref ref="th_covering_spaces"/> that <m>E</m> and <m>E'</m> are equivalent as covering spaces . This justifies the <q>the</q> in <xref ref="d_universal_covering_space"/>.
+    </p>
+    <p>
+        Similarly, given <em>any</em> covering <m>p'\colon (E',e_0')\rightarrow (B,b_0)</m>, since <me>p_*(\pi_1(E,e_0))=\{e\}\subseteq p_*'(\pi_1(E',e_0'))</me>, 
+        <xref ref="cor_covering_spaces"/> implies there is a unique covering <m>h\colon E\rightarrow E'</m> satisfying <m>p=p'\circ h</m> and <m>h(e_0)=e_0'</m>. This justifies the <q>universal</q> in <xref ref="d_universal_covering_space"/>.  
+    </p>
+ </remark>
+<p>
+    It turns out that a path connected and locally path connected space <m>B</m> has a universal covering space if and only if it is <em>semilocally simply connected</em>. Connected topological manifolds provide an important example of spaces satisfying this property. 
+</p>
  <definition xml:id="d_semilocally_simply_connected">
     <title>Semilocally simply connected</title>
     <statement>
@@ -81,10 +139,96 @@
     <title>Universal covering space</title>
     <statement>
         <p>
-            Let <m>B</m> be path connected and locally path connected. There is a universal covering space of <m>B</m> if and only if <m>B</m> is semilocally simply connected. 
+            Let <m>B</m> be path connected and locally path connected. 
+            There is a universal covering space of <m>B</m> if and only if <m>B</m> is semilocally simply connected.                         
         </p>
     </statement>
  </theorem>
+ <p>
+    The existence of a universal covering space is really a special case of the more general theorem below, where we take <m>H=\{e\}</m>. 
+ </p>
+ <theorem xml:id="th_covering_correspondence">
+    <title>Covering space correspondence</title>
+    <statement>
+        <p>
+            Assume <m>B</m> is semilocally simply connected. Fix an element <m>b_0\in B</m> and let <m>G=\pi_1(B,b_0)</m>. 
+                        <ol>
+                            <li>
+                                <title>A surjection</title>
+                                <p>
+                                    Given any subgroup <m>H\leq G</m> there is a path connected and locally path connected pointed covering <m>p\colon (E,e_0)\rightarrow (B,b_0)</m> satisfying <m>p_*(E,e_0)=H</m>. In other words the map 
+                                    <me>
+                                        (E,e_0)\xrightarrow{p}(B,b_0) \longmapsto p_*(E,e_0)
+                                    </me>
+                                    is a surjection from the set of all path connected and locally path connected pointed coverings of <m>B</m> and subgroups of <m>G</m>.
+                                </p>
+                            </li>
+                            <li>
+                                <title>A bijective correspondence</title>
+                                <p>
+                                   Given a covering <m>E\xrightarrow{p}B</m> where <m>E</m> is path connected and locally path connected, let <m>[E\xrightarrow{p}B]</m> be the set of all coverings equivalent to <m>p</m>. Similarly, given a subgroup <m>H\leq G</m>, let <m>[H]</m> denote the set of all conjugates of <m>H</m>. The recipe 
+                                   <men xml:id="eq_covering_correspondence">
+                                    [E\xrightarrow{p}B]\longmapsto [p_*(E,e_0)]
+                                   </men>,
+                                   where <m>e_0</m> is any element of the fiber <m>p^{-1}(\{b_0\})</m>, is a well-defined bijective function from the set of all equivalence classes of coverings of <m>B</m> by path connected and locally path connected spaces and subgroups of <m>H</m>. 
+                                </p>
+                            </li>
+                            <li>
+                                <title>Arrows respected</title>
+                                <p>
+                                    The bijection <xref ref="eq_covering_correspondence"/> <q>respects arrows</q> in the following sense. Suppose the equivalence classes <m>[E\xrightarrow{p} B]</m> and <m>[E'\xrightarrow{p'}B]</m> correspond to the conjugacy classes <m>[H]</m> and <m>[H']</m> via <xref ref="eq_covering_correspondence"/>. There is a covering <m>h\colon E\rightarrow E'</m> satisfying <m>p=p'\circ h</m> if and only if <m>H\leq gH'g^{-1}</m> for some <m>g\in G</m>. 
+                                </p>
+                            </li>
+                        </ol>
+        </p>
+    </statement>
+ </theorem>
+<example xml:id="eg_S1_coverings">
+<title>Coverings of <m>S^1</m></title>
+<p>
+    The space <m>S^1</m> is semilocally simply connected, path connected, and locally path connected. What does <xref ref="th_covering_correspondence"/> say in this case?
+</p>
+<p>
+    Let <m>P=(1,0)</m>, and identify <m>\pi_1(S^1, P)=\Z</m>. Since <m>\Z</m> is abelian, we have <m>[H]=\{H\}</m> for all subgroups <m>H\leq \Z</m>. Thus we have a bijective correspondence between subgroups of <m>\Z</m> and equivalence classes of coverings of  <m>S^1</m> by path connected and locally path connected spaces. 
+</p>
+<p>
+    Next, for any subgroup <m>H\leq \Z</m> there is a unique nonnegative integer <m>n</m> such that <m>H=\langle n\rangle</m>. Furthermore, we have <m>\langle n\rangle \leq \langle m\rangle</m> if and only if  <m>m\mid n</m>. This means that the subgroups generated by prime integers are maximal, and the lattice of subgroups of <m>\Z</m> is ordered via divisibility. Here is a portion of this lattice corresponding to the divisors of <m>36</m>.  An arrow <m>H\rightarrow H'</m> in this diagram indicates that <m>H\leq H'</m>. 
+    <image xml:id="im_lattice_integers" width="50%">
+        <description>Subgroups of integers lattice</description>
+        <latex-image>
+            \begin{tikzcd}
+                \amp \amp \angvec{1}=\Z \amp \amp\\ 
+                \amp \angvec{2}\arrow[ur]\amp \amp \angvec{3}\arrow[ul] \\ 
+                \angvec{4} \arrow[ur]\amp \amp  \angvec{6} \arrow[ur] \arrow[ul]\amp \amp \angvec{9}\arrow[ul]\\ 
+                \amp \angvec{12}\arrow[ul] \arrow[ur] \amp \amp \angvec{18}\arrow[ul] \arrow[ur] \amp  \\ 
+                \amp \amp \angvec{36} \arrow[ur] \arrow[ul] \amp \amp \\ 
+                \amp \amp \angvec{0} \arrow[u]\amp \amp  
+            \end{tikzcd}
+        </latex-image>
+    </image>
+Next, for each postive integer <m>n</m> it is easy to see that the <m>n</m>-fold covering 
+<md>
+    <mrow>f_n\colon S^1 \amp \rightarrow S^1</mrow>
+    <mrow>z \amp \mapsto z^n</mrow>
+</md>
+satisfies <m>(f_n)_*(\pi_1(S^1, P))\cong\angvec{n}</m>. Defining <m>f_0\colon \R\rightarrow S_1</m> to be the usual covering map <m>f_0(s)=(\cos 2\pi s, \sin 2\pi s)</m>, we see that up to equivalence, the maps <m>f_n</m> are all the coverings of <m>S^1</m>. Furthermore, the lattice of subgroups above corresponds to the following lattice  of coverings. Here an arrow between equivalence classes indicates the existence of a map of coverings. 
+<image xml:id="im_lattice_coverings" width="75%">
+        <description>Lattice of coverings</description>
+        <latex-image>
+            \begin{tikzcd}
+                \amp \amp {[S^1\xrightarrow{\id} S^1]} \amp \amp\\ 
+                \amp {[S^1\xrightarrow{f_2}S^1]}\arrow[ur]\amp \amp {[S^1\xrightarrow{f_3}S^1]}\arrow[ul] \\ 
+                {[S^1\xrightarrow{f_4}S^1]} \arrow[ur]\amp \amp  {[S^1\xrightarrow{f_6}S^1]} \arrow[ur] \arrow[ul]\amp \amp {[S^1\xrightarrow{f_9}S^1]}\arrow[ul]\\ 
+                \amp {[S^1\xrightarrow{f_{12}}S^1]}\arrow[ul] \arrow[ur] \amp \amp {[S^1\xrightarrow{f_{18}}S^1]}\arrow[ul] \arrow[ur] \amp  \\ 
+                \amp \amp {[S^1\xrightarrow{f_{36}}S^1]} \arrow[ur] \arrow[ul] \amp \amp \\ 
+                \amp \amp {[\R\xrightarrow{f_0}S^1]} \arrow[u]\amp \amp  
+            \end{tikzcd}
+        </latex-image>
+    </image> 
+    Not surprisingly, given coverings <m>f_n\colon S^1\rightarrow S^1</m> and  <m>f_m\colon S^1\rightarrow S^1</m> with <m>n\mid m</m>, we can pick the corresponding map of coverings 
+    <m>h\colon S^1\rightarrow S^1</m> to be the cover <m>f_{m/n}\colon S^1\rightarrow S^1</m>!
+</p> 
+</example>
  
 
  </section>

@@ -55,6 +55,7 @@
       \newcommand{\boldG}{{\mathbf G}}
       \newcommand{\boldK}{{\mathbf K}}
       \newcommand{\boldL}{{\mathbf L}}
+      \DeclareMathOperator{\lns}{lns}
       \DeclareMathOperator{\lcm}{lcm}
       \DeclareMathOperator{\Span}{span}
       \DeclareMathOperator{\tr}{tr}

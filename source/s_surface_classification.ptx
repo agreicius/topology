@@ -80,20 +80,109 @@
             </me>
         </p>
     </statement>
+    <proof>
+        <p>
+            Let <m>q\colon G\rightarrow G/N</m> and <m>q_{\ab}\colon G\rightarrow G^{\ab}=G/[G,G]</m> be the quotient maps. Given <m>gN\in G/N</m>, let <m>\overline{gN}</m> denote its image in <m>(G/N)^{\ab}</m> under the quotient map <m>G/N\rightarrow (G/N)^{\ab}</m>. Similarly, given <m>g[G,G]\in G^{\ab}</m>, let <m>\overline{g[G,G]}</m> denote its image in <m>G^{\ab}/q_{\ab}(N)</m>. (There will be no ambiguity in our discussion as to which map the bar notation refers to.) Using mapping properties of the quotient <m>G/N</m> and the abelianization <m>G^{\ab}</m>, we get the following commutative diagram
+            <image xml:id="im_comm_diag1" width="75%">
+                <description>Quotients and abelianizations diagram</description>
+                <latex-image>
+                    \begin{tikzcd}
+                        G \arrow[r,"q_{\ab}"] \arrow[d,"q"'] \amp G^{\ab}=G/[G,G] \arrow[ldd, "s"] \arrow[r]\amp  G^{\ab}/q_{\ab}(N)\\ 
+                        G/N \arrow[rru,"r"'] \arrow[d] \amp \amp \\ 
+                        (G/N)^{\ab} 
+                    \end{tikzcd}
+                </latex-image>
+            </image>
+            where <m>r</m> satisfies <m>r(gN)=\overline{g[G,G]}</m> and <m>s</m> satisfies <m>s(g[G,G])=\overline{gN}^{\ab}</m>. Now the mapping properties of the abelianization <m>(G/N)^{\ab}</m> and the quotient <m>G^{\ab}/q_{\ab}(N)</m> give rise to the commutative diagram 
+            <image xml:id="im_comm_diag2" width="75%">
+                <description>Another quotients and abelianizations diagram</description>
+                <latex-image>
+                    \begin{tikzcd}
+                        G \arrow[r,"q_{\ab}"] \arrow[d,"q"'] \amp G^{\ab}=G/[G,G] \arrow[ldd, "s"'] \arrow[r]\amp  G^{\ab}/q_{\ab}(N) \arrow[lldd,"\psi"']\\ 
+                        G/N \arrow[rru,"r"] \arrow[d]  \amp \amp \\ 
+                        (G/N)^{\ab} \arrow[rruu, shift right, "\phi"']
+                    \end{tikzcd}
+                </latex-image>
+            </image>
+            where <m>\phi</m> satisfies 
+            <me>
+                \phi(\overline{gN})=r(gN)=\overline{g[G,G]}
+            </me>
+            and <m>\psi</m> satisfies 
+            <me>
+                \psi(\overline{g[N,N]})=s(g[G,G])=\overline{gN}
+            </me>.
+            It is then evident from the for formulas for <m>\phi</m> and <m>\psi</m> that <m>\psi\circ \phi=\id</m> and <m>\phi\circ\psi=\id</m>. We conclude that <m>\phi</m> (and <m>\psi</m>) is an isomorphism, as desired. 
+        </p>
+    </proof>
  </theorem>
  <theorem xml:id="th_classification_theorem_distinct">
     <title>Non-homeomorphic surfaces</title>
     <statement>
         <p>
-          Let <m>T_n</m> denote the <m>n</m>-fold torus, and let <m>P_m</m> denote the <m>m</m>-fold projective plane. The surfaces <m>S^2, T_1,T_2,\dots, P_1, P_2,\dots </m> are pairwise non-homeomorphic.   
+          Let <m>T_n</m> denote the <m>n</m>-fold torus, and let <m>P_m</m> denote the <m>m</m>-fold projective plane (<m>P_1=\PP^2</m>). We have
+          <md>
+                <mrow>(\pi_1(S^2,p))^{\ab} \amp \cong \{e\} \text{ for all } p\in S^1</mrow>
+                <mrow>(\pi_1(T_n,p))^{\ab} \amp \cong \Z^{2n}=\bigoplus_{k=1}^{2n}\Z \text{ for all } p\in T_n</mrow>
+                <mrow>(\pi_1(P_m,p))^{\ab} \amp \cong \Z/2\Z\oplus \Z^{m-1} \text{ for all } p\in P_m</mrow>
+            </md>
+          It follows that the fundamental groups of the surfaces <m>S^2, T_1,T_2,\dots, P_1, P_2,\dots </m> are pairwise non-isomorphic, and hence that the surfaces are pairwise non-homeomorphic.  
         </p>
     </statement>
+    <proof>
+        <p>
+            First observe that the last sentence of the theorem follows from the fact that isomorphic groups have isomorphic abelianizations, and homeomorphic spaces have isomorphic fundamental groups. We now prove the statement about the abelianizations.
+            </p>
+            <p>
+             To see that the listed abelianizations are pairwise non-isomorphic groups, observe first that all the groups associated to spaces <m>P_m</m> have torsion elements, whereas those associated to the spaces <m>T_n</m> are torsion free. Next for any <m>n</m> the abelian group associated to <m>T_n</m> has rank <m>n</m>. Thus for any <m>n\ne n'</m> the corresponding abelianizations have distinct ranks, and hence are not isomorphic. Similarly, the rank of the abelian group associated to <m>P_m</m> is <m>m-1</m>, and thus these groups are non-isomorphic for any pair <m>m\ne m'</m>.  
+            </p>
+            <p>
+              We now turn to the computation of these abelianizations. Recall that we have 
+            <md>
+                <mrow>\pi_1(S^2,p) \amp \cong \{e\} \text{ for all } p\in S^1</mrow>
+                <mrow>\pi_1(T_n,p) \amp \cong \angvec{a_1,b_1,a_2,b_2\dots, a_n,b_n\vert [a_1,b_1][a_2,b_2]\cdots[a_n,b_n]} \text{ for all } p\in T_n</mrow>
+                <mrow>\pi_1(P_m,p) \amp \cong \angvec{a_1,a_2,\dots, a_m\vert a_1^2a_2^2\cdots a_m^2} \text{ for all } p\in P_m</mrow>
+            </md>.
+            Clearly we thus have <m>(\pi_1(S^2, p))^{\ab}=\{e\}</m>. We will use <xref ref="th_abelianization_of_quotient"/> for the remaining statements. To relate this result more directly to our given finite presentations, we will make use of the following claim (which you are invited to prove): if <m>q\colon G\rightarrow G'</m> is a surjective homomorphism and <m>Y\subseteq G</m>, then <m>q(\lns(Y))=\lns(q(Y))</m>, where <m>\lns(Y)</m> denotes the least normal subgroup containing the set set <m>Y</m>. (A hint for proving this fact: use the correspondence theorem to relate normal subgroups of <m>G'</m> with normal subgroups of <m>G</m>.)
+            </p>
+            <p>   Now consider <m>T_n</m>. Let <m>X=\{a_1,b_1,a_2,b_2,\dots, a_n,b_n\}</m>, let <m>F(X)</m> be the free group on <m>X</m>, let <m>Y=\{[a_1,b_1][a_2,b_2]\cdots [a_n,b_n]\}</m>, and let <m>q\colon F(X)/\lns(Y)\rightarrow (F(X)/\lns(Y))^{\ab}</m> be the quotient map. We have 
+            <md>
+                <mrow>(\pi_1(T_n,p))^{\ab} \amp \cong (F(\{a_1,b_1,\dots, a_n,b_n\})/\lns(Y))^{\ab}</mrow>
+                <mrow> \amp \cong (F(X))^{\ab}/q(\lns(Y)) \amp <xref ref="th_abelianization_of_quotient" text="global"/></mrow>
+                <mrow> \amp \cong (F(X))^{\ab}/\lns(q(Y)) \amp \text{(see claim)}</mrow>
+                <mrow> \amp \cong F(X)^{\ab}</mrow>
+            </md>,
+            where the last line follows since <m>q([w,w'])=e\in F(X)^{\ab}</m> for any elements <m>w,w'\in F(X)</m>. Finally, by <xref ref="th_free_group_abelianization"/> <m>F(X)^{\ab}</m> is a free abelian group of rank <m>2n</m>: and in fact, the image of the system of free generators <m>\{a_1,b_1,\dots, a_n,b_n\}</m> is a basis of <m>F(X)^{\ab}</m> as a free abelian group. We conclude that <m>(\pi_1(T_n,p))^{\ab}\cong \Z^{2n}</m>, as claimed. 
+        </p>
+        <p>
+            Finally, consider <m>P_m</m>. Let <m>X=\{a_1,a_2,\dots, a_m\}</m>. An argument very similar to the preceding one implies 
+            <me>
+                (\pi_1(P_m,p))^{\ab}\cong F(X)^{\ab}/\lns(\{a_1^2a_2^2\cdots a_m^2\})\cong F(X)^{\ab}/\angvec{\overline{a_1}^2\overline{a_2}^2\cdots \overline{a_m}^2}
+            </me>,
+            where <m>\overline{a_k}</m> denotes the image of <m>a_k</m> in the abelianization <m>F(X)^{\ab}</m>. (Note that all subgroups in <m>F(X)^{\ab}</m> are normal since the group is abelian. This is why we can dispence with the <m>\lns</m> operator.) Let <m>\bolde_1, \bolde_2,\dots, \bolde_{m}</m> be the standard basis of <m>\Z^m</m>. (In other words, <m>\bolde_k</m> is the <m>m</m>-tuple containing a one in the <m>k</m>-th entry, and zeros elsewhere.) Since <m>\{\overline{a}_k\}_{k=1}^m</m> forms a basis of  <m>F(X)^{\ab}</m> as a free abelian group, there is an isomorphism 
+            <me>
+                F(X)^{\ab}/(\angvec{\overline{a_1}^2\overline{a_2}^2\cdots \overline{a_m}^2})\isomto\Z^m/\angvec{2(\bolde_1+\bolde_2+\cdots +\bolde_m)}
+            </me>
+            obtained by sending <m>\overline{a_k}</m> to <m>\bolde_k</m>. Next, it is easy to see that 
+            <md>
+                <mrow>\bolde_1' \amp = \bolde_1+\bolde_2+\cdots +\bolde_m</mrow>
+                <mrow>\bolde_2' \amp = \bolde_2</mrow>
+                <mrow> \amp \vdots </mrow>
+                <mrow> \bolde_m'\amp =\bolde_m </mrow>
+            </md>
+            is another basis of <m>\bigoplus_{k=1}^m\Z</m>. It follows that the isomorphism of <m>\Z^m</m>sending <m>\bolde_k'</m> to <m>\bolde_k</m> for all <m>1\leq k\leq m</m> gives rise to an isomorphism 
+            <me>
+                \Z^m/\angvec{2(\bolde_1+\bolde_2+\cdots +\bolde_m)}\isomto \Z^m/\angvec{2\bolde_1}\cong \Z/2\Z\oplus \Z^{m-1}
+            </me>,
+             as desired.
+        </p>
+    </proof>
  </theorem>
  <theorem xml:id="th_classification_theorem">
     <title>Classification theorem</title>
     <statement>
         <p>
-            Let <m>T_n</m> denote the <m>n</m>-fold torus, and let <m>P_m</m> denote the <m>m</m>-fold projective plane. If <m>X</m> is a compact 2-manifold (<ie/>, a surface), then <m>X</m> is homemorphic to exactly one of the following surfaces: <m>S^2</m>, <m>T_n</m> for some <m>n\geq 1</m>, <m>P_m</m> for some <m>m\geq 1</m>. 
+            Let <m>T_n</m> denote the <m>n</m>-fold torus, and let <m>P_m</m> denote the <m>m</m>-fold projective plane (<m>P_1=\PP^2</m>). If <m>X</m> is a compact 2-manifold (<ie/>, a surface), then <m>X</m> is homemorphic to exactly one of the following surfaces: <m>S^2</m>, <m>T_n</m> for some <m>n\geq 1</m>, <m>P_m</m> for some <m>m\geq 1</m>. 
         </p>
     </statement>
  </theorem>

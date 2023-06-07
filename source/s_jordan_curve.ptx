@@ -85,6 +85,7 @@
     
 
     <theorem xml:id="th_Jordan_curve_theorem">
+        <title>Jordan curve theorem</title>
         <statement>
             <p>
                 Let <m>C_1</m> and <m>C_2</m> be closed connected subsets of <m>S^2</m> whose intersection consists of two points. If neither <m>C_1</m> nor <m>C_2</m> separates <m>S^2</m>, then <m>C_1\cup C_2</m> separates <m>S^2</m> into exactly two components. 

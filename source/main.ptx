@@ -23,8 +23,9 @@
     <!-- out for now and write this when the book is more complete -->
     <xi:include href="./meta_frontmatter.ptx" />
     <xi:include href="./c_foundations.ptx" />
-    <xi:include href="./c_algebraic_topology.ptx" />
     <xi:include href="./c_top_spaces.ptx" />
+    <xi:include href="./c_algebraic_topology.ptx" />
+    
     <backmatter>
         <appendix xml:id="appendix-notation">
           <title>Notation</title>

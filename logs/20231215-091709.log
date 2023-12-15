@@ -1,0 +1,128 @@
+INFO    : PreTeXt project found in `/Users/aarongreicius/math344-1`.
+WARNING : Using CLI version 2.2.0 but project's `requirements.txt`
+WARNING : is configured to use 1.5.2. Consider either installing
+WARNING : CLI version 1.5.2 or running `pretext init --refresh`
+WARNING : to update `requirements.txt` to match 2.2.0.
+INFO    : converting latex-image pictures from /Users/aarongreicius/math344-1/source/main.ptx to svg graphics for placement in /Users/aarongreicius/math344-1/generated-assets/latex-image
+INFO    : extracting latex-image pictures from /Users/aarongreicius/math344-1/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'publisher': '/Users/aarongreicius/math344-1/publication/publication.ptx'}
+INFO    : discovering source file's directory name: /Users/aarongreicius/math344-1/source
+INFO    : verifying and expanding input directory: /Users/aarongreicius/math344-1/source/../generated-assets
+INFO    : input directory expanded to absolute path: /Users/aarongreicius/math344-1/generated-assets
+INFO    : verifying and expanding input directory: /Users/aarongreicius/math344-1/source/../assets
+INFO    : input directory expanded to absolute path: /Users/aarongreicius/math344-1/assets
+INFO    : XSL conversion of /Users/aarongreicius/math344-1/source/main.ptx by /Users/aarongreicius/.ptx/xsl/extract-latex-image.xsl
+INFO    : comprehensive messages, warnings, and errors:
+INFO    : successful application of /Users/aarongreicius/.ptx/xsl/extract-latex-image.xsl
+INFO    : converting im_comm_diag1.tex to im_comm_diag1.pdf
+INFO    : cropping im_comm_diag1.pdf to cropped-im_comm_diag1.pdf
+INFO    : renaming cropped-im_comm_diag1.pdf to im_comm_diag1.pdf
+INFO    : converting im_comm_diag1.pdf to im_comm_diag1.svg
+INFO    : converting im_map_without_fixed_point.tex to im_map_without_fixed_point.pdf
+INFO    : cropping im_map_without_fixed_point.pdf to cropped-im_map_without_fixed_point.pdf
+INFO    : renaming cropped-im_map_without_fixed_point.pdf to im_map_without_fixed_point.pdf
+INFO    : converting im_map_without_fixed_point.pdf to im_map_without_fixed_point.svg
+INFO    : converting im_comm_diag2.tex to im_comm_diag2.pdf
+INFO    : cropping im_comm_diag2.pdf to cropped-im_comm_diag2.pdf
+INFO    : renaming cropped-im_comm_diag2.pdf to im_comm_diag2.pdf
+INFO    : converting im_comm_diag2.pdf to im_comm_diag2.svg
+INFO    : converting im_quot_grp_prop.tex to im_quot_grp_prop.pdf
+INFO    : cropping im_quot_grp_prop.pdf to cropped-im_quot_grp_prop.pdf
+INFO    : renaming cropped-im_quot_grp_prop.pdf to im_quot_grp_prop.pdf
+INFO    : converting im_quot_grp_prop.pdf to im_quot_grp_prop.svg
+INFO    : converting im_lifting.tex to im_lifting.pdf
+INFO    : cropping im_lifting.pdf to cropped-im_lifting.pdf
+INFO    : renaming cropped-im_lifting.pdf to im_lifting.pdf
+INFO    : converting im_lifting.pdf to im_lifting.svg
+INFO    : converting im_quotientspace_prop.tex to im_quotientspace_prop.pdf
+INFO    : cropping im_quotientspace_prop.pdf to cropped-im_quotientspace_prop.pdf
+INFO    : renaming cropped-im_quotientspace_prop.pdf to im_quotientspace_prop.pdf
+INFO    : converting im_quotientspace_prop.pdf to im_quotientspace_prop.svg
+INFO    : converting im_lattice_coverings.tex to im_lattice_coverings.pdf
+INFO    : cropping im_lattice_coverings.pdf to cropped-im_lattice_coverings.pdf
+INFO    : renaming cropped-im_lattice_coverings.pdf to im_lattice_coverings.pdf
+INFO    : converting im_lattice_coverings.pdf to im_lattice_coverings.svg
+INFO    : converting im_homotopic_fund_grp_2.tex to im_homotopic_fund_grp_2.pdf
+INFO    : cropping im_homotopic_fund_grp_2.pdf to cropped-im_homotopic_fund_grp_2.pdf
+INFO    : renaming cropped-im_homotopic_fund_grp_2.pdf to im_homotopic_fund_grp_2.pdf
+INFO    : converting im_homotopic_fund_grp_2.pdf to im_homotopic_fund_grp_2.svg
+INFO    : converting im_free_prod_A.tex to im_free_prod_A.pdf
+INFO    : cropping im_free_prod_A.pdf to cropped-im_free_prod_A.pdf
+INFO    : renaming cropped-im_free_prod_A.pdf to im_free_prod_A.pdf
+INFO    : converting im_free_prod_A.pdf to im_free_prod_A.svg
+INFO    : converting im_lattice_integers.tex to im_lattice_integers.pdf
+INFO    : cropping im_lattice_integers.pdf to cropped-im_lattice_integers.pdf
+INFO    : renaming cropped-im_lattice_integers.pdf to im_lattice_integers.pdf
+INFO    : converting im_lattice_integers.pdf to im_lattice_integers.svg
+INFO    : converting im_free_prod_B.tex to im_free_prod_B.pdf
+INFO    : cropping im_free_prod_B.pdf to cropped-im_free_prod_B.pdf
+INFO    : renaming cropped-im_free_prod_B.pdf to im_free_prod_B.pdf
+INFO    : converting im_free_prod_B.pdf to im_free_prod_B.svg
+INFO    : converting im_free_prod.tex to im_free_prod.pdf
+INFO    : cropping im_free_prod.pdf to cropped-im_free_prod.pdf
+INFO    : renaming cropped-im_free_prod.pdf to im_free_prod.pdf
+INFO    : converting im_free_prod.pdf to im_free_prod.svg
+INFO    : converting eg_quot_g.tex to eg_quot_g.pdf
+INFO    : cropping eg_quot_g.pdf to cropped-eg_quot_g.pdf
+INFO    : renaming cropped-eg_quot_g.pdf to eg_quot_g.pdf
+INFO    : converting eg_quot_g.pdf to eg_quot_g.svg
+INFO    : converting im_seifert_van_kampen.tex to im_seifert_van_kampen.pdf
+INFO    : cropping im_seifert_van_kampen.pdf to cropped-im_seifert_van_kampen.pdf
+INFO    : renaming cropped-im_seifert_van_kampen.pdf to im_seifert_van_kampen.pdf
+INFO    : converting im_seifert_van_kampen.pdf to im_seifert_van_kampen.svg
+INFO    : converting im_Cn.tex to im_Cn.pdf
+INFO    : cropping im_Cn.pdf to cropped-im_Cn.pdf
+INFO    : renaming cropped-im_Cn.pdf to im_Cn.pdf
+INFO    : converting im_Cn.pdf to im_Cn.svg
+INFO    : converting im_pushout.tex to im_pushout.pdf
+INFO    : cropping im_pushout.pdf to cropped-im_pushout.pdf
+INFO    : renaming cropped-im_pushout.pdf to im_pushout.pdf
+INFO    : converting im_pushout.pdf to im_pushout.svg
+INFO    : converting im_prod_grp_prop.tex to im_prod_grp_prop.pdf
+INFO    : cropping im_prod_grp_prop.pdf to cropped-im_prod_grp_prop.pdf
+INFO    : renaming cropped-im_prod_grp_prop.pdf to im_prod_grp_prop.pdf
+INFO    : converting im_prod_grp_prop.pdf to im_prod_grp_prop.svg
+INFO    : converting im_proof_induction.tex to im_proof_induction.pdf
+INFO    : cropping im_proof_induction.pdf to cropped-im_proof_induction.pdf
+INFO    : renaming cropped-im_proof_induction.pdf to im_proof_induction.pdf
+INFO    : converting im_proof_induction.pdf to im_proof_induction.svg
+INFO    : converting im_map_of_coverings.tex to im_map_of_coverings.pdf
+INFO    : cropping im_map_of_coverings.pdf to cropped-im_map_of_coverings.pdf
+INFO    : renaming cropped-im_map_of_coverings.pdf to im_map_of_coverings.pdf
+INFO    : converting im_map_of_coverings.pdf to im_map_of_coverings.svg
+INFO    : converting im_lifting_unique.tex to im_lifting_unique.pdf
+INFO    : cropping im_lifting_unique.pdf to cropped-im_lifting_unique.pdf
+INFO    : renaming cropped-im_lifting_unique.pdf to im_lifting_unique.pdf
+INFO    : converting im_lifting_unique.pdf to im_lifting_unique.svg
+INFO    : converting eg_quotient_homeo.tex to eg_quotient_homeo.pdf
+INFO    : cropping eg_quotient_homeo.pdf to cropped-eg_quotient_homeo.pdf
+INFO    : renaming cropped-eg_quotient_homeo.pdf to eg_quotient_homeo.pdf
+INFO    : converting eg_quotient_homeo.pdf to eg_quotient_homeo.svg
+INFO    : converting im_separation.tex to im_separation.pdf
+INFO    : cropping im_separation.pdf to cropped-im_separation.pdf
+INFO    : renaming cropped-im_separation.pdf to im_separation.pdf
+INFO    : converting im_separation.pdf to im_separation.svg
+INFO    : converting im_quotientmap_pros.tex to im_quotientmap_pros.pdf
+INFO    : cropping im_quotientmap_pros.pdf to cropped-im_quotientmap_pros.pdf
+INFO    : renaming cropped-im_quotientmap_pros.pdf to im_quotientmap_pros.pdf
+INFO    : converting im_quotientmap_pros.pdf to im_quotientmap_pros.svg
+INFO    : converting im_sum_grp_prop.tex to im_sum_grp_prop.pdf
+INFO    : cropping im_sum_grp_prop.pdf to cropped-im_sum_grp_prop.pdf
+INFO    : renaming cropped-im_sum_grp_prop.pdf to im_sum_grp_prop.pdf
+INFO    : converting im_sum_grp_prop.pdf to im_sum_grp_prop.svg
+INFO    : Removing temporary directory /var/folders/vf/249gtxvd4vx_hxghhwymxyq00000gr/T/tmpfwjawy1d
+INFO    : Preparing to build into /Users/aarongreicius/math344-1/output/web.
+INFO    : discovering source file's directory name: /Users/aarongreicius/math344-1/source
+INFO    : verifying and expanding input directory: /Users/aarongreicius/math344-1/source/../generated-assets
+INFO    : input directory expanded to absolute path: /Users/aarongreicius/math344-1/generated-assets
+INFO    : verifying and expanding input directory: /Users/aarongreicius/math344-1/source/../assets
+INFO    : input directory expanded to absolute path: /Users/aarongreicius/math344-1/assets
+INFO    : Runestone Services (via PreTeXt repository): version 7.1.2
+INFO    : Runestone Services (using newer, via online CDN query): version 7.2.8
+INFO    : converting /Users/aarongreicius/math344-1/source/main.ptx to HTML in /var/folders/vf/249gtxvd4vx_hxghhwymxyq00000gr/T/tmpiod0sebq
+INFO    : XSL conversion of /Users/aarongreicius/math344-1/source/main.ptx by /Users/aarongreicius/.ptx/xsl/pretext-html.xsl
+INFO    : comprehensive messages, warnings, and errors:
+INFO    : successful application of /Users/aarongreicius/.ptx/xsl/pretext-html.xsl
+INFO    : 
+Success! Run `pretext view` to see the results.
+

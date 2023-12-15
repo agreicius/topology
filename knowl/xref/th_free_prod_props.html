@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.13.2</span><span class="period">.</span><span class="space"> </span><span class="title">Free product properties.</span>
+</h3>
+<div class="para">Let <span class="process-math">\(\{G_\alpha\}_{\alpha\in I}\)</span> be a family of groups.</div> <ol class="decimal">
+<li><div class="para">If <span class="process-math">\((G,\{i_\alpha\colon G_\alpha\rightarrow G\})\)</span> is a free product of <span class="process-math">\(\{G_\alpha\}_{\alpha\in I}\text{,}\)</span> then <span class="process-math">\(i_\alpha\)</span> is injective for all <span class="process-math">\(\alpha\in I\text{.}\)</span>
+</div></li>
+<li><div class="para">If <span class="process-math">\((G, \{i_\alpha\colon G_\alpha\rightarrow G)\})\)</span> and <span class="process-math">\((G', \{i_\alpha'\colon G_\alpha\rightarrow G'\})\)</span> are both free products of <span class="process-math">\(\{G_\alpha\}_{\alpha\in I}\text{,}\)</span> then <span class="process-math">\(G\cong G'\text{.}\)</span>
+</div></li>
+</ol></article><details class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para logical"><ol class="decimal">
+<li><div class="para">Fix <span class="process-math">\(\alpha\in I\text{.}\)</span> We use the <a href="" class="xref" data-knowl="./knowl/xref/prop_universal_free_prod.html" title="Item: Universal mapping property">universal mapping property</a>, setting <span class="process-math">\(H=A_{\alpha}\text{,}\)</span> letting <span class="process-math">\(\phi_{\alpha'}\colon A_{\alpha'}\rightarrow A_\alpha\)</span> be the zero map for all <span class="process-math">\(\alpha'\ne \alpha\text{,}\)</span> and letting <span class="process-math">\(\phi_\alpha\colon A_\alpha\rightarrow A_{\alpha}\)</span> be the identity map <span class="process-math">\(\phi_\alpha=\id_{A_{\alpha}}\text{.}\)</span> We conclude there is a map <span class="process-math">\(\phi\colon G\rightarrow A_\alpha\)</span> satisfying <span class="process-math">\(\id_{A_\alpha}=\phi\circ i_\alpha\text{.}\)</span> Since <span class="process-math">\(\id_{A_\alpha}\)</span> is injective, the map <span class="process-math">\(i_\alpha\)</span> must be injective.</div></li>
+<li><div class="para logical">
+<div class="para">The proof here is very similar to the one from <a href="" class="xref" data-knowl="./knowl/xref/th_free_prod_props.html" title="Theorem 2.13.2: Free product properties">Theorem 2.13.2</a>. Since <span class="process-math">\(G\)</span> is a free product, the maps <span class="process-math">\(i_\alpha'\colon G_\alpha\rightarrow G'\)</span> give rise to a homomorphism <span class="process-math">\(\phi\circ G\rightarrow G'\)</span> satisfying</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_free_prod_props.html ./knowl/xref/prop_universal_free_prod.html">
+\begin{equation*}
+i_\alpha'=\phi\circ i_\alpha
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(\alpha\in I\text{.}\)</span>  And since <span class="process-math">\(G'\)</span> is a free product, the maps <span class="process-math">\(i_\alpha\colon G_\alpha\rightarrow G\)</span> give rise to a homormorphism <span class="process-math">\(\psi\colon G'\rightarrow G\)</span> satisfying</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_free_prod_props.html ./knowl/xref/prop_universal_free_prod.html">
+\begin{equation*}
+i_\alpha=\psi\circ i_\alpha'
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(\alpha\in I\text{.}\)</span> It is then straightforward to show that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_free_prod_props.html ./knowl/xref/prop_universal_free_prod.html">
+\begin{align*}
+(\psi\circ\phi)\circ i_\alpha \amp = i_\alpha\\
+(\phi\circ\psi)\circ i_{\alpha'} \amp =i_{\alpha'}
+\end{align*}
+</div>
+<div class="para">for all <span class="process-math">\(\alpha\in I\text{,}\)</span> from whence it follows from the uniqueness condition of the <a href="" class="xref" data-knowl="./knowl/xref/prop_universal_free_prod.html" title="Item: Universal mapping property">universal mapping property</a> that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_free_prod_props.html ./knowl/xref/prop_universal_free_prod.html">
+\begin{align*}
+\psi\circ\phi \amp = \id_G\\
+\phi\circ\psi \amp =\id_{G'}\text{.}
+\end{align*}
+</div>
+</div></li>
+</ol></div></article></details><span class="incontext"><a class="internal" href="s_groups_free_products.html#th_free_prod_props">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">Fundamental group functor.</span>
+</h3>
+<div class="para logical"><ol class="decimal">
+<li><div class="para">Let <span class="process-math">\(h\colon (X,x_0)\rightarrow (Y,y_0)\)</span> be a map of pointed spaces. The rule <span class="process-math">\(h_*([f])=[h\circ f]\)</span> defines a group homomorphism <span class="process-math">\(h_*\colon \pi_1(X,x_0)\rightarrow \pi_1(Y,y_0)\text{.}\)</span>
+</div></li>
+<li><div class="para">Given maps of pointed spaces <span class="process-math">\(h\colon (X,x_0)\rightarrow (Y,y_0)\)</span> and <span class="process-math">\(k\colon (Y,y_0)\rightarrow (Z,z_0)\text{,}\)</span> we have <span class="process-math">\((k\circ h)_*=k_*\circ h_*\text{.}\)</span>
+</div></li>
+<li><div class="para">Let <span class="process-math">\(\id\colon X\rightarrow X\)</span> be the identity function <span class="process-math">\(\id(x)=x\)</span> for all <span class="process-math">\(x\in X\text{.}\)</span> For any <span class="process-math">\(x_0\in X\text{,}\)</span> we have <span class="process-math">\(\id_*=\id\text{,}\)</span> the identity group homomorphism on <span class="process-math">\(\pi_1(X,x_0)\text{.}\)</span>
+</div></li>
+</ol></div></article><details class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para logical"><ol class="decimal">
+<li>
+<div class="para">It is clear that the rule <span class="process-math">\(f\mapsto h\circ f\)</span> defines a map from <span class="process-math">\(P(X;x_0,x_0)\)</span> to <span class="process-math">\(P(Y; y_0, y_0)\text{.}\)</span> We must show that it is well defined on equivalence classes. Assume <span class="process-math">\(f,f'\in P(X; x_0, x_0)\)</span> are path homotopic, and let <span class="process-math">\(F\)</span> be a path homotopy from <span class="process-math">\(f\)</span> to <span class="process-math">\(f'\text{.}\)</span> It is easy to see that <span class="process-math">\(h\circ F\)</span> is a path homotopy from <span class="process-math">\(h\circ f\)</span> to <span class="process-math">\(h\circ f'\text{.}\)</span> Thus <span class="process-math">\([f]=[f']\)</span> implies <span class="process-math">\([h\circ f]=[h\circ f']\text{,}\)</span> showing <span class="process-math">\(h_*\)</span> is a well-defined map from <span class="process-math">\(\pi_1(X,x_0)\)</span> to <span class="process-math">\(\pi_1(Y,y_0)\text{.}\)</span>
+</div>
+<div class="para logical">
+<div class="para">Now we show <span class="process-math">\(h_*\)</span> is a homomorphism of groups. We will use the (easy to show fact) general fact that given <span class="process-math">\(f, g\in P(X; x_0, x_1)\)</span> and continuous <span class="process-math">\(h\colon X\rightarrow Y\text{,}\)</span> we have <span class="process-math">\(h\circ (f*g)=(h\circ f)*(h\cirg g)\text{.}\)</span> Now, given <span class="process-math">\([f],[g]\in \pi_1(X, x_0)\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{align*}
+h_*([f]*[g]) \amp = [h\circ (f*g)]\\
+\amp = [(h\circ f) * (h\circ g)\\
+\amp =[h\circ f]*[h\circ g]\\
+\amp =h_*([f])*h_*([g])\text{.}
+\end{align*}
+</div>
+</div>
+</li>
+<li><div class="para logical">
+<div class="para">For any <span class="process-math">\(f\in \pi_1(X,x_0)\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{align*}
+(k\circ h)_* ([f]) \amp= [(k\circ h)\circ f] \\
+\amp = [k\circ (h\circ f)]\\
+\amp =k_*([h\circ f])\\
+\amp =k_*(h_*([f]))\\
+\amp =k_*\circ h_*([f])\text{.}
+\end{align*}
+</div>
+<div class="para">This proves <span class="process-math">\((k\circ h)_*=k_*\circ h_*\text{.}\)</span>
+</div>
+</div></li>
+<li><div class="para">For any <span class="process-math">\([f]\in \pi_1(X,x_0)\)</span> we have <span class="process-math">\(\id_*([f])=[\id\circ f]=[f]\text{.}\)</span> This proves <span class="process-math">\(\id_*\)</span> is the identity homomorphism on <span class="process-math">\(\pi_1(X, x_0)\text{.}\)</span>
+</div></li>
+</ol></div></article></details><span class="incontext"><a class="internal" href="s_fundamental_group.html#th_fund_group_function">in-context</a></span>
+</body>
+</html>

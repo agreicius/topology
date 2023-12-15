@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56pt" height="47pt" viewBox="0 0 56 47" version="1.1">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56pt" height="48pt" viewBox="0 0 56 48" version="1.1">
 <defs>
 <g>
 <symbol overflow="visible" id="glyph0-0">
@@ -54,8 +54,8 @@
   <use xlink:href="#glyph0-2" x="47.304" y="40.152408"/>
 </g>
 <path style="fill:none;stroke-width:0.39848;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M -11.695219 8.794745 L 14.246187 -10.430856 " transform="matrix(1,0,0,-1.00005,28.246,20.701435)"/>
-<path style="fill:none;stroke-width:0.39848;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M -2.070518 2.391248 C -1.692253 0.956287 -0.849727 0.278418 -0.00100916 -0.00126741 C -0.849032 -0.279872 -1.694649 -0.955148 -2.073021 -2.392043 " transform="matrix(0.80385,0.59576,0.59573,-0.80389,41.49766,30.39802)"/>
-<path style="fill:none;stroke-width:0.39848;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M -2.070694 2.390115 C -1.692429 0.955154 -0.849903 0.277285 0.00195172 -0.0000757685 C -0.851532 -0.277869 -1.694825 -0.956281 -2.07006 -2.390852 " transform="matrix(0.80385,0.59576,0.59573,-0.80389,42.65082,31.252683)"/>
+<path style="fill:none;stroke-width:0.39848;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M -2.0727 2.39259 C -1.694197 0.956811 -0.851177 0.278565 0.00117067 0.00105728 C -0.850473 -0.280046 -1.691102 -0.956534 -2.071996 -2.391122 " transform="matrix(0.80338,0.59543,0.5954,-0.80342,41.49843,30.39859)"/>
+<path style="fill:none;stroke-width:0.39848;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M -2.072018 2.391458 C -1.693515 0.955678 -0.850495 0.277433 0.00185284 -0.0000752125 C -0.849791 -0.281179 -1.692745 -0.954528 -2.071313 -2.392254 " transform="matrix(0.80338,0.59543,0.5954,-0.80342,42.6509,31.252743)"/>
 <g style="fill:rgb(0%,0%,0%);fill-opacity:1;">
   <use xlink:href="#glyph2-1" x="32.027" y="17.937297"/>
 </g>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="lemma theorem-like"><h3 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">2.6.1</span><span class="period">.</span><span class="space"> </span><span class="title">Homotopic maps and fundamental groups.</span>
+</h3>
+<div class="para">Let <span class="process-math">\(h,k\colon (X,x_0)\rightarrow (Y,y_0)\)</span> be maps of pointed spaces. If there is a homotopy <span class="process-math">\(H\colon X\times I\rightarrow Y\)</span> from <span class="process-math">\(h\)</span> to <span class="process-math">\(k\)</span> satisfying <span class="process-math">\(H(x_0,t)=y_0\)</span> for all <span class="process-math">\(t\in I\text{,}\)</span> then we have <span class="process-math">\(h_*=k_*\)</span> as group homomorphisms from <span class="process-math">\(\pi_1(X,x_0)\)</span> to <span class="process-math">\(\pi_1(Y,y_0)\text{.}\)</span>
+</div></article><details class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para logical">
+<div class="para">By definition of <span class="process-math">\(h_*, k_*\text{,}\)</span> we must show that <span class="process-math">\([h\circ f]=[k\circ f]\)</span> for all loops <span class="process-math">\(f\in P(X; x_0,x_0)\text{:}\)</span> equivalently, we must show <span class="process-math">\(h\circ f\simeq_p k\circ f\text{.}\)</span> This of course is where <span class="process-math">\(H\)</span> comes in. Define <span class="process-math">\(G\colon I\times I\rightarrow Y\)</span> as <span class="process-math">\(G(s,t)=H(f(s),t)\text{.}\)</span> We see that</div>
+<div class="displaymath process-math">
+\begin{align*}
+G(s,0) \amp = H(f(s),0) \amp G(s,1)\amp = H(f(s),1) \\
+\amp = h(f(s)) \amp \amp =k(f(s)\\
+\amp =h\circ f(s) \amp \amp =k\circ f(s)\text{,}
+\end{align*}
+</div>
+<div class="para">showing that <span class="process-math">\(G\)</span> is a homotopy from <span class="process-math">\(h\)</span> to <span class="process-math">\(k\text{.}\)</span> It remains to show it is a path homotopy. This follows since</div>
+<div class="displaymath process-math">
+\begin{align*}
+G(0,t) \amp = H(f(0),t)=H(x_0,t)=y_0\\
+G(1,t) \amp =H(f(1),t)=H(x_0,t)=y_0
+\end{align*}
+</div>
+<div class="para">for all <span class="process-math">\(t\in I\text{.}\)</span>
+</div>
+</div></article></details><span class="incontext"><a class="internal" href="s_deformation_retract.html#lemma_homotopic_fund_grp">in-context</a></span>
+</body>
+</html>

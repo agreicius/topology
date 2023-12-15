@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Continuous functions</title>
@@ -14,20 +14,38 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Math 344-1,2">
 <meta property="book:author" content="Aaron Greicius">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
-    renderActions: {
-        findScript: [10, function (doc) {
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
             document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
                 var display = !!node.type.match(/; *mode=display/);
                 var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
@@ -37,162 +55,75 @@ window.MathJax = {
                 math.end = {node: text, delim: '', n: 0};
                 doc.math.push(math);
             });
-        }, '']
-    },
+        },
+        ""
+      ]
+    }
   },
-  chtml: {
-    scale: 0.98,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
   },
-  startup: {
+  "startup": {
     pageReady() {
       return MathJax.startup.defaultPageReady().then(function () {
       console.log("in ready function");
       rsMathReady();
       }
     )}
-  },
+  }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
-<script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.32/pretext_search.js"></script><link href="https://pretextbook.org/css/0.82/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.32</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.32/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.32/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.32/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link href="https://pretextbook.org/css/0.6/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/shell_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/navbar_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="https://pretextbook.org/css/0.82/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/setcolors.css" rel="stylesheet" type="text/css">
 </head>
 <body class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
-<a id="logo-link" href=""></a><div class="title-container">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
 <h1 class="heading"><a href="kursobjekt.html"><span class="title">Math 344-1,2:</span> <span class="subtitle">Kursobjekt</span></a></h1>
 <p class="byline">Aaron Greicius</p>
 </div>
-<div id="searchresultsplaceholder" style="display: none">
-<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
-</h2>
-<div id="searchempty"><span>No results.</span></div>
-<ol id="searchresults"></ol>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
 </div>
-</div></header><nav id="ptx-navbar" class="navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="name">Index</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="theavatarbutton" class="name">You!</span><div id="preferences_menu_holder" class="hidden"><ol id="preferences_menu" style="font-family: 'Roboto Serif', serif;">
-<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden avatar">
-<li data-val="You!" tabindex="-1">
-<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
-<li data-val="😺" tabindex="-1">
-<span id="the😺" class="avatarcheck"></span>😺</li>
-<li data-val="👤" tabindex="-1">
-<span id="the👤" class="avatarcheck"></span>👤</li>
-<li data-val="👽" tabindex="-1">
-<span id="the👽" class="avatarcheck"></span>👽</li>
-<li data-val="🐶" tabindex="-1">
-<span id="the🐶" class="avatarcheck"></span>🐶</li>
-<li data-val="🐼" tabindex="-1">
-<span id="the🐼" class="avatarcheck"></span>🐼</li>
-<li data-val="🌈" tabindex="-1">
-<span id="the🌈" class="avatarcheck"></span>🌈</li>
-</ol>
-</li>
-<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden fontfamily">
-<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
-<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
-</li>
-<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
-<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
-</li>
-</ol>
-</li>
-<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden fonts">
-<li>Size</li>
-<li><span id="thesize">12</span></li>
-<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
-<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
-<li>Width</li>
-<li><span id="thewdth">100</span></li>
-<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
-<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
-<li>Weight</li>
-<li><span id="thewght">400</span></li>
-<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
-<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
-<li>Letter spacing</li>
-<li>
-<span id="thelspace">0</span><span class="byunits">/200</span>
-</li>
-<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
-<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
-<li>Word spacing</li>
-<li>
-<span id="thewspace">0</span><span class="byunits">/50</span>
-</li>
-<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
-<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
-<li>Line Spacing</li>
-<li>
-<span id="theheight">135</span><span class="byunits">/100</span>
-</li>
-<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
-<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
-</ol>
-</li>
-<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden atmosphere">
-<li data-val="default" tabindex="-1">
-<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
-<li data-val="pastel" tabindex="-1">
-<span id="thepastel" class="atmospherecheck"></span>pastel</li>
-<li data-val="darktwilight" tabindex="-1">
-<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
-<li data-val="dark" tabindex="-1">
-<span id="thedark" class="atmospherecheck"></span>dark</li>
-<li data-val="darkmidnight" tabindex="-1">
-<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
-</ol>
-</li>
-<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden ruler">
-<li data-val="none" tabindex="-1">
-<span id="thenone" class="rulercheck">✔️</span>none</li>
-<li data-val="underline" tabindex="-1">
-<span id="theunderline" class="rulercheck"></span>underline</li>
-<li data-val="lunderline" tabindex="-1">
-<span id="thelunderline" class="rulercheck"></span>L-underline</li>
-<li data-val="greybar" tabindex="-1">
-<span id="thegreybar" class="rulercheck"></span>grey bar</li>
-<li data-val="lightbox" tabindex="-1">
-<span id="thelightbox" class="rulercheck"></span>light box</li>
-<li data-val="sunrise" tabindex="-1">
-<span id="thesunrise" class="rulercheck"></span>sunrise</li>
-<li data-val="sunriseunderline" tabindex="-1">
-<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
-<li class="moveQ">Motion by:</li>
-<li data-val="mouse" tabindex="-1">
-<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
-<li data-val="arrow" tabindex="-1">
-<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
-<li data-val="eye" tabindex="-1">
-<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
-</ol>
-</li>
-</ol></div></button><span class="treebuttons"><a class="previous-button button" href="s_prods_convergence_metric.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="c_top_spaces.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="s_homeomorphisms.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
-<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
-</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="s_prods_convergence_metric.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="c_top_spaces.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="s_homeomorphisms.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
   \newcommand{\Q}{{\mathbb Q}}
   \newcommand{\R}{{\mathbb R}}
   \newcommand{\C}{{\mathbb C}}
@@ -295,187 +226,187 @@ window.MathJax = {
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar"><nav id="ptx-toc" class="depth2"><ul class="structural">
-<li><div class="toc-item"><a href="meta_frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
-<li>
-<div class="toc-item"><a href="c_foundations.html" class="internal"><span class="codenumber">0</span> <span class="title">Foundations</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="s_sets_functions.html" class="internal"><span class="codenumber">0.1</span> <span class="title">Sets and functions</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="s_sets_functions.html#ss_sets" class="internal"><span class="title">Sets</span></a></div></li>
-<li><div class="toc-item"><a href="s_sets_functions.html#ss_functions" class="internal"><span class="title">Functions</span></a></div></li>
-<li><div class="toc-item"><a href="s_sets_functions.html#subsec-" class="internal"><span class="title">Cardinality and countability</span></a></div></li>
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="meta_frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="c_foundations.html" class="internal"><span class="codenumber">0</span> <span class="title">Foundations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_sets_functions.html" class="internal"><span class="codenumber">0.1</span> <span class="title">Sets and functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_sets_functions.html#ss_sets" class="internal"><span class="title">Sets</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_sets_functions.html#ss_functions" class="internal"><span class="title">Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_sets_functions.html#subsec-" class="internal"><span class="title">Cardinality and countability</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="s_logic.html" class="internal"><span class="codenumber">0.2</span> <span class="title">Logic</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="s_logic.html#ss_propositional_calculus" class="internal"><span class="title">Propositional logic</span></a></div></li>
-<li><div class="toc-item"><a href="s_logic.html#ss_predicate_logic" class="internal"><span class="title">Predicate logic</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_logic.html" class="internal"><span class="codenumber">0.2</span> <span class="title">Logic</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_logic.html#ss_propositional_calculus" class="internal"><span class="title">Propositional logic</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_logic.html#ss_predicate_logic" class="internal"><span class="title">Predicate logic</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="s_proof_technique.html" class="internal"><span class="codenumber">0.3</span> <span class="title">Proof techniques</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="s_proof_technique.html#ss_logical_structure" class="internal"><span class="title">Logical structure</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="s_proof_technique.html#sss_implication" class="internal"><span class="title">Implication</span></a></div></li>
-<li><div class="toc-item"><a href="s_proof_technique.html#sss_disjunction" class="internal"><span class="title">Disjunction</span></a></div></li>
-<li><div class="toc-item"><a href="s_proof_technique.html#sss_equivalence" class="internal"><span class="title">Equivalence</span></a></div></li>
-<li><div class="toc-item"><a href="s_proof_technique.html#sss_logical_chains" class="internal"><span class="title">Chains of implications/equivalences</span></a></div></li>
-<li><div class="toc-item"><a href="s_proof_technique.html#sss_proof_by_contradiction" class="internal"><span class="title">Proof by contradiction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_proof_technique.html" class="internal"><span class="codenumber">0.3</span> <span class="title">Proof techniques</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="s_proof_technique.html#ss_logical_structure" class="internal"><span class="title">Logical structure</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="s_proof_technique.html#sss_implication" class="internal"><span class="title">Implication</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="s_proof_technique.html#sss_disjunction" class="internal"><span class="title">Disjunction</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="s_proof_technique.html#sss_equivalence" class="internal"><span class="title">Equivalence</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="s_proof_technique.html#sss_logical_chains" class="internal"><span class="title">Chains of implications/equivalences</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="s_proof_technique.html#sss_proof_by_contradiction" class="internal"><span class="title">Proof by contradiction</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="s_proof_technique.html#ss_Equalities" class="internal"><span class="title">Equalities</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="s_proof_technique.html#sss_chain_equalities" class="internal"><span class="title">Chain of equalities</span></a></div></li></ul>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="s_proof_technique.html#ss_Equalities" class="internal"><span class="title">Equalities</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="s_proof_technique.html#sss_chain_equalities" class="internal"><span class="title">Chain of equalities</span></a></div></li></ul>
 </li>
-<li>
-<div class="toc-item"><a href="s_proof_technique.html#ss_set_properties" class="internal"><span class="title">Basic set properties</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="s_proof_technique.html#sss_set_inclusion" class="internal"><span class="title">Set inclusion</span></a></div></li>
-<li><div class="toc-item"><a href="s_proof_technique.html#sss_set_equality" class="internal"><span class="title">Set equality</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="s_proof_technique.html#ss_set_properties" class="internal"><span class="title">Basic set properties</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="s_proof_technique.html#sss_set_inclusion" class="internal"><span class="title">Set inclusion</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="s_proof_technique.html#sss_set_equality" class="internal"><span class="title">Set equality</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="s_proof_technique.html#ss_function_properties" class="internal"><span class="title">Basic function properties</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="s_proof_technique.html#sss_function_equality" class="internal"><span class="title">Function equality</span></a></div></li>
-<li><div class="toc-item"><a href="s_proof_technique.html#sss_injective_surjective_bijective" class="internal"><span class="title">Injective, surjective, bijective</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="s_proof_technique.html#ss_function_properties" class="internal"><span class="title">Basic function properties</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="s_proof_technique.html#sss_function_equality" class="internal"><span class="title">Function equality</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="s_proof_technique.html#sss_injective_surjective_bijective" class="internal"><span class="title">Injective, surjective, bijective</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="s_proof_technique.html#ss_mathematical_induction" class="internal"><span class="title">Mathematical induction</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="s_proof_technique.html#sss_weak_induction" class="internal"><span class="title">Proof by induction</span></a></div></li>
-<li><div class="toc-item"><a href="s_proof_technique.html#sss_strong_induction" class="internal"><span class="title">Proof by strong induction</span></a></div></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="c_algebraic_topology.html" class="internal"><span class="codenumber">1</span> <span class="title">Algebraic topology</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="s_homotopy.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Homotopy</span></a></div></li>
-<li><div class="toc-item"><a href="s_fundamental_group.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Fundamental group</span></a></div></li>
-<li><div class="toc-item"><a href="s_covering_spaces.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Covering spaces</span></a></div></li>
-<li><div class="toc-item"><a href="s_coveringmaps_fundgroups.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Lifting correspondence</span></a></div></li>
-<li><div class="toc-item"><a href="s_retract_Brouwer.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Retractions and Brouwer fixed point</span></a></div></li>
-<li><div class="toc-item"><a href="s_deformation_retract.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Deformation retract</span></a></div></li>
-<li><div class="toc-item"><a href="s_homotopy_type.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Homotopty equivalence</span></a></div></li>
-<li><div class="toc-item"><a href="s_Sn_simply_connected.html" class="internal"><span class="codenumber">1.8</span> <span class="title">Fundamental group of <span class="process-math">\(S^n\)</span></span></a></div></li>
-<li><div class="toc-item"><a href="s_surface_fund_grps.html" class="internal"><span class="codenumber">1.9</span> <span class="title">Fundamental groups of some surfaces</span></a></div></li>
-<li><div class="toc-item"><a href="s_jordan_separation.html" class="internal"><span class="codenumber">1.10</span> <span class="title">Jordan separation theorem</span></a></div></li>
-<li><div class="toc-item"><a href="s_jordan_curve.html" class="internal"><span class="codenumber">1.11</span> <span class="title">Jordan curve theorem</span></a></div></li>
-<li><div class="toc-item"><a href="s_groups_abelian.html" class="internal"><span class="codenumber">1.12</span> <span class="title">Free Abelian groups</span></a></div></li>
-<li><div class="toc-item"><a href="s_groups_free_products.html" class="internal"><span class="codenumber">1.13</span> <span class="title">Free products</span></a></div></li>
-<li><div class="toc-item"><a href="s_groups_free.html" class="internal"><span class="codenumber">1.14</span> <span class="title">Free groups</span></a></div></li>
-<li><div class="toc-item"><a href="s_seifert_van_kampen.html" class="internal"><span class="codenumber">1.15</span> <span class="title">Seifert-van Kampen theorem</span></a></div></li>
-<li><div class="toc-item"><a href="s_wedge_of_circles.html" class="internal"><span class="codenumber">1.16</span> <span class="title">Wedge of circles</span></a></div></li>
-<li><div class="toc-item"><a href="s_adjoin_2cell.html" class="internal"><span class="codenumber">1.17</span> <span class="title">Adjoining a 2-cell</span></a></div></li>
-<li><div class="toc-item"><a href="s_dunce_cap.html" class="internal"><span class="codenumber">1.18</span> <span class="title"><span class="process-math">\(n\)</span>-fold dunce caps</span></a></div></li>
-<li><div class="toc-item"><a href="s_polygonal_regions.html" class="internal"><span class="codenumber">1.19</span> <span class="title">Pasted polygonal regions</span></a></div></li>
-<li><div class="toc-item"><a href="s_surface_classification.html" class="internal"><span class="codenumber">1.20</span> <span class="title">Classification of surfaces</span></a></div></li>
-<li><div class="toc-item"><a href="s_covering_classification.html" class="internal"><span class="codenumber">1.21</span> <span class="title">Classification of covering spaces</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="c_top_spaces.html" class="internal"><span class="codenumber">2</span> <span class="title">Point-set topology</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="s_top_spaces.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Topological spaces</span></a></div></li>
-<li><div class="toc-item"><a href="s_bases_top.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Bases for topological spaces</span></a></div></li>
-<li><div class="toc-item"><a href="s_metric1.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Metric spaces</span></a></div></li>
-<li><div class="toc-item"><a href="s_closed_closure_interior.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Closed sets, closure, and interior</span></a></div></li>
-<li><div class="toc-item"><a href="s_limitpoints_hausdorff.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Limit points and the Hausdorff property</span></a></div></li>
-<li>
-<div class="toc-item"><a href="s_subspace_finite_products.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Subspaces and products</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="s_subspace_finite_products.html#ss_subspace" class="internal"><span class="title">Subspaces</span></a></div></li>
-<li><div class="toc-item"><a href="s_subspace_finite_products.html#ss_finite_products" class="internal"><span class="title">Finite product spaces</span></a></div></li>
-</ul>
-</li>
-<li><div class="toc-item"><a href="s_product2.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Arbitrary products</span></a></div></li>
-<li><div class="toc-item"><a href="s_prods_convergence_metric.html" class="internal"><span class="codenumber">2.8</span> <span class="title">Convergence in product spaces</span></a></div></li>
-<li class="active"><div class="toc-item"><a href="s_continuous.html" class="internal"><span class="codenumber">2.9</span> <span class="title">Continuous functions</span></a></div></li>
-<li><div class="toc-item"><a href="s_homeomorphisms.html" class="internal"><span class="codenumber">2.10</span> <span class="title">Homeomorphisms</span></a></div></li>
-<li><div class="toc-item"><a href="s_quotients.html" class="internal"><span class="codenumber">2.11</span> <span class="title">Quotients</span></a></div></li>
-<li><div class="toc-item"><a href="s_connected1.html" class="internal"><span class="codenumber">2.12</span> <span class="title">Connected spaces</span></a></div></li>
-<li><div class="toc-item"><a href="s_connected_path.html" class="internal"><span class="codenumber">2.13</span> <span class="title">Path-connected spaces</span></a></div></li>
-<li><div class="toc-item"><a href="s_connected_components.html" class="internal"><span class="codenumber">2.14</span> <span class="title">Connected components and locally connected spaces</span></a></div></li>
-<li><div class="toc-item"><a href="s_compact_def.html" class="internal"><span class="codenumber">2.15</span> <span class="title">Compact spaces</span></a></div></li>
-<li><div class="toc-item"><a href="s_compact_metric.html" class="internal"><span class="codenumber">2.16</span> <span class="title">Compactness in metric spaces</span></a></div></li>
-<li><div class="toc-item"><a href="s_locally.html" class="internal"><span class="codenumber">2.17</span> <span class="title">Locally compact spaces and compactification</span></a></div></li>
-<li><div class="toc-item"><a href="s_countability_axioms.html" class="internal"><span class="codenumber">2.18</span> <span class="title">Countability axioms</span></a></div></li>
-<li><div class="toc-item"><a href="s_regular.html" class="internal"><span class="codenumber">2.19</span> <span class="title">Regular spaces</span></a></div></li>
-<li><div class="toc-item"><a href="s_normal.html" class="internal"><span class="codenumber">2.20</span> <span class="title">Normal spaces</span></a></div></li>
-<li><div class="toc-item"><a href="s_Urysohn_lemma.html" class="internal"><span class="codenumber">2.21</span> <span class="title">Urysohn lemma</span></a></div></li>
-<li><div class="toc-item"><a href="s_Urysohn_metrization.html" class="internal"><span class="codenumber">2.22</span> <span class="title">Urysohn metrization theorem</span></a></div></li>
-<li><div class="toc-item"><a href="s_Tietze_extension.html" class="internal"><span class="codenumber">2.23</span> <span class="title">Further applications of Urysohn</span></a></div></li>
-<li><div class="toc-item"><a href="s_nets.html" class="internal"><span class="codenumber">2.24</span> <span class="title">Nets</span></a></div></li>
-<li>
-<div class="toc-item"><a href="s_Tychonoff.html" class="internal"><span class="codenumber">2.25</span> <span class="title">Tychonoff theorem via nets</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="s_Tychonoff.html#ss_nets_compactness" class="internal"><span class="title">Nets and compactness</span></a></div></li>
-<li><div class="toc-item"><a href="s_Tychonoff.html#ss_Tychonoff" class="internal"><span class="title">Tychonoff's theorem</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="s_proof_technique.html#ss_mathematical_induction" class="internal"><span class="title">Mathematical induction</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="s_proof_technique.html#sss_weak_induction" class="internal"><span class="title">Proof by induction</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="s_proof_technique.html#sss_strong_induction" class="internal"><span class="title">Proof by strong induction</span></a></div></li>
 </ul>
 </li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="backmatter-1.html" class="internal"><span class="title">Back Matter</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="appendix-notation.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-defs.html" class="internal"><span class="codenumber">B</span> <span class="title">Definitions</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-thms.html" class="internal"><span class="codenumber">C</span> <span class="title">Theory</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-specimens.html" class="internal"><span class="codenumber">D</span> <span class="title">Topological specimens</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-egs.html" class="internal"><span class="codenumber">E</span> <span class="title">Examples</span></a></div></li>
-<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="c_top_spaces.html" class="internal"><span class="codenumber">1</span> <span class="title">Point-set topology</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_top_spaces.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Topological spaces</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_bases_top.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Bases for topological spaces</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_metric1.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Metric spaces</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_closed_closure_interior.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Closed sets, closure, and interior</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_limitpoints_hausdorff.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Limit points and the Hausdorff property</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_subspace_finite_products.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Subspaces and products</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_subspace_finite_products.html#ss_subspace" class="internal"><span class="title">Subspaces</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_subspace_finite_products.html#ss_finite_products" class="internal"><span class="title">Finite product spaces</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_product2.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Arbitrary products</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_prods_convergence_metric.html" class="internal"><span class="codenumber">1.8</span> <span class="title">Convergence in product spaces</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="s_continuous.html" class="internal"><span class="codenumber">1.9</span> <span class="title">Continuous functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_homeomorphisms.html" class="internal"><span class="codenumber">1.10</span> <span class="title">Homeomorphisms</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_quotients.html" class="internal"><span class="codenumber">1.11</span> <span class="title">Quotients</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_connected1.html" class="internal"><span class="codenumber">1.12</span> <span class="title">Connected spaces</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_connected_path.html" class="internal"><span class="codenumber">1.13</span> <span class="title">Path-connected spaces</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_connected_components.html" class="internal"><span class="codenumber">1.14</span> <span class="title">Connected components and locally connected spaces</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_compact_def.html" class="internal"><span class="codenumber">1.15</span> <span class="title">Compact spaces</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_compact_metric.html" class="internal"><span class="codenumber">1.16</span> <span class="title">Compactness in metric spaces</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_locally.html" class="internal"><span class="codenumber">1.17</span> <span class="title">Locally compact spaces and compactification</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_countability_axioms.html" class="internal"><span class="codenumber">1.18</span> <span class="title">Countability axioms</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_regular.html" class="internal"><span class="codenumber">1.19</span> <span class="title">Regular spaces</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_normal.html" class="internal"><span class="codenumber">1.20</span> <span class="title">Normal spaces</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_Urysohn_lemma.html" class="internal"><span class="codenumber">1.21</span> <span class="title">Urysohn lemma</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_Urysohn_metrization.html" class="internal"><span class="codenumber">1.22</span> <span class="title">Urysohn metrization theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_Tietze_extension.html" class="internal"><span class="codenumber">1.23</span> <span class="title">Further applications of Urysohn</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_nets.html" class="internal"><span class="codenumber">1.24</span> <span class="title">Nets</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_Tychonoff.html" class="internal"><span class="codenumber">1.25</span> <span class="title">Tychonoff theorem via nets</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_Tychonoff.html#ss_nets_compactness" class="internal"><span class="title">Nets and compactness</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_Tychonoff.html#ss_Tychonoff" class="internal"><span class="title">Tychonoff’s theorem</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="c_algebraic_topology.html" class="internal"><span class="codenumber">2</span> <span class="title">Algebraic topology</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_homotopy.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Homotopy</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_fundamental_group.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Fundamental group</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_covering_spaces.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Covering spaces</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_coveringmaps_fundgroups.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Lifting correspondence</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_retract_Brouwer.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Retractions and Brouwer fixed point</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_deformation_retract.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Deformation retract</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_homotopy_type.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Homotopty equivalence</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_Sn_simply_connected.html" class="internal"><span class="codenumber">2.8</span> <span class="title">Fundamental group of <span class="process-math">\(S^n\)</span></span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_surface_fund_grps.html" class="internal"><span class="codenumber">2.9</span> <span class="title">Fundamental groups of some surfaces</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_jordan_separation.html" class="internal"><span class="codenumber">2.10</span> <span class="title">Jordan separation theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_jordan_curve.html" class="internal"><span class="codenumber">2.11</span> <span class="title">Jordan curve theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_groups_abelian.html" class="internal"><span class="codenumber">2.12</span> <span class="title">Free Abelian groups</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_groups_free_products.html" class="internal"><span class="codenumber">2.13</span> <span class="title">Free products</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_groups_free.html" class="internal"><span class="codenumber">2.14</span> <span class="title">Free groups</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_seifert_van_kampen.html" class="internal"><span class="codenumber">2.15</span> <span class="title">Seifert-van Kampen theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_wedge_of_circles.html" class="internal"><span class="codenumber">2.16</span> <span class="title">Wedge of circles</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_adjoin_2cell.html" class="internal"><span class="codenumber">2.17</span> <span class="title">Adjoining a 2-cell</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_dunce_cap.html" class="internal"><span class="codenumber">2.18</span> <span class="title"><span class="process-math">\(n\)</span>-fold dunce caps</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_polygonal_regions.html" class="internal"><span class="codenumber">2.19</span> <span class="title">Pasted polygonal regions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_surface_classification.html" class="internal"><span class="codenumber">2.20</span> <span class="title">Classification of surfaces</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_covering_classification.html" class="internal"><span class="codenumber">2.21</span> <span class="title">Classification of covering spaces</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter-1.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-notation.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-defs.html" class="internal"><span class="codenumber">B</span> <span class="title">Definitions</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-thms.html" class="internal"><span class="codenumber">C</span> <span class="title">Theory</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-specimens.html" class="internal"><span class="codenumber">D</span> <span class="title">Topological specimens</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-egs.html" class="internal"><span class="codenumber">E</span> <span class="title">Examples</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_continuous"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">2.9</span> <span class="title">Continuous functions</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.9</span><span class="space"> </span><span class="title">Continuous functions</span>
 </h2>
-<section class="introduction" id="introduction-14"><div class="para logical" id="p-946">
+<section class="introduction" id="introduction-13"><div class="para logical" id="p-470">
 <div class="para">In calculus you learn that a function <span class="process-math">\(f\colon \R\rightarrow \R\)</span> is defined to be continuous if for all <span class="process-math">\(\epsilon &gt; 0\)</span> there is a <span class="process-math">\(\delta &gt; 0\)</span> such that for all <span class="process-math">\(x,x'\in \R\)</span> we have the implication</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \abs{x-x'}&lt; \delta \implies \abs{f(x)-f(x')}&lt; \epsilon\text{.}
 \end{equation*}
 </div>
-<div class="para">Now that we have some experience generalizing analysis concepts to topological ones, let's see how best this translates to arbitrary topologies.</div>
+<div class="para">Now that we have some experience generalizing analysis concepts to topological ones, let’s see how best this translates to arbitrary topologies.</div>
 </div></section><article class="definition definition-like" id="d_continuous_function"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.9.1</span><span class="period">.</span><span class="space"> </span><span class="title">Continuous function.</span>
-</h3> <div class="para logical" id="p-947">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.9.1</span><span class="period">.</span><span class="space"> </span><span class="title">Continuous function.</span>
+</h3> <div class="para logical" id="p-471">
 <div class="para">Let <span class="process-math">\((X,\mathcal{T}), (Y,\mathcal{T}')\)</span> be topological spaces. A function <span class="process-math">\(f\colon X\rightarrow Y\)</span> is <dfn class="terminology">continuous</dfn> if for all open sets <span class="process-math">\(U\subseteq Y\text{,}\)</span> the set <span class="process-math">\(f^{-1}(U)\)</span> is open in <span class="process-math">\(X\text{.}\)</span> Using logical shorthand:</div>
 <div class="displaymath process-math" id="eq_continuous">
 \begin{equation}
-U\in \mathcal{T}'\implies f^{-1}(U)\in \mathcal{T}\text{.}\tag{2.9.1}
+U\in \mathcal{T}'\implies f^{-1}(U)\in \mathcal{T}\text{.}\tag{1.9.1}
 \end{equation}
 </div>
 </div></article><article class="remark remark-like" id="rm_preimage"><h3 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.9.2</span><span class="period">.</span><span class="space"> </span><span class="title">Preimage properties.</span>
-</h3> <div class="para logical" id="p-948">
-<div class="para">Continuity is defined in terms of <a href="" class="xref" data-knowl="./knowl/d_preimage_of_set.html" title="Definition 0.1.23: Preimage of set">preimages of sets</a> under a function <span class="process-math">\(f\text{.}\)</span> Thankfully, the preimage operation behaves very well with respect to our various set operations. In particular, we have the following identities, which you may make use of without further ado:</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/d_preimage_of_set.html" id="mdn-7">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.9.2</span><span class="period">.</span><span class="space"> </span><span class="title">Preimage properties.</span>
+</h3> <div class="para logical" id="p-472">
+<div class="para">Continuity is defined in terms of <a href="" class="xref" data-knowl="./knowl/xref/d_preimage_of_set.html" title="Definition 0.1.23: Preimage of set">preimages of sets</a> under a function <span class="process-math">\(f\text{.}\)</span> Thankfully, the preimage operation behaves very well with respect to our various set operations. In particular, we have the following identities, which you may make use of without further ado:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/d_preimage_of_set.html" id="mdn-4">
 \begin{align}
-f^{-1}\left(\bigcup_{i\in I}A_i\right) \amp = \bigcup_{i\in I}f^{-1}(A_i)\tag{2.9.2}\\
-f^{-1}\left(\bigcap_{i\in I}A_i\right) \amp = \bigcap_{i\in I}f^{-1}(A_i)\tag{2.9.3}\\
-f^{-1}(A^c) \amp =(f^{-1}(A))^c\tag{2.9.4}
+f^{-1}\left(\bigcup_{i\in I}A_i\right) \amp = \bigcup_{i\in I}f^{-1}(A_i)\tag{1.9.2}\\
+f^{-1}\left(\bigcap_{i\in I}A_i\right) \amp = \bigcap_{i\in I}f^{-1}(A_i)\tag{1.9.3}\\
+f^{-1}(A^c) \amp =(f^{-1}(A))^c\tag{1.9.4}
 \end{align}
 </div>
-</div></article><article class="example example-like" id="example-64"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.9.3</span><span class="period">.</span><span class="space"> </span><span class="title">Continuous functions: basic examples.</span>
+</div></article><article class="example example-like" id="example-37"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.9.3</span><span class="period">.</span><span class="space"> </span><span class="title">Continuous functions: basic examples.</span>
 </h3>
 <ol class="decimal">
-<li id="li-275">
-<span class="heading"><span class="title">Identity function.</span></span><div class="para logical" id="p-949">
+<li id="li-151">
+<span class="heading"><span class="title">Identity function.</span></span><div class="para logical" id="p-473">
 <div class="para">Given a topological space <span class="process-math">\((X,\mathcal{T})\text{,}\)</span> the identity function</div>
-<div class="displaymath process-math" id="md-129">
+<div class="displaymath process-math" id="md-44">
 \begin{align*}
 \id_X\colon X \amp \rightarrow X\\
 x\amp\mapsto x 
@@ -484,42 +415,37 @@ x\amp\mapsto x
 <div class="para">is continuous. Here we take <span class="process-math">\(\mathcal{T}\)</span> as the topology of both the domain and codomain.</div>
 </div>
 </li>
-<li id="li-276">
-<span class="heading"><span class="title">Constant functions.</span></span><div class="para" id="p-950">Let <span class="process-math">\(X, Y\)</span> be topological spaces. For any fixed <span class="process-math">\(y_0\in Y\)</span> the constant function <span class="process-math">\(f\text{,}\)</span> defined as <span class="process-math">\(f(x)=y_0\)</span> for all <span class="process-math">\(x\in X\)</span> is continuous.</div>
+<li id="li-152">
+<span class="heading"><span class="title">Constant functions.</span></span><div class="para" id="p-474">Let <span class="process-math">\(X, Y\)</span> be topological spaces. For any fixed <span class="process-math">\(y_0\in Y\)</span> the constant function <span class="process-math">\(f\text{,}\)</span> defined as <span class="process-math">\(f(x)=y_0\)</span> for all <span class="process-math">\(x\in X\)</span> is continuous.</div>
 </li>
-<li id="li-277">
-<span class="heading"><span class="title">Subspace inclusions.</span></span><div class="para" id="p-951">Let <span class="process-math">\(Y\)</span> be a subspace of <span class="process-math">\(X\text{.}\)</span> The inclusion map <span class="process-math">\(i\colon Y\hookrightarrow X\)</span> is continuous with respect to the subspace topology on <span class="process-math">\(Y\text{.}\)</span>
+<li id="li-153">
+<span class="heading"><span class="title">Subspace inclusions.</span></span><div class="para" id="p-475">Let <span class="process-math">\(Y\)</span> be a subspace of <span class="process-math">\(X\text{.}\)</span> The inclusion map <span class="process-math">\(i\colon Y\hookrightarrow X\)</span> is continuous with respect to the subspace topology on <span class="process-math">\(Y\text{.}\)</span>
 </div>
 </li>
-<li id="li-278">
-<span class="heading"><span class="title">Maps from discrete spaces.</span></span><div class="para" id="p-952">If <span class="process-math">\(X\)</span> is equipped with the discrete topology, then any function <span class="process-math">\(f\colon X\rightarrow Y\)</span> to a topological space <span class="process-math">\(Y\)</span> is continuous.</div>
+<li id="li-154">
+<span class="heading"><span class="title">Maps from discrete spaces.</span></span><div class="para" id="p-476">If <span class="process-math">\(X\)</span> is equipped with the discrete topology, then any function <span class="process-math">\(f\colon X\rightarrow Y\)</span> to a topological space <span class="process-math">\(Y\)</span> is continuous.</div>
 </li>
-<li id="li-279">
-<span class="heading"><span class="title">Maps to trivial spaces.</span></span><div class="para" id="p-953">If <span class="process-math">\(Y\)</span> is equipped with the trivial topology, then any map <span class="process-math">\(f\colon X\rightarrow Y\)</span> from a topological space to <span class="process-math">\(Y\)</span> is continous.</div>
+<li id="li-155">
+<span class="heading"><span class="title">Maps to trivial spaces.</span></span><div class="para" id="p-477">If <span class="process-math">\(Y\)</span> is equipped with the trivial topology, then any map <span class="process-math">\(f\colon X\rightarrow Y\)</span> from a topological space to <span class="process-math">\(Y\)</span> is continous.</div>
 </li>
 </ol>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-38" id="solution-38"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-38"><div class="solution solution-like"><div class="para" id="p-954">These are all pretty elementary. I'll prove (3). Let <span class="process-math">\(Y\subseteq X\)</span> be a subspace and let <span class="process-math">\(i\colon Y\hookrightarrow X\)</span>  continuous. Given any open set <span class="process-math">\(U\subseteq X\text{,}\)</span> we have <span class="process-math">\(i^{-1}(U)=U\cap Y\)</span> which by definition is open in the subspace topology. Thus <span class="process-math">\(i\)</span> is continuous.</div></div></div>
-</div></article><article class="example example-like" id="example-65"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.9.4</span><span class="period">.</span><span class="space"> </span><span class="title">Non-continuous inclusion.</span>
+<div class="solutions"><details id="solution-29" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-478">These are all pretty elementary. I’ll prove (3). Let <span class="process-math">\(Y\subseteq X\)</span> be a subspace and let <span class="process-math">\(i\colon Y\hookrightarrow X\)</span>  continuous. Given any open set <span class="process-math">\(U\subseteq X\text{,}\)</span> we have <span class="process-math">\(i^{-1}(U)=U\cap Y\)</span> which by definition is open in the subspace topology. Thus <span class="process-math">\(i\)</span> is continuous.</div></div></details></div></article><article class="example example-like" id="example-38"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.9.4</span><span class="period">.</span><span class="space"> </span><span class="title">Non-continuous inclusion.</span>
 </h3>
-<div class="para" id="p-955">Show that the identity map <span class="process-math">\(\id_\R\colon \R\hookrightarrow \R_l\)</span> is not continuous. Here the topology of the domain is the standard one, and the topology on the codomain is the lower limit topology.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-39" id="solution-39"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-39"><div class="solution solution-like">
-<div class="para" id="p-956">For any <span class="process-math">\(U\subseteq \R\)</span> we have <span class="process-math">\(\id_\R^{-1}(U)=U\text{.}\)</span> If we choose <span class="process-math">\(U\)</span> to be any open set of <span class="process-math">\(\R_l\)</span> that is not open in the standard topology, it follows that <span class="process-math">\(\id_{\R}^{-1}(U)\)</span> is not open in <span class="process-math">\(\R\)</span> and hence that <span class="process-math">\(\id_\R\)</span> is not continuous. We may take <span class="process-math">\(U=[0,1)\)</span> for example.</div> <div class="para" id="p-957">Note: let <span class="process-math">\(\mathcal{T}_1, \mathcal{T}_2\)</span> be two topologies on the set <span class="process-math">\(X\text{,}\)</span> and for <span class="process-math">\(1\leq i\leq 2\)</span> let <span class="process-math">\(X_i\)</span> denote the space with underlying set <span class="process-math">\(X\)</span> and topology <span class="process-math">\(\mathcal{T}_i\text{.}\)</span> The same argument above can be used to show that <span class="process-math">\(\id_X\colon X_1\rightarrow X_2\)</span> is continuous if and only if <span class="process-math">\(\mathcal{T}_2\subseteq \mathcal{T}_1\text{.}\)</span>
+<div class="para" id="p-479">Show that the identity map <span class="process-math">\(\id_\R\colon \R\hookrightarrow \R_l\)</span> is not continuous. Here the topology of the domain is the standard one, and the topology on the codomain is the lower limit topology.</div>
+<div class="solutions"><details id="solution-30" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para" id="p-480">For any <span class="process-math">\(U\subseteq \R\)</span> we have <span class="process-math">\(\id_\R^{-1}(U)=U\text{.}\)</span> If we choose <span class="process-math">\(U\)</span> to be any open set of <span class="process-math">\(\R_l\)</span> that is not open in the standard topology, it follows that <span class="process-math">\(\id_{\R}^{-1}(U)\)</span> is not open in <span class="process-math">\(\R\)</span> and hence that <span class="process-math">\(\id_\R\)</span> is not continuous. We may take <span class="process-math">\(U=[0,1)\)</span> for example.</div> <div class="para" id="p-481">Note: let <span class="process-math">\(\mathcal{T}_1, \mathcal{T}_2\)</span> be two topologies on the set <span class="process-math">\(X\text{,}\)</span> and for <span class="process-math">\(1\leq i\leq 2\)</span> let <span class="process-math">\(X_i\)</span> denote the space with underlying set <span class="process-math">\(X\)</span> and topology <span class="process-math">\(\mathcal{T}_i\text{.}\)</span> The same argument above can be used to show that <span class="process-math">\(\id_X\colon X_1\rightarrow X_2\)</span> is continuous if and only if <span class="process-math">\(\mathcal{T}_2\subseteq \mathcal{T}_1\text{.}\)</span>
 </div>
-</div></div>
-</div></article><article class="example example-like" id="example-66"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.9.5</span><span class="period">.</span><span class="space"> </span><span class="title">Products and projections.</span>
+</div></details></div></article><article class="example example-like" id="example-39"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.9.5</span><span class="period">.</span><span class="space"> </span><span class="title">Products and projections.</span>
 </h3>
-<div class="para" id="p-958">Let <span class="process-math">\(\{X_i, \mathcal{T}_i\}_{i\in I}\)</span> be a collection of topological spaces, and let <span class="process-math">\(X=\prod_{i\in I}X_i\text{.}\)</span> For each <span class="process-math">\(j\in I\)</span> define the projection function <span class="process-math">\(\pi_j\colon X\rightarrow X_j\)</span> as <span class="process-math">\(\pi_j((x_i)_{i\in I})=x_i\text{.}\)</span> In other words, the <span class="process-math">\(j\)</span>-th projection map returns the <span class="process-math">\(j\)</span>-th coordinate of an element of <span class="process-math">\(X\text{.}\)</span>
+<div class="para" id="p-482">Let <span class="process-math">\(\{X_i, \mathcal{T}_i\}_{i\in I}\)</span> be a collection of topological spaces, and let <span class="process-math">\(X=\prod_{i\in I}X_i\text{.}\)</span> For each <span class="process-math">\(j\in I\)</span> define the projection function <span class="process-math">\(\pi_j\colon X\rightarrow X_j\)</span> as <span class="process-math">\(\pi_j((x_i)_{i\in I})=x_i\text{.}\)</span> In other words, the <span class="process-math">\(j\)</span>-th projection map returns the <span class="process-math">\(j\)</span>-th coordinate of an element of <span class="process-math">\(X\text{.}\)</span>
 </div> <ol class="decimal">
-<li id="li-280"><div class="para" id="p-959">Prove: if <span class="process-math">\(X\)</span> is given the product topology, then <span class="process-math">\(\pi_j\)</span> is continuous for all <span class="process-math">\(j\in J\text{.}\)</span>
+<li id="li-156"><div class="para" id="p-483">Prove: if <span class="process-math">\(X\)</span> is given the product topology, then <span class="process-math">\(\pi_j\)</span> is continuous for all <span class="process-math">\(j\in J\text{.}\)</span>
 </div></li>
-<li id="li-281"><div class="para" id="p-960">Prove: given a topology <span class="process-math">\(\mathcal{T}\)</span> on <span class="process-math">\(X\text{,}\)</span> we have <span class="process-math">\(\pi_j\)</span> continuous for all <span class="process-math">\(j\in J\)</span> if and only if <span class="process-math">\(\mathcal{T}\)</span> contains the product topology. Thus, in particular, the product topology is the coarsest topology on <span class="process-math">\(X\)</span> making each projection map continuous.</div></li>
+<li id="li-157"><div class="para" id="p-484">Prove: given a topology <span class="process-math">\(\mathcal{T}\)</span> on <span class="process-math">\(X\text{,}\)</span> we have <span class="process-math">\(\pi_j\)</span> continuous for all <span class="process-math">\(j\in J\)</span> if and only if <span class="process-math">\(\mathcal{T}\)</span> contains the product topology. Thus, in particular, the product topology is the coarsest topology on <span class="process-math">\(X\)</span> making each projection map continuous.</div></li>
 </ol>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-40" id="solution-40"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-40"><div class="solution solution-like"><div class="para logical" id="p-961">
+<div class="solutions"><details id="solution-31" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-485">
 <div class="para">It is enough to prove (2), since it clearly implies (1). The maps <span class="process-math">\(\pi_j\)</span> are continuous in a topology <span class="process-math">\(\mathcal{T}\)</span> if and only if for all <span class="process-math">\(j\in I\)</span> and open <span class="process-math">\(U_j\subseteq X_j\)</span> the preimage <span class="process-math">\(\pi_j^{-1}(U_j)=U_j\times \prod_{i\ne j}X_i\)</span> is open in <span class="process-math">\(\mathcal{T}\text{.}\)</span> Next it clear that <span class="process-math">\(U_j\times \prod_{i\ne j}X_i\)</span> is open in <span class="process-math">\(\mathcal{T}\)</span> for all <span class="process-math">\(j\in J\)</span> if and only if</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -527,16 +453,15 @@ x\amp\mapsto x
 \end{equation*}
 </div>
 <div class="para">is open for any finite set <span class="process-math">\(\{j_1, j_2,\dots, j_n\}\subseteq I\text{.}\)</span> Since these sets form a basis for the product topology, we conclude that the projections are all continuous if and only if <span class="process-math">\(\mathcal{T}\)</span> is finer than the product topology.</div>
-</div></div></div>
-</div></article><article class="theorem theorem-like" id="th_continuity_basis"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.9.6</span><span class="period">.</span>
+</div></div></details></div></article><article class="theorem theorem-like" id="th_continuity_basis"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.9.6</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-962">Let <span class="process-math">\(f\colon X\rightarrow Y\)</span> be a function between the topological spaces <span class="process-math">\(X, Y\text{,}\)</span> and let <span class="process-math">\(\mathcal{B}\)</span> be a basis for <span class="process-math">\(Y\text{.}\)</span> The following statements are equivalent.</div> <ol class="decimal">
-<li id="li-282"><div class="para" id="p-963">
+<div class="para" id="p-486">Let <span class="process-math">\(f\colon X\rightarrow Y\)</span> be a function between the topological spaces <span class="process-math">\(X, Y\text{,}\)</span> and let <span class="process-math">\(\mathcal{B}\)</span> be a basis for <span class="process-math">\(Y\text{.}\)</span> The following statements are equivalent.</div> <ol class="decimal">
+<li id="li-158"><div class="para" id="p-487">
 <span class="process-math">\(f\)</span> is continuous.</div></li>
-<li id="li-283"><div class="para" id="p-964">For all <span class="process-math">\(B\in \mathcal{B}\text{,}\)</span> the preimage <span class="process-math">\(f^{-1}(B)\)</span> is open in <span class="process-math">\(X\text{.}\)</span>
+<li id="li-159"><div class="para" id="p-488">For all <span class="process-math">\(B\in \mathcal{B}\text{,}\)</span> the preimage <span class="process-math">\(f^{-1}(B)\)</span> is open in <span class="process-math">\(X\text{.}\)</span>
 </div></li>
-</ol></article><article class="hiddenproof" id="proof-91"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-91"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-91"><article class="hiddenproof"><div class="para logical" id="p-965">
+</ol></article><details id="proof-33" class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para logical" id="p-489">
 <div class="para">It is clear that (1) implies (2). Assume (2) is true. Given open <span class="process-math">\(U\subseteq Y\text{,}\)</span> we can write <span class="process-math">\(U=\bigcup_{i\in I}B_i\)</span> with <span class="process-math">\(B_i\in \mathcal{B}\text{.}\)</span> It follows that</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -544,48 +469,46 @@ f^{-1}(U)=\bigcup_{i\in I}f^{-1}(B_i)
 \end{equation*}
 </div>
 <div class="para">is open, since by assumption each <span class="process-math">\(f^{-1}(B_i)\)</span> is open.</div>
-</div></article></div>
-<article class="theorem theorem-like" id="th_continuous_equivalence"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.9.7</span><span class="period">.</span><span class="space"> </span><span class="title">Continuity equivalences.</span>
+</div></article></details><article class="theorem theorem-like" id="th_continuous_equivalence"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.9.7</span><span class="period">.</span><span class="space"> </span><span class="title">Continuity equivalences.</span>
 </h3>
-<div class="para" id="p-966">Let <span class="process-math">\(f\colon X\rightarrow Y\)</span> be a function between the topological spaces <span class="process-math">\(X, Y\text{.}\)</span> The following statements are equivalent.</div> <ol class="decimal">
-<li id="li-284"><div class="para" id="p-967">
+<div class="para" id="p-490">Let <span class="process-math">\(f\colon X\rightarrow Y\)</span> be a function between the topological spaces <span class="process-math">\(X, Y\text{.}\)</span> The following statements are equivalent.</div> <ol class="decimal">
+<li id="li-160"><div class="para" id="p-491">
 <span class="process-math">\(f\)</span> is continuous.</div></li>
-<li id="li-285"><div class="para" id="p-968">For all <span class="process-math">\(A\subseteq X\text{,}\)</span> we have <span class="process-math">\(f(\overline{A})\subseteq \overline{f(A)}\text{.}\)</span>
+<li id="li-161"><div class="para" id="p-492">For all <span class="process-math">\(A\subseteq X\text{,}\)</span> we have <span class="process-math">\(f(\overline{A})\subseteq \overline{f(A)}\text{.}\)</span>
 </div></li>
-<li id="li-286"><div class="para" id="p-969">For all closed sets <span class="process-math">\(C\subseteq Y\text{,}\)</span> the preimage <span class="process-math">\(f^{-1}(C)\)</span> is closed in <span class="process-math">\(X\text{.}\)</span>
+<li id="li-162"><div class="para" id="p-493">For all closed sets <span class="process-math">\(C\subseteq Y\text{,}\)</span> the preimage <span class="process-math">\(f^{-1}(C)\)</span> is closed in <span class="process-math">\(X\text{.}\)</span>
 </div></li>
-<li id="li-287"><div class="para" id="p-970">For all <span class="process-math">\(x\in X\)</span> and open neighborhood <span class="process-math">\(V\ni y=f(x)\text{,}\)</span> there is an open neighborhood <span class="process-math">\(U\ni x\)</span> such that <span class="process-math">\(f(U)\subseteq V\text{.}\)</span>
+<li id="li-163"><div class="para" id="p-494">For all <span class="process-math">\(x\in X\)</span> and open neighborhood <span class="process-math">\(V\ni y=f(x)\text{,}\)</span> there is an open neighborhood <span class="process-math">\(U\ni x\)</span> such that <span class="process-math">\(f(U)\subseteq V\text{.}\)</span>
 </div></li>
-</ol></article><article class="hiddenproof" id="proof-92"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-92"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-92"><article class="hiddenproof"><div class="para" id="p-971">
-<span class="process-math">\((1)\implies (2)\text{.}\)</span> Take <span class="process-math">\(y\in f(\overline{A})\text{.}\)</span> We have <span class="process-math">\(y=f(x)\)</span> for some <span class="process-math">\(x\in \overline{A}\text{.}\)</span> If <span class="process-math">\(V\)</span> is any open neighborhood of <span class="process-math">\(y\text{,}\)</span> then since <span class="process-math">\(f\)</span> is continuous <span class="process-math">\(U=f^{-1}(V)\)</span> is an open neighborhood of <span class="process-math">\(x\text{.}\)</span> Since <span class="process-math">\(x\in\overline{A}\text{,}\)</span> there exists <span class="process-math">\(x'\in A\cap U\text{.}\)</span> It follows that <span class="process-math">\(y'=f(x')\in V\cap f(A)\text{,}\)</span> showing this intersection is nonempt. We concdlue that <span class="process-math">\(y\in \overline{f(A)}\text{,}\)</span> as desited.</div> <div class="para" id="p-972">
+</ol></article><details id="proof-34" class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para" id="p-495">
+<span class="process-math">\((1)\implies (2)\text{.}\)</span> Take <span class="process-math">\(y\in f(\overline{A})\text{.}\)</span> We have <span class="process-math">\(y=f(x)\)</span> for some <span class="process-math">\(x\in \overline{A}\text{.}\)</span> If <span class="process-math">\(V\)</span> is any open neighborhood of <span class="process-math">\(y\text{,}\)</span> then since <span class="process-math">\(f\)</span> is continuous <span class="process-math">\(U=f^{-1}(V)\)</span> is an open neighborhood of <span class="process-math">\(x\text{.}\)</span> Since <span class="process-math">\(x\in\overline{A}\text{,}\)</span> there exists <span class="process-math">\(x'\in A\cap U\text{.}\)</span> It follows that <span class="process-math">\(y'=f(x')\in V\cap f(A)\text{,}\)</span> showing this intersection is nonempt. We concdlue that <span class="process-math">\(y\in \overline{f(A)}\text{,}\)</span> as desited.</div> <div class="para" id="p-496">
 <span class="process-math">\((2)\implies (3)\text{.}\)</span> Assume (2) holds of <span class="process-math">\(f\text{.}\)</span> Given closed <span class="process-math">\(C\subseteq Y\)</span> let <span class="process-math">\(A=f^{-1}(C)\text{.}\)</span> To show <span class="process-math">\(A\)</span> is closed, we will show that <span class="process-math">\(\overline{A}\subseteq A\text{.}\)</span> Since <span class="process-math">\(A=f^{-1}(C)\text{,}\)</span> this is equivalent to showing <span class="process-math">\(f(\overline{A})\subseteq C\text{;}\)</span> but this follows from (2) since <span class="process-math">\(f(\overline{A})\subseteq \overline{f(A)}\subseteq C\text{,}\)</span> where the last inclusion in this chain follows from the fact that <span class="process-math">\(C\)</span> is closed and contains <span class="process-math">\(f(A)\text{.}\)</span>
-</div> <div class="para" id="p-973">
+</div> <div class="para" id="p-497">
 <span class="process-math">\((3)\implies (4)\text{.}\)</span> Let <span class="process-math">\(x\in X\text{,}\)</span> and let <span class="process-math">\(V\)</span> be an open neighborhood of <span class="process-math">\(y=f(x)\text{.}\)</span> The set <span class="process-math">\(C=Y-V\)</span> is closed, whence <span class="process-math">\(f^{-1}(C)=X-f^{-1}(V)\)</span> is closed. It follows that <span class="process-math">\(U=f^{-1}(V)\)</span> is an open set containing <span class="process-math">\(x\text{,}\)</span> and we have <span class="process-math">\(f(U)=f(f^{-1}(V))\subseteq V\text{.}\)</span>
-</div> <div class="para" id="p-974">
-<span class="process-math">\((4)\implies (1)\text{.}\)</span> We assume (4). Let <span class="process-math">\(V\subseteq Y\)</span> be an open set. For any <span class="process-math">\(x\in f^{-1}(V)\text{,}\)</span> there is by (4) (taking open set <span class="process-math">\(V\ni y=f(x)\)</span>) an open set <span class="process-math">\(U_x\ni x\)</span> such that <span class="process-math">\(f(U_x)\subseteq V\text{.}\)</span> It follows that <span class="process-math">\(U_x\subseteq f^{-1}(V)\text{.}\)</span> Thus for any <span class="process-math">\(x\in f^{-1}(V)\)</span> there is an open <span class="process-math">\(U_x\ni x\)</span> such that <span class="process-math">\(U_x\subseteq V\text{.}\)</span> It follows that <span class="process-math">\(f^{-1}(V)\)</span> is open, as desired.</div></article></div>
-<article class="definition definition-like" id="d_continuity_at_x"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.9.8</span><span class="period">.</span>
+</div> <div class="para" id="p-498">
+<span class="process-math">\((4)\implies (1)\text{.}\)</span> We assume (4). Let <span class="process-math">\(V\subseteq Y\)</span> be an open set. For any <span class="process-math">\(x\in f^{-1}(V)\text{,}\)</span> there is by (4) (taking open set <span class="process-math">\(V\ni y=f(x)\)</span>) an open set <span class="process-math">\(U_x\ni x\)</span> such that <span class="process-math">\(f(U_x)\subseteq V\text{.}\)</span> It follows that <span class="process-math">\(U_x\subseteq f^{-1}(V)\text{.}\)</span> Thus for any <span class="process-math">\(x\in f^{-1}(V)\)</span> there is an open <span class="process-math">\(U_x\ni x\)</span> such that <span class="process-math">\(U_x\subseteq V\text{.}\)</span> It follows that <span class="process-math">\(f^{-1}(V)\)</span> is open, as desired.</div></article></details><article class="definition definition-like" id="d_continuity_at_x"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.9.8</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-975">Let <span class="process-math">\(f\colon X\rightarrow Y\)</span> be a map between topological spaces. We say that <span class="process-math">\(f\)</span> is <dfn class="terminology">continuous at x</dfn>, for <span class="process-math">\(x\in X\text{,}\)</span> if for all open neighborhoods <span class="process-math">\(V\ni y\text{,}\)</span> there is an open neighborhood <span class="process-math">\(U\ni x\)</span> such that <span class="process-math">\(f(U)\subseteq V\text{.}\)</span>
+<div class="para" id="p-499">Let <span class="process-math">\(f\colon X\rightarrow Y\)</span> be a map between topological spaces. We say that <span class="process-math">\(f\)</span> is <dfn class="terminology">continuous at x</dfn>, for <span class="process-math">\(x\in X\text{,}\)</span> if for all open neighborhoods <span class="process-math">\(V\ni y\text{,}\)</span> there is an open neighborhood <span class="process-math">\(U\ni x\)</span> such that <span class="process-math">\(f(U)\subseteq V\text{.}\)</span>
 </div></article><article class="theorem theorem-like" id="th_building_continuous_functions"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.9.9</span><span class="period">.</span><span class="space"> </span><span class="title">Building continuous functions.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.9.9</span><span class="period">.</span><span class="space"> </span><span class="title">Building continuous functions.</span>
 </h3>
 <ol class="decimal">
-<li id="li-288">
-<span class="heading"><span class="title">Composition.</span></span><div class="para" id="p-976">If <span class="process-math">\(f\colon X\rightarrow Y\)</span> and <span class="process-math">\(g\colon Y\rightarrow Z\)</span> are continuous, then the composition <span class="process-math">\(g\circ f\colon X\rightarrow Z\)</span> is continuous.</div>
+<li id="li-164">
+<span class="heading"><span class="title">Composition.</span></span><div class="para" id="p-500">If <span class="process-math">\(f\colon X\rightarrow Y\)</span> and <span class="process-math">\(g\colon Y\rightarrow Z\)</span> are continuous, then the composition <span class="process-math">\(g\circ f\colon X\rightarrow Z\)</span> is continuous.</div>
 </li>
-<li id="li-289">
-<span class="heading"><span class="title">Restriction.</span></span><div class="para" id="p-977">If <span class="process-math">\(f\colon X\rightarrow Y\)</span> is continuous, and <span class="process-math">\(Z\subseteq X\)</span> is a subspace, then the restriction <span class="process-math">\(f\vert_Z\colon Z\rightarrow Y\)</span> is continuous.</div>
+<li id="li-165">
+<span class="heading"><span class="title">Restriction.</span></span><div class="para" id="p-501">If <span class="process-math">\(f\colon X\rightarrow Y\)</span> is continuous, and <span class="process-math">\(Z\subseteq X\)</span> is a subspace, then the restriction <span class="process-math">\(f\vert_Z\colon Z\rightarrow Y\)</span> is continuous.</div>
 </li>
-<li id="li-290">
-<span class="heading"><span class="title">Expansion.</span></span><div class="para" id="p-978">If <span class="process-math">\(f\colon X\rightarrow Y\)</span> is continuous and <span class="process-math">\(Y\)</span> is a subspace of <span class="process-math">\(Z\text{,}\)</span> then the function <span class="process-math">\(f\colon X\rightarrow Z\)</span> obtained by composing <span class="process-math">\(f\)</span> with the inclusion <span class="process-math">\(Y\hookrightarrow Z\)</span> is continuous.</div>
+<li id="li-166">
+<span class="heading"><span class="title">Expansion.</span></span><div class="para" id="p-502">If <span class="process-math">\(f\colon X\rightarrow Y\)</span> is continuous and <span class="process-math">\(Y\)</span> is a subspace of <span class="process-math">\(Z\text{,}\)</span> then the function <span class="process-math">\(f\colon X\rightarrow Z\)</span> obtained by composing <span class="process-math">\(f\)</span> with the inclusion <span class="process-math">\(Y\hookrightarrow Z\)</span> is continuous.</div>
 </li>
-<li id="li-291">
-<span class="heading"><span class="title">Local on source (open pasting).</span></span><div class="para" id="p-979">If <span class="process-math">\(f\colon X \rightarrow Y\)</span> is a function between topological spaces and there is a collection of open sets <span class="process-math">\(\{U_i\}_{i\in I}\)</span> such that <span class="process-math">\(X=\bigcup_{i\in I}U_i\)</span> and the restrictions <span class="process-math">\(f_i\colon U_i\rightarrow Y\)</span> are continuous, then <span class="process-math">\(f\)</span> is continuous.</div>
+<li id="li-167">
+<span class="heading"><span class="title">Local on source (open pasting).</span></span><div class="para" id="p-503">If <span class="process-math">\(f\colon X \rightarrow Y\)</span> is a function between topological spaces and there is a collection of open sets <span class="process-math">\(\{U_i\}_{i\in I}\)</span> such that <span class="process-math">\(X=\bigcup_{i\in I}U_i\)</span> and the restrictions <span class="process-math">\(f_i\colon U_i\rightarrow Y\)</span> are continuous, then <span class="process-math">\(f\)</span> is continuous.</div>
 </li>
-<li id="li-292">
-<span class="heading"><span class="title">Closed pasting.</span></span><div class="para logical" id="p-980">
+<li id="li-168">
+<span class="heading"><span class="title">Closed pasting.</span></span><div class="para logical" id="p-504">
 <div class="para">Let <span class="process-math">\(X, Y\)</span> be topological spaces, and suppose <span class="process-math">\(X=C\cup D\text{,}\)</span> where <span class="process-math">\(C, D\)</span> are closed sets. Given continuous functions <span class="process-math">\(f\colon C\rightarrow Y\)</span> and <span class="process-math">\(g\colon D\rightarrow Y\)</span> that satisfy <span class="process-math">\(f(x)=g(x)\)</span> for all <span class="process-math">\(x\in C\cap D\text{,}\)</span> the function <span class="process-math">\(h\colon X\rightarrow Y\)</span> defined as</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -598,12 +521,12 @@ g(x)\amp \text{if } x\in D
 <div class="para">is continuous.</div>
 </div>
 </li>
-</ol></article><article class="hiddenproof" id="proof-93"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-93"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-93"><article class="hiddenproof"><div class="para" id="p-981">Statements (1)-(3) are elementary, and can be found in Munkres.</div> <div class="para" id="p-982">Statement (4) follows from equivalent condition (4) from <a href="" class="xref" data-knowl="./knowl/th_continuous_equivalence.html" title="Theorem 2.9.7: Continuity equivalences">Theorem 2.9.7</a>. Indeed, take any <span class="process-math">\(x\in X\)</span> and open set <span class="process-math">\(V\ni y=f(x)\text{.}\)</span> Since <span class="process-math">\(x\in U_i\)</span> for some <span class="process-math">\(i\in I\text{,}\)</span> and since <span class="process-math">\(f_i\colon U_i\rightarrow Y\)</span> is continuous, there is an open <span class="process-math">\(U\ni x\)</span> with <span class="process-math">\(U\subseteq U_i\text{,}\)</span> such that <span class="process-math">\(f(U)\subseteq V\text{.}\)</span> Since <span class="process-math">\(U\)</span> is open in <span class="process-math">\(U_i\)</span> and <span class="process-math">\(U_i\)</span> is open in <span class="process-math">\(X\text{,}\)</span> we conclude <span class="process-math">\(U\)</span> is open in <span class="process-math">\(X\text{,}\)</span> as desired.</div> <div class="para" id="p-983">To prove statement (5) we show that <span class="process-math">\(h^{-1}(A)\)</span> is closed for any closed set <span class="process-math">\(A\subseteq Y\text{.}\)</span> Since <span class="process-math">\(h(x)\in A\)</span> if and only if <span class="process-math">\(x\in C\)</span> and <span class="process-math">\(f(x)\in A\)</span> or <span class="process-math">\(x\in D\)</span> and <span class="process-math">\(g(x)\in A\text{,}\)</span> we have <span class="process-math">\(h^{-1}(A)=f^{-1}(A)\cup g^{-1}(A)\text{.}\)</span> Since <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are closed we have <span class="process-math">\(f^{-1}(A)\)</span> closed in <span class="process-math">\(C\)</span> and <span class="process-math">\(g^{-1}(A)\)</span> closed in <span class="process-math">\(D\text{.}\)</span> Since <span class="process-math">\(C\)</span> and <span class="process-math">\(D\)</span> are closed, transitivity of closedness implies <span class="process-math">\(f^{-1}(A)\)</span> and <span class="process-math">\(g^{-1}(A)\)</span> are closed in <span class="process-math">\(X\text{.}\)</span> We conclude <span class="process-math">\(h^{-1}(A)=f^{-1}(A)\cup g^{-1}(A)\)</span> is closed, as desired.</div></article></div></section></div>
+</ol></article><details id="proof-35" class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para" id="p-505">Statements (1)-(3) are elementary, and can be found in Munkres.</div> <div class="para" id="p-506">Statement (4) follows from equivalent condition (4) from <a href="" class="xref" data-knowl="./knowl/xref/th_continuous_equivalence.html" title="Theorem 1.9.7: Continuity equivalences">Theorem 1.9.7</a>. Indeed, take any <span class="process-math">\(x\in X\)</span> and open set <span class="process-math">\(V\ni y=f(x)\text{.}\)</span> Since <span class="process-math">\(x\in U_i\)</span> for some <span class="process-math">\(i\in I\text{,}\)</span> and since <span class="process-math">\(f_i\colon U_i\rightarrow Y\)</span> is continuous, there is an open <span class="process-math">\(U\ni x\)</span> with <span class="process-math">\(U\subseteq U_i\text{,}\)</span> such that <span class="process-math">\(f(U)\subseteq V\text{.}\)</span> Since <span class="process-math">\(U\)</span> is open in <span class="process-math">\(U_i\)</span> and <span class="process-math">\(U_i\)</span> is open in <span class="process-math">\(X\text{,}\)</span> we conclude <span class="process-math">\(U\)</span> is open in <span class="process-math">\(X\text{,}\)</span> as desired.</div> <div class="para" id="p-507">To prove statement (5) we show that <span class="process-math">\(h^{-1}(A)\)</span> is closed for any closed set <span class="process-math">\(A\subseteq Y\text{.}\)</span> Since <span class="process-math">\(h(x)\in A\)</span> if and only if <span class="process-math">\(x\in C\)</span> and <span class="process-math">\(f(x)\in A\)</span> or <span class="process-math">\(x\in D\)</span> and <span class="process-math">\(g(x)\in A\text{,}\)</span> we have <span class="process-math">\(h^{-1}(A)=f^{-1}(A)\cup g^{-1}(A)\text{.}\)</span> Since <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are closed we have <span class="process-math">\(f^{-1}(A)\)</span> closed in <span class="process-math">\(C\)</span> and <span class="process-math">\(g^{-1}(A)\)</span> closed in <span class="process-math">\(D\text{.}\)</span> Since <span class="process-math">\(C\)</span> and <span class="process-math">\(D\)</span> are closed, transitivity of closedness implies <span class="process-math">\(f^{-1}(A)\)</span> and <span class="process-math">\(g^{-1}(A)\)</span> are closed in <span class="process-math">\(X\text{.}\)</span> We conclude <span class="process-math">\(h^{-1}(A)=f^{-1}(A)\cup g^{-1}(A)\)</span> is closed, as desired.</div></article></details></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="s_prods_convergence_metric.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="s_homeomorphisms.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+<a class="previous-button button" href="s_prods_convergence_metric.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_homeomorphisms.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
-<div id="ptx-page-footer">
+<div id="ptx-page-footer" class="ptx-page-footer">
 <a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
 </body>

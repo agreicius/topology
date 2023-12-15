@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.13.5</span><span class="period">.</span><span class="space"> </span><span class="title">Products of free products.</span>
+</h3>
+<div class="para">If <span class="process-math">\(G=\prod\limits_{\alpha\in I}^* G_\alpha\)</span> and <span class="process-math">\(H\cong \prod\limits_{\alpha'\in J}^*G_{\alpha'}\text{,}\)</span> then <span class="process-math">\(G*H\cong \prod\limits_{\alpha\in I\sqcup J}^* G_\alpha\text{.}\)</span>
+</div></article><details class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para logical">
+<div class="para">First we give names to some of the maps our various free products come equipped with.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop_universal_free_prod.html">
+\begin{align*}
+i\amp\colon G  \rightarrow G*H\\
+i'\amp\colon H  \rightarrow G*H\\
+i_\alpha\amp\colon G_\alpha  \rightarrow G\\
+i_{\alpha'}\amp\colon G_{\alpha'}  \rightarrow H\text{.}
+\end{align*}
+</div>
+<div class="para">Furthermore for each <span class="process-math">\(\beta\in I\sqcup J\)</span> we define</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop_universal_free_prod.html">
+\begin{equation*}
+j_{\beta}=\begin{cases}
+i\circ i_{\alpha}\amp \text{if } \beta=\alpha\in I\\
+i'\circ i_{\alpha'}\amp \text{if } \beta=\alpha'\in J.
+\end{cases}
+\end{equation*}
+</div>
+<div class="para">We now show that <span class="process-math">\((G*H, \{j_\beta\colon G_\beta\rightarrow G*H\})\)</span> is a free product of <span class="process-math">\(\{G_\beta\}_{\beta\in I\sqcup J}\)</span> by verifying that it satisfies the <a href="" class="xref" data-knowl="./knowl/xref/prop_universal_free_prod.html" title="Item: Universal mapping property">universal mapping property</a>. Let <span class="process-math">\(T\)</span> be any group equipped with a collection of homomorphisms <span class="process-math">\(\{\phi_\beta\colon G_\beta\rightarrow T\}_{\beta\in I\sqcup J}\text{.}\)</span> The subcollections <span class="process-math">\(\{\phi_\alpha\}_{\alpha\in I}\)</span> and <span class="process-math">\(\{\phi_{\alpha'}\}_{\alpha'\in J}\)</span> give rise to maps <span class="process-math">\(\phi\colon G\rightarrow T\)</span> and <span class="process-math">\(\phi'\colon H\rightarrow T\)</span> making the diagram below commutative. <div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/latex-image/im_free_prod_A.svg" role="img" class="contained" alt="A commutative diagram"></div> The universal mapping property for <span class="process-math">\(G*H\)</span> now guarantees a unique map <span class="process-math">\(\widehat{\phi}\colon G*H\rightarrow T\)</span> that makes the new triangles in the commutative diagram below commutative. <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/im_free_prod_B.svg" role="img" class="contained" alt="Another commutative diagram"></div> But then we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop_universal_free_prod.html">
+\begin{align*}
+\overline{\phi}\circ j_\alpha \amp =\overline{\phi}\circ i\circ i_\alpha\\
+\amp = \phi\circ i_\alpha \amp (\overline{\phi}\circ i=\phi\\
+\amp = \phi_\alpha
+\end{align*}
+</div>
+<div class="para">for all <span class="process-math">\(\alpha\in I\text{.}\)</span> An identical argument shows, <span class="process-math">\(\overline{\phi}\circ j_{\alpha'}=\phi_{\alpha'}\)</span> for all <span class="process-math">\(\alpha'\in J\text{.}\)</span> Lastly, the uniqueness of <span class="process-math">\(\overline{\phi}\)</span> is guaranteed by its arising uniquely from the maps <span class="process-math">\(\phi, \phi'\text{,}\)</span> which themselves arise uniquely from the maps <span class="process-math">\(\phi_\alpha\)</span> and <span class="process-math">\(\phi_{\alpha'}\text{.}\)</span>
+</div>
+</div></article></details><span class="incontext"><a class="internal" href="s_groups_free_products.html#th_products_free_products">in-context</a></span>
+</body>
+</html>

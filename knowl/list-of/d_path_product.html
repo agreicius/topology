@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="definition definition-like"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.11</span><span class="period">.</span><span class="space"> </span><span class="title">Path product.</span>
+</h3> <div class="para logical">
+<div class="para">Let <span class="process-math">\(X\)</span> be a topological space, and let <span class="process-math">\(x_0,x_1,x_2\in X\text{.}\)</span> We define a <dfn class="terminology">path product</dfn> operation</div>
+<div class="displaymath process-math">
+\begin{align*}
+P(X;x_0,x_1)\times P(X; x_1,x_2) \amp \rightarrow P(X;x_0, x_2)\\
+(f,g) \amp \mapsto f*g
+\end{align*}
+</div>
+<div class="para">as follows:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f*g(s)=\begin{cases}
+f(2s)\amp \text{if } s\in [0,1/2]\\
+g(2s-1)\amp \text{if } s\in [1/2,1]
+\end{cases}\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">The function <span class="process-math">\(f*g\)</span> defined is a path from <span class="process-math">\(x_0\)</span> to <span class="process-math">\(x_2\text{.}\)</span> Furthermore, if <span class="process-math">\(f\simeq_p f'\)</span> and <span class="process-math">\(g\simeq_p g'\text{,}\)</span> then <span class="process-math">\(f*g\simeq f'*g'\text{.}\)</span> In other words, we get a well-defined operation on homotopy classes defined as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+[f]*[g]=[f*g]\text{.}
+\end{equation*}
+</div>
+</div> <details class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para">It is easy to see, using the closed pasting lemma, that <span class="process-math">\(f*g\)</span> is well-defined and continuous. We show that it is well-defined on homotopy classes, as claimed.</div> <div class="para logical">
+<div class="para">Suppose that <span class="process-math">\(f\simeq_p f'\)</span> as witnessed by the path homotopy <span class="process-math">\(F\text{,}\)</span> and that <span class="process-math">\(g\simeq g'\)</span> as witnessed by the path homotopy <span class="process-math">\(G\text{.}\)</span> Define</div>
+<div class="displaymath process-math">
+\begin{align*}
+H(s,t) \amp =
+\begin{cases}
+F(2s,t)\amp \text{if } s\in [0,1/2]\\
+G(2s-1,t)\amp \text{if } s\in [1/2, 1]
+\end{cases}\text{.}
+\end{align*}
+</div>
+<div class="para">Note first that <span class="process-math">\(F(2(1/2),t)=F(1,t)=x_1\)</span> and <span class="process-math">\(G(2(1/2)-1,t)=G(0,t)=x_1\text{,}\)</span> since <span class="process-math">\(F\)</span> and <span class="process-math">\(G\)</span> are path homotopies. Since <span class="process-math">\(F(2s,t)\)</span> is continuous on <span class="process-math">\([0,1/2]\times I\)</span> and <span class="process-math">\(G(2s-1,t)\)</span> is continuous on <span class="process-math">\([1/2,1]\times I\text{,}\)</span> and since they agree on the intersection of these sets, the closed pasting lemma implies <span class="process-math">\(H\)</span> is a well-defined continuous function.</div>
+</div> <div class="para logical">
+<div class="para">Next, we have</div>
+<div class="displaymath process-math">
+\begin{align*}
+H(s,0) \amp =\begin{cases}
+F(2s,0)\amp \text{if } s\in [0,1/2]\\
+G(2s-1,0)\amp \text{if } s\in [1/2, 1]\\
+\amp =\begin{cases}
+f(2s)\amp \text{if } s\in [0,1/2]\\
+g(2s-1)\amp \text{if } s\in [1/2, 1] \\
+\amp =f*g(s)\\
+H(s,1) \amp =\begin{cases}
+F(2s,1)\amp \text{if } s\in [0,1/2]\\
+G(2s-1,1)\amp \text{if } s\in [1/2, 1]\\
+\amp =\begin{cases}
+f'(2s)\amp \text{if } s\in [0,1/2]\\
+g'(2s-1)\amp \text{if } s\in [1/2, 1] \\
+\amp =f'*g'(s)\text{,}
+\end{align*}
+</div>
+<div class="para">showing that <span class="process-math">\(H\)</span> is a homotopy from <span class="process-math">\(f*g\)</span> to <span class="process-math">\(f'*g'\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">Lastly, we have</div>
+<div class="displaymath process-math">
+\begin{align*}
+H(0,t) \amp =F(0,t)=x_0\\
+H(1,t) \amp =G(2(1)-1,t)=G(1,t)=x_2
+\end{align*}
+</div>
+<div class="para">for all <span class="process-math">\(t\in I\text{,}\)</span> showing that <span class="process-math">\(H\)</span> is a path homotopy.</div>
+</div></article></details></article><span class="incontext"><a class="internal" href="s_homotopy.html#d_path_product">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.4.2</span><span class="period">.</span><span class="space"> </span><span class="title">Property of closed sets.</span>
+</h3>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(X\)</span> be a topological space.</div>
+<ol class="decimal">
+<li>
+<span class="heading"><span class="title">Trivial sets.</span></span><div class="para">Both <span class="process-math">\(\emptyset\)</span> and <span class="process-math">\(X\)</span> are closed sets.</div>
+</li>
+<li>
+<span class="heading"><span class="title">Finite unions.</span></span><div class="para">If <span class="process-math">\(C_1, C_2,\dots , C_n\)</span> are closed, then <span class="process-math">\(\bigcup_{i=1}^n C_i\)</span> is closed.</div>
+</li>
+<li>
+<span class="heading"><span class="title">Arbitrary intersection.</span></span><div class="para">If <span class="process-math">\(\{C_i\}_{i\in I}\)</span> is a collection of closed sets, then <span class="process-math">\(\bigcap_{i\in I}C_i\)</span> is closed.</div>
+</li>
+</ol>
+</div></article><details class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para">Statement (1) follows from the observation that <span class="process-math">\(\emptyset^c=X\text{,}\)</span> and <span class="process-math">\(X^c=\emptyset\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Assume <span class="process-math">\(C_i\)</span> is closed for <span class="process-math">\(1\leq i\leq n\text{;}\)</span> then by DeMorgan’s law</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left(\bigcup_{i=1}^nC_i\right)^c=\bigcap_{i=1}^n C_i^c\text{,}
+\end{equation*}
+</div>
+<div class="para">which is open since <span class="process-math">\(C_i^c\)</span> is open for all <span class="process-math">\(1\leq i\leq n\)</span> and finite intersections of open sets are open. This proves (2).</div>
+</div> <div class="para logical">
+<div class="para">Lastly, assume <span class="process-math">\(C_i\)</span> is closed for all <span class="process-math">\(i\in I\text{.}\)</span> By DeMorgan’s law we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left(\bigcap_{i\in I}C_i\right)^c=\bigcup_{i\in I}C_i^c\text{,}
+\end{equation*}
+</div>
+<div class="para">which is open since <span class="process-math">\(C_i^c\)</span> is open and arbitrary unions of open sets are open.</div>
+</div></article></details><span class="incontext"><a class="internal" href="s_closed_closure_interior.html#th_closed_props">in-context</a></span>
+</body>
+</html>

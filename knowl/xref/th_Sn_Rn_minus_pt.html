@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.6.2</span><span class="period">.</span><span class="space"> </span><span class="title">Fundamental groups: <span class="process-math">\(S^n\)</span> and <span class="process-math">\(\R^{n+1}-\{\boldzero\}\)</span>.</span>
+</h3>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(X=\R^{n+1}-\{\boldzero\}\text{,}\)</span> let <span class="process-math">\(j\colon S^n\hookrightarrow X\)</span> be the inclusion map, and let <span class="process-math">\(\boldx_0=(1,0,\dots, 0)\text{.}\)</span> The function</div>
+<div class="displaymath process-math">
+\begin{align*}
+r\colon X \amp \rightarrow S^n\\
+\boldx \amp \mapsto \frac{\boldx}{\norm{\boldx}}
+\end{align*}
+</div>
+<div class="para">is a retraction map that induces an isomorphism <span class="process-math">\(r_*\colon \pi_1(X, \boldx_0)\rightarrow \pi_1(S^n, \boldx_0)\text{.}\)</span>
+</div>
+</div></article><details class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para">It is clear that the given <span class="process-math">\(r\)</span> is a retraction. Letting <span class="process-math">\(j\colon S^n\hookrightarrow X\)</span> be the inclusion, we have <span class="process-math">\(r\circ j=\id_{S^n}\)</span> and hence <span class="process-math">\(r_*\circ j_*=\id_{\pi_1(S^n, \boldx_0)}\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">We are halfway to showing <span class="process-math">\(r_*\colon \pi_1(X,\boldx_0)\rightarrow \pi_1(S^n, \boldx_0)\text{.}\)</span> It remains to show <span class="process-math">\(j_*\circ r_*=\id_{\pi_1(X,\boldx_0)}\text{,}\)</span> and to do this we use the lemmma. Specifically we show that <span class="process-math">\(\id_X\colon X\rightarrow X\)</span> and <span class="process-math">\(j\circ r\colon X\rightarrow X\)</span> are homotopic via a homotopy <span class="process-math">\(H\)</span> as described in <a href="" class="xref" data-knowl="./knowl/xref/lemma_homotopic_fund_grp.html" title="Lemma 2.6.1: Homotopic maps and fundamental groups">Lemma 2.6.1</a>. Since <span class="process-math">\(j\circ r(x)=\boldx/\norm{\boldx}
+\text{,}\)</span> it is easy to see that <span class="process-math">\(H\colon X\rightarrow I\rightarrow X\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma_homotopic_fund_grp.html">
+\begin{equation*}
+H(x,t)=(1-t)\boldx+t\frac{\boldx}{\norm{\boldx}}
+\end{equation*}
+</div>
+<div class="para">is a homoto\boldx_0y from <span class="process-math">\(\id_X\)</span> to <span class="process-math">\(j\circ r\text{.}\)</span> Furthermore, we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lemma_homotopic_fund_grp.html">
+\begin{equation*}
+H(\boldx_0,t)=(1-t)\boldx_0+t\frac{\boldx_0}{\norm{\boldx_0}}=(1-t)\boldx_0+\boldx_0=\boldx_0\text{,}
+\end{equation*}
+</div>
+<div class="para">using the fact that <span class="process-math">\(\norm{\boldx_0}=1\text{.}\)</span>
+</div>
+</div></article></details><span class="incontext"><a class="internal" href="s_deformation_retract.html#th_Sn_Rn_minus_pt">in-context</a></span>
+</body>
+</html>

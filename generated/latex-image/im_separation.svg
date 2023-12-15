@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="188pt" height="50pt" viewBox="0 0 188 50" version="1.1">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="188pt" height="51pt" viewBox="0 0 188 51" version="1.1">
 <defs>
 <g>
 <symbol overflow="visible" id="glyph0-0">
@@ -105,7 +105,7 @@
   <use xlink:href="#glyph3-1" x="148.148663" y="12.782963"/>
 </g>
 <g style="fill:rgb(0%,0%,0%);fill-opacity:1;">
-  <use xlink:href="#glyph3-2" x="158.10947" y="12.782963"/>
+  <use xlink:href="#glyph3-2" x="158.101499" y="12.782963"/>
 </g>
 <g style="fill:rgb(0%,0%,0%);fill-opacity:1;">
   <use xlink:href="#glyph0-5" x="163.092962" y="12.782963"/>
@@ -114,7 +114,7 @@
   <use xlink:href="#glyph0-6" x="169.758074" y="12.782963"/>
 </g>
 <g style="fill:rgb(0%,0%,0%);fill-opacity:1;">
-  <use xlink:href="#glyph0-7" x="174.189528" y="12.782963"/>
+  <use xlink:href="#glyph0-7" x="174.181557" y="12.782963"/>
 </g>
 <g style="fill:rgb(0%,0%,0%);fill-opacity:1;">
   <use xlink:href="#glyph3-3" x="182.070341" y="12.782963"/>
@@ -142,7 +142,7 @@
   <use xlink:href="#glyph4-3" x="117.125042" y="7.945818"/>
 </g>
 <path style="fill:none;stroke-width:0.39848;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-dasharray:0.39848,1.99255;stroke-miterlimit:10;" d="M -76.784119 -14.041699 L -35.402134 8.328723 " transform="matrix(1.00002,0,0,-1.00003,94.621592,26.645379)"/>
-<path style="fill:none;stroke-width:0.39848;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M -2.071065 2.3925 C -1.694092 0.954605 -0.850631 0.281146 0.0000744759 -0.00113081 C -0.851004 -0.278003 -1.692148 -0.955342 -2.073494 -2.391743 " transform="matrix(0.879918,-0.475644,-0.47564,-0.879926,59.393928,18.221697)"/>
+<path style="fill:none;stroke-width:0.39848;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M -2.073672 2.38966 C -1.694677 0.954809 -0.847513 0.279336 0.00000749054 -0.00112899 C -0.851301 -0.278114 -1.692656 -0.955678 -2.072195 -2.389065 " transform="matrix(0.879688,-0.475474,-0.47547,-0.879696,59.393988,18.221667)"/>
 <g style="fill:rgb(0%,0%,0%);fill-opacity:1;">
   <use xlink:href="#glyph4-4" x="41.048521" y="36.595678"/>
 </g>

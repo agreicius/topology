@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="53pt" height="47pt" viewBox="0 0 53 47" version="1.1">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="53pt" height="48pt" viewBox="0 0 53 48" version="1.1">
 <defs>
 <g>
 <symbol overflow="visible" id="glyph0-0">
@@ -50,8 +50,8 @@
 <g style="fill:rgb(0%,0%,0%);fill-opacity:1;">
   <use xlink:href="#glyph0-3" x="44.725436" y="40.098"/>
 </g>
-<path style="fill:none;stroke-width:0.39848;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M -11.941551 8.76775 L 12.201773 -10.204906 " transform="matrix(1.00005,0,0,-1,27.715586,20.674)"/>
-<path style="fill:none;stroke-width:0.39848;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M -2.074431 2.390779 C -1.694505 0.955428 -0.849329 0.277055 0.00237164 0.000130993 C -0.849274 -0.277753 -1.693442 -0.955991 -2.070899 -2.392035 " transform="matrix(0.788539,0.61963,0.619661,-0.7885,40.076174,31.00254)"/>
+<path style="fill:none;stroke-width:0.39848;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M -11.941551 8.76775 L 12.205679 -10.204906 " transform="matrix(1.00005,0,0,-1,27.715586,20.674)"/>
+<path style="fill:none;stroke-width:0.39848;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M -2.070604 2.390891 C -1.694438 0.95755 -0.849257 0.280283 0.00181622 0.000134667 C -0.852283 -0.278534 -1.695819 -0.956294 -2.073727 -2.390975 " transform="matrix(0.786289,0.61784,0.617871,-0.78625,40.076614,31.00289)"/>
 <g style="fill:rgb(0%,0%,0%);fill-opacity:1;">
   <use xlink:href="#glyph1-1" x="30.349717" y="17.814"/>
 </g>

@@ -1,6 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="s_top_spaces">
   <title>Topological spaces</title>
-  <introduction>
     <p>
       The real numbers come equipped with a notion of <em>nearness</em> or <em>closeness</em> furnished by the absolute value function: namely, we define the distance <m>d(a,b)</m> between real numbers <m>a,b\in\R</m> as <m>d(a,b)=\abs{a-b}</m>. From this simple bit of structure springs all the fundamental concepts of real analysis: Cauchy sequences, limits, continuous functions, etc.
     </p>
@@ -8,31 +8,30 @@
     has room for <m>y</m> too. Come on in!
   </p>
   <p>
-    We view the the three conditions of <xref ref="d_topology"/> as an attempt at axiomatizing this notion of openness (or roominess). This is the starting point of topology. The generality of this approach is part of topology's great power. We can define a notion of open sets on any set <m>X</m> whatsoever: <ie />, we can choose a collection of subsets (called a <em>topology</em>) that satisfies the axioms of <xref ref="d_topology"/>. Furthermore, for a given set <m>X</m> there are typically many distinct ways of making this choice; your topology on <m>X</m> can be tailor-made to suit your particular needs. Beyond this generality and flexibility, the other key to topology's effectiveness is its ability to transport to any topological space the concepts of continuity, limits, connectedness, and compactness familiar to us from real analysis.  Once a set is given the structure of a topological space, these notions can be used as powerful tools for investigating its properties. It is for this reason that topology plays an important role in essentially all mathematical fields: analysis, geometry, algebraic geometry, number theory, etc.
+    We view the the three conditions of <xref ref="d_top"/> as an attempt at axiomatizing this notion of openness (or roominess). This is the starting point of topology. The generality of this approach is part of topology's great power. We can define a notion of open sets on any set <m>X</m> whatsoever: <ie />, we can choose a collection of subsets (called a <em>topology</em>) that satisfies the axioms of <xref ref="d_top"/>. Furthermore, for a given set <m>X</m> there are typically many distinct ways of making this choice; your topology on <m>X</m> can be tailor-made to suit your particular needs. Beyond this generality and flexibility, the other key to topology's effectiveness is its ability to transport to any topological space the concepts of continuity, limits, connectedness, and compactness familiar to us from real analysis.  Once a set is given the structure of a topological space, these notions can be used as powerful tools for investigating its properties. It is for this reason that topology plays an important role in essentially all mathematical fields: analysis, geometry, algebraic geometry, number theory, etc.
   </p>
-</introduction>
-<definition xml:id="d_topology">
+<definition xml:id="d_top">
   <title>Topological space</title>
   <statement>
     <p>
       A <term>topological space</term> is a pair <m>(X,\mathcal{T})</m>, where <m>X</m> is a set, and <m>\mathcal{T}\subseteq \mathcal{P}(X)</m> is a collection of subsets of <m>X</m> satisfying the following axioms:
       <ol marker="(1)">
-        <li>
+        <li xml:id="d_top_1">
           <title>Trivial sets</title>
           <p>
             <m>\emptyset\in \mathcal{T}</m> and <m>X\in \mathcal{T}</m>
           </p>
         </li>
-        <li>
+        <li xml:id="d_top_2">
           <title>Closed under arbitrary unions</title>
           <p>
             Given any collection <m>\{U_i\}_{i\in I}</m> of elements <m>U_i\in \mathcal{T}</m>, we have <m>U=\bigcup_{i\in I}U_i\in \mathcal{T}</m>
           </p>
         </li>
-        <li>
+        <li xml:id="d_top_3">
           <title>Closed under finite intersections</title>
           <p>
-            If <m>U_1, U_2,\dots, U_n\in \mathcal{T}</m>, then <m>U=\bigcap_{i=1}^n U_i \in \mathcal{T}</m>.
+            If <m>U_1, U_2\in \mathcal{T}</m>, then <m>U_1\cap U_2\in \mathcal{T}</m>.
           </p>
         </li>
       </ol>
@@ -41,33 +40,23 @@
   </statement>
 </definition>
     <remark xml:id="rm_def_top">
-      <title>Equivalent alternative to axiom (3)</title>
-  <statement>
+      <title>Finite intersection of open sets</title>
     <p>
-      Using induction, we can show that if <m>\mathcal{T}</m> satisfies axiom (3) for any <em>two</em> elements of <m>\mathcal{T}</m>, then it satisfies it for any <m>n</m> elements, for <m>n</m> arbitrary. In other words if we replace axiom (3) with
-      <dl>
-        <li>
-          <title>(3')</title>
-          <p>
-            If <m>U_1, U_2\in \mathcal{T}</m>, then <m>U=U_1\cap U_2\in \mathcal{T}</m>
-          </p>
-        </li>
-      </dl>,
-      we get an equivalent definition of a toplogical space. When verifying whether a given <m>(X,\mathcal{T})</m> is a topological space it may be more convenient to use axiom (3') as opposed to axiom (3).
+      Let <m>(X,\mathcal{T})</m> be a topological space. Axiom (3) of <xref ref="d_top"/> says that the intersection of any two open sets of <m>X</m> is again open. It follows easily by induction that the intersection of any <em>finite</em> list of open sets is open. In other words: 
+      <me>
+        U_1,U_2,\dots, U_n\in \mathcal{T}\implies \bigcap_{i=1}^n U_i \in \mathcal{T}
+      </me>.  
     </p>
-  </statement>
 </remark>
 
 <project xml:id="top_eq_standard_R">
   <title>Standard topology on <m>\R</m></title>
-  <statement>
     <p>
-      Let <m>X=\R</m> and define <m>\mathcal{T}</m> to be the set of open sets as defined above: that is, <m>U\in \mathcal{T}</m> if and only if for all <m>x\in U</m> there is an <m>\epsilon &gt; 0</m> such that the entire open interval <m>(x-\epsilon, x+\epsilon)</m> is contained in <m>U</m>. Show that <m>\mathcal{T}</m> is a topology on <m>\R</m>
+      Let <m>X=\R</m> and define <m>\mathcal{T}</m> to be the collection of subsets <m>U\subseteq \R</m> satisfying the following property: for all <m>x\in U</m> there is an <m>\epsilon &gt; 0</m> such that <m>(x-\epsilon, x+\epsilon)\subseteq U</m>. The collection <m>\mathcal{T}</m> is a topology, called the <term>standard topology</term> on <m>\R</m>. 
     </p>
-  </statement>
   <proof>
     <p>
-      We treat each axiom of <xref ref="d_topology"/> in turn.
+      We treat each axiom of <xref ref="d_top"/> in turn.
       <ol>
         <li>
           <p>
@@ -87,14 +76,7 @@
         </li>
         <li>
           <p>
-            Assume <m>U_1, U_2, \dots, U_n\in \mathcal{T}</m>, and let <m>U=\bigcap_{i=1}^nU_i</m>. We have
-            <md>
-              <mrow>x\in U \amp\implies x\in U_i \text{ for all } 1\leq i\leq n  </mrow>
-              <mrow> \amp\implies \forall i \exists \epsilon_i &gt; 0 \text{ s.t. }(x-\epsilon_i, x+\epsilon)\subseteq U_i </mrow>
-              <mrow>  \amp \implies (x-\epsilon, x+\epsilon)\subseteq U_i \text{ for all } i, \text{ where } \epsilon=\min \{\epsilon_i\colon 1\leq i\leq n\}\</mrow>
-              <mrow>  \amp \implies (x-\epsilon, x+\epsilon)\subseteq U </mrow>
-            </md>.
-            This shows that <m>U</m> satisfies the defining property of <m>\mathcal{T}</m>, and hence that <m>U\in \mathcal{T}</m>.
+            Assume <m>U_1, U_2\in \mathcal{T}</m>, and let <m>x\in U_1\cap U_2</m>. Since <m>x\in U_1</m> and <m>U_1</m> is open, we have <m>(x-\epsilon_1, x+\epsilon_1)\subseteq U_1</m> for some <m>\epsilon_1 &gt; 0</m>; similarly, we have have <m>(x-\epsilon_2, x+\epsilon_2)\subseteq U_2</m> for some <m>\epsilon_2&gt; 0</m>. Letting <m>\epsilon=\min\{\epsilon_1, \epsilon_2\}</m>, we have <m>(x-\epsilon, e+\epsilon)\subseteq U_1\cap U_2</m>. Thus <m>U_1\cap U_2\in \mathcal{T}</m>, as desired.
           </p>
         </li>
       </ol>
@@ -103,19 +85,20 @@
 </project>
 <project xml:id="top_eg_trivial_discrete">
   <title>Trivial and discrete topology</title>
-  Let <m>X</m> be a set.
-  <ol>
-    <li>
-      <p>
-        The collection <m>\mathcal{T}=\{\emptyset, X\}</m> is a topology on <m>X</m>, called the <term>trivial topology</term>. This is the topology on <m>X</m> whose only open sets are the empty set and <m>X</m> itself.
-      </p>
-    </li>
-    <li>
-      <p>
-        The collection <m>\mathcal{T}=\mathcal{P}(X)</m> is a topology on <m>X</m>, called the <term>discrete topology</term>. This is the topology on <m>X</m> for which every subset of <m>X</m> is an open set.
-      </p>
-    </li>
-  </ol>
+    <p>Let <m>X</m> be a set.
+      <ol>
+        <li>
+          <p>
+            The collection <m>\mathcal{T}=\{\emptyset, X\}</m> is a topology on <m>X</m>, called the <term>trivial topology</term>. This is the topology on <m>X</m> whose only open sets are the empty set and <m>X</m> itself.
+          </p>
+        </li>
+        <li>
+          <p>
+            The collection <m>\mathcal{T}=\mathcal{P}(X)</m> is a topology on <m>X</m>, called the <term>discrete topology</term>. This is the topology on <m>X</m> for which every subset of <m>X</m> is an open set.
+          </p>
+        </li>
+      </ol>
+    </p>
   <proof>
     <p>
       <ol>
@@ -138,8 +121,7 @@
   <title>Some small topological spaces</title>
   <statement>
     <p>
-      For each set <m>X</m> describe all subsets <m>\mathcal{T}\subseteq \mathcal{P}(A)</m> that satisfy the axioms of <xref ref="d_topology"/>, and hence make <m>(X,\mathcal{T})</m> a topological space.
-    </p>
+      For each set <m>X</m> describe all subsets <m>\mathcal{T}\subseteq \mathcal{P}(A)</m> that satisfy the axioms of <xref ref="d_top"/>, and hence make <m>(X,\mathcal{T})</m> a topological space.
     <ol>
       <li>
         <title>Empty set</title>
@@ -161,9 +143,11 @@
       </li>
 
     </ol>
+  </p>
   </statement>
   <solution>
-    <ol>
+    <p>
+      <ol>
       <li>
         <p>
           When <m>X=\emptyset</m>, we have <m>\mathcal{P}(X)=\{\emptyset\}</m>. Since by axiom (1) a topology <m>\mathcal{T}</m> on <m>X</m> must contain both <m>\emptyset</m> and <m>X=\emptyset</m>, we see the only option is <m>\mathcal{T}=\{\emptyset\}=\mathcal{P}(X)</m>. We showed that <m>\mathcal{P}(X)</m> is always a topology on <m>X</m> in <xref ref="top_eg_trivial_discrete"/>. Thus <m>\mathcal{T}=\{\emptyset\}</m>
@@ -190,6 +174,7 @@
       </li>
 
     </ol>
+  </p>
   </solution>
 </example>
 <project xml:id="top_eg_cofinite">
@@ -204,7 +189,7 @@
   <proof>
     <p>
       We treat each axiom separately.
-    </p>
+    
     <ol>
       <li>
         <p>
@@ -217,7 +202,7 @@
           is nonempty, hence cofinite. We have
           <md>
           <mrow>U^c \amp = \left( \bigcup_{i\in I}U_i\right)^c </mrow>
-          <mrow> \amp = \bigcap_{i\in I} U_i^c  \amp (\text{DeMorgan's law})</mrow>
+          <mrow> \amp = \bigcap_{i\in I} U_i^c  \amp (\text{De Morgan's law})</mrow>
           <mrow>  \amp \subseteq U_{i_0}^c</mrow>
           </md>.
           Since <m>U_{i_0}^c</m> is finite, it follows that <m>U^c</m> is finite. It follows that <m>U</m> is cofinite, and hence an element of <m>\mathcal{T}</m> as desired.
@@ -229,14 +214,16 @@
         </p>
       </li>
     </ol>
+  </p>
   </proof>
 
 </project>
 <definition xml:id="d_comparable_topologies">
+  <title>Comparable topologies</title>
   <idx><h>coarser topology</h></idx>
   <idx><h>finer topology</h></idx>
   <idx><h>comparable topologies</h></idx>
-  <title>Comparable topologies</title>
+
   <statement>
     <p>
       Two topologies <m>\mathcal{T}, \mathcal{T}'</m> on the set <m>X</m> are <term>comparable</term> if <m>\mathcal{T}\subseteq \mathcal{T}'</m> or <m>\mathcal{T}'\subseteq\mathcal{T}</m>, and <term>incomparable</term> otherwise. If <m>\mathcal{T}\subseteq \mathcal{T}'</m>, we say that <m>\mathcal{T}</m> is <term>coarser</term> than <m>\mathcal{T}'</m>, and that <m>\mathcal{T}'</m> is <term>finer</term> than <m>\mathcal{T}</m>. When <m>\mathcal{T}\subsetneq\mathcal{T}'</m> we say that <m>\mathcal{T}</m> is <term>strictly coarser</term> than <m>\mathcal{T}'</m> and <m>\mathcal{T}'</m> is <term>strictly finer</term> than <m>\mathcal{T}</m>.

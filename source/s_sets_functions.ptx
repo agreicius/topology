@@ -249,7 +249,7 @@
   </statement>
 </definition>
 <p>
-  The <em>power set</em> of a set <m>A</m> is the set of all subsets of <m>A</m>. We will make use of this notion in our very first definition (<xref ref="d_topology" text='global'/>).
+  The <em>power set</em> of a set <m>A</m> is the set of all subsets of <m>A</m>. We will make use of this notion in our very first definition (<xref ref="d_top" text='global'/>).
 </p>
 <definition xml:id="d_power_set">
   <idx><h>power set</h></idx>

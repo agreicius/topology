@@ -116,32 +116,33 @@
   <statement>
     <p>
       Let <m>\mathcal{B}\subseteq \mathcal{P}(X)</m> be a topological basis of the set <m>X</m>.
-    </p>
-    <ol>
+     <ol>
       <li>
-        <p> The set
+        <p>
+          The set
           <me>
-            \mathcal{T}=\{U\subseteq X\colon U=\bigcup_{i\in I}B_i \text{ for some elements } B_i\in \mathcal{B}\}
+            \mathcal{T} = \{U\subseteq X\colon \text{for all } x\in U \ \text{ there exists } B\in \mathcal{B} \text{ s.t. } x\in B\subseteq U\} 
           </me>
-          is a topology on <m>X</m>.
+          is a topology on <m>X</m>. 
         </p>
       </li>
       <li>
         <p>
-          We have the following alternate description of <m>\mathcal{T}</m>:
+          We have 
           <me>
-            U\in \mathcal{T} \iff \text{ for all } x\in U \ \text{ there exists } B\in \mathcal{B} \text{ such that } x\in B\subseteq U
+            \mathcal{T}=\{U\subseteq X\colon U=\bigcup_{i\in I}B_i \text{ for some elements } B_i\in \mathcal{B}\}
           </me>.
         </p>
       </li>
-    </ol>
+     </ol>
+    </p>
   </statement>
   <proof>
     <p>
-      Note: it is somewhat easier to show that <m>\mathcal{T}</m> is a topology using the description in statement (2), and then to show that the description in statement (1) is the same. (See Munkres for an approach like this.) I've decided to go the hard way since this is how I proceeded in class, and since it puts us through some useful set theory calisthenics!
+      Note: it is somewhat easier to show that <m>\mathcal{T}</m> is a topology using the description of <m>\mathcal{T}</m> in statement (1), and then to show that the description in statement (2) also holds. (This is how Munkres does it, and how I did it in class.) I've decided to go the hard way here as an alternative proof that puts us through some useful set theory calisthenics.
   </p>
   <p>
-    First we show that <m>\mathcal{T}</m> as defined in (1) is a topology. We treat each axiom separately.
+    First we show that <m>\mathcal{T}</m> as defined in (2) is a topology. We treat each axiom separately.
   </p>
     <ol>
       <li>
@@ -171,7 +172,7 @@
       </li>
     </ol>
     <p>
-      This shows that <m>\mathcal{T}</m>, as defined in statement (1) of the theorem, is a topology. Statement (2) now follows from the general claim made in <xref ref="rm_alt_axiom2"/>.
+      This shows that <m>\mathcal{T}</m>, as defined in statement (2) of the theorem, is a topology. Statement (1) now follows from the general claim made in <xref ref="rm_alt_axiom2"/>.
     </p>
   </proof>
 </theorem>
@@ -181,10 +182,12 @@
     <p>
       Let <m>\mathcal{B}</m> be a topological basis of the set <m>X</m>. The topology
       <mdn>
-        <mrow xml:id="eq_top_generated1">\mathcal{T}\amp =\{U\subseteq X\colon U=\bigcup_{i\in I}B_i \text{ for some elements } B_i\in \mathcal{B}\} 
+        <mrow xml:id="eq_top_generated2"> \mathcal{T} \amp = \{U\subseteq X\colon \text{for all } x\in U \text{ there exists } B\in \mathcal{B} \text{ s.t. } x\in B\subseteq U\}
         </mrow>
-        <mrow xml:id="eq_top_generated2">  \amp = \{U\subseteq X\colon \text{ for all } x\in U \text{ there exists } B\in \mathcal{B} \text{ s.t. } x\in B\subseteq U\}
+        
+        <mrow xml:id="eq_top_generated1"> \amp =\{U\subseteq X\colon U=\bigcup_{i\in I}B_i \text{ for some elements } B_i\in \mathcal{B}\} 
         </mrow>
+        
       </mdn>
       is called the <term>topology generated</term> by the basis <m>\mathcal{B}</m>. Similarly, we call <m>\mathcal{B}</m> a basis for <m>\mathcal{T}</m>.
     </p>
@@ -242,16 +245,14 @@
     </p>
   </solution>
 </example>
+<p>
+  As it turns out, the basis <m>B_3</m> of <xref ref="eg_basis_R"/> generates a nonstandard topology of <m>\R</m>. Accordingly, we give this basis (and its corresponding topology) an official name. 
+</p>
 <project xml:id="top_eg_lower_limit">
   <title>Lower limit topology</title>
   <p>
-    The collection <m>\mathcal{B}_l=\{([a,b)\colon a,b\in \R, a&lt; b\}</m> is called the <term>lower limit basis</term>, and the topology <m>\mathcal{T}_l</m> it generates is called the <term>lower limit topology</term>  on <m>\R</m>. We denote the topological space <m>(\R, \mathcal{T}_l)</m> as <m>\R_l</m>.
+    The collection <m>\mathcal{B}_l=\{([a,b)\colon a,b\in \R, a&lt; b\}</m> is a topological basis of <m>\R</m> called the <term>lower limit basis</term>, and the topology <m>\mathcal{T}_l</m> it generates is called the <term>lower limit topology</term>  on <m>\R</m>. We denote the topological space <m>(\R, \mathcal{T}_l)</m> as <m>\R_l</m>.
   </p>
-  <proof>
-    <p>
-      The proof that <m>\mathcal{B}_l</m> is a basis is left as an exercise. 
-    </p>
-  </proof>
 </project>
 
 <example xml:id="eg_lower_limit_finer">

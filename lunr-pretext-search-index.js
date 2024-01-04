@@ -1,9 +1,9 @@
 var ptx_lunr_search_style = "textbook";
 var ptx_lunr_docs = [
 {
-  "id": "colophon-1",
+  "id": "meta_frontmatter-2",
   "level": "1",
-  "url": "colophon-1.html",
+  "url": "meta_frontmatter-2.html",
   "type": "Colophon",
   "number": "",
   "title": "Colophon",
@@ -172,18 +172,18 @@ var ptx_lunr_docs = [
   "body": " Functions  function    a function from to    Let and be two sets. A function from to , denoted , is a rule which, given any input  , returns an output  . In this case we write and call the image of under , or the value of at  . Similarly, we say  maps (or sends ) the input to the output .  The set is called the domain of ; the set is called the codomain of .  When we wish to indicate what rule defines the function, we use the elaborated notation . This is read as The function with domain and codomain maps an input to the output .   "
 },
 {
-  "id": "example-3",
+  "id": "ss_functions-3",
   "level": "2",
-  "url": "s_sets_functions.html#example-3",
+  "url": "s_sets_functions.html#ss_functions-3",
   "type": "Example",
   "number": "0.1.18",
   "title": "",
   "body": "  Consider the function . This function has domain and codomain equal to and maps an integer to its square.   "
 },
 {
-  "id": "example-4",
+  "id": "ss_functions-4",
   "level": "2",
-  "url": "s_sets_functions.html#example-4",
+  "url": "s_sets_functions.html#ss_functions-4",
   "type": "Example",
   "number": "0.1.19",
   "title": "Arithmetic operations as functions.",
@@ -235,9 +235,9 @@ var ptx_lunr_docs = [
   "body": " Injective, surjective, bijective  invertible function  bijective function  injective function  surjective function  one-to-one function  onto function  one-to-one correspondence   Let be a function.   The function is injective (or one-to-one ) if for all , if , then : equivalently, if , then .    The function is surjective (or onto ) if for all , there is an such that : equivalently, .    The function is bijective (or a one-to-one correspondence ) if it is injective and surjective.      "
 },
 {
-  "id": "example-5",
+  "id": "ss_functions-11",
   "level": "2",
-  "url": "s_sets_functions.html#example-5",
+  "url": "s_sets_functions.html#ss_functions-11",
   "type": "Example",
   "number": "0.1.25",
   "title": "Role of domain and codomain in injectivity and surjectivity.",
@@ -307,9 +307,9 @@ var ptx_lunr_docs = [
   "body": "  A truth table of a compound proposition is a concise way of displaying how the truth value of depends on the truth values of its component propositions. It contains one row for each possible truth assignment of the component propositions. As illustration, we give the truth tables for the logical operators defined above:    "
 },
 {
-  "id": "example-6",
+  "id": "ss_propositional_calculus-5",
   "level": "2",
-  "url": "s_logic.html#example-6",
+  "url": "s_logic.html#ss_propositional_calculus-5",
   "type": "Example",
   "number": "0.2.3",
   "title": "",
@@ -388,18 +388,18 @@ var ptx_lunr_docs = [
   "body": " Proof techniques  Proof writing is an art, a technical skill you will hone and refine throughout your career; and like any art, proof writing has many tricks of the trade. We gather a few here in the form of a collection of general proof techniques. Part of mastering these techniques involves understanding the circumstances where they can be of use. When selecting a technique, we are guided in part by the logical structure and particular mathematical content of the proposition under consideration. The proof techniques below are organized under this guiding principle.   Logical structure   Implication  By the only time an implication is false is when is true and is false. Accordingly, the direct approach to proving an implication is to assume is true, and use this assumption to prove is true.  A common indirect approach used to prove an implication is to prove its contrapositive  , which is logically equivalent to the original implication. In this case we assume is not true, and show is not true. (Exercise: use a truth table to show the contrapositive is logically equivalent to the original implication.)    The converse of an implication is the implication ; the inverse of is the implication . Neither the converse nor the inverse is equivalent to the original implication, and thus neither of these can be used to give an indirect proof of . (Exercise: use a truth table to show that neither the converse nor the inverse implication is logically equivalent to the original implication. )      Disjunction  Again, using , to directly show a disjunction is true, we need only show one the two component propositions is true.  Alternatively, we can prove either of the implications or , both of which are logically equivalent to . (Exercise: use a truth table to show these three propositions are indeed equivalent!)    Equivalence The equivalence is logically equivalent to the conjunction . Accordingly, the standard way of proving is to prove the two implications and separately. (Exercise: use a truth table to show these propositions are indeed equivalent!)   Chains of implications\/equivalences  The relation implies is transitive: , if and , then . Similarly, the relation is equivalent to is transitive. This allows us to prove an implication or equivalence via a chain of implications or chain of equivalences . When writing up a proof using this technique, use a vertically aligned format like the example below, treating one implication or equivalence per line, and adding a brief justification to the right: . It is also possible to build an argument as a hybrid chain of equivalences and implications. In this case the chain is only as strong as its weakest link. For example, a chain of the form only shows that . Indeed, we will have if and only if the intervening implication is in fact an equivalence ( , the arrow goes both ways).    It is often tempting, for the sake of space, to try and prove an equivalence via a chain of equivalences, as opposed to showing and separately. When proceeding in this manner, make doubly sure that each is indeed an equivalence: , that the implication arrow really goes both ways at each step. Even if each step in your chain truly is an equivalence, you should consider whether this will be obvious to your reader.    The example below provides the proof that a function is invertible if and only if it is bijective ( ). The proof nicely illustrates some of the different techniques used for proving implications and equivalences. Additionally, it is a nice example of how to separate out cases of the argument into clearly distinguished steps.   Proof: invertible is equivalent to bijective   Let be a function. Prove: is invertible if and only if is bijective.    Let be the proposition that is invertible, and let be the proposition that is bijective. We prove the equivalence by proving the two implications and .   Proof of  We must show that if is invertible, then is bijective. Assume is invertible. Then has an inverse . We show separately that is injective and surjective, hence bijective.   is injective  We show via a chain of implications: .    is surjective  Let be an element of . We must show that there is an such that . Letting , we have .     Proof of  We must show that if is bijective, then is invertible. Assume is bijective. First we define a function as follows: for all , let be the unique element such that . Note that our definition of uses both that is surjective (there is some element such that )) and injective (there is exactly one element such that ).  We now prove that is the inverse of , showing and separately.    Take any and let . By definition of , we have and hence . This proves .     Take any . By definition of , is the unique such that . Thus . This proves .        Proof by contradiction The technique of proof by contradiction (or reductio ad absurdum ) proves a proposition by (a) assuming the negation is true, and then (b) using this assumption to derive a proposition known to be false. The choice of falsehood is completely up to the person providing the proof. However, in order for the proof to be convincing, it should be clear, either logically or because of theory assumed to be known, that is indeed false.  Proof by contradiction   Prove by contradiction that has no multiplicative inverse in the reals: , there is no such that .    We prove the claim by contradiction. Assume there is an such that . Since for any (a property of multiplication by 0), we have : a contradiction since . We conclude that there is no such that .      Proof by contradiction resembles, but is not quite the same thing as proving an implication via its contrapositive. Letting denote an arbitrary falsehood (the described above) what we do in a proof by contradiction is show that the implication is true. Since is false, and the implication is true, must be false: equivalently, must be true.       Equalities   Equality is not as simple as it may seem. In general an equality is a mathematical statement of the form . Here LHS and RHS stand for left- and right-hand side, respectively. What exactly such an equality means depends very much on what kind of mathematical objects the two sides of the equation are: , numbers, sets, functions, etc. Below we discuss equality for objects of a particular type in detail. (See and .) In all settings, the notion of equality will be transitive : , if and , then . We use transitivity implicitly when proving an equality via a chain of equalities as described below.    Chain of equalities Often to prove an equality as in we proceed in a sequence of intervening bite-size equalities, each of which is easy for the reader to digest. As with chains of implications\/equivalences, we present such an argument in a vertically aligned format, with brief justifications to the right: .  Never attempt to prove an equality by starting off with the equality you wish to prove, and then deduce a series of further equalities ending in some inanity: , . What this suggests is that you are in fact proving an implication: namely, if the desired equality is true, then  . Clearly this is not what we set out to prove! This type of fallacious argument is called begging the question ( petitio princippii in Latin), as we assume that which was to be proven.      Basic set properties   Set inclusion  Let and be sets. By , to prove we must show that for all elements we have . This requires proving the implication above for a general element , and we may use any of the techniques described in and to do so.    Set equality  Let and be sets. To prove directly using we must show that for all elements we have . To prove this universal equivalence, we must give an argument for the equivalence that holds for a general element .  Alternatively, you can prove by proving the two set inclusions and separately. This is equivalent to proving the two implications and separately.     Basic function properties   Function equality  By , in order to show functions and are equal we must   show that and have the same domain and codomain , and    show that for all .    By The universal quantifier for all of item (ii) gives this subtask the feel of proving an identity : we must show that equality holds for all  . By the same token, to show (ii) does not hold, it suffices to show that for some .   Injective, surjective, bijective  Let be a function.   Injectivity  To show is injective, we must show that the implication holds for all . Frequently it will be convenient to prove the (universal) contrapositive: for all .  Similarly, to show is not injective, we simply have to find satisfying and .    Surjectivity  To prove is surjective, we must prove the universal quantification: . To prove is not surjective, we must prove the negation of this proposition ( ): , there exists a for which there is no with .    Bijectivity  To show is bijective directly using , we must show that is injective and surjective. This is equivalent to showing that for there exists a unique element such that .  Alternatively, using we can show that is bijective by providing an inverse function .      mathematical induction  Mathematical induction    Mathematical induction is a technique for proving universal quantifications of the form , where is a fixed starting integer, called the base , and is a predicate defined on the integers. If the setting makes clear that ranges over integers, we write such propositions using logical notation as .    mathematical induction weak induction  Proof by induction  Suppose is a predicate of integers. To prove the proposition by induction (sometimes called weak induction ), we proceed in two steps.   Base step  Show that is true.    Induction step  Prove the universal implication . In practice, if proving the implication directly, this means we assume is true (the induction hypothesis ), and use this assumption to show is true.    Step 0 of induction   When meeting a proposition in the wild that we wish to prove by induction, you should first take care to model the proposition in the form . Make explicit the predicate in question, as well as the base case . We illustrate this preparatory Step 0 in the examples below.     Weak induction   Prove the identity for all . Recall: .    We prove the proposition by induction.   Step 0: preparation  The proposition is modeled logically as , where is the proposition that .    Base step:  The proposition is the statement that , which is clearly true.    Induction step  We must show the universal implication . Let , and assume is true: , The proposition states that . We prove this, assuming , via a chain of equalities: , as desired.   Having completed our base and induction steps, our proof is now finished.    So why does proof by induction work? In other words, why is it a valid proof technique? Imagine our propositions as forming an infinite ladder that we wish to ascend. Cautious climbers that we are, we only will step on a rung if we know the corresponding proposition is true. Knowing is true (the base step) allows us to step onto the first rung. The universal implication (induction step) gives us a rule that says if rung is secure (i.e., true), then so is rung . Since this rule holds for all rungs (i.e., for all ), we can safely ascend the entire ladder!  Mathematical induction as ladder of propositions  Mathematical induction as ladder of propositions          mathematical induction strong induction  Proof by strong induction  Suppose is a predicate of integers. To prove the proposition by strong induction , we proceed in two steps.   Base step:  Show that is true.    Strong induction step  Prove the universal implication . This technique is called strong induction, as now the induction hypothesis is much stronger: to prove this implication directly we assume is true for all (not just as in weak induction), and use this assumption to show is true.   In fact, strong induction is, logically speaking, no stronger than weak induction. Both techniques apply to propositions of the form , and you are free to choose which form of induction to use each time. We typically use strong induction out of convenience, when the nature of the predicate is such that we can prove most elegantly by assuming , as opposed to just . The following example is characteristic in this regard.   Strong induction   Prove that every integer can be written as a product of primes.    We prove the statement by induction.   Step 0: preparation  The proposition is modeled logically as , where is the proposition that is a product of primes.    Base step:  The proposition asserts that is a product of primes. This is true since is itself prime, hence a product of one prime number.    Strong induction step  We must show the universal implication . Let , and assume is true for all : , for all such we assume can be written as a product of primes. We use this assumption to prove : , that is a product of primes. We proceed in two cases, depending on whether is itself prime.   Case 1: is prime  If is prime, then it is trivially a product of one prime number, just as with the base case.    Case2 : is not prime  If is not prime, then we can factor nontrivially as . Here nontrivially means that we have . Using the strong induction hypothesis, we may assume that and are both products of primes: , we have , where and are prime for all and . It follows that , and hence that is also a product of primes, as desired.    Having completed the base and induction steps, our proof by induction is now finished.      "
 },
 {
-  "id": "warning-2",
+  "id": "sss_implication-4",
   "level": "2",
-  "url": "s_proof_technique.html#warning-2",
+  "url": "s_proof_technique.html#sss_implication-4",
   "type": "Warning",
   "number": "0.3.1",
   "title": "",
   "body": "  The converse of an implication is the implication ; the inverse of is the implication . Neither the converse nor the inverse is equivalent to the original implication, and thus neither of these can be used to give an indirect proof of . (Exercise: use a truth table to show that neither the converse nor the inverse implication is logically equivalent to the original implication. )   "
 },
 {
-  "id": "warning-3",
+  "id": "sss_logical_chains-3",
   "level": "2",
-  "url": "s_proof_technique.html#warning-3",
+  "url": "s_proof_technique.html#sss_logical_chains-3",
   "type": "Warning",
   "number": "0.3.2",
   "title": "",
@@ -433,36 +433,36 @@ var ptx_lunr_docs = [
   "body": "  Proof by contradiction resembles, but is not quite the same thing as proving an implication via its contrapositive. Letting denote an arbitrary falsehood (the described above) what we do in a proof by contradiction is show that the implication is true. Since is false, and the implication is true, must be false: equivalently, must be true.   "
 },
 {
-  "id": "warning-4",
+  "id": "sss_chain_equalities-4",
   "level": "2",
-  "url": "s_proof_technique.html#warning-4",
+  "url": "s_proof_technique.html#sss_chain_equalities-4",
   "type": "Warning",
   "number": "0.3.6",
   "title": "",
   "body": " Never attempt to prove an equality by starting off with the equality you wish to prove, and then deduce a series of further equalities ending in some inanity: , . What this suggests is that you are in fact proving an implication: namely, if the desired equality is true, then  . Clearly this is not what we set out to prove! This type of fallacious argument is called begging the question ( petitio princippii in Latin), as we assume that which was to be proven.  "
 },
 {
-  "id": "p-133",
+  "id": "ss_mathematical_induction-3-1",
   "level": "2",
-  "url": "s_proof_technique.html#p-133",
+  "url": "s_proof_technique.html#ss_mathematical_induction-3-1",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "base "
 },
 {
-  "id": "p-134",
+  "id": "sss_weak_induction-3",
   "level": "2",
-  "url": "s_proof_technique.html#p-134",
+  "url": "s_proof_technique.html#sss_weak_induction-3",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "induction weak induction "
 },
 {
-  "id": "p-136",
+  "id": "sss_weak_induction-5-2",
   "level": "2",
-  "url": "s_proof_technique.html#p-136",
+  "url": "s_proof_technique.html#sss_weak_induction-5-2",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -496,9 +496,9 @@ var ptx_lunr_docs = [
   "body": " Mathematical induction as ladder of propositions  Mathematical induction as ladder of propositions     "
 },
 {
-  "id": "p-145",
+  "id": "sss_strong_induction-3",
   "level": "2",
-  "url": "s_proof_technique.html#p-145",
+  "url": "s_proof_technique.html#sss_strong_induction-3",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -520,12 +520,12 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.1",
   "title": "Topological spaces",
-  "body": " Topological spaces   The real numbers come equipped with a notion of nearness or closeness furnished by the absolute value function: namely, we define the distance between real numbers as . From this simple bit of structure springs all the fundamental concepts of real analysis: Cauchy sequences, limits, continuous functions, etc.  Topology can be seen as a vast generalization of this notion that abstracts away from the absolute value function, relying instead on the more abstract idea of open sets . Indeed, the notion of openness is introduced already in real analysis: a set is open if for all there is an such that if , then . Intuitively, you can think of this property as stating that has a certain roomy or generous nature: if , and is sufficiently close to , then has room for too. Come on in!  We view the the three conditions of as an attempt at axiomatizing this notion of openness (or roominess). This is the starting point of topology. The generality of this approach is part of topology's great power. We can define a notion of open sets on any set whatsoever: , we can choose a collection of subsets (called a topology ) that satisfies the axioms of . Furthermore, for a given set there are typically many distinct ways of making this choice; your topology on can be tailor-made to suit your particular needs. Beyond this generality and flexibility, the other key to topology's effectiveness is its ability to transport to any topological space the concepts of continuity, limits, connectedness, and compactness familiar to us from real analysis. Once a set is given the structure of a topological space, these notions can be used as powerful tools for investigating its properties. It is for this reason that topology plays an important role in essentially all mathematical fields: analysis, geometry, algebraic geometry, number theory, etc.    Topological space   A topological space is a pair , where is a set, and is a collection of subsets of satisfying the following axioms:   Trivial sets   and     Closed under arbitrary unions  Given any collection of elements , we have     Closed under finite intersections  If , then .   In this case we call a topology on , and an element is called an open set of . Although technically speaking a topological space is a pair , we often omit mention of the topology if there is no risk of confusion.     Equivalent alternative to axiom (3)   Using induction, we can show that if satisfies axiom (3) for any two elements of , then it satisfies it for any elements, for arbitrary. In other words if we replace axiom (3) with   (3')  If , then    , we get an equivalent definition of a toplogical space. When verifying whether a given is a topological space it may be more convenient to use axiom (3') as opposed to axiom (3).     Standard topology on   Let and define to be the set of open sets as defined above: that is, if and only if for all there is an such that the entire open interval is contained in . Show that is a topology on     We treat each axiom of in turn.   The empty set satisfies the defining property of trivially. Thus . For any , we have . Thus .    Assume for all , and let . We have . This shows satisfies the defining property of , and hence .    Assume , and let . We have . This shows that satisfies the defining property of , and hence that .        Trivial and discrete topology Let be a set.   The collection is a topology on , called the trivial topology . This is the topology on whose only open sets are the empty set and itself.    The collection is a topology on , called the discrete topology . This is the topology on for which every subset of is an open set.        Let . By definition the given contains and , and thus axiom (1) is satisfied. Since any union or intersection involving and is equal to either or , it is clear that is closed under arbitrary unions and finite intersections. Thus axioms (2)-(3) are satisfied.    Let . By definition, is the set of all subsets of . In particular, it contains and , and thus axioms (1) is satisfied. Furthermore, since any union or intersection of subsets of is again a subset of , we see that axioms (2)-(3) are satisfied.        Some small topological spaces   For each set describe all subsets that satisfy the axioms of , and hence make a topological space.    Empty set       Singleton       Doubleton           When , we have . Since by axiom (1) a topology on must contain both and , we see the only option is . We showed that is always a topology on in . Thus is the unique choice of topology for . (Note: in this case the trivial and discrete topologies are equal.)    When , we have . Since by axiom (1) a topology on must contain both and , we see the only option is , which again is none other than the discrete topology. We conclude that is the unique topology on . (Note: again in this case the trival and discrete topologies are equal.)    When , we have . By axiom (1) a topology must contain and . It follows that there are exactly four possibilities for based on whether the sets and are elements of : i.e., the only possibilities are . These are the four subsets of that satisfy axiom (1). It is now straightforward to show that each of these choices also satisfies axioms (2) and (3). Thus there are exactly 4 distinct topologies we can define on .       Cofinite topology  Let be a set. A subset is cofinite in if is finite. The collection of subsets is a topology, called the cofinite topology . In this topology a subset is open if and only if it is either empty or cofinite.   We treat each axiom separately.    We must show . That is specified explicitly in the definition of . Next since is finite, the set is cofinite in , and hence an element of .    Let be any collection of elements of : , for all we have or is cofinite in . Let . If for all , then . Otherwise there is an such that is nonempty, hence cofinite. We have . Since is finite, it follows that is finite. It follows that is cofinite, and hence an element of as desired.    Let , and let . We have . Since is either finite or equal to all of for , it is clear that is either finite or equal to . It follows that is either cofinite or empty, and hence an element of .       coarser topology  finer topology  comparable topologies  Comparable topologies   Two topologies on the set are comparable if or , and incomparable otherwise. If , we say that is coarser than , and that is finer than . When we say that is strictly coarser than and is strictly finer than .     Comparing trivial, discrete, cofinite topologies   Let be a set, and let be the trivial, discrete, and cofinite topologies on , respectively. Compare these topologies.    First observe that in general the trivial topology on is coarser than any other topology, since by definition a topology must contain and . Similarly the discrete topology is finer than any other topology, since by definition any topology is a subset of . Thus we always have . The question naturally arises, whether and\/or when these inclusions are strict. We consider a number of cases.   Case:  In this case or (a singleton), in which case it is easy to see that . (Note: when , we have .)    Case: finite, . Since is finite, it follows that all subsets of are cofinite, and hence that . Since , we have . It follows that in this case we have .    Case: infinite  Let be any finite nonempty subset of . Since is infinite and , it follows that must be infinite, and hence that is not cofinite. We conclude that and . Thus in this case. Next, fix in any element and let . It is clear (a) that is cofinite, and (b) that is not equal to or . Thus and , proving that . We conclude that in this case.     "
+  "body": " Topological spaces  The real numbers come equipped with a notion of nearness or closeness furnished by the absolute value function: namely, we define the distance between real numbers as . From this simple bit of structure springs all the fundamental concepts of real analysis: Cauchy sequences, limits, continuous functions, etc.  Topology can be seen as a vast generalization of this notion that abstracts away from the absolute value function, relying instead on the more abstract idea of open sets . Indeed, the notion of openness is introduced already in real analysis: a set is open if for all there is an such that if , then . Intuitively, you can think of this property as stating that has a certain roomy or generous nature: if , and is sufficiently close to , then has room for too. Come on in!  We view the the three conditions of as an attempt at axiomatizing this notion of openness (or roominess). This is the starting point of topology. The generality of this approach is part of topology's great power. We can define a notion of open sets on any set whatsoever: , we can choose a collection of subsets (called a topology ) that satisfies the axioms of . Furthermore, for a given set there are typically many distinct ways of making this choice; your topology on can be tailor-made to suit your particular needs. Beyond this generality and flexibility, the other key to topology's effectiveness is its ability to transport to any topological space the concepts of continuity, limits, connectedness, and compactness familiar to us from real analysis. Once a set is given the structure of a topological space, these notions can be used as powerful tools for investigating its properties. It is for this reason that topology plays an important role in essentially all mathematical fields: analysis, geometry, algebraic geometry, number theory, etc.   Topological space   A topological space is a pair , where is a set, and is a collection of subsets of satisfying the following axioms:   Trivial sets   and     Closed under arbitrary unions  Given any collection of elements , we have     Closed under finite intersections  If , then .   In this case we call a topology on , and an element is called an open set of . Although technically speaking a topological space is a pair , we often omit mention of the topology if there is no risk of confusion.     Finite intersection of open sets  Let be a topological space. Axiom (3) of says that the intersection of any two open sets of is again open. It follows easily by induction that the intersection of any finite list of open sets is open. In other words: .    Standard topology on  Let and define to be the collection of subsets satisfying the following property: for all there is an such that . The collection is a topology, called the standard topology on .   We treat each axiom of in turn.   The empty set satisfies the defining property of trivially. Thus . For any , we have . Thus .    Assume for all , and let . We have . This shows satisfies the defining property of , and hence .    Assume , and let . Since and is open, we have for some ; similarly, we have have for some . Letting , we have . Thus , as desired.        Trivial and discrete topology  Let be a set.   The collection is a topology on , called the trivial topology . This is the topology on whose only open sets are the empty set and itself.    The collection is a topology on , called the discrete topology . This is the topology on for which every subset of is an open set.         Let . By definition the given contains and , and thus axiom (1) is satisfied. Since any union or intersection involving and is equal to either or , it is clear that is closed under arbitrary unions and finite intersections. Thus axioms (2)-(3) are satisfied.    Let . By definition, is the set of all subsets of . In particular, it contains and , and thus axioms (1) is satisfied. Furthermore, since any union or intersection of subsets of is again a subset of , we see that axioms (2)-(3) are satisfied.        Some small topological spaces   For each set describe all subsets that satisfy the axioms of , and hence make a topological space.   Empty set       Singleton       Doubleton             When , we have . Since by axiom (1) a topology on must contain both and , we see the only option is . We showed that is always a topology on in . Thus is the unique choice of topology for . (Note: in this case the trivial and discrete topologies are equal.)    When , we have . Since by axiom (1) a topology on must contain both and , we see the only option is , which again is none other than the discrete topology. We conclude that is the unique topology on . (Note: again in this case the trival and discrete topologies are equal.)    When , we have . By axiom (1) a topology must contain and . It follows that there are exactly four possibilities for based on whether the sets and are elements of : i.e., the only possibilities are . These are the four subsets of that satisfy axiom (1). It is now straightforward to show that each of these choices also satisfies axioms (2) and (3). Thus there are exactly 4 distinct topologies we can define on .        Cofinite topology  Let be a set. A subset is cofinite in if is finite. The collection of subsets is a topology, called the cofinite topology . In this topology a subset is open if and only if it is either empty or cofinite.   We treat each axiom separately.   We must show . That is specified explicitly in the definition of . Next since is finite, the set is cofinite in , and hence an element of .    Let be any collection of elements of : , for all we have or is cofinite in . Let . If for all , then . Otherwise there is an such that is nonempty, hence cofinite. We have . Since is finite, it follows that is finite. It follows that is cofinite, and hence an element of as desired.    Let , and let . We have . Since is either finite or equal to all of for , it is clear that is either finite or equal to . It follows that is either cofinite or empty, and hence an element of .        Comparable topologies  coarser topology  finer topology  comparable topologies   Two topologies on the set are comparable if or , and incomparable otherwise. If , we say that is coarser than , and that is finer than . When we say that is strictly coarser than and is strictly finer than .     Comparing trivial, discrete, cofinite topologies   Let be a set, and let be the trivial, discrete, and cofinite topologies on , respectively. Compare these topologies.    First observe that in general the trivial topology on is coarser than any other topology, since by definition a topology must contain and . Similarly the discrete topology is finer than any other topology, since by definition any topology is a subset of . Thus we always have . The question naturally arises, whether and\/or when these inclusions are strict. We consider a number of cases.   Case:  In this case or (a singleton), in which case it is easy to see that . (Note: when , we have .)    Case: finite, . Since is finite, it follows that all subsets of are cofinite, and hence that . Since , we have . It follows that in this case we have .    Case: infinite  Let be any finite nonempty subset of . Since is infinite and , it follows that must be infinite, and hence that is not cofinite. We conclude that and . Thus in this case. Next, fix in any element and let . It is clear (a) that is cofinite, and (b) that is not equal to or . Thus and , proving that . We conclude that in this case.     "
 },
 {
-  "id": "d_topology",
+  "id": "d_top",
   "level": "2",
-  "url": "s_top_spaces.html#d_topology",
+  "url": "s_top_spaces.html#d_top",
   "type": "Definition",
   "number": "1.1.1",
   "title": "Topological space.",
@@ -537,8 +537,8 @@ var ptx_lunr_docs = [
   "url": "s_top_spaces.html#rm_def_top",
   "type": "Remark",
   "number": "1.1.2",
-  "title": "Equivalent alternative to axiom (3).",
-  "body": " Equivalent alternative to axiom (3)   Using induction, we can show that if satisfies axiom (3) for any two elements of , then it satisfies it for any elements, for arbitrary. In other words if we replace axiom (3) with   (3')  If , then    , we get an equivalent definition of a toplogical space. When verifying whether a given is a topological space it may be more convenient to use axiom (3') as opposed to axiom (3).   "
+  "title": "Finite intersection of open sets.",
+  "body": " Finite intersection of open sets  Let be a topological space. Axiom (3) of says that the intersection of any two open sets of is again open. It follows easily by induction that the intersection of any finite list of open sets is open. In other words: .  "
 },
 {
   "id": "top_eq_standard_R",
@@ -547,7 +547,7 @@ var ptx_lunr_docs = [
   "type": "Topological specimen",
   "number": "1",
   "title": "Standard topology on <span class=\"process-math\">\\(\\R\\)<\/span>.",
-  "body": " Standard topology on   Let and define to be the set of open sets as defined above: that is, if and only if for all there is an such that the entire open interval is contained in . Show that is a topology on     We treat each axiom of in turn.   The empty set satisfies the defining property of trivially. Thus . For any , we have . Thus .    Assume for all , and let . We have . This shows satisfies the defining property of , and hence .    Assume , and let . We have . This shows that satisfies the defining property of , and hence that .      "
+  "body": " Standard topology on  Let and define to be the collection of subsets satisfying the following property: for all there is an such that . The collection is a topology, called the standard topology on .   We treat each axiom of in turn.   The empty set satisfies the defining property of trivially. Thus . For any , we have . Thus .    Assume for all , and let . We have . This shows satisfies the defining property of , and hence .    Assume , and let . Since and is open, we have for some ; similarly, we have have for some . Letting , we have . Thus , as desired.      "
 },
 {
   "id": "top_eg_trivial_discrete",
@@ -556,16 +556,16 @@ var ptx_lunr_docs = [
   "type": "Topological specimen",
   "number": "2",
   "title": "Trivial and discrete topology.",
-  "body": " Trivial and discrete topology Let be a set.   The collection is a topology on , called the trivial topology . This is the topology on whose only open sets are the empty set and itself.    The collection is a topology on , called the discrete topology . This is the topology on for which every subset of is an open set.        Let . By definition the given contains and , and thus axiom (1) is satisfied. Since any union or intersection involving and is equal to either or , it is clear that is closed under arbitrary unions and finite intersections. Thus axioms (2)-(3) are satisfied.    Let . By definition, is the set of all subsets of . In particular, it contains and , and thus axioms (1) is satisfied. Furthermore, since any union or intersection of subsets of is again a subset of , we see that axioms (2)-(3) are satisfied.      "
+  "body": " Trivial and discrete topology  Let be a set.   The collection is a topology on , called the trivial topology . This is the topology on whose only open sets are the empty set and itself.    The collection is a topology on , called the discrete topology . This is the topology on for which every subset of is an open set.         Let . By definition the given contains and , and thus axiom (1) is satisfied. Since any union or intersection involving and is equal to either or , it is clear that is closed under arbitrary unions and finite intersections. Thus axioms (2)-(3) are satisfied.    Let . By definition, is the set of all subsets of . In particular, it contains and , and thus axioms (1) is satisfied. Furthermore, since any union or intersection of subsets of is again a subset of , we see that axioms (2)-(3) are satisfied.      "
 },
 {
-  "id": "example-13",
+  "id": "s_top_spaces-9",
   "level": "2",
-  "url": "s_top_spaces.html#example-13",
+  "url": "s_top_spaces.html#s_top_spaces-9",
   "type": "Example",
   "number": "1.1.3",
   "title": "Some small topological spaces.",
-  "body": " Some small topological spaces   For each set describe all subsets that satisfy the axioms of , and hence make a topological space.    Empty set       Singleton       Doubleton           When , we have . Since by axiom (1) a topology on must contain both and , we see the only option is . We showed that is always a topology on in . Thus is the unique choice of topology for . (Note: in this case the trivial and discrete topologies are equal.)    When , we have . Since by axiom (1) a topology on must contain both and , we see the only option is , which again is none other than the discrete topology. We conclude that is the unique topology on . (Note: again in this case the trival and discrete topologies are equal.)    When , we have . By axiom (1) a topology must contain and . It follows that there are exactly four possibilities for based on whether the sets and are elements of : i.e., the only possibilities are . These are the four subsets of that satisfy axiom (1). It is now straightforward to show that each of these choices also satisfies axioms (2) and (3). Thus there are exactly 4 distinct topologies we can define on .     "
+  "body": " Some small topological spaces   For each set describe all subsets that satisfy the axioms of , and hence make a topological space.   Empty set       Singleton       Doubleton             When , we have . Since by axiom (1) a topology on must contain both and , we see the only option is . We showed that is always a topology on in . Thus is the unique choice of topology for . (Note: in this case the trivial and discrete topologies are equal.)    When , we have . Since by axiom (1) a topology on must contain both and , we see the only option is , which again is none other than the discrete topology. We conclude that is the unique topology on . (Note: again in this case the trival and discrete topologies are equal.)    When , we have . By axiom (1) a topology must contain and . It follows that there are exactly four possibilities for based on whether the sets and are elements of : i.e., the only possibilities are . These are the four subsets of that satisfy axiom (1). It is now straightforward to show that each of these choices also satisfies axioms (2) and (3). Thus there are exactly 4 distinct topologies we can define on .      "
 },
 {
   "id": "top_eg_cofinite",
@@ -574,7 +574,7 @@ var ptx_lunr_docs = [
   "type": "Topological specimen",
   "number": "3",
   "title": "Cofinite topology.",
-  "body": " Cofinite topology  Let be a set. A subset is cofinite in if is finite. The collection of subsets is a topology, called the cofinite topology . In this topology a subset is open if and only if it is either empty or cofinite.   We treat each axiom separately.    We must show . That is specified explicitly in the definition of . Next since is finite, the set is cofinite in , and hence an element of .    Let be any collection of elements of : , for all we have or is cofinite in . Let . If for all , then . Otherwise there is an such that is nonempty, hence cofinite. We have . Since is finite, it follows that is finite. It follows that is cofinite, and hence an element of as desired.    Let , and let . We have . Since is either finite or equal to all of for , it is clear that is either finite or equal to . It follows that is either cofinite or empty, and hence an element of .     "
+  "body": " Cofinite topology  Let be a set. A subset is cofinite in if is finite. The collection of subsets is a topology, called the cofinite topology . In this topology a subset is open if and only if it is either empty or cofinite.   We treat each axiom separately.   We must show . That is specified explicitly in the definition of . Next since is finite, the set is cofinite in , and hence an element of .    Let be any collection of elements of : , for all we have or is cofinite in . Let . If for all , then . Otherwise there is an such that is nonempty, hence cofinite. We have . Since is finite, it follows that is finite. It follows that is cofinite, and hence an element of as desired.    Let , and let . We have . Since is either finite or equal to all of for , it is clear that is either finite or equal to . It follows that is either cofinite or empty, and hence an element of .      "
 },
 {
   "id": "d_comparable_topologies",
@@ -583,12 +583,12 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "1.1.4",
   "title": "Comparable topologies.",
-  "body": " coarser topology  finer topology  comparable topologies  Comparable topologies   Two topologies on the set are comparable if or , and incomparable otherwise. If , we say that is coarser than , and that is finer than . When we say that is strictly coarser than and is strictly finer than .   "
+  "body": " Comparable topologies  coarser topology  finer topology  comparable topologies   Two topologies on the set are comparable if or , and incomparable otherwise. If , we say that is coarser than , and that is finer than . When we say that is strictly coarser than and is strictly finer than .   "
 },
 {
-  "id": "example-14",
+  "id": "s_top_spaces-12",
   "level": "2",
-  "url": "s_top_spaces.html#example-14",
+  "url": "s_top_spaces.html#s_top_spaces-12",
   "type": "Example",
   "number": "1.1.5",
   "title": "Comparing trivial, discrete, cofinite topologies.",
@@ -775,9 +775,9 @@ var ptx_lunr_docs = [
   "body": " Metric balls   Let be a metric space. Given and the -ball centered at is the subset defined as . In other words, is the set of all elements of lying within a distance of of . We call the radius of . More generally, we call a subset a -metric ball if for some and . When it is clear what the underlying metric is, we will omit and speak simply of metric balls.   "
 },
 {
-  "id": "example-21",
+  "id": "s_metric1-6",
   "level": "2",
-  "url": "s_metric1.html#example-21",
+  "url": "s_metric1.html#s_metric1-6",
   "type": "Example",
   "number": "1.3.4",
   "title": "Metric balls for Euclidean and box metrics.",
@@ -829,9 +829,9 @@ var ptx_lunr_docs = [
   "body": "  Given a set the function defined as is a metric on , called the trivial metric .    The proof that is a metric is left as an exercise.   "
 },
 {
-  "id": "example-23",
+  "id": "s_metric1-12",
   "level": "2",
-  "url": "s_metric1.html#example-23",
+  "url": "s_metric1.html#s_metric1-12",
   "type": "Example",
   "number": "1.3.9",
   "title": "Trivial metric.",
@@ -910,9 +910,9 @@ var ptx_lunr_docs = [
   "body": " Basis description of closed sets   Let be a topological space with basis . A set is closed if and only if for all , there is a basis element satisfying .    By definition a set is closed if and only if its complement is open. Using , we see that is open if and only if for all there is a basis element satisfying .   "
 },
 {
-  "id": "example-26",
+  "id": "s_closed_closure_interior-8",
   "level": "2",
-  "url": "s_closed_closure_interior.html#example-26",
+  "url": "s_closed_closure_interior.html#s_closed_closure_interior-8",
   "type": "Example",
   "number": "1.4.7",
   "title": "Closed sets in Euclidean metric topology.",
@@ -955,9 +955,9 @@ var ptx_lunr_docs = [
   "body": " Interior and closure of  Let and let . Compute the interior and closure of with respect to (a) the standard topology on and (b) the -topology on .     First consider with the standard topology. The interior of is empty in this case: , . To see this, note that given any and any open interval containing , we can choose an such that ; by design all elements of lie outside . Thus , and .  Next. I claim . To see this, note first that is closed: it is easy to see that for any we can find an such that . By (2) of we have . Since furthermore and since itself is not closed, it follows that .    Now consider the -topology on . We still have . Indeed, fix any , and take any basis element containing . We have or for some open interval . In either case, the same argument as above shows that contains a basis element , all of whose elements lie outside of . This shows , and hence .  Next, I claim that is closed in the -topology, from whence it follows that . (Use (2) from .) To prove the claim, we must show, using that for any there is a basis element (in the -topology) containing and contained in . There are two cases: and . If , we can find an open interval such that and . Since open intervals are basis elements in the -topology, we are done in this case. Next, assume . In this case the basis element satisfies . Having exhausted the cases, we conclude is closed, and hence .     "
 },
 {
-  "id": "example-28",
+  "id": "s_closed_closure_interior-13",
   "level": "2",
-  "url": "s_closed_closure_interior.html#example-28",
+  "url": "s_closed_closure_interior.html#s_closed_closure_interior-13",
   "type": "Example",
   "number": "1.4.12",
   "title": "Interior and closure in cofinite topology.",
@@ -1072,9 +1072,9 @@ var ptx_lunr_docs = [
   "body": " Metric spaces are Hausdorff     Show that any metric space is Hausdorff.    Show that any infinite set endowed with the cofinite topology is not a metric space.         Let be a metric space. Given any , we have . The open balls are disjoint open neighrborhoods of and , respectively.    Let be an infinite set with the cofinite topology. We will show that is not Hausdorff and hence not a metric space. In fact, we will show that any two nonempty open sets in intersect nontrivially. Indeed, given nonempty open sets , we have by definition , for finite sets . Their intersection is the open set Since is infinite and the are finite, we have , and thus .      "
 },
 {
-  "id": "project-7",
+  "id": "s_limitpoints_hausdorff-15",
   "level": "2",
-  "url": "s_limitpoints_hausdorff.html#project-7",
+  "url": "s_limitpoints_hausdorff.html#s_limitpoints_hausdorff-15",
   "type": "Topological specimen",
   "number": "7",
   "title": "Zariski topology on <span class=\"process-math\">\\(\\R^n\\)<\/span>.",
@@ -1207,9 +1207,9 @@ var ptx_lunr_docs = [
   "body": " Product coarser than box   It is clear from the definition that we always have , and hence the product topology is coarser than (contained in) the box topology.   "
 },
 {
-  "id": "convention-1",
+  "id": "s_product2-5",
   "level": "2",
-  "url": "s_product2.html#convention-1",
+  "url": "s_product2.html#s_product2-5",
   "type": "Notation",
   "number": "1.7.2",
   "title": "",
@@ -1261,9 +1261,9 @@ var ptx_lunr_docs = [
   "body": " Pointwise convergence   Observe that the definition of pointwise convergence makes no reference to any topology on . Below we investigate how it relates to convergence in the box and product topologies.   "
 },
 {
-  "id": "example-35",
+  "id": "s_prods_convergence_metric-5",
   "level": "2",
-  "url": "s_prods_convergence_metric.html#example-35",
+  "url": "s_prods_convergence_metric.html#s_prods_convergence_metric-5",
   "type": "Example",
   "number": "1.8.3",
   "title": "Sequences in <span class=\"process-math\">\\(\\R^\\omega\\)<\/span> and <span class=\"process-math\">\\(\\R^\\R\\)<\/span>.",
@@ -1279,9 +1279,9 @@ var ptx_lunr_docs = [
   "body": " Pointwise convergence and product topology   Let be a collection of topologies, let be their product, and let be a sequence of elements of .    If in the box or product topology, then converges to pointwise.    In the product topology we have .         Suppose in either topology. Fix and let be any open set containing . The set is an open neighborhood of in both topologies. By convergence there is an such that for all . It follows that for all . This proves that for all .    Suppose the sequence converges to pointwise. To show in the product topology it is enough to show that for any base open set of the form there is an such that if , then . Since converges to pointwise, for each , there is an such that if , then . Setting , it follows that if then for . Since for all we conclude that for all , as desired.      "
 },
 {
-  "id": "example-36",
+  "id": "s_prods_convergence_metric-7",
   "level": "2",
-  "url": "s_prods_convergence_metric.html#example-36",
+  "url": "s_prods_convergence_metric.html#s_prods_convergence_metric-7",
   "type": "Example",
   "number": "1.8.5",
   "title": "Convergent sequences in <span class=\"process-math\">\\(\\R^\\omega\\)<\/span>.",
@@ -1369,27 +1369,27 @@ var ptx_lunr_docs = [
   "body": " Preimage properties   Continuity is defined in terms of preimages of sets under a function . Thankfully, the preimage operation behaves very well with respect to our various set operations. In particular, we have the following identities, which you may make use of without further ado:    "
 },
 {
-  "id": "example-37",
+  "id": "s_continuous-5",
   "level": "2",
-  "url": "s_continuous.html#example-37",
+  "url": "s_continuous.html#s_continuous-5",
   "type": "Example",
   "number": "1.9.3",
   "title": "Continuous functions: basic examples.",
   "body": " Continuous functions: basic examples     Identity function  Given a topological space , the identity function is continuous. Here we take as the topology of both the domain and codomain.    Constant functions  Let be topological spaces. For any fixed the constant function , defined as for all is continuous.    Subspace inclusions  Let be a subspace of . The inclusion map is continuous with respect to the subspace topology on .    Maps from discrete spaces  If is equipped with the discrete topology, then any function to a topological space is continuous.    Maps to trivial spaces  If is equipped with the trivial topology, then any map from a topological space to is continous.      These are all pretty elementary. I'll prove (3). Let be a subspace and let continuous. Given any open set , we have which by definition is open in the subspace topology. Thus is continuous.   "
 },
 {
-  "id": "example-38",
+  "id": "s_continuous-6",
   "level": "2",
-  "url": "s_continuous.html#example-38",
+  "url": "s_continuous.html#s_continuous-6",
   "type": "Example",
   "number": "1.9.4",
   "title": "Non-continuous inclusion.",
   "body": " Non-continuous inclusion   Show that the identity map is not continuous. Here the topology of the domain is the standard one, and the topology on the codomain is the lower limit topology.    For any we have . If we choose to be any open set of that is not open in the standard topology, it follows that is not open in and hence that is not continuous. We may take for example.  Note: let be two topologies on the set , and for let denote the space with underlying set and topology . The same argument above can be used to show that is continuous if and only if .   "
 },
 {
-  "id": "example-39",
+  "id": "s_continuous-7",
   "level": "2",
-  "url": "s_continuous.html#example-39",
+  "url": "s_continuous.html#s_continuous-7",
   "type": "Example",
   "number": "1.9.5",
   "title": "Products and projections.",
@@ -1540,9 +1540,9 @@ var ptx_lunr_docs = [
   "body": " Topological properties   It is easy to see that the properties of being discrete, , Hausdorff, or a metric space are topological.   "
 },
 {
-  "id": "example-43",
+  "id": "s_homeomorphisms-14",
   "level": "2",
-  "url": "s_homeomorphisms.html#example-43",
+  "url": "s_homeomorphisms.html#s_homeomorphisms-14",
   "type": "Example",
   "number": "1.10.12",
   "title": "Continuous bijection onto circle.",
@@ -1684,9 +1684,9 @@ var ptx_lunr_docs = [
   "body": "  A separation of a topological space is a pair of disjoint nonempty open sets satisfying . The space is connected it it admits no separation, and disconnected otherwise.  A subset is connected (resp., disconnected ) if it is connected (resp., disconnected) with respect to the subspace topology.   "
 },
 {
-  "id": "example-46",
+  "id": "s_connected1-3",
   "level": "2",
-  "url": "s_connected1.html#example-46",
+  "url": "s_connected1.html#s_connected1-3",
   "type": "Example",
   "number": "1.12.2",
   "title": "Examples.",
@@ -1720,9 +1720,9 @@ var ptx_lunr_docs = [
   "body": " Connectedness and subspaces   Let be a topological space.   If is connected and is a separation of , then or .    If is a collection of connected subspaces of and , then is connected.    If is connected, then any satisfying is connected.     Let be a connected subspace of . It is a separation of , then or .   "
 },
 {
-  "id": "proof-45",
+  "id": "s_connected1-7",
   "level": "2",
-  "url": "s_connected1.html#proof-45",
+  "url": "s_connected1.html#s_connected1-7",
   "type": "Proof",
   "number": "1.12.1",
   "title": "",
@@ -1801,36 +1801,36 @@ var ptx_lunr_docs = [
   "body": " Path-connectedness and continuity   If is continuous and is path connected, then is path connected.    Given and , let be a path connecting and . The composition is then a path connecting and .   "
 },
 {
-  "id": "example-47",
+  "id": "s_connected_path-6",
   "level": "2",
-  "url": "s_connected_path.html#example-47",
+  "url": "s_connected_path.html#s_connected_path-6",
   "type": "Example",
   "number": "1.13.5",
   "title": "Balls in <span class=\"process-math\">\\(\\R^n\\)<\/span>.",
   "body": " Balls in   Let be Euclidean -space. For all and any , the open ball is connected, as is the closed ball defined as     It is easy to see that the straight line path defined as is a continuous function connecting any two points in . For our current purposes, we wish to show that if , then so is , for any . To this end, note that . This proves that the open ball is path connected, and hence connected. Next, it is easy to see that the closed ball is in fact the closure of the open ball. Since connectedness is preserved under closure, we conclude that the closed ball is connected.   "
 },
 {
-  "id": "example-48",
+  "id": "s_connected_path-7",
   "level": "2",
-  "url": "s_connected_path.html#example-48",
+  "url": "s_connected_path.html#s_connected_path-7",
   "type": "Example",
   "number": "1.13.6",
   "title": "Punctured Euclidean space <span class=\"process-math\">\\(\\R^n-\\{\\boldzero\\}\\text{:}\\)<\/span> <span class=\"process-math\">\\(n\\geq 2\\)<\/span>.",
   "body": " Punctured Euclidean space :   Let be Euclidean -space, where . The subspace is connected.    Take any . If the two vectors are not scalar multiples of one another, then the straight line path connecting them is guaranteed to lie in , using a linear independence argument. If , then since , we can find a vector that is not a scalar multiple of either vector. We can then construct a polygonal path lieing in that first connects to via a straight line path, and then connects to via a straight line path.   "
 },
 {
-  "id": "example-49",
+  "id": "s_connected_path-8",
   "level": "2",
-  "url": "s_connected_path.html#example-49",
+  "url": "s_connected_path.html#s_connected_path-8",
   "type": "Example",
   "number": "1.13.7",
   "title": "<span class=\"process-math\">\\(\\R\\not\\cong \\R^n\\)<\/span> for <span class=\"process-math\">\\(n\\geq 2\\)<\/span>.",
   "body": " for   Prove: if , then there is no homeomorphism from to .    Assume by contradiction that is a homeomorphism for some . It follows that the restriction is a homeomorphism. This a contradiction since is not connected ( is open and closed in ), but is connected.   "
 },
 {
-  "id": "example-50",
+  "id": "s_connected_path-9",
   "level": "2",
-  "url": "s_connected_path.html#example-50",
+  "url": "s_connected_path.html#s_connected_path-9",
   "type": "Example",
   "number": "1.13.8",
   "title": "The <span class=\"process-math\">\\(n\\)<\/span>-sphere.",
@@ -2143,9 +2143,9 @@ var ptx_lunr_docs = [
   "body": " Compactness in metric spaces   Let be a metric space. The following statements are equivalent.    is compact.     is limit point compact.     is sequentially compact.      "
 },
 {
-  "id": "project-15",
+  "id": "s_compact_metric-14",
   "level": "2",
-  "url": "s_compact_metric.html#project-15",
+  "url": "s_compact_metric.html#s_compact_metric-14",
   "type": "Topological specimen",
   "number": "15",
   "title": "Cantor set.",
@@ -2197,9 +2197,9 @@ var ptx_lunr_docs = [
   "body": "  A compactification of a topological space is an embedding , where is compact and .  A compactification is a one-point compactification if is a single point.   "
 },
 {
-  "id": "project-16",
+  "id": "s_locally-6",
   "level": "2",
-  "url": "s_locally.html#project-16",
+  "url": "s_locally.html#s_locally-6",
   "type": "Topological specimen",
   "number": "16",
   "title": "One-point compactification.",
@@ -2422,9 +2422,9 @@ var ptx_lunr_docs = [
   "body": " Separation axioms  The properties of being , Hausdorff, regular, or normal are called separation axioms as they articulate how various subsets can be separated by open sets. Below you find the descriptions of these properties using the Trennungsaxiom schema. A further remark about the use of regular and normal in the literature: some texts do not include the condition in these notions, and describe the properties we define as regular Hausdorff and normal regular . There is considerably less ambiguity in the literature when using the descriptions, but you should still be careful.  "
 },
 {
-  "id": "remark-30",
+  "id": "s_regular-5",
   "level": "2",
-  "url": "s_regular.html#remark-30",
+  "url": "s_regular.html#s_regular-5",
   "type": "Remark",
   "number": "1.19.4",
   "title": "Trennungsaxiom implications.",
@@ -2476,9 +2476,9 @@ var ptx_lunr_docs = [
   "body": " Locally compact implies regular   Let be locally compact and Hausdorff. Prove: is regular.    This is an easy consequence of and .   "
 },
 {
-  "id": "remark-31",
+  "id": "s_regular-11",
   "level": "2",
-  "url": "s_regular.html#remark-31",
+  "url": "s_regular.html#s_regular-11",
   "type": "Remark",
   "number": "1.19.10",
   "title": "Locally compact and non-normal.",
@@ -2512,9 +2512,9 @@ var ptx_lunr_docs = [
   "body": " Regularity: subspace and product properties      Subspaces of regular spaces are regular.    Products of regular spaces are regular.          Assume is a subspace of the regular space . We know already that subspaces of -spaces are , so is . Next take any and any set not containing that is closed in . We have for some closed set . Since and is regular, we can find disjoint open sets that separate and in . The disjoint open (in ) sets and are then a separation of and in .    We use (1) from . Given and open set containing , choose a basis element of the form containing . Since each is regular, we can find open sets satisfying . Letting , we have .      "
 },
 {
-  "id": "remark-33",
+  "id": "s_regular-15",
   "level": "2",
-  "url": "s_regular.html#remark-33",
+  "url": "s_regular.html#s_regular-15",
   "type": "Remark",
   "number": "1.19.14",
   "title": "",
@@ -2539,9 +2539,9 @@ var ptx_lunr_docs = [
   "body": " is normal   Prove: is normal.    Let be disjoint closed subsets of . We can find open coverings satisfying for all . First observe that for all . Indeed, otherwise we'd have , in which case either or : both are impossible since and . We conclude that , proving that and can be separated by open sets.   "
 },
 {
-  "id": "example-64",
+  "id": "s_normal-3",
   "level": "2",
-  "url": "s_normal.html#example-64",
+  "url": "s_normal.html#s_normal-3",
   "type": "Example",
   "number": "1.20.2",
   "title": "<span class=\"process-math\">\\(R_\\ell\\times R_\\ell\\)<\/span> is not normal.",
@@ -2656,9 +2656,9 @@ var ptx_lunr_docs = [
   "body": " Embedding theorem   Let be a -space. Given any collection of continuous functions satisfying the property that for all and for all open sets containing there is an such that and , the map defined as is an embedding into .     is injective  Since is , given any we can find an open set such that and . By assumption, there is some such that and . It follows that and hence that .    is continuous  This follows immediately from since each is continuous.    is embedding  Lastly, we prove that is an embedding mapping homeomorphically onto . Let be an open set containing an element , and let . Pick any such that and . Let be the projection map onto the -th coordinate, and define . Since is continuous and is open, the set is open in the subspace topology of . We claim that , proving that is an embedding. Since , we have . Similarly, if , then , from whence it follows that : otherwise we'd have .    "
 },
 {
-  "id": "remark-36",
+  "id": "s_Urysohn_metrization-4",
   "level": "2",
-  "url": "s_Urysohn_metrization.html#remark-36",
+  "url": "s_Urysohn_metrization.html#s_Urysohn_metrization-4",
   "type": "Remark",
   "number": "1.22.3",
   "title": "Urysohn metrization theorem.",
@@ -2764,9 +2764,9 @@ var ptx_lunr_docs = [
   "body": " Directed set   A directed set is a pair , where is a quasiordering on that satisfies the following axiom.   Directed (D)  For all , there is a such that and .   A subset of a directed set is cofinal if for all there is a such that .   "
 },
 {
-  "id": "example-66",
+  "id": "s_nets-5",
   "level": "2",
-  "url": "s_nets.html#example-66",
+  "url": "s_nets.html#s_nets-5",
   "type": "Example",
   "number": "1.24.4",
   "title": "Common examples.",
@@ -2899,9 +2899,9 @@ var ptx_lunr_docs = [
   "body": " Homotopy    Throughout this course will denote the interval .    Homotopy of maps   Let be continuous maps. A homotopy from to is a continuous map satisfying for all . We say is homotopic to in this case, written .     Given a homotopy from to , for each we get a function defined as . In this way we can think of a homotopy as a family of functions that varies continuously with (a shorthand way of saying that is continuous), and which continuously deforms the function to the function as ranges over .    Homotopic functions to   A subset is convex if for any elements and any , we have : , given any pair of points in , the line segment between them lies within .  If is convex, then given any continuous functions , the function defines a homotopy from to . Thus any two continuous functions from a space into are homotopic.     Nullhomotopic map   A continuous map is nullhomotopic if it is homotopic to a constant function from to .     Path homotopy   Given elements in the topological space , we denoted by the set of all paths with initial point and terminal point .  Given , a path homotopy from to is a continuous function satisfying . In other words, is a homotopy from to that further satisfies and for all . We say that is path homotopic to in this case, written .     Homotopic paths in  Let be a convex subset of , and let . Given two paths , the straight-line homotopy is easily seen to be a path homotopy: . Thus any two paths to between any two points are path homotopic.    Paths with non-convex codomain   Consider the the nonconvex set and the paths . Both are paths that begin and end at ; it is intuitively clear that cannot be continuously deformed to (while staying tethered at ) without passing through the origin at some point. In other words, the two paths are not path homotopic. This is surprisingly difficult to prove rigorously; we will get to this in the coming sections. On the other hand and are in fact homotopic: consider   Interestingly, the situation is different if we take and . Intuitively, it seems we should be able to lift the graph of up over the origin, then shrink it down to the point . Here is one explicit realization of this idea. Consider the family of curves lying on the upper hemisphere of , whose projection onto the -plane is the circle . Such a curve has parametrization , giving rise to a path homotopy from to . The Sage cell below provides a nice visualization of this family of curves.      Homotopy equivalence relation   Let and be topological spaces. Fix .    is an equivalence relation on the set of all continuous functions from to .     is an equivalence relation on .       We give a proof for (a). It is then easy to check that the same homotopies provided in this proof are path homotopies ( , satisfy ) in the context of paths in .   Reflexive  Given a continuous function , the map defined as for all is clearly a homotopy from to .    Symmetric  Let be continuous maps from to , and assume . By definition this means there is a homotopy from to , so that in particular for all . Define as . It is clear that is continuous, and we have . Thus is a homotopy from to , showing .    Transitive  Let be continuous maps from to . We assume and . By definition there is a homotopy from to , and a homotopy from to . Define . The functions and are continuous on the closed sets and , respectively, and agree on the intersection since and for all , by definition of homotopy. By the closed pasting lemma, we conclude that is well-defined and continuous. Lastly, we have for all .      Homotopy equivalence  For topological spaces , let be the set of all continuous functions. For a function we let denote its equivalence class with respect to . The set of all equivalence classes is denoted .  For , we will also use to denote its equivalence class with respect to .    Path product   Let be a topological space, and let . We define a path product operation as follows: .  The function defined is a path from to . Furthermore, if and , then . In other words, we get a well-defined operation on homotopy classes defined as .    It is easy to see, using the closed pasting lemma, that is well-defined and continuous. We show that it is well-defined on homotopy classes, as claimed.  Suppose that as witnessed by the path homotopy , and that as witnessed by the path homotopy . Define . Note first that and , since and are path homotopies. Since is continuous on and is continuous on , and since they agree on the intersection of these sets, the closed pasting lemma implies is a well-defined continuous function.  Next, we have , showing that is a homotopy from to .  Lastly, we have for all , showing that is a path homotopy.     Path product properties   Let be a topological space. For any element , we let denote the constant function for all .   Associativity  If , then .    Identities  Given , we have     Inverses  Given , let be its reverse : , . We have .        Associativity . Let and . After unpacking the definitions for iterated path products, we see that Define as . The pasting lemma implies is continuous, and by definition we have and . A computation shows that . In other words, . By we conclude that and thus that .   Identities . Using the definition of path product, we have Define as    Inverses . First compute      Reparametrization of path   Let . If is a continuous map satisfying and , then . In other words, a reparametrized path is homotopic to the original path.    Homework exercise.     Partitions of   Let , let be a subdivision of into subintervals , , and let , where is any continuous map satisfying and . We have .    Homework exercise.    "
 },
 {
-  "id": "convention-2",
+  "id": "s_homotopy-2",
   "level": "2",
-  "url": "s_homotopy.html#convention-2",
+  "url": "s_homotopy.html#s_homotopy-2",
   "type": "Notation",
   "number": "2.1.1",
   "title": "<span class=\"process-math\">\\(I=[0,1]\\)<\/span>.",
@@ -2917,9 +2917,9 @@ var ptx_lunr_docs = [
   "body": " Homotopy of maps   Let be continuous maps. A homotopy from to is a continuous map satisfying for all . We say is homotopic to in this case, written .   "
 },
 {
-  "id": "remark-37",
+  "id": "s_homotopy-4",
   "level": "2",
-  "url": "s_homotopy.html#remark-37",
+  "url": "s_homotopy.html#s_homotopy-4",
   "type": "Remark",
   "number": "2.1.3",
   "title": "",
@@ -2980,9 +2980,9 @@ var ptx_lunr_docs = [
   "body": " Homotopy equivalence relation   Let and be topological spaces. Fix .    is an equivalence relation on the set of all continuous functions from to .     is an equivalence relation on .       We give a proof for (a). It is then easy to check that the same homotopies provided in this proof are path homotopies ( , satisfy ) in the context of paths in .   Reflexive  Given a continuous function , the map defined as for all is clearly a homotopy from to .    Symmetric  Let be continuous maps from to , and assume . By definition this means there is a homotopy from to , so that in particular for all . Define as . It is clear that is continuous, and we have . Thus is a homotopy from to , showing .    Transitive  Let be continuous maps from to . We assume and . By definition there is a homotopy from to , and a homotopy from to . Define . The functions and are continuous on the closed sets and , respectively, and agree on the intersection since and for all , by definition of homotopy. By the closed pasting lemma, we conclude that is well-defined and continuous. Lastly, we have for all .    "
 },
 {
-  "id": "convention-3",
+  "id": "s_homotopy-11",
   "level": "2",
-  "url": "s_homotopy.html#convention-3",
+  "url": "s_homotopy.html#s_homotopy-11",
   "type": "Notation",
   "number": "2.1.10",
   "title": "Homotopy equivalence.",
@@ -3160,18 +3160,18 @@ var ptx_lunr_docs = [
   "body": " Covering of   Recall that is the quotient space obtained by identifying elements of that are scalar multiples of one another. We showed in a homeowork that is homeomorphic to the quotient of obtained by identifying antipodal points. The corresponding quotient map is a covering map.    For a point , let be its antipode: using the vector space structure of , if , then . It is easy to see that the map defines a homeomorphism on .  First we show that is an open map. Let be open. Since is a quotient map, the set is open if and only if its preimage is open. Since if and only if , we see that , where . Since the antipodal map is a homeomorphism, and since is open, is open. It follows that is open. We conclude that is open.  We now show that is a double covering of . Given any , let , and let . By the argument above, we have , where and are both open sets. Furthermore, since , we have . Finally, since is an open map, and since is a bijection onto (since ) we conclude that is a homeomorphism onto . This proves is a covering map. Since for all , we see that is a double covering.   A double cover of   A double cover of     "
 },
 {
-  "id": "example-75",
+  "id": "s_covering_spaces-8",
   "level": "2",
-  "url": "s_covering_spaces.html#example-75",
+  "url": "s_covering_spaces.html#s_covering_spaces-8",
   "type": "Example",
   "number": "2.3.8",
   "title": "Not all quotient maps are covering maps.",
   "body": " Not all quotient maps are covering maps   The map , defined as is not a covering.    The given map is not open ( is not open in ), hence cannot be a covering map by (3) of . Alternatively, we have and , in violation of (5) of .   "
 },
 {
-  "id": "example-76",
+  "id": "s_covering_spaces-9",
   "level": "2",
-  "url": "s_covering_spaces.html#example-76",
+  "url": "s_covering_spaces.html#s_covering_spaces-9",
   "type": "Example",
   "number": "2.3.9",
   "title": "Local homeomorphism not sufficient.",
@@ -3295,9 +3295,9 @@ var ptx_lunr_docs = [
   "body": " Retraction   Let be a subspace of and let be the corresponding inclusion map. A retraction of onto is a continuous map satisfying , or equivalently, . The subspace is called a retract of in this case.   "
 },
 {
-  "id": "example-81",
+  "id": "s_retract_Brouwer-3",
   "level": "2",
-  "url": "s_retract_Brouwer.html#example-81",
+  "url": "s_retract_Brouwer.html#s_retract_Brouwer-3",
   "type": "Example",
   "number": "2.5.2",
   "title": "<span class=\"process-math\">\\(S^1\\)<\/span> is retract of <span class=\"process-math\">\\(\\R^2-\\{\\boldzero\\}\\)<\/span>.",
@@ -3403,9 +3403,9 @@ var ptx_lunr_docs = [
   "body": " Deformation retract   Let be a subspace of . A deformation retraction from to is a homotopy satisfying the conditions below. (It will help to think of in the usual way.)    for all ( );     for all ( );     for all and ( for all ).   In this case is called a deformation retract of .  Letting be defined as , we see that is a retraction from to , and is a homotopy from to , where is the inclusion map.   "
 },
 {
-  "id": "remark-38",
+  "id": "s_deformation_retract-5",
   "level": "2",
-  "url": "s_deformation_retract.html#remark-38",
+  "url": "s_deformation_retract.html#s_deformation_retract-5",
   "type": "Remark",
   "number": "2.6.4",
   "title": "Deformation retract.",
@@ -3430,9 +3430,9 @@ var ptx_lunr_docs = [
   "body": " minus axis  Let be with the the -axis removed. Show that is a deformation retract of . Conclude that for any .  "
 },
 {
-  "id": "example-83",
+  "id": "s_deformation_retract-8",
   "level": "2",
-  "url": "s_deformation_retract.html#example-83",
+  "url": "s_deformation_retract.html#s_deformation_retract-8",
   "type": "Example",
   "number": "2.6.7",
   "title": "<span class=\"process-math\">\\(\\R^3\\)<\/span> minus circle and <span class=\"process-math\">\\(z\\)<\/span>-axis.",
@@ -3565,18 +3565,18 @@ var ptx_lunr_docs = [
   "body": " Topological manifold   Let be a nonnegative integer. A topological -manifold is a topological space satisfying the following properties:   Hausdorff   is Hausdorff.    Second countable   is second countable: , has a countable basis.    Locally Euclidean   is locally Euclidean of dimension : , every has an open neighborhood that is homeomorphic to an open subset of . (We define .)   A -manifold is called a curve ; a -manifold is called a surface .   "
 },
 {
-  "id": "remark-39",
+  "id": "s_surface_fund_grps-3",
   "level": "2",
-  "url": "s_surface_fund_grps.html#remark-39",
+  "url": "s_surface_fund_grps.html#s_surface_fund_grps-3",
   "type": "Remark",
   "number": "2.9.2",
   "title": "",
   "body": " You might be wondering whether an -manifold could also be an -manifold. The answer is no, but hinges on the fact that is not homeomorphic to (invariance of domain), which is difficult to prove in full generality. However, we do know that invariance of domain holds for and (homework exercise), so the in -manifold is well-defined at least for .  "
 },
 {
-  "id": "example-86",
+  "id": "s_surface_fund_grps-4",
   "level": "2",
-  "url": "s_surface_fund_grps.html#example-86",
+  "url": "s_surface_fund_grps.html#s_surface_fund_grps-4",
   "type": "Example",
   "number": "2.9.3",
   "title": "Sphere, projective 2-space, torus.",
@@ -3682,9 +3682,9 @@ var ptx_lunr_docs = [
   "body": " Components in locally connected spaces   Let be a locally path connected space.   The connected components and path components of are identical.    The components of are open.      "
 },
 {
-  "id": "remark-41",
+  "id": "s_jordan_separation-7",
   "level": "2",
-  "url": "s_jordan_separation.html#remark-41",
+  "url": "s_jordan_separation.html#s_jordan_separation-7",
   "type": "Remark",
   "number": "2.10.5",
   "title": "Components of <span class=\"process-math\">\\(\\R^2-C\\)<\/span>.",
@@ -3808,9 +3808,9 @@ var ptx_lunr_docs = [
   "body": " Direct sum of abelian groups   Given a family of abelian groups , its direct sum  is the subgroup of defined as .   "
 },
 {
-  "id": "remark-42",
+  "id": "s_groups_abelian-8",
   "level": "2",
-  "url": "s_groups_abelian.html#remark-42",
+  "url": "s_groups_abelian.html#s_groups_abelian-8",
   "type": "Remark",
   "number": "2.12.6",
   "title": "",
@@ -3826,18 +3826,18 @@ var ptx_lunr_docs = [
   "body": " Universal property of direct sums   Let be a family of abelian groups.    Injections  For each the map that maps to the tuple satisfying and for all is an injective group homomorphism.    Universal mapping property  Given an abelian group the map is a bijection. In other words, given any abelian group and family of group homomorphisms , there is a unique homomorphism satisfying for all .  Commutative diagram for direct sum groups   In fact, in this case we must have .    The universal mapping property characterizes among abelian groups up to isomorphism: , if is an abelian group equipped with group homomorphisms for which the recipe is a bijection for any abelian group , then .     "
 },
 {
-  "id": "proof-128",
+  "id": "s_groups_abelian-10",
   "level": "2",
-  "url": "s_groups_abelian.html#proof-128",
+  "url": "s_groups_abelian.html#s_groups_abelian-10",
   "type": "Proof",
   "number": "2.12.1",
   "title": "",
   "body": "    This is easy to see.    Suppose we are given an abelian group and homomorphisms . First we show there is at most one such homomorphism . Indeed, since by assumption satisfies for all , we must have . Thus, if such a exists, it must satisfy . It remains only to show that the formula in actually defines a homomorphism. This is straightforward and left to the reader.    Suppose is an abelian group equipped with maps satisfying the given property. By the universal mapping property of there is a homomorphism satisfying for all . Since the group and maps also satisfies the universal mapping property, the maps gives rise to a homomorphism satisfying for all . We claim that and , from whence it follows that (and ) is an isomorphism. To see why these two equalities hold, we use the uniqueness claim in the universal mapping property. For example, we have for all . Since also satisfies for all , we conclude that . The argument for is exactly similar.     "
 },
 {
-  "id": "example-90",
+  "id": "s_groups_abelian-11",
   "level": "2",
-  "url": "s_groups_abelian.html#example-90",
+  "url": "s_groups_abelian.html#s_groups_abelian-11",
   "type": "Example",
   "number": "2.12.8",
   "title": "",
@@ -4015,9 +4015,9 @@ var ptx_lunr_docs = [
   "body": " Group presentation   Let be the free group on the elements . Let be an subset of . We denote by the quotient , where is the least normal subgroup containing . We say is a presentation of a group with generators  and relations  if .   "
 },
 {
-  "id": "remark-43",
+  "id": "s_groups_free-7",
   "level": "2",
-  "url": "s_groups_free.html#remark-43",
+  "url": "s_groups_free.html#s_groups_free-7",
   "type": "Remark",
   "number": "2.14.6",
   "title": "",
@@ -4303,9 +4303,9 @@ var ptx_lunr_docs = [
   "body": " Oriented line segment   An orientation of a line segment is an ordering of its endpoints as a pair . In this case is called the initial point , and the final point of . We will denote by the oriented line segment with initial point and final point .  Given two oriented line segments and the positive linear map of onto is the unique homeomorphism satisfying for all .   "
 },
 {
-  "id": "remark-44",
+  "id": "s_polygonal_regions-4",
   "level": "2",
-  "url": "s_polygonal_regions.html#remark-44",
+  "url": "s_polygonal_regions.html#s_polygonal_regions-4",
   "type": "Remark",
   "number": "2.19.3",
   "title": "",
@@ -4483,18 +4483,18 @@ var ptx_lunr_docs = [
   "body": " Universal covering space   Let be path connected and locally path connected. If is a covering map and is simply connected, then is called a universal covering of , and is called the universal covering space of .   "
 },
 {
-  "id": "remark-45",
+  "id": "s_covering_classification-7",
   "level": "2",
-  "url": "s_covering_classification.html#remark-45",
+  "url": "s_covering_classification.html#s_covering_classification-7",
   "type": "Remark",
   "number": "2.21.6",
   "title": "Universal covering space is locally path connected.",
   "body": " Universal covering space is locally path connected  If is path connected and locally path connected and where is path connected, then it turns out that is also locally path connected (thanks to being a covering map). Thus a universal covering space of is automatically path connected (since it is simply connected) and locally path connected (thanks to the covering map ).  "
 },
 {
-  "id": "remark-46",
+  "id": "s_covering_classification-8",
   "level": "2",
-  "url": "s_covering_classification.html#remark-46",
+  "url": "s_covering_classification.html#s_covering_classification-8",
   "type": "Remark",
   "number": "2.21.7",
   "title": "Universal covering space.",
@@ -4582,9 +4582,9 @@ var ptx_lunr_docs = [
   "body": " Examples   "
 },
 {
-  "id": "index-1",
+  "id": "kursobjekt-7-6",
   "level": "1",
-  "url": "index-1.html",
+  "url": "kursobjekt-7-6.html",
   "type": "Index",
   "number": "",
   "title": "Index",

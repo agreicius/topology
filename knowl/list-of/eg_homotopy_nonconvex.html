@@ -51,7 +51,7 @@ s \amp \mapsto (\cos (2\pi s), \sin (2\pi s),0)\amp s\amp \mapsto (1,0,0)\text{.
 C_t(s)=\left(t+(1-t)\cos 2\pi s, (1-t)\sin 2\pi s, \sqrt{1-(t+(1-t)\cos 2\pi s)^2+(1-t)\sin 2\pi s)^2}\right)\text{,}
 \end{equation*}
 </div>
-<div class="para">giving rise to a path homotopy <span class="process-math">\(H(s,t)=C_t(s)\)</span> from <span class="process-math">\(f\)</span> to <span class="process-math">\(g\text{.}\)</span> The Sage cell below provides a nice visualization of this family of curves. <pre id="sage-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">                    var('s t')
+<div class="para">giving rise to a path homotopy <span class="process-math">\(H(s,t)=C_t(s)\)</span> from <span class="process-math">\(f\)</span> to <span class="process-math">\(g\text{.}\)</span> The Sage cell below provides a nice visualization of this family of curves. <pre id="eg_homotopy_nonconvex-2-2-14" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">                    var('s t')
 f(t,s)=t+(1-t)*cos(2*pi*s)
 g(t,s)=(1-t)*sin(2*pi*s)
 q(t,s)=sqrt(1-(f(t,s))^2-(g(t,s))^2)

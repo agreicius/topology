@@ -12,15 +12,14 @@
 </head>
 <body class="ignore-math">
 <article class="remark remark-like"><h3 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Equivalent alternative to axiom (3).</span>
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Finite intersection of open sets.</span>
 </h3> <div class="para logical">
-<div class="para">Using induction, we can show that if <span class="process-math">\(\mathcal{T}\)</span> satisfies axiom (3) for any <em class="emphasis">two</em> elements of <span class="process-math">\(\mathcal{T}\text{,}\)</span> then it satisfies it for any <span class="process-math">\(n\)</span> elements, for <span class="process-math">\(n\)</span> arbitrary. In other words if we replace axiom (3) with</div>
-<dl class="description-list">
-<dt>(3’)</dt>
-<dd><div class="para">If <span class="process-math">\(U_1, U_2\in \mathcal{T}\text{,}\)</span> then <span class="process-math">\(U=U_1\cap U_2\in \mathcal{T}\)</span>
-</div></dd>
-</dl>
-<div class="para">, we get an equivalent definition of a toplogical space. When verifying whether a given <span class="process-math">\((X,\mathcal{T})\)</span> is a topological space it may be more convenient to use axiom (3’) as opposed to axiom (3).</div>
+<div class="para">Let <span class="process-math">\((X,\mathcal{T})\)</span> be a topological space. Axiom (3) of <a href="" class="xref" data-knowl="./knowl/xref/d_top.html" title="Definition 1.1.1: Topological space">Definition 1.1.1</a> says that the intersection of any two open sets of <span class="process-math">\(X\)</span> is again open. It follows easily by induction that the intersection of any <em class="emphasis">finite</em> list of open sets is open. In other words:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/d_top.html">
+\begin{equation*}
+U_1,U_2,\dots, U_n\in \mathcal{T}\implies \bigcap_{i=1}^n U_i \in \mathcal{T}\text{.}
+\end{equation*}
+</div>
 </div></article><span class="incontext"><a class="internal" href="s_top_spaces.html#rm_def_top">in-context</a></span>
 </body>
 </html>

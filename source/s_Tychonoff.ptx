@@ -2,7 +2,7 @@
     <title>Tychonoff theorem via nets</title> 
     <introduction>
         <p>
-            Our main application of the theory of nets is (a) to give a characterization of comapctness in terms of convergence and limit points of nets (<xref ref="th_nets_compactness" text="global"/>), and (b) to use this characterization to prove the <xref ref="th_Tychonoff_general" text="custom">Tychonoff theorem </xref>
+            Our main application of the theory of nets is (a) to give a characterization of compactness in terms of convergence and limit points of nets (<xref ref="th_nets_compactness" text="global"/>), and (b) to use this characterization to prove the <xref ref="th_Tychonoff_general" text="custom">Tychonoff theorem </xref>
         </p>
     </introduction>
     <subsection xml:id="ss_nets_compactness">

@@ -14,7 +14,7 @@
 <article class="example example-like"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Some bases for <span class="process-math">\(\R\)</span>.</span>
 </h3>
-<div class="para">Show that the given collections <span class="process-math">\(\mathcal{B}\)</span> are bases in <span class="process-math">\(\R\text{.}\)</span>
+<div class="para">Show that the given collections <span class="process-math">\(\mathcal{B}\)</span> are topological bases of <span class="process-math">\(\R\text{.}\)</span>
 </div> <ol class="decimal">
 <li><div class="para"><span class="process-math">\(\displaystyle \mathcal{B}_1=\{(x-\epsilon, x+\epsilon)\colon x,\epsilon\in \R, \epsilon&gt; 0\}=\{(a,b)\colon a,b\in\R, a&lt; b\}\)</span></div></li>
 <li><div class="para"><span class="process-math">\(\displaystyle \mathcal{B}_2=\{ (p,q)\colon p,q\in \Q, p&lt; q\} \)</span></div></li>
@@ -24,8 +24,8 @@
 <div class="para">It is clear that each collection of interval types covers <span class="process-math">\(\R\)</span> in the sense of axiom (1). As for axiom (2), for each <span class="process-math">\(\mathcal{B}_i\text{,}\)</span> <span class="process-math">\(1\leq i\leq 3\text{,}\)</span> note that intersection of these types of intervals are either empty, or another interval of the same type. This is a result of the fact that</div>
 <div class="displaymath process-math">
 \begin{align*}
-(a,b)\cap (c,d)\amp = \left(\max(a,c),\min(b,d)\right) \\
-[a,b)\cap [c,d) \amp = \left [\max{a,c}, \min(b,d)\right) \text{,}
+(a,b)\cap (c,d)\amp = \left(\max\{a,c\},\min\{b,d\}\right) \\
+[a,b)\cap [c,d) \amp = \left [\max\{a,c\}, \min\{b,d\}\right) \text{,}
 \end{align*}
 </div>
 <div class="para">where the interval described on the right is understood to be the empty set if <span class="process-math">\(\max(a,c)\geq \min(b,d)\text{.}\)</span>

@@ -268,7 +268,10 @@
       and thus we have <m>x\in [x,b)\subseteq (a,b)</m>, as desired.
     </p>
     <p>
-      To show <m>\mathcal{T}'</m> is strictly finer than <m>\mathcal{T}</m> it suffices to find a basis element <m>[a,b)\in \mathcal{T}'</m> that cannot be written as a union of basis elements of <m>\mathcal{T}</m>. Consider the half-open interval <m>[0,1)</m>. To show this is not a union of open intervals <m>(a,b)</m> it is enough to show that for the element <m>0\in [0,1)</m> there is no open interval <m>(a,b)</m> satisfying <m>x\in (a,b)\subseteq [0,1]</m>. This is clear since any interval <m>(a,b)</m> containing <m>0</m> must also contain negative numbers, and hence cannot be a subset of <m>[0,1)</m>.
+      To show <m>\mathcal{T}'</m> is strictly finer than <m>\mathcal{T}</m> it suffices to find a basis element <m>[a,b)\in \mathcal{T}'</m> that is not an element of <m>\mathcal{T}</m>. I claim <m>[0,1)\notin\mathcal{T}</m>. Indeed, consider <m>0\in [0,1)</m>. Any open set <m>(a,b)</m> containing <m>0</m> must contain negative numbers, and hence does not satisfy <m>(a,b)\subseteq [0,1)</m>. It follows that <m>[0,1)</m> is not an element of  
+      <me>
+        \mathcal{T}=\{U\subseteq X\colon \text{for all } x\in U \text{ there exists } (a,b) \text{ s.t. } x\in (a,b)\subseteq U \}
+      </me>.
     </p>
   </solution>
 </example>
@@ -333,7 +336,7 @@
     <ol>
       <li>
         <p>
-          By definition, the basis for the <m>K</m>-topology contains all finite open intervals. It follows from <xref ref="eq_compare_basis_top"/> that <m>\mathcal{T}\subseteq \mathcal{T}''</m>. Next, using an argument similar to the one in <xref ref="eg_lower_limit_finer"/>, we show that the basis element <m>(0,1)-K\in \mathcal{T}''</m> cannot be covered by open intervals <m>(a,b)</m>. Indeed, consider the element <m>0\in (0,1)-K</m>. Any open interval <m>(a,b)</m> containing <m>0</m> must contain an element of the form <m>1/N</m> for some positive integer <m>N &gt; 1</m>. Since <m>1/N\notin (0,1)-K</m>, it follows that <m>(a,b)\not\subseteq (0,1)-K</m>. We conclude that <m>(0,1)-K</m> is not covered by open intervals <m>(a,b)</m>.
+          By definition, the basis for the <m>K</m>-topology contains all finite open intervals. It follows from <xref ref="eq_compare_basis_top"/> that <m>\mathcal{T}\subseteq \mathcal{T}''</m>. Next, using an argument similar to the one in <xref ref="eg_lower_limit_finer"/>, we show that the basis element <m>(-1,1)-K\in \mathcal{T}''</m> is not open in the standard topology. Indeed, consider the element <m>0\in (-1,1)-K</m>. For any <m>\epsilon &gt; 0</m> the open interval <m>(-\epsilon,\epsilon)</m> containing <m>0</m> must contain an element of the form <m>1/N</m> for some positive integer <m>N &gt; 1</m>. Since <m>1/N\notin (-1,1)-K</m>, it follows that <m>(-\epsilon, \epsilon)\not\subseteq (-1,1)-K</m>. We conclude that <m>(-1,1)-K</m> is not open in the standard topology. 
         </p>
       </li>
       <li>
@@ -427,7 +430,7 @@
         </p>
       </li>
   </ul>
-  Given the total ordering <m>\leq</m> on <m>X</m>, we define the relation <m>&lt;</m> as <m>x&lt; y</m> if <m>x\leq y </m> and <m>x\ne y</m>. A <term>smallest element</term> of <m>X</m> is an element <m>x_0\in X</m> satisfying <m>x_0\leq y</m> for all <m>y\in Y</m>; a <term>largest element</term> of <m>X</m> is an element <m>y_0\in X</m> satisfying <m>x\leq y_0</m> for all <m>x\in X</m>.  Lastly, given elements <m>x,y\in X</m> we define the following subsets of <m>X</m>:
+  Given the total ordering <m>\leq</m> on <m>X</m>, we define the relation <m>&lt;</m> as <m>x&lt; y</m> if <m>x\leq y </m> and <m>x\ne y</m>. A <term>smallest element</term> of <m>X</m> is an element <m>x_0\in X</m> satisfying <m>x_0\leq y</m> for all <m>y\in X</m>; a <term>largest element</term> of <m>X</m> is an element <m>y_0\in X</m> satisfying <m>x\leq y_0</m> for all <m>x\in X</m>.  Lastly, given elements <m>x,y\in X</m> we define the following subsets of <m>X</m>:
   <md>
     <mrow>(x,y) \amp =\{z\in X\colon x&lt; z \text{ and } z&lt; y\}  </mrow>
     <mrow>[x,y] \amp =\{z\in X\colon x\leq z \text{ and } z\leq y\}  </mrow>

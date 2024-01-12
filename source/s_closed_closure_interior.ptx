@@ -24,9 +24,9 @@
       </p>
     </li>
     <li>
-      <title>Finite unions</title>
+      <title>Finite union</title>
       <p>
-        If <m>C_1, C_2,\dots , C_n</m> are closed, then <m>\bigcup_{i=1}^n C_i</m> is closed.
+        If <m>C_1</m> and <m>C_2</m> are closed, then <m>C_1\cap C_2</m> is closed.
       </p>
     </li>
     <li>
@@ -43,14 +43,14 @@
       Statement (1) follows from the observation that <m>\emptyset^c=X</m>, and <m>X^c=\emptyset</m>.
     </p>
     <p>
-      Assume <m>C_i</m> is closed for <m>1\leq i\leq n</m>; then by DeMorgan's law
+      Assume <m>C_i</m> is closed for <m>1\leq i\leq 2</m>; then by De Morgan's law
       <me>
-        \left(\bigcup_{i=1}^nC_i\right)^c=\bigcap_{i=1}^n C_i^c
+        (C_1\cup C_2)^c=C_1^c\cap C_2^c
       </me>,
-      which is open since <m>C_i^c</m> is open for all <m>1\leq i\leq n</m> and finite intersections of open sets are open. This proves (2).
+      which is open since <m>C_i^c</m> is open for  <m>1\leq i\leq 2</m> and finite intersections of open sets are open. This proves (2).
     </p>
     <p>
-      Lastly, assume <m>C_i</m> is closed for all <m>i\in I</m>. By DeMorgan's law we have
+      Lastly, assume <m>C_i</m> is closed for all <m>i\in I</m>. By De Morgan's law we have
       <me>
         \left(\bigcap_{i\in I}C_i\right)^c=\bigcup_{i\in I}C_i^c
       </me>,
@@ -71,6 +71,52 @@
       that is self-inverse: <ie />, we have <m>(Y^c)^c=Y</m> for all subsets <m>Y\subseteq X</m>. It follows from the <xref ref="d_closed_set"/> that the closed sets of <m>X</m> are in bijective correspondence with the open sets, and thus that a topology on <m>X</m> is uniquely determined by specifying any collection of sets satisfying (1)-(3) from <xref ref="th_closed_props"/>. In other words, a topology is determined by specifying either its open sets or its closed sets.
     </p>
 </remark>
+<definition xml:id="d_closed_axioms">
+  <title>Closed sets axioms</title>
+  <statement>
+    <p>
+      Let <m>X</m> be a set. A collection of subsets <m>\mathcal{C}\subseteq \mathcal{P}(X)</m> is said to satisfy the <term>closed sets axioms</term> if the following properties hold. 
+      <ol>
+        <li>
+          <title>Trivial sets</title>
+          <p>
+            <m>\emptyset\in \mathcal{C}</m> and <m>X\in \mathcal{C}</m>. 
+          </p>
+        </li>
+        <li>
+          <title>Finite union</title>
+          <p>
+            If <m>C_1, C_2\in \mathcal{C}</m>, then <m>\mathcal{C}_1\cup \mathcal{C}_2\in \mathcal{C}</m>.
+          </p>
+        </li>
+        <li>
+          <title>Arbitrary intersection</title>
+          <p>
+            Given any collection <m>\{C_i\}_{i\in I}</m> of elements <m>C_i\in \mathcal{C}</m>, we have <m>C=\bigcap_{i\in I}C_i\in \mathcal{C}</m>. 
+          </p>
+        </li>
+      </ol> 
+    </p>
+  </statement>
+</definition>
+<theorem xml:id="th_closed_axioms">
+  <title>Closed sets axioms</title>
+  <statement>
+    <p>
+      Given a set <m>X</m> and collection <m>\mathcal{C}\subseteq \mathcal{P}(X)</m> satisfying the <xref ref="d_closed_axioms" text="custom">closed sets axioms</xref>, the set 
+      <me>
+        \mathcal{T}=\{C^c\colon C\in \mathcal{C}\}
+      </me>
+      is a topology on <m>X</m> whose closed sets are precisely the elements of <m>\mathcal{C}</m>.   
+    </p>
+  </statement>
+  <proof>
+    <p>
+      The proof, which is essentially an application of De Morgan's laws, is left to the reader. 
+    </p>
+  </proof>
+</theorem>
+
 <example xml:id="eg_closed_trivial_discrete">
   <title>Closed in trivial and discrete topologies</title>
     <p>
@@ -156,7 +202,7 @@
   <title>Interior and closure of a set</title>
   <statement>
     <p>
-      Let <m>A</m> be a subset of the topological space <m>(X</m>.
+      Let <m>A</m> be a subset of the topological space <m>X</m>.
     <ol>
       <li>
         <title>Interior</title>

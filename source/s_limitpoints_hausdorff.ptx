@@ -1,10 +1,6 @@
         <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="s_limitpoints_hausdorff">
           <title>Limit points and the Hausdorff property</title>
-          <introduction>
-            <p>
-
-            </p>
-        </introduction>
+        
         <definition xml:id="d_neighborhood">
           <title>Neighborhood of element or set</title>
           <statement>
@@ -29,7 +25,7 @@
           <statement>
             <p>
               Let <m>X=\R</m> with the standard topology. Determine the set <m>L</m> of all limit points for the following sets.
-            </p>
+            
             <ol>
               <li>
                 <p>
@@ -52,10 +48,32 @@
                 </p>
               </li>
             </ol>
+          </p>
           </statement>
           <solution>
             <p>
-
+            <ol>
+              <li>
+                <p>
+                   We have $L=[0,1]$ in this case. For any <m>x\in [0,1]</m> and any metric ball <m>B_\epsilon(x)</m>, it is clear that $B_\epsilon(x)$ contains infinitely many elements of $[0,1]$. Thus $[0,1]\subseteq L$. Furthermore, since $[0,1]$ is closed, for any $x\notin [0,1]$ there is an open set $U$ containing $x$ such that $U\cap [0,1]=\emptyset$. Thus $L\subseteq [0,1]$. 
+                </p>
+              </li>
+              <li>
+                <p>
+                  We have <m>L=\emptyset</m> in this. Indeed it is easy to see that for any $x\in \R$ we can find an open ball <m>B_\epsilon(x)</m> such that <m>B_\epsilon(x)\cap \Z=\{x\}</m> or <m>B_\epsilon(x)\cap \Z=\emptyset</m>. 
+                </p>
+              </li>
+              <li>
+                <p>
+                  It is easy to see that $L=\{0\}$ in this case. 
+                </p>
+              </li>
+              <li>
+                <p>
+                  In this case we have <m>L=\R</m>: for any <m>x\in \R</m> and any open ball <m>B_\epsilon(x)</m>, there are infinitely many elements of <m>B_\epsilon(x)\cap \Q</m>. 
+                </p>
+              </li>
+            </ol>
             </p>
           </solution>
         </example>
@@ -69,13 +87,30 @@
               </me>.
             </p>
           </statement>
+          <proof>
+            <p>
+              We will show that <m>\overline{A}\subseteq A\cup A'</m> and <m>A\cup A'\subseteq \overline{A}</m>. 
+              <case>
+                <title>Inclusion \overline{A}\subseteq A\cup A'</title> 
+                <p>
+                  Assume <m>x\in \overline{A}</m> and <m>x\notin A</m>. Since <m>x\in \overline{A}</m>, for any open <m>U</m> containing <m>x</m>, there is any element <m>y\in U\cap A</m>. Since <m>x\notin A</m>, we must have <m>x\ne y</m>. Thus <m>U-\{x\}\cap A=\emptyset</m> and we see that <m>x\in A'</m>.
+                </p> 
+              </case>
+              <case>
+                <title>Inclusion \overline{A}\supseteq A\cup A'</title> 
+                <p>
+                  If <m>x\in A\cup A'</m>, then for all open sets <m>U</m> containing <m>x</m>, we have <m>U\cap A\ne\emptyset</m>. Thus <m>x\in \overline{A}</m>. 
+                </p> 
+              </case>
+            </p>
+          </proof>
         </theorem>
         <corollary xml:id="cor_closed">
           <title>Closed, closure, limit points</title>
           <statement>
             <p>
               Let <m>A</m> be a subset of the topological space <m>X</m>. The following are equivalent.
-            </p>
+            
             <ol>
               <li>
                 <p>
@@ -93,7 +128,40 @@
                 </p>
               </li>
             </ol>
+          </p>
           </statement>
+          <proof>
+            <p>
+              Throughout we let <m>A'</m> be the set of limit points of <m>A</m>. 
+            </p>
+              <case>
+                <title>Implication: <m>(1)\implies (2)</m></title>
+                <p>
+                  If <m>A</m> is closed, then by <xref ref="th_limits_points_closure"/> we have 
+                  <me>
+                    A=\overline{A}=A\cup A'
+                  </me>.
+                  It follows that <m>A'\subseteq A</m>, as desired. 
+                </p>
+                
+              </case>
+              <case>
+                <title>Implication: <m>(2)\implies (3)</m></title>
+                <p>
+                  If <m>A'\subseteq A</m>, then again by <xref ref="th_limits_points_closure"/> we have 
+                  <me>
+                    \overline{A}=A\cup A'=A
+                  </me>.
+                </p>
+              </case>
+              <case>
+                <title>Implication: <m>(3)\implies (1)</m></title>
+                <p>
+                 The implication is obvious since <m>\overline{A}</m> is closed. 
+                </p>
+                
+              </case>
+          </proof>
         </corollary>
         <definition xml:id="d_Hausdorff">
           <title>Hausdorff property</title>
@@ -108,7 +176,6 @@
           <statement>
             <p>
               Let <m>X</m> be a Hausdorff space.
-            </p>
             <ol>
               <li>
                 <p>
@@ -121,7 +188,24 @@
                 </p>
               </li>
             </ol>
+          </p>
           </statement>
+          <proof>
+            <p>
+              <ol>
+                <li>
+                  <p>
+                    Fix any <m>x\in X</m>. For any <m>y\ne x</m>, there exist disjoint open sets <m>U, V</m> containing <m>x</m> and <m>y</m>, respectively. In particular, we have <m>V\cap \{x\}=\emptyset</m>. It follows that <m>y\notin \overline{\{x\}}</m>. and thus that <m>\overline{\{x\}}=\{x\}</m>. Thus <m>\{x\}</m> is closed.  
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    This follows easily since a finite union of closed sets is closed. 
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </proof>
         </theorem>
         <definition xml:id="d_T1">
           <title>The <m>T_1</m>-axiom</title>
@@ -142,12 +226,10 @@
         </remark>
         <corollary xml:id="cor_Hausdorff_T1">
           <title>Hausdorff versus <m>T_1</m></title>
-
-
           <statement>
             <p>
               Let <m>X</m> be a topological space.
-            </p>
+            
             <ol>
               <li>
                 <p>
@@ -160,7 +242,6 @@
                 </p>
               </li>
             </ol>
-            <p>
               Using logical shorthand, we have
             <mdn>
               <mrow xml:id="eq_Hausdorff_implies_T1">\text{ Hausdorff} \amp\implies T_1 </mrow>
@@ -169,22 +250,29 @@
           </p>
           </statement>
           <proof>
-            <p>
-              Statement (1) follows from <xref ref="th_Hausdorff_props"/>.
-            </p>
-            <p>
-              We provide a counterexample to the claim that <m>T_1</m> implies Hausdorff. Let <m>X</m> be any <em>infinite</em> set endowed with the cofinite topology. The closed sets of <m>X</m> are precisely the finite sets and <m>X</m> itself, as we saw in <xref ref="eg_closed_cofinite"/>. Thus <m>X</m> is <m>T_1</m>. On the other hand, <m>X</m> is not Hausdorff. Indeed take any two distinct elements <m>x, y\in X</m>. Let <m>U_x</m> and <m>U_y</m> be any pair of open neighborhoods of <m>x</m> and <m>y</m>, respectively. We will show that <m>U_x\cap U_y\ne \emptyset</m>. If either of the open neighborhoods is equal to <m>X</m> itself, the claim is obvious. Otherwise <m>C=U_x^c</m> is a finite set that does not contain <m>x</m> and <m>D=U_y^c</m> is a finite set that does not contain <m>y</m>.
-              Since <m>X</m> is infinite, <m>X\ne C\cup D</m>, and hence
-              <me>
-              U_x\cap U_y=C^c\cap D^c=(C\cup D)^c\ne \emptyset
-              </me>,
-              as desired.
-            </p>
+            <ol>
+              <li>
+                <p>
+                  This follows immediately from <xref ref="th_Hausdorff_props"/>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  We provide a counterexample to the claim that <m>T_1</m> implies Hausdorff. Let <m>X</m> be any <em>infinite</em> set endowed with the cofinite topology. The closed sets of <m>X</m> are precisely the finite sets and <m>X</m> itself, as we saw in <xref ref="eg_closed_cofinite"/>. Thus <m>X</m> is <m>T_1</m>. On the other hand, <m>X</m> is not Hausdorff. Indeed take any two distinct elements <m>x, y\in X</m>. Let <m>U_x</m> and <m>U_y</m> be any pair of open neighborhoods of <m>x</m> and <m>y</m>, respectively. We will show that <m>U_x\cap U_y\ne \emptyset</m>. If either of the open neighborhoods is equal to <m>X</m> itself, the claim is obvious. Otherwise <m>C=U_x^c</m> is a finite set that does not contain <m>x</m> and <m>D=U_y^c</m> is a finite set that does not contain <m>y</m>.
+                  Since <m>X</m> is infinite, <m>X\ne C\cup D</m>, and hence
+                  <me>
+                  U_x\cap U_y=C^c\cap D^c=(C\cup D)^c\ne \emptyset
+                  </me>,
+                  as desired.
+                </p>
+              </li>
+            </ol>
           </proof>
         </corollary>
         <example xml:id="eg_metric_implies_Hausdorff">
           <title>Metric spaces are Hausdorff</title>
           <statement>
+            <p>
             <ol>
               <li>
                 <p>
@@ -197,7 +285,8 @@
                 </p>
               </li>
             </ol>
-          </statement>
+          </p>
+        </statement>
           <solution>
             <p>
               <ol>
@@ -221,7 +310,7 @@
           </solution>
         </example>
         <p>
-          The <em>Zariski topology</em> on <m>\R^n</m> is an example of a non-Hausdorff topology that is the basis for algebraic geometry.
+          The <em>Zariski topology</em> on <m>\R^n</m> is an important example of a non-Hausdorff topology. This topology plays an important role in algebraic geometry.
         </p>
         <project>
           <title>Zariski topology on <m>\R^n</m></title>
@@ -242,6 +331,7 @@
             </p>
           </proof>
         </project>
+        
         <definition xml:id="d_convergent_sequence">
           <title>Convergent sequence</title>
           <statement>
@@ -289,7 +379,14 @@
           </statement>
           <proof>
             <p>
-              See Munkres. 
+              The reverse implication <m>(\impliedby)</m> is obvious.  
+            </p>
+            <p>
+              For the forward implication <m>(\implies)</m> we will show the contrapositive. To this end, suppose there is an open neighborhood <m>U</m> of <m>x</m> such that <m>U\cap A</m> is finite. Since finite sets are closed in <m>X</m>, given any subset <m>B\subseteq U\cap A</m>, we have  
+              <me>
+                U-B=U\cap B^c
+              </me>
+              is open. Taking <m>B=A-\{x\}</m>, we see that <m>V=U-B</m> is open, contains <m>x</m>, and satisfies <m>V\cap A\subseteq \{x\}</m>. It follows that <m>x</m> is not a limit of point of <m>A</m>, as desired. 
             </p>
           </proof>
 

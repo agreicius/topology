@@ -1,5 +1,5 @@
         <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="s_subspace_finite_products">
-          <title>Subspaces and products</title>
+          <title>Subspaces and finite products</title>
           <introduction>
             <p>
               <em>Subspaces</em> and <em>product spaces</em> are constructions that allow us to build new topological spaces from existing ones.
@@ -181,16 +181,16 @@
       <title>Product basis not a topology necessarily</title>
       <statement>
         <p>
-          Let <m>X_1=X_2=\R</m> with the standard topology, and let <m>X=X_1\times X_2=\R\times \R</m> with the product topology.
+          Consider the product topology <m>\mathcal{T}</m> on <m>X=\R^2=\R\times \R</m>,  where each copy of <m>\R</m> is equipped with the standard topology. 
           <ol>
             <li>
               <p>
-                Describe the open sets of <m>X=\R\times \R</m> qualitatively. Give an example demonstrating that the product basis is not a topology in this case.
+                Describe the open sets of <m>\mathcal{T}</m> qualitatively. Give an example demonstrating that the product basis is not a topology in this case.
               </p>
             </li>
             <li>
               <p>
-                Show that the product topology on <m>X=\R^2</m> is equal to the the Euclidean topology.
+                Show that <m>\mathcal{T}</m> is equal to the the Euclidean topology.
               </p>
             </li>
           </ol>

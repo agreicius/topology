@@ -14,12 +14,22 @@
 <article class="example example-like"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.5.3</span><span class="period">.</span><span class="space"> </span><span class="title">Limit points in <span class="process-math">\(\R\)</span>.</span>
 </h3>
-<div class="para">Let <span class="process-math">\(X=\R\)</span> with the standard topology. Determine the set <span class="process-math">\(L\)</span> of all limit points for the following sets.</div> <ol class="decimal">
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(X=\R\)</span> with the standard topology. Determine the set <span class="process-math">\(L\)</span> of all limit points for the following sets.</div>
+<ol class="decimal">
 <li><div class="para"><span class="process-math">\(\displaystyle (0,1)\)</span></div></li>
 <li><div class="para"><span class="process-math">\(\displaystyle \Z\)</span></div></li>
 <li><div class="para"><span class="process-math">\(\displaystyle K=\{1/n\colon n\in \Z_+\}\)</span></div></li>
 <li><div class="para"><span class="process-math">\(\displaystyle \Q\)</span></div></li>
 </ol>
-<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para"></div></div></details></div></article><span class="incontext"><a class="internal" href="s_limitpoints_hausdorff.html#eg_limit_points">in-context</a></span>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical"><ol class="decimal">
+<li><div class="para">We have $L=[0,1]$ in this case. For any <span class="process-math">\(x\in [0,1]\)</span> and any metric ball <span class="process-math">\(B_\epsilon(x)\text{,}\)</span> it is clear that $B_\epsilon(x)$ contains infinitely many elements of $[0,1]$. Thus $[0,1]\subseteq L$. Furthermore, since $[0,1]$ is closed, for any $x\notin [0,1]$ there is an open set $U$ containing $x$ such that $U\cap [0,1]=\emptyset$. Thus $L\subseteq [0,1]$.</div></li>
+<li><div class="para">We have <span class="process-math">\(L=\emptyset\)</span> in this. Indeed it is easy to see that for any $x\in \R$ we can find an open ball <span class="process-math">\(B_\epsilon(x)\)</span> such that <span class="process-math">\(B_\epsilon(x)\cap \Z=\{x\}\)</span> or <span class="process-math">\(B_\epsilon(x)\cap \Z=\emptyset\text{.}\)</span>
+</div></li>
+<li><div class="para">It is easy to see that $L=\{0\}$ in this case.</div></li>
+<li><div class="para">In this case we have <span class="process-math">\(L=\R\text{:}\)</span> for any <span class="process-math">\(x\in \R\)</span> and any open ball <span class="process-math">\(B_\epsilon(x)\text{,}\)</span> there are infinitely many elements of <span class="process-math">\(B_\epsilon(x)\cap \Q\text{.}\)</span>
+</div></li>
+</ol></div></div></details></div></article><span class="incontext"><a class="internal" href="s_limitpoints_hausdorff.html#eg_limit_points">in-context</a></span>
 </body>
 </html>

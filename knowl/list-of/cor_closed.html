@@ -14,12 +14,31 @@
 <article class="corollary theorem-like"><h3 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">1.5.5</span><span class="period">.</span><span class="space"> </span><span class="title">Closed, closure, limit points.</span>
 </h3>
-<div class="para">Let <span class="process-math">\(A\)</span> be a subset of the topological space <span class="process-math">\(X\text{.}\)</span> The following are equivalent.</div> <ol class="decimal">
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(A\)</span> be a subset of the topological space <span class="process-math">\(X\text{.}\)</span> The following are equivalent.</div>
+<ol class="decimal">
 <li><div class="para">
 <span class="process-math">\(A\)</span> is closed.</div></li>
 <li><div class="para">
 <span class="process-math">\(A\)</span> contains all of its limit points.</div></li>
 <li><div class="para"><span class="process-math">\(A=\overline{A}\text{.}\)</span></div></li>
-</ol></article><span class="incontext"><a class="internal" href="s_limitpoints_hausdorff.html#cor_closed">in-context</a></span>
+</ol>
+</div></article><details class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para">Throughout we let <span class="process-math">\(A'\)</span> be the set of limit points of <span class="process-math">\(A\text{.}\)</span>
+</div> <article class="case"><h4 class="heading">Implication: <span class="process-math">\((1)\implies (2)\)</span>.</h4> <div class="para logical">
+<div class="para">If <span class="process-math">\(A\)</span> is closed, then by <a href="" class="xref" data-knowl="./knowl/xref/th_limits_points_closure.html" title="Theorem 1.5.4: Limit points and closure">Theorem 1.5.4</a> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_limits_points_closure.html">
+\begin{equation*}
+A=\overline{A}=A\cup A'\text{.}
+\end{equation*}
+</div>
+<div class="para">It follows that <span class="process-math">\(A'\subseteq A\text{,}\)</span> as desired.</div>
+</div></article> <article class="case"><h4 class="heading">Implication: <span class="process-math">\((2)\implies (3)\)</span>.</h4> <div class="para logical">
+<div class="para">If <span class="process-math">\(A'\subseteq A\text{,}\)</span> then again by <a href="" class="xref" data-knowl="./knowl/xref/th_limits_points_closure.html" title="Theorem 1.5.4: Limit points and closure">Theorem 1.5.4</a> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_limits_points_closure.html">
+\begin{equation*}
+\overline{A}=A\cup A'=A\text{.}
+\end{equation*}
+</div>
+</div></article> <article class="case"><h4 class="heading">Implication: <span class="process-math">\((3)\implies (1)\)</span>.</h4> <div class="para">The implication is obvious since <span class="process-math">\(\overline{A}\)</span> is closed.</div></article></article></details><span class="incontext"><a class="internal" href="s_limitpoints_hausdorff.html#cor_closed">in-context</a></span>
 </body>
 </html>

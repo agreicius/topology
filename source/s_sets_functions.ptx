@@ -334,7 +334,7 @@
   <title>I-tuple</title>
   <statement>
     <p>
-      Let <m>I</m> be a set. Given a set <m>X</m>, an <term><m>I</m>-tuple</term> of elements of <m>X</m> is a function
+      Let <m>I</m> and <m>X</m> be sets. An <term><m>I</m>-tuple</term> with entries (or coordinates) in <m>X</m> is a function
       <m>
         f\colon I\rightarrow X
       </m>.
@@ -357,7 +357,7 @@
       <mrow> \prod_{i\in I}A_i\amp =\{f\colon I\rightarrow X\colon f(i)\in A_i \text{ for all } i\in I\} </mrow>
       <mrow>  \amp =\{(x_i)_{i\in I}\colon x_i\in A_i \text{ for all } i\in I\}</mrow>
       </md>.
-      In other words, the Cartesian product is the set of all <m>I</m>-tuples of elements of <m>X</m> whose <m>i</m>-th coordinate is an element of <m>A_i</m> for all <m>i\in I</m>.
+      In other words, the Cartesian product is the set of all <m>I</m>-tuples with coordinates in <m>X</m> whose <m>i</m>-th coordinate is an element of <m>A_i</m> for all <m>i\in I</m>.
     </p>
     <p>
       In the special case where <m>A_i=A</m> for all <m>i\in I</m>, we denote <m>\prod_{i\in I}A</m> as <m>A^I</m>.

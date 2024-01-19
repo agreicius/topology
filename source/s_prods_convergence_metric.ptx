@@ -216,14 +216,14 @@
     </p>
   </statement>
 </remark>
-    <remark xml:id="rm_nonequivalent_norms">
+    <!-- <remark xml:id="rm_nonequivalent_norms">
       <title>Nonequivalent norms</title>
   <statement>
     <p>
       Both the uniform metric <m>\rho</m> from <xref ref="top_eg_uniform_topology"/> and the metrix <m>D</m> from <xref ref="th_prod_metric"/> are induced by norms. Since they induce different topologies on <m>\R^\omega</m>, they furnish us with an example of two nonequivalent norms on an infinite-dimensional real vector space.
     </p>
   </statement>
-</remark>
+</remark> -->
 
 
 

@@ -15,6 +15,26 @@
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.4.14</span><span class="period">.</span><span class="space"> </span><span class="title">Interior and closure in cofinite topology.</span>
 </h3>
 <div class="para">Let <span class="process-math">\(X\)</span> be a set endowed with the cofinite topology. For <span class="process-math">\(A\subseteq X\)</span> describe <span class="process-math">\(A^\circ\)</span> and <span class="process-math">\(\overline{A}\text{.}\)</span> Use cases.</div>
-<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para"></div></div></details></div></article><span class="incontext"><a class="internal" href="s_closed_closure_interior.html#s_closed_closure_interior-15">in-context</a></span>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para">If <span class="process-math">\(X\)</span> is finite, then the cofinite topology is equal to the discrete topology. In this case <span class="process-math">\(\overline{A}=A^\circ=A\)</span> for any subset <span class="process-math">\(A\subseteq X\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Now assume <span class="process-math">\(X\)</span> is infinite. If <span class="process-math">\(A\in \{\emptyset, X\}\text{,}\)</span> then <span class="process-math">\(\overline{A}=A^\circ=A\text{,}\)</span> since such an <span class="process-math">\(A\)</span> is both open and closed. Assume <span class="process-math">\(\emptyset\subsetneq A\subsetneq X\text{.}\)</span> Recall that nonempty open sets of <span class="process-math">\(X\)</span> are precisely the cofinite ones, and that the closed sets that precisely the finite ones (or else <span class="process-math">\(X\)</span> itself). Thus we have</div>
+<div class="displaymath process-math">
+\begin{align*}
+\overline{A}\amp=\bigcap_{\substack{C \text{ closed}\\ A\subseteq C}}C=X\cap \bigcap_{\substack{C \text{ finite}\\ A\subseteq C}}C=\begin{cases}
+X \amp \text{if } A \text{ infinite} \\
+A \amp \text{if } A \text{ finite}.
+\end{cases}  \\
+A^\circ \amp =\bigcup_{\substack{U \text{ open}\\ U\subseteq A}}U
+=\emptyset \cup \bigcup_{\substack{U \text{ cofinite}\\ U\subseteq A}}U
+=\begin{cases}
+\emptyset \amp \text{if } A \text{ not cofinite}\\
+A   \amp \text{if } A \text{ cofinite}
+\end{cases}\text{.}
+\end{align*}
+</div>
+<div class="para">Note, for the equalities above we use the fact that if <span class="process-math">\(A\)</span> is infinite (i.e., not finite), then it is not contained in any finite set; and if <span class="process-math">\(A\)</span> is not cofinite, then it does not contain any cofinite set.</div>
+</div>
+</div></details></div></article><span class="incontext"><a class="internal" href="s_closed_closure_interior.html#s_closed_closure_interior-15">in-context</a></span>
 </body>
 </html>

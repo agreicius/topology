@@ -343,7 +343,24 @@
   </statement>
   <solution>
     <p>
-
+      If <m>X</m> is finite, then the cofinite topology is equal to the discrete topology. In this case <m>\overline{A}=A^\circ=A</m> for any subset <m>A\subseteq X</m>. 
+    </p>
+    <p>
+      Now assume <m>X</m> is infinite. If <m>A\in \{\emptyset, X\}</m>, then <m>\overline{A}=A^\circ=A</m>, since such an <m>A</m> is both open and closed. Assume <m>\emptyset\subsetneq A\subsetneq X</m>. Recall that nonempty open sets of <m>X</m> are precisely the cofinite ones, and that the closed sets that precisely the finite ones (or else <m>X</m> itself). Thus we have 
+      <md>
+       <mrow>\overline{A}\amp=\bigcap_{\substack{C \text{ closed}\\ A\subseteq C}}C=X\cap \bigcap_{\substack{C \text{ finite}\\ A\subseteq C}}C=\begin{cases}
+        X \amp \text{if } A \text{ infinite} \\
+        A \amp \text{if } A \text{ finite}.
+        \end{cases}  </mrow> 
+      <mrow>A^\circ \amp =\bigcup_{\substack{U \text{ open}\\ U\subseteq A}}U
+        =\emptyset \cup \bigcup_{\substack{U \text{ cofinite}\\ U\subseteq A}}U
+        =\begin{cases}
+        \emptyset \amp \text{if } A \text{ not cofinite}\\
+        A   \amp \text{if } A \text{ cofinite}
+        \end{cases}
+      </mrow>
+      </md>.
+      Note, for the equalities above we use the fact that if <m>A</m> is infinite (i.e., not finite), then it is not contained in any finite set; and if <m>A</m> is not cofinite, then it does not contain any cofinite set.  
     </p>
   </solution>
 </example>

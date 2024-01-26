@@ -165,7 +165,6 @@
     <ol>
       <li>
         <p>
-          <xref ref=""/>
           <m>f</m> is continuous.
         </p>
       </li>
@@ -181,8 +180,6 @@
       </li>
       <li>
         <title>Continuity at <m>x</m></title>
-      
-        
         <p>
           For all <m>x\in X</m> and all sets  <m>V\subseteq Y</m> containing <m>y=f(x)</m>, there is an open set <m>U\subseteq X</m> containing <m>x</m> such that <m>f(U)\subseteq V</m>.
         </p>

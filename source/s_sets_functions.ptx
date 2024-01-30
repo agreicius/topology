@@ -596,7 +596,7 @@
     </proof> -->
 
 </subsection>
-<subsection xml:id="subsec-">
+<subsection xml:id="ss_cardinality">
   <title>Cardinality and countability</title>
   <definition xml:id="d_cardinality">
     <title>Cardinality</title>

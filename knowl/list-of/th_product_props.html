@@ -63,16 +63,32 @@ x \amp\in B=\prod_{i\in I}X_i \in \mathcal{B}_{\operatorname{prod}} \text{.}
 <div class="para">I’ll leave the details to you.</div>
 </div>
 </li>
-<li><div class="para logical">
-<div class="para">In both cases (box and product) let <span class="process-math">\(\mathcal{B}\)</span> be the corresponding basis, as defined in <a href="" class="xref" data-knowl="./knowl/xref/top_eg_arbitrary_product.html" title="Topological specimen 11: Product space (arbitrary)">Topological specimen 11</a>. We have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/top_eg_arbitrary_product.html ./knowl/xref/top_eg_arbitrary_product.html">
-\begin{align*}
-U \text{ open in } A \amp \iff \text{ for all } x\in U, x\in B\cap A\subseteq U, B=\prod_{i\in I}U_i\in \mathcal{B} \\
-\amp\iff \text{ for all } x\in U, x\in \prod_{i\in I} U_i\cap A \subseteq U, B=\prod_{i\in I}U_i \in \mathcal{B}  \text{.}
-\end{align*}
+<li>
+<div class="para">It helps to formulate this result in plain English: we wish to show that the subspace topology of the (box) product topology is equal to the (box) product topology of the subspace topologies.</div>
+<div class="para logical">
+<div class="para">Fix a choice of topology <span class="process-math">\(\mathcal{T}\in \{\mathcal{T}_{\operatorname{box}}, \mathcal{T}_{\operatorname{prod}}\}\text{,}\)</span> let <span class="process-math">\(\mathcal{B}\in \{\mathcal{B}_{\operatorname{box}}, \mathcal{B}_{\operatorname{prod}}\}\)</span> be the corresponding basis as defined in <a href="" class="xref" data-knowl="./knowl/xref/top_eg_arbitrary_product.html" title="Topological specimen 11: Product space (arbitrary)">Topological specimen 11</a>, and let <span class="process-math">\(\mathcal{T}_A\)</span> denote the corresponding subspace topology on <span class="process-math">\(A\text{.}\)</span> Recall (<a href="" class="xref" data-knowl="./knowl/xref/th_subspace_props.html" title="Theorem 1.6.1: Subspace properties">1.6.1</a>) that <span class="process-math">\(\mathcal{B}_A=\{B\cap A\colon B\in \mathcal{B}\}\)</span> is a basis for the subspace topology <span class="process-math">\(\mathcal{T}_A\text{.}\)</span> Thus</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/top_eg_arbitrary_product.html ./knowl/xref/th_subspace_props.html ./knowl/xref/eq_subpace_prod.html ./knowl/xref/top_eg_arbitrary_product.html ./knowl/xref/eq_subpace_prod.html">
+\begin{align}
+\amp \tag{1.7.1}
+\end{align}
 </div>
-<div class="para">I claim that (in both box and product topology) the last line is equivalent to <span class="process-math">\(U\)</span> being open in the box or product topology on the product of the subspaces <span class="process-math">\(A_i\text{.}\)</span> Indeed it says that <span class="process-math">\(U\)</span> is a union of elements of the form <span class="process-math">\(\prod_{i\in I}U_i\cap A\text{,}\)</span> where by definition of the standard bases in <a href="" class="xref" data-knowl="./knowl/xref/top_eg_arbitrary_product.html" title="Topological specimen 11: Product space (arbitrary)">Topological specimen 11</a> we have <span class="process-math">\(U_i\)</span> open in <span class="process-math">\(X_i\text{,}\)</span> and in the case where we use the product topology, <span class="process-math">\(U_i=X_i\)</span> for all but finitely many <span class="process-math">\(i\in I\text{.}\)</span> This is equivalent to <span class="process-math">\(\prod_{i\in I}U_i\cap A\)</span> being a basis element in either the box topology on the product of the subspaces or the product topology on the product of the subspaces.</div>
-</div></li>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/top_eg_arbitrary_product.html ./knowl/xref/th_subspace_props.html ./knowl/xref/eq_subpace_prod.html ./knowl/xref/top_eg_arbitrary_product.html ./knowl/xref/eq_subpace_prod.html">
+\begin{align}
+\mathcal{B}_A \amp = \{B\cap A\colon B=\prod_{i\in I}U_i\in \mathcal{B}\} \tag{1.7.2}\\
+\amp = \left\{ \prod_{i\in I}U_i\cap A_i\colon \prod_{i\in I}U_i\in \mathcal{B}\right\}\text{,}\tag{1.7.3}
+\end{align}
+</div>
+<div class="para">where the last equality follows from the set theory identity</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/top_eg_arbitrary_product.html ./knowl/xref/th_subspace_props.html ./knowl/xref/eq_subpace_prod.html ./knowl/xref/top_eg_arbitrary_product.html ./knowl/xref/eq_subpace_prod.html">
+\begin{equation*}
+\prod_{i\in I}U_i\cap \prod_{i\in I}A_i=\prod_{i\in I}U_i\cap A_i\text{.}
+\end{equation*}
+</div>
+<div class="para">Now observe that when <span class="process-math">\(\mathcal{B}=\mathcal{B}_{\operatorname{box}}\)</span> the set in <a href="" class="xref" data-knowl="./knowl/xref/eq_subpace_prod.html" title="Equation 1.7.3">(1.7.3)</a> is precisely the basis for the box product topology on the subspaces <span class="process-math">\((A_i, \mathcal{T}_{i, A_i})\)</span> as described in <a href="" class="xref" data-knowl="./knowl/xref/top_eg_arbitrary_product.html" title="Topological specimen 11: Product space (arbitrary)">Topological specimen 11</a>; and similarly, when <span class="process-math">\(\mathcal{B}=\mathcal{B}_{\operatorname{prod}}\)</span> the set in <a href="" class="xref" data-knowl="./knowl/xref/eq_subpace_prod.html" title="Equation 1.7.3">(1.7.3)</a> is the basis for the product topology on the subspaces <span class="process-math">\((A_i, \mathcal{T}_{i, A_i})\text{.}\)</span>
+</div>
+</div>
+<div class="para">Going back to our plan English formulation, we have shown that the subspace topology of the (box) product topology and the (box) product topology of the subspace topologies share a common basis (<a href="" class="xref" data-knowl="./knowl/xref/eq_subpace_prod.html" title="Equation 1.7.3">(1.7.3)</a>). It follows that the topologies themselves are equal.</div>
+</li>
 <li><div class="para">Assume <span class="process-math">\(X_i\)</span> is Hausdorff for all <span class="process-math">\(i\in I\text{.}\)</span> If <span class="process-math">\(x=(x_i)_{i\in I}\)</span> and <span class="process-math">\(y=(y_i)_{i\in I}\)</span> are distinct, then we have <span class="process-math">\(x_{i_0}\ne y_{i_0}\)</span> for some <span class="process-math">\(i_0\in I\text{.}\)</span> Since <span class="process-math">\(X_{i_0}\)</span> is Hausdorff, there are disjoint open neighborhoods <span class="process-math">\(U_{i_0}, V_{i_0}\)</span> of <span class="process-math">\(x_{i_0}, y_{i_0}\)</span> in <span class="process-math">\(X_{i_0}\text{.}\)</span> The sets <span class="process-math">\(U=U_{i_0}\times \prod_{i\ne i_0}X_i, V=V_{i_0}\times \prod_{i\ne i_0}X_i\text{,}\)</span> are disjoint open basis elements for both topologies containing <span class="process-math">\(x, y\text{,}\)</span> respectively. Thus <span class="process-math">\(X\)</span> is Hausdorff. The proof for the <span class="process-math">\(T_1\)</span> statement is similar.</div></li>
 <li>
 <div class="para logical">

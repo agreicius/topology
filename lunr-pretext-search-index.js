@@ -1207,274 +1207,58 @@ var ptx_lunr_docs = [
   "body": " Product basis not a topology necessarily   Consider the product topology on , where each copy of is equipped with the standard topology.   Describe the open sets of qualitatively. Give an example demonstrating that the product basis is not a topology in this case.    Show that is equal to the the Euclidean topology.       Firstly, as we will show in more generality in , the set forms a basis for the product topology on . Graphically, these basis elements are just open rectangles in the plane.    An open set in the product topology on is anything that can be written as a union of open rectangles, by the remark made above. To see that the product basis is not in general a topology, consider , where and . We claim that not only is not a product of open sets, it is in fact not the product of any sets. Indeed, if for two sets , then we would have to have , in which case . This is a contradiction since .    Using the remark above, it is enough to show that open circles (basis elements in the standard topology) can be written as unions of open rectangles (basis elements in the product topology) and vice versa. This is clear.     "
 },
 {
-  "id": "s_sets_functions",
+  "id": "s_product2",
   "level": "1",
-  "url": "s_sets_functions.html",
+  "url": "s_product2.html",
   "type": "Section",
   "number": "1.7",
-  "title": "Sets and functions",
-  "body": " Sets and functions    We gather here some notions about sets and functions.    Sets   sets  sets empty sets  sets membership      set membership   Sets   A set is a collection of objects. An object is a member (or element ) of a set if contains . In this case, we write . If is not a member of , we write .    We use curly braces to describe the contents of a set. For example, is the set containing the first three positive integers, and is the set of all positive integers. The defining property of sets is that they are completely determined by their members, and nothing more. In particular, when describing sets as above, it does not matter in what order the elements are listed, nor if they are repeated: , , , and are three descriptions of the same set. This somewhat slippery notion is made perfectly clear by specifying exactly what it means for two sets to be equal, as we do below.   Set equality  sets equality   Sets and are equal , denoted , if they have precisely the same elements: , if for any object , we have if and only if .    Set membership naturally extends to a notion of one set lying within another.   Set inclusion (subsets)  sets subset  sets inclusion    set inclusion    A set is a subset of a set , denoted , if every member of is a member of : , implies for any object . The relation is called set inclusion .      The definitions of set equality and the subset relation make use of two important logical operations: namely, the if and only if (or iff for short) and if-then operations.    With the fundamental notions of membership, equality, and subset in place, we now introduce means of building new sets from existing ones. The first is a manner of carving out a subset of a given set using a specified property.   Set-builder notation  sets set builder notation   Let be a set, and let be a property that elements of either satisfy or do not satisfy. For an element , let denote the statement that satisfies . The set of all elements of satisfying is denoted .      Set builder notation is parsed from left to right as follows:    is read as the set of      is read as elements of      is read as such that      is read as is true .   Taken altogether we get: The set of elements of such that is true .      Let be the set of nonnegative integers. The subset of even positive integers can be described using set-builder notation as , or alternatively, .    Next we use set builder notation, the set membership relation, and some basic logic to define the union, intersection, and difference of sets.   Union, intersection, difference, and complement  sets union  sets intersection    set union     set intersection   sets complement  sets difference      set difference     set complement    Let and be subsets of a common set .    Set union  The union  of and is defined as . More generally, if is a set and is a collection of sets indexed by , then the union  of this collection is defined as .    Set intersection  The intersection  of and is defined as . More generally, if is a set and is a collection of sets indexed by , then the intersection  of this collection is defined as     Set difference  The difference  is defined as .    Set complement  The complement of in is defined as . In contexts where there is clear what the larger set is, we denote the complement of in as .      With the help of these set operations, we can now describe some common sets used in mathematics.   sets empty set     the empty set   real numbers    real numbers   integers    integers     positive integers   rational numbers    rational numbers   Common mathematical sets   We denote by the set of all real numbers. The integers  and rational numbers  are the subsets of defined as . This yields the following chain of subsets: . The empty set is the set containing no objects, denoted or .  The set of all positive integers is denoted .    The power set of a set is the set of all subsets of . We will make use of this notion in our very first definition ( ).   power set    power set of   Power set   Given a set , its power set  is defined as the set of all subsets of .     Power set   Let . The power set is the set of all subsets of . We can enumerate systematically by listing all the subsets in order of increasing cardinality. There is one subset of containing zero elements: namely, the empty set . The two subsets of containing exactly one element are and . Lastly, the unique subset of containing two elements is itself. We conclude that . In general if has cardinality , then has cardinality .    Lastly, we define the cartesian product of sets, which is a formal description of an ordered collection of objects.   Cartesian product finite      Cartesian product   Cartesian product (finite)   An -tuple (or sequence ) of the sets is an ordered list such that for all . We define two -tuples , and to be equal, denoted , if for all . We call the length of the sequence , and we call its -th entry for all .  The (Cartesian) product of the sets , denoted or , is the set of all -tuples: , .  Given a set , its -ary Cartesian product  is defined as .      We have more suggestive names for -tuples when is small: a 2-tuple is called a pair, a 3-tuple is called a triple, a 4-tuple is called a quadruple, . We will use the generic term tuple to designate a -tuple of unspecified length.      Observe how tuples capture the notion of an ordered collection of object. For example, whereas the sets and are all equal to one another, the 4-tuples and are not: they differ in their second entries.  What about the tuples and ? Are these equal? Technically our definition of equality only applies to tuples living in the same fixed Cartesian product. In particular, for the question of equality to make sense, the tuples must have the same length. As such we will officially avoid writing things like , although unofficially we consider these two objects as completely different. You should think of and as creatures living on two different planets in the universe of tuples.    The notion of a Cartesian product can be generalized to an infinite list of sets , and indeed to any collection indexed by a set .   tuple arbitrary    -tuple   I-tuple   Let and be sets. An -tuple with entries (or coordinates) in is a function . Given an -tuple and element we will often denote the value as , and denote itself as . In analogy to finite tuples, we call the -th entry or coordinate of .     Cartesian product arbitrary    Cartesian product of the sets   Cartesian product (arbitrary)   Let be a set, and let be a collection of subsets indexed by the set . The Cartesian product  of this collection is defined as . In other words, the Cartesian product is the set of all -tuples with coordinates in whose -th coordinate is an element of for all .  In the special case where for all , we denote as .      Functions   Functions  function    a function from to    Let and be two sets. A function from to , denoted , is a rule which, given any input  , returns an output  . In this case we write and call the image of under , or the value of at  . Similarly, we say  maps (or sends ) the input to the output .  The set is called the domain of ; the set is called the codomain of .  When we wish to indicate what rule defines the function, we use the elaborated notation . This is read as The function with domain and codomain maps an input to the output .      Consider the function . This function has domain and codomain equal to and maps an integer to its square.     Arithmetic operations as functions   Our familiar arithmetic operations can be expressed as functions whose inputs are pairs of numbers: addition is the function and multiplication is the function       Invoking the notion of a rule in the definition of a function is admittedly somewhat vague. A more precise definition can be given using the Cartesian product. Namely, given sets and , we define a function to be a subset satisfying the following property: for all there is a unique element . The uniqueness of the pair then allows us to define the value of at as , denoted .    As with sets and tuples, we are obliged to specify what we mean for two functions to be equal. The definition below makes clear how the the domain and codomain, as well as the rule that takes inputs to outputs, are all essential ingredients of a function.   Function equality  function equality   Functions and are equal if   they have the same domain and codomain , and    for all , we have .        Image of a set  function image of a set  function image    image of the set under     image of a function    Given a function and a subset , the image of under , denoted , is defined as . In other words, is the set of all outputs , where .  The image of , denoted , is the set of all outputs of : , .     Preimage of set  preimage of a set    preimage of under    Given a function , the preimage of a subset is the subset defined as . In plain English: the preimage of under is the set of all whose image under lies in .     Injective, surjective, bijective  invertible function  bijective function  injective function  surjective function  one-to-one function  onto function  one-to-one correspondence   Let be a function.   The function is injective (or one-to-one ) if for all , if , then : equivalently, if , then .    The function is surjective (or onto ) if for all , there is an such that : equivalently, .    The function is bijective (or a one-to-one correspondence ) if it is injective and surjective.        Role of domain and codomain in injectivity and surjectivity   Consider the following three functions . Although all three functions are defined using the same rule ( ), they are not equal thanks to their differing domains and\/or codomains. The choice of domain and codomain in these examples also plays a crucial role in determining whether the function is injective and\/or surjective. The function is neither injective ( ) nor surjective ( ); the function is injective but not surjective; the function is both injective and surjective, hence bijective.     Function composition  function composition    the composition of and    Suppose and are functions satisfying . The composition of and is the function defined as , for all .     function invertible  function inverse  function identity  Identity and inverse functions   For any set the identity function on is the function defined as for all .  A function is invertible if there is a function satisfying and : , . The function in this case is called the inverse of , denoted .    Invertible is equivalent to bijective   A function is invertible if and only if it is bijective.       Cardinality and countability   Cardinality  cardinality  finite set  infinite set  countably infinite set  countable set  uncountable set    cardinality of set    Let be a set.    Finite and infinite sets  The set is finite if either or there is a bijection for some positive integer . Roughly speaking, the cardinality of a finite set , denoted , is the number of distinct elements it contains. In more detail if , then by definition; if there is a bijection , then .  The set is infinite if it is not finite. In this case is said to have infinite cardinality .    Countable and uncountable sets  The set is countably infinite if there is a bijection , where is the set of all positive integers; it is countable if it is either finite or countable infinite.  The set is uncountable if it is not countable.       "
+  "title": "Arbitrary products",
+  "body": " Arbitrary products   We now endeavor to give a topological structure to an arbitrary product of topological spaces. (See and for the definitions of arbitrary tuples and Cartesian products of sets.) As we will see, we can extend the finite product topology to this more general setting in two very different ways.    Product space (arbitrary)  Let be a collection of topological spaces. We define two distinct topologies on the the product .   Box topology  The box topology on is the topology generated by the basis .    Product topology  The product topology on is the topology generated by the basis .   We have ; when the index set is finite, we have .   To see that both collections are indeed bases, observe that for any we have , which is an element of in both cases; and that in both cases if we have , , then , is also an element of .     Product coarser than box   It is clear from the definition that we always have , and hence the product topology is coarser than (contained in) the box topology.    Following Munkres, given a set and the special index set , we write for as a shorthand.   Infinite binary sequences   Let .   Compare the box and product topologies on , where is given the discrete topology.    Compare the box and product topologies on , where is given the trivial topology.       As observed in , the product topology is always contained in the box topology. Let's see whether the inclusion is strict in either case.    Assume has the discrete topology. Since is open in , the set is open in the box topology. To see that it is not open in the product topology, take and let contains . By definition, we have for some , where is an open subset of . Since , we have . Since for all , the element , from which it follows that . We conclude that is not a union of basis elements of the product topology, and hence is not open in the product topology.  It is easy to see that is discrete in the box topology. The argument above shows that is not discrete in the product topology, since the singleton is not open.    Now equip with the trivial topology. Since the only open subsets of are and it follows that a basis element in either topology is either empty (if for any  ) or equal to (if for all ). Since the bases of the two topologies are equal, the topologies are equal. Furthermore, since the only basis elements are and , the topology on is just the trivial one: , we have .       Properties of product spaces   Let be a collection of topological spaces, and let be the box and product topologies on .    Let be a basis for for all . The set is a basis for .  Similarly, the collection of all subsets of of the form , where for all indices in a finite set and for all , is a basis for .    Given subspaces for all , let . The box (resp., product) topology on is equal to the box (resp., product) subspace topology on .    If is Hausdorff (resp., ) for all , then is Hausdorff (resp., ) with respect to both the box and product topologies.    Given subsets for all , we have , where the closure on the right can be taken either with respect to box or product topology on .        We prove each basis axiom separately (for both the box and product basis).  Axiom 1. Given , we can find basis elements containing . We have . Axiom 2. This axiom follows readily from the set theoretic fact that . I'll leave the details to you.    It helps to formulate this result in plain English: we wish to show that the subspace topology of the (box) product topology is equal to the (box) product topology of the subspace topologies.  Fix a choice of topology , let be the corresponding basis as defined in , and let denote the corresponding subspace topology on . Recall ( ) that is a basis for the subspace topology . Thus  , where the last equality follows from the set theory identity . Now observe that when the set in is precisely the basis for the box product topology on the subspaces as described in ; and similarly, when the set in is the basis for the product topology on the subspaces .  Going back to our plan English formulation, we have shown that the subspace topology of the (box) product topology and the (box) product topology of the subspace topologies share a common basis ( ). It follows that the topologies themselves are equal.    Assume is Hausdorff for all . If and are distinct, then we have for some . Since is Hausdorff, there are disjoint open neighborhoods of in . The sets , are disjoint open basis elements for both topologies containing , respectively. Thus is Hausdorff. The proof for the statement is similar.    We prove the equality by showing . . If , there is an index such that , and thus an open set such that . The set is open in both topologies (box and product), contains , and is disjoint with . We conclude that in both topologies.   . If there is an open basis element in the topology (box or product) containing that is disjoint with . It follows that we must have for some and open , and thus that . We conclude that .      "
 },
 {
-  "id": "d_sets",
+  "id": "top_eg_arbitrary_product",
   "level": "2",
-  "url": "s_sets_functions.html#d_sets",
-  "type": "Definition",
+  "url": "s_product2.html#top_eg_arbitrary_product",
+  "type": "Topological specimen",
+  "number": "11",
+  "title": "Product space (arbitrary).",
+  "body": " Product space (arbitrary)  Let be a collection of topological spaces. We define two distinct topologies on the the product .   Box topology  The box topology on is the topology generated by the basis .    Product topology  The product topology on is the topology generated by the basis .   We have ; when the index set is finite, we have .   To see that both collections are indeed bases, observe that for any we have , which is an element of in both cases; and that in both cases if we have , , then , is also an element of .   "
+},
+{
+  "id": "rm_box_product",
+  "level": "2",
+  "url": "s_product2.html#rm_box_product",
+  "type": "Remark",
   "number": "1.7.1",
-  "title": "Sets.",
-  "body": " sets  sets empty sets  sets membership      set membership   Sets   A set is a collection of objects. An object is a member (or element ) of a set if contains . In this case, we write . If is not a member of , we write .   "
+  "title": "Product coarser than box.",
+  "body": " Product coarser than box   It is clear from the definition that we always have , and hence the product topology is coarser than (contained in) the box topology.   "
 },
 {
-  "id": "d_set_equality",
+  "id": "s_product2-5",
   "level": "2",
-  "url": "s_sets_functions.html#d_set_equality",
-  "type": "Definition",
+  "url": "s_product2.html#s_product2-5",
+  "type": "Notation",
   "number": "1.7.2",
-  "title": "Set equality.",
-  "body": " Set equality  sets equality   Sets and are equal , denoted , if they have precisely the same elements: , if for any object , we have if and only if .   "
+  "title": "",
+  "body": "Following Munkres, given a set and the special index set , we write for as a shorthand. "
 },
 {
-  "id": "d_set_inclusion",
+  "id": "eg_product_binary",
   "level": "2",
-  "url": "s_sets_functions.html#d_set_inclusion",
-  "type": "Definition",
+  "url": "s_product2.html#eg_product_binary",
+  "type": "Example",
   "number": "1.7.3",
-  "title": "Set inclusion (subsets).",
-  "body": " Set inclusion (subsets)  sets subset  sets inclusion    set inclusion    A set is a subset of a set , denoted , if every member of is a member of : , implies for any object . The relation is called set inclusion .   "
+  "title": "Infinite binary sequences.",
+  "body": " Infinite binary sequences   Let .   Compare the box and product topologies on , where is given the discrete topology.    Compare the box and product topologies on , where is given the trivial topology.       As observed in , the product topology is always contained in the box topology. Let's see whether the inclusion is strict in either case.    Assume has the discrete topology. Since is open in , the set is open in the box topology. To see that it is not open in the product topology, take and let contains . By definition, we have for some , where is an open subset of . Since , we have . Since for all , the element , from which it follows that . We conclude that is not a union of basis elements of the product topology, and hence is not open in the product topology.  It is easy to see that is discrete in the box topology. The argument above shows that is not discrete in the product topology, since the singleton is not open.    Now equip with the trivial topology. Since the only open subsets of are and it follows that a basis element in either topology is either empty (if for any  ) or equal to (if for all ). Since the bases of the two topologies are equal, the topologies are equal. Furthermore, since the only basis elements are and , the topology on is just the trivial one: , we have .     "
 },
 {
-  "id": "rm_equal_subset_logic",
+  "id": "th_product_props",
   "level": "2",
-  "url": "s_sets_functions.html#rm_equal_subset_logic",
-  "type": "Remark",
-  "number": "1.7.4",
-  "title": "",
-  "body": "  The definitions of set equality and the subset relation make use of two important logical operations: namely, the if and only if (or iff for short) and if-then operations.   "
-},
-{
-  "id": "d_set_builder_notation",
-  "level": "2",
-  "url": "s_sets_functions.html#d_set_builder_notation",
-  "type": "Definition",
-  "number": "1.7.5",
-  "title": "Set-builder notation.",
-  "body": " Set-builder notation  sets set builder notation   Let be a set, and let be a property that elements of either satisfy or do not satisfy. For an element , let denote the statement that satisfies . The set of all elements of satisfying is denoted .   "
-},
-{
-  "id": "rm_set_builder",
-  "level": "2",
-  "url": "s_sets_functions.html#rm_set_builder",
-  "type": "Remark",
-  "number": "1.7.6",
-  "title": "",
-  "body": "  Set builder notation is parsed from left to right as follows:    is read as the set of      is read as elements of      is read as such that      is read as is true .   Taken altogether we get: The set of elements of such that is true .   "
-},
-{
-  "id": "ex_set_builder",
-  "level": "2",
-  "url": "s_sets_functions.html#ex_set_builder",
-  "type": "Example",
-  "number": "1.7.7",
-  "title": "",
-  "body": "  Let be the set of nonnegative integers. The subset of even positive integers can be described using set-builder notation as , or alternatively, .   "
-},
-{
-  "id": "d_set_operations",
-  "level": "2",
-  "url": "s_sets_functions.html#d_set_operations",
-  "type": "Definition",
-  "number": "1.7.8",
-  "title": "Union, intersection, difference, and complement.",
-  "body": " Union, intersection, difference, and complement  sets union  sets intersection    set union     set intersection   sets complement  sets difference      set difference     set complement    Let and be subsets of a common set .    Set union  The union  of and is defined as . More generally, if is a set and is a collection of sets indexed by , then the union  of this collection is defined as .    Set intersection  The intersection  of and is defined as . More generally, if is a set and is a collection of sets indexed by , then the intersection  of this collection is defined as     Set difference  The difference  is defined as .    Set complement  The complement of in is defined as . In contexts where there is clear what the larger set is, we denote the complement of in as .     "
-},
-{
-  "id": "d_common_sets",
-  "level": "2",
-  "url": "s_sets_functions.html#d_common_sets",
-  "type": "Definition",
-  "number": "1.7.9",
-  "title": "Common mathematical sets.",
-  "body": " sets empty set     the empty set   real numbers    real numbers   integers    integers     positive integers   rational numbers    rational numbers   Common mathematical sets   We denote by the set of all real numbers. The integers  and rational numbers  are the subsets of defined as . This yields the following chain of subsets: . The empty set is the set containing no objects, denoted or .  The set of all positive integers is denoted .   "
-},
-{
-  "id": "d_power_set",
-  "level": "2",
-  "url": "s_sets_functions.html#d_power_set",
-  "type": "Definition",
-  "number": "1.7.10",
-  "title": "Power set.",
-  "body": " power set    power set of   Power set   Given a set , its power set  is defined as the set of all subsets of .   "
-},
-{
-  "id": "eg_power_set",
-  "level": "2",
-  "url": "s_sets_functions.html#eg_power_set",
-  "type": "Example",
-  "number": "1.7.11",
-  "title": "Power set.",
-  "body": " Power set   Let . The power set is the set of all subsets of . We can enumerate systematically by listing all the subsets in order of increasing cardinality. There is one subset of containing zero elements: namely, the empty set . The two subsets of containing exactly one element are and . Lastly, the unique subset of containing two elements is itself. We conclude that . In general if has cardinality , then has cardinality .   "
-},
-{
-  "id": "d_cartesian_product",
-  "level": "2",
-  "url": "s_sets_functions.html#d_cartesian_product",
-  "type": "Definition",
-  "number": "1.7.12",
-  "title": "Cartesian product (finite).",
-  "body": " Cartesian product finite      Cartesian product   Cartesian product (finite)   An -tuple (or sequence ) of the sets is an ordered list such that for all . We define two -tuples , and to be equal, denoted , if for all . We call the length of the sequence , and we call its -th entry for all .  The (Cartesian) product of the sets , denoted or , is the set of all -tuples: , .  Given a set , its -ary Cartesian product  is defined as .   "
-},
-{
-  "id": "rm_pairs_triples",
-  "level": "2",
-  "url": "s_sets_functions.html#rm_pairs_triples",
-  "type": "Remark",
-  "number": "1.7.13",
-  "title": "",
-  "body": "  We have more suggestive names for -tuples when is small: a 2-tuple is called a pair, a 3-tuple is called a triple, a 4-tuple is called a quadruple, . We will use the generic term tuple to designate a -tuple of unspecified length.   "
-},
-{
-  "id": "rm_tuple_ordered",
-  "level": "2",
-  "url": "s_sets_functions.html#rm_tuple_ordered",
-  "type": "Remark",
-  "number": "1.7.14",
-  "title": "",
-  "body": "  Observe how tuples capture the notion of an ordered collection of object. For example, whereas the sets and are all equal to one another, the 4-tuples and are not: they differ in their second entries.  What about the tuples and ? Are these equal? Technically our definition of equality only applies to tuples living in the same fixed Cartesian product. In particular, for the question of equality to make sense, the tuples must have the same length. As such we will officially avoid writing things like , although unofficially we consider these two objects as completely different. You should think of and as creatures living on two different planets in the universe of tuples.   "
-},
-{
-  "id": "d_Ituple",
-  "level": "2",
-  "url": "s_sets_functions.html#d_Ituple",
-  "type": "Definition",
-  "number": "1.7.15",
-  "title": "I-tuple.",
-  "body": " tuple arbitrary    -tuple   I-tuple   Let and be sets. An -tuple with entries (or coordinates) in is a function . Given an -tuple and element we will often denote the value as , and denote itself as . In analogy to finite tuples, we call the -th entry or coordinate of .   "
-},
-{
-  "id": "d_cartesian_product_arbitrary",
-  "level": "2",
-  "url": "s_sets_functions.html#d_cartesian_product_arbitrary",
-  "type": "Definition",
-  "number": "1.7.16",
-  "title": "Cartesian product (arbitrary).",
-  "body": " Cartesian product arbitrary    Cartesian product of the sets   Cartesian product (arbitrary)   Let be a set, and let be a collection of subsets indexed by the set . The Cartesian product  of this collection is defined as . In other words, the Cartesian product is the set of all -tuples with coordinates in whose -th coordinate is an element of for all .  In the special case where for all , we denote as .   "
-},
-{
-  "id": "d_function",
-  "level": "2",
-  "url": "s_sets_functions.html#d_function",
-  "type": "Definition",
-  "number": "1.7.17",
-  "title": "Functions.",
-  "body": " Functions  function    a function from to    Let and be two sets. A function from to , denoted , is a rule which, given any input  , returns an output  . In this case we write and call the image of under , or the value of at  . Similarly, we say  maps (or sends ) the input to the output .  The set is called the domain of ; the set is called the codomain of .  When we wish to indicate what rule defines the function, we use the elaborated notation . This is read as The function with domain and codomain maps an input to the output .   "
-},
-{
-  "id": "ss_functions-3",
-  "level": "2",
-  "url": "s_sets_functions.html#ss_functions-3",
-  "type": "Example",
-  "number": "1.7.18",
-  "title": "",
-  "body": "  Consider the function . This function has domain and codomain equal to and maps an integer to its square.   "
-},
-{
-  "id": "ss_functions-4",
-  "level": "2",
-  "url": "s_sets_functions.html#ss_functions-4",
-  "type": "Example",
-  "number": "1.7.19",
-  "title": "Arithmetic operations as functions.",
-  "body": " Arithmetic operations as functions   Our familiar arithmetic operations can be expressed as functions whose inputs are pairs of numbers: addition is the function and multiplication is the function    "
-},
-{
-  "id": "rm_function_as_relation",
-  "level": "2",
-  "url": "s_sets_functions.html#rm_function_as_relation",
-  "type": "Remark",
-  "number": "1.7.20",
-  "title": "",
-  "body": "  Invoking the notion of a rule in the definition of a function is admittedly somewhat vague. A more precise definition can be given using the Cartesian product. Namely, given sets and , we define a function to be a subset satisfying the following property: for all there is a unique element . The uniqueness of the pair then allows us to define the value of at as , denoted .   "
-},
-{
-  "id": "d_function_equality",
-  "level": "2",
-  "url": "s_sets_functions.html#d_function_equality",
-  "type": "Definition",
-  "number": "1.7.21",
-  "title": "Function equality.",
-  "body": " Function equality  function equality   Functions and are equal if   they have the same domain and codomain , and    for all , we have .      "
-},
-{
-  "id": "d_image",
-  "level": "2",
-  "url": "s_sets_functions.html#d_image",
-  "type": "Definition",
-  "number": "1.7.22",
-  "title": "Image of a set.",
-  "body": " Image of a set  function image of a set  function image    image of the set under     image of a function    Given a function and a subset , the image of under , denoted , is defined as . In other words, is the set of all outputs , where .  The image of , denoted , is the set of all outputs of : , .   "
-},
-{
-  "id": "d_preimage_of_set",
-  "level": "2",
-  "url": "s_sets_functions.html#d_preimage_of_set",
-  "type": "Definition",
-  "number": "1.7.23",
-  "title": "Preimage of set.",
-  "body": " Preimage of set  preimage of a set    preimage of under    Given a function , the preimage of a subset is the subset defined as . In plain English: the preimage of under is the set of all whose image under lies in .   "
-},
-{
-  "id": "d_injective_surjective_bijective",
-  "level": "2",
-  "url": "s_sets_functions.html#d_injective_surjective_bijective",
-  "type": "Definition",
-  "number": "1.7.24",
-  "title": "Injective, surjective, bijective.",
-  "body": " Injective, surjective, bijective  invertible function  bijective function  injective function  surjective function  one-to-one function  onto function  one-to-one correspondence   Let be a function.   The function is injective (or one-to-one ) if for all , if , then : equivalently, if , then .    The function is surjective (or onto ) if for all , there is an such that : equivalently, .    The function is bijective (or a one-to-one correspondence ) if it is injective and surjective.      "
-},
-{
-  "id": "ss_functions-11",
-  "level": "2",
-  "url": "s_sets_functions.html#ss_functions-11",
-  "type": "Example",
-  "number": "1.7.25",
-  "title": "Role of domain and codomain in injectivity and surjectivity.",
-  "body": " Role of domain and codomain in injectivity and surjectivity   Consider the following three functions . Although all three functions are defined using the same rule ( ), they are not equal thanks to their differing domains and\/or codomains. The choice of domain and codomain in these examples also plays a crucial role in determining whether the function is injective and\/or surjective. The function is neither injective ( ) nor surjective ( ); the function is injective but not surjective; the function is both injective and surjective, hence bijective.   "
-},
-{
-  "id": "d_function_composition",
-  "level": "2",
-  "url": "s_sets_functions.html#d_function_composition",
-  "type": "Definition",
-  "number": "1.7.26",
-  "title": "Function composition.",
-  "body": " Function composition  function composition    the composition of and    Suppose and are functions satisfying . The composition of and is the function defined as , for all .   "
-},
-{
-  "id": "d_invertible_function",
-  "level": "2",
-  "url": "s_sets_functions.html#d_invertible_function",
-  "type": "Definition",
-  "number": "1.7.27",
-  "title": "Identity and inverse functions.",
-  "body": " function invertible  function inverse  function identity  Identity and inverse functions   For any set the identity function on is the function defined as for all .  A function is invertible if there is a function satisfying and : , . The function in this case is called the inverse of , denoted .  "
-},
-{
-  "id": "th_invertible_bijective",
-  "level": "2",
-  "url": "s_sets_functions.html#th_invertible_bijective",
+  "url": "s_product2.html#th_product_props",
   "type": "Theorem",
-  "number": "1.7.28",
-  "title": "Invertible is equivalent to bijective.",
-  "body": " Invertible is equivalent to bijective   A function is invertible if and only if it is bijective.   "
-},
-{
-  "id": "d_cardinality",
-  "level": "2",
-  "url": "s_sets_functions.html#d_cardinality",
-  "type": "Definition",
-  "number": "1.7.29",
-  "title": "Cardinality.",
-  "body": " Cardinality  cardinality  finite set  infinite set  countably infinite set  countable set  uncountable set    cardinality of set    Let be a set.    Finite and infinite sets  The set is finite if either or there is a bijection for some positive integer . Roughly speaking, the cardinality of a finite set , denoted , is the number of distinct elements it contains. In more detail if , then by definition; if there is a bijection , then .  The set is infinite if it is not finite. In this case is said to have infinite cardinality .    Countable and uncountable sets  The set is countably infinite if there is a bijection , where is the set of all positive integers; it is countable if it is either finite or countable infinite.  The set is uncountable if it is not countable.     "
+  "number": "1.7.4",
+  "title": "Properties of product spaces.",
+  "body": " Properties of product spaces   Let be a collection of topological spaces, and let be the box and product topologies on .    Let be a basis for for all . The set is a basis for .  Similarly, the collection of all subsets of of the form , where for all indices in a finite set and for all , is a basis for .    Given subspaces for all , let . The box (resp., product) topology on is equal to the box (resp., product) subspace topology on .    If is Hausdorff (resp., ) for all , then is Hausdorff (resp., ) with respect to both the box and product topologies.    Given subsets for all , we have , where the closure on the right can be taken either with respect to box or product topology on .        We prove each basis axiom separately (for both the box and product basis).  Axiom 1. Given , we can find basis elements containing . We have . Axiom 2. This axiom follows readily from the set theoretic fact that . I'll leave the details to you.    It helps to formulate this result in plain English: we wish to show that the subspace topology of the (box) product topology is equal to the (box) product topology of the subspace topologies.  Fix a choice of topology , let be the corresponding basis as defined in , and let denote the corresponding subspace topology on . Recall ( ) that is a basis for the subspace topology . Thus  , where the last equality follows from the set theory identity . Now observe that when the set in is precisely the basis for the box product topology on the subspaces as described in ; and similarly, when the set in is the basis for the product topology on the subspaces .  Going back to our plan English formulation, we have shown that the subspace topology of the (box) product topology and the (box) product topology of the subspace topologies share a common basis ( ). It follows that the topologies themselves are equal.    Assume is Hausdorff for all . If and are distinct, then we have for some . Since is Hausdorff, there are disjoint open neighborhoods of in . The sets , are disjoint open basis elements for both topologies containing , respectively. Thus is Hausdorff. The proof for the statement is similar.    We prove the equality by showing . . If , there is an index such that , and thus an open set such that . The set is open in both topologies (box and product), contains , and is disjoint with . We conclude that in both topologies.   . If there is an open basis element in the topology (box or product) containing that is disjoint with . It follows that we must have for some and open , and thus that . We conclude that .     "
 },
 {
   "id": "s_prods_convergence_metric",
@@ -1544,7 +1328,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_prods_convergence_metric.html#top_eg_uniform_topology",
   "type": "Topological specimen",
-  "number": "11",
+  "number": "12",
   "title": "Uniform topology.",
   "body": " Uniform topology  Let for some set , where is equipped with the standard topology. Let for all . The function is a metric called the uniform metric on . The uniform topology is the topology induced by .   See Munkres for a proof that is a metric.   "
 },
@@ -1582,7 +1366,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.9",
   "title": "Continuous functions",
-  "body": " Continuous functions   In calculus you learn that a function is defined to be continuous if for all there is a such that for all we have the implication . Now that we have some experience generalizing analysis concepts to topological ones, let's see how best this translates to arbitrary topologies.    Continuous function   Let be topological spaces. A function is continuous if for all open sets , the set is open in . Using logical shorthand: .     Preimage properties   Continuity is defined in terms of preimages of sets under a function . Thankfully, the preimage operation behaves very well with respect to our various set operations. In particular, we have the following identities, which you may make use of without further ado:      Continuous functions: basic examples     Identity function  Given a topological space , the identity function is continuous. Here we take as the topology of both the domain and codomain.    Constant functions  Let be topological spaces. For any fixed the constant function , defined as for all is continuous.    Subspace inclusions  Let be a subspace of . The inclusion map is continuous with respect to the subspace topology on .    Maps from discrete spaces  If is equipped with the discrete topology, then any function to a topological space is continuous.    Maps to trivial spaces  If is equipped with the trivial topology, then any map from a topological space to is continous.      These are all pretty elementary. I'll prove (3). Let be a subspace and let continuous. Given any open set , we have which by definition is open in the subspace topology. Thus is continuous.     Non-continuous inclusion   Show that the identity map is not continuous. Here the topology of the domain is the standard one, and the topology on the codomain is the lower limit topology.    For any we have . If we choose to be any open set of that is not open in the standard topology, it follows that is not open in and hence that is not continuous. We may take for example.  Note: let be two topologies on the set , and for let denote the space with underlying set and topology . The same argument above can be used to show that is continuous if and only if .     Products and projections   Let be a collection of topological spaces, and let . For each define the projection function as . In other words, the -th projection map returns the -th coordinate of an element of .    Prove: if is given the product topology, then is continuous for all .    Prove: given a topology on , we have continuous for all if and only if contains the product topology. Thus, in particular, the product topology is the coarsest topology on making each projection map continuous.      It is enough to prove (2), since it clearly implies (1). The maps are continuous in a topology if and only if for all and open the preimage is open in . Next it clear that is open in for all if and only if is open for any finite set . Since these sets form a basis for the product topology, we conclude that the projections are all continuous if and only if is finer than the product topology.      Let be a function between the topological spaces , and let be a basis for . The following statements are equivalent.     is continuous.    For all , the preimage is open in .      It is clear that (1) implies (2). Assume (2) is true. Given open , we can write with . It follows that is open, since by assumption each is open.     Continuity equivalences   Let be a function between the topological spaces . The following statements are equivalent.     is continuous.    For all , we have .    For all closed sets , the preimage is closed in .    For all and open neighborhood , there is an open neighborhood such that .       . Take . We have for some . If is any open neighborhood of , then since is continuous is an open neighborhood of . Since , there exists . It follows that , showing this intersection is nonempt. We concdlue that , as desited.   . Assume (2) holds of . Given closed let . To show is closed, we will show that . Since , this is equivalent to showing ; but this follows from (2) since , where the last inclusion in this chain follows from the fact that is closed and contains .   . Let , and let be an open neighborhood of . The set is closed, whence is closed. It follows that is an open set containing , and we have .   . We assume (4). Let be an open set. For any , there is by (4) (taking open set ) an open set such that . It follows that . Thus for any there is an open such that . It follows that is open, as desired.      Let be a map between topological spaces. We say that is continuous at x , for , if for all open neighborhoods , there is an open neighborhood such that .     Building continuous functions     Composition  If and are continuous, then the composition is continuous.    Restriction  If is continuous, and is a subspace, then the restriction is continuous.    Expansion  If is continuous and is a subspace of , then the function obtained by composing with the inclusion is continuous.    Local on source (open pasting)  If is a function between topological spaces and there is a collection of open sets such that and the restrictions are continuous, then is continuous.    Closed pasting  Let be topological spaces, and suppose , where are closed sets. Given continuous functions and that satisfy for all , the function defined as is continuous.      Statements (1)-(3) are elementary, and can be found in Munkres.  Statement (4) follows from equivalent condition (4) from . Indeed, take any and open set . Since for some , and since is continuous, there is an open with , such that . Since is open in and is open in , we conclude is open in , as desired.  To prove statement (5) we show that is closed for any closed set . Since if and only if and or and , we have . Since and are closed we have closed in and closed in . Since and are closed, transitivity of closedness implies and are closed in . We conclude is closed, as desired.    "
+  "body": " Continuous functions  In calculus you learn that a function is defined to be continuous if for all there is a such that for all we have the implication . Now that we have some experience generalizing analysis concepts to topological ones, let's see how best this translates to arbitrary topologies.   Continuous function   Let be topological spaces. A function is continuous if for all open sets , the set is open in . Using logical shorthand: .     Preimage properties  Continuity is defined in terms of preimages of sets under a function . Thankfully, the preimage operation behaves very well with respect to our various set operations. In particular, we have the following identities, which you may make use of without further ado:     Continuous functions: basic examples      Identity function  Given a topological space , the identity function is continuous. Here we take as the topology of both the domain and codomain.    Constant functions  Let be topological spaces. For any fixed the constant function , defined as for all is continuous.    Subspace inclusions  Let be a subspace of . The inclusion map is continuous with respect to the subspace topology on .    Maps from discrete spaces  If is equipped with the discrete topology, then any function to a topological space is continuous.    Maps to trivial spaces  If is equipped with the trivial topology, then any map from a topological space to is continous.       These are all pretty elementary. I'll prove (3). Let be a subspace and let continuous. Given any open set , we have which by definition is open in the subspace topology. Thus is continuous.     Non-continuous inclusion   Show that the identity map is not continuous. Here the topology of the domain is the standard one, and the topology on the codomain is the lower limit topology.    For any we have . If we choose to be any open set of that is not open in the standard topology, it follows that is not open in and hence that is not continuous. We may take for example.  Note: let be two topologies on the set , and for let denote the space with underlying set and topology . The same argument above can be used to show that is continuous if and only if .     Products and projections   Let be a collection of topological spaces, and let . For each define the projection function as . In other words, the -th projection map returns the -th coordinate of an element of .   Prove: if is given the product topology, then is continuous for all .    Prove: given a topology on , we have continuous for all if and only if contains the product topology. Thus, in particular, the product topology is the coarsest topology on making each projection map continuous.       It is enough to prove (2), since it clearly implies (1). The maps are continuous in a topology if and only if for all and open the preimage is open in . Next it clear that is open in for all if and only if is open for any finite set . Since these sets form a basis for the product topology, we conclude that the projections are all continuous if and only if is finer than the product topology.      Let be a function between the topological spaces , and let be a basis for . The following statements are equivalent.    is continuous.    For all , the preimage is open in .       It is clear that (1) implies (2). Assume (2) is true. Given open , we can write with . It follows that is open, since by assumption each is open.     Continuity equivalences   Let be a function between the topological spaces . The following statements are equivalent.    is continuous.    For all , we have .    For all closed sets , the preimage is closed in .    Continuity at  For all and all sets containing , there is an open set containing such that .        . Take . We have for some . If is any open neighborhood of , then since is continuous is an open neighborhood of . Since , there exists . It follows that , showing this intersection is nonempt. We concdlue that , as desited.   . Assume (2) holds of . Given closed let . To show is closed, we will show that . Since , this is equivalent to showing ; but this follows from (2) since , where the last inclusion in this chain follows from the fact that is closed and contains .   . Let , and let be an open neighborhood of . The set is closed, whence is closed. It follows that is an open set containing , and we have .   . We assume (4). Let be an open set. For any , there is by (4) (taking open set ) an open set such that . It follows that . Thus for any there is an open such that . It follows that is open, as desired.      Let be a map between topological spaces. We say that is continuous at x , for , if for all open neighborhoods , there is an open neighborhood such that .     Building continuous functions      Composition  If and are continuous, then the composition is continuous.    Restriction  If is continuous, and is a subspace, then the restriction is continuous.    Expansion  If is continuous and is a subspace of , then the function obtained by composing with the inclusion is continuous.    Local on source (open pasting)  If is a function between topological spaces and there is a collection of open sets such that and the restrictions are continuous, then is continuous.    Closed pasting  Let be topological spaces, and suppose , where are closed sets. Given continuous functions and that satisfy for all , the function defined as is continuous.       Statements (1)-(3) are elementary, and can be found in Munkres.  Statement (4) follows from equivalent condition (4) from . Indeed, take any and open set . Since for some , and since is continuous, there is an open with , such that . Since is open in and is open in , we conclude is open in , as desired.  To prove statement (5) we show that is closed for any closed set . Since if and only if and or and , we have . Since and are closed we have closed in and closed in . Since and are closed, transitivity of closedness implies and are closed in . We conclude is closed, as desired.    "
 },
 {
   "id": "d_continuous_function",
@@ -1600,7 +1384,7 @@ var ptx_lunr_docs = [
   "type": "Remark",
   "number": "1.9.2",
   "title": "Preimage properties.",
-  "body": " Preimage properties   Continuity is defined in terms of preimages of sets under a function . Thankfully, the preimage operation behaves very well with respect to our various set operations. In particular, we have the following identities, which you may make use of without further ado:    "
+  "body": " Preimage properties  Continuity is defined in terms of preimages of sets under a function . Thankfully, the preimage operation behaves very well with respect to our various set operations. In particular, we have the following identities, which you may make use of without further ado:   "
 },
 {
   "id": "s_continuous-5",
@@ -1609,7 +1393,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.9.3",
   "title": "Continuous functions: basic examples.",
-  "body": " Continuous functions: basic examples     Identity function  Given a topological space , the identity function is continuous. Here we take as the topology of both the domain and codomain.    Constant functions  Let be topological spaces. For any fixed the constant function , defined as for all is continuous.    Subspace inclusions  Let be a subspace of . The inclusion map is continuous with respect to the subspace topology on .    Maps from discrete spaces  If is equipped with the discrete topology, then any function to a topological space is continuous.    Maps to trivial spaces  If is equipped with the trivial topology, then any map from a topological space to is continous.      These are all pretty elementary. I'll prove (3). Let be a subspace and let continuous. Given any open set , we have which by definition is open in the subspace topology. Thus is continuous.   "
+  "body": " Continuous functions: basic examples      Identity function  Given a topological space , the identity function is continuous. Here we take as the topology of both the domain and codomain.    Constant functions  Let be topological spaces. For any fixed the constant function , defined as for all is continuous.    Subspace inclusions  Let be a subspace of . The inclusion map is continuous with respect to the subspace topology on .    Maps from discrete spaces  If is equipped with the discrete topology, then any function to a topological space is continuous.    Maps to trivial spaces  If is equipped with the trivial topology, then any map from a topological space to is continous.       These are all pretty elementary. I'll prove (3). Let be a subspace and let continuous. Given any open set , we have which by definition is open in the subspace topology. Thus is continuous.   "
 },
 {
   "id": "s_continuous-6",
@@ -1621,13 +1405,13 @@ var ptx_lunr_docs = [
   "body": " Non-continuous inclusion   Show that the identity map is not continuous. Here the topology of the domain is the standard one, and the topology on the codomain is the lower limit topology.    For any we have . If we choose to be any open set of that is not open in the standard topology, it follows that is not open in and hence that is not continuous. We may take for example.  Note: let be two topologies on the set , and for let denote the space with underlying set and topology . The same argument above can be used to show that is continuous if and only if .   "
 },
 {
-  "id": "s_continuous-7",
+  "id": "eg_cont_projections",
   "level": "2",
-  "url": "s_continuous.html#s_continuous-7",
+  "url": "s_continuous.html#eg_cont_projections",
   "type": "Example",
   "number": "1.9.5",
   "title": "Products and projections.",
-  "body": " Products and projections   Let be a collection of topological spaces, and let . For each define the projection function as . In other words, the -th projection map returns the -th coordinate of an element of .    Prove: if is given the product topology, then is continuous for all .    Prove: given a topology on , we have continuous for all if and only if contains the product topology. Thus, in particular, the product topology is the coarsest topology on making each projection map continuous.      It is enough to prove (2), since it clearly implies (1). The maps are continuous in a topology if and only if for all and open the preimage is open in . Next it clear that is open in for all if and only if is open for any finite set . Since these sets form a basis for the product topology, we conclude that the projections are all continuous if and only if is finer than the product topology.   "
+  "body": " Products and projections   Let be a collection of topological spaces, and let . For each define the projection function as . In other words, the -th projection map returns the -th coordinate of an element of .   Prove: if is given the product topology, then is continuous for all .    Prove: given a topology on , we have continuous for all if and only if contains the product topology. Thus, in particular, the product topology is the coarsest topology on making each projection map continuous.       It is enough to prove (2), since it clearly implies (1). The maps are continuous in a topology if and only if for all and open the preimage is open in . Next it clear that is open in for all if and only if is open for any finite set . Since these sets form a basis for the product topology, we conclude that the projections are all continuous if and only if is finer than the product topology.   "
 },
 {
   "id": "th_continuity_basis",
@@ -1636,7 +1420,7 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "1.9.6",
   "title": "",
-  "body": "  Let be a function between the topological spaces , and let be a basis for . The following statements are equivalent.     is continuous.    For all , the preimage is open in .      It is clear that (1) implies (2). Assume (2) is true. Given open , we can write with . It follows that is open, since by assumption each is open.   "
+  "body": "  Let be a function between the topological spaces , and let be a basis for . The following statements are equivalent.    is continuous.    For all , the preimage is open in .       It is clear that (1) implies (2). Assume (2) is true. Given open , we can write with . It follows that is open, since by assumption each is open.   "
 },
 {
   "id": "th_continuous_equivalence",
@@ -1645,7 +1429,7 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "1.9.7",
   "title": "Continuity equivalences.",
-  "body": " Continuity equivalences   Let be a function between the topological spaces . The following statements are equivalent.     is continuous.    For all , we have .    For all closed sets , the preimage is closed in .    For all and open neighborhood , there is an open neighborhood such that .       . Take . We have for some . If is any open neighborhood of , then since is continuous is an open neighborhood of . Since , there exists . It follows that , showing this intersection is nonempt. We concdlue that , as desited.   . Assume (2) holds of . Given closed let . To show is closed, we will show that . Since , this is equivalent to showing ; but this follows from (2) since , where the last inclusion in this chain follows from the fact that is closed and contains .   . Let , and let be an open neighborhood of . The set is closed, whence is closed. It follows that is an open set containing , and we have .   . We assume (4). Let be an open set. For any , there is by (4) (taking open set ) an open set such that . It follows that . Thus for any there is an open such that . It follows that is open, as desired.   "
+  "body": " Continuity equivalences   Let be a function between the topological spaces . The following statements are equivalent.    is continuous.    For all , we have .    For all closed sets , the preimage is closed in .    Continuity at  For all and all sets containing , there is an open set containing such that .        . Take . We have for some . If is any open neighborhood of , then since is continuous is an open neighborhood of . Since , there exists . It follows that , showing this intersection is nonempt. We concdlue that , as desited.   . Assume (2) holds of . Given closed let . To show is closed, we will show that . Since , this is equivalent to showing ; but this follows from (2) since , where the last inclusion in this chain follows from the fact that is closed and contains .   . Let , and let be an open neighborhood of . The set is closed, whence is closed. It follows that is an open set containing , and we have .   . We assume (4). Let be an open set. For any , there is by (4) (taking open set ) an open set such that . It follows that . Thus for any there is an open such that . It follows that is open, as desired.   "
 },
 {
   "id": "d_continuity_at_x",
@@ -1663,7 +1447,7 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "1.9.9",
   "title": "Building continuous functions.",
-  "body": " Building continuous functions     Composition  If and are continuous, then the composition is continuous.    Restriction  If is continuous, and is a subspace, then the restriction is continuous.    Expansion  If is continuous and is a subspace of , then the function obtained by composing with the inclusion is continuous.    Local on source (open pasting)  If is a function between topological spaces and there is a collection of open sets such that and the restrictions are continuous, then is continuous.    Closed pasting  Let be topological spaces, and suppose , where are closed sets. Given continuous functions and that satisfy for all , the function defined as is continuous.      Statements (1)-(3) are elementary, and can be found in Munkres.  Statement (4) follows from equivalent condition (4) from . Indeed, take any and open set . Since for some , and since is continuous, there is an open with , such that . Since is open in and is open in , we conclude is open in , as desired.  To prove statement (5) we show that is closed for any closed set . Since if and only if and or and , we have . Since and are closed we have closed in and closed in . Since and are closed, transitivity of closedness implies and are closed in . We conclude is closed, as desired.   "
+  "body": " Building continuous functions      Composition  If and are continuous, then the composition is continuous.    Restriction  If is continuous, and is a subspace, then the restriction is continuous.    Expansion  If is continuous and is a subspace of , then the function obtained by composing with the inclusion is continuous.    Local on source (open pasting)  If is a function between topological spaces and there is a collection of open sets such that and the restrictions are continuous, then is continuous.    Closed pasting  Let be topological spaces, and suppose , where are closed sets. Given continuous functions and that satisfy for all , the function defined as is continuous.       Statements (1)-(3) are elementary, and can be found in Munkres.  Statement (4) follows from equivalent condition (4) from . Indeed, take any and open set . Since for some , and since is continuous, there is an open with , such that . Since is open in and is open in , we conclude is open in , as desired.  To prove statement (5) we show that is closed for any closed set . Since if and only if and or and , we have . Since and are closed we have closed in and closed in . Since and are closed, transitivity of closedness implies and are closed in . We conclude is closed, as desired.   "
 },
 {
   "id": "s_homeomorphisms",
@@ -1672,7 +1456,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.10",
   "title": "Homeomorphisms",
-  "body": " Homeomorphisms   Consider the two spaces and , both equipped with the discrete topology. As sets they are clearly not equal; and yet considered as topological spaces they are essentially the same. Indeed, we call both spaces the discrete topological space on a set of two elements. The notion of a homeomorphism gives us a rigorous way of determining when two spaces are essentially the same thing, topologically speaking .    Homeomorphism   Let and be topological spaces. A function is a homeomorphism if the following conditions are satisfied:    is continuous;     is invertible (equivalently, is bijective);    the inverse function is continuous.   Two spaces are homeomorphic if there is a homeomorphism between them.     Homeomorphism: inverse must be continuous   You may have met analogs of the homeomorphism in other areas of mathematics: , in linear algebra or group theory. In category theory it is what is called an isomorphism . The basic idea is that once you decide what the structure-preserving maps are between objects (continuous functions for topological spaces, linear transformations for vector spaces, homomorphisms for groups), an isomorphism is essentially just an invertible structure-preserving map: a vector space isomorphism is an invertible linear transformation; a group isomorphism is an invertible group homomorphism. The only subtlety is that you want the inverse of this invertible function to also be structure preserving! For linear transformations and group homomorphisms this is automatic. Not so for continuous functions! The inverse of an invertible continuous function need not be continuous, as the example below illustrates.     Homeomorphism: inverse must be continuous   Let and be the spaces obtained by equipping with the standard and discrete topologies, respectively. The identity function is clearly continuous and invertible. In fact, we have . However, is not continuous. Indeed, is open in , but is not open in . Thus is an invertible continuous function that is not a homeomorphism.     Homeomorphic equivalence relation   For topological spaces , define the relation to mean is homeomorphic to . This relation is an equivalence relation. That is, for all topological spaces we have . These three properties follow from the simple facts that (1) the identity map is a homeomorphism, (2) the inverse of a homeomorphism is a homeomomoprhism, (3) the composition of homeomorphisms is a homeomorphism.     All open intervals of are homeomorphic   In the following, all intervals are treated as metric spaces with the Euclidean metric on . Make use of any function whose continuity properties are well known.    Prove that any finite open interval is homeomorphic to .    Prove that and are homeomorphic.    Prove that and are both homeomorphic to .    Explain why we may now conclude that all open intervals of are homeomorphic.        The function defined as is linear (hence continuous) and has continuous inverse .    The function is continuous and has continuous inverse .    The functions , , and , are continuous and have continuous inverses and .    This is now the result of the fact that being homeomorphic is an equivalence relation. In more detail, from (1) we know that all finite open intervals are homeomorphic; this in conjunction with (2) shows that all finite open intervals are homemorphic to . From (3) we conclude that all half-finite intervals are homeomorphic to . Since any open interval is either finite, half-finite, or equal to , we conclude that all open intervals are homeomorphic.       Universal property of product space   Let be a collection of topological spaces, and let equipped with the product topology. Let be the -th projection map.    Product mapping property  Given any topological space and any collection of continuous maps , there is a unique continuous map satisfying for all .  In other words, specifying a continuous map into the product space is equivalent to specifying continuous maps into for all     Unique up to homeomorphism  If is any other topological space equipped with continuous maps , and if the product mapping property (1) is satisfied with replacing and replacing , then is homeomorphic to .  In other words, up to homeomorphism, the mapping property uniquely characterizes the product space.        First observe that equality for elements in can be express in terms of the projection maps as follows: . Using this fact, we see that given a function we have . Thus the function is the unique function from to satisfying for all . To see that this is continuous, we show that is open for any base open set . For such a we have for some open sets , . By definition of we have if and only if if and only if for all . Thus . Since each is continuous, we conclude that is open for all , and hence is open.    Let together with continuous maps be any other space that satisfies the product mapping property (1). By (1) (taking ) there is a continuous function satisfying . Similarly, since also satisfies the product mapping property, we have (now taking in (1)) a continuous map satisfying . I claim and : , is a continuous inverse of , and thus is a homeomorphism between and .  To see why we use the uniqueness claim in the product mapping property (twice). Indeed, the function is continuous and satisfies for all . But the function also satisfies for all . By the uniqueness claim of the product mapping property, we conclude , as desired. The proof that is nearly identical, now applying the product mapping propery to maps into .       Open and closed maps   Let be a function between topological spaces.    is open if for all open we have open in .     is closed if for all closed we have closed in .        Homeomorphism equivalences   Let be a function between topological spaces. The following statements are equivalent.    is a homeomorphism.     is continuous, invertible, and open.     is continuous, invertible, and closed.      Assume is continous and invertible throughout. To be a homeomorphism we need to be continuous. Since if and only if , we see that . Thus continuous if and only if is open for all open , if and only if is open for all open , if and only if is open. The same argument with closed replacing open shows is continuous if and only if is closed. The equivalence of (1)-(3) now follows.    Open and closed maps   Don't be mislead by into thinking that being an open continuous map is equivalent to being a closed continuous map; we need the additional assumption of invertibility to guarantee equivalence. As an example, consider any constant function from to itself: this is clearly continuous and closed, but not open.     Topological properties   Let be a property that is either satisfied or not satisfied by any given topological space. We say is a topological property if it is invariant under homeomorphisms: , if and are homeomorphic, then satisfies if and only if satisfies .     Topological properties   It is easy to see that the properties of being discrete, , Hausdorff, or a metric space are topological.     Continuous bijection onto circle   Let and , and equip each set with the subspace topology inherited from (resp. ) with its Euclidean topology.  Prove: the function defined as is continuous and invertible, but not a homeomorphism.    Recall first that on the product topology, Euclidean metric topology, and box topology are all equal. Since and are continuous, it follows from that the map is continuous. Next, since , where , it follows that is continuous: indeed, for any open set , we have for some open , and , which is open since is continuous.  The usual trigonometric arguments show that is injective and surjective. However, is not open, and hence not a homeomorphism. Indeed, let , which is open in . The image is easily seen to be the upper half of the circle minus the point : in particular, all points have nonnegative -coordinates. On the other hand, we have and with respect to the subspace topology on any open set containing contains elements of whose -coordinate is negative. It follows that is not open.    In light of , it is natural to ask whether given topological spaces there is a space with continuous maps that satisfies a dual mapping property to that of the product. Indeed, there is, and we call it the coproduct of the .   Coproduct space  Let be a collection of topological spaces, let be the disjoint union of the , and let be the the inclusion maps identifying each with a subset of . The coproduct topology on is the topology generated by the basis defined as follows: . We call together with the topology the coproduct topology of the . With respect to this topology, each injection is continuous.    Universal property of coproduct space   Let be a collection of topological spaces, and let be their coproduct. For each let be the inclusion map identifying with a subset of .    Coproduct mapping property  Given any topological space and any collection of continuous maps , there is a unique continuous map satisfying for all .  In other words, specifying a continuous map out from to is equivalent to specifying continuous maps for all .    Unique up to homeomorphism  If is any other topological space equipped with continuous maps , and if the coproduct mapping property (1) is satisfied with replacing and replacing , then is homeomorphic to .  In other words, up to homeomorphism, the coproduct mapping property uniquely characterizes the product space.      Mimic the proof of step by step.    "
+  "body": " Homeomorphisms  Consider the two spaces and , both equipped with the discrete topology. As sets they are clearly not equal; and yet considered as topological spaces they are essentially the same. Indeed, we call both spaces the discrete topological space on a set of two elements. The notion of a homeomorphism gives us a rigorous way of determining when two spaces are essentially the same thing, topologically speaking .   Homeomorphism   Let and be topological spaces. A function is a homeomorphism if the following conditions are satisfied:    is continuous;     is invertible (equivalently, is bijective);    the inverse function is continuous.   Two spaces are homeomorphic if there is a homeomorphism between them.     Homeomorphism: inverse must be continuous  You may have met analogs of the homeomorphism in other areas of mathematics: , in linear algebra or group theory. In category theory it is what is called an isomorphism . The basic idea is that once you decide what the structure-preserving maps are between objects (continuous functions for topological spaces, linear transformations for vector spaces, homomorphisms for groups), an isomorphism is essentially just an invertible structure-preserving map: a vector space isomorphism is an invertible linear transformation; a group isomorphism is an invertible group homomorphism. The only subtlety is that you want the inverse of this invertible function to also be structure preserving! For linear transformations and group homomorphisms this is automatic. Not so for continuous functions! The inverse of an invertible continuous function need not be continuous, as the example below illustrates.    Homeomorphism: inverse must be continuous   Let and be the spaces obtained by equipping with the standard and discrete topologies, respectively. The identity function is clearly continuous and invertible. In fact, we have . However, is not continuous. Indeed, is open in , but is not open in . Thus is an invertible continuous function that is not a homeomorphism.     Homeomorphic equivalence relation  For topological spaces , define the relation to mean is homeomorphic to . This relation is an equivalence relation. That is, for all topological spaces we have . These three properties follow from the simple facts that (1) the identity map is a homeomorphism, (2) the inverse of a homeomorphism is a homeomomoprhism, (3) the composition of homeomorphisms is a homeomorphism.    All open intervals of are homeomorphic   In the following, all intervals are treated as metric spaces with the Euclidean metric on . Make use of any function whose continuity properties are well known.   Prove that any finite open interval is homeomorphic to .    Prove that and are homeomorphic.    Prove that and are both homeomorphic to .    Explain why we may now conclude that all open intervals of are homeomorphic.          The function defined as is linear (hence continuous) and has continuous inverse .    The function is continuous and has continuous inverse .    The functions , , and , are continuous and have continuous inverses and .    This is now the result of the fact that being homeomorphic is an equivalence relation. In more detail, from (1) we know that all finite open intervals are homeomorphic; this in conjunction with (2) shows that all finite open intervals are homemorphic to . From (3) we conclude that all half-finite intervals are homeomorphic to . Since any open interval is either finite, half-finite, or equal to , we conclude that all open intervals are homeomorphic.        Open and closed maps   Let be a function between topological spaces.    is open if for all open we have open in .     is closed if for all closed we have closed in .        Homeomorphism equivalences   Let be a function between topological spaces. The following statements are equivalent.    is a homeomorphism.     is continuous, invertible, and open.     is continuous, invertible, and closed.       Assume is continous and invertible throughout. To be a homeomorphism we need to be continuous. Since if and only if , we see that . Thus continuous if and only if is open for all open , if and only if is open for all open , if and only if is open. The same argument with closed replacing open shows is continuous if and only if is closed. The equivalence of (1)-(3) now follows.     Open and closed maps  Don't be mislead by into thinking that being an open continuous map is equivalent to being a closed continuous map; we need the additional assumption of invertibility to guarantee equivalence. As an example, consider any constant function from to itself: this is clearly continuous and closed, but not open.    Topological properties   Let be a property that is either satisfied or not satisfied by any given topological space. We say is a topological property if it is invariant under homeomorphisms: , if and are homeomorphic, then satisfies if and only if satisfies .     Topological properties   It is easy to see that the properties of being discrete, , Hausdorff, or a metric space are topological.     Universal mapping property of product space   Let be a collection of topological spaces, and let equipped with the product topology. Let be the -th projection map: , given , we define .   Projection maps  For each the projection map is continuous, open, and surjective.    Product universal mapping property  The space together with its projection maps satisfies the following universal mapping property: given any topological space and collection of continuous maps, there is a unique continuous map satisfying for all . In other words, there is a unique continuous function making the diagram below commutative for all .   Commutative diagram for product topology    In fact, in this case we must have .    Unique up to homeomorphism  The universal mapping property characterizes up to homeomorphism: , if is a topological space equipped with a collection of continuous maps that together satisfy the , then is homeomorphic to .          Fix any . We showed is continuous in . To see that is surjective, given any , we have , which is nonempty. Lastly, suppose is open. We wish to show that is open in . To this end, given any , we have for some open base set , where is open in and for all but finitely many . But then . Since is open, we have shown that given any , there is an open set such that . It follows that is open, as desired.    First observe that equality for elements in can be expressed in terms of the projection maps as follows: . Using this fact, we see that given a function we have . Thus the function is the unique function from to satisfying for all . To see that this is continuous, we show that is open for any base open set . For such a we have for some open sets , . By definition of we have if and only if if and only if for all . Thus . Since each is continuous, we conclude that is open for all , and hence is open.    Let together with continuous maps be any other space that satisfies . Letting be the space together with its maps , there is a continuous function satisfying for all . Similarly, since also satisfies the product mapping property, taking along with its projection maps, we see there is a continuous map satisfying . We claim and : , is a continuous inverse of , and thus is a homeomorphism between and . To see why this is true, we use the uniqueness claim in the product mapping property (twice). Indeed, the function is continuous and satisfies for all . But the function also satisfies for all . By the uniqueness claim of the product mapping property, we conclude , as desired. The proof that is nearly identical, now applying the product mapping property to maps into .        Universal mapping property of product space  There is quite a bit to unpack in . The result is useful on a number of levels, some theoretical and some practical.  On the practical side, the theorem provides us a nice tool for producing continuous functions of the form : namely, all you need to do is provide continuous functions for each and define . Or similarly, given a function , to show is continuous, it suffices to show that each component function is continuous. You may have seen this property at work in an analysis or multivariable calculus course. For example, sometimes in these settings a function is simply defined to be continuous if the component functions are continuous for each . Thanks to we understand that this is equivalent to being continuous with respect to the standard topology on and the product topology on (which is equal to the standard topology on ).  On the theoretical side, the theorem identifies precisely what is so special about the product topology. Namely, it is the unique (up to homeomorphism) space satisfying the . The property establishes with the product topology as the category theoretic product of the spaces . You may have seen analogues of this type of object in other categories ( , category of groups or category of rings).    Continuous bijection onto circle   Let and , and equip each set with the subspace topology inherited from (resp. ) with its Euclidean topology.  Prove: the function defined as is continuous and invertible, but not a homeomorphism.    Recall first that on the product topology, Euclidean metric topology, and box topology are all equal. Since and are continuous, it follows from that the map is continuous. Next, since , where , it follows that is continuous: indeed, for any open set , we have for some open , and , which is open since is continuous.  The usual trigonometric arguments show that is injective and surjective. However, is not open, and hence not a homeomorphism. Indeed, let , which is open in . The image is easily seen to be the upper half of the circle minus the point : in particular, all points have nonnegative -coordinates. On the other hand, we have and with respect to the subspace topology on any open set containing contains elements of whose -coordinate is negative. It follows that is not open.    In light of , it is natural to ask whether given topological spaces there is a space with continuous maps that satisfies a dual mapping property to that of the product. Indeed, there is, and we call it the coproduct of the .   Coproduct space  Let be a collection of topological spaces. Let be the disjoint union  of the ; in more detail, for each , define , and define . For each the function is a bijection between and , and it is easy to see that the collection is a topology on making the map a homeomorphism. All of this rigamarole was done simply to replace the not necessarily disjoint 's with homeomorphic copies that are disjoint. The coproduct topology on is the topology generated by the basis defined as follows: . We call together with the topology the coproduct of the .    Universal mapping property of coproduct space   Let be a collection of topological spaces, and let be their coproduct. For each let be the injective function .   Injection maps  For each the map is continuous, open, closed, and injective.    Coproduct universal mapping property  The space together with the inclusion maps satisfies the following universal mapping property: given any topological space and collection of continuous maps, there is a unique continuous map satisfying for all . In other words, there is a unique continuous map making the following diagram commutative for all .   Commutative diagram for coproduct space      Unique up to homeomorphism  The universal mapping property characterizes up to homeomorphism: , if is a topological space equipped with a collection of continuous maps that together satisfy the , then is homeomorphic to .       Mimic the proof of step by step.    "
 },
 {
   "id": "d_homeomorphism",
@@ -1690,7 +1474,7 @@ var ptx_lunr_docs = [
   "type": "Remark",
   "number": "1.10.2",
   "title": "Homeomorphism: inverse must be continuous.",
-  "body": " Homeomorphism: inverse must be continuous   You may have met analogs of the homeomorphism in other areas of mathematics: , in linear algebra or group theory. In category theory it is what is called an isomorphism . The basic idea is that once you decide what the structure-preserving maps are between objects (continuous functions for topological spaces, linear transformations for vector spaces, homomorphisms for groups), an isomorphism is essentially just an invertible structure-preserving map: a vector space isomorphism is an invertible linear transformation; a group isomorphism is an invertible group homomorphism. The only subtlety is that you want the inverse of this invertible function to also be structure preserving! For linear transformations and group homomorphisms this is automatic. Not so for continuous functions! The inverse of an invertible continuous function need not be continuous, as the example below illustrates.   "
+  "body": " Homeomorphism: inverse must be continuous  You may have met analogs of the homeomorphism in other areas of mathematics: , in linear algebra or group theory. In category theory it is what is called an isomorphism . The basic idea is that once you decide what the structure-preserving maps are between objects (continuous functions for topological spaces, linear transformations for vector spaces, homomorphisms for groups), an isomorphism is essentially just an invertible structure-preserving map: a vector space isomorphism is an invertible linear transformation; a group isomorphism is an invertible group homomorphism. The only subtlety is that you want the inverse of this invertible function to also be structure preserving! For linear transformations and group homomorphisms this is automatic. Not so for continuous functions! The inverse of an invertible continuous function need not be continuous, as the example below illustrates.  "
 },
 {
   "id": "eg_homeomorphism_not_",
@@ -1708,7 +1492,7 @@ var ptx_lunr_docs = [
   "type": "Remark",
   "number": "1.10.4",
   "title": "Homeomorphic equivalence relation.",
-  "body": " Homeomorphic equivalence relation   For topological spaces , define the relation to mean is homeomorphic to . This relation is an equivalence relation. That is, for all topological spaces we have . These three properties follow from the simple facts that (1) the identity map is a homeomorphism, (2) the inverse of a homeomorphism is a homeomomoprhism, (3) the composition of homeomorphisms is a homeomorphism.   "
+  "body": " Homeomorphic equivalence relation  For topological spaces , define the relation to mean is homeomorphic to . This relation is an equivalence relation. That is, for all topological spaces we have . These three properties follow from the simple facts that (1) the identity map is a homeomorphism, (2) the inverse of a homeomorphism is a homeomomoprhism, (3) the composition of homeomorphisms is a homeomorphism.  "
 },
 {
   "id": "eg_R_interval",
@@ -1717,23 +1501,14 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.10.5",
   "title": "All open intervals of <span class=\"process-math\">\\(\\R\\)<\/span> are homeomorphic.",
-  "body": " All open intervals of are homeomorphic   In the following, all intervals are treated as metric spaces with the Euclidean metric on . Make use of any function whose continuity properties are well known.    Prove that any finite open interval is homeomorphic to .    Prove that and are homeomorphic.    Prove that and are both homeomorphic to .    Explain why we may now conclude that all open intervals of are homeomorphic.        The function defined as is linear (hence continuous) and has continuous inverse .    The function is continuous and has continuous inverse .    The functions , , and , are continuous and have continuous inverses and .    This is now the result of the fact that being homeomorphic is an equivalence relation. In more detail, from (1) we know that all finite open intervals are homeomorphic; this in conjunction with (2) shows that all finite open intervals are homemorphic to . From (3) we conclude that all half-finite intervals are homeomorphic to . Since any open interval is either finite, half-finite, or equal to , we conclude that all open intervals are homeomorphic.     "
-},
-{
-  "id": "th_product_universal_prop",
-  "level": "2",
-  "url": "s_homeomorphisms.html#th_product_universal_prop",
-  "type": "Theorem",
-  "number": "1.10.6",
-  "title": "Universal property of product space.",
-  "body": " Universal property of product space   Let be a collection of topological spaces, and let equipped with the product topology. Let be the -th projection map.    Product mapping property  Given any topological space and any collection of continuous maps , there is a unique continuous map satisfying for all .  In other words, specifying a continuous map into the product space is equivalent to specifying continuous maps into for all     Unique up to homeomorphism  If is any other topological space equipped with continuous maps , and if the product mapping property (1) is satisfied with replacing and replacing , then is homeomorphic to .  In other words, up to homeomorphism, the mapping property uniquely characterizes the product space.        First observe that equality for elements in can be express in terms of the projection maps as follows: . Using this fact, we see that given a function we have . Thus the function is the unique function from to satisfying for all . To see that this is continuous, we show that is open for any base open set . For such a we have for some open sets , . By definition of we have if and only if if and only if for all . Thus . Since each is continuous, we conclude that is open for all , and hence is open.    Let together with continuous maps be any other space that satisfies the product mapping property (1). By (1) (taking ) there is a continuous function satisfying . Similarly, since also satisfies the product mapping property, we have (now taking in (1)) a continuous map satisfying . I claim and : , is a continuous inverse of , and thus is a homeomorphism between and .  To see why we use the uniqueness claim in the product mapping property (twice). Indeed, the function is continuous and satisfies for all . But the function also satisfies for all . By the uniqueness claim of the product mapping property, we conclude , as desired. The proof that is nearly identical, now applying the product mapping propery to maps into .     "
+  "body": " All open intervals of are homeomorphic   In the following, all intervals are treated as metric spaces with the Euclidean metric on . Make use of any function whose continuity properties are well known.   Prove that any finite open interval is homeomorphic to .    Prove that and are homeomorphic.    Prove that and are both homeomorphic to .    Explain why we may now conclude that all open intervals of are homeomorphic.          The function defined as is linear (hence continuous) and has continuous inverse .    The function is continuous and has continuous inverse .    The functions , , and , are continuous and have continuous inverses and .    This is now the result of the fact that being homeomorphic is an equivalence relation. In more detail, from (1) we know that all finite open intervals are homeomorphic; this in conjunction with (2) shows that all finite open intervals are homemorphic to . From (3) we conclude that all half-finite intervals are homeomorphic to . Since any open interval is either finite, half-finite, or equal to , we conclude that all open intervals are homeomorphic.      "
 },
 {
   "id": "d_open_closed_map",
   "level": "2",
   "url": "s_homeomorphisms.html#d_open_closed_map",
   "type": "Definition",
-  "number": "1.10.7",
+  "number": "1.10.6",
   "title": "Open and closed maps.",
   "body": " Open and closed maps   Let be a function between topological spaces.    is open if for all open we have open in .     is closed if for all closed we have closed in .      "
 },
@@ -1742,25 +1517,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_homeomorphisms.html#th_homeo_open_closed",
   "type": "Theorem",
-  "number": "1.10.8",
+  "number": "1.10.7",
   "title": "Homeomorphism equivalences.",
-  "body": " Homeomorphism equivalences   Let be a function between topological spaces. The following statements are equivalent.    is a homeomorphism.     is continuous, invertible, and open.     is continuous, invertible, and closed.      Assume is continous and invertible throughout. To be a homeomorphism we need to be continuous. Since if and only if , we see that . Thus continuous if and only if is open for all open , if and only if is open for all open , if and only if is open. The same argument with closed replacing open shows is continuous if and only if is closed. The equivalence of (1)-(3) now follows.  "
+  "body": " Homeomorphism equivalences   Let be a function between topological spaces. The following statements are equivalent.    is a homeomorphism.     is continuous, invertible, and open.     is continuous, invertible, and closed.       Assume is continous and invertible throughout. To be a homeomorphism we need to be continuous. Since if and only if , we see that . Thus continuous if and only if is open for all open , if and only if is open for all open , if and only if is open. The same argument with closed replacing open shows is continuous if and only if is closed. The equivalence of (1)-(3) now follows.   "
 },
 {
   "id": "rm_open_closed",
   "level": "2",
   "url": "s_homeomorphisms.html#rm_open_closed",
   "type": "Remark",
-  "number": "1.10.9",
+  "number": "1.10.8",
   "title": "Open and closed maps.",
-  "body": " Open and closed maps   Don't be mislead by into thinking that being an open continuous map is equivalent to being a closed continuous map; we need the additional assumption of invertibility to guarantee equivalence. As an example, consider any constant function from to itself: this is clearly continuous and closed, but not open.   "
+  "body": " Open and closed maps  Don't be mislead by into thinking that being an open continuous map is equivalent to being a closed continuous map; we need the additional assumption of invertibility to guarantee equivalence. As an example, consider any constant function from to itself: this is clearly continuous and closed, but not open.  "
 },
 {
   "id": "d_topological_properties",
   "level": "2",
   "url": "s_homeomorphisms.html#d_topological_properties",
   "type": "Definition",
-  "number": "1.10.10",
+  "number": "1.10.9",
   "title": "Topological properties.",
   "body": " Topological properties   Let be a property that is either satisfied or not satisfied by any given topological space. We say is a topological property if it is invariant under homeomorphisms: , if and are homeomorphic, then satisfies if and only if satisfies .   "
 },
@@ -1769,16 +1544,34 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_homeomorphisms.html#eg_topological_props",
   "type": "Example",
-  "number": "1.10.11",
+  "number": "1.10.10",
   "title": "Topological properties.",
   "body": " Topological properties   It is easy to see that the properties of being discrete, , Hausdorff, or a metric space are topological.   "
+},
+{
+  "id": "th_product_universal_prop",
+  "level": "2",
+  "url": "s_homeomorphisms.html#th_product_universal_prop",
+  "type": "Theorem",
+  "number": "1.10.11",
+  "title": "Universal mapping property of product space.",
+  "body": " Universal mapping property of product space   Let be a collection of topological spaces, and let equipped with the product topology. Let be the -th projection map: , given , we define .   Projection maps  For each the projection map is continuous, open, and surjective.    Product universal mapping property  The space together with its projection maps satisfies the following universal mapping property: given any topological space and collection of continuous maps, there is a unique continuous map satisfying for all . In other words, there is a unique continuous function making the diagram below commutative for all .   Commutative diagram for product topology    In fact, in this case we must have .    Unique up to homeomorphism  The universal mapping property characterizes up to homeomorphism: , if is a topological space equipped with a collection of continuous maps that together satisfy the , then is homeomorphic to .          Fix any . We showed is continuous in . To see that is surjective, given any , we have , which is nonempty. Lastly, suppose is open. We wish to show that is open in . To this end, given any , we have for some open base set , where is open in and for all but finitely many . But then . Since is open, we have shown that given any , there is an open set such that . It follows that is open, as desired.    First observe that equality for elements in can be expressed in terms of the projection maps as follows: . Using this fact, we see that given a function we have . Thus the function is the unique function from to satisfying for all . To see that this is continuous, we show that is open for any base open set . For such a we have for some open sets , . By definition of we have if and only if if and only if for all . Thus . Since each is continuous, we conclude that is open for all , and hence is open.    Let together with continuous maps be any other space that satisfies . Letting be the space together with its maps , there is a continuous function satisfying for all . Similarly, since also satisfies the product mapping property, taking along with its projection maps, we see there is a continuous map satisfying . We claim and : , is a continuous inverse of , and thus is a homeomorphism between and . To see why this is true, we use the uniqueness claim in the product mapping property (twice). Indeed, the function is continuous and satisfies for all . But the function also satisfies for all . By the uniqueness claim of the product mapping property, we conclude , as desired. The proof that is nearly identical, now applying the product mapping property to maps into .      "
 },
 {
   "id": "s_homeomorphisms-14",
   "level": "2",
   "url": "s_homeomorphisms.html#s_homeomorphisms-14",
-  "type": "Example",
+  "type": "Remark",
   "number": "1.10.12",
+  "title": "Universal mapping property of product space.",
+  "body": " Universal mapping property of product space  There is quite a bit to unpack in . The result is useful on a number of levels, some theoretical and some practical.  On the practical side, the theorem provides us a nice tool for producing continuous functions of the form : namely, all you need to do is provide continuous functions for each and define . Or similarly, given a function , to show is continuous, it suffices to show that each component function is continuous. You may have seen this property at work in an analysis or multivariable calculus course. For example, sometimes in these settings a function is simply defined to be continuous if the component functions are continuous for each . Thanks to we understand that this is equivalent to being continuous with respect to the standard topology on and the product topology on (which is equal to the standard topology on ).  On the theoretical side, the theorem identifies precisely what is so special about the product topology. Namely, it is the unique (up to homeomorphism) space satisfying the . The property establishes with the product topology as the category theoretic product of the spaces . You may have seen analogues of this type of object in other categories ( , category of groups or category of rings).  "
+},
+{
+  "id": "s_homeomorphisms-15",
+  "level": "2",
+  "url": "s_homeomorphisms.html#s_homeomorphisms-15",
+  "type": "Example",
+  "number": "1.10.13",
   "title": "Continuous bijection onto circle.",
   "body": " Continuous bijection onto circle   Let and , and equip each set with the subspace topology inherited from (resp. ) with its Euclidean topology.  Prove: the function defined as is continuous and invertible, but not a homeomorphism.    Recall first that on the product topology, Euclidean metric topology, and box topology are all equal. Since and are continuous, it follows from that the map is continuous. Next, since , where , it follows that is continuous: indeed, for any open set , we have for some open , and , which is open since is continuous.  The usual trigonometric arguments show that is injective and surjective. However, is not open, and hence not a homeomorphism. Indeed, let , which is open in . The image is easily seen to be the upper half of the circle minus the point : in particular, all points have nonnegative -coordinates. On the other hand, we have and with respect to the subspace topology on any open set containing contains elements of whose -coordinate is negative. It follows that is not open.   "
 },
@@ -1787,18 +1580,18 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_homeomorphisms.html#top_eg_coproduct",
   "type": "Topological specimen",
-  "number": "12",
+  "number": "13",
   "title": "Coproduct space.",
-  "body": " Coproduct space  Let be a collection of topological spaces, let be the disjoint union of the , and let be the the inclusion maps identifying each with a subset of . The coproduct topology on is the topology generated by the basis defined as follows: . We call together with the topology the coproduct topology of the . With respect to this topology, each injection is continuous.  "
+  "body": " Coproduct space  Let be a collection of topological spaces. Let be the disjoint union  of the ; in more detail, for each , define , and define . For each the function is a bijection between and , and it is easy to see that the collection is a topology on making the map a homeomorphism. All of this rigamarole was done simply to replace the not necessarily disjoint 's with homeomorphic copies that are disjoint. The coproduct topology on is the topology generated by the basis defined as follows: . We call together with the topology the coproduct of the .  "
 },
 {
   "id": "th_coproduct_universal_prop",
   "level": "2",
   "url": "s_homeomorphisms.html#th_coproduct_universal_prop",
   "type": "Theorem",
-  "number": "1.10.13",
-  "title": "Universal property of coproduct space.",
-  "body": " Universal property of coproduct space   Let be a collection of topological spaces, and let be their coproduct. For each let be the inclusion map identifying with a subset of .    Coproduct mapping property  Given any topological space and any collection of continuous maps , there is a unique continuous map satisfying for all .  In other words, specifying a continuous map out from to is equivalent to specifying continuous maps for all .    Unique up to homeomorphism  If is any other topological space equipped with continuous maps , and if the coproduct mapping property (1) is satisfied with replacing and replacing , then is homeomorphic to .  In other words, up to homeomorphism, the coproduct mapping property uniquely characterizes the product space.      Mimic the proof of step by step.   "
+  "number": "1.10.14",
+  "title": "Universal mapping property of coproduct space.",
+  "body": " Universal mapping property of coproduct space   Let be a collection of topological spaces, and let be their coproduct. For each let be the injective function .   Injection maps  For each the map is continuous, open, closed, and injective.    Coproduct universal mapping property  The space together with the inclusion maps satisfies the following universal mapping property: given any topological space and collection of continuous maps, there is a unique continuous map satisfying for all . In other words, there is a unique continuous map making the following diagram commutative for all .   Commutative diagram for coproduct space      Unique up to homeomorphism  The universal mapping property characterizes up to homeomorphism: , if is a topological space equipped with a collection of continuous maps that together satisfy the , then is homeomorphic to .       Mimic the proof of step by step.   "
 },
 {
   "id": "s_quotients",
@@ -1814,7 +1607,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_quotients.html#top_eg_quotient_space",
   "type": "Topological specimen",
-  "number": "13",
+  "number": "14",
   "title": "Quotient space.",
   "body": " Quotient space  Let be a topological space, an equivalence relation on , the set of equivalence classes of , and the map sending to its equivalence class . The set is a topology on called the quotient topology . The map is a quotient map : that is, it is surjective and satisfies is open if and only if is open.   That is a topology follows easily from properties of preimages of sets; and it satisfies the quotient map properties essentially by definition.   "
 },
@@ -2075,7 +1868,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_connected_path.html#top_eg_topologist_sine_curve",
   "type": "Topological specimen",
-  "number": "14",
+  "number": "15",
   "title": "Topologist’s sine curve.",
   "body": " Topologist's sine curve  Define as for all . Let , the graph of .    The set is connected.    The set is not path connected. More specifically, we can show that and are not connected by a path in .         Since is connected and is continuous, its graph is connected by . Since closure preserves connectedness, we conclude that is connected.    Suppose is a path connecting and . We can write where the component functions are both continuous. The set is closed, since is continuous. Set (guaranteed to exist since is closed), and let . Note that since , and that for all we have and hence . Take . We will show that there is no -ball around such that , contradicting the continuity of .  For any any , is an interval since is continuous and is connected. This means that contains an interval of the form for some . Due to the highly oscillatory nature of , we can find points satisfying . Since these points are in the image of , we have and for some . But then . Since , we cannot have , and thus , as claimed.      "
 },
@@ -2381,7 +2174,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_compact_metric.html#s_compact_metric-14",
   "type": "Topological specimen",
-  "number": "15",
+  "number": "16",
   "title": "Cantor set.",
   "body": " Cantor set  There is a unique family of closed sets of of of satisfying the following properties:    .     is a disjoint union of intervals of the form , where .     is obtained by deleting the middle third of each interval appearing in : that is each interval of gives rise to two intervals and .   Here is a tree illustration of the first three members of this family.  Recursive generation of   Recursive generation of    The Cantor set is defined as .  Prove: the Cantor set is nonempty, Hausdorff, compact, perfect (closed and all points of are limit points of ), and totally disconnected (the connected components of are singletons).   Since is compact, and since is a collection of nested nonempty closed sets, we know by that . Since each is clearly closed, is closed and bounded, hence compact. Since is a subspace of a Hausdorff space, it is Hausdorff.  We show that is perfect. We know already that is closed. Given any and , pick such that . Since , we have for some . Let be the two subintervals of remaining after deleting its middle third. Assume without loss of generality that . The collection is itself a family of nested, closed and nonempty subsets of . Again by compactness, there is an element . Since , we have . Since and , and since , we have .  We prove is totally disconnected. Let be any subset of containing two distinct elements and . We will find a separation of . Since , we can find an and disjoint intervals such that and : otherwise we would have for all , which would imply . Assume without loss of generality that , and let be any element between and that does not lie in . The open sets and form a separation of , proving it is not connected. We conclude that the only connected subsets of are singletons, and thus that the connected components are singletons.   "
 },
@@ -2435,7 +2228,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_locally.html#s_locally-6",
   "type": "Topological specimen",
-  "number": "16",
+  "number": "17",
   "title": "One-point compactification.",
   "body": " One-point compactification  Let be locally compact and Hausdorff. If is not compact, the embedding , where with topology as described in is a one-point compactification of .  "
 },
@@ -2453,7 +2246,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_locally.html#top_eg_stereographic_projection",
   "type": "Topological specimen",
-  "number": "17",
+  "number": "18",
   "title": "Stereographic projection.",
   "body": " Stereographic projection  Let , the north pole of . Given any the line passing through and intersects the -plane in the unique point . The corresponding map can easily be shown to be a homeomorphism, with inverse . The map is called the stereographic projection onto . The open embedding realizes as the one-point compactification of .  Not surprisingly, this result generalizes easily to . There is a homeomorphism from to mapping to , whose inverse realizes as the one-point compactification of .  "
 },
@@ -2930,7 +2723,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Tietze_extension.html#top_eg_space_filling",
   "type": "Topological specimen",
-  "number": "18",
+  "number": "19",
   "title": "Space-filling curve.",
   "body": " Space-filling curve  We will show that there is a continuous surjective function . This is thus a path or curve, whose image is all of . This called a space-filling curve , or Peano curve .   Let be the Cantor set, and choose a homeomorphism , where is given the discrete topology and is given the product topology. (We proved is homeomorphic to in discussion.) Now define functions as Both functions are easily seen to be continuous; we prove this for . Let and let . For any , pick such that . Let . For any , we have , as desired.  Now using our homeomorphism , we see that the functions and are continuous functions from to . By the Tietze extension theorem , we obtain continuous extensions and . The function defined as is then a continuous function to .  It remains only to show that is surjective. Given any , let and be binary expansions of and . Let , and let . We have . This proves in fact that is surjective.   "
 },

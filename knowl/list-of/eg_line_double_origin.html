@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.11.13</span><span class="period">.</span><span class="space"> </span><span class="title">Line with doubled origin.</span>
+</h3> <div class="para logical">
+<div class="para">Let <span class="process-math">\(X\)</span> be the disjoint union of two copies of <span class="process-math">\(\R\text{,}\)</span> with the coproduct topology. Concretely, labeling the two copies of <span class="process-math">\(\R\)</span> as <span class="process-math">\(\R\times \{A\}\)</span> and <span class="process-math">\(\R\times \{B\}\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+X=\{(x,A)\colon x\in \R\}\cup \{(x,B)\colon x\in \R \}\text{,}
+\end{equation*}
+</div>
+<div class="para">and the coproduct topology has as a basis the collection</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathcal{B}=\{U\times \{A\}\colon U \text{ open in } \R\}\bigcup \{U\times \{B\}\colon U \text{ open in } \R\}\text{.}
+\end{equation*}
+</div>
+<div class="para">Let <span class="process-math">\(X^*\)</span> be the quotient obtained from <span class="process-math">\(X\)</span> by identifying <span class="process-math">\((x,A)\)</span> and <span class="process-math">\((x,B)\)</span> for all <span class="process-math">\(x\ne 0\text{,}\)</span> and let <span class="process-math">\(q\colon X\rightarrow X^*\)</span> be its defining quotient map.</div>
+<ol class="decimal">
+<li><div class="para logical">
+<div class="para">Let <span class="process-math">\(Y=\R-\{0\} \cup \{0_A\} \cup \{0_B\}\text{:}\)</span> i.e., <span class="process-math">\(Y\)</span> is the punctured real line together with two additional distinct points. The following collection is easily shown to be a topology on <span class="process-math">\(Y\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathcal{T}=\{U-\{0\}\colon U \text{ open in } \R\}\bigcup \{\{0_A\}\cup U-\{0\}\colon 0\in U, U \text{ open in } \R\} \cup \{\{0_B\}\cup U-\{0\}\colon 0\in U, U \text{ open in } \R \}\text{.}
+\end{equation*}
+</div>
+<div class="para">Prove: <span class="process-math">\(X^*\)</span> is homeomorphic to <span class="process-math">\(Y\text{.}\)</span>
+</div>
+</div></li>
+<li><div class="para">Prove: <span class="process-math">\(X\)</span> is Hausdorff, but <span class="process-math">\(X^*\)</span> is not Hausdorff.</div></li>
+</ol>
+</div> <details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><ol class="decimal">
+<li><div class="para">Left as an exercise.</div></li>
+<li>
+<div class="para">In fact, in much more generality, given a collection of spaces <span class="process-math">\(\{X_i\}_{i\in I}\text{,}\)</span> the coproduct <span class="process-math">\(X=\coprod_{i\in I} X_i\)</span> is Hausdorff if and only if <span class="process-math">\(X_i\)</span> is Hausdorff for all <span class="process-math">\(i\in I\text{.}\)</span> Proof left as an exercise.</div>
+<div class="para">Since <span class="process-math">\(X^*\)</span> is homeomorphic to <span class="process-math">\(Y\text{,}\)</span> it suffices to show that <span class="process-math">\(Y\)</span> is not Hausdorff. To see this, notice that any open containing <span class="process-math">\(0_A\)</span> is of the form <span class="process-math">\(U_1=\{0_A\}\cup U-\{0\}\)</span> for some open set <span class="process-math">\(U\subseteq \R\)</span> containing <span class="process-math">\(0\text{,}\)</span> and similarly, any open set containing <span class="process-math">\(0_B\)</span> is of the form <span class="process-math">\(U_2=\{0_B\}\cup V-\{0\}\)</span> for some open set <span class="process-math">\(V\subseteq \R\)</span> containing <span class="process-math">\(0\text{.}\)</span> Since <span class="process-math">\(U\cap V\)</span> contains a set of the form <span class="process-math">\((-\epsilon, \epsilon)\)</span> for some <span class="process-math">\(\epsilon &gt; 0\text{,}\)</span> we see that <span class="process-math">\((-\epsilon, \epsilon)-\{0\}\subseteq U_1\cap U_2\text{.}\)</span> In particular, we have <span class="process-math">\(U_1\cap U_2\ne \emptyset\text{.}\)</span> Thus <span class="process-math">\(Y\)</span> is not Hausdorff.</div>
+</li>
+</ol></div></details></article><span class="incontext"><a class="internal" href="s_quotients.html#eg_line_double_origin">in-context</a></span>
+</body>
+</html>

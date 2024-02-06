@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.11.12</span><span class="period">.</span><span class="space"> </span><span class="title">Quotient of product space.</span>
+</h3>
+<div class="para logical">
+<div class="para">
+<span class="process-math">\(X=\prod_{i\in I}X_i\)</span> be the topological product of the spaces <span class="process-math">\(\{X_i\}_{i\in I}\text{.}\)</span> Fix <span class="process-math">\(i_0\in I\)</span> and define the equivalence relation <span class="process-math">\(\sim\)</span> on <span class="process-math">\(X\)</span> as follows: given <span class="process-math">\(\boldx=(x_i)_{i\in I}\)</span> and <span class="process-math">\(\boldy=(y_i)_{i\in I}\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\boldx\sim \boldy \iff x_{i_0}=y_{i_0}\text{.}
+\end{equation*}
+</div>
+<div class="para">In other words, two tuples are equivalent if their <span class="process-math">\(i_0\)</span>-th coordinates are equal.</div>
+</div> <div class="para">Let <span class="process-math">\(X^*=X/\sim\)</span> with the quotient topology. Prove: <span class="process-math">\(X^*\)</span> is homeomorphic to <span class="process-math">\(X_{i_0}\text{.}\)</span>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para">Let <span class="process-math">\(q\colon X\rightarrow X^*\)</span> be the quotient map for <span class="process-math">\(X^*\text{.}\)</span> By definition, we have <span class="process-math">\(q(\boldx)=q(\boldy)\)</span> if and only if <span class="process-math">\(\boldx\sim \boldy\)</span> if and only if the <span class="process-math">\(i_0\)</span>-th coordinates of <span class="process-math">\(\boldx\)</span> and <span class="process-math">\(\boldy\)</span> are equal.</div> <div class="para logical">
+<div class="para">Now, let <span class="process-math">\(\pi_{i_0}\colon X\rightarrow X_{i_0}\)</span> be the projection map onto the <span class="process-math">\(i_0\)</span>-th coordinate of <span class="process-math">\(X\text{.}\)</span> Since <span class="process-math">\(\pi_{i_0}\)</span> is open and surjective (<a href="" class="xref" data-knowl="./knowl/xref/th_product_universal_prop.html" title="Theorem 1.10.11: Universal mapping property of product space">1.10.11</a>), it is a quotient map. Furthermore, given <span class="process-math">\(\boldx=(x_i)_{i\in I}\)</span> and <span class="process-math">\(\boldy=(y_i)_{i\in I}\text{,}\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_product_universal_prop.html ./knowl/xref/th_quot_univ_map.html">
+\begin{align*}
+\pi_{i_0}(\boldx)=\pi_{i_0}(\boldy) \amp \iff x_{i_0}=y_{i_0}\\
+\amp \iff \boldx\sim \boldy \\
+\amp \iff q(\boldx)=q(\boldy)\text{.}
+\end{align*}
+</div>
+<div class="para">We conclude from <a href="" class="xref" data-knowl="./knowl/xref/th_quot_univ_map.html" title="Theorem 1.11.10: Universal mapping property of quotient maps">Theorem 1.11.10</a> that the map</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_product_universal_prop.html ./knowl/xref/th_quot_univ_map.html">
+\begin{align*}
+p\colon X^* \amp \rightarrow X_{i_0} \\
+[\boldx] \amp \mapsto \pi_{i_0}(\boldx)
+\end{align*}
+</div>
+<div class="para">is a homeomorphism between <span class="process-math">\(X^*\)</span> and <span class="process-math">\(X_{i_0}\text{.}\)</span>
+</div>
+</div>
+</div></details></div></article><span class="incontext"><a class="internal" href="s_quotients.html#eg_quot_prod">in-context</a></span>
+</body>
+</html>

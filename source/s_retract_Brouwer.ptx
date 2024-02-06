@@ -72,14 +72,14 @@
     <proof>
         <title>Proof: <m>(1)\implies (2)</m></title>
         <p>
-            Assume <m>h\colon S^1\rightarrow X</m> is nullhomotopic to the constant function <m>e_{x_0}\colon S^1\rightarrow X</m>, and let <m>H\colon S^1\times I\rightarrow X</m> be a homotopy from <m>h</m> to <m>e_{x_0}</m>. Our basic approach is to (a) show that <m>B^2</m> is a quotient of <m>S^1\times I</m>, and <m>(b)</m> use the <xref ref="th_quotientmap_mappingprop"/> to produce the desired extension <m>k\colon B^2\rightarrow X</m>.  
+            Assume <m>h\colon S^1\rightarrow X</m> is nullhomotopic to the constant function <m>e_{x_0}\colon S^1\rightarrow X</m>, and let <m>H\colon S^1\times I\rightarrow X</m> be a homotopy from <m>h</m> to <m>e_{x_0}</m>. Our basic approach is to (a) show that <m>B^2</m> is a quotient of <m>S^1\times I</m>, and <m>(b)</m> use the <xref ref="th_quot_univ_map"/> to produce the desired extension <m>k\colon B^2\rightarrow X</m>.  
         </p>
         <p>
             To realize <m>B^2</m> as a quotient of <m>S^1\times I</m> we wish to map each copy <m>S^1\times \{t\}</m> of <m>S^1</m> to the circle <m>C_t\colon x^2+y^2=(1-t)^2</m> for each <m>t</m>. The map <m>q\colon S^1\times t\rightarrow B^2</m> defined as <m>q((\boldx, t))=(1-t)\boldx</m> accomplishes this for us. We see by the usual arguments that <m>q</m> is continuous, and our conceptual description of <m>q</m> shows that it is surjective. Since <m>S^2\times I</m> is compact and <m>B^2</m> is Hausdorff, the map <m>q</m> is closed, and hence a quotient map. Lastly, observe that <m>q\vert_{S^1\times \{t\}}\colon S^1\times \{t\}\rightarrow C_t</m> is bijective for all <m>t\ne 1</m>, and <m>q\vert_{S^1\times \{1\}}\colon S^1\times \{1\}\rightarrow \{\boldzero\}</m> collapses all points of <m>S^1\times \{1\}</m> to <m>\boldzero</m>. It follows that
             <men xml:id="eq_quot_fibers">
                 q(\boldx, t)=q(\boldy,t') \iff t=t'=1 \text{ or } t=t'\ne 1 \text{ and } \boldx=\boldy
             </men>.
-            Now return to the homotopy <m>H</m>. Since for <m>t=1</m> it satisfies <m>H(\boldx,1)=H(\boldy, 1)=x_0</m>, we see from <xref ref="eq_quot_fibers"/> that it is well-defined on the fibers of <m>q</m>. By  <xref ref="th_quotientmap_mappingprop"/> there is a continuous map <m>k\colon B^2\rightarrow X</m> satisfying <m>k(q(\boldx, t))=H(\boldx, t)</m>. Observe that <m>q(\boldx, 0)=\boldx</m> for all <m>\boldx\in S^1</m>, and hence we have <m>k(\boldx)=H(q(\boldx, 0))=k(\boldx)</m> for all <m>\boldx\in S^1</m>. This proves <m>k</m> is an extension of <m>h</m>, as desired. 
+            Now return to the homotopy <m>H</m>. Since for <m>t=1</m> it satisfies <m>H(\boldx,1)=H(\boldy, 1)=x_0</m>, we see from <xref ref="eq_quot_fibers"/> that it is well-defined on the fibers of <m>q</m>. By  <xref ref="th_quot_univ_map"/> there is a continuous map <m>k\colon B^2\rightarrow X</m> satisfying <m>k(q(\boldx, t))=H(\boldx, t)</m>. Observe that <m>q(\boldx, 0)=\boldx</m> for all <m>\boldx\in S^1</m>, and hence we have <m>k(\boldx)=H(q(\boldx, 0))=k(\boldx)</m> for all <m>\boldx\in S^1</m>. This proves <m>k</m> is an extension of <m>h</m>, as desired. 
         </p>
     </proof>
 </theorem>

@@ -1,30 +1,87 @@
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="s_quotients">
   <title>Quotients</title>
-  <introduction>
-    <p>
-
-    </p>
-</introduction>
+  
 <project xml:id="top_eg_quotient_space">
   <title>Quotient space</title>
   <p>
-    Let <m>(X,\mathcal{T})</m> be a topological space, <m>\sim</m> an equivalence relation on <m>X</m>, <m>X^*=X/\sim</m> the set of equivalence classes of <m>\sim</m>, and <m>q\colon X\rightarrow X^*</m> the map sending <m>x\in X</m> to its equivalence class <m>[x]_\sim\in X^*</m>. The set
+    Let <m>(X,\mathcal{T})</m> be a topological space, let <m>Y</m> be a set (not necessarily a topological space), and let <m>q\colon X\rightarrow Y</m> be a surjective function. The collection
     <me>
-      \mathcal{T}_{\operatorname{quot}}=\{U\subset X^*\colon q^{-1}(U)\in \mathcal{T}\}
+      \mathcal{T}'=\{U\subset Y\colon q^{-1}(U)\in \mathcal{T}\}=\{U\subset Y\colon q^{-1}(U) \text{ open in } X\}
     </me>
-    is a topology on <m>X^*</m> called the <term>quotient topology</term>. The map <m>q\colon X\rightarrow X^*</m> is a <em>quotient map</em>: that is, it is surjective and satisfies <m>V\subseteq X^*</m> is open if and only if <m>q^{-1}(V)</m> is open.
+    is a topology on <m>Y</m> called the <term>quotient topology</term> on <m>Y</m> with respect to <m>q</m>, and we call <m>Y</m> a <term>quotient</term> of the space <m>X</m>. Furthermore the map <m>q</m> is continuous with respect to <m>\mathcal{T}'</m>. 
   </p>
   <proof>
     <p>
-      That <m>\mathcal{T}_{\operatorname{quot}}</m> is a topology follows easily from properties of preimages of sets; and it satisfies the quotient map properties essentially by definition.
+      Assuming <m>\mathcal{T}'</m> is a topology, it is easy to see that <m>q</m> is continuous with respect to it. Indeed, by definition <m>q^{-1}(U)\in \mathcal{T}</m> if and only if <m>U\in \mathcal{T}'</m>. (In fact, <m>q</m> satsifies the stonger property of being a <em>quotient map</em>. See <xref ref="d_quotient_map"/>.)
+    </p>
+    <p>
+      Let's show that <m>\mathcal{T}'</m> is indeed a topology on <m>Y</m>. 
+      <ol>
+        <li>
+          <p>
+            Since <m>q^{-1}(\emptyset)=\emptyset\in \mathcal{T}</m> and <m>q^{-1}(Y)=X\in \mathcal{T}</m>, we see that <m>\emptyset\in \mathcal{T}'</m> and <m>Y\in \mathcal{T}'</m>. 
+          </p>
+        </li>
+        <li>
+          <p>
+            Assume <m>\{U_i\}_{i\in I}</m> is a collection of elements of <m>\mathcal{T}'</m>. By definition, this means that <m>q^{-1}(U_i)</m> is open in <m>X</m> for all <m>i\in I</m>. Since 
+            <md>
+              <mrow>q^{-1}\left( \bigcup_{i\in I}U_i\right) \amp = \bigcup_{i\in I} q^{-1}(U_i)</mrow>
+            </md>
+            we see that <m>q^{-1}\left( \bigcup_{i\in I}U_i\right)</m> is open in <m>X</m>, being a union of open sets. It follows by definition that <m> \bigcup_{i\in I}U_i\in \mathcal{T}'</m> , as desired. 
+          </p>
+        </li>
+        <li>
+          <p>
+            We have 
+            <md>
+              <mrow>U_1,U_2\in \mathcal{T}' \amp \iff q^{-1}(U_1), q^{-1}(U_2)\in \mathcal{T} </mrow>
+              <mrow> \amp \implies q^{-1}(U_1)\cap q^{-1}(U_2)\in \mathcal{T}'</mrow>
+              <mrow> \amp \implies q^{-1}(U_1\cap U_2)\in \mathcal{T}' \amp (q^{-1}(U_1\cap U_2)=q^{-1}(U_1)\cap q^{-1}(U_2))</mrow>
+              <mrow> \amp \iff U_1\cap U_2\in \mathcal{T}'</mrow>
+            </md>.
+          </p>
+        </li>
+      </ol>
     </p>
   </proof>
 </project>
+<definition xml:id="d_quotient_equivalence">
+  <title>Quotient by an equivalence relation</title>
+  <statement>
+    <p>
+      Let <m>X</m> be a topological space, and suppose an equivalence relation <m>\sim</m> is defined on <m>X</m>. Given <m>x\in X</m>, let 
+      <me>
+        [x]_\sim=\{y\in X\colon x\sim y\}
+      </me>
+      be its equivalence class with respect to <m>\sim</m>, and let <m>X/\sim</m> be the set of all equivalence classes of <m>X</m>: <ie/>, 
+      <me>
+        X/\sim\,  =\{[x]_\sim\, \colon x\in X\}
+      </me>.
+     The function
+      <md>
+        <mrow> q\colon X \amp \rightarrow X/\sim </mrow>
+        <mrow>x \amp \mapsto [x]_\sim</mrow>
+      </md>
+      is easily seen to be surjective, and satisfies <m>q(x)=q(x')</m> if and only if <m>x\sim x'</m>. The set <m>X/\sim</m> equipped with the quotient topology with respect to <m>q</m> is called the <term>quotient of <m>X</m> by the equivalence relation <m>\sim</m> </term>. We call <m>q</m> the <term>defining quotient map</term> of <m>X^*</m>.  
+    </p>
+  </statement>
+</definition>
+<remark>
+  <title>Quotient by an equivalence relation</title>
+  <p>
+    <em>Up to homeomorphism</em>, a quotient space as defined in <xref ref="top_eg_quotient_space"/> is the same thing as a quotient by an equivalence relation. In more detail, given a topological space <m>X</m> and surjective function <m>q\colon X\rightarrow Y</m>, we can define a equivalence relation <m>\sim</m> on <m>X</m> as 
+    <me>
+      x\sim x' \iff q(x)=q(x')
+    </me>,
+    and it easy to show (at least, once we can make use of some of the theoretical tools developed below) that <m>X/\sim</m> is homeomorphic to <m>Y</m> with its quotient topology.  See <xref ref="eg_quot_equiv"/>.
+  </p>
+</remark>
 <example xml:id="eg_quotient_no_proof">
   <statement>
     <p>
-      For each quotient space description give an explicit description of the equivalence classes and identify (without proof) what familiar space the quotient might be homeomorphic to.
-    </p>
+      For each quotient space <m>X^*=X/\sim</m> give an explicit description of the equivalence classes and identify (without proof) what familiar space the quotient might be homeomorphic to.
+    
     <ol>
       <li>
         <p>
@@ -47,14 +104,45 @@
         </p>
       </li>
     </ol>
+  </p>
   </statement>
   <solution>
     <p>
-
+      <ol>
+        <li>
+          <p>
+            Let <m>\sim</m> be the equivalence relation described. For any <m>x\in [0,1]</m>, its equivalence class <m>[x]_\sim</m> is either <m>\{x\}</m>, if <m>x\notin \{0,1\}</m>, or <m>\{0,1\}</m>, if <m>x\in \{0,1\}</m>. 
+            We imagine making the identification of <m>0</m> and <m>1</m> as taking a line segment and connecting the two endpoints. Since that object is loop-like, we guess that the quotient <m>X^*</m> is homeomorphic to the circle <m>S^1=\{(x,y)\in \R^2\colon x^2+y^2=1\}</m>. 
+          </p>
+        </li>
+        <li>
+          <p>
+            For any <m>x\in \R</m> its corresponding equivalence class is 
+            <me>
+              [x]_\sim=\{x+n\colon n\in \Z\}
+            </me>.
+            It is easy to see that every <m>x\in \R</m> is equivalent to an element <m>x'\in [0,1]</m>, so that under this identification <m>\R</m> is first <q>collapsed</q> to the interval <m>[0,1]</m>. Since furthermore <m>0\sim 1</m>, we guess that <m>X^*</m> is homeomorphic to the quotient space in (a), and hence also to <m>S^1</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            For <m>(x,y)\in [0,1]\times [0,1]</m>, its equivalence class <m>[(x,y)]_\sim</m> is either <m>\{(x,y)\}</m>, if <m>x\notin \{0,1\}</m>, and <m>\{(0,y), (1,y)\}</m> if <m>x\in \{0,1\}</m>. Geometrically this is like taking the square <m>[0,1]\times [0,1]</m> and glueing its two vertical sides together, where we take care to match up the top corners with the top corners and bottom corners with bottom corners. The result of such an operation is a cylinder, our guess for what <m>X^*</m> is homeomorphic to.  
+          </p>
+        </li>
+        <li>
+          <p>
+            For <m>(x,y)\in [0,1]\times [0,1]</m>, its equivalence class <m>[(x,y)]_\sim</m> is either <m>\{(x,y)\}</m>, if <m>\{x,y\}\cap\{0,1\}=\emptyset</m>, <m>\{(0,y), (1,y)\}</m> if <m>\{x,y\}\cap \{0,1\}=\{x\}</m>, <m>\{(x,0), (x,1)\}</m> if <m>\{x,y\}\cap \{0,1\}=\{y\}</m>, and <m>\{(0,0),(0,1),(1,0),(1,1)\}</m> if <m>\{x,y\}\cap \{0,1\}=\{0,1\}</m>. Geometrically this is like taking the square <m>[0,1]\times [0,1]</m>, first glueing its two vertical sides together to get a cylinder, and then glueing the top and bottom edges of this cylinder together to get a doughnut, or torus. Thus we expect <m>X^*</m> is homeomorphic to a torus in <m>\R^3</m>. 
+          </p>
+        </li>
+      </ol>
     </p>
   </solution>
 </example>
+<p>
+  In order to prove our claims in <xref ref="eg_quotient_no_proof"/> we want an easy way to produce a homeomorphism from a quotient space to some other (familiar) topological space. It turns out that the key to doing so lies in identifying a universal mapping property of the map <m>q\colon X\rightarrow X^*</m>. The map <m>q</m> is a special type of map called a <em>quotient map</em>; and as described in <xref ref="th_quot_univ_map"/>, quotient maps enjoy a very useful mapping property that we can exploit to produce homeomorphisms.   
+</p>
 <definition xml:id="d_quotient_map">
+<title>Quotient map</title>
   <statement>
     <p>
       Let <m>X</m> and <m>Y</m> be topological spaces. A function <m>f\colon X\rightarrow Y</m> is a <term>quotient map</term> if it satisfies the following properties:
@@ -66,7 +154,7 @@
         </li>
         <li>
           <p>
-            <m>V\subseteq Y</m> is open if and only if <m>f^{-1}(V)\subseteq X</m> is open.
+            <m>U\subseteq Y</m> is open if and only if <m>f^{-1}(U)\subseteq X</m> is open.
           </p>
         </li>
       </ol>
@@ -74,20 +162,70 @@
     </p>
   </statement>
 </definition>
+
+<theorem xml:id="th_quot_map_space">
+  <title>Quotient maps and quotient spaces</title>
+  <statement>
+    <p>
+      Let <m>f\colon X\rightarrow Y</m> be a surjective map between two topological spaces, and let <m>\mathcal{T}_Y</m> be the topology on <m>Y</m>. The following are equivalent. 
+      <ol>
+        <li>
+          <p>
+            <m>q</m> is a quotient map. 
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\mathcal{T}_Y</m> is the quotient topology on <m>Y</m> with respect to <m>q</m>. 
+          </p>
+        </li>
+      </ol>
+    </p>
+  </statement>
+  <proof>
+    <p>
+      Let <m>\mathcal{T}_X</m> be the topology on <m>X</m>. We have 
+      <md>
+        <mrow>\mathcal{T}_Y \text{ the quotient topology} \amp \iff \mathcal{T}_Y=\{U\colon q^{-1}(U)\in \mathcal{T}_X \}</mrow>
+        <mrow> \amp \iff U\in \mathcal{T}_Y \text{ if and only if } q^{-1}(U)\in \mathcal{T}</mrow>
+        <mrow> \amp \iff q \text{ a quotient map}</mrow>
+      </md>.
+    </p>
+  </proof>
+</theorem>
+
 <definition xml:id="d_saturated">
   <title>Saturated sets</title>
   <statement>
     <p>
-      Let <m>f\colon X\rightarrow Y</m>.
-            A set <m>A\subseteq X</m> is saturated with respect to <m>f</m> if <m>f^{-1}(f(A))=A</m>. Equivalently, <m>A</m> is saturated if if whenever <m>x\in A</m> we have <m>f^{-1}(\{f(x)\})\subseteq A</m>.
+      Let <m>f\colon X\rightarrow Y</m> be a function.
+            A set <m>A\subseteq X</m> is <term>saturated</term> with respect to <m>f</m> if any one of the following equivalent properties holds:
+            <ul>
+              <li>
+                <p>
+                  <m>f^{-1}(f(A))=A</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  For all <m>a\in A</m>, we have <m>f^{-1}(\{f(a)\})\subseteq A</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>A=f^{-1}(B)</m> for some <m>B\subseteq Y</m>. 
+                </p>
+              </li>
+            </ul>  
     </p>
   </statement>
 </definition>
 <theorem xml:id="th_quotientmap_props">
   <title>Quotient map properties</title>
   <statement>
-    <ol>
-      <li>
+    <p>
+      <ol>
+      <li xml:id="quot_props_equiv">
         <p>
           Let <m>f\colon X\rightarrow Y</m> be a continuous surjective function. The following statements are equivalent.
           <ol>
@@ -106,95 +244,96 @@
                 <m>f(C)</m> is closed for all closed saturated subsets <m>C\subseteq X</m>.
               </p>
             </li>
+            <li>
+              <p>
+                <m>C\subseteq Y</m> is closed in <m>Y</m> if and only if <m>f^{-1}(C)</m> is closed in <m>X</m>.
+              </p>
+            </li>
           </ol>
         </p>
       </li>
-      <li>
+      <li xml:id="quot_props_open_closed">
         <p>
-          Let <m>f</m> be continuous and surjective. If <m>f</m> is open or closed, then it is a quotient map.
+          Let <m>f</m> be continuous and surjective. If <m>f</m> is an open map  or a closed map, then it is a quotient map. In particular, homeomorphisms are quotient maps. 
         </p>
       </li>
-      <li>
+      <li xml:id="quot_props_comp">
         <p>
           The composition of two quotient maps is a quotient map.
         </p>
       </li>
     </ol>
-  </statement>
-  <p>
-    Statement (3) is straightforward. Statement (2) follows easily from (1) using equivalent statements (b) and (c), respectively.
   </p>
+  </statement>
+  
   <proof>
-
-    <title>Proof of (1)</title>
     <p>
-      We prove <m>(a)\iff (b)</m> and <m>(b)\iff (c)</m>.
+      Statement (3) is straightforward. Statement (2) follows easily from (1) using equivalent statements (b) and (c), respectively.
+    </p>
+    <proof>
+      <title>Proof of (1)</title>
+    <p>
+      We prove the cycle of implications 
+      <me>
+        (a)\implies (b)\implies (c)\implies (d)\implies (a)
+      </me>.
     </p>
     <p>
-      <m>(a)\implies (b)</m>. Assume <m>f</m> is a quotient map. Let <m>U\subseteq X</m> be open and saturated. Since <m>f</m> is a quotient map, to show <m>V=f(U)</m> is open, it is enough to show <m>f^{-1}(V)=f^{-1}(f(U))</m> is open. I claim <m>f^{-1}(f(U))=U</m>, whence the claim follows. In general for any function of sets we have <m>f^{-1}(f(U))\supseteq U</m>. (Check for yourself.) Since <m>U</m> is saturated, the reverse inclusion also holds. Indeed, if <m>x\in f^{-1}(f(U))</m>, then <m>f(x)\in f(U)</m> and thus <m>f(x)=f(u)</m> for some <m>u\in U</m>; since <m>U</m> is saturated, we have <m>x\in U</m>.
+      <m>(a)\implies (b)</m>. Assume <m>f</m> is a quotient map. Let <m>U\subseteq X</m> be open and saturated. Since <m>U</m> is saturated, we have <m>U=f^{-1}(V)</m> for some set <m>V\subseteq Y</m>. Since <m>f</m> is a quotient map and <m>U</m> is open, the set <m>V</m> is open. Lastly, since <m>f</m> is surjective we have 
+      <me>
+        f(U)=f(f^{-1}(V))=V
+      </me>.
+      This proves that <m>f(U)</m> is open for any open <m>U\subseteq X</m>. 
     </p>
     <p>
-      <m>(b)\implies (a)</m>. Assume <m>U=f^{-1}(V)</m> be open for <m>V\subseteq Y</m>. We wish to show that <m>V</m> is open in <m>Y</m>. First observe that <m>f^{-1}(V)</m> is saturated: if <m>x\in f^{-1}(V)</m>, then <m>f^{-1}(\{f(x)\})\subseteq f^{-1}(V)</m>. Since <m>f</m> satisfies <m>(b)</m> and <m>U</m> is an open saturated set, we have <m>f(U)</m> open. I claim <m>f(U)=f(f^{-1}(V))=V</m>, showing <m>V</m> is open. In general we always have
-      <m>f(f^{-1}(V))\subseteq V</m> for any function of sets. For the other inclusion, given <m>y\in V</m>, there is an <m>x\in X</m> such that <m>f(x)=y</m>; then <m>x\in f^{-1}(V)</m> and <m>f(x)=y</m>, showing <m>y\in f(f^{-1}(V))</m>.
+      <m>(b)\implies (c)</m>. Assume <m>C\subseteq X</m> is closed and saturated. Since <m>C</m> is saturated, we have <m>C=f^{-1}(B)</m> for some <m>B\subseteq Y</m>. Let <m>U=C^c</m>, an open set. Furthermore, since  
+      <me>
+        U=C^c=(f^{-1}(B))^c=f^{-1}(B^c)
+      </me>,
+      we see that <m>U</m> is saturated. Using (2), we may conclude that <m>f(U)</m> is open. Again, using the fact that <m>f</m> is surjective, we have 
+      <me>
+        f(U)=f(f^{-1}(B^c))=B^c
+      </me>.
+      It follows that <m>B^c</m> is open, and hence <m>B</m> is closed. Since
+      <me>
+        f(C)=f(f^{-1}(B))=B
+      </me>,
+      we conclude that <m>f(C)</m> is closed, as desired. 
     </p>
     <p>
-      <m>(b)\implies (c)</m>. Let <m>C</m> be a saturated closed map. First I claim that the open set <m>U=X-C</m> is saturated. To see why, suppose <m>y=f(x)</m> for some <m>x\in U</m>. Since <m>x\notin C</m> and <m>C</m> is saturated, we must have <m>f^{-1}(\{y\})\cap C=\emptyset</m>. Thus <m>f^{-1}(\{y\})\subseteq U</m>, as desired. Next, I claim <m>f(U)=Y-f(C)</m>. We have already seen that if <m>y\in f(U)</m>, then <m>f^{-1}(\{y\})\cap C=\emptyset</m>,
-      and hence <m>y\notin f(C)</m>. This proves <m>f(U)\subseteq Y-f(C)</m>. For the other inclusion, given any <m>y\in Y-f(C)</m>, by surjectivity there is some <m>x\in X</m> such that <m>f(x)=y</m>; since <m>y\notin f(C)</m> we must have <m>x\in U</m>; thus <m>y\in f(U)</m>. This proves <m>f(U)=X-f(C)</m>. Since <m>f</m> satisfies (b), <m>f(U)</m> is open. We conclude that <m>f(C)</m> is closed, as desired.
+      <m>(c)\implies (d)</m>. Since <m>f</m> is assumed to be continuous, we need only show that if <m>f^{-1}(C)</m> is closed, then <m>C</m> is closed. If <m>C'=f^{-1}(C)</m> is closed, then it is a closed saturated set. By (c), we conclude that <m>f(C')</m> is closed. But since <m>f</m> is surjective, we have 
+      <me>
+        f(C')=f(f^{-1}(C))=C
+      </me>.
+      Thus <m>C</m> is closed, as desired. 
     </p>
     <p>
-      <m>(c)\implies (b)</m>. This argument is essentially identical to the one above.
+      <m>(d)\implies (a)</m>. Since <m>f</m> is assumed to be continuous, we need only show that if <m>f^{-1}(U)</m> is open, then <m>U</m> is open. If <m>V=f^{-1}(U)</m> is open, then <m>V^c=f^{-1}(U^c)</m> is closed. Using (d), we conclude that <m>U^c</m> is closed and hence <m>U</m> is open, as desired. 
     </p>
   </proof>
-
+</proof>
 </theorem>
-
-<theorem xml:id="th_quotientmap_mappingprop">
-  <title>Mapping property of quotient maps</title>
+<p>
+  The following theorem is often useful when investigating the <em>restriction</em> of a quotient map to a subspace. You find its proof in Munkres. 
+</p>
+<theorem xml:id="th_quot_subspace">
   <statement>
     <p>
-      Let <m>p\colon X\rightarrow Y</m> be a quotient map. Given any continuous function <m>g\colon X\rightarrow Z</m> satisfying
-      <men xml:id="eq_agree_on_fibers">
-        p(x)=p(x') \implies g(x)=g(x')
-      </men>
-      for all <m>x, x'\in X</m> there is a unique continuous function <m>f\colon Y\rightarrow Z</m> satisfying <m>g=f\circ p</m>.
-      <image xml:id="im_quotientmap_pros" width="25%">
-      <latex-image>
-        \begin{tikzcd}
-           X \arrow[rd, "g"] \arrow[d, twoheadrightarrow,"p"']\amp \\
-          Y \arrow[r,dotted,"\exists! f"'] \amp Z
-        \end{tikzcd}
-      </latex-image>
-      Furthermore, the function <m>f</m> is a projection map if and only if <m>g</m> is a projection map.
-      </image>
+      Let <m>q\colon X\rightarrow Y</m> be a quotient map, let <m>Z\subseteq X</m> be saturated with respect to <m>q</m>, and consider the restriction <m>q\vert_Z\colon Z\rightarrow q(Z)</m>, where <m>Z</m> and <m>q(Z)</m> are endowed with subspace topologies. 
+    <ol>
+      <li>
+        <p>
+          If <m>Z</m> is open or closed, then <m>q\vert_Z</m> is a quotient map. 
+        </p>
+      </li>
+      <li>
+        <p>
+          If <m>q</m> is an open map or a closed map, then <m>q\vert_Z</m> is a quotient map.  
+        </p>
+      </li>
+    </ol>
     </p>
   </statement>
-  <proof>
-    <p>
-      Assume we have <m>g\colon X\rightarrow Z</m> as described. Define <m>f\colon Y\rightarrow Z</m> via the following recipe: given <m>y\in Y</m>, pick any <m>x\in X</m> such that <m>p(x)=y</m> (possible since <m>p</m> is surjective); now define <m>f(y)=g(x)</m>. Two comments:
-      <ol>
-        <li>
-          <p>
-            To make sure <m>f</m> as described is well-defined, we must make sure that the definition of <m>f(y)</m> does not depend on the choice of <m>x</m> involve: <ie />, if you happen to pick another <m>x'</m> such that <m>p(x')=y</m>, we must make sure that <m>g(x)=g(x')</m>. This is precisely what is guaranteed by the condition that <m>p(x)=p(x')\implies g(x)=g(x')</m>.
-          </p>
-        </li>
-        <li>
-          <p>
-            Since we want <m>g=f\circ p</m>, this definition of <m>f</m> is forced upon us: given <m>y=p(x)</m>, we must have <m>f(y)=f(p(x))=g(x)</m>. Thus <m>f</m> is unique.
-          </p>
-        </li>
-      </ol>
-      Now we must show <m>f</m> is continuous. We must show, given any open <m>V\subseteq Z</m> the set <m>U=f^{-1}(V)</m> is open. To do so we use the fact that <m>p</m> is a quotient map: that is, we need only show that <m>p^{-1}(U)</m> is open in <m>X</m>. But we have
-      <me>
-        p^{-1}(U)=p^{-1}(f^{-1}(V))=(f\circ p)^{-1}(V)=g^{-1}(V),
-      </me>
-      since <m>g=f\circ p</m>. Since <m>g</m> is continuous, we conclude that <m>p^{-1}(U)=g^{-1}(V)</m> is open, as desired.
-    </p>
-    <p>
-      Lastly, we look at when <m>f</m> is a quotient map. If <m>f</m> is a quotient map, then so is the composition <m>g=f\circ p</m> by statement (3) of <xref ref="th_quotientmap_props"/>. Assume <m>g</m> is a quotient map. Since <m>g</m> is surjective and <m>g=f\circ p</m>, it follows that <m>f</m> must be surjective. Now suppose <m>U=f^{-1}(V)</m> is open in <m>Y</m>. Since <m>p</m> is continuous, <m>p^{-1}(U)</m> is open in <m>X</m>. As we saw above, <m>p^{-1}(U)=g^{-1}(V)</m>, which is a saturated open set of <m>X</m>. Since <m>g</m> is a quotient map, the set <m>g(g^{-1}(V))</m>
-       is open. But again, because <m>g</m> is surejective, we have <m>g(g^{-1}(V))=V</m>.
-    </p>
-  </proof>
-
 </theorem>
 <definition xml:id="d_fibers_agree">
   <title>Fibers of maps</title>
@@ -203,128 +342,230 @@
       For any function <m>f\colon X\rightarrow Y</m> between sets and element <m>y\in Y</m>, we call <m>f^{-1}(\{y\})</m> the <term>fiber of <m>f</m> lying over <m>y</m></term>. We say a function <m>g\colon X\rightarrow Z</m> <term>agrees on fibers</term> of <m>f</m> if
       <me>
         f(x)=f(x')\implies g(x)=g(x')
-      </me>.
+      </me>
+      for all <m>x,x'\in X</m>. 
     </p>
   </statement>
 </definition>
-<corollary xml:id="cor_quotientspace_props">
-  <title>Mapping property of quotients</title>
+<theorem xml:id="th_quot_univ_map">
+  <title>Universal mapping property of quotient maps</title>
   <statement>
     <p>
-      Let <m>X^*</m> be the quotient space of <m>X</m> by the equivalence relation <m>\sim</m>, and let <m>q\colon X\rightarrow X^*</m> be the corresponding quotient map. Let <m>g\colon X\rightarrow Z</m> be a continuous function that agrees on fibers of <m>q</m> (<ie />, <m>x\sim x'\implies g(x)=g(x')</m>).
+      Let <m>q\colon X\rightarrow Y</m> be a quotient map. Assume <m>g\colon X\rightarrow Z</m> is a continuous function that agrees on fibers of <m>q</m>: <ie/>, we have 
+      <men xml:id="eq_agree_on_fibers">
+        q(x)=q(x') \implies g(x)=g(x')
+      </men>
+      for all <m>x, x'\in X</m>.
       <ol>
-        <li>
+        <li xml:id="quot_univ_map">
           <p>
-            There is a unique continuous function <m>f</m> satisfying <m>g=f\circ q</m>; and <m>f</m> is a quotient map if and only if <m>g</m> is a quotient map.
-            <image xml:id="im_quotientspace_prop" width="25%">
+            There is a unique continuous function <m>f\colon Y\rightarrow Z</m> satisfying <m>g=f\circ q</m>.
+            <image xml:id="im_quotientmap_pros" width="25%">
             <latex-image>
               \begin{tikzcd}
-                 X \arrow[rd, twoheadrightarrow,"g"] \arrow[d, twoheadrightarrow,"p"']\amp \\
-                X^* \arrow[r,dotted,"\exists! f"'] \amp Y
+                 X \arrow[rd, "g"] \arrow[d, twoheadrightarrow,"q"']\amp \\
+                Y \arrow[r,dotted,"\exists! f"'] \amp Z
               \end{tikzcd}
             </latex-image>
           </image>
+            Indeed, the function <m>f</m> must be defined as 
+            <men xml:id="eq_th_quot_univ_map">
+              f(y)=g(x)
+            </men>,
+            where <m>x</m> is any element of <m>X</m> satisfying <m>q(x)=y</m>. 
           </p>
         </li>
-        <li>
+        <li xml:id="quot_univ_map_inj">
           <p>
-            The function <m>f</m> is a homeomorphism if and only if <m>g</m> is a quotient map and satisfies
+            The function <m>f</m> is injective if and only if <m>g</m> satisfies 
             <me>
-              g(x)=g(x') \iff x\sim x' (\text{equivalently, } g(x)=g(x')\iff q(x)=q(x'))
+              g(x)=g(x') \iff q(x)=q(x')
             </me>
             for all <m>x, x'\in X</m>.
           </p>
         </li>
+        <li xml:id="quot_univ_map_quot">
+          <p>
+            The function <m>f</m> is a quotient map if and only if <m>g</m> is a quotient map. 
+          </p>
+        </li>
+        <li xml:id="quot_univ_map_homeo">
+          <p>
+            The function <m>f</m> is a homeomorphism if and only if <m>g</m> is a quotient map and satisfies
+            <me>
+              g(x)=g(x') \iff q(x)=q(x')
+            </me>
+            for all <m>x, x'\in X</m>.
+          </p>
+        </li>
+
+      </ol> 
+    </p>
+  </statement>
+  <proof>
+    <p>
+      <ol>
+        <li>
+          <p>
+            Assume we have <m>g\colon X\rightarrow Z</m> as described. Define <m>f\colon Y\rightarrow Z</m> via the following recipe: given <m>y\in Y</m>, pick any <m>x\in X</m> such that <m>q(x)=y</m> (possible since <m>q</m> is surjective); now define <m>f(y)=g(x)</m>. Two comments:
+      <ol>
+        <li>
+          <p>
+            To make sure <m>f</m> as described is well-defined, we must make sure that the definition of <m>f(y)</m> does not depend on the choice of <m>x</m> involve: <ie />, if you happen to pick another <m>x'</m> such that <m>q(x')=y</m>, we must make sure that <m>g(x)=g(x')</m>. This is precisely what is guaranteed by the condition that <m>q(x)=q(x')\implies g(x)=g(x')</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Since we want <m>g=f\circ p</m>, this definition of <m>f</m> is forced upon us: given <m>y=q(x)</m>, we must have <m>f(y)=f(q(x))=g(x)</m>. Thus <m>f</m> is unique.
+          </p>
+        </li>
+      </ol>
+      Now we must show <m>f</m> is continuous. Given any open <m>V\subseteq Z</m>, to show that the set <m>U=f^{-1}(V)</m> is open, we will make use of the fact that <m>q</m> is a quotient map: namely, it suffices to show that <m>q{-1}(U)</m> is open in <m>X</m>. But we have
+      <me>
+        q^{-1}(U)=q^{-1}(f^{-1}(V))=(f\circ q)^{-1}(V)=g^{-1}(V),
+      </me>
+      since <m>g=f\circ q</m>. Since <m>g</m> is continuous, we conclude that <m>q^{-1}(U)=g^{-1}(V)</m> is open, as desired.
+    </p>
+    
+        </li>
+        <li>
+          <p>
+            Assume <m>f</m> is injective. Since <m>g=f\circ q</m>, given any <m>x,x'\in X</m> with <m>g(x)=g(x')</m>, we have <m>f(q(x))=f(q'(x))</m>. Since <m>f</m> is injective, we conclude <m>q(x)=q(x')</m>, as desired. 
+          </p>
+          <p>
+            Assume <m>g(x)=g(x')\implies q(x)=q(x')</m> for all <m>x,x'\in X</m>. We will show <m>f</m> is injective. To this end suppose <m>f(y)=f(y')</m> for some <m>y=q(x)</m> and <m>y'=q(x')</m>. Since <m>g=f\circ q</m> it follows that <m>g(x)=g(x')</m>, and hence, using our assumption, <m>y=q(x)=q(x')=y'</m>, as desired. 
+          </p>
+        </li>
+        <li>
+          <p>
+             If <m>f</m> is a quotient map, then so is the composition <m>g=f\circ q</m> by statement (3) of <xref ref="th_quotientmap_props"/>. Assume <m>g</m> is a quotient map. We know from (1) of the theorem that <m>f</m> is continuous. Furthermore, since <m>g</m> is surjective and <m>g=f\circ q</m>, it follows that <m>f</m> must be surjective. Now suppose <m>U=f^{-1}(V)</m> is open in <m>Y</m>. Since <m>q</m> is continuous, the set <m>W=q^{-1}(U)</m> is open in <m>X</m>. We have 
+             <me>
+              W=q^{-1}(U)=q^{-1}(f^{-1}(V))=(f\circ q)^{-1}(V)=g^{-1}(V)
+             </me>.
+             This shows <m>W</m> is an open saturated set with respect to <m>g</m>. Since <m>g</m> is a quotient map, it follows that <m>g(W)</m> is open (<xref ref="th_quotientmap_props"/>).
+             As we saw above, <m>p^{-1}(U)=g^{-1}(V)</m>, which is a saturated open set of <m>X</m>. Since <m>g</m> is a quotient map, the set <m>g(g^{-1}(V))</m>
+             is open. But again, because <m>g</m> is surjective, we have <m>g(g^{-1}(V))=V</m>.
+                </p>
+        </li>
       </ol>
     </p>
-  </statement>
-  <proof>
-    <ol>
-      <li>
-        <p>
-          The statement is a direct consequence of <xref ref="th_quotientmap_mappingprop"/> by setting <m>Y=X^*</m> and <m>p=q</m>, and understanding that the implication <m>x\sim x'\implies g(x)=g(x')</m> is equivalent to <m>p(x)=p(x')\implies g(x)=g(x')</m>.
-        </p>
-      </li>
-      <li>
-        <p>
-          The condition <m>x\sim x' \iff g(x)=g(x')</m> guarantees that the function <m>f\colon X^*\rightarrow Y</m> is injective. The condition of <m>g</m> being a quotient map is equivalent to <m>f</m> being a quotient map according to <xref ref="th_quotientmap_mappingprop"/>. Thus the two conditions taken together are equivalent to <m>f</m> being a bijective quotient map. This in turn is equivalent to being a homeomorphism by equivalent statement 1.b of <xref ref="th_continuous_equivalence"/>, since <em>all</em> subsets of <m>X</m> are saturated with respect to an invertible function <m>f</m>.
-        </p>
-      </li>
-    </ol>
-
   </proof>
 
-</corollary>
-<corollary xml:id="cor_quotient_factor">
-  <title>Factoring maps through a quotient</title>
+</theorem>
+
+
+
+
+<example xml:id="eg_quot_equiv">
+  <title>Quotient by an equivalence relation</title>
+  <p>
+    Let <m>X</m> be a topological space, let <m>q\colon X\rightarrow Y</m> be a surjective function, and let <m>\sim</m> be the equivalence relation defined on <m>X</m> as <m>x\sim x'</m> if and only if <m>q(x)=q(x')</m>. 
+  </p>
+  <p>
+    Prove: <m>X/\sim</m> is homeomorphic to <m>Y</m> with its quotient topology. 
+  </p>
+  <solution>
+    <p>
+      Let <m>p\colon X\rightarrow X^*</m> be the defining quotient map of <m>X^*</m>: by definition, we have <m>p(x)=[x]_\sim=\{x'\colon q(x)=q(x')\}</m>, and thus <m>p(x)=p(x')\iff q(x)=q(x')</m>. Since furthermore <m>q</m> is a quotient map, by <xref ref="quot_univ_map_homeo"/> the map <m>f\colon X^*\rightarrow Y</m> defined as <m>f([x]_\sim)=q(x)</m> is a homeomorphism.   
+    </p>
+  </solution>
+</example>
+<example xml:id="eg_quot_prod">
+  <title>Quotient of product space</title>
   <statement>
     <p>
-      Let <m>g\colon X\rightarrow Y</m> be a surjective continuous map, and let <m>X^*</m> be the quotient obtained from <m>X</m> by treating each fiber <m>g^{-1}(\{y\})</m>, <m>y\in Y</m>,  as a single point: <ie />, the equivalence relation is <m>x\sim x'\iff g(x)=g(x')</m>.
+      <m>X=\prod_{i\in I}X_i</m> be the topological product of the spaces <m>\{X_i\}_{i\in I}</m>. Fix <m>i_0\in I</m> and define the equivalence relation <m>\sim</m> on <m>X</m> as follows: given <m>\boldx=(x_i)_{i\in I}</m> and <m>\boldy=(y_i)_{i\in I}</m>, we have 
+      <me>
+        \boldx\sim \boldy \iff x_{i_0}=y_{i_0}
+      </me>.
+      In other words, two tuples are equivalent if their <m>i_0</m>-th coordinates are equal. 
     </p>
-    <ol>
-      <li>
-        <p>
-          There is a unique bijective continuous function <m>f\colon X^*\rightarrow Y</m> satisfying <m>g=f\circ q</m>.
-        </p>
-      </li>
-      <li>
-        <p>
-          The function <m>f</m> is a homeomorphism if and only if <m>g</m> is a quotient map.
-        </p>
-      </li>
-      <li>
-        <p>
-          If <m>Y</m> is Hausdorff, then <m>X^*</m> is Hausdorff.
-        </p>
-      </li>
-    </ol>
-  </statement>
-  <proof>
     <p>
-      With the exception of (3), this corollary follows essentially directly from <xref ref="cor_quotientspace_props"/>. Statement (3) follows directly from (1). In fact, more generally, if <m>f\colon X\rightarrow Y</m> is a bijective continuous map, and <m>Y</m> is Hausdorff, then <m>X</m> is Hausdorff.
+      Let <m>X^*=X/\sim</m> with the quotient topology. Prove: <m>X^*</m> is homeomorphic to <m>X_{i_0}</m>. 
     </p>
-  </proof>
-
-</corollary>
-<!-- <p>
-  Lastly, the following result is also helpful when dealing with quotient spaces. I omit the proof, which you can find in Munkres.
+  </statement>
+  <solution>
+    <p>
+      Let <m>q\colon X\rightarrow X^*</m> be the quotient map for <m>X^*</m>. By definition, we have <m>q(\boldx)=q(\boldy)</m> if and only if <m>\boldx\sim \boldy</m> if and only if the <m>i_0</m>-th coordinates of <m>\boldx</m> and <m>\boldy</m> are equal.
+    </p>
+    <p> Now, let <m>\pi_{i_0}\colon X\rightarrow X_{i_0}</m> be the projection map onto the <m>i_0</m>-th coordinate of <m>X</m>. Since <m>\pi_{i_0}</m> is open and surjective (<xref ref="th_product_universal_prop" text="global"/>), it is a quotient map. Furthermore, given <m>\boldx=(x_i)_{i\in I}</m> and <m>\boldy=(y_i)_{i\in I}</m>, we have 
+      <md>
+        <mrow>\pi_{i_0}(\boldx)=\pi_{i_0}(\boldy) \amp \iff x_{i_0}=y_{i_0}</mrow>
+        <mrow> \amp \iff \boldx\sim \boldy </mrow>
+        <mrow> \amp \iff q(\boldx)=q(\boldy)</mrow>
+      </md>.
+      We conclude from <xref ref="th_quot_univ_map"/> that the map 
+      <md>
+        <mrow> p\colon X^* \amp \rightarrow X_{i_0} </mrow>
+        <mrow>[\boldx] \amp \mapsto \pi_{i_0}(\boldx)</mrow>
+      </md>
+      is a homeomorphism between <m>X^*</m> and <m>X_{i_0}</m>. 
+    </p>
+  </solution>
+  
+</example>
+<example xml:id="eg_line_double_origin">
+  <title>Line with doubled origin</title>
+  <p>
+    Let <m>X</m> be the disjoint union of two copies of <m>\R</m>, with the coproduct topology. Concretely, labeling the two copies of <m>\R</m> as <m>\R\times \{A\}</m> and <m>\R\times \{B\}</m>, we have 
+    <me>
+      X=\{(x,A)\colon x\in \R\}\cup \{(x,B)\colon x\in \R \}
+    </me>, and the coproduct topology has as a basis the collection 
+    <me>
+      \mathcal{B}=\{U\times \{A\}\colon U \text{ open in } \R\}\bigcup \{U\times \{B\}\colon U \text{ open in } \R\}
+    </me>.
+    Let <m>X^*</m> be the quotient obtained from <m>X</m> by identifying <m>(x,A)</m> and <m>(x,B)</m> for all <m>x\ne 0</m>, and let <m>q\colon X\rightarrow X^*</m> be its defining quotient map. 
+  
+  <ol>
+    <li>
+      <p>
+        Let <m>Y=\R-\{0\} \cup \{0_A\} \cup \{0_B\}</m>: i.e., <m>Y</m> is the punctured real line together with two additional distinct points. The following collection is easily shown to be a topology on <m>Y</m>:
+        <me>
+          \mathcal{T}=\{U-\{0\}\colon U \text{ open in } \R\}\bigcup \{\{0_A\}\cup U-\{0\}\colon 0\in U, U \text{ open in } \R\} \cup \{\{0_B\}\cup U-\{0\}\colon 0\in U, U \text{ open in } \R \}
+        </me>.
+        Prove: <m>X^*</m> is homeomorphic to <m>Y</m>. 
+      </p>
+    </li>
+    <li>
+      <p>
+        Prove: <m>X</m> is Hausdorff, but <m>X^*</m> is not Hausdorff. 
+      </p>
+    </li>
+  </ol>
 </p>
-<theorem xml:id="th_quotient_subspace">
-  <title>Quotients and subspaces</title>
-  <statement>
-    <p>
-      Let <m>p\colon X\rightarrow Y</m> be a quotient map, and let <m>A\subseteq X</m> be a subspace that is saturated with respect to <m>p</m>. Let <m>q=p\vert_A\colon A\rightarrow p(A)</m> be the restriction of <m>p</m> to <m>A</m>.
-    </p>
+  <solution>
     <ol>
       <li>
         <p>
-          If <m>A</m> is either open or closed, then <m>q</m> is a quotient map.
+         Left as an exercise.
         </p>
       </li>
       <li>
         <p>
-          If <m>p</m> is either an open or a closed map, then <m>q</m> is a quotient map.
-        </p>
+          In fact, in much more generality, given a collection of spaces <m>\{X_i\}_{i\in I}</m>, the coproduct <m>X=\coprod_{i\in I} X_i</m> is Hausdorff if and only if <m>X_i</m> is Hausdorff for all <m>i\in I</m>. Proof left as an exercise. 
+         </p>
+         <p>
+           Since <m>X^*</m> is homeomorphic to <m>Y</m>, it suffices to show that <m>Y</m> is not Hausdorff. To see this, notice that any open containing <m>0_A</m> is of the form <m>U_1=\{0_A\}\cup U-\{0\}</m> for some open set <m>U\subseteq \R</m> containing <m>0</m>, and similarly, any open set containing <m>0_B</m> is of the form <m>U_2=\{0_B\}\cup V-\{0\}</m> for some open set <m>V\subseteq \R</m> containing <m>0</m>. Since <m>U\cap V</m> contains a set of the form <m>(-\epsilon, \epsilon)</m> for some <m>\epsilon &gt; 0</m>, we see that <m>(-\epsilon, \epsilon)-\{0\}\subseteq U_1\cap U_2</m>. In particular, we have <m>U_1\cap U_2\ne \emptyset</m>. Thus <m>Y</m> is not Hausdorff.  
+         </p>
       </li>
     </ol>
-  </statement>
-</theorem> -->
-
+  </solution>
+</example>
 <example xml:id="eg_RmodZ">
   <title>The circle as a quotient space</title>
   <statement>
     <p>
-      Let <m>X^*</m> denote the quotient obtained from <m>X=[0,1]</m> after identifying <m>0</m> and <m>1</m>, and let <m>\R/\Z</m> denote the quotient of <m>\R</m> by the equivalence relation <m>x\sim y</m> if and only if <m>x=y+n</m> for some <m>n\in Z</m>. Prove that <m>\R/\Z</m> is homeomorphic to <m>S^1=\{(x,y)\colon x^2+y^2=1\}</m>.
+      Let <m>X^*</m> denote the quotient obtained from <m>X=[0,1]</m> after identifying <m>0</m> and <m>1</m>, and let <m>\R/\Z</m> denote the quotient of <m>\R</m> by the equivalence relation <m>x\sim y</m> if and only if <m>x=y+n</m> for some <m>n\in Z</m>. Prove that both <m>X^*</m> and <m>\R/\Z</m> are homeomorphic to <m>S^1=\{(x,y)\colon x^2+y^2=1\}</m> as follows.
     </p>
     <ol>
       <li>
         <p>
-          Prove: <m>X^*\cong \R/\Z</m>
+          Prove that <m>X^*</m> is homeomorphic to <m>\R/\Z</m>. 
         </p>
       </li>
       <li>
         <p>
-          Prove: <m>X^*\cong \R/\Z\cong S^1</m>.
+          Prove that <m>\R/\Z</m> is homeomorphic to <m>S^1</m>. 
         </p>
       </li>
     </ol>
@@ -333,7 +574,8 @@
     </p>
   </statement>
   <solution>
-    <ol>
+    <p>
+      <ol>
       <li>
         <p>
           Consider the map <m>g</m> defined by composition
@@ -345,9 +587,12 @@
             </latex-image>
           </image>
           where <m>q</m> is the quotient map from <m>\R</m> to <m>\R/\Z</m>.
-          It is easy to see that <m>g</m> is surjective and satisfies <m>g(t)=g(t')</m> if and only if <m>t=t'</m> or <m>t,t'\in \{0,1\}</m>. From <xref ref="cor_quotientspace_props"/> we conclude that <m>g</m> gives rise to a bijective continuous function <m>f\colon X^*\rightarrow \R/\Z</m>. Concretely, <m>f</m> takes an equivalence class <m>[t]\in X^*</m> and maps it to the equivalence class <m>\{t+n\colon n\in \Z\}</m> in <m>\R/\Z</m>. Furthermore, to show <m>f</m> is a homeomorphism it is enough to prove that <m>g\colon [0,1]\rightarrow \R/\Z</m>
-          is a quotient map. In fact, we can show that <m>g</m> is a closed map. Take a closed set <m>C\subseteq [0,1]</m>. To show its image <m>g(C)</m> is closed in <m>\R/Z</m>, we need only show, using the fact that <m>q</m> is a quotient map, that <m>q^{-1}(g(C))</m> is closed in <m>\R/\Z</m>. We have <m>q^{-1}(g(C))=C+\Z=\{c+n\colon c\in C, n\in \Z\}</m>. This set is the result of starting with our original closed set <m>C\subseteq [0,1]</m> and taking the union of translated copies of the form <m>C+n\subseteq [n,n+1]</m>, where <m>n\in \Z</m>.
-          It is easy to see that each translate <m>C+n</m> is closed; since furthermore <m>C+n\subseteq [n,n+1]</m>, it follows that the union is also closed. I'll leave the details to you.
+          It is easy to see that <m>g</m> is surjective and satisfies <m>g(t)=g(t')</m> if and only if <m>t=t'</m> or <m>t,t'\in \{0,1\}</m>. From <xref ref="th_quot_univ_map"/> we conclude that <m>g</m> gives rise to a bijective continuous function <m>f\colon X^*\rightarrow \R/\Z</m>. Concretely, <m>f</m> takes an equivalence class <m>[t]\in X^*</m> and maps it to the equivalence class <m>\{t+n\colon n\in \Z\}</m> in <m>\R/\Z</m>. Furthermore, to show <m>f</m> is a homeomorphism it is enough to prove that <m>g\colon [0,1]\rightarrow \R/\Z</m>
+          is a quotient map. In fact, we can show that <m>g</m> is a closed map. Take a closed set <m>C\subseteq [0,1]</m>. Since <m>q\colon \R\rightarrow \R/\Z</m> is a quotient map, to show its image <m>g(C)</m> is closed in <m>\R/\Z</m> we need only show that <m>q^{-1}(g(C))</m> is closed in <m>\R/\Z</m>. We have 
+          <me>
+            q^{-1}(g(C))=\{c+n\colon c\in C, n\in \Z\}=\bigcup_{n\in \Z}n+C
+          </me>,
+          where for any <m>n\in \Z</m> we define <m>n+C=\{n+c\colon c\in C\}</m>, the <em>translation</em> of <m>C</m> by <m>n</m>. Since the map <m>x\mapsto n+x</m> defines a homeomorphism from <m>\R</m> to <m>\R</m>, we see that each <m>n+C</m> is closed. Although in general unions of closed sets are not necessarily closed, using the fact that <m>n+C\subseteq [n,n+1]</m>, it is not difficult to show in this case that <m>\bigcup_{n\in \Z}n+C</m> is closed. I'll leave the details to you.
         </p>
       </li>
       <li>
@@ -361,18 +606,21 @@
               \end{tikzcd}
             </latex-image>
           </image>
-          where <m>g(t)=(\cos 2\pi t, \sin 2\pi t)</m>. It is easy to see that <m>g</m> is continuous, surjective, and satisfies <m>g(t_1)=g(t_2)\iff t_1=t_2+n</m> for some <m>n\in \Z</m>. It follows from <xref ref="cor_quotientspace_props"/> that the map <m>f</m> is bijective and continuous. Furthermore, by the same result, we can show <m>f</m> is a homeomorphism as long as we can show <m>g</m> is a quotient map. I'll show that in fact <m>g\colon \R\rightarrow S^1</m> is open, and hence a projection map.
-        </p>
-        <p>
-        To this end let <m>U\subseteq \R</m> be any open set, and let <m>P\in f(U)</m>, so that <m>P=g(t)</m> for some <m>t\in U</m>. We will find an open interval <m>I</m> satisfying <m>t\in I\subseteq U</m> such that <m>f(I)</m> is open. Since <m>P\in f(I)\subseteq f(U)</m> and <m>P\in f(U)</m> was arbitrary, this will show that <m>f(U)</m> is open.
-        </p>
-        <p>
-          Let <m>g(t)=P=(x,y)</m>. Since we cannot have <m>x=y=0</m>, we have four cases: <m>y&gt;0</m> or <m>y&lt; 0</m> or <m>x&gt; 0</m> or <m>x&lt; 0</m>. I will treat the first case; my argument is easily adapted to the other cases. Assume <m>y&gt; 0</m>. Since the set <m>V=S^1\cap \left(\R\times (0,\infty)\right)</m> is open in <m>S^1</m>, we can find an open interval <m>I=(a,b)\ni t</m> contained in <m>U</m> such <m>g(I)\subseteq V </m>: <ie />, all points in <m>g(I)</m> lie in the the upper half plane. Elementary trigonometric properties tell us that the function <m>h(t)=\cos 2\pi t</m> is strictly decreasing on <m>I</m>, and hence that <m>h(I)</m> is the open interval <m>(\cos 2\pi b, \cos 2\pi a)=(c,d)</m>.
-          It is now easy to see that <m>g(I)=\{(x,y)\colon x\in (c,d), y=+\sqrt{1-x^2}\}=S^1\cap \left((c,d)\times \R\right)</m>, which is open.
+          where <m>g(t)=(\cos 2\pi t, \sin 2\pi t)</m>. It is easy to see that <m>g</m> is continuous, surjective, and satisfies <m>g(t_1)=g(t_2)\iff t_1=t_2+n</m> for some <m>n\in \Z</m>. It follows from <xref ref="th_quot_univ_map"/> that the map <m>f</m> is bijective and continuous. Furthermore, by the same result, we can show <m>f</m> is a homeomorphism as long as we can show <m>g</m> is a quotient map. In fact, the map <m>g</m> is open, and hence a quotient map. Given any open set <m>U\subseteq \R</m> and element <m>t_0\in U</m>, we can find an <m>0&lt; \epsilon &lt; 1/4 </m> such that <m>(t_0-\epsilon, t_0+\epsilon)\subseteq U</m>, in which case 
+          <me>
+            V=g((t_0-\epsilon,t_0+\epsilon))=\{(\cos \theta,\sin\theta)\colon 2\pi t_0-2\pi\epsilon &lt; \theta &lt; 2\pi t_0+2\pi \epsilon\}\subseteq g(U)
+          </me>.
+          But then <m>V=g((t_0-\epsilon,t_0+\epsilon))</m> is the intersection of <m>S^1</m> with an  <q>open polar rectangle</q> consisting of points <m>P</m> with polar coordinates satisfying 
+          <md>
+            <mrow> 1/2 \amp &lt; r &lt; 3/2</mrow>
+            <mrow> t_0-2\pi\epsilon \amp &lt;  \theta &lt; t_0+2\pi\epsilon  </mrow>
+          </md>.
+          We showed such open polar rectangles are indeed open in <m>\R^2</m> in <xref ref="eg_polar_coor"/>. It follows that <m>V</m> is an open subset of <m>S^1</m>. Thus for every <m>P=g(t_0)\in g(U)</m> we can find an open set <m>V</m> satisfying <m>P=g(t_0)\in V\subseteq g(U)</m>. It follows that <m>g(U)</m> is open, as desired. 
         </p>
       </li>
+    
     </ol>
-
+  </p>
   </solution>
 </example>
 

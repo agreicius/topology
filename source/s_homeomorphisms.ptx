@@ -250,23 +250,38 @@
             <me>
               B=\prod_{i\in I}U_i
             </me>,
-            where <m>U_j</m> is open in <m>X_j</m> and <m>U_j=X_j</m> for all but finitely many <m>j</m>. But then <m>\pi_(\boldx)\in \pi_i(B)=U_i\subseteq \pi_i(U)</m>. Since <m>U_i</m> is open, we have shown that given any <m>x_i\in \pi_i(U)</m>, there is an open set <m>U_i</m> such that <m>x\in U_i\subseteq \pi_i(U)</m>. It follows that <m>\pi_i(U)</m> is open, as desired. 
-            
+            where <m>U_j</m> is open in <m>X_j</m> and <m>U_j=X_j</m> for all but finitely many <m>j</m>. But then <m>\pi_(\boldx)\in \pi_i(B)=U_i\subseteq \pi_i(U)</m>. Since <m>U_i</m> is open, we have shown that given any <m>x_i\in \pi_i(U)</m>, there is an open set <m>U_i</m> such that <m>x\in U_i\subseteq \pi_i(U)</m>. It follows that <m>\pi_i(U)</m> is open, as desired.   
           </p>
         </li>
       <li>
         <p>
           First observe that equality for elements <m>\boldx=(x_i)_{i\in I}, \boldy=(y_i)_{i\in I}</m> in <m>X</m> can be expressed in terms of the projection maps as follows:
           <me>
-            \boldx=]boldy \iff x_i=y_i \text{ for all } i\in I \iff \pi_i(x)=\pi_i(y) \text{ for all } i\in I
+            \boldx=\boldy \iff x_i=y_i \text{ for all } i\in I \iff \pi_i(x)=\pi_i(y) \text{ for all } i\in I
           </me>.
         Using this fact, we see that given a function <m>f\colon Y\rightarrow X</m> we have
           <md>
             <mrow>f_i=\pi_i\circ f \text{ for all } i\in I \amp \iff f_i(y)=\pi_i(f(y)) \text{ for all } y\in Y, i\in I </mrow>
             <mrow> \amp \iff f(y)=(f_i(y))_{i\in I} </mrow>
           </md>.
-          Thus the function <m>f(y)=(f_i(y))_{i\in I}</m> is the unique function from <m>Y</m> to <m>X</m> satisfying <m>f_i=\pi_i\circ f</m> for all <m>i\in I</m>. To see that this <m>f</m> is continuous, we show that <m>f^{-1}(B)</m> is open for any base open set <m>B\subseteq X</m>. For such a <m>B</m> we have <m>B=\prod_{j=1}^n U_j\times \prod_{i\ne j}X_i</m> for some open sets <m>U_j\subseteq X_j</m>,
-          <m>1\leq j\leq n</m>. By definition of <m>f</m> we have <m>f(y)\in B</m> if and only if <m>(f_i(y))_{i\in I}\in B</m> if and only if <m>f_j(y)\in U_j</m> for all <m>1\leq j\leq n</m>. Thus <m>f^{-1}(U)=\cap_{j=1}^nf_i^{-1}(U_i)</m>. Since each <m>f_j</m> is continuous, we conclude that <m>f_j^{-1}(U_j)</m> is open for all <m>1\leq j\leq n</m>, and hence <m>f^{-1}(U)</m> is open.
+          Thus the function <m>f(y)=(f_i(y))_{i\in I}</m> is the unique function from <m>Y</m> to <m>X</m> satisfying <m>f_i=\pi_i\circ f</m> for all <m>i\in I</m>. To see that this <m>f</m> is continuous, we show that <m>f^{-1}(B)</m> is open for any base open set <m>B\subseteq X</m>. For such a <m>B</m> we have <m>B=\prod_{j=1}^n U_{i_j}\times \prod_{i\ne j}X_i</m> for some open sets <m>U_{i_j}\subseteq X_{i_j}</m>,
+          <m>1\leq j\leq n</m>. Note that for all <m>1\leq j \leq n</m> we have 
+          <me>
+            \pi_{i_j}^{-1}(U_{i_j})=U_{i_j}\times \prod_{i\ne i_j}X_i
+          </me>
+          from which it follows that 
+          <md>
+            <mrow> B=\prod_{j=1}^n U_{i_j}\times \prod_{i\ne j}X_i\amp = \bigcap_{j=1}^nU_{i_j}\times \prod_{i\ne i_j}X_i </mrow>
+            <mrow> \amp = \bigcap_{j=1}^n\pi_{i_j}^{-1}(U_{i_j})</mrow>
+          </md>. 
+          Thus 
+          <md>
+            <mrow>f^{-1}(B) \amp =f^{-1}\left( \bigcap_{j=1}^n\pi_{i_j}^{-1}(U_{i_j})\right)</mrow>
+            <mrow> \amp = \bigcap_{j=1}^nf^{-1}(\pi_{i_j}^{-1}(U_{i_j}))</mrow>
+            <mrow> \amp = \bigcap_{j=1}^n(\pi_{i_j}\circ f)^{-1}(U_{i_j}) \amp \left((\pi_{i_j}\circ f)^{-1}(A)=f^{-1}(\pi_{i_j}^{-1}(A)) \right)</mrow>  
+            <mrow> \amp = \bigcap_{j=1}^nf_{i_j}^{-1}(U_{i_j}) \amp (f_i=\pi_i\circ f \text{ for all } i\in I)</mrow>
+          </md>.
+          Since each <m>f_{i_j}</m> is continuous, this last set is a finite intersection of open sets. Thus <m>f^{-1}(B)</m> is open, as desired. 
         </p>
       </li>
       <li>
@@ -294,7 +309,7 @@
     On the practical side, the theorem provides us a nice tool for producing continuous functions of the form <m>f\colon Y\rightarrow \prod_{i\in I}X_i</m>: namely, all you need to do is provide continuous functions <m>f_i\colon Y\rightarrow X_i</m> for each <m>i\in I</m> and define <m>f(y)=(f_i(y))_{i\in I}</m>. Or similarly, given a function <m>f\colon Y\rightarrow \prod_{i\in I} X_i</m>, to show <m>f</m> is continuous, it suffices to show that each component function <m>f_i=\pi_i\circ f</m> is continuous. You may have seen this property at work in an analysis or multivariable calculus course. For example, sometimes in these settings a function 
     <md>
       <mrow>f\colon \R \amp \rightarrow \R^n</mrow>
-      <mrow>t \amp\mapsto  (f_1(t),f_2(t),\dots, f_n(t)</mrow>
+      <mrow>t \amp\mapsto  (f_1(t),f_2(t),\dots, f_n(t))</mrow>
     </md>
     is simply defined to be continuous if the component functions <m>f_i\colon \R\rightarrow \R</m> are continuous for each <m>i</m>. Thanks to <xref ref="th_product_universal_prop"/> we understand that this is equivalent to <m>f</m> being continuous with respect to the standard topology on <m>\R</m> and the product topology on <m>\R^n</m> (which is equal to the standard topology on <m>\R^n</m>).  
   </p>
@@ -302,6 +317,61 @@
     On the theoretical side, the theorem identifies precisely what is so special about the product topology. Namely, it is the unique (up to homeomorphism) space satisfying the <xref ref="prod_top_universal" text="title"/>.  The property establishes <m>X</m> with the product topology as the <em>category theoretic</em> product of the spaces <m>X_i</m>. You may have seen analogues of this type of object in other categories (<eg/>, category of groups or category of rings). 
   </p>
 </remark>
+<example xml:id="eg_polar_coor">
+  <title>Polar transformation</title>
+  <statement>
+    <p>
+    Call the map 
+    <md>
+      <mrow>f\colon \R^2\amp\rightarrow \R^2  </mrow>
+      <mrow> (r,\theta) \amp\mapsto (r\cos\theta, r\sin\theta) </mrow>
+    </md>
+    the <em>polar transformation</em>. 
+  <ol>
+    <li>
+      <p>
+       Let <m>U\subseteq \R^2</m> be the infinite horizontal strip <m>U=\{(r,\theta)\in \R^2\colon r&gt; 0, -\pi &lt; \theta &lt; \pi\}</m>, and let <m>V=\R^2- \{(x,0)\colon x\leq 0\}</m>, the plane with the nonpositive real axis deleted. 
+      </p>
+      <p>
+        Prove that <m>f\vert_U\colon U\rightarrow V</m> is a homeomorphism. 
+      </p>
+    </li>
+    <li>
+      <p>
+       Let <m>U'\subseteq \R^2</m> be the infinite horizontal strip <m>U'=\{(r,\theta)\in \R^2\colon r&gt; 0, 0 &lt; \theta &lt; 2\pi\}</m>, and let <m>V'=\R^2- \{(x,0)\colon x\geq 0\}</m>, the plane with the nonnegative real axis deleted. 
+      </p>
+      <p>
+        Prove that <m>f\vert_U'\colon U'\rightarrow V'</m> is a homeomorphism. 
+      </p>
+    </li>
+    <li>
+      <p>
+        Conclude that <q>open polar rectangles</q> are open in <m>\R^2-\{(0,0)\}</m>. In other words, given any <m>r_1,r_2,\theta_1,\theta_2\in \R</m> satisfying <m>0&lt; r_1&lt; r_2</m> and <m>\theta_1&lt; \theta_2</m>, the region <m>R\subseteq \R^2</m> consisting of all points with polar coordinates <m>(r,\theta)</m> satisfying
+        <md>
+          <mrow>r_1 \amp&lt; r &lt; r_2  </mrow>
+          <mrow>\theta_1 \amp &lt; \theta &lt; \theta_2</mrow>
+        </md>
+        is open. In fact, you can show that such polar rectangles form a basis for <m>\R^2-\{(0,0)\}</m>. 
+      </p>
+    </li>
+  </ol>
+</p>
+</statement>
+<solution>
+  <p>
+    We leave most of this as an exercise. Note that to show <m>f</m> is continuous, by <xref ref="th_product_universal_prop"/> we need only show that the two <q>component functions</q> 
+    <md>
+      <mrow>f_1=\pi_1\circ f\colon \R^2\amp \rightarrow \R \amp f_2=\pi_2\circ f\colon \R^2\amp \rightarrow \R </mrow>
+      <mrow>(r,\theta)\amp \mapsto r\cos\theta \amp (r,\theta)\amp \mapsto r\sin\theta </mrow>
+    </md>
+    are continuous. To see that <m>f_1</m> is continuous, note that we have 
+    <me>
+      f_1=m\circ g
+    </me>
+    where <m>g\colon \R^2\rightarrow \R^2 </m> is the function <m>g(r,\theta)=(r,\cos \theta)</m> and <m>m\colon \R^2\rightarrow \R</m> is the multiplication map <m>m(x,y)=xy</m>. Both <m>g</m> and <m>m</m> are continuous: the two component functions of <m>g</m> are <m>\pi_1\circ g=\pi_1</m> and <m>\pi_2\circ g=\cos\circ \pi_2</m>, both of which are continuous; we showed in homework that more generally scalar multiplication <m>m\colon \R\times \R^n\rightarrow \R^n</m> is continuous for any <m>n</m>. 
+  </p>
+</solution>
+</example>
 <example>
   <title>Continuous bijection onto circle</title>
   <statement>

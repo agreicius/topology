@@ -170,7 +170,7 @@
   </statement>
   <proof>
     <p>
-      Assume <m>f</m> is continous and invertible throughout. To be a homeomorphism we need <m>g=f^{-1}</m> to be continuous. Since <m>g(y)=x</m> if and only if <m>f(x)=y</m>, we see that <m>g^{-1}(A)=f(A)</m>. Thus <m>g</m> continuous if and only if <m>g^{-1}(U)</m> is open for all open <m>U\subseteq X</m>, if and only if <m>f(U)</m> is open for all open <m>U\subseteq X</m>, if and only if <m>f</m> is open. The same argument with <q>closed</q> replacing <q>open</q> shows <m>g</m> is continuous if and only if <m>f</m> is closed. The equivalence of (1)-(3) now follows.
+      Assume <m>f</m> is continuous and invertible throughout. To be a homeomorphism we need <m>g=f^{-1}</m> to be continuous. Since <m>g(y)=x</m> if and only if <m>f(x)=y</m>, we see that <m>g^{-1}(A)=f(A)</m>. Thus <m>g</m> continuous if and only if <m>g^{-1}(U)</m> is open for all open <m>U\subseteq X</m>, if and only if <m>f(U)</m> is open for all open <m>U\subseteq X</m>, if and only if <m>f</m> is open. The same argument with <q>closed</q> replacing <q>open</q> shows <m>g</m> is continuous if and only if <m>f</m> is closed. The equivalence of (1)-(3) now follows.
     </p>
   </proof>
 </theorem>
@@ -298,20 +298,84 @@
     </ol>
   </p>
   </proof>
-
 </theorem>
+<p>
+  In order to give a plain English description of <xref ref="th_product_universal_prop"/> it helps to define the purely set-theoretic notion of a <em>product of maps</em>. 
+</p>
+<definition xml:id="d_product_maps">
+  <title>Product of functions</title>
+  <statement>
+    <p>
+      Given a collection of functions <m>\{f_i\colon A\rightarrow B_i\}_{i\in I}</m>, their <term>product</term>, denoted <m>f=(f_i)_{i\in I}</m> is the the function 
+      <md>
+        <mrow>f\colon A \amp \rightarrow \prod_{i\in I} B_i</mrow>
+        <mrow>x \amp\mapsto (f_i(x))_{i\in I} </mrow>
+      </md>.
+      For each <m>i\in I</m> we call <m>f_i</m> the <term><m>i</m>-th component function</term> of <m>f=(f_i)_{i\in I}</m>. 
+    </p>
+  </statement>
+</definition>
+<corollary xml:id="cor_prod_universal">
+  <title>Universal mapping property of product space</title>
+  <statement>
+    <p>
+      Let <m>\{X_i, \mathcal{T}_i\}_{i\in I}</m> be a collection of topological spaces, let <m>X=\prod_{i\in I}X_i</m> equipped with the product topology, and let <m>\pi_i</m> be the <m>i</m>-th projection map for all <m>i\in I</m>. 
+      <ol>
+        <li>
+          <title>Products of continuous maps are continuous</title>
+          <p>
+            Given any collection of continuous functions <m>\{f_i\colon Y\rightarrow X_i\}_{i\in I}</m>, the product <m>f=(f_i)_{i\in I}</m> defined as 
+            <md>
+              <mrow>f\colon Y \amp \rightarrow X </mrow>
+              <mrow>y \amp \rightarrow (f_i(y))_{i\in I}</mrow>
+            </md>
+            is continuous.
+          </p>
+        </li>
+        <li>
+          <title>Continuous maps to products are products</title>
+          <p>
+            Conversely, given any function <m>f\colon Y\rightarrow X</m>, we have <m>f=(f_i)_{i\in I}</m>, where <m>f_i=\pi_i\circ f</m>. Furthermore, the function <m>f</m> is continuous if and only if <m>f_i</m> is continuous for all <m>i\in I</m>. 
+          </p>
+        </li>
+      </ol>
+    </p>
+  </statement>
+  <proof>
+    <p>
+      <ol>
+        <li>
+          <p>
+            This is just a rewording of <xref ref="prod_top_universal"/> using the notion of a product of functions. 
+          </p>
+        </li>
+        <li>
+          <p>
+            The fact that <m>f=(\pi_i\circ f)_{i\in I}</m> is purely set theoretic. Check for yourself.  
+          </p>
+          <p>
+            If <m>f</m> is continuous, then since <m>\pi_i</m> is continuous we have <m>f_i=\pi_\circ f</m> continuous.  
+          </p>
+          <p>
+            Conversely, if <m>f_i</m> is continuous, then the product <m>f=(f_i)_{i\in I}</m> by (1). 
+          </p>
+        </li>
+      </ol>
+    </p>
+  </proof>
+</corollary>
 <remark>
   <title>Universal mapping property of product space</title>
   <p>
     There is quite a bit to unpack in <xref ref="th_product_universal_prop"/>. The result is useful on a number of levels, some theoretical and some practical.
   </p>
   <p>
-    On the practical side, the theorem provides us a nice tool for producing continuous functions of the form <m>f\colon Y\rightarrow \prod_{i\in I}X_i</m>: namely, all you need to do is provide continuous functions <m>f_i\colon Y\rightarrow X_i</m> for each <m>i\in I</m> and define <m>f(y)=(f_i(y))_{i\in I}</m>. Or similarly, given a function <m>f\colon Y\rightarrow \prod_{i\in I} X_i</m>, to show <m>f</m> is continuous, it suffices to show that each component function <m>f_i=\pi_i\circ f</m> is continuous. You may have seen this property at work in an analysis or multivariable calculus course. For example, sometimes in these settings a function 
+    Its practical utility is nicely articulated by <xref ref="cor_prod_universal"/>, which tells us that a continuous function to a product space is the same thing as a product of continuous functions. You may have seen this property at work in an analysis or multivariable calculus course. For example, oftentimes in these settings a function 
     <md>
-      <mrow>f\colon \R \amp \rightarrow \R^n</mrow>
-      <mrow>t \amp\mapsto  (f_1(t),f_2(t),\dots, f_n(t))</mrow>
+      <mrow>f\colon \R^n \amp \rightarrow \R^m</mrow>
+      <mrow>\boldx \amp\mapsto  (f_1(\boldx),f_2(\boldx),\dots, f_m(\boldx))</mrow>
     </md>
-    is simply defined to be continuous if the component functions <m>f_i\colon \R\rightarrow \R</m> are continuous for each <m>i</m>. Thanks to <xref ref="th_product_universal_prop"/> we understand that this is equivalent to <m>f</m> being continuous with respect to the standard topology on <m>\R</m> and the product topology on <m>\R^n</m> (which is equal to the standard topology on <m>\R^n</m>).  
+    is simply defined to be continuous if each component functions <m>f_i\colon \R^n\rightarrow \R</m> is continuous. Thanks to <xref ref="th_product_universal_prop"/> we understand that this is equivalent to <m>f</m> being continuous with respect to the standard topology on <m>\R^n</m> and the product topology on <m>\R^m</m> (which is equal to the standard Euclidean topology on <m>\R^m</m>).  
   </p>
   <p>
     On the theoretical side, the theorem identifies precisely what is so special about the product topology. Namely, it is the unique (up to homeomorphism) space satisfying the <xref ref="prod_top_universal" text="title"/>.  The property establishes <m>X</m> with the product topology as the <em>category theoretic</em> product of the spaces <m>X_i</m>. You may have seen analogues of this type of object in other categories (<eg/>, category of groups or category of rings). 

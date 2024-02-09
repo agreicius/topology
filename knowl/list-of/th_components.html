@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.13.10</span><span class="period">.</span><span class="space"> </span><span class="title">Connected components.</span>
+</h3>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(X\)</span> be a topological space.</div>
+<ol class="decimal">
+<li><div class="para">For all <span class="process-math">\(x\in X\)</span> the component <span class="process-math">\(C(x)\)</span> is the unique maximally connected set containing <span class="process-math">\(x\text{,}\)</span> and <span class="process-math">\(C_p(x)\)</span> is the unique maximally path connected set containing <span class="process-math">\(x\text{.}\)</span>
+</div></li>
+<li><div class="para logical">
+<div class="para">The collection <span class="process-math">\(\{C(x)\colon x\in X\}\)</span> of all connected components is a partition of <span class="process-math">\(X\)</span> by closed, maximally connected sets. In other words:</div>
+<ol class="lower-alpha">
+<li><div class="para"><span class="process-math">\(X=\bigcup_{x\in X}C(x)\text{.}\)</span></div></li>
+<li><div class="para">
+<span class="process-math">\(C(x)\ne C(y)\implies C(x)\cap C(y)=\emptyset\)</span> for all <span class="process-math">\(x,y\in X\text{.}\)</span>
+</div></li>
+<li><div class="para">
+<span class="process-math">\(C(x)\)</span> is maximally connected for all <span class="process-math">\(x\text{.}\)</span>
+</div></li>
+<li><div class="para">
+<span class="process-math">\(C(x)\)</span> is closed for all <span class="process-math">\(x\text{.}\)</span>
+</div></li>
+</ol>
+</div></li>
+<li><div class="para">Similarly, the collection <span class="process-math">\(\{C_p(x)\colon x\in X\}\)</span> of all path-connected components of <span class="process-math">\(X\)</span> is a partition of <span class="process-math">\(X\)</span> by maximally path-connected sets.</div></li>
+<li><div class="para">If <span class="process-math">\(A\)</span> is connected (resp. path connected) and <span class="process-math">\(C\)</span> is a connected component (resp. path connected component) of <span class="process-math">\(X\text{,}\)</span> then either <span class="process-math">\(A\cap C=\emptyset\)</span> or <span class="process-math">\(A\subseteq C\text{.}\)</span>
+</div></li>
+<li><div class="para">For all <span class="process-math">\(x\in X\)</span> we have <span class="process-math">\(C_p(x)\subseteq C(x)\text{,}\)</span> and in fact <span class="process-math">\(\{C_p(y)\colon y\in C(x)\}\)</span> is a partition of <span class="process-math">\(C(x)\)</span> by path-connected components.</div></li>
+</ol>
+</div></article><details class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para logical"><ol class="decimal">
+<li>
+<div class="para">Let us prove that <span class="process-math">\(C(x)\)</span> is maximally connected. It is connected as it is the union of connected sets containing <span class="process-math">\(x\text{.}\)</span> If <span class="process-math">\(C(x)\subseteq A\)</span> and <span class="process-math">\(A\)</span> is connected, then since <span class="process-math">\(x\in A\text{,}\)</span> we have by definition <span class="process-math">\(A\subseteq C(x)\text{.}\)</span> Thus <span class="process-math">\(C(x)\)</span> is maximally connected. Lastly, if <span class="process-math">\(A\)</span> is a maximally connected set containing <span class="process-math">\(x\text{,}\)</span> then by definition we have <span class="process-math">\(A\subseteq C(x)\text{;}\)</span> and since <span class="process-math">\(A\)</span> is maximally connected we conclude that <span class="process-math">\(A=C(x)\text{.}\)</span> This proves <span class="process-math">\(C(x)\)</span> is the <em class="emphasis">unique</em> maximally connected set containing <span class="process-math">\(x\text{.}\)</span>
+</div>
+<div class="para">The proof that <span class="process-math">\(C_p(x)\)</span> is the unique maximally path-connected set containing <span class="process-math">\(x\)</span> proceeds in exactly the same manner. We use the fact (not made official, but easy to show) that a union of path-path connected sets with a common intersection point is path connected.</div>
+</li>
+<li>
+<div class="para">It is clear that <span class="process-math">\(X=\bigcup_{x\in X}C(x)\text{,}\)</span> since <span class="process-math">\(x\in C(x)\)</span> for all <span class="process-math">\(x\in X\text{.}\)</span> Furthermore, we know <span class="process-math">\(C(x)\)</span> is maximally connected by <span class="process-math">\((1)\text{.}\)</span> Since <span class="process-math">\(\overline{C(x)}\)</span> is connected and <span class="process-math">\(C(x)\subseteq \overline{C(x)}\text{,}\)</span> we must have <span class="process-math">\(C(x)=\overline{C(x)}\text{.}\)</span> Thus <span class="process-math">\(C(x)\)</span> is closed.</div>
+<div class="para">Lastly, to see that the components <span class="process-math">\(C(x)\)</span> are disjoint, we will show that <span class="process-math">\(C(x)\cap C(y)\ne \emptyset\implies C(x)=C(y)\text{.}\)</span> If <span class="process-math">\(C(x)\cap C(y)\ne \emptyset\text{,}\)</span> then <span class="process-math">\(C(x)\cup C(y)\)</span> is a connected set containing <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{.}\)</span> Since <span class="process-math">\(C(x)\)</span> is maximally connected, we must have <span class="process-math">\(C(x)\cup C(y)=C(x)\text{,}\)</span> and thus <span class="process-math">\(C(y)\subseteq C(x)\text{.}\)</span> The same argument shows <span class="process-math">\(C(x)\subseteq C(y)\text{.}\)</span> Thus <span class="process-math">\(C(x)=C(y)\text{.}\)</span>
+</div>
+</li>
+<li><div class="para">The proof here is exactly as with connected components. Again, we use the fact that the union of path-connected sets sharing a common point is path connected.</div></li>
+<li><div class="para">Suppose <span class="process-math">\(A\)</span> is connected. If <span class="process-math">\(A\cap C\ne\emptyset\text{,}\)</span> then <span class="process-math">\(A\cup C\)</span> is connected by. Since <span class="process-math">\(C\)</span> is maximally connected, we have <span class="process-math">\(A\cup C=C\text{.}\)</span> Thus <span class="process-math">\(A\subseteq C\text{.}\)</span> A similar argument applies to path-connected components.</div></li>
+<li><div class="para">Since <span class="process-math">\(C_p(x)\)</span> is connected and <span class="process-math">\(C(x)\)</span> is the union of all connected sets containing <span class="process-math">\(x\text{,}\)</span> we have <span class="process-math">\(C_p(x)\subseteq C(x)\text{.}\)</span> Since <span class="process-math">\(C(x)=C(y)\)</span> for all <span class="process-math">\(y\in C(x)\text{,}\)</span> we further have <span class="process-math">\(C_p(y)\subseteq C(x)\)</span> for all <span class="process-math">\(y\in C(x)\text{.}\)</span> It follows easily that <span class="process-math">\(C(x)=\bigcup_{y\in C(x)}C_p(y)\text{.}\)</span> That this union is disjoint follows from (3).</div></li>
+</ol></div></article></details><span class="incontext"><a class="internal" href="s_connected_path.html#th_components">in-context</a></span>
+</body>
+</html>

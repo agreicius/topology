@@ -1870,7 +1870,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.13",
   "title": "Path-connected spaces",
-  "body": " Path-connected spaces   Path   A path in (or to) a topological space is a continuous function , where is a closed interval. We call the start point (or initial point ) and the end point (or terminal point ) of the path .     Path-connected space   Let be a topological space. Two elements are connected by a path in if there is a path such that and . The space is path connected if any two elements of are connected by a path.     Path-connected implies connected   If is path connected, then is connected. Using logical shorthand:     Assume by contradiction that is a separation of . We can find points . Let be a path connecting . By , the image is connected. By we must have or . This contradicts the fact that and . Thus there can be no separation of , and we conclude that it is connected.     Path-connectedness and continuity   If is continuous and is path connected, then is path connected.    Given and , let be a path connecting and . The composition is then a path connecting and .     Balls in   Let be Euclidean -space. For all and any , the open ball is connected, as is the closed ball defined as     It is easy to see that the straight line path defined as is a continuous function connecting any two points in . For our current purposes, we wish to show that if , then so is , for any . To this end, note that . This proves that the open ball is path connected, and hence connected. Next, it is easy to see that the closed ball is in fact the closure of the open ball. Since connectedness is preserved under closure, we conclude that the closed ball is connected.     Punctured Euclidean space :   Let be Euclidean -space, where . The subspace is connected.    Take any . If the two vectors are not scalar multiples of one another, then the straight line path connecting them is guaranteed to lie in , using a linear independence argument. If , then since , we can find a vector that is not a scalar multiple of either vector. We can then construct a polygonal path lieing in that first connects to via a straight line path, and then connects to via a straight line path.     for   Prove: if , then there is no homeomorphism from to .    Assume by contradiction that is a homeomorphism for some . It follows that the restriction is a homeomorphism. This a contradiction since is not connected ( is open and closed in ), but is connected.     The -sphere   Fix . The -sphere is defined as . Prove: is connected for all .    Fix and consider the map defined as , where as usual . This map is continuous (homework exercise!) and surjective. Since is connected, we see that is the image of a connected set under a continuous function, hence connected.     Topologist's sine curve  Define as for all . Let , the graph of .    The set is connected.    The set is not path connected. More specifically, we can show that and are not connected by a path in .         Since is connected and is continuous, its graph is connected by . Since closure preserves connectedness, we conclude that is connected.    Suppose is a path connecting and . We can write where the component functions are both continuous. The set is closed, since is continuous. Set (guaranteed to exist since is closed), and let . Note that since , and that for all we have and hence . Take . We will show that there is no -ball around such that , contradicting the continuity of .  For any any , is an interval since is continuous and is connected. This means that contains an interval of the form for some . Due to the highly oscillatory nature of , we can find points satisfying . Since these points are in the image of , we have and for some . But then . Since , we cannot have , and thus , as claimed.       "
+  "body": " Path-connected spaces   Path   A path in (or to) a topological space is a continuous function , where is a closed interval. We call the start point (or initial point ) and the end point (or terminal point ) of the path .     Path-connected space   Let be a topological space. Two elements are connected by a path in if there is a path such that and . The space is path connected if any two elements of are connected by a path.     Path-connected implies connected   If is path connected, then is connected. Using logical shorthand:     Assume by contradiction that is a separation of . We can find points . Let be a path connecting . By , the image is connected. By we must have or . This contradicts the fact that and . Thus there can be no separation of , and we conclude that it is connected.     Path-connectedness and continuity   If is continuous and is path connected, then is path connected.    Given and , let be a path connecting and . The composition is then a path connecting and .     Balls in   Let be Euclidean -space. For all and any , the open ball is connected, as is the closed ball defined as     It is easy to see that the straight line path defined as is a continuous function connecting any two points in . For our current purposes, we wish to show that if , then so is , for any . To this end, note that . This proves that the open ball is path connected, and hence connected. Next, it is easy to see that the closed ball is in fact the closure of the open ball. Since connectedness is preserved under closure, we conclude that the closed ball is connected.     Punctured Euclidean space :   Let be Euclidean -space, where . The subspace is connected.    Take any . If the two vectors are not scalar multiples of one another, then the straight line path connecting them is guaranteed to lie in , using a linear independence argument. If , then since , we can find a vector that is not a scalar multiple of either vector. We can then construct a polygonal path lieing in that first connects to via a straight line path, and then connects to via a straight line path.     for   Prove: if , then there is no homeomorphism from to .    Assume by contradiction that is a homeomorphism for some . It follows that the restriction is a homeomorphism. This a contradiction since is not connected ( is open and closed in ), but is connected.     The -sphere   Fix . The -sphere is defined as . Prove: is connected for all .    Fix and consider the map defined as , where as usual . This map is continuous (homework exercise!) and surjective. Since is connected, we see that is the image of a connected set under a continuous function, hence connected.     Topologist's sine curve  Define as for all . Let , the graph of .    The set is connected.    The set is not path connected. More specifically, we can show that and are not connected by a path in .         Since is connected and is continuous, its graph is connected by . Since closure preserves connectedness, we conclude that is connected.    Suppose is a path connecting and . We can write where the component functions are both continuous. The set is closed, since is continuous. Set (guaranteed to exist since is closed), and let . Note that since , and that for all we have and hence . Take . We will show that there is no -ball around such that , contradicting the continuity of .  For any any , is an interval since is continuous and is connected. This means that contains an interval of the form for some . Due to the highly oscillatory nature of , we can find points satisfying . Since these points are in the image of , we have and for some . But then . Since , we cannot have , and thus , as claimed.        Connected components   Let be a topological space. The connected component of an element is the set defined as the union of all connected subsets of containing . Similarly, the path-connected component of $x$ is the set $C_p(x)$ defined as the union of all path connected subspaces of containing . A subspace is maximally connected (resp., maximally path connected ) if is connected (resp. path connected), and if for all connected (resp. path connected) sets , if , then .     Connected components   Let be a topological space.   For all the component is the unique maximally connected set containing , and is the unique maximally path connected set containing .    The collection of all connected components is a partition of by closed, maximally connected sets. In other words:    .     for all .     is maximally connected for all .     is closed for all .       Similarly, the collection of all path-connected components of is a partition of by maximally path-connected sets.    If is connected (resp. path connected) and is a connected component (resp. path connected component) of , then either or .    For all we have , and in fact is a partition of by path-connected components.          Let us prove that is maximally connected. It is connected as it is the union of connected sets containing . If and is connected, then since , we have by definition . Thus is maximally connected. Lastly, if is a maximally connected set containing , then by definition we have ; and since is maximally connected we conclude that . This proves is the unique maximally connected set containing .  The proof that is the unique maximally path-connected set containing proceeds in exactly the same manner. We use the fact (not made official, but easy to show) that a union of path-path connected sets with a common intersection point is path connected.    It is clear that , since for all . Furthermore, we know is maximally connected by . Since is connected and , we must have . Thus is closed.  Lastly, to see that the components are disjoint, we will show that . If , then is a connected set containing and . Since is maximally connected, we must have , and thus . The same argument shows . Thus .    The proof here is exactly as with connected components. Again, we use the fact that the union of path-connected sets sharing a common point is path connected.    Suppose is connected. If , then is connected by. Since is maximally connected, we have . Thus . A similar argument applies to path-connected components.    Since is connected and is the union of all connected sets containing , we have . Since for all , we further have for all . It follows easily that . That this union is disjoint follows from (3).       "
 },
 {
   "id": "d_path",
@@ -1954,56 +1954,29 @@ var ptx_lunr_docs = [
   "body": " Topologist's sine curve  Define as for all . Let , the graph of .    The set is connected.    The set is not path connected. More specifically, we can show that and are not connected by a path in .         Since is connected and is continuous, its graph is connected by . Since closure preserves connectedness, we conclude that is connected.    Suppose is a path connecting and . We can write where the component functions are both continuous. The set is closed, since is continuous. Set (guaranteed to exist since is closed), and let . Note that since , and that for all we have and hence . Take . We will show that there is no -ball around such that , contradicting the continuity of .  For any any , is an interval since is continuous and is connected. This means that contains an interval of the form for some . Due to the highly oscillatory nature of , we can find points satisfying . Since these points are in the image of , we have and for some . But then . Since , we cannot have , and thus , as claimed.      "
 },
 {
-  "id": "s_connected_components",
-  "level": "1",
-  "url": "s_connected_components.html",
-  "type": "Section",
-  "number": "1.14",
-  "title": "Connected components and locally connected spaces",
-  "body": " Connected components and locally connected spaces   Connected components   Let be a topological space. A subset is maximally connected (resp., maximally path connected ) if is connected (resp. path connected), and if for all connected (resp. path connected) sets , if , then . A connected component (resp., path-connected component ) of is a maximally connected (resp. path connected) subset of .      Let be a topological space.   All connected components of are closed. (This is not necessarily the case for path-connected components.)    If is connected (resp. path connected) and is a connected component (resp. path connected component) of , then either or .    The set of all connected components (resp. path-connected components) of forms a partition of . In other words, every element of lies in a component (connected or path connected), and any two distinct components are disjoint.    Each connected component of is a partition of path-connected components.          Let be a connected component. Since and is connected, we have . Thus is closed.    Suppose is connected. If , then is connected by (2) of . Since is maximally connected, we have . Thus . A similar argument applies to path connected components.    Let be connected components. By the previous result, since is maximally connected, if , then . Since is maximally connected, . This proves that any two distinct connected components are disjoint.  Next given any , let be the set of all connected sets containing . Note that is nonempty since . The set is easily seen to be a connected component containing . Thus every element of is contained in a connected component.  Again, the argument for path connected components is very similar.    For each let denote the (unique) connected component containing , and let denote the (unique) path connected component containing . Let be a connected component of . For any we have ; since is path connected, it is connected, and hence by (1) above. It follows that is a partition of by path connected components.        Locally connected space   A topological space is locally connected (resp. locally path connected ) at a point if for all open sets containing , there is an open connected (resp. open path connected set) such that and . The space is locally connected (resp., locally path connected ) if it is locally connected (resp., locally path connected) at all .     Connected does not imply locally connected  Somewhat curiously, a space being connected does not necessarily imply that the space is locally connected. For example, the topologist's sine curve  is connected, but not locally connected. For example, take the point and the open set . Graphically, it is easy to see that has a connected component partition consisting of and infinitely many connected segments of the graph of (one segment for each interval of the form that lies in ). Any open connected set containing would have to lie in the connected component ; but this is impossible since does not contain any open sets!   "
-},
-{
   "id": "d_connected_components",
   "level": "2",
-  "url": "s_connected_components.html#d_connected_components",
+  "url": "s_connected_path.html#d_connected_components",
   "type": "Definition",
-  "number": "1.14.1",
+  "number": "1.13.9",
   "title": "Connected components.",
-  "body": " Connected components   Let be a topological space. A subset is maximally connected (resp., maximally path connected ) if is connected (resp. path connected), and if for all connected (resp. path connected) sets , if , then . A connected component (resp., path-connected component ) of is a maximally connected (resp. path connected) subset of .   "
+  "body": " Connected components   Let be a topological space. The connected component of an element is the set defined as the union of all connected subsets of containing . Similarly, the path-connected component of $x$ is the set $C_p(x)$ defined as the union of all path connected subspaces of containing . A subspace is maximally connected (resp., maximally path connected ) if is connected (resp. path connected), and if for all connected (resp. path connected) sets , if , then .   "
 },
 {
-  "id": "thm-",
+  "id": "th_components",
   "level": "2",
-  "url": "s_connected_components.html#thm-",
+  "url": "s_connected_path.html#th_components",
   "type": "Theorem",
-  "number": "1.14.2",
-  "title": "",
-  "body": "  Let be a topological space.   All connected components of are closed. (This is not necessarily the case for path-connected components.)    If is connected (resp. path connected) and is a connected component (resp. path connected component) of , then either or .    The set of all connected components (resp. path-connected components) of forms a partition of . In other words, every element of lies in a component (connected or path connected), and any two distinct components are disjoint.    Each connected component of is a partition of path-connected components.          Let be a connected component. Since and is connected, we have . Thus is closed.    Suppose is connected. If , then is connected by (2) of . Since is maximally connected, we have . Thus . A similar argument applies to path connected components.    Let be connected components. By the previous result, since is maximally connected, if , then . Since is maximally connected, . This proves that any two distinct connected components are disjoint.  Next given any , let be the set of all connected sets containing . Note that is nonempty since . The set is easily seen to be a connected component containing . Thus every element of is contained in a connected component.  Again, the argument for path connected components is very similar.    For each let denote the (unique) connected component containing , and let denote the (unique) path connected component containing . Let be a connected component of . For any we have ; since is path connected, it is connected, and hence by (1) above. It follows that is a partition of by path connected components.      "
-},
-{
-  "id": "d_locally_connected",
-  "level": "2",
-  "url": "s_connected_components.html#d_locally_connected",
-  "type": "Definition",
-  "number": "1.14.3",
-  "title": "Locally connected space.",
-  "body": " Locally connected space   A topological space is locally connected (resp. locally path connected ) at a point if for all open sets containing , there is an open connected (resp. open path connected set) such that and . The space is locally connected (resp., locally path connected ) if it is locally connected (resp., locally path connected) at all .   "
-},
-{
-  "id": "rm_locally_connected",
-  "level": "2",
-  "url": "s_connected_components.html#rm_locally_connected",
-  "type": "Remark",
-  "number": "1.14.4",
-  "title": "Connected does not imply locally connected.",
-  "body": " Connected does not imply locally connected  Somewhat curiously, a space being connected does not necessarily imply that the space is locally connected. For example, the topologist's sine curve  is connected, but not locally connected. For example, take the point and the open set . Graphically, it is easy to see that has a connected component partition consisting of and infinitely many connected segments of the graph of (one segment for each interval of the form that lies in ). Any open connected set containing would have to lie in the connected component ; but this is impossible since does not contain any open sets!  "
+  "number": "1.13.10",
+  "title": "Connected components.",
+  "body": " Connected components   Let be a topological space.   For all the component is the unique maximally connected set containing , and is the unique maximally path connected set containing .    The collection of all connected components is a partition of by closed, maximally connected sets. In other words:    .     for all .     is maximally connected for all .     is closed for all .       Similarly, the collection of all path-connected components of is a partition of by maximally path-connected sets.    If is connected (resp. path connected) and is a connected component (resp. path connected component) of , then either or .    For all we have , and in fact is a partition of by path-connected components.          Let us prove that is maximally connected. It is connected as it is the union of connected sets containing . If and is connected, then since , we have by definition . Thus is maximally connected. Lastly, if is a maximally connected set containing , then by definition we have ; and since is maximally connected we conclude that . This proves is the unique maximally connected set containing .  The proof that is the unique maximally path-connected set containing proceeds in exactly the same manner. We use the fact (not made official, but easy to show) that a union of path-path connected sets with a common intersection point is path connected.    It is clear that , since for all . Furthermore, we know is maximally connected by . Since is connected and , we must have . Thus is closed.  Lastly, to see that the components are disjoint, we will show that . If , then is a connected set containing and . Since is maximally connected, we must have , and thus . The same argument shows . Thus .    The proof here is exactly as with connected components. Again, we use the fact that the union of path-connected sets sharing a common point is path connected.    Suppose is connected. If , then is connected by. Since is maximally connected, we have . Thus . A similar argument applies to path-connected components.    Since is connected and is the union of all connected sets containing , we have . Since for all , we further have for all . It follows easily that . That this union is disjoint follows from (3).      "
 },
 {
   "id": "s_compact_def",
   "level": "1",
   "url": "s_compact_def.html",
   "type": "Section",
-  "number": "1.15",
+  "number": "1.14",
   "title": "Compact spaces",
   "body": " Compact spaces   Covering   Let be a subset of the topological space . A collection is a covering of if . As a shorthand, we will often say in this case that is a covering. Note in particular that a covering of itself is a collection of sets satisfying .  Given a property of subsets ( , open, closed, ), a covering is said to satisfy this property if does for all .     Compact space   A topological space is compact if every open covering of has a finite subcovering: , if is an open covering, then there is a finite set such that .  A subset is compact if it is compact with respect to the subspace topology. Equivalently, is compact if any covering by open sets of has a finite subcovering.     Compactness is a topological property  If is a homeomorphism, then is compact if and only if is compact. Indeed defines a bijection between open covers of and open covers of ; and furthermore, this maps finite subcovers of to finite subcovers of .    Elementary examples     Any finite set is compact.    Any space with the trivial topology is compact.    A discrete space is compact if and only if it is finite.     is not compact. Consequently, since compactness is a topological property ( , preserved by homeomorphisms), no open interval is compact.       is compact  Show that is a compact subset of .     Finite closed intervals are compact   Finite closed intervals are compact in .    Let be an open covering of . Define to be the set of all such that has a finite subcovering. Note that is nonempty, since clearly . I will show further that is open and closed in . Since is connected, it will follows that , and hence that has a finite subcovering, as desired.   is open  Suppose . By definition of there is a finite subcover . Without loss of generality, we may assume that . Since is open, we can find an such that . But then clearly for all , showing that admits a finite subcovering for all such , and hence that . This proves is open.    is closed  Take . Since is a cover of , we have for some . Since is open, we can find an such that . But then for all we have : indeed, if for such an we had a finite subcovering , then would be a finite subcovering of , contradicting the fact that .      Compact implies closed in Hausdorff spaces   Let be a compact subset of the topological space .    is closed.    Given any there are disjoint open sets such that and .       (1) follows directly from (2). To prove the latter, note that for each we can find disjoint open neighborhoods of and , respectively. Since is an open covering of , there is a finite subcovering . The open sets satisfy the desired conditions.     Compactness inherited by closed subspaces   Let be a closed subset of the topological space . If is compact, then is compact.    Let be an open covering of by open sets of . Since is closed, the collection is an open covering of .     Compactness preserved under continuous image   Let be a continuous function. If is compact, then is compact.    If is an open covering of , then is an open covering of . Since is compact, there is a finite subcover . It follows that is a finite subcover of our original covering .     Compactness and closed maps   Let be continuous. If is compact and is Hausdorff, then is a closed map.   Let be closed. Since is compact, is compact. By , is compact. By , since is Hausdorff, is closed.    Compactness and homeomorphisms   Let be continuous and bijective. If is compact and is Hausdorff, then is a homeomorphism.    By , the map is closed, hence a homeomorphism.     Finite intersection property   A collection of subsets of satisfies the finite intersection property if every finite subcollection has non trivial intersection: , .      Let be a topological space. The following statements are equivalent.    is compact.    If is a collection of closed sets that satisfies the finite intersection property, then .        Nested closed sets in compact space   Let be a compact space. Given a nested sequence of nonempty closed subsets , we have .    "
 },
@@ -2012,7 +1985,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_compact_def.html#d_covering",
   "type": "Definition",
-  "number": "1.15.1",
+  "number": "1.14.1",
   "title": "Covering.",
   "body": " Covering   Let be a subset of the topological space . A collection is a covering of if . As a shorthand, we will often say in this case that is a covering. Note in particular that a covering of itself is a collection of sets satisfying .  Given a property of subsets ( , open, closed, ), a covering is said to satisfy this property if does for all .   "
 },
@@ -2021,7 +1994,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_compact_def.html#d_compact",
   "type": "Definition",
-  "number": "1.15.2",
+  "number": "1.14.2",
   "title": "Compact space.",
   "body": " Compact space   A topological space is compact if every open covering of has a finite subcovering: , if is an open covering, then there is a finite set such that .  A subset is compact if it is compact with respect to the subspace topology. Equivalently, is compact if any covering by open sets of has a finite subcovering.   "
 },
@@ -2030,7 +2003,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_compact_def.html#rm_compactness_topological",
   "type": "Remark",
-  "number": "1.15.3",
+  "number": "1.14.3",
   "title": "Compactness is a topological property.",
   "body": " Compactness is a topological property  If is a homeomorphism, then is compact if and only if is compact. Indeed defines a bijection between open covers of and open covers of ; and furthermore, this maps finite subcovers of to finite subcovers of .  "
 },
@@ -2039,7 +2012,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_compact_def.html#eg_elementary_compact",
   "type": "Example",
-  "number": "1.15.4",
+  "number": "1.14.4",
   "title": "Elementary examples.",
   "body": " Elementary examples     Any finite set is compact.    Any space with the trivial topology is compact.    A discrete space is compact if and only if it is finite.     is not compact. Consequently, since compactness is a topological property ( , preserved by homeomorphisms), no open interval is compact.     "
 },
@@ -2048,7 +2021,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_compact_def.html#eg_K_compact",
   "type": "Example",
-  "number": "1.15.5",
+  "number": "1.14.5",
   "title": "<span class=\"process-math\">\\(K\\cup\\{0\\}\\)<\/span> is compact.",
   "body": " is compact  Show that is a compact subset of .   "
 },
@@ -2057,7 +2030,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_compact_def.html#th_compact_R",
   "type": "Theorem",
-  "number": "1.15.6",
+  "number": "1.14.6",
   "title": "Finite closed intervals are compact.",
   "body": " Finite closed intervals are compact   Finite closed intervals are compact in .    Let be an open covering of . Define to be the set of all such that has a finite subcovering. Note that is nonempty, since clearly . I will show further that is open and closed in . Since is connected, it will follows that , and hence that has a finite subcovering, as desired.   is open  Suppose . By definition of there is a finite subcover . Without loss of generality, we may assume that . Since is open, we can find an such that . But then clearly for all , showing that admits a finite subcovering for all such , and hence that . This proves is open.    is closed  Take . Since is a cover of , we have for some . Since is open, we can find an such that . But then for all we have : indeed, if for such an we had a finite subcovering , then would be a finite subcovering of , contradicting the fact that .    "
 },
@@ -2066,7 +2039,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_compact_def.html#th_compact_Haus_closed",
   "type": "Theorem",
-  "number": "1.15.7",
+  "number": "1.14.7",
   "title": "Compact implies closed in Hausdorff spaces.",
   "body": " Compact implies closed in Hausdorff spaces   Let be a compact subset of the topological space .    is closed.    Given any there are disjoint open sets such that and .       (1) follows directly from (2). To prove the latter, note that for each we can find disjoint open neighborhoods of and , respectively. Since is an open covering of , there is a finite subcovering . The open sets satisfy the desired conditions.   "
 },
@@ -2075,7 +2048,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_compact_def.html#th_closed_in_compact",
   "type": "Theorem",
-  "number": "1.15.8",
+  "number": "1.14.8",
   "title": "Compactness inherited by closed subspaces.",
   "body": " Compactness inherited by closed subspaces   Let be a closed subset of the topological space . If is compact, then is compact.    Let be an open covering of by open sets of . Since is closed, the collection is an open covering of .   "
 },
@@ -2084,7 +2057,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_compact_def.html#th_compactness_continuous",
   "type": "Theorem",
-  "number": "1.15.9",
+  "number": "1.14.9",
   "title": "Compactness preserved under continuous image.",
   "body": " Compactness preserved under continuous image   Let be a continuous function. If is compact, then is compact.    If is an open covering of , then is an open covering of . Since is compact, there is a finite subcover . It follows that is a finite subcover of our original covering .   "
 },
@@ -2093,7 +2066,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_compact_def.html#th_compactness_closed_map",
   "type": "Theorem",
-  "number": "1.15.10",
+  "number": "1.14.10",
   "title": "Compactness and closed maps.",
   "body": " Compactness and closed maps   Let be continuous. If is compact and is Hausdorff, then is a closed map.   Let be closed. Since is compact, is compact. By , is compact. By , since is Hausdorff, is closed.  "
 },
@@ -2102,7 +2075,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_compact_def.html#cor_compact_homeomorphism",
   "type": "Corollary",
-  "number": "1.15.11",
+  "number": "1.14.11",
   "title": "Compactness and homeomorphisms.",
   "body": " Compactness and homeomorphisms   Let be continuous and bijective. If is compact and is Hausdorff, then is a homeomorphism.    By , the map is closed, hence a homeomorphism.   "
 },
@@ -2111,7 +2084,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_compact_def.html#d_finite_intersection_property",
   "type": "Definition",
-  "number": "1.15.12",
+  "number": "1.14.12",
   "title": "Finite intersection property.",
   "body": " Finite intersection property   A collection of subsets of satisfies the finite intersection property if every finite subcollection has non trivial intersection: , .   "
 },
@@ -2120,7 +2093,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_compact_def.html#th_compact_equivalence",
   "type": "Theorem",
-  "number": "1.15.13",
+  "number": "1.14.13",
   "title": "",
   "body": "  Let be a topological space. The following statements are equivalent.    is compact.    If is a collection of closed sets that satisfies the finite intersection property, then .      "
 },
@@ -2129,7 +2102,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_compact_def.html#cor_finite_intersection",
   "type": "Corollary",
-  "number": "1.15.14",
+  "number": "1.14.14",
   "title": "Nested closed sets in compact space.",
   "body": " Nested closed sets in compact space   Let be a compact space. Given a nested sequence of nonempty closed subsets , we have .   "
 },
@@ -2138,7 +2111,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "s_compact_metric.html",
   "type": "Section",
-  "number": "1.16",
+  "number": "1.15",
   "title": "Compactness in metric spaces",
   "body": " Compactness in metric spaces   Tychonoff theorem   Given any collection of compact topological spaces, the product space (with product topology) is compact.    We will often use the Tychonoff in its full strength, though for now we only prove the result for finite products. (See for the general case.) It suffices, by induction, to show that the product of two compact spaces is compact...     Tube lemma   Let be topological spaces, and assume is compact. Given any and open set containing , there is an open set such that .     Bounded, diameter, and distance to sets   Let be a metric space, let be a nonempty set, and let .  The diameter of , denoted , is defined as . The set is bounded if .  The distance  from to is defined as .     Heine-Borel theorem   Let . Recall that the Euclidean metric let and box metric both induce the Euclidean topology on . For any the following conditions are equivalent.    is compact.     is closed and bounded with respect to (equivalently, with respect to ).        Extreme value theorem   Let be continuous. If is compact, then there exist points such that and .     Lebesgue number   Let be a metric space. A Lebesgue number for an open covering is a positive real number satisfying the following condition: if , then for some .     Lebesgue number   If is a compact metric space, then any open covering of has a Lebesgue number.     Compact: continuous implies uniformly continuous   Let be a continuous function between the metric spaces and . If is compact, then is uniformly continuous: , for all there exists a such that if , then .     Limit point compact   A topological space is limit point compact if all infinite subsets of have a limit point.     Compact implies limit point compact   If is compact, then is limit point compact.     Sequentially compact   A topological space is sequentially compact if every sequences of elements of has a convergent subsequence.     Compactness in metric spaces   Let be a metric space. The following statements are equivalent.    is compact.     is limit point compact.     is sequentially compact.        Cantor set  There is a unique family of closed sets of of of satisfying the following properties:    .     is a disjoint union of intervals of the form , where .     is obtained by deleting the middle third of each interval appearing in : that is each interval of gives rise to two intervals and .   Here is a tree illustration of the first three members of this family.  Recursive generation of   Recursive generation of    The Cantor set is defined as .  Prove: the Cantor set is nonempty, Hausdorff, compact, perfect (closed and all points of are limit points of ), and totally disconnected (the connected components of are singletons).   Since is compact, and since is a collection of nested nonempty closed sets, we know by that . Since each is clearly closed, is closed and bounded, hence compact. Since is a subspace of a Hausdorff space, it is Hausdorff.  We show that is perfect. We know already that is closed. Given any and , pick such that . Since , we have for some . Let be the two subintervals of remaining after deleting its middle third. Assume without loss of generality that . The collection is itself a family of nested, closed and nonempty subsets of . Again by compactness, there is an element . Since , we have . Since and , and since , we have .  We prove is totally disconnected. Let be any subset of containing two distinct elements and . We will find a separation of . Since , we can find an and disjoint intervals such that and : otherwise we would have for all , which would imply . Assume without loss of generality that , and let be any element between and that does not lie in . The open sets and form a separation of , proving it is not connected. We conclude that the only connected subsets of are singletons, and thus that the connected components are singletons.    "
 },
@@ -2147,7 +2120,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_compact_metric.html#th_Tychonoff",
   "type": "Theorem",
-  "number": "1.16.1",
+  "number": "1.15.1",
   "title": "Tychonoff theorem.",
   "body": " Tychonoff theorem   Given any collection of compact topological spaces, the product space (with product topology) is compact.    We will often use the Tychonoff in its full strength, though for now we only prove the result for finite products. (See for the general case.) It suffices, by induction, to show that the product of two compact spaces is compact...   "
 },
@@ -2156,7 +2129,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_compact_metric.html#lem_tube",
   "type": "Lemma",
-  "number": "1.16.2",
+  "number": "1.15.2",
   "title": "Tube lemma.",
   "body": " Tube lemma   Let be topological spaces, and assume is compact. Given any and open set containing , there is an open set such that .   "
 },
@@ -2165,7 +2138,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_compact_metric.html#d_bounded_diam_distance",
   "type": "Definition",
-  "number": "1.16.3",
+  "number": "1.15.3",
   "title": "Bounded, diameter, and distance to sets.",
   "body": " Bounded, diameter, and distance to sets   Let be a metric space, let be a nonempty set, and let .  The diameter of , denoted , is defined as . The set is bounded if .  The distance  from to is defined as .   "
 },
@@ -2174,7 +2147,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_compact_metric.html#th_Heine_Borel",
   "type": "Theorem",
-  "number": "1.16.4",
+  "number": "1.15.4",
   "title": "Heine-Borel theorem.",
   "body": " Heine-Borel theorem   Let . Recall that the Euclidean metric let and box metric both induce the Euclidean topology on . For any the following conditions are equivalent.    is compact.     is closed and bounded with respect to (equivalently, with respect to ).      "
 },
@@ -2183,7 +2156,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_compact_metric.html#cor_extreme_value_theorem",
   "type": "Corollary",
-  "number": "1.16.5",
+  "number": "1.15.5",
   "title": "Extreme value theorem.",
   "body": " Extreme value theorem   Let be continuous. If is compact, then there exist points such that and .   "
 },
@@ -2192,7 +2165,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_compact_metric.html#d_Lebesgue_number",
   "type": "Definition",
-  "number": "1.16.6",
+  "number": "1.15.6",
   "title": "Lebesgue number.",
   "body": " Lebesgue number   Let be a metric space. A Lebesgue number for an open covering is a positive real number satisfying the following condition: if , then for some .   "
 },
@@ -2201,7 +2174,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_compact_metric.html#cor_Lebesgue_number",
   "type": "Corollary",
-  "number": "1.16.7",
+  "number": "1.15.7",
   "title": "Lebesgue number.",
   "body": " Lebesgue number   If is a compact metric space, then any open covering of has a Lebesgue number.   "
 },
@@ -2210,7 +2183,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_compact_metric.html#cor_continuous_uniformcontinuous",
   "type": "Corollary",
-  "number": "1.16.8",
+  "number": "1.15.8",
   "title": "Compact: continuous implies uniformly continuous.",
   "body": " Compact: continuous implies uniformly continuous   Let be a continuous function between the metric spaces and . If is compact, then is uniformly continuous: , for all there exists a such that if , then .   "
 },
@@ -2219,7 +2192,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_compact_metric.html#d_limit_point_compact",
   "type": "Definition",
-  "number": "1.16.9",
+  "number": "1.15.9",
   "title": "Limit point compact.",
   "body": " Limit point compact   A topological space is limit point compact if all infinite subsets of have a limit point.   "
 },
@@ -2228,7 +2201,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_compact_metric.html#th_compact_implies_limitpoint",
   "type": "Theorem",
-  "number": "1.16.10",
+  "number": "1.15.10",
   "title": "Compact implies limit point compact.",
   "body": " Compact implies limit point compact   If is compact, then is limit point compact.   "
 },
@@ -2237,7 +2210,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_compact_metric.html#d_sequentially_compact",
   "type": "Definition",
-  "number": "1.16.11",
+  "number": "1.15.11",
   "title": "Sequentially compact.",
   "body": " Sequentially compact   A topological space is sequentially compact if every sequences of elements of has a convergent subsequence.   "
 },
@@ -2246,7 +2219,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_compact_metric.html#th_compact_metric",
   "type": "Theorem",
-  "number": "1.16.12",
+  "number": "1.15.12",
   "title": "Compactness in metric spaces.",
   "body": " Compactness in metric spaces   Let be a metric space. The following statements are equivalent.    is compact.     is limit point compact.     is sequentially compact.      "
 },
@@ -2264,7 +2237,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "s_locally.html",
   "type": "Section",
-  "number": "1.17",
+  "number": "1.16",
   "title": "Locally compact spaces and compactification",
   "body": " Locally compact spaces and compactification   Locally compact space   A topological space is locally compact at if there is a compact neighborhood of : , if there is a compact set and open set containing such that . The space is locally compact if it is locally compact at all points .     One-point compactification   Let be a Hausdorff space. The following statements are equivalent.    is locally compact.    There exists a compact Hausdorff space and continuous injection such that    is a homeomorphism, and     is a single point.      Furthermore, in this case, the compact space is unique up to homeomorphism.     Embedding   An embedding between topological spaces and is an injective continuous function such that is a homeomorphism (with respect to the subspace topology on ).  An embedding is open (resp., closed ) if is an open (resp. closed) subset of : equivalently, if the embedding is an open (resp., a closed) map.      A compactification of a topological space is an embedding , where is compact and .  A compactification is a one-point compactification if is a single point.     One-point compactification  Let be locally compact and Hausdorff. If is not compact, the embedding , where with topology as described in is a one-point compactification of .    One-point compactification of   We consider with the standard topology.   Produce a one-point compactification of where is a familiar space.    Produce a one-point compactification of where is a familiar space.    Use (2) to identify the one-point compactification of as a subspace of a familiar space.          The map defined as is an open embedding of onto . Thus this is a realization of the one-point compactification of .    Since is a homeomorphism, the map defined as the composition is an open embedding of onto , providing a realization of the one-point compactification of . Note that we have by definition .    Since the inclusion is a closed embedding, the restriction is an embedding (neither open nor closed) of into . Restricting the codomain to the closed (hence compact) subset we get a one-point compactification .        Stereographic projection  Let , the north pole of . Given any the line passing through and intersects the -plane in the unique point . The corresponding map can easily be shown to be a homeomorphism, with inverse . The map is called the stereographic projection onto . The open embedding realizes as the one-point compactification of .  Not surprisingly, this result generalizes easily to . There is a homeomorphism from to mapping to , whose inverse realizes as the one-point compactification of .    Local compactness equivalence   Let be a Hausdorff space. The following are equivalent.    is locally compact.    For all , and for all open sets containing , there is an open neighborhood of such that and is compact.       It is clear that (2) implies (1): for any , taking , we get an open neighborhood such that is compact. Thus is a compact neighborhood of .  We now show (1) implies (2). Munkres' proof elegantly uses the one-point compactification of . Solely by way of contrast I proceed more directly. Fix and open neighborhood . Since is locally compact, we have for some open set and compact set . Taking we may assume further that . The set is a closed subset of the compact set , hence compact. Since is Hausdorff, we can find disjoint open sets containing and , respectively. (See .) Let . Since is a closed subset of a compact set, it is compact. Furthermore, since is disjoint from , we must have .     Locally compact Hausdorff spaces   Let be a Hausdorff space. The following statements are equivalent.    is locally compact.     is a homeomorphic to an open subspace of a compact Hausdorff space.       That (1) implies (2) follows from . For the converse, assume is homeomorphic to the open set , where is compact and Hausdorff. We may use the homeomorphism to identify with : thus we think of as an open subspace of . Now, since is compact, it is locally compact. Hence by , given any we can find an open such that and is compact. This shows that every has a compact neighborhoof , as desired.    "
 },
@@ -2273,7 +2246,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_locally.html#d_locally_compact",
   "type": "Definition",
-  "number": "1.17.1",
+  "number": "1.16.1",
   "title": "Locally compact space.",
   "body": " Locally compact space   A topological space is locally compact at if there is a compact neighborhood of : , if there is a compact set and open set containing such that . The space is locally compact if it is locally compact at all points .   "
 },
@@ -2282,7 +2255,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_locally.html#th_onepoint_compactification",
   "type": "Theorem",
-  "number": "1.17.2",
+  "number": "1.16.2",
   "title": "One-point compactification.",
   "body": " One-point compactification   Let be a Hausdorff space. The following statements are equivalent.    is locally compact.    There exists a compact Hausdorff space and continuous injection such that    is a homeomorphism, and     is a single point.      Furthermore, in this case, the compact space is unique up to homeomorphism.   "
 },
@@ -2291,7 +2264,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_locally.html#d_embedding",
   "type": "Definition",
-  "number": "1.17.3",
+  "number": "1.16.3",
   "title": "Embedding.",
   "body": " Embedding   An embedding between topological spaces and is an injective continuous function such that is a homeomorphism (with respect to the subspace topology on ).  An embedding is open (resp., closed ) if is an open (resp. closed) subset of : equivalently, if the embedding is an open (resp., a closed) map.   "
 },
@@ -2300,7 +2273,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_locally.html#d_compactification",
   "type": "Definition",
-  "number": "1.17.4",
+  "number": "1.16.4",
   "title": "",
   "body": "  A compactification of a topological space is an embedding , where is compact and .  A compactification is a one-point compactification if is a single point.   "
 },
@@ -2318,7 +2291,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_locally.html#eg_onepoint_compact_in_R",
   "type": "Example",
-  "number": "1.17.5",
+  "number": "1.16.5",
   "title": "One-point compactification of <span class=\"process-math\">\\(\\R\\)<\/span>.",
   "body": " One-point compactification of   We consider with the standard topology.   Produce a one-point compactification of where is a familiar space.    Produce a one-point compactification of where is a familiar space.    Use (2) to identify the one-point compactification of as a subspace of a familiar space.          The map defined as is an open embedding of onto . Thus this is a realization of the one-point compactification of .    Since is a homeomorphism, the map defined as the composition is an open embedding of onto , providing a realization of the one-point compactification of . Note that we have by definition .    Since the inclusion is a closed embedding, the restriction is an embedding (neither open nor closed) of into . Restricting the codomain to the closed (hence compact) subset we get a one-point compactification .      "
 },
@@ -2336,7 +2309,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_locally.html#th_locally_compact_equivalence",
   "type": "Theorem",
-  "number": "1.17.6",
+  "number": "1.16.6",
   "title": "Local compactness equivalence.",
   "body": " Local compactness equivalence   Let be a Hausdorff space. The following are equivalent.    is locally compact.    For all , and for all open sets containing , there is an open neighborhood of such that and is compact.       It is clear that (2) implies (1): for any , taking , we get an open neighborhood such that is compact. Thus is a compact neighborhood of .  We now show (1) implies (2). Munkres' proof elegantly uses the one-point compactification of . Solely by way of contrast I proceed more directly. Fix and open neighborhood . Since is locally compact, we have for some open set and compact set . Taking we may assume further that . The set is a closed subset of the compact set , hence compact. Since is Hausdorff, we can find disjoint open sets containing and , respectively. (See .) Let . Since is a closed subset of a compact set, it is compact. Furthermore, since is disjoint from , we must have .   "
 },
@@ -2345,7 +2318,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_locally.html#cor_locallycompact_char",
   "type": "Corollary",
-  "number": "1.17.7",
+  "number": "1.16.7",
   "title": "Locally compact Hausdorff spaces.",
   "body": " Locally compact Hausdorff spaces   Let be a Hausdorff space. The following statements are equivalent.    is locally compact.     is a homeomorphic to an open subspace of a compact Hausdorff space.       That (1) implies (2) follows from . For the converse, assume is homeomorphic to the open set , where is compact and Hausdorff. We may use the homeomorphism to identify with : thus we think of as an open subspace of . Now, since is compact, it is locally compact. Hence by , given any we can find an open such that and is compact. This shows that every has a compact neighborhoof , as desired.   "
 },
@@ -2354,7 +2327,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "s_countability_axioms.html",
   "type": "Section",
-  "number": "1.18",
+  "number": "1.17",
   "title": "Countability axioms",
   "body": " Countability axioms   Local basis   Let be a topological space. Given , a local basis at is a collection of open neighborhoods of such that for all open containing there is a such that .     First countable   A topological space is first countable if every has a countable local basis.     Countability properties  Since we will be dealing with countability questions, it will be useful to record some important countability properties. You may use the following facts in your arguments without any justification.   A countable union of countable sets is countable.    A finite product of countable sets is countable.    If is countable, then the set of all finite subsets of is countable.    If is countable and is a surjection, then is countable.       Metric spaces are first countable  Let be a metric space. For any the collection is a countable local basis at . Thus is first countable.    First countable cofinite spaces   Let be a topological space with the cofinite topology. Prove: is first countable if and only if is countable.    Assume is countable. A nonempty open set of is of the form for some . It follows that the nonempty open sets of are in bijection with the set of all finite subsets of . By , this collection is countable. Thus has countably many open sets. Thus for any the set of all open sets containing is countable.  Assume is first countable. Take any and let be a countable local basis at . By definition we have finite for each , in which case is countable, being a countable union of countable sets. I claim , proving is countable. Indeed, take any . The set is an open set containing . Thus we have for some , in which case , or equivalently, , as desired.     Sequentially closed\/continuous   Let and be topological spaces.  Given a set , its sequential closure is the set of all for which there is a a sequence of elements of with . The set is sequentially closed if .  A function is sequentially continuous if it maps convergent sequences to convergent sequences: , if in , then in .     First countable and sequential properties   Let be a first countable space.   For any there is a nested countable local basis : , for all we have .    A set is closed if and only if it is sequentially closed.    A function is continuous if and only if it is sequentially continuous.          Given let be a countable local basis at . For each , define . (Note that since .) We have for all . Furthermore, given any open , we have . Thus forms a nested local basis.    First, it is easy to see that in any space we have . Thus in any topological space, if is closed, then we have , and thus is sequentially closed. Now assume is sequentially closed, and take . Using (1), we pick a a local basis at that is nested: , for all , . Now, for each pick an element . We have : indeed, if is any open set containing , then for some , in which case for all . Since is sequentially compact, we have . Thus , and we conclude that .    The forward direction is true in any topological space, as we have shown before. Let's prove the reverse direction. Assume is sequentially continuous. Fix any and open set containing . Assume by way of contradiction that there is no open set such that . Let be a nested local basis at . Since for all , we can find an such that . The sequence converges to : indeed, given any open containing there is an such that . Since the local basis is nested, we have for all , and hence for all . However, it is clear that does not converge to , since by construction no lies in the open set . This contradicts the fact that is sequentially compact. We conclude that is continuous.        Second countable, Lindelöf, separable   Let be a topological space. A set is dense if .    is second countable if it has a countable basis.     is Lindelöf if every open cover of has a countable subcover.     is separable if it has a countable dense subset.        The four countability axioms  We will call the properties of being first countable, second countable, Lindelöf, and separable the {\\em four countablity axioms}.    Second countable: strongest countability axiom   Let be a topological space.   If is second countable, then is first countable, Lindelöf, and separable.    If is a metric space, then being second countable, Lindelöf, and separable are all equivalent properties.          Assume is second countable and let be a countable basis.  For each , the set is easily seen to be a countable local basis at . This proves is first countable.  Let be an open cover of . For each we have for some . Since the cover , we obtain the countable subcover . This proves is Lindelöf.  For each pick . Since is a basis, it follows that is dense: indeed, given any and open set , we have for some , in which case .    This is a (classic) homework exercise. Enjoy!        is second countable   Prove that is second countable with respect to the Euclidean topology.    First observe that the set of all -tuples is countable. According to (2) of it would suffice to show that is dense in . We take the hard route and show directly that has a countable basis.  For each , let . The set , being a countable union of countable sets, is countable. I claim it is a basis. It suffices to show that given any and , we can find a such that . To this end pick such that and pick such that , so that . It follows that , as desired.     is not metrizable   Let . Show that is first countable, Lindelöf, separable, but not second countable. Conclude that is not metrizable.    For each , the set forms a countable local basis at . Thus is first countable.  It is easy to see further that is dense with respect to the left limit topology.  To see that is not second countable, consider any basis of . For each , we can find a basis element such that . Note that since for such a , the map defines an injection of into : . This proves that is uncountable.  At this point, by (2) of we know that is not metrizable, since it is separable but not second countable. See Munkres for a proof that is also Lindelöf.     First\/second countable: subspaces, images, and products      If is first countable (resp. second countable) and is a subspace, then is first countable (resp. second countable).    If is open, continuous and surjective, then if is first countable (resp. second countable), is first countable (resp. second countable).    Let be a product of topological spaces. The following statements are equivalent.    is first countable (resp. second countable).     is first countable (resp. second countable) for all and the set of all such that does not have the trivial topology is countable.   As a result, a countable product of first countable (resp. second countable) spaces is first countable.          This is an easy consequence of the fact that for any basis (or local basis) of the corresponding set is a basis (or local basis) in .    It is easy to see that such a function maps bases (or local bases) in to bases (or local bases) in .    Homework exercise. Enjoy!        First countable: continuous image   Give an example of a first countable space and continuous function such that is not first countable.     is not metrizable.  Let . Show that is not metrizable.   "
 },
@@ -2363,7 +2336,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_countability_axioms.html#d_neighborhood_basis",
   "type": "Definition",
-  "number": "1.18.1",
+  "number": "1.17.1",
   "title": "Local basis.",
   "body": " Local basis   Let be a topological space. Given , a local basis at is a collection of open neighborhoods of such that for all open containing there is a such that .   "
 },
@@ -2372,7 +2345,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_countability_axioms.html#d_first_countable",
   "type": "Definition",
-  "number": "1.18.2",
+  "number": "1.17.2",
   "title": "First countable.",
   "body": " First countable   A topological space is first countable if every has a countable local basis.   "
 },
@@ -2381,7 +2354,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_countability_axioms.html#rm_countable",
   "type": "Remark",
-  "number": "1.18.3",
+  "number": "1.17.3",
   "title": "Countability properties.",
   "body": " Countability properties  Since we will be dealing with countability questions, it will be useful to record some important countability properties. You may use the following facts in your arguments without any justification.   A countable union of countable sets is countable.    A finite product of countable sets is countable.    If is countable, then the set of all finite subsets of is countable.    If is countable and is a surjection, then is countable.     "
 },
@@ -2390,7 +2363,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_countability_axioms.html#eg_metric_first_countable",
   "type": "Example",
-  "number": "1.18.4",
+  "number": "1.17.4",
   "title": "Metric spaces are first countable.",
   "body": " Metric spaces are first countable  Let be a metric space. For any the collection is a countable local basis at . Thus is first countable.  "
 },
@@ -2399,7 +2372,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_countability_axioms.html#eg_cofinite_first_countable",
   "type": "Example",
-  "number": "1.18.5",
+  "number": "1.17.5",
   "title": "First countable cofinite spaces.",
   "body": " First countable cofinite spaces   Let be a topological space with the cofinite topology. Prove: is first countable if and only if is countable.    Assume is countable. A nonempty open set of is of the form for some . It follows that the nonempty open sets of are in bijection with the set of all finite subsets of . By , this collection is countable. Thus has countably many open sets. Thus for any the set of all open sets containing is countable.  Assume is first countable. Take any and let be a countable local basis at . By definition we have finite for each , in which case is countable, being a countable union of countable sets. I claim , proving is countable. Indeed, take any . The set is an open set containing . Thus we have for some , in which case , or equivalently, , as desired.   "
 },
@@ -2408,7 +2381,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_countability_axioms.html#d_sequentially_closed_continuous",
   "type": "Definition",
-  "number": "1.18.6",
+  "number": "1.17.6",
   "title": "Sequentially closed\/continuous.",
   "body": " Sequentially closed\/continuous   Let and be topological spaces.  Given a set , its sequential closure is the set of all for which there is a a sequence of elements of with . The set is sequentially closed if .  A function is sequentially continuous if it maps convergent sequences to convergent sequences: , if in , then in .   "
 },
@@ -2417,7 +2390,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_countability_axioms.html#th_first_countable_sequences",
   "type": "Theorem",
-  "number": "1.18.7",
+  "number": "1.17.7",
   "title": "First countable and sequential properties.",
   "body": " First countable and sequential properties   Let be a first countable space.   For any there is a nested countable local basis : , for all we have .    A set is closed if and only if it is sequentially closed.    A function is continuous if and only if it is sequentially continuous.          Given let be a countable local basis at . For each , define . (Note that since .) We have for all . Furthermore, given any open , we have . Thus forms a nested local basis.    First, it is easy to see that in any space we have . Thus in any topological space, if is closed, then we have , and thus is sequentially closed. Now assume is sequentially closed, and take . Using (1), we pick a a local basis at that is nested: , for all , . Now, for each pick an element . We have : indeed, if is any open set containing , then for some , in which case for all . Since is sequentially compact, we have . Thus , and we conclude that .    The forward direction is true in any topological space, as we have shown before. Let's prove the reverse direction. Assume is sequentially continuous. Fix any and open set containing . Assume by way of contradiction that there is no open set such that . Let be a nested local basis at . Since for all , we can find an such that . The sequence converges to : indeed, given any open containing there is an such that . Since the local basis is nested, we have for all , and hence for all . However, it is clear that does not converge to , since by construction no lies in the open set . This contradicts the fact that is sequentially compact. We conclude that is continuous.      "
 },
@@ -2426,7 +2399,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_countability_axioms.html#d_second_countable",
   "type": "Definition",
-  "number": "1.18.8",
+  "number": "1.17.8",
   "title": "Second countable, Lindelöf, separable.",
   "body": " Second countable, Lindelöf, separable   Let be a topological space. A set is dense if .    is second countable if it has a countable basis.     is Lindelöf if every open cover of has a countable subcover.     is separable if it has a countable dense subset.      "
 },
@@ -2435,7 +2408,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_countability_axioms.html#rm_4_countable_axioms",
   "type": "Remark",
-  "number": "1.18.9",
+  "number": "1.17.9",
   "title": "The four countability axioms.",
   "body": " The four countability axioms  We will call the properties of being first countable, second countable, Lindelöf, and separable the {\\em four countablity axioms}.  "
 },
@@ -2444,7 +2417,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_countability_axioms.html#th_second_countable",
   "type": "Theorem",
-  "number": "1.18.10",
+  "number": "1.17.10",
   "title": "Second countable: strongest countability axiom.",
   "body": " Second countable: strongest countability axiom   Let be a topological space.   If is second countable, then is first countable, Lindelöf, and separable.    If is a metric space, then being second countable, Lindelöf, and separable are all equivalent properties.          Assume is second countable and let be a countable basis.  For each , the set is easily seen to be a countable local basis at . This proves is first countable.  Let be an open cover of . For each we have for some . Since the cover , we obtain the countable subcover . This proves is Lindelöf.  For each pick . Since is a basis, it follows that is dense: indeed, given any and open set , we have for some , in which case .    This is a (classic) homework exercise. Enjoy!      "
 },
@@ -2453,7 +2426,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_countability_axioms.html#eg_Euclidean_second_countable",
   "type": "Example",
-  "number": "1.18.11",
+  "number": "1.17.11",
   "title": "<span class=\"process-math\">\\(\\R^n\\)<\/span> is second countable.",
   "body": " is second countable   Prove that is second countable with respect to the Euclidean topology.    First observe that the set of all -tuples is countable. According to (2) of it would suffice to show that is dense in . We take the hard route and show directly that has a countable basis.  For each , let . The set , being a countable union of countable sets, is countable. I claim it is a basis. It suffices to show that given any and , we can find a such that . To this end pick such that and pick such that , so that . It follows that , as desired.   "
 },
@@ -2462,7 +2435,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_countability_axioms.html#eg_Leftlimit_nonmetrizable",
   "type": "Example",
-  "number": "1.18.12",
+  "number": "1.17.12",
   "title": "<span class=\"process-math\">\\(\\R_\\ell\\)<\/span> is not metrizable.",
   "body": " is not metrizable   Let . Show that is first countable, Lindelöf, separable, but not second countable. Conclude that is not metrizable.    For each , the set forms a countable local basis at . Thus is first countable.  It is easy to see further that is dense with respect to the left limit topology.  To see that is not second countable, consider any basis of . For each , we can find a basis element such that . Note that since for such a , the map defines an injection of into : . This proves that is uncountable.  At this point, by (2) of we know that is not metrizable, since it is separable but not second countable. See Munkres for a proof that is also Lindelöf.   "
 },
@@ -2471,7 +2444,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_countability_axioms.html#th_first_second_countable_subspace_product",
   "type": "Theorem",
-  "number": "1.18.13",
+  "number": "1.17.13",
   "title": "First\/second countable: subspaces, images, and products.",
   "body": " First\/second countable: subspaces, images, and products      If is first countable (resp. second countable) and is a subspace, then is first countable (resp. second countable).    If is open, continuous and surjective, then if is first countable (resp. second countable), is first countable (resp. second countable).    Let be a product of topological spaces. The following statements are equivalent.    is first countable (resp. second countable).     is first countable (resp. second countable) for all and the set of all such that does not have the trivial topology is countable.   As a result, a countable product of first countable (resp. second countable) spaces is first countable.          This is an easy consequence of the fact that for any basis (or local basis) of the corresponding set is a basis (or local basis) in .    It is easy to see that such a function maps bases (or local bases) in to bases (or local bases) in .    Homework exercise. Enjoy!      "
 },
@@ -2480,7 +2453,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_countability_axioms.html#eg_first_countable_continuous_image",
   "type": "Example",
-  "number": "1.18.14",
+  "number": "1.17.14",
   "title": "First countable: continuous image.",
   "body": " First countable: continuous image   Give an example of a first countable space and continuous function such that is not first countable.   "
 },
@@ -2489,7 +2462,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_countability_axioms.html#eg_uncountable_product",
   "type": "Example",
-  "number": "1.18.15",
+  "number": "1.17.15",
   "title": "<span class=\"process-math\">\\(\\R^\\R\\)<\/span> is not metrizable..",
   "body": " is not metrizable.  Let . Show that is not metrizable.  "
 },
@@ -2498,7 +2471,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "s_regular.html",
   "type": "Section",
-  "number": "1.19",
+  "number": "1.18",
   "title": "Regular spaces",
   "body": " Regular spaces   Separated by open sets   Let be a topological space. Subsets are separated by open sets if there exist disjoint open sets such that and .     Regular and normal spaces   Let be a topological space.    is regular if is , and given any closed set and any , the sets and can be separated by open sets.     is normal if is , and any two disjoint closed sets of can be separated by open sets.        Separation axioms  The properties of being , Hausdorff, regular, or normal are called separation axioms as they articulate how various subsets can be separated by open sets. Below you find the descriptions of these properties using the Trennungsaxiom schema. A further remark about the use of regular and normal in the literature: some texts do not include the condition in these notions, and describe the properties we define as regular Hausdorff and normal regular . There is considerably less ambiguity in the literature when using the descriptions, but you should still be careful.    Trennungsaxiom implications  It is easy to see that . Furthermore, your argument for the first two implications will reveal why the condition is needed.    Elementary examples      Discrete spaces are regular and normal.    An infinite space with the cofinite topology is neither regular nor normal.       (1) is clear since all sets are both open and closed. (2) follows from the fact that in this space any two nonempty open sets intersect nontrivially.     Metric spaces are normal   If is a metric space, then is normal.    Let be disjoint closed subsets of . For each we can find an such that . Similarly for each we can find an such that . I claim the open sets are disjoint, proving and are separated by open sets. Indeed if , then for some and . Without loss of generality we may assume that . But then we would have . This is a contradiction since we assumed .     is not regular   Prove: is Hausdorff, but not regular.    Since the -topology is finer than the standard topology on , is Hausdorff. To see that it is not regular, recall that is closed. I'll show that we cannot separate 0 and with open sets. Indeed, suppose we have open disjoint sets containing respectively. Since is open, it must contain an open basis element $B$ containing ; and since , this basis element can be chosen of the form . Now choose such that . Since we can find a basis element of the form that is contained in . Furthermore, shrinking if necessary, we can assume that . But then clearly , and hence also . Contradiction!     Regular and normal equivalences   Let be a -space.    is regular if and only if for all and open set , there is an open set such that .     is normal if and only if for any closed set and open set containing , there is an open set containing satisfying .          First, assume is regular. Given and as described, we can separate and the closed set by open sets and . It follows that : indeed, given any , the open set contains and does not intersect with .  Conversely, assume for all and open sets we can find an open set satisfying . Given any closed set and element , letting , we see that there is an open set satisfying . The open sets and are then easily seen to separate and .    This proof is very similar to the last. Essenially you need only replace with a closed set throughout.        Locally compact implies regular   Let be locally compact and Hausdorff. Prove: is regular.    This is an easy consequence of and .     Locally compact and non-normal  Yes, there are examples of locally compact -spaces that are not normal. They are not particularly easy to build, however. Look it up!    is regular   Prove: is regular.    Since has a finer topology than , it is . We will use the equivalence (1) from . Given any and open set , we can find such that . But is closed! (Prove this.) Thus we have found an open containing such that .     Basis of clopen sets  The argument from is easily generalized to show that any -space that has a basis consisting of sets that are both open and closed ( , clopen sets) is regular.    Regularity: subspace and product properties      Subspaces of regular spaces are regular.    Products of regular spaces are regular.          Assume is a subspace of the regular space . We know already that subspaces of -spaces are , so is . Next take any and any set not containing that is closed in . We have for some closed set . Since and is regular, we can find disjoint open sets that separate and in . The disjoint open (in ) sets and are then a separation of and in .    We use (1) from . Given and open set containing , choose a basis element of the form containing . Since each is regular, we can find open sets satisfying . Letting , we have .        Interestingly, neither of the statements of are true if regular is replaced with normal . It is worthwhile to examine what goes wrong in our arguments above if the element is replaced with a closed set throughout.   "
 },
@@ -2507,7 +2480,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_regular.html#d_separated",
   "type": "Definition",
-  "number": "1.19.1",
+  "number": "1.18.1",
   "title": "Separated by open sets.",
   "body": " Separated by open sets   Let be a topological space. Subsets are separated by open sets if there exist disjoint open sets such that and .   "
 },
@@ -2516,7 +2489,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_regular.html#d_regular_normal",
   "type": "Definition",
-  "number": "1.19.2",
+  "number": "1.18.2",
   "title": "Regular and normal spaces.",
   "body": " Regular and normal spaces   Let be a topological space.    is regular if is , and given any closed set and any , the sets and can be separated by open sets.     is normal if is , and any two disjoint closed sets of can be separated by open sets.      "
 },
@@ -2525,7 +2498,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_regular.html#rm_separated",
   "type": "Remark",
-  "number": "1.19.3",
+  "number": "1.18.3",
   "title": "Separation axioms.",
   "body": " Separation axioms  The properties of being , Hausdorff, regular, or normal are called separation axioms as they articulate how various subsets can be separated by open sets. Below you find the descriptions of these properties using the Trennungsaxiom schema. A further remark about the use of regular and normal in the literature: some texts do not include the condition in these notions, and describe the properties we define as regular Hausdorff and normal regular . There is considerably less ambiguity in the literature when using the descriptions, but you should still be careful.  "
 },
@@ -2534,7 +2507,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_regular.html#s_regular-5",
   "type": "Remark",
-  "number": "1.19.4",
+  "number": "1.18.4",
   "title": "Trennungsaxiom implications.",
   "body": " Trennungsaxiom implications  It is easy to see that . Furthermore, your argument for the first two implications will reveal why the condition is needed.  "
 },
@@ -2543,7 +2516,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_regular.html#eg_regular",
   "type": "Example",
-  "number": "1.19.5",
+  "number": "1.18.5",
   "title": "Elementary examples.",
   "body": " Elementary examples      Discrete spaces are regular and normal.    An infinite space with the cofinite topology is neither regular nor normal.       (1) is clear since all sets are both open and closed. (2) follows from the fact that in this space any two nonempty open sets intersect nontrivially.   "
 },
@@ -2552,7 +2525,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_regular.html#th_metrizable_implies_normal",
   "type": "Theorem",
-  "number": "1.19.6",
+  "number": "1.18.6",
   "title": "Metric spaces are normal.",
   "body": " Metric spaces are normal   If is a metric space, then is normal.    Let be disjoint closed subsets of . For each we can find an such that . Similarly for each we can find an such that . I claim the open sets are disjoint, proving and are separated by open sets. Indeed if , then for some and . Without loss of generality we may assume that . But then we would have . This is a contradiction since we assumed .   "
 },
@@ -2561,7 +2534,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_regular.html#eg_RK_not_regular",
   "type": "Example",
-  "number": "1.19.7",
+  "number": "1.18.7",
   "title": "<span class=\"process-math\">\\(\\R_K\\)<\/span> is not regular.",
   "body": " is not regular   Prove: is Hausdorff, but not regular.    Since the -topology is finer than the standard topology on , is Hausdorff. To see that it is not regular, recall that is closed. I'll show that we cannot separate 0 and with open sets. Indeed, suppose we have open disjoint sets containing respectively. Since is open, it must contain an open basis element $B$ containing ; and since , this basis element can be chosen of the form . Now choose such that . Since we can find a basis element of the form that is contained in . Furthermore, shrinking if necessary, we can assume that . But then clearly , and hence also . Contradiction!   "
 },
@@ -2570,7 +2543,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_regular.html#th_regular_normal_equivalence",
   "type": "Theorem",
-  "number": "1.19.8",
+  "number": "1.18.8",
   "title": "Regular and normal equivalences.",
   "body": " Regular and normal equivalences   Let be a -space.    is regular if and only if for all and open set , there is an open set such that .     is normal if and only if for any closed set and open set containing , there is an open set containing satisfying .          First, assume is regular. Given and as described, we can separate and the closed set by open sets and . It follows that : indeed, given any , the open set contains and does not intersect with .  Conversely, assume for all and open sets we can find an open set satisfying . Given any closed set and element , letting , we see that there is an open set satisfying . The open sets and are then easily seen to separate and .    This proof is very similar to the last. Essenially you need only replace with a closed set throughout.      "
 },
@@ -2579,7 +2552,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_regular.html#th_locally_compact_regular",
   "type": "Theorem",
-  "number": "1.19.9",
+  "number": "1.18.9",
   "title": "Locally compact implies regular.",
   "body": " Locally compact implies regular   Let be locally compact and Hausdorff. Prove: is regular.    This is an easy consequence of and .   "
 },
@@ -2588,7 +2561,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_regular.html#s_regular-11",
   "type": "Remark",
-  "number": "1.19.10",
+  "number": "1.18.10",
   "title": "Locally compact and non-normal.",
   "body": " Locally compact and non-normal  Yes, there are examples of locally compact -spaces that are not normal. They are not particularly easy to build, however. Look it up!  "
 },
@@ -2597,7 +2570,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_regular.html#eg_Rl_regular",
   "type": "Example",
-  "number": "1.19.11",
+  "number": "1.18.11",
   "title": "<span class=\"process-math\">\\(\\R_\\ell\\)<\/span> is regular.",
   "body": " is regular   Prove: is regular.    Since has a finer topology than , it is . We will use the equivalence (1) from . Given any and open set , we can find such that . But is closed! (Prove this.) Thus we have found an open containing such that .   "
 },
@@ -2606,7 +2579,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_regular.html#rm_regular_open_closed_basis",
   "type": "Remark",
-  "number": "1.19.12",
+  "number": "1.18.12",
   "title": "Basis of clopen sets.",
   "body": " Basis of clopen sets  The argument from is easily generalized to show that any -space that has a basis consisting of sets that are both open and closed ( , clopen sets) is regular.  "
 },
@@ -2615,7 +2588,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_regular.html#th_regular_props",
   "type": "Theorem",
-  "number": "1.19.13",
+  "number": "1.18.13",
   "title": "Regularity: subspace and product properties.",
   "body": " Regularity: subspace and product properties      Subspaces of regular spaces are regular.    Products of regular spaces are regular.          Assume is a subspace of the regular space . We know already that subspaces of -spaces are , so is . Next take any and any set not containing that is closed in . We have for some closed set . Since and is regular, we can find disjoint open sets that separate and in . The disjoint open (in ) sets and are then a separation of and in .    We use (1) from . Given and open set containing , choose a basis element of the form containing . Since each is regular, we can find open sets satisfying . Letting , we have .      "
 },
@@ -2624,7 +2597,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_regular.html#s_regular-15",
   "type": "Remark",
-  "number": "1.19.14",
+  "number": "1.18.14",
   "title": "",
   "body": " Interestingly, neither of the statements of are true if regular is replaced with normal . It is worthwhile to examine what goes wrong in our arguments above if the element is replaced with a closed set throughout.  "
 },
@@ -2633,7 +2606,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "s_normal.html",
   "type": "Section",
-  "number": "1.20",
+  "number": "1.19",
   "title": "Normal spaces",
   "body": " Normal spaces   is normal   Prove: is normal.    Let be disjoint closed subsets of . We can find open coverings satisfying for all . First observe that for all . Indeed, otherwise we'd have , in which case either or : both are impossible since and . We conclude that , proving that and can be separated by open sets.     is not normal   Prove: is not normal.    See Munkres for the full proof. I'll content myself with a discussion of some of the key elements. First, let . This set is closed in , and hence closed in , since the left limit product topology is finer than the standard topology. Next, as we saw on a previous homework, is discrete as a subspace of : if follows that every subset of , being itself closed in , is closed in , using transitivity. In particular the two sets . By what we said above, the disjoint sets and are closed in , but as it turns out you cannot separate them by open sets. The proof is not terribly difficult, but will seem somewhat convoluted without knowing about the Baire category theorem. As such, I omit it. (Munkres doesn't use this approach, choosing instead a proof by contradiction, but he outlines a proof in one of his exercises.)     Regular+second countable normal   If is regular and second countable, then is normal.    Assume is regular and second countable. Let be a countable basis for . Let and be disjoint closed sets. By regularity, for each we can find disjoint open sets containing and respectively. Since is a basis, we can find a basis element such that . The set of all such is a countable subset of , giving rise to a countable cover satisfying for all . Similarly, we can construct an open covering satisfying for all . The corresponding open sets are not necessarily disjoint. However the sets and , where , still cover and respectively, are still open, and are disjoint.     Compact+Hausdorff normal   If is a compact Hausdorff space, then is normal.    Since is compact Hausdorff, it is locally compact Hausdorff, and hence regular by . We use the equivalent condition of normality from . To this end, let be closed, and let be any open set containing . Since is regular, for all we can find an open set containing such that . We have . Since is compact and is closed, is compact. Hence there is a finite subcovering . We have , as desired.    "
 },
@@ -2642,7 +2615,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_normal.html#eg_Rl_normal",
   "type": "Example",
-  "number": "1.20.1",
+  "number": "1.19.1",
   "title": "<span class=\"process-math\">\\(\\R_\\ell\\)<\/span> is normal.",
   "body": " is normal   Prove: is normal.    Let be disjoint closed subsets of . We can find open coverings satisfying for all . First observe that for all . Indeed, otherwise we'd have , in which case either or : both are impossible since and . We conclude that , proving that and can be separated by open sets.   "
 },
@@ -2651,7 +2624,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_normal.html#s_normal-3",
   "type": "Example",
-  "number": "1.20.2",
+  "number": "1.19.2",
   "title": "<span class=\"process-math\">\\(R_\\ell\\times R_\\ell\\)<\/span> is not normal.",
   "body": " is not normal   Prove: is not normal.    See Munkres for the full proof. I'll content myself with a discussion of some of the key elements. First, let . This set is closed in , and hence closed in , since the left limit product topology is finer than the standard topology. Next, as we saw on a previous homework, is discrete as a subspace of : if follows that every subset of , being itself closed in , is closed in , using transitivity. In particular the two sets . By what we said above, the disjoint sets and are closed in , but as it turns out you cannot separate them by open sets. The proof is not terribly difficult, but will seem somewhat convoluted without knowing about the Baire category theorem. As such, I omit it. (Munkres doesn't use this approach, choosing instead a proof by contradiction, but he outlines a proof in one of his exercises.)   "
 },
@@ -2660,7 +2633,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_normal.html#th_regular_separable_normal",
   "type": "Theorem",
-  "number": "1.20.3",
+  "number": "1.19.3",
   "title": "Regular+second countable <span class=\"process-math\">\\(\\implies\\)<\/span> normal.",
   "body": " Regular+second countable normal   If is regular and second countable, then is normal.    Assume is regular and second countable. Let be a countable basis for . Let and be disjoint closed sets. By regularity, for each we can find disjoint open sets containing and respectively. Since is a basis, we can find a basis element such that . The set of all such is a countable subset of , giving rise to a countable cover satisfying for all . Similarly, we can construct an open covering satisfying for all . The corresponding open sets are not necessarily disjoint. However the sets and , where , still cover and respectively, are still open, and are disjoint.   "
 },
@@ -2669,7 +2642,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_normal.html#th_compact_Hausdorff_normal",
   "type": "Theorem",
-  "number": "1.20.4",
+  "number": "1.19.4",
   "title": "Compact+Hausdorff <span class=\"process-math\">\\(\\implies\\)<\/span> normal.",
   "body": " Compact+Hausdorff normal   If is a compact Hausdorff space, then is normal.    Since is compact Hausdorff, it is locally compact Hausdorff, and hence regular by . We use the equivalent condition of normality from . To this end, let be closed, and let be any open set containing . Since is regular, for all we can find an open set containing such that . We have . Since is compact and is closed, is compact. Hence there is a finite subcovering . We have , as desired.   "
 },
@@ -2678,7 +2651,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "s_Urysohn_lemma.html",
   "type": "Section",
-  "number": "1.21",
+  "number": "1.20",
   "title": "Urysohn lemma",
   "body": " Urysohn lemma   Urysohn lemma   Let be a normal space. Given two nonempty disjoint closed sets and there is a continuous function such that and .  It follows easily that the result is still true if we replace the interval with any closed interval .    It would be difficult to improve upon Munkres' exposition of this. I give essentially a full proof below nonetheless.   Step 1: construction of open sets  The first crucial step in the proof is to build a collection of open sets satisfying if . This is done by first picking an enumeration of where for convenience and . We use the enumeration to define open sets for each recursively as follows. Set . Since , by we can find an open containing such that . Now take any and assume by induction that we constructed open sets satisfying the desired inclusion condition. Write where and are the immediate predecessor and successor, respectively, of among the set . By induction we have . Pick to be any open set satisfying . Lastly define for all and for all . It is easy to see that thus defined, our collection satisfies the desired inclusion condition.    Step 2: definition of and continuity  Define as . Some easy properties of :    for all .     for all .     for all .   We prove continuity by showing that is continuous at each . Given and open set containing , choose rational numbers satisfying . I claim is an open set containing satisfying . First, it is clear that is open, and it follows easily from the elementary properties of quoted above that . Next, given any , since , we have , and since , we have . This concludes the proof.      Separated by a continuous function   Let be a topological space. Subsets are separated by a continuous function if there is a continuous function such that and .     Separation in normal spaces  If the closed sets are separated by the continuous function , they are separated by the open sets and . The Urysohn lemma tells us that in normal spaces the two notions are equivalent!   We can explore this idea of separated by a continuous function in relation to some of the other Trennnungsaxiome . For example, taking the regularity axiom ( ) and replacing the separated by open sets condition with a separated by a continuous function condition, we obtain the notion of complete regularity .   Completely regular   A -space is completely regular (or ) if for any closed set and element , there is a continuous function , such that and .     Complete regularity  With respect to regularity, separation by a continuous function is truly a stronger notion: , there are spaces that are regular but not completely regular. This is in contrast to the situation with normality: by Urysohn's lemma a space is normal if and only if disjoint closed sets are separated by a continuous function. Note also that by Urysohn's lemma, any normal space is completely regular. Thus adding to our list of Trennungsaxiome we still have a list of properties that satisfies if .    The notion of complete regularity strikes a nice balance between regularity and normality. In particular, it is stronger than regularity, but still behaves well with respect to subspaces and products.   Complete regularity: subspace and product properties      Subspaces of completely regular spaces are completely regular.    Products of completely regular spaces are completely regular.       The proof of (1) is elementary. (See text.) The proof of (2) is more interesting. Assume is a collection of completely regular spaces, and let . Let be a closed set, and let be any element not contained in . Since is open, we can find a base open neighborhood of of the form . For each let be a continuous function satisfying . The function is continuous (product of continuous functions) and satisfies and .    "
 },
@@ -2687,7 +2660,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Urysohn_lemma.html#th_Urysohn_lemma",
   "type": "Theorem",
-  "number": "1.21.1",
+  "number": "1.20.1",
   "title": "Urysohn lemma.",
   "body": " Urysohn lemma   Let be a normal space. Given two nonempty disjoint closed sets and there is a continuous function such that and .  It follows easily that the result is still true if we replace the interval with any closed interval .    It would be difficult to improve upon Munkres' exposition of this. I give essentially a full proof below nonetheless.   Step 1: construction of open sets  The first crucial step in the proof is to build a collection of open sets satisfying if . This is done by first picking an enumeration of where for convenience and . We use the enumeration to define open sets for each recursively as follows. Set . Since , by we can find an open containing such that . Now take any and assume by induction that we constructed open sets satisfying the desired inclusion condition. Write where and are the immediate predecessor and successor, respectively, of among the set . By induction we have . Pick to be any open set satisfying . Lastly define for all and for all . It is easy to see that thus defined, our collection satisfies the desired inclusion condition.    Step 2: definition of and continuity  Define as . Some easy properties of :    for all .     for all .     for all .   We prove continuity by showing that is continuous at each . Given and open set containing , choose rational numbers satisfying . I claim is an open set containing satisfying . First, it is clear that is open, and it follows easily from the elementary properties of quoted above that . Next, given any , since , we have , and since , we have . This concludes the proof.    "
 },
@@ -2696,7 +2669,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Urysohn_lemma.html#d_separated_continuous_function",
   "type": "Definition",
-  "number": "1.21.2",
+  "number": "1.20.2",
   "title": "Separated by a continuous function.",
   "body": " Separated by a continuous function   Let be a topological space. Subsets are separated by a continuous function if there is a continuous function such that and .   "
 },
@@ -2705,7 +2678,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Urysohn_lemma.html#rm_Urysohn_lemma",
   "type": "Remark",
-  "number": "1.21.3",
+  "number": "1.20.3",
   "title": "Separation in normal spaces.",
   "body": " Separation in normal spaces  If the closed sets are separated by the continuous function , they are separated by the open sets and . The Urysohn lemma tells us that in normal spaces the two notions are equivalent!  "
 },
@@ -2714,7 +2687,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Urysohn_lemma.html#d_completely_regular_normal",
   "type": "Definition",
-  "number": "1.21.4",
+  "number": "1.20.4",
   "title": "Completely regular.",
   "body": " Completely regular   A -space is completely regular (or ) if for any closed set and element , there is a continuous function , such that and .   "
 },
@@ -2723,7 +2696,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Urysohn_lemma.html#rm_complete_regularity",
   "type": "Remark",
-  "number": "1.21.5",
+  "number": "1.20.5",
   "title": "Complete regularity.",
   "body": " Complete regularity  With respect to regularity, separation by a continuous function is truly a stronger notion: , there are spaces that are regular but not completely regular. This is in contrast to the situation with normality: by Urysohn's lemma a space is normal if and only if disjoint closed sets are separated by a continuous function. Note also that by Urysohn's lemma, any normal space is completely regular. Thus adding to our list of Trennungsaxiome we still have a list of properties that satisfies if .   "
 },
@@ -2732,7 +2705,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Urysohn_lemma.html#th_complete_regularity",
   "type": "Theorem",
-  "number": "1.21.6",
+  "number": "1.20.6",
   "title": "Complete regularity: subspace and product properties.",
   "body": " Complete regularity: subspace and product properties      Subspaces of completely regular spaces are completely regular.    Products of completely regular spaces are completely regular.       The proof of (1) is elementary. (See text.) The proof of (2) is more interesting. Assume is a collection of completely regular spaces, and let . Let be a closed set, and let be any element not contained in . Since is open, we can find a base open neighborhood of of the form . For each let be a continuous function satisfying . The function is continuous (product of continuous functions) and satisfies and .   "
 },
@@ -2741,7 +2714,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "s_Urysohn_metrization.html",
   "type": "Section",
-  "number": "1.22",
+  "number": "1.21",
   "title": "Urysohn metrization theorem",
   "body": " Urysohn metrization theorem   Urysohn metrization theorem   If is a regular second countable space, then is metrizable.    The main step in the proof, one that uses , is the construction of a countable family of continuous functions satisfying the following property: for all and for all open sets containing , there is an such that and . It then follows from that the map defined as is an embedding into the metric space . Since subspaces of metric spaces are metric spaces, we conclude that is metrizable.  We now proceed with the construction. Let be a countable basis of . For all satisfying , let be a continuous function satisfying and : this guaranteed to exist by since , being regular and second countable, is normal. Since the collection is countable we can enumerate it as . Now, for any and any open set , we have for some . Since is regular, we can find a basis element such that . We have for some , , and , as desired.     Embedding theorem   Let be a -space. Given any collection of continuous functions satisfying the property that for all and for all open sets containing there is an such that and , the map defined as is an embedding into .     is injective  Since is , given any we can find an open set such that and . By assumption, there is some such that and . It follows that and hence that .    is continuous  This follows immediately from since each is continuous.    is embedding  Lastly, we prove that is an embedding mapping homeomorphically onto . Let be an open set containing an element , and let . Pick any such that and . Let be the projection map onto the -th coordinate, and define . Since is continuous and is open, the set is open in the subspace topology of . We claim that , proving that is an embedding. Since , we have . Similarly, if , then , from whence it follows that : otherwise we'd have .      Urysohn metrization theorem  Munkres gives an alternative proof that shows any regular second countable space can be embedded into with respect to the uniform metric. This argument is then generalized later to prove the Nagata-Smirnov metrization theorem, which states that is metrizable if and only if it is regular and has countable locally finite basis.     A space is completely regular if and only if it is homeomorphic to a subspace of for some set .    Implication: . Assume is completely regular. Recall that in particular this means is . Define to be the set of all pairs where and is an open neighborhood of . For each , let be a function satisfying and . (Such a function exists since is completely regular.) Now, for all and for all open sets containing , corresponding to the index we have the function which satisfies and . We conclude by that the map is an embedding of into , and thus that is homeomorphic to a subspace of .  Implication: . Since is completely regular, and since complete regularity is preserved under arbitrary products, the space is completely regular for any set . Furthermore, since complete regularity is inherited by subspaces, any subspace of is completely regular. Thus, if embeds into , then it is homeomorphic to a subspace of , and hence is completely regular.    "
 },
@@ -2750,7 +2723,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Urysohn_metrization.html#th_Urysohn_metrization",
   "type": "Theorem",
-  "number": "1.22.1",
+  "number": "1.21.1",
   "title": "Urysohn metrization theorem.",
   "body": " Urysohn metrization theorem   If is a regular second countable space, then is metrizable.    The main step in the proof, one that uses , is the construction of a countable family of continuous functions satisfying the following property: for all and for all open sets containing , there is an such that and . It then follows from that the map defined as is an embedding into the metric space . Since subspaces of metric spaces are metric spaces, we conclude that is metrizable.  We now proceed with the construction. Let be a countable basis of . For all satisfying , let be a continuous function satisfying and : this guaranteed to exist by since , being regular and second countable, is normal. Since the collection is countable we can enumerate it as . Now, for any and any open set , we have for some . Since is regular, we can find a basis element such that . We have for some , , and , as desired.   "
 },
@@ -2759,7 +2732,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Urysohn_metrization.html#th_embedding_theorem",
   "type": "Theorem",
-  "number": "1.22.2",
+  "number": "1.21.2",
   "title": "Embedding theorem.",
   "body": " Embedding theorem   Let be a -space. Given any collection of continuous functions satisfying the property that for all and for all open sets containing there is an such that and , the map defined as is an embedding into .     is injective  Since is , given any we can find an open set such that and . By assumption, there is some such that and . It follows that and hence that .    is continuous  This follows immediately from since each is continuous.    is embedding  Lastly, we prove that is an embedding mapping homeomorphically onto . Let be an open set containing an element , and let . Pick any such that and . Let be the projection map onto the -th coordinate, and define . Since is continuous and is open, the set is open in the subspace topology of . We claim that , proving that is an embedding. Since , we have . Similarly, if , then , from whence it follows that : otherwise we'd have .    "
 },
@@ -2768,7 +2741,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Urysohn_metrization.html#s_Urysohn_metrization-4",
   "type": "Remark",
-  "number": "1.22.3",
+  "number": "1.21.3",
   "title": "Urysohn metrization theorem.",
   "body": " Urysohn metrization theorem  Munkres gives an alternative proof that shows any regular second countable space can be embedded into with respect to the uniform metric. This argument is then generalized later to prove the Nagata-Smirnov metrization theorem, which states that is metrizable if and only if it is regular and has countable locally finite basis.  "
 },
@@ -2777,7 +2750,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Urysohn_metrization.html#cor_completely_regular_embedding",
   "type": "Corollary",
-  "number": "1.22.4",
+  "number": "1.21.4",
   "title": "",
   "body": "  A space is completely regular if and only if it is homeomorphic to a subspace of for some set .    Implication: . Assume is completely regular. Recall that in particular this means is . Define to be the set of all pairs where and is an open neighborhood of . For each , let be a function satisfying and . (Such a function exists since is completely regular.) Now, for all and for all open sets containing , corresponding to the index we have the function which satisfies and . We conclude by that the map is an embedding of into , and thus that is homeomorphic to a subspace of .  Implication: . Since is completely regular, and since complete regularity is preserved under arbitrary products, the space is completely regular for any set . Furthermore, since complete regularity is inherited by subspaces, any subspace of is completely regular. Thus, if embeds into , then it is homeomorphic to a subspace of , and hence is completely regular.   "
 },
@@ -2786,7 +2759,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "s_Tietze_extension.html",
   "type": "Section",
-  "number": "1.23",
+  "number": "1.22",
   "title": "Further applications of Urysohn",
   "body": " Further applications of Urysohn   Tietze extension theorem   Let be a closed subset of the normal space .   Any continuous function can be extended to a continuous function .    Any continuous function can be extended to a continuous function .       Proof of (1)  First we show that for any continuous function , we can find a continuous function such that (i) and (ii) for all . To do so, subdivide as define and , and, using Urysohn's lemma, choose a continuous function such that and . It is easily verified that this does the trick.  Now assume we have a continuous function . Letting , we see that extends continuously to if and only if extends continuously to . Thus, we may assume . We can build a sequence of continuous functions satisfying the following properties:    for all .     for all .   It follows from some convergence of infinite sums arguments that is a well-defined continuous function from to satisfying for all . (See Munkres for these details. Basically just the Weierstrass M-test, if that is familiar to you.)  How dow we build this sequence? From our first paragraph, we can pick to be any function satisfying and . Next assume we have constructed as specified for all . Apply the same reasoning to the function , which by assumption maps to to find . By the recursion principle we get a sequence satisfying (i) and (ii) for all .    Proof of (2)  Let be a homeomorphism. A continuous function extends continuously to a function if and only if extends continuously to a function . Thus we may assume . Since , by (1) there is a function . Let . If is nonempty, then , as desired. Otherwise, since is closed and , there is a continuous function such that and . The function is an extension of on that maps into , as desired.     Space-filling curve  We will show that there is a continuous surjective function . This is thus a path or curve, whose image is all of . This called a space-filling curve , or Peano curve .   Let be the Cantor set, and choose a homeomorphism , where is given the discrete topology and is given the product topology. (We proved is homeomorphic to in discussion.) Now define functions as Both functions are easily seen to be continuous; we prove this for . Let and let . For any , pick such that . Let . For any , we have , as desired.  Now using our homeomorphism , we see that the functions and are continuous functions from to . By the Tietze extension theorem , we obtain continuous extensions and . The function defined as is then a continuous function to .  It remains only to show that is surjective. Given any , let and be binary expansions of and . Let , and let . We have . This proves in fact that is surjective.     Partition of unity   Let . The {\\bf support} of a continuous function is defined as .  A partition of unity dominated by the open cover  is a collection of continuous functions satisfying (i) for all , and (ii) for all .     Partition of unity (finite)   Let be a normal space. Given any finite open covering of , there is a partition of unity dominated by .    Not covered in WQ23 course. See Munkres if interested.     Compact manifold embedding   Let be a compact -manifold. There is an embedding for some .    Not covered in WQ23 course. See Munkres if interested.    "
 },
@@ -2795,7 +2768,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Tietze_extension.html#th_Tietze_extension",
   "type": "Theorem",
-  "number": "1.23.1",
+  "number": "1.22.1",
   "title": "Tietze extension theorem.",
   "body": " Tietze extension theorem   Let be a closed subset of the normal space .   Any continuous function can be extended to a continuous function .    Any continuous function can be extended to a continuous function .       Proof of (1)  First we show that for any continuous function , we can find a continuous function such that (i) and (ii) for all . To do so, subdivide as define and , and, using Urysohn's lemma, choose a continuous function such that and . It is easily verified that this does the trick.  Now assume we have a continuous function . Letting , we see that extends continuously to if and only if extends continuously to . Thus, we may assume . We can build a sequence of continuous functions satisfying the following properties:    for all .     for all .   It follows from some convergence of infinite sums arguments that is a well-defined continuous function from to satisfying for all . (See Munkres for these details. Basically just the Weierstrass M-test, if that is familiar to you.)  How dow we build this sequence? From our first paragraph, we can pick to be any function satisfying and . Next assume we have constructed as specified for all . Apply the same reasoning to the function , which by assumption maps to to find . By the recursion principle we get a sequence satisfying (i) and (ii) for all .    Proof of (2)  Let be a homeomorphism. A continuous function extends continuously to a function if and only if extends continuously to a function . Thus we may assume . Since , by (1) there is a function . Let . If is nonempty, then , as desired. Otherwise, since is closed and , there is a continuous function such that and . The function is an extension of on that maps into , as desired.   "
 },
@@ -2813,7 +2786,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Tietze_extension.html#d_partition_of_unity",
   "type": "Definition",
-  "number": "1.23.2",
+  "number": "1.22.2",
   "title": "Partition of unity.",
   "body": " Partition of unity   Let . The {\\bf support} of a continuous function is defined as .  A partition of unity dominated by the open cover  is a collection of continuous functions satisfying (i) for all , and (ii) for all .   "
 },
@@ -2822,7 +2795,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Tietze_extension.html#th_partition_of_unity",
   "type": "Theorem",
-  "number": "1.23.3",
+  "number": "1.22.3",
   "title": "Partition of unity (finite).",
   "body": " Partition of unity (finite)   Let be a normal space. Given any finite open covering of , there is a partition of unity dominated by .    Not covered in WQ23 course. See Munkres if interested.   "
 },
@@ -2831,7 +2804,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Tietze_extension.html#cor_manifold_embedding",
   "type": "Corollary",
-  "number": "1.23.4",
+  "number": "1.22.4",
   "title": "Compact manifold embedding.",
   "body": " Compact manifold embedding   Let be a compact -manifold. There is an embedding for some .    Not covered in WQ23 course. See Munkres if interested.   "
 },
@@ -2840,7 +2813,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "s_nets.html",
   "type": "Section",
-  "number": "1.24",
+  "number": "1.23",
   "title": "Nets",
   "body": " Nets   Partial ordering axioms   Let denote a binary relation on the set . We write to assert that the relation holds between elements . The relation is a partial ordering if it satisfies the following three axioms.   Reflexive (PO1)  For all , we have .    Transitive (PO2)  For all , if and , then .    Antisymmetric (PO3)  For all , if and , then .   The relation is a quasiordering (or preordering ) if it satisfies axioms PO1 and PO2. When is a partial ordering or a quasiordering, we will often write for .  A partially ordered set (POSET, for short) is a pair , where is a partial ordering on . Similarly,a quasiordered set is a pair , where is a a quasiordering on .     Common examples     The usual less than or equal to relation is a partial ordering on .    Let be a set, and let be the power set of of . The relation defines a partial ordering on .    Let be a set, and let be the power set of of . The relation also defines a partial ordering on .    For an element in a topological space the set of all open neighborhoods of is a partially ordered set under reverse inclusion: , .    Recall that an integer divides an integer , written , if there is an integer such that . The relation defines a quasiordering on , but not a partial ordering: and , but . The same relation does define a partial ordering on .       Directed set   A directed set is a pair , where is a quasiordering on that satisfies the following axiom.   Directed (D)  For all , there is a such that and .   A subset of a directed set is cofinal if for all there is a such that .     Common examples  Each quasiordered (and\/or partially ordered) set in is easily seen to satisfy the further axiom (D), and is thus a directed set.    Nets and convergent nets   Let be a set. A net in is a function where is a directed set. In particular, a net is a tuple, and accordingly we may use the coordinate notation , where .  A net is eventually in a subset if there is an element such that for all .  Assume is a topological space. A net  converges to an element , denoted , if for all open sets containing the net is eventually in .  A net is cofinally in a subset if the set is cofinal: equivalently, if for all there is a such that .  An element is a limit point of the net if is cofinally in every open neighborhood of .     Riemann integral  A careful examination of the Riemann integral of a function over an interval reveals that it is a statement about a convergent net. Indeed, let be the set of all pointed partitions of into subintervals: , an element of is a pair , where is a subinterval partition and is a choice of sample points in each subinterval of . The relation is a quasiordering on satisfying (D). To any function we can associate the net , where for each we define to be the corresponding Riemann sum of . The statement that the Riemann integral exists and is equal to is then equivalent to the statement that if and the net converges to .    Nets and topology   Let be a topological space.   The closure of any set is the set of all for which there is a net such that .  It follows that a subset is closed if and only if it contains all limits of all convergent nets in .    A function is continuous if and only if for all convergent nets the net is convergent.    The space is Hausdorff if and only if every net in converges to at most one element in .          Assume . For all open sets containing , choose . Let be the set of all open neighborhoods of , considered as a directed set with reverse inclusion. Define as . The net converges to . Indeed, for any open set containing , we set : if , then (by definition of our ordering), and hence .  Assume for some net in . Given any open set containing , there is an such that for all . In particular, we have . Since is a net in , we conclude that .  Note: the argument for the forward direction uses the axiom of choice potentially. If that bugs you, consider the following alternative: let with quasiordering . (This is no longer a partial ordering necessarily.) Define as . This net also converges to .    Assume is continuous and is a net satisfying . Given any open set containing , the net is eventually in , since this is an open set containing . But then clearly is eventually in .  Inversely, if is not continuous, then there is an and open set containing such that for all open sets containing , there is an element . Let be the set of all open neighborhoods of with partial ordering given by reverse inclusion, and consider the net , where is the element described above. We have , using a similar argument as in (1), and yet . Indeed, by construction the net never lies in the open neighoborhood of .    Assume is Hausdorff and that the net converges to . Given any , pick disjoint open sets containing and , respectively. I claim that is not eventually in . Indeed, since , there is an such that for all . If, similarly, there were a such that for all , then we could find an index satisfying and , in which case . Contradiction! We conclude that is not eventually in , and hence that does not converge to .  Now assume that is not Hausdorff, as witnessed by elements : this means for all open sets containing and , respectively, we have have . Let be the set of all triples , where are open neighborhoods of and , respectively, and . Declare if and only if and . The set is directed: given , we can take , for some . Now, let be the net in defined as follows: given , define . I claim that and . Indeed given any open set containing and open set containing , there is an element . Let . For any we have . Thus is eventually in and eventually in , as desired.        Subnets   Let and be quasiordered sets. An order-preserving map is a function satisfying the following property: if , then .  Let be a net in . A subnet of is a net of the form , where is a directed set, and is an order-preserving map, and the image is cofinal in . Using tuple notation, we will write for the subnet .     Limit points of nets   Let be a topological space, and let be a net in . An element is a limit point of if and only if there is a subnet of converging to .    Let be a limit point of the net . By definition of limit point, the collection of all open neighborhoods of satisfies condition (i) of Kelley's lemma ; condition (ii) follows from properties of open sets. We conclude that there is a subnet which is eventually in for all open sets containing , and thus that this subnet converges to .  Assume is not a limit point of . Let be an open neighborhood of such that is not cofinal; then there exists an such that for all with . Let be a subnet of . We can write . I claim that . Indeed, since is cofinal in we can find a such that , in which case for all all we have , and thus . This shows that in fact is eventually in ; in particular it is definitely not eventually in .     Kelley's lemma   Let be a net. If is a nonempty collection of subsets of satisfying the conditions   for all the set is cofinal,    for all there is an such that ,   then there is a subnet of which is eventually in for all .    Assume is a collection of subsets of satisfying conditions (i)-(ii). Define to be the set of pairs where and . Given , , we declare if and only if and . It is clear that this is a quasiordering. We now show is directed. Given and , by property (ii) there is an such that . Since is cofinal, there is an such that , and . Setting , we see that and .  Define as . It is clear that is order preserving. We show that is cofinal in . Given any , pick any . Since is cofinal, there is an such that . We have .  Lastly, we show that the subnet is eventually in for all . Indeed, given , let for any . If for , then we have and . It follows that . This proves for all , and thus that is eventually in .    "
 },
@@ -2849,7 +2822,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_nets.html#d_partial_order",
   "type": "Definition",
-  "number": "1.24.1",
+  "number": "1.23.1",
   "title": "Partial ordering axioms.",
   "body": " Partial ordering axioms   Let denote a binary relation on the set . We write to assert that the relation holds between elements . The relation is a partial ordering if it satisfies the following three axioms.   Reflexive (PO1)  For all , we have .    Transitive (PO2)  For all , if and , then .    Antisymmetric (PO3)  For all , if and , then .   The relation is a quasiordering (or preordering ) if it satisfies axioms PO1 and PO2. When is a partial ordering or a quasiordering, we will often write for .  A partially ordered set (POSET, for short) is a pair , where is a partial ordering on . Similarly,a quasiordered set is a pair , where is a a quasiordering on .   "
 },
@@ -2858,7 +2831,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_nets.html#eg_poset",
   "type": "Example",
-  "number": "1.24.2",
+  "number": "1.23.2",
   "title": "Common examples.",
   "body": " Common examples     The usual less than or equal to relation is a partial ordering on .    Let be a set, and let be the power set of of . The relation defines a partial ordering on .    Let be a set, and let be the power set of of . The relation also defines a partial ordering on .    For an element in a topological space the set of all open neighborhoods of is a partially ordered set under reverse inclusion: , .    Recall that an integer divides an integer , written , if there is an integer such that . The relation defines a quasiordering on , but not a partial ordering: and , but . The same relation does define a partial ordering on .     "
 },
@@ -2867,7 +2840,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_nets.html#d_directed_set",
   "type": "Definition",
-  "number": "1.24.3",
+  "number": "1.23.3",
   "title": "Directed set.",
   "body": " Directed set   A directed set is a pair , where is a quasiordering on that satisfies the following axiom.   Directed (D)  For all , there is a such that and .   A subset of a directed set is cofinal if for all there is a such that .   "
 },
@@ -2876,7 +2849,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_nets.html#s_nets-5",
   "type": "Example",
-  "number": "1.24.4",
+  "number": "1.23.4",
   "title": "Common examples.",
   "body": " Common examples  Each quasiordered (and\/or partially ordered) set in is easily seen to satisfy the further axiom (D), and is thus a directed set.  "
 },
@@ -2885,7 +2858,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_nets.html#d_nets",
   "type": "Definition",
-  "number": "1.24.5",
+  "number": "1.23.5",
   "title": "Nets and convergent nets.",
   "body": " Nets and convergent nets   Let be a set. A net in is a function where is a directed set. In particular, a net is a tuple, and accordingly we may use the coordinate notation , where .  A net is eventually in a subset if there is an element such that for all .  Assume is a topological space. A net  converges to an element , denoted , if for all open sets containing the net is eventually in .  A net is cofinally in a subset if the set is cofinal: equivalently, if for all there is a such that .  An element is a limit point of the net if is cofinally in every open neighborhood of .   "
 },
@@ -2894,7 +2867,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_nets.html#eg_Riemann_integral",
   "type": "Example",
-  "number": "1.24.6",
+  "number": "1.23.6",
   "title": "Riemann integral.",
   "body": " Riemann integral  A careful examination of the Riemann integral of a function over an interval reveals that it is a statement about a convergent net. Indeed, let be the set of all pointed partitions of into subintervals: , an element of is a pair , where is a subinterval partition and is a choice of sample points in each subinterval of . The relation is a quasiordering on satisfying (D). To any function we can associate the net , where for each we define to be the corresponding Riemann sum of . The statement that the Riemann integral exists and is equal to is then equivalent to the statement that if and the net converges to .  "
 },
@@ -2903,7 +2876,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_nets.html#th_nets_topology",
   "type": "Theorem",
-  "number": "1.24.7",
+  "number": "1.23.7",
   "title": "Nets and topology.",
   "body": " Nets and topology   Let be a topological space.   The closure of any set is the set of all for which there is a net such that .  It follows that a subset is closed if and only if it contains all limits of all convergent nets in .    A function is continuous if and only if for all convergent nets the net is convergent.    The space is Hausdorff if and only if every net in converges to at most one element in .          Assume . For all open sets containing , choose . Let be the set of all open neighborhoods of , considered as a directed set with reverse inclusion. Define as . The net converges to . Indeed, for any open set containing , we set : if , then (by definition of our ordering), and hence .  Assume for some net in . Given any open set containing , there is an such that for all . In particular, we have . Since is a net in , we conclude that .  Note: the argument for the forward direction uses the axiom of choice potentially. If that bugs you, consider the following alternative: let with quasiordering . (This is no longer a partial ordering necessarily.) Define as . This net also converges to .    Assume is continuous and is a net satisfying . Given any open set containing , the net is eventually in , since this is an open set containing . But then clearly is eventually in .  Inversely, if is not continuous, then there is an and open set containing such that for all open sets containing , there is an element . Let be the set of all open neighborhoods of with partial ordering given by reverse inclusion, and consider the net , where is the element described above. We have , using a similar argument as in (1), and yet . Indeed, by construction the net never lies in the open neighoborhood of .    Assume is Hausdorff and that the net converges to . Given any , pick disjoint open sets containing and , respectively. I claim that is not eventually in . Indeed, since , there is an such that for all . If, similarly, there were a such that for all , then we could find an index satisfying and , in which case . Contradiction! We conclude that is not eventually in , and hence that does not converge to .  Now assume that is not Hausdorff, as witnessed by elements : this means for all open sets containing and , respectively, we have have . Let be the set of all triples , where are open neighborhoods of and , respectively, and . Declare if and only if and . The set is directed: given , we can take , for some . Now, let be the net in defined as follows: given , define . I claim that and . Indeed given any open set containing and open set containing , there is an element . Let . For any we have . Thus is eventually in and eventually in , as desired.      "
 },
@@ -2912,7 +2885,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_nets.html#d_order_preserving_subnets",
   "type": "Definition",
-  "number": "1.24.8",
+  "number": "1.23.8",
   "title": "Subnets.",
   "body": " Subnets   Let and be quasiordered sets. An order-preserving map is a function satisfying the following property: if , then .  Let be a net in . A subnet of is a net of the form , where is a directed set, and is an order-preserving map, and the image is cofinal in . Using tuple notation, we will write for the subnet .   "
 },
@@ -2921,7 +2894,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_nets.html#th_nets_limit_points",
   "type": "Theorem",
-  "number": "1.24.9",
+  "number": "1.23.9",
   "title": "Limit points of nets.",
   "body": " Limit points of nets   Let be a topological space, and let be a net in . An element is a limit point of if and only if there is a subnet of converging to .    Let be a limit point of the net . By definition of limit point, the collection of all open neighborhoods of satisfies condition (i) of Kelley's lemma ; condition (ii) follows from properties of open sets. We conclude that there is a subnet which is eventually in for all open sets containing , and thus that this subnet converges to .  Assume is not a limit point of . Let be an open neighborhood of such that is not cofinal; then there exists an such that for all with . Let be a subnet of . We can write . I claim that . Indeed, since is cofinal in we can find a such that , in which case for all all we have , and thus . This shows that in fact is eventually in ; in particular it is definitely not eventually in .   "
 },
@@ -2930,7 +2903,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_nets.html#lem_Kelleys_lemma",
   "type": "Lemma",
-  "number": "1.24.10",
+  "number": "1.23.10",
   "title": "Kelley’s lemma.",
   "body": " Kelley's lemma   Let be a net. If is a nonempty collection of subsets of satisfying the conditions   for all the set is cofinal,    for all there is an such that ,   then there is a subnet of which is eventually in for all .    Assume is a collection of subsets of satisfying conditions (i)-(ii). Define to be the set of pairs where and . Given , , we declare if and only if and . It is clear that this is a quasiordering. We now show is directed. Given and , by property (ii) there is an such that . Since is cofinal, there is an such that , and . Setting , we see that and .  Define as . It is clear that is order preserving. We show that is cofinal in . Given any , pick any . Since is cofinal, there is an such that . We have .  Lastly, we show that the subnet is eventually in for all . Indeed, given , let for any . If for , then we have and . It follows that . This proves for all , and thus that is eventually in .   "
 },
@@ -2939,7 +2912,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "s_Tychonoff.html",
   "type": "Section",
-  "number": "1.25",
+  "number": "1.24",
   "title": "Tychonoff theorem via nets",
   "body": " Tychonoff theorem via nets   Our main application of the theory of nets is (a) to give a characterization of compactness in terms of convergence and limit points of nets ( ), and (b) to use this characterization to prove the Tychonoff theorem     Nets and compactness   Nets and compactness   Let be a topological space. The following statements are equivalent.    is compact.    Every net in has a limit point.    Every net in has a convergent subnet.       Statements (ii) and (iii) are immediately seen to be equivalent thanks to . We will show that (i) and (ii) are equivalent.   Implication: (i) (ii)  Let be a net in . For each define . Clearly each is closed and nonempty. Furthermore, for any finite collection we have , since we can find a such that for all , and hence . Since is assumed to be compact, there is an element . We show that is a limit point of . Indeed, given any open set containing and any , since , there is an element with such that . This proves that is cofinally in , as desired.    Implication: (ii) (i)  We prove the contrapositive. Suppose is not compact, and let be a cover with no finite cover. Define to the be the set of all pairs , where is a finite subset of and . (Note that since has no finite subcover.) It is easy to see that is a directed set under the quasiordering defined as if and only if . Define the net as . We show that has no limit point. To this end, given any , we have for some . We will show that the net is not cofinally in . To this end consider the index , where . For all with , we have , in which case . Thus there is no satisfying .       Tychonoff's theorem   We now give a proof of Tychonoff's theorem using nets. The first such proof was given by UC Berkeley mathematician John L. Kelley in his 1950 paper Convergence in topology . Our proof draws from a couple of slight improvements to Kelley's original argument, both proffered by additional UC Berkeley mathematicians. (Go Bears!) Paul Chernoff's A simple proof of Tychonoff's theorem via nets removed the need for universal nets in Kelley's argument; Charles Pugh is credited for , which removes the argument's reliance on subnets. All of these various proofs invoke Zorn's lemma , which as it turns out is equivalent to the axiom of choice. You may be asking: Is there a proof of the Tychonoff theorem that does not rely on the axiom of choice? Amazingly, the answer is no! In fact, Kelley himself proved that Tychonoff's theorem is equivalent to the axiom of choice in another paper from 1950: The Tychonoff product theorem implies the axiom of choice . His argument is simply too elegant not to include here. (Note: Kelley's original argument had a minor flaw that is corrected in the proof below. I encourage you to look at the original article and see if you can find the invalid step.)    Tychonoff implies AC (Kelley)   If Tychonoff's theorem is true, then the axiom of choice is true.    Assume Tychonoff's theorem is true. We will prove the following equivalent formulation of the axiom of choice: . Given a collection of nonempty sets, let the result of adding one additional point, , to each . Why do we do this? Add the marked point to the -th component space gives us a foothold, as it were, allowing us to find elements in the product without invoking the axiom of choice in the process: we can always choose the -th entry to be this special element . We will use Tychonoff's theorem to show that is a nonempty subset of . To do so, we need to give the sets a compact topological structure: this is accomplished by declaring the topology on to be . (Check that this is a topology.) This clearly makes compact, since only contains four open sets. Note also that is closed with respect to this topology.  Since each is compact, by Tychonoff's theorem so is . For each , let be the th projection map and define . Since is closed in , and since is continuous, the set is closed for each . Furthermore given any finite set , the set is nonempty: indeed, by the finite axiom of choice principle (which is implied by ZF set theory) there exists a tuple , and thus the element defined as is an element of . Now since is compact, we have , using the finite intersection characterization of compactness. But clearly . Thus .    Now on to a net-based proof of Tychonoff's theorem. As mentioned we use Zorn's lemma, the statement of which involves some extra jargon.   Upper bounds, maximal elements, chains   Let be a partially ordered set.  An upper bound on a subset is an element such that for all .  An element is maximal if given any , if , then .  A subset is a chain (or totally ordered ) if for all we have or .     Zorn's lemma   Let be a partially ordered set. If every chain has an upper bound, then has a maximal element: , there is an such that for all , if , then .    As stated above, Zorn's lemma is equivalent to the axiom of choice. You can find a proof of this fact in most introductory set theory texts.    Lastly, before moving to the main attraction, we record a useful lemma that will simplify our main argument. The proof idea, due to Charles Pugh, avoids all mention of subnets, providing a path to proving Tychonoff's theorem that does not require subnets. There is a fairly direct alternative proof of the lemma using convergent subnets. See if you can figure it out!   Nets in products   Let be topological spaces, and assume is compact. Let be a net in , and let be the projection onto map. If is a limit point of the net , then there is a such that is a limit point of .    Let be a limit point of . Define to be the set of all pairs , where is an open neighborhood of , and . For elements we declare if and only if and . It is easy to see that is a partially ordered set with respect to this ordering. To see that it is directed, given indices and in , since is a limit point of , we can find a where and . This satisfies and , as desired.  Now define the net as . (Recall, our original net is .) Since is compact, the net has a limit point . We claim that is a limit point of our original net . To prove this, it is enough to show that given any basic opens set containing , and any , we can find an index such that . Given containing and index , first pick an index such that . This is possible since is a limit point of . By definition the pair is an element of . Since is a limit point of the net , and since is an open neighborhood of , we can find an element such that and . By definition of and its partial ordering, we have , , and . We conclude that , as desired.     Tychonoff theorem   Given any collection of compact spaces the product space is compact.    Proof (following P. Chernoff)  We show that any net in has a limit point . In an effort to distinguish between the different types of tuple objects at play here, I will exclusively use tuple notation for nets and exclusively use function notation for elements of . This is already in force above: the net specifies an element for each index ; but each is itself a function satisfying .  Now define to be the set of all pairs , where and is a limit point of the net . Note how we are exploiting the function notation here: since elements of are just functions with domain , restricting the domain yields a map from to defined as . This map is in fact just the projection map defined as . It follows from this that this map is continuous.  Next, we define the relation on as follows: if and only if and . It is easy to see that is a partial ordering. We now proceed in two steps: (1) we will show that satisfies the conditions of Zorn's lemma, and hence that it has a maximal element ; (2) we will show that and hence that is a limit point of . It then follows that is compact, as desired.   Step 1: has a maximal element  First observe that is nonempty. Indeed, given any , the net is just a net in the compact space , and hence has a limit point . It follows that . (There is a slight subtlety here, which is that the space is homeomorphic to the (somewhat funny looking) product space via the map .)  Next we show that any chain in has an upper bound in . To this end, given any chain in , we define as follows:    ;    the function is defined as , where is any element of for which .   First observe that is a well-defined function: if , where , then since is a chain either or ; assuming without loss of generality that we have by definition, and hence that . Next we must show that , understood as an element of , is a limit point of the net . Using the usual product topology basis, it suffices to show that given any finite set and open set of the form , and given any , there is an such that . Since is finite, we have for some sets satisfying . Since is a chain, there is an index such that for all . Thus we may assume there is an element such that . By definition is a limit point of the net . Since , it follows that . Thus there is an such that . It follows easily that . This proves is a limit point of , and hence that . It is clear from the definition of , that it is an upper bound of .  Having shown that satisfies the chain condition for Zorn's lemma, we conclude that it contains a maximal element .    Step 2:  Let be a maximal element of , so that is a limit point of the net . We show that and hence that is a limit point of .  Assume by contradiction that , and let . Since is compact, by the net in has a limit point of the form . But then the element defined as and satisfies and , contradicting the fact that is a maximal element.       "
 },
@@ -2948,7 +2921,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Tychonoff.html#th_nets_compactness",
   "type": "Theorem",
-  "number": "1.25.1",
+  "number": "1.24.1",
   "title": "Nets and compactness.",
   "body": " Nets and compactness   Let be a topological space. The following statements are equivalent.    is compact.    Every net in has a limit point.    Every net in has a convergent subnet.       Statements (ii) and (iii) are immediately seen to be equivalent thanks to . We will show that (i) and (ii) are equivalent.   Implication: (i) (ii)  Let be a net in . For each define . Clearly each is closed and nonempty. Furthermore, for any finite collection we have , since we can find a such that for all , and hence . Since is assumed to be compact, there is an element . We show that is a limit point of . Indeed, given any open set containing and any , since , there is an element with such that . This proves that is cofinally in , as desired.    Implication: (ii) (i)  We prove the contrapositive. Suppose is not compact, and let be a cover with no finite cover. Define to the be the set of all pairs , where is a finite subset of and . (Note that since has no finite subcover.) It is easy to see that is a directed set under the quasiordering defined as if and only if . Define the net as . We show that has no limit point. To this end, given any , we have for some . We will show that the net is not cofinally in . To this end consider the index , where . For all with , we have , in which case . Thus there is no satisfying .    "
 },
@@ -2957,7 +2930,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Tychonoff.html#th_Tychonoff_choice",
   "type": "Theorem",
-  "number": "1.25.2",
+  "number": "1.24.2",
   "title": "Tychonoff implies AC (Kelley).",
   "body": " Tychonoff implies AC (Kelley)   If Tychonoff's theorem is true, then the axiom of choice is true.    Assume Tychonoff's theorem is true. We will prove the following equivalent formulation of the axiom of choice: . Given a collection of nonempty sets, let the result of adding one additional point, , to each . Why do we do this? Add the marked point to the -th component space gives us a foothold, as it were, allowing us to find elements in the product without invoking the axiom of choice in the process: we can always choose the -th entry to be this special element . We will use Tychonoff's theorem to show that is a nonempty subset of . To do so, we need to give the sets a compact topological structure: this is accomplished by declaring the topology on to be . (Check that this is a topology.) This clearly makes compact, since only contains four open sets. Note also that is closed with respect to this topology.  Since each is compact, by Tychonoff's theorem so is . For each , let be the th projection map and define . Since is closed in , and since is continuous, the set is closed for each . Furthermore given any finite set , the set is nonempty: indeed, by the finite axiom of choice principle (which is implied by ZF set theory) there exists a tuple , and thus the element defined as is an element of . Now since is compact, we have , using the finite intersection characterization of compactness. But clearly . Thus .   "
 },
@@ -2966,7 +2939,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Tychonoff.html#d_chain",
   "type": "Definition",
-  "number": "1.25.3",
+  "number": "1.24.3",
   "title": "Upper bounds, maximal elements, chains.",
   "body": " Upper bounds, maximal elements, chains   Let be a partially ordered set.  An upper bound on a subset is an element such that for all .  An element is maximal if given any , if , then .  A subset is a chain (or totally ordered ) if for all we have or .   "
 },
@@ -2975,7 +2948,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Tychonoff.html#th_Zorns_lemma",
   "type": "Theorem",
-  "number": "1.25.4",
+  "number": "1.24.4",
   "title": "Zorn’s lemma.",
   "body": " Zorn's lemma   Let be a partially ordered set. If every chain has an upper bound, then has a maximal element: , there is an such that for all , if , then .    As stated above, Zorn's lemma is equivalent to the axiom of choice. You can find a proof of this fact in most introductory set theory texts.   "
 },
@@ -2984,7 +2957,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Tychonoff.html#lemma_product_nets",
   "type": "Lemma",
-  "number": "1.25.5",
+  "number": "1.24.5",
   "title": "Nets in products.",
   "body": " Nets in products   Let be topological spaces, and assume is compact. Let be a net in , and let be the projection onto map. If is a limit point of the net , then there is a such that is a limit point of .    Let be a limit point of . Define to be the set of all pairs , where is an open neighborhood of , and . For elements we declare if and only if and . It is easy to see that is a partially ordered set with respect to this ordering. To see that it is directed, given indices and in , since is a limit point of , we can find a where and . This satisfies and , as desired.  Now define the net as . (Recall, our original net is .) Since is compact, the net has a limit point . We claim that is a limit point of our original net . To prove this, it is enough to show that given any basic opens set containing , and any , we can find an index such that . Given containing and index , first pick an index such that . This is possible since is a limit point of . By definition the pair is an element of . Since is a limit point of the net , and since is an open neighborhood of , we can find an element such that and . By definition of and its partial ordering, we have , , and . We conclude that , as desired.   "
 },
@@ -2993,7 +2966,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Tychonoff.html#th_Tychonoff_general",
   "type": "Theorem",
-  "number": "1.25.6",
+  "number": "1.24.6",
   "title": "Tychonoff theorem.",
   "body": " Tychonoff theorem   Given any collection of compact spaces the product space is compact.    Proof (following P. Chernoff)  We show that any net in has a limit point . In an effort to distinguish between the different types of tuple objects at play here, I will exclusively use tuple notation for nets and exclusively use function notation for elements of . This is already in force above: the net specifies an element for each index ; but each is itself a function satisfying .  Now define to be the set of all pairs , where and is a limit point of the net . Note how we are exploiting the function notation here: since elements of are just functions with domain , restricting the domain yields a map from to defined as . This map is in fact just the projection map defined as . It follows from this that this map is continuous.  Next, we define the relation on as follows: if and only if and . It is easy to see that is a partial ordering. We now proceed in two steps: (1) we will show that satisfies the conditions of Zorn's lemma, and hence that it has a maximal element ; (2) we will show that and hence that is a limit point of . It then follows that is compact, as desired.   Step 1: has a maximal element  First observe that is nonempty. Indeed, given any , the net is just a net in the compact space , and hence has a limit point . It follows that . (There is a slight subtlety here, which is that the space is homeomorphic to the (somewhat funny looking) product space via the map .)  Next we show that any chain in has an upper bound in . To this end, given any chain in , we define as follows:    ;    the function is defined as , where is any element of for which .   First observe that is a well-defined function: if , where , then since is a chain either or ; assuming without loss of generality that we have by definition, and hence that . Next we must show that , understood as an element of , is a limit point of the net . Using the usual product topology basis, it suffices to show that given any finite set and open set of the form , and given any , there is an such that . Since is finite, we have for some sets satisfying . Since is a chain, there is an index such that for all . Thus we may assume there is an element such that . By definition is a limit point of the net . Since , it follows that . Thus there is an such that . It follows easily that . This proves is a limit point of , and hence that . It is clear from the definition of , that it is an upper bound of .  Having shown that satisfies the chain condition for Zorn's lemma, we conclude that it contains a maximal element .    Step 2:  Let be a maximal element of , so that is a limit point of the net . We show that and hence that is a limit point of .  Assume by contradiction that , and let . Since is compact, by the net in has a limit point of the form . But then the element defined as and satisfies and , contradicting the fact that is a maximal element.    "
 },
@@ -3751,7 +3724,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.10",
   "title": "Jordan separation theorem",
-  "body": " Jordan separation theorem   Arcs and simple closed curves   An arc is a space that is homeomorphic to the unit interval ; a simple closed curve is a space homeomorphic to .     Arcs and simple closed curves  Let be a Hausdorff space. A subspace is an arc if and only if it is the image of an injective path : since is compact and is Hausdorff, the map is guaranteed to be a homeomorphism onto . Similarly, using the fact that is homeomorphic to the quotient of obtained by identifying its endpoints and , we see that is a simple closed curve if and only if it is the image of a path that is injective on and satisfies : again, since is compact and is Hausdorff, the map is guaranteed to be closed, hence a quotient map.     Let be a subspace of the connected space . We say separates if is not connected. Similarly, we say  separates into components if has connected components.    The goal of the next two lectures is to prove the Jordan curve theorem : any simple closed curve separates into two components. That this statement is true seems intuitively clear, painfully obvious even: like the circle, any simple closed curve should have a well-defined inside and outside , giving us exactly two components of . All the more maddening, then, that a proof of this fact turns out to be rather difficult. On the other hand, the seemingly well-behaved notion of a path has surprised us with some pathological behavior on other occasions: forget not the space filling curve ! First we include a useful result (not officially covered last quarter) about locally connected spaces .   Components in locally connected spaces   Let be a locally path connected space.   The connected components and path components of are identical.    The components of are open.        Components of  Let be compact, and let . Let's enumerate some important facts about .    is open, since is closed, and hence locally path connected, since is locally path connected.     is unbounded, since is bounded.     has exactly one unbounded connected component.   To see why (2)-(3) are true, choose such that . The set is connected and unbounded, hence must lie in some unbounded connected component of . Furthermore, if is an unbounded connected component, then we must have (essentially by the definition of unboundedness). But then . Since connected components partition , we must have .    Comparing and components   Fix and let be a homeomorphism. Let be a compact subspace of not containing , and let be a component of .   If , then is a bounded component of .    If , then is an unbounded component of .    If has components, then has components.       Let be a connected component of . We first show that is connected. This is trivial if , so assume . Since is open and is a surface, we can find an open set that is homeomorphic to an open ball in and which satisfies . (In fact, since is a connected component and is connected, if , then we automatically have .) Assume by contradiction that is not connected, and let be a separation. Note that is itself open, and thus so are and . Since is connected (homeomorphic to punctured ball) and , it must be contained in or . Assume without loss of generality that . But then we have is open, and thus is a separation: a contradiction.  Let be the connected components of . By above, the sets are open, connected and disjoint. Thus the sets are open connected and disjoint, and cover . It follows that the are the components of , and the correspondence is a bijection between the components of and the components of .  Lastly, let be the component of containing . Since is compact, is bounded. Thus is the unique unbounded component of .      Fix points . Let be compact, and let . If and lie in the same component of , then is nullhomotopic.    Assume where is compact. Pick a homeomorphism sending to , and let . Observe that if is nullhomotopic via the homotopy , then is nullhomotopic via the homotopy . Furthermore, using , we see that and lie in the same component of if and only if lies in the unbounded component of . Thus it suffices to show that if is compact and , then is nullhomotopic if is in the unbounded component of . We now show that this is the case.  Assume with compact, and that lies in the unbounded component of . Since is compact, it is closed and bounded. Choose such that and any point . Since is an open subspace of the locally path connected space , it is itself locally path connected. It follows that all the components of are open and path connected. Let be the unbounded component of . Since there is a path . The map defined as is a homotopy between and . (Note that for we have , since .) This shows that is homotopic to . Lastly, consider the map on defined as . Since , we have for all and . Since , it follows that . Thus , and it is easily seen that is a homotopy from the constant function to . By transitivity, we conclude that is nullhomotopic.     Jordan separation theorem   If and are closed connected subspaces of satisfying , where , then separates .  In particular, if is a simple closed curve, then separates .    First observe that the second statement follows from the first since any simple closed curve can be written as the union of two arcs intersecting at exactly their two endpoints.  Next, observe that under the given hypotheses we have . Indeed, the space is easily seen to be disconnected, whereas the doubly punctured sphere is connected.  Now assume by contradiction that is connected. We will show that this implies is trivial for any : an absurdity since is homeomorphic to the punctured plane, which has fundamental group isomorphic to .  Let and , in which case we have . Since is connected (by assumption), and since is locally path connected, is path connected. This means we are in the position to use the weak Seifert-van Kampen theorem . Let and be the inclusion maps, and pick any . We will show that are both trivial maps, which would imply has trivial fundamental group: a contradiction.  It will suffice by symmetry to show is trivial. Recall that for any . Since is a loop, letting be the standard quotient map, there is a map making the diagram below commutative.  Factorization of through   Consider the map . Its image lies in . Since is a connected set containing and , we see that these two points lie in the same component of . We conclude from that is nullhomotopic. It now follows from that the map is trivial. But then we have , since is the trivial map. This proves that is trivial, as desired.    "
+  "body": " Jordan separation theorem   Arcs and simple closed curves   An arc is a space that is homeomorphic to the unit interval ; a simple closed curve is a space homeomorphic to .     Arcs and simple closed curves  Let be a Hausdorff space. A subspace is an arc if and only if it is the image of an injective path : since is compact and is Hausdorff, the map is guaranteed to be a homeomorphism onto . Similarly, using the fact that is homeomorphic to the quotient of obtained by identifying its endpoints and , we see that is a simple closed curve if and only if it is the image of a path that is injective on and satisfies : again, since is compact and is Hausdorff, the map is guaranteed to be closed, hence a quotient map.     Let be a subspace of the connected space . We say separates if is not connected. Similarly, we say  separates into components if has connected components.    The goal of the next two lectures is to prove the Jordan curve theorem : any simple closed curve separates into two components. That this statement is true seems intuitively clear, painfully obvious even: like the circle, any simple closed curve should have a well-defined inside and outside , giving us exactly two components of . All the more maddening, then, that a proof of this fact turns out to be rather difficult. On the other hand, the seemingly well-behaved notion of a path has surprised us with some pathological behavior on other occasions: forget not the space filling curve ! First we include a useful result (not officially covered last quarter) about locally connected spaces.   Components in locally connected spaces   Let be a locally path connected space.   The connected components and path components of are identical.    The components of are open.        Components of  Let be compact, and let . Let's enumerate some important facts about .    is open, since is closed, and hence locally path connected, since is locally path connected.     is unbounded, since is bounded.     has exactly one unbounded connected component.   To see why (2)-(3) are true, choose such that . The set is connected and unbounded, hence must lie in some unbounded connected component of . Furthermore, if is an unbounded connected component, then we must have (essentially by the definition of unboundedness). But then . Since connected components partition , we must have .    Comparing and components   Fix and let be a homeomorphism. Let be a compact subspace of not containing , and let be a component of .   If , then is a bounded component of .    If , then is an unbounded component of .    If has components, then has components.       Let be a connected component of . We first show that is connected. This is trivial if , so assume . Since is open and is a surface, we can find an open set that is homeomorphic to an open ball in and which satisfies . (In fact, since is a connected component and is connected, if , then we automatically have .) Assume by contradiction that is not connected, and let be a separation. Note that is itself open, and thus so are and . Since is connected (homeomorphic to punctured ball) and , it must be contained in or . Assume without loss of generality that . But then we have is open, and thus is a separation: a contradiction.  Let be the connected components of . By above, the sets are open, connected and disjoint. Thus the sets are open connected and disjoint, and cover . It follows that the are the components of , and the correspondence is a bijection between the components of and the components of .  Lastly, let be the component of containing . Since is compact, is bounded. Thus is the unique unbounded component of .      Fix points . Let be compact, and let . If and lie in the same component of , then is nullhomotopic.    Assume where is compact. Pick a homeomorphism sending to , and let . Observe that if is nullhomotopic via the homotopy , then is nullhomotopic via the homotopy . Furthermore, using , we see that and lie in the same component of if and only if lies in the unbounded component of . Thus it suffices to show that if is compact and , then is nullhomotopic if is in the unbounded component of . We now show that this is the case.  Assume with compact, and that lies in the unbounded component of . Since is compact, it is closed and bounded. Choose such that and any point . Since is an open subspace of the locally path connected space , it is itself locally path connected. It follows that all the components of are open and path connected. Let be the unbounded component of . Since there is a path . The map defined as is a homotopy between and . (Note that for we have , since .) This shows that is homotopic to . Lastly, consider the map on defined as . Since , we have for all and . Since , it follows that . Thus , and it is easily seen that is a homotopy from the constant function to . By transitivity, we conclude that is nullhomotopic.     Jordan separation theorem   If and are closed connected subspaces of satisfying , where , then separates .  In particular, if is a simple closed curve, then separates .    First observe that the second statement follows from the first since any simple closed curve can be written as the union of two arcs intersecting at exactly their two endpoints.  Next, observe that under the given hypotheses we have . Indeed, the space is easily seen to be disconnected, whereas the doubly punctured sphere is connected.  Now assume by contradiction that is connected. We will show that this implies is trivial for any : an absurdity since is homeomorphic to the punctured plane, which has fundamental group isomorphic to .  Let and , in which case we have . Since is connected (by assumption), and since is locally path connected, is path connected. This means we are in the position to use the weak Seifert-van Kampen theorem . Let and be the inclusion maps, and pick any . We will show that are both trivial maps, which would imply has trivial fundamental group: a contradiction.  It will suffice by symmetry to show is trivial. Recall that for any . Since is a loop, letting be the standard quotient map, there is a map making the diagram below commutative.  Factorization of through   Consider the map . Its image lies in . Since is a connected set containing and , we see that these two points lie in the same component of . We conclude from that is nullhomotopic. It now follows from that the map is trivial. But then we have , since is the trivial map. This proves that is trivial, as desired.    "
 },
 {
   "id": "d_arc_simple_closed",

@@ -13,7 +13,7 @@
   <xi:include  href="s_quotients.ptx"/>
   <xi:include  href="s_connected.ptx"/>
   <xi:include  href="s_connected_path.ptx"/>
-  <xi:include  href="s_connected_components.ptx"/>
+  <!-- <xi:include  href="s_connected_components.ptx"/> -->
   <xi:include  href="s_compact_def.ptx"/>
   <xi:include  href="s_compact_metric.ptx"/>
   <xi:include  href="s_compact_locally.ptx"/>

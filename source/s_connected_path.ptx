@@ -165,6 +165,109 @@
 
 </project>
 
+<definition xml:id="d_connected_components">
+  <title>Connected components</title>
+  <statement>
+    <p>
+      Let <m>X</m> be a topological space. The <term>connected component</term> of an element <m>x\in X</m> is the set <m>C(x)</m> defined as the union of all connected subsets of <m>X</m> containing <m>x</m>. Similarly, the path-connected component of $x$ is the set $C_p(x)$ defined as the union of all path connected subspaces of <m>X</m> containing <m>x</m>.  A subspace <m>A\subseteq X</m> is <term>maximally connected</term> (resp., <term>maximally path connected</term>) if <m>A</m> is connected (resp. path connected), and if for all connected (resp. path connected) sets <m>B</m>, if <m>A\subseteq B</m>, then <m>A=B</m>. 
+    </p>
+  </statement>
+</definition>
+
+<theorem xml:id="th_components">
+  <title>Connected components</title>
+    <statement>
+        <p>
+        Let <m>X</m> be a topological space. 
+        <ol>
+          <li>
+            <p>
+              For all <m>x\in X</m> the component <m>C(x)</m> is the unique maximally connected set containing <m>x</m>, and <m>C_p(x)</m> is the unique maximally path connected set containing <m>x</m>. 
+            </p>
+          </li>
+          <li>
+              <p>
+                The collection <m>\{C(x)\colon x\in X\}</m> of all connected components is a partition of <m>X</m> by closed, maximally connected sets. In other words: 
+                <ol>
+                  
+                  <li>
+                    <p>
+                      <m>X=\bigcup_{x\in X}C(x)</m>.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>C(x)\ne C(y)\implies C(x)\cap C(y)=\emptyset</m> for all <m>x,y\in X</m>. 
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>C(x)</m> is maximally connected for all <m>x</m>. 
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>C(x)</m> is closed for all <m>x</m>. 
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </li>
+            <li>
+              <p>
+                Similarly, the collection <m>\{C_p(x)\colon x\in X\}</m> of all path-connected components of <m>X</m> is a partition of <m>X</m> by maximally path-connected sets. 
+              </p>
+            </li>
+            <li>
+                <p>
+                    If <m>A</m> is connected (resp. path connected) and <m>C</m> is a connected component (resp. path connected component) of <m>X</m>, then either <m>A\cap C=\emptyset</m> or <m>A\subseteq C</m>. 
+                </p>
+            </li>
+           <li>
+            <p>
+                For all <m>x\in X</m> we have <m>C_p(x)\subseteq C(x)</m>, and in fact <m>\{C_p(y)\colon y\in C(x)\}</m> is a partition of <m>C(x)</m> by path-connected components. 
+            </p>
+           </li>
+        </ol>
+        </p>
+    </statement>
+    <proof>
+      <p>
+        <ol>
+          <li>
+            <p>
+              Let us prove that <m>C(x)</m> is maximally connected. It is connected as it is the union of connected sets containing <m>x</m>. If <m>C(x)\subseteq A</m> and <m>A</m> is connected, then since <m>x\in A</m>, we have by definition <m>A\subseteq C(x)</m>. Thus <m>C(x)</m> is maximally connected. Lastly, if <m>A</m> is a maximally connected set containing <m>x</m>, then by definition we have <m>A\subseteq C(x)</m>; and since <m>A</m> is maximally connected we conclude that <m>A=C(x)</m>. This proves <m>C(x)</m> is the <em>unique</em> maximally connected set containing <m>x</m>. 
+            </p>
+            <p>
+              The proof that <m>C_p(x)</m> is the unique maximally path-connected set containing <m>x</m> proceeds in exactly the same manner. We use the fact (not made official, but easy to show) that a union of path-path connected sets with a common intersection point is path connected.   
+            </p>
+          </li>
+          <li>
+            <p>
+              It is clear that <m>X=\bigcup_{x\in X}C(x)</m>, since <m>x\in C(x)</m> for all <m>x\in X</m>. Furthermore, we know <m>C(x)</m> is maximally connected by <m>(1)</m>. Since <m>\overline{C(x)}</m> is connected and <m>C(x)\subseteq \overline{C(x)}</m>, we must have <m>C(x)=\overline{C(x)}</m>. Thus <m>C(x)</m> is closed. 
+            </p>
+            <p>Lastly, to see that the components <m>C(x)</m> are disjoint, we will show that <m>C(x)\cap C(y)\ne \emptyset\implies C(x)=C(y)</m>. If <m>C(x)\cap C(y)\ne \emptyset</m>, then <m>C(x)\cup C(y)</m> is a connected set containing <m>x</m> and <m>y</m>. Since <m>C(x)</m> is maximally connected, we must have <m>C(x)\cup C(y)=C(x)</m>, and thus <m>C(y)\subseteq C(x)</m>. The same argument shows <m>C(x)\subseteq C(y)</m>. Thus <m>C(x)=C(y)</m>. 
+            </p>
+          </li>
+          <li>
+            <p>
+              The proof here is exactly as with connected components. Again, we use the fact that the union of path-connected sets sharing a common point is path connected. 
+            </p>
+          </li>
+          <li>
+            <p>
+              Suppose <m>A</m> is connected. If <m>A\cap C\ne\emptyset</m>, then <m>A\cup C</m> is connected by. Since <m>C</m> is maximally connected, we have <m>A\cup C=C</m>. Thus <m>A\subseteq C</m>. A similar argument applies to path-connected components. 
+            </p>
+          </li>
+          <li>
+            <p>
+              Since <m>C_p(x)</m> is connected and <m>C(x)</m> is the union of all connected sets containing <m>x</m>, we have <m>C_p(x)\subseteq C(x)</m>. Since <m>C(x)=C(y)</m> for all <m>y\in C(x)</m>, we further have <m>C_p(y)\subseteq C(x)</m> for all <m>y\in C(x)</m>. It follows easily that <m>C(x)=\bigcup_{y\in C(x)}C_p(y)</m>. That this union is disjoint follows from (3). 
+            </p>
+          </li>
+        </ol>
+      </p>
+    </proof>
+</theorem>
 
 
 

@@ -167,7 +167,7 @@
   <title>Quotient maps and quotient spaces</title>
   <statement>
     <p>
-      Let <m>f\colon X\rightarrow Y</m> be a surjective map between two topological spaces, and let <m>\mathcal{T}_Y</m> be the topology on <m>Y</m>. The following are equivalent. 
+      Let <m>q\colon X\rightarrow Y</m> be a surjective map between two topological spaces, and let <m>\mathcal{T}_Y</m> be the topology on <m>Y</m>. The following are equivalent. 
       <ol>
         <li>
           <p>

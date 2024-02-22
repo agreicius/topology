@@ -12,24 +12,67 @@
 </head>
 <body class="ignore-math">
 <article class="theorem theorem-like"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.16.2</span><span class="period">.</span><span class="space"> </span><span class="title">One-point compactification.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.17.5</span><span class="period">.</span><span class="space"> </span><span class="title">One-point compactification.</span>
 </h3>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(X\)</span> be a Hausdorff space. The following statements are equivalent.</div>
+<div class="para">Let <span class="process-math">\((X,\mathcal{T})\)</span> be a topological space, and let <span class="process-math">\((X^*,\mathcal{T}^*)\)</span> the Alexandroff extension of <span class="process-math">\(X\)</span> as defined in <a href="" class="xref" data-knowl="./knowl/xref/top_eg_onepoint_compact.html" title="Topological specimen 16: One-point compactification">Topological specimen 16</a>.</div>
 <ol class="decimal">
 <li><div class="para">
-<span class="process-math">\(X\)</span> is locally compact.</div></li>
+<span class="process-math">\(\mathcal{T}^*\)</span> is a topology, and the inclusion map <span class="process-math">\(i\colon X\rightarrow X^*\)</span> is an open immersion with respect to this topology.</div></li>
+<li><div class="para">
+<span class="process-math">\(X^*\)</span> is compact.</div></li>
 <li><div class="para logical">
-<div class="para">There exists a compact Hausdorff space <span class="process-math">\(Y\)</span> and continuous injection <span class="process-math">\(\iota\colon X\hookrightarrow Y\)</span> such that</div>
+<div class="para">The following statements are equivalent.</div>
 <ol class="lower-alpha">
 <li><div class="para">
-<span class="process-math">\(\iota\colon X\hookrightarrow \iota(X)\)</span> is a homeomorphism, and</div></li>
+<span class="process-math">\(\{p_\infty\}\)</span> is open in <span class="process-math">\(X^*\text{.}\)</span>
+</div></li>
 <li><div class="para">
-<span class="process-math">\(Y-\iota(X)\)</span> is a single point.</div></li>
+<span class="process-math">\(X\)</span> is not dense in <span class="process-math">\(X^*\)</span>
+</div></li>
+<li><div class="para">
+<span class="process-math">\(X\)</span> is compact.</div></li>
+</ol>
+</div></li>
+<li><div class="para logical">
+<div class="para">The following statements are equivalent.</div>
+<ol class="lower-alpha">
+<li><div class="para">
+<span class="process-math">\(X^*\)</span> is Hausdorff.</div></li>
+<li><div class="para">
+<span class="process-math">\(X\)</span> is locally compact Hausdorff and not compact.</div></li>
 </ol>
 </div></li>
 </ol>
-<div class="para">Furthermore, in this case, the compact space <span class="process-math">\(Y\)</span> is unique up to homeomorphism.</div>
-</div></article><span class="incontext"><a class="internal" href="s_locally.html#th_onepoint_compactification">in-context</a></span>
+</div></article><details class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><details class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="title">Proof of (1).</span></h4></summary><article class="hiddenproof"> <div class="para">Assuming <span class="process-math">\(\mathcal{T}^*\)</span> is a topology, it is easy too see that the inclusion map <span class="process-math">\(i\colon X\rightarrow X^*\)</span> is both continuous (for open <span class="process-math">\(U\in \mathcal{T}^*\)</span> we have <span class="process-math">\(i^{-1}(U)=U\cap X\)</span> open in <span class="process-math">\(X\)</span>) and an open map, and hence an open immersion.</div> <div class="para logical">
+<div class="para">We show each topology axiom in turn.</div>
+<ol class="decimal">
+<li><div class="para">Since <span class="process-math">\(\emptyset\in \mathcal{T}\text{,}\)</span> we have <span class="process-math">\(\emptyset\in \mathcal{T}^*\text{.}\)</span> Furthermore, since <span class="process-math">\(\emptyset\)</span> is closed and compact, we have <span class="process-math">\(X^*=X^*-\emptyset\in \mathcal{T}^*\text{.}\)</span>
+</div></li>
+<li><div class="para logical">
+<div class="para">Let <span class="process-math">\(\{U_i\}_{i\in I}\)</span> be a collection of elements of <span class="process-math">\(\mathcal{T}^*\text{,}\)</span> and let <span class="process-math">\(U=\bigcup_{i\in I}U_i\text{.}\)</span> If <span class="process-math">\(U_i\in \mathcal{T}\text{,}\)</span> then <span class="process-math">\(U\in \mathcal{T}\subseteq \mathcal{T}^*\text{.}\)</span> Suppose <span class="process-math">\(U_{i_0}=X^*-K\)</span> with <span class="process-math">\(K\subseteq X\)</span> closed and compact for some <span class="process-math">\(X\text{.}\)</span> The set <span class="process-math">\(K'=K-U\)</span> is a closed subset of <span class="process-math">\(K\)</span> and hence compact. We claim <span class="process-math">\(U=X^*-K'=\text{,}\)</span> in which case <span class="process-math">\(U\in \mathcal{T}^*\text{.}\)</span> Indeed, we have</div>
+<div class="displaymath process-math">
+\begin{align*}
+x\notin X^*-(K-U) \amp \iff x\in K-U \\
+\amp \iff x\in K \text{ and } x\notin U\\
+\amp \iff x\notin U_{i_0} \text{ and } x\notin U\\
+\amp \iff x\notin U\text{.}
+\end{align*}
+</div>
+</div></li>
+<li><div class="para logical">
+<div class="para">Assume <span class="process-math">\(U_1\)</span> and <span class="process-math">\(U_2\)</span> are elements of <span class="process-math">\(\mathcal{T}^*\text{.}\)</span> We have three cases:</div>
+<div class="displaymath process-math">
+\begin{align*}
+U_1, U_2\in \mathcal{T} \amp \implies U_1\cap U_2\in \mathcal{T}\subseteq \mathcal{T}'\\
+U_1\in \mathcal{T}, U_2=X^*-K \amp\implies U_1\cap U_2=U_1-K\in \mathcal{T}\subseteq \mathcal{T}' \\
+U_1=X^*-K_1, U_2=X^*-K_2 \amp \implies U_1\cap U_2=X^*-(K_1\cup K_2)\in \mathcal{T}^*\text{,}
+\end{align*}
+</div>
+<div class="para">where in the last line we’ve used the fact the a finite union of compact sets is compact.</div>
+</div></li>
+</ol>
+</div></article></details> <details class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="title">Proof of (2).</span></h4></summary><article class="hiddenproof"> <div class="para">Let <span class="process-math">\(X^*=\bigcup_{i\in I}U_i\)</span> be an open covering. We must have <span class="process-math">\(p_\infty\in U_{i_0}\)</span> for some <span class="process-math">\(i_0\in I\text{,}\)</span> in which case <span class="process-math">\(U_{i_0}=X^*-K\)</span> for some closed compact <span class="process-math">\(K\subseteq X\text{.}\)</span>  Next, we have <span class="process-math">\(K\subseteq X\cap \bigcup_{i\in I}U_i=\bigcup_{i\in I}V_i\)</span> where <span class="process-math">\(V_i=X\cap U_i\)</span> is open in <span class="process-math">\(X\text{.}\)</span> Since <span class="process-math">\(K\)</span> is compact, there is a finite subcovering <span class="process-math">\(K\subseteq \bigcup_{j=1}^nV_{i_j}\text{;}\)</span> then we have <span class="process-math">\(X^*=U_{i_0}\cup \bigcup_{j=1}^nU_{i_j}\text{,}\)</span> a finite subcovering of <span class="process-math">\(\{U_i\}_{i\in I}\text{.}\)</span>
+</div></article></details> <details class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="title">Proof of (3).</span></h4></summary><article class="hiddenproof"> <div class="para">Since <span class="process-math">\(X^*=X\cup \{p_\infty\}\text{,}\)</span> we see that <span class="process-math">\(\overline{X}=X\)</span> or <span class="process-math">\(\overline{X}=X^*\text{.}\)</span> It follows that <span class="process-math">\(\overline{X}\ne X\)</span> if and only if <span class="process-math">\(p_\infty\notin \overline{X}\)</span> if and only if <span class="process-math">\(\overline{X}=X\)</span> if and only if <span class="process-math">\(\{p_\infty\}\)</span> is open if and only if <span class="process-math">\(X\)</span> is closed. Now since <span class="process-math">\(X^*\)</span> is compact, if <span class="process-math">\(X\)</span> is closed, then <span class="process-math">\(X\)</span> is compact. Suppose conversely that <span class="process-math">\(X\)</span> is compact; then by definition of <span class="process-math">\(\mathcal{T}^*\)</span> the set <span class="process-math">\(X^*-X=\{p_\infty\}\)</span> is open. The stated equivalences now follow.</div></article></details> <details class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="title">Proof of (4).</span></h4></summary><article class="hiddenproof"> <div class="para">If <span class="process-math">\(X^*\)</span> is Hausdorff, then since <span class="process-math">\(X^*\)</span> is also compact, we see that <span class="process-math">\(X\)</span> is an open subspace of a locally compact Hausdorff space. The claim now follows from the general fact that an open subspace of a locally compact Hausdorff space is locally compact Hausdorff. This is easy to prove using <a href="" class="xref" data-knowl="./knowl/xref/th_locally_compact_equivalence.html" title="Theorem 1.17.2: Local compactness equivalence">Theorem 1.17.2</a>, and is left to the reader.</div> <div class="para">Assume conversely that <span class="process-math">\(X\)</span> is locally compact Hausdorff. Since <span class="process-math">\(X\)</span> itself is Hausdorff and is an open subspace of <span class="process-math">\(X^*\text{,}\)</span> to show <span class="process-math">\(X^*\)</span> is Hausdorff it suffices to show that given any <span class="process-math">\(x\in X\text{,}\)</span> there are open disjoint sets <span class="process-math">\(U,V\in\mathcal{T}^*\)</span> such that <span class="process-math">\(x\in U\)</span> and <span class="process-math">\(p_\infty\in V\text{.}\)</span> Since <span class="process-math">\(X\)</span> is locally compact Hausdorff, there a closed compact neighborhood <span class="process-math">\(K\)</span> of <span class="process-math">\(x\text{.}\)</span> It follows that the open sets <span class="process-math">\(U=K^\circ\in \mathcal{T}\subseteq \mathcal{T}^*\)</span> and <span class="process-math">\(V=X^*-K\in \mathcal{T}^*\)</span> meet the desired conditions.</div></article></details></article></details><span class="incontext"><a class="internal" href="s_locally.html#th_onepoint_compactification">in-context</a></span>
 </body>
 </html>

@@ -14,6 +14,40 @@
 <article class="theorem theorem-like"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.15.1</span><span class="period">.</span><span class="space"> </span><span class="title">Tychonoff theorem.</span>
 </h3>
-<div class="para">Given any collection <span class="process-math">\(\{X_i\}_{i\in I}\)</span> of compact topological spaces, the product space <span class="process-math">\(X=\prod_{i\in I}X_i\)</span> (with product topology) is compact.</div></article><details class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para">We will often use the Tychonoff in its full strength, though for now we only prove the result for finite products. (See <a href="" class="xref" data-knowl="./knowl/xref/th_Tychonoff_general.html" title="Theorem 1.24.6: Tychonoff theorem">Theorem 1.24.6</a> for the general case.) It suffices, by induction, to show that the product of two compact spaces is compact...</div></article></details><span class="incontext"><a class="internal" href="s_compact_metric.html#th_Tychonoff">in-context</a></span>
+<div class="para">Given any collection <span class="process-math">\(\{X_i\}_{i\in I}\)</span> of compact topological spaces, the product space <span class="process-math">\(X=\prod_{i\in I}X_i\)</span> is compact with respect to the product topology.</div></article><details class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para">For now we only prove the result for finite products.  It suffices, by induction, to show that the product of two compact spaces is compact, and for this case we will use <a href="" class="xref" data-knowl="./knowl/xref/lem_tube.html" title="Lemma 1.15.2: Tube lemma">Lemma 1.15.2</a>, which is quite useful in its own right.</div> <div class="para logical">
+<div class="para">Let <span class="process-math">\(X\)</span> and <span class="process-math">\(Y\)</span> be compact topological spaces, and suppose we have an open covering <span class="process-math">\(\{U_i\}_{i\in}\)</span> of  <span class="process-math">\(X\times Y\text{.}\)</span> For any <span class="process-math">\(x\in X\)</span> the subspace <span class="process-math">\(\{x\}\times Y\)</span> is homeomorphic to <span class="process-math">\(Y\)</span> and hence compact. Since <span class="process-math">\(\{U_i\}_{i\in I}\)</span> is a covering of <span class="process-math">\(\{x\}\times Y\text{,}\)</span> there is a finite set <span class="process-math">\(J_x\subseteq I\)</span> such that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\{x\}\times Y\subseteq \bigcup_{j\in J_x}U_j\text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(Y\)</span> is compact, it follows by the tube lemma that there is an open set <span class="process-math">\(U_x\subseteq X\)</span> such that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+U_x\times Y\subseteq \bigcup_{j\in J_x}U_j\text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(X=\bigcup_{x\in X}U_x\)</span> and <span class="process-math">\(X\)</span> is compact, there are elements <span class="process-math">\(\{x_1,x_2,\dots, x_n\}\)</span> such that</div>
+<div class="displaymath process-math">
+\begin{equation}
+X=\bigcup_{i\in I}U_{x_i}\text{.}\tag{1.15.1}
+\end{equation}
+</div>
+<div class="para">We claim that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+X\times Y=\bigcup_{i=1}^n \left (\bigcup_{j\in J_{x_i}} U_j \right)\text{,}
+\end{equation*}
+</div>
+<div class="para">in which case <span class="process-math">\(\{U_i\}_{i\in \bigcup_{i=1}^n J_{x_i}}\)</span> is a finite subcovering of <span class="process-math">\(X\times Y\text{,}\)</span> as desired.</div>
+</div> <div class="para logical">
+<div class="para">Let’s see why <a href="" class="xref" data-knowl="./knowl/xref/eq_Tych_baby.html" title="Equation 1.15.1">(1.15.1)</a> holds: given any <span class="process-math">\((x,y)\in X\times Y\text{,}\)</span> we have <span class="process-math">\(x\in U_{x_i}\)</span> for some <span class="process-math">\(i\text{,}\)</span> in which case</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_Tych_baby.html">
+\begin{equation*}
+(x,y)\in U_i\times Y\subseteq \bigcup_{j\in J_{x_i}}U_j\subseteq \bigcup_{i=1}^n \left (\bigcup_{j\in J_{x_i}} U_j \right),
+\end{equation*}
+</div>
+<div class="para">as desired. The reverse inclusion is automatic.</div>
+</div></article></details><span class="incontext"><a class="internal" href="s_compact_Rn.html#th_Tychonoff">in-context</a></span>
 </body>
 </html>

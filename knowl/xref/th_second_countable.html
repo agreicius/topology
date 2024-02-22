@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <article class="theorem theorem-like"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.17.10</span><span class="period">.</span><span class="space"> </span><span class="title">Second countable: strongest countability axiom.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.18.8</span><span class="period">.</span><span class="space"> </span><span class="title">Second countable: strongest countability axiom.</span>
 </h3>
 <div class="para logical">
 <div class="para">Let <span class="process-math">\(X\)</span> be a topological space.</div>
@@ -24,8 +24,14 @@
 <li>
 <div class="para">Assume <span class="process-math">\(X\)</span> is second countable and let <span class="process-math">\(\mathcal{B}=\{B_n\}_{n=1}^\infty\)</span> be a countable basis.</div>
 <div class="para">For each <span class="process-math">\(x\text{,}\)</span> the set <span class="process-math">\(\mathcal{B}_x=\{B\in \mathcal{B}\colon x\in B\}\)</span> is easily seen to be a countable local basis at <span class="process-math">\(x\text{.}\)</span> This proves <span class="process-math">\(X\)</span> is first countable.</div>
-<div class="para">Let <span class="process-math">\(X=\bigcup_{i\in I}U_i\)</span> be an open cover of <span class="process-math">\(X\text{.}\)</span> For each <span class="process-math">\(B_n\in \mathcal{B}\)</span> we have <span class="process-math">\(B_n\in U_{i_n}\)</span> for some <span class="process-math">\(i_n\in I\text{.}\)</span> Since the <span class="process-math">\(B_n\)</span> cover <span class="process-math">\(X\text{,}\)</span> we obtain the countable subcover <span class="process-math">\(X=\bigcup_{n=1}^\infty U_{i_n}\text{.}\)</span> This proves <span class="process-math">\(X\)</span> is Lindelöf.</div>
-<div class="para">For each <span class="process-math">\(B_n\in \mathcal{B}\)</span> pick <span class="process-math">\(x_n\in B_n\text{.}\)</span> Since <span class="process-math">\(\mathcal{B}\)</span> is a basis, it follows that <span class="process-math">\(A=\{x_n\}_{n=1}^\infty\)</span> is dense: indeed, given any <span class="process-math">\(x\)</span> and open set <span class="process-math">\(U\ni x\text{,}\)</span> we have <span class="process-math">\(x\in B_n\subseteq U\)</span> for some <span class="process-math">\(B_n\text{,}\)</span> in which case <span class="process-math">\(x_n\in U\text{.}\)</span>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(X=\bigcup_{i\in I}U_i\)</span> be an open cover of <span class="process-math">\(X\text{.}\)</span> Let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathcal{B}'=\{B\in\mathcal{B}\colon B\subseteq U_i \text{ for some } i\in I\}\text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(\mathcal{B}\)</span> is countable, so is <span class="process-math">\(\mathcal{B}'\text{.}\)</span> Write <span class="process-math">\(\mathcal{B}'=\{B_1', B_2',\dots\}\text{.}\)</span> For each <span class="process-math">\(n\in \Z_+\text{,}\)</span> pick an index <span class="process-math">\(i_n\in I\)</span> such that <span class="process-math">\(B'_n\subseteq U_{i_n}\text{.}\)</span> We claim that <span class="process-math">\(X=\bigcup_{n=1}^\infty U_{i_n}\text{,}\)</span> and thus that a countable subcovering of <span class="process-math">\(\{U_i\}_{i\in I}\text{.}\)</span> Indeed, for any <span class="process-math">\(x\in X\text{,}\)</span> we have <span class="process-math">\(x\in B\subseteq U_i\)</span> for some <span class="process-math">\(i\in I\)</span> and <span class="process-math">\(B\in \mathcal{B}\text{.}\)</span> It follows that <span class="process-math">\(B=B'_n\)</span> for some <span class="process-math">\(n\text{,}\)</span> in which case <span class="process-math">\(x\in B_n'\subseteq U_{i_n}\text{,}\)</span> as desired.</div>
 </div>
 </li>
 <li><div class="para">This is a (classic) homework exercise. Enjoy!</div></li>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.16.16</span><span class="period">.</span><span class="space"> </span><span class="title">Metrizable+sequentially compact implies second countable.</span>
+</h3>
+<div class="para">Let <span class="process-math">\(X\)</span> be a metric space. If <span class="process-math">\(X\)</span> is sequentially compact, then <span class="process-math">\(X\)</span> is second countable.</div></article><details class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para logical">
+<div class="para">We show first that if <span class="process-math">\(X\)</span> is a sequentially compact metric space, then it is totally bounded: i.e., given any <span class="process-math">\(\epsilon &gt; 0\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+X=\bigcup_{i=1}^n B_\epsilon(x_i)
+\end{equation*}
+</div>
+<div class="para">for some elements <span class="process-math">\(\{x_i\colon 1\leq i\leq n\}\text{.}\)</span> Indeed, suppose by contradiction that there is an <span class="process-math">\(\epsilon\)</span> for which this is not true. Construct a sequence as follows: choose any <span class="process-math">\(x_1\in X\text{;}\)</span> since <span class="process-math">\(B_\epsilon(x_1)\ne X\text{,}\)</span> we can find an element <span class="process-math">\(x_2\notin B_\epsilon(x_2)\text{;}\)</span> in general, given choices <span class="process-math">\(x_1,x_2,\dots, x_n\text{,}\)</span> choose</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x_{n+1}\notin B_\epsilon(x_1)\cup B_{\epsilon}(x_2)\cup\cdots \cup B_{\epsilon}(x_n)\text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(X\)</span> is sequentially compact the the sequence <span class="process-math">\((x_n)_{n\in \Z_+}\)</span> has a convergent subsequence <span class="process-math">\((x_{n_k})_{k\in \Z_+}\text{.}\)</span> This is a contradiction since this sequence would not be Cauchy: indeed by construction, for any <span class="process-math">\(n_j\)</span> and <span class="process-math">\(n_k\)</span> with <span class="process-math">\(n_k &gt; n_j\text{,}\)</span> we have <span class="process-math">\(x_{n_k}\notin B_\epsilon(n_j)\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">Since <span class="process-math">\(X\)</span> is totally bounded, for each <span class="process-math">\(n\in \Z_+\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_second_countable.html">
+\begin{equation*}
+X=\bigcup_{i=1}^_{m_n} B_{1/n}(x_{n,i})\text{.}
+\end{equation*}
+</div>
+<div class="para">Let <span class="process-math">\(Q=\{x_{n,i}\colon n\in \Z_+, 1\leq i\leq m_n\}\text{,}\)</span> a countable set. It is easy to see that <span class="process-math">\(Q\)</span> is dense in <span class="process-math">\(X\text{:}\)</span> i.e., <span class="process-math">\(\overline{Q}=X\text{.}\)</span> As we will show in <a href="" class="xref" data-knowl="./knowl/xref/th_second_countable.html" title="Theorem 1.18.8: Second countable: strongest countability axiom">Theorem 1.18.8</a>, any metric space containing a countable dense subset is second countable.</div>
+</div></article></details><span class="incontext"><a class="internal" href="s_compact_metric.html#th_metric_sequential_second_countable">in-context</a></span>
+</body>
+</html>

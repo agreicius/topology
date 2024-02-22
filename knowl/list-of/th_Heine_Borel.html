@@ -12,16 +12,17 @@
 </head>
 <body class="ignore-math">
 <article class="theorem theorem-like"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.15.4</span><span class="period">.</span><span class="space"> </span><span class="title">Heine-Borel theorem.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.15.5</span><span class="period">.</span><span class="space"> </span><span class="title">Heine-Borel theorem.</span>
 </h3>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(X=\R^n\text{.}\)</span> Recall that the Euclidean metric let <span class="process-math">\(d\)</span> and box metric <span class="process-math">\(\rho\)</span> both induce the Euclidean topology on <span class="process-math">\(\R^n\text{.}\)</span> For any <span class="process-math">\(A\subseteq X\)</span> the following conditions are equivalent.</div>
+<div class="para">Let <span class="process-math">\(X=\R^n\text{.}\)</span> For any <span class="process-math">\(A\subseteq X\)</span> the following conditions are equivalent.</div>
 <ol class="decimal">
 <li><div class="para">
 <span class="process-math">\(A\)</span> is compact.</div></li>
 <li><div class="para">
 <span class="process-math">\(A\)</span> is closed and bounded with respect to <span class="process-math">\(d\)</span> (equivalently, with respect to <span class="process-math">\(\rho\)</span>).</div></li>
 </ol>
-</div></article><span class="incontext"><a class="internal" href="s_compact_metric.html#th_Heine_Borel">in-context</a></span>
+</div></article><details class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para">It is clear that the empty set is compact, closed, and bounded. Henceforth, we assume <span class="process-math">\(A\)</span> is nonempty.</div> <div class="para">Assume <span class="process-math">\(A\)</span> is compact. Since <span class="process-math">\(\R^n\)</span> is Hausdorff, we know from <a href="" class="xref" data-knowl="./knowl/xref/th_compact_Haus_closed.html" title="Theorem 1.14.7: Compact implies closed in Hausdorff spaces">Theorem 1.14.7</a> that <span class="process-math">\(A\)</span> is closed. We now show that <span class="process-math">\(A\)</span> is bounded. Pick any <span class="process-math">\(\boldx\in A\text{.}\)</span> We have <span class="process-math">\(A\subseteq \bigcup_{n\in \Z_+}B_n(\boldx)\text{.}\)</span> Since <span class="process-math">\(A\)</span> is compact, we have <span class="process-math">\(A\subseteq \bigcup_{n=1}^N B_n(\boldx)=B_{N}(\boldx)\)</span> for some <span class="process-math">\(N\text{.}\)</span> It follows that <span class="process-math">\(d(\boldy,\boldy')\leq 2N\)</span> for all <span class="process-math">\(\boldy, \boldy'\in A\text{,}\)</span> in which case <span class="process-math">\(\operatorname{diam}(A)\leq 2N&lt; \infty\text{.}\)</span>
+</div> <div class="para">Now assume <span class="process-math">\(A\)</span> is closed. If furthermore <span class="process-math">\(\operatorname{diam}A=N &lt; \infty\text{,}\)</span> then <span class="process-math">\(A\)</span> is a closed subset</div></article></details><span class="incontext"><a class="internal" href="s_compact_Rn.html#th_Heine_Borel">in-context</a></span>
 </body>
 </html>

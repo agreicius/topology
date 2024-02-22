@@ -1,0 +1,182 @@
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="s_compact_Rn">
+  <title>Compactness in <m>\R^n</m></title>
+  <p>
+    Before investigating the notion of compactness in the setting of <m>\R^n</m>, we first drop a real whopper of a theorem. Tychonoff's theorem states simply that arbitrary products of compact topological spaces are compact with respect to the product topology. The proof of this most general result requires the axiom of choice; in fact, as we will show, it is <em>equivalent</em> to the axiom of choice. We will provide a full proof of Tychonoff's theorem later using the concept of <em>nets</em>. In the meantime, we will officially state the result, make use of the result in all its generality henceforth, and provide a proof for the case where we have a finite product.   
+  </p>
+  <theorem xml:id="th_Tychonoff">
+    <title>Tychonoff theorem</title>
+    <statement>
+        <p>
+        Given any collection <m>\{X_i\}_{i\in I}</m> of compact topological spaces, the product space <m>X=\prod_{i\in I}X_i</m> is compact with respect to the product topology. 
+        </p>
+    </statement>
+    <proof>
+        <p>
+            For now we only prove the result for finite products. 
+            <!-- (See <xref ref="th_Tychonoff_general"/> for the general case.)  -->
+            It suffices, by induction, to show that the product of two compact spaces is compact, and for this case we will use <xref ref="lem_tube"/>, which is quite useful in its own right. 
+        </p>
+        <p>
+          Let <m>X</m> and <m>Y</m> be compact topological spaces, and suppose we have an open covering <m>\{U_i\}_{i\in}</m> of  <m>X\times Y</m>. For any <m>x\in X</m> the subspace <m>\{x\}\times Y</m> is homeomorphic to <m>Y</m> and hence compact. Since <m>\{U_i\}_{i\in I}</m> is a covering of <m>\{x\}\times Y</m>, there is a finite set <m>J_x\subseteq I</m> such that 
+          <me>
+            \{x\}\times Y\subseteq \bigcup_{j\in J_x}U_j
+          </me>.
+          Since <m>Y</m> is compact, it follows by the tube lemma that there is an open set <m>U_x\subseteq X</m> such that 
+          <me>
+            U_x\times Y\subseteq \bigcup_{j\in J_x}U_j
+          </me>.
+          Since <m>X=\bigcup_{x\in X}U_x</m> and <m>X</m> is compact, there are elements <m>\{x_1,x_2,\dots, x_n\}</m> such that 
+          <men xml:id="eq_Tych_baby">
+            X=\bigcup_{i\in I}U_{x_i}
+          </men>.
+          We claim that 
+          <me>
+            X\times Y=\bigcup_{i=1}^n \left (\bigcup_{j\in J_{x_i}} U_j \right)
+          </me>,
+          in which case <m>\{U_i\}_{i\in \bigcup_{i=1}^n J_{x_i}}</m> is a finite subcovering of <m>X\times Y</m>, as desired. 
+        </p>
+        <p>
+          Let's see why <xref ref="eq_Tych_baby"/> holds: given any <m>(x,y)\in X\times Y</m>, we have <m>x\in U_{x_i}</m> for some <m>i</m>, in which case 
+          <me>
+            (x,y)\in U_i\times Y\subseteq \bigcup_{j\in J_{x_i}}U_j\subseteq \bigcup_{i=1}^n \left (\bigcup_{j\in J_{x_i}} U_j \right),
+          </me>
+          as desired. The reverse inclusion is automatic. 
+        </p>
+    </proof>
+  </theorem>
+  <lemma xml:id="lem_tube">
+    <title>Tube lemma</title>
+    <statement>
+        <p>
+           Let <m>X, Y</m> be topological spaces, and assume <m>Y</m> is compact. Given any <m>x_0\in X</m> and open set <m>U</m> containing <m>\{x\}\times Y</m>, there is an open set <m>W\subseteq X</m> such that 
+           <m>\{x\}\times Y\subseteq W\times Y\subseteq U</m>.
+        </p>
+    </statement>
+    <proof>
+      <p>
+        If <m>U</m> is an open set satisfying <m>\{x\}\times Y\subseteq U</m>, then for all <m>y\in Y</m>, there exists open sets <m>U_{y}\subseteq X</m> and <m>V_y\subseteq Y</m>  such that <m>x\in U_y</m> and <m>y\in V_y</m> and <m>U_y\times V_y\subseteq U</m>. Since <m>\{V_y\}_{y\in Y}</m> is an open covering of <m>Y</m> and <m>Y</m> is compact, we have 
+        <me>
+          Y=\bigcup_{i=1}^n V_{y_i}
+        </me>
+        for some elements <m>y_1,y_2,\dots, y_n</m>. Let <m>W=\bigcap_{i=1}^n U_{y_i}</m>. Clearly we have <m>\{x\}\times Y\subseteq W\times Y</m>. Furthermore, given any <m>(x,y)\in W</m> we have <m>y\in V_{y_i}</m> for some <m>1\leq i\leq n</m>. Since <m>x\in W\subseteq U_{y_i}</m>, we conclude that 
+        <me>
+          (x,y)\in U_{y_i}\times V_{y_i}\subseteq U
+        </me>.
+        This proves <m>W\times Y\subseteq U</m>, as desired. 
+      </p>
+    </proof>
+  </lemma>
+  <example xml:base="eg_compact_box_sphere">
+    <title>Boxes and balls in <m>\R^n</m></title>
+    <statement>
+      <p>
+        Show that the following subsets of <m>\R^n</m> are compact. 
+        <ol>
+          <li>
+            <p>
+              A closed solid box <m>B=\prod_{i=1}^n[a_i,b_i]</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              A closed ball <m>\overline{B}_\epsilon(\boldx_0)=\{\boldx\in \R^n\colon \norm{\boldx-\boldx_0}\leq \epsilon\}</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        The box is compact by the (finite version) of Tychonoff's theorem, since any closed interval is compact. 
+      </p>
+      <p>
+        The closed ball <m>\overline{B}_\epsilon(\boldx_0)</m> is homeomorphic to <m>\overline{B}_\epsilon(\boldzero)</m>, which in turn is homeomorphic to the box <m>B=[-\epsilon, \epsilon]^n</m> via the map 
+        <me>
+          f(\boldx)=\begin{cases} \frac{\norm{\boldx}}{\max\{\abs{x_i}\colon 1\leq i\leq n\}} \amp \text{if } \boldx=(x_1,x_2,\dots, x_n)\ne \boldzero \\
+          \boldzero \amp \text{if } \boldx=\boldzero
+        </me>.
+      </p>
+    </solution>
+    
+  </example>
+  
+  <definition xml:id="d_bounded_diam_distance">
+    <title>Bounded, diameter, and distance to sets</title>
+    <statement>
+        <p>
+          Let <m>(X,d)</m> be a metric space and let <m>A</m> be a subspace of <m>X</m>.
+        </p>
+          <p>
+            We say <m>A</m> is <term>bounded</term> if there is a positive number <m>M</m> such that <m>d(x,y)\leq M</m> for all <m>x,y\in A</m>. If <m>A</m> is nonempty, we define the <term>diameter</term> of <m>A</m>, denoted <m>\operatorname{diam} A</m>, as <m>\operatorname{diam} A=\sup\{d(x,y)\colon x, y\in A\}\in \R\cup \{\infty\}</m>. 
+          </p>    
+          <p>
+          The <term>distance</term> <m>d(x,A)</m> from <m>x</m> to <m>A</m> is defined as <m>d(x,A)=\inf\{d(x,y)\colon y\in A\}</m>. 
+        </p>
+    </statement>
+  </definition>
+  <theorem xml:id="th_Heine_Borel">
+    <title>Heine-Borel theorem</title>
+    <statement>
+        <p>
+            Let <m>X=\R^n</m>. For any <m>A\subseteq X</m> the following conditions are equivalent. 
+            <ol>
+                <li>
+                    <p>
+                        <m>A</m> is compact.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>A</m> is closed and bounded with respect to <m>d</m> (equivalently, with respect to <m>\rho</m>). 
+                    </p>
+                </li>
+            </ol>
+        </p>
+    </statement>
+    <proof>
+      <p>
+        It is clear that the empty set is compact, closed, and bounded. Henceforth, we assume <m>A</m> is nonempty. 
+      </p>
+      <p>
+        Assume <m>A</m> is compact. Since <m>\R^n</m> is Hausdorff, we know from <xref ref="th_compact_Haus_closed"/> that <m>A</m> is closed. We now show that <m>A</m> is bounded. Pick any <m>\boldx\in A</m>. We have <m>A\subseteq \bigcup_{n\in \Z_+}B_n(\boldx)</m>. Since <m>A</m> is compact, we have <m>A\subseteq \bigcup_{n=1}^N B_n(\boldx)=B_{N}(\boldx)</m> for some <m>N</m>. It follows that <m>d(\boldy,\boldy')\leq 2N</m> for all <m>\boldy, \boldy'\in A</m>, in which case <m>\operatorname{diam}(A)\leq 2N&lt; \infty</m>.  
+      </p>
+      <p>
+        Now assume <m>A</m> is closed. If furthermore <m>\operatorname{diam}A=N &lt; \infty</m>, then <m>A</m> is a closed subset 
+      </p>
+    </proof>
+  </theorem>
+  <corollary xml:id="cor_extreme_value_theorem">
+    <title>Extreme value theorem</title>
+    <statement>
+        <p>
+        Let <m>f\colon X\rightarrow \R</m> be continuous. If <m>X</m> is compact, then there exist points <m>x, x'\in X</m> such that <m>f(x)=\inf\{f(X)\}=\min\{f(X)\}</m> and <m>f(x')=\sup\{f(X)\}=\max\{f(X)\}</m>. 
+        </p>
+    </statement>
+  </corollary>
+  <definition xml:id="d_Lebesgue_number">
+    <title>Lebesgue number</title>
+    <statement>
+        <p>
+        Let <m>(X,d)</m> be a metric space. A <term>Lebesgue number</term> for an open covering <m>\mathcal{U}=\{U_i\}_{i\in }</m> is a positive real number <m>\delta</m> satisfying the following condition: if <m>\operatorname{diam} A&lt; \delta</m>, then <m>A\subseteq U_i</m> for some <m>i\in I</m>.             
+        </p>
+    </statement>
+  </definition>
+  <corollary xml:id="cor_Lebesgue_number">
+    <title>Lebesgue number</title>
+    <statement>
+        <p>
+        If <m>X</m> is a compact metric space, then any open covering of <m>X</m> has a Lebesgue number. 
+        </p>
+    </statement>
+  </corollary>
+  <corollary xml:id="cor_continuous_uniformcontinuous">
+    <title>Compact: continuous implies uniformly continuous</title>
+    <statement>
+        <p>
+        Let <m>f\colon X\rightarrow Y</m> be a continuous function between the metric spaces <m>(X,d_X)</m> and <m>(Y,d_Y)</m>. If <m>X</m> is compact, then <m>f</m> is uniformly continuous: <ie/>, for all <m>\epsilon&gt; 0</m> there exists a <m>\delta &gt; 0</m> such that if <m>d_X(x, x')&lt; \delta</m>, then <m>d_Y(f(x),f(x'))&lt; \epsilon</m>. 
+        </p>
+    </statement>
+  </corollary>
+  
+  
+  </section>

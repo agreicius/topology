@@ -8,41 +8,35 @@
         A topological space <m>X</m> is <term>locally compact at <m>x\in X</m></term> if there is a compact neighborhood of <m>x</m>: <ie/>, if there is a compact set <m>K</m> and open set <m>U</m> containing <m>x</m> such that <m>U\subseteq K</m>.  The space <m>X</m> is <term>locally compact</term> if it is locally compact at all points <m>x\in X</m>.   
         </p>
     </statement>
-</definition>    
-<theorem xml:id="th_onepoint_compactification">
-    <title>One-point compactification</title>
+</definition>  
+<theorem xml:id="th_locally_compact_equivalence">
+    <title>Local compactness equivalence</title>
     <statement>
         <p>
-            Let <m>X</m> be a Hausdorff space. The following statements are equivalent. 
-            <ol>
-                <li>
-                    <p>
-                        <m>X</m> is locally compact. 
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        There exists a compact Hausdorff space <m>Y</m> and continuous injection <m>\iota\colon X\hookrightarrow Y</m> such that 
-                        <ol>
-                            <li>
-                                <p>
-                                    <m>\iota\colon X\hookrightarrow \iota(X)</m> is a homeomorphism, and 
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    <m>Y-\iota(X)</m> is a single point. 
-                                </p>
-                            </li>
-                        </ol>
-                    </p>
-                </li>
-            </ol>
-        Furthermore, in this case, the compact space <m>Y</m> is unique up to homeomorphism. 
+           Let <m>X</m> be a topological space. The following are equivalent. 
+           <ol>
+            <li>
+                <p>
+                    <m>X</m> is locally compact Hausdorff. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    For all <m>x\in X</m>, and for all open sets <m>U</m> containing <m>x</m>, there is an open neighborhood <m>V</m> of <m>x</m> such that <m>\overline{V}\subseteq U</m> and <m>\overline{V}</m> is compact. 
+                </p>
+            </li>
+           </ol> 
         </p>
     </statement>
-</theorem>
-
+    <proof>
+        <p>
+            It is clear that (2) implies (1): for any <m>x\in X</m>, taking <m>U=X</m>, we get an open neighborhood <m>V\ni x</m> such that <m>\overline{V}</m> is compact. Thus <m>K</m> is a compact neighborhood of <m>x</m>. 
+        </p>
+        <p>
+            We now show (1) implies (2). Fix an <m>x\in X</m> and open set <m>U</m> containing <m>x</m>. Since <m>X</m> is locally compact, we have <m>x\in U'\subseteq K</m> for some open set <m>U'</m> and compact set <m>K</m>. Taking <m>U'\cap U</m> we may assume further that <m>U'\subseteq U</m>. The set <m>C=K-U</m> is a closed subset of the compact set <m>K</m>, hence compact. Since <m>X</m> is Hausdorff, we can find disjoint open sets <m>V', W'</m> containing <m>x</m> and <m>C</m>, respectively. (See <xref ref="th_compact_Haus_closed"/>.) Let <m>V=V'\cap U'</m>. Since <m>V\subseteq U'\subseteq K</m>, we have <m>\overline{V}\subseteq K</m>; since <m>K</m> is compact, it follows that <m>\overline{V}</m> is compact. To show <m>\overline{V}\subseteq U</m>, it suffices to show that <m>\overline{V}\cap C=K-U</m> is empty. Given any <m>y\in C=K-U</m>, the open set <m>W'</m> contains <m>y</m> and is disjoint from <m>V</m>; we conclude that <m>x\notin \overline{V}</m>. In all we have shown that for any <m>x\in X</m> and open set <m>U</m> containing <m>x</m>, there is an open set <m>V</m> with compact closure <m>\overline{V}</m> satisfying <m>x\in V\subseteq\overline{V}\subseteq U</m>, as desired. 
+        </p>
+    </proof>
+</theorem>  
 <definition xml:id="d_embedding">
     <title>Embedding</title>
     <statement>
@@ -54,6 +48,21 @@
         </p>
     </statement>
 </definition>
+<project xml:id="top_eg_onepoint_compact">
+    <title>One-point compactification</title>
+    <p>
+        Let <m>(X,\mathcal{T})</m> be a topological space, and let <m>X^*=X\cup \{p_\infty\}</m> be a disjoint union of <m>X</m> and a single element <m>p_\infty</m> that is not an element of <m>X</m>. The collection 
+        <md>
+            <mrow>\mathcal{T}^*\amp=\mathcal{T}\cup \{X^*-K\colon K \subseteq X \text{ closed compact} \}</mrow>
+            <mrow>\amp = \mathcal{T}\cup \{(X-K)\cup \{p_\infty\}\colon K\subseteq X  \text{ closed compact} \} </mrow>
+        </md>
+        defines a topology on <m>X^*</m> with respect to which the inclusion map 
+        <me>
+            i\colon X\rightarrow X^*=X\cup \{p_\infty\}
+        </me>
+        is an open immersion. We call <m>X^*</m> along with the the inclusion map <m>i\colon X\rightarrow X^*</m> the <term>Alexandroff extension</term> of <m>X</m>. When <m>X</m> is locally compact Hausdorff, we call <m>X^*</m> the <term>one-point compactification</term> of <m>X</m>.
+    </p>
+</project>
 <definition xml:id="d_compactification">
     <statement>
         <p>
@@ -64,13 +73,176 @@
         </p>
     </statement>
 </definition>
-<project>
+<theorem xml:id="th_onepoint_compactification">
     <title>One-point compactification</title>
-    <p>
-        Let <m>X</m> be locally compact and Hausdorff. If <m>X</m> is not compact, the embedding <m>\iota\colon X\rightarrow Y</m>, where <m>Y=X\coprod \{p\}</m> with topology as described in <xref ref="th_onepoint_compactification"/> is a one-point compactification of <m>X</m>. 
+    <statement>
+        <p>
+            Let <m>(X,\mathcal{T})</m> be a topological space, and let <m>(X^*,\mathcal{T}^*)</m> the Alexandroff extension of <m>X</m> as defined in <xref ref="top_eg_onepoint_compact"/>.
+            <ol>
+                <li>
+                    <p>
+                        <m>\mathcal{T}^*</m> is a topology, and the inclusion map <m>i\colon X\rightarrow X^*</m> is an open immersion with respect to this topology.  
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>X^*</m> is compact. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        The following statements are equivalent. 
+                        <ol>
+                            <li>
+                                <p>
+                                <m>\{p_\infty\}</m> is open in <m>X^*</m>.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <m>X</m> is not dense in <m>X^*</m>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <m>X</m> is compact. 
+                                </p>
+                            </li>
+                        </ol>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        The following statements are equivalent. 
+                        <ol>
+                            <li>
+                                <p>
+                                    <m>X^*</m> is Hausdorff.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <m>X</m> is locally compact Hausdorff and not compact. 
+                                </p>
+                            </li>
+                        </ol>
+                    </p>
+                </li>
+            </ol> 
+        </p>
+    </statement>
+    <proof>      
+    <proof>
+        <title>Proof of (1)</title>
+        <p>
+            Assuming <m>\mathcal{T}^*</m> is a topology, it is easy too see that the inclusion map <m>i\colon X\rightarrow X^*</m> is both continuous (for open <m>U\in \mathcal{T}^*</m> we have <m>i^{-1}(U)=U\cap X</m> open in <m>X</m>) and an open map, and hence an open immersion. 
+        </p>
+        <p>
+            We show each topology axiom in turn. 
+        <ol>
+            <li>
+                <p>
+                    Since <m>\emptyset\in \mathcal{T}</m>, we have <m>\emptyset\in \mathcal{T}^*</m>. Furthermore, since <m>\emptyset</m> is closed and compact, we have <m>X^*=X^*-\emptyset\in \mathcal{T}^*</m>. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    Let <m>\{U_i\}_{i\in I}</m> be a collection of elements of <m>\mathcal{T}^*</m>, and let <m>U=\bigcup_{i\in I}U_i</m>. If <m>U_i\in \mathcal{T}</m>, then <m>U\in \mathcal{T}\subseteq \mathcal{T}^*</m>. Suppose <m>U_{i_0}=X^*-K</m> with <m>K\subseteq X</m> closed and compact for some <m>X</m>. The set <m>K'=K-U</m> is a closed subset of <m>K</m> and hence compact. We claim <m>U=X^*-K'=</m>, in which case <m>U\in \mathcal{T}^*</m>. Indeed, we have 
+                    <md>
+                        <mrow>x\notin X^*-(K-U) \amp \iff x\in K-U </mrow> 
+                        <mrow> \amp \iff x\in K \text{ and } x\notin U</mrow>
+                        <mrow> \amp \iff x\notin U_{i_0} \text{ and } x\notin U</mrow>
+                        <mrow> \amp \iff x\notin U</mrow>
+                    </md>.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Assume <m>U_1</m> and <m>U_2</m> are elements of <m>\mathcal{T}^*</m>. We have three cases: 
+                    <md>
+                        <mrow>U_1, U_2\in \mathcal{T} \amp \implies U_1\cap U_2\in \mathcal{T}\subseteq \mathcal{T}'</mrow>
+                        <mrow>U_1\in \mathcal{T}, U_2=X^*-K \amp\implies U_1\cap U_2=U_1-K\in \mathcal{T}\subseteq \mathcal{T}' </mrow>
+                        <mrow>U_1=X^*-K_1, U_2=X^*-K_2 \amp \implies U_1\cap U_2=X^*-(K_1\cup K_2)\in \mathcal{T}^*</mrow>
+                    </md>,
+                    where in the last line we've used the fact the a finite union of compact sets is compact. 
+                </p>
+            </li>
+        </ol> 
     </p>
+    </proof>
+    <proof>
+        <title>Proof of (2)</title>
+        <p>
+           Let <m>X^*=\bigcup_{i\in I}U_i</m> be an open covering. We must have <m>p_\infty\in U_{i_0}</m> for some <m>i_0\in I</m>, in which case <m>U_{i_0}=X^*-K</m> for some closed compact <m>K\subseteq X</m>.  Next, we have <m>K\subseteq X\cap \bigcup_{i\in I}U_i=\bigcup_{i\in I}V_i</m> where <m>V_i=X\cap U_i</m> is open in <m>X</m>. Since <m>K</m> is compact, there is a finite subcovering <m>K\subseteq \bigcup_{j=1}^nV_{i_j}</m>; then we have <m>X^*=U_{i_0}\cup \bigcup_{j=1}^nU_{i_j}</m>, a finite subcovering of <m>\{U_i\}_{i\in I}</m>. 
+        </p>
+    </proof>
+    <proof>
+        <title>Proof of (3)</title>
+        <p>
+            Since <m>X^*=X\cup \{p_\infty\}</m>, we see that <m>\overline{X}=X</m> or <m>\overline{X}=X^*</m>. It follows that <m>\overline{X}\ne X</m> if and only if <m>p_\infty\notin \overline{X}</m> if and only if <m>\overline{X}=X</m> if and only if <m>\{p_\infty\}</m> is open if and only if <m>X</m> is closed. Now since <m>X^*</m> is compact, if <m>X</m> is closed, then <m>X</m> is compact. Suppose conversely that <m>X</m> is compact; then by definition of <m>\mathcal{T}^*</m> the set <m>X^*-X=\{p_\infty\}</m> is open. The stated equivalences now follow.  
+        </p>
     
-</project>
+        
+    </proof>
+    <proof>
+        <title>Proof of (4)</title>
+        <p>
+            If <m>X^*</m> is Hausdorff, then since <m>X^*</m> is also compact, we see that <m>X</m> is an open subspace of a locally compact Hausdorff space. The claim now follows from the general fact that an open subspace of a locally compact Hausdorff space is locally compact Hausdorff. This is easy to prove using <xref ref="th_locally_compact_equivalence"/>, and is left to the reader. 
+        </p>
+        <p>
+            Assume conversely that <m>X</m> is locally compact Hausdorff. Since <m>X</m> itself is Hausdorff and is an open subspace of <m>X^*</m>, to show <m>X^*</m> is Hausdorff it suffices to show that given any <m>x\in X</m>, there are open disjoint sets <m>U,V\in\mathcal{T}^*</m> such that <m>x\in U</m> and <m>p_\infty\in V</m>. Since <m>X</m> is locally compact Hausdorff, there a closed compact neighborhood <m>K</m> of <m>x</m>. It follows that the open sets <m>U=K^\circ\in \mathcal{T}\subseteq \mathcal{T}^*</m> and <m>V=X^*-K\in \mathcal{T}^*</m> meet the desired conditions.   
+        </p>
+    </proof>
+</proof>
+</theorem>
+<corollary xml:id="cor_onepoint_compact">
+    <title>One-point compactification</title>
+    <statement>
+        <p>
+            Let <m>X</m> be locally compact Hausdorff. 
+        <ol>
+            <li> 
+                <p>If <m>X</m> is not compact, then the inclusion map 
+                    <me>i\colon X\rightarrow X^*</me>
+                    is a one-point compactification of <m>X</m>, and <m>X^*</m> is Hausdorff.
+                </p>
+            </li>
+            <li>
+                <p>
+                    If <m>X</m> is not compact, and <m>\iota\colon X\rightarrow Y</m> is a one-point compactification where <m>Y</m> is Hausdorff, then there exists a unique homeomorphism <m>\phi\colon X^*\rightarrow Y</m> such that <m>\iota\vert_X=\phi\circ i\vert_X</m>.  
+                </p>
+            </li>
+        </ol>
+        </p>
+    </statement>
+</corollary>
+<corollary xml:id="cor_locallycompact_char">
+    <title>Locally compact Hausdorff spaces</title>
+    <statement>
+        <p>
+            Let <m>X</m> be a Hausdorff space. The following statements are equivalent.
+            <ol>
+                <li>
+                    <p>
+                        <m>X</m> is locally compact. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>X</m> is a homeomorphic to an open subspace of a compact Hausdorff space. 
+                    </p>
+                </li>
+            </ol>
+        </p>
+    </statement>
+    <proof>
+        <p>
+            That (1) implies (2) follows from <xref ref="th_onepoint_compactification"/>. For the converse, assume <m>X</m> is homeomorphic to the open set <m>U\subseteq Y</m>, where <m>Y</m> is compact and Hausdorff. We may use the homeomorphism to identify <m>X</m> with <m>U</m>: thus we think of <m>X\subseteq Y</m> as an open subspace of <m>Y</m>. Now, since <m>Y</m> is compact, it is locally compact. Hence by <xref ref="cor_locallycompact_char"/>, given any <m>x\in X</m> we can find an open <m>V\ni x</m> such that <m>\overline{V}\subseteq X</m> and <m>\overline{V}</m> is compact. This shows that every <m>x\in X</m> has a compact neighborhood <m>K=\overline{V}\subseteq X</m>, as desired.  
+        </p>
+    </proof>
+</corollary>
+
+
 <example xml:id="eg_onepoint_compact_in_R">
     <title>One-point compactification of <m>\R</m></title>
     <statement>
@@ -152,58 +324,7 @@
 </project>
 
 
-<theorem xml:id="th_locally_compact_equivalence">
-    <title>Local compactness equivalence</title>
-    <statement>
-        <p>
-           Let <m>X</m> be a Hausdorff space. The following are equivalent. 
-           <ol>
-            <li>
-                <p>
-                    <m>X</m> is locally compact. 
-                </p>
-            </li>
-            <li>
-                <p>
-                    For all <m>x\in X</m>, and for all open sets <m>U</m> containing <m>x</m>, there is an open neighborhood <m>V</m> of <m>x</m> such that <m>\overline{V}\subseteq U</m> and <m>\overline{V}</m> is compact. 
-                </p>
-            </li>
-           </ol> 
-        </p>
-    </statement>
-    <proof>
-        <p>
-            It is clear that (2) implies (1): for any <m>x\in X</m>, taking <m>U=X</m>, we get an open neighborhood <m>V\ni x</m> such that <m>\overline{V}</m> is compact. Thus <m>K</m> is a compact neighborhood of <m>x</m>. 
-        </p>
-        <p>
-            We now show (1) implies (2). Munkres' proof elegantly uses the one-point compactification of <m>X</m>. Solely by way of contrast I proceed more directly. Fix <m>x\in X</m> and open neighborhood <m>U\ni x</m>. Since <m>X</m> is locally compact, we have <m>x\in U'\subseteq K</m> for some open set <m>U'</m> and compact set <m>K</m>. Taking <m>U'\cap U</m> we may assume further that <m>U'\subseteq U</m>. The set <m>C=K-U</m> is a closed subset of the compact set <m>K</m>, hence compact. Since <m>X</m> is Hausdorff, we can find disjoint open sets <m>V', W'</m> containing <m>x</m> and <m>C</m>, respectively. (See <xref ref="th_compact_Haus_closed"/>.) Let <m>V=V'\cap U</m>. Since <m>\overline{V}\subseteq K</m> is a closed subset of a compact set, it is compact. Furthermore, since <m>\overline{V}</m> is disjoint from <m>C=K-U</m>, we must have <m>V\subseteq\overline{V}\subseteq U</m>. 
-        </p>
-    </proof>
-</theorem>
-<corollary xml:id="cor_locallycompact_char">
-    <title>Locally compact Hausdorff spaces</title>
-    <statement>
-        <p>
-            Let <m>X</m> be a Hausdorff space. The following statements are equivalent.
-            <ol>
-                <li>
-                    <p>
-                        <m>X</m> is locally compact. 
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        <m>X</m> is a homeomorphic to an open subspace of a compact Hausdorff space. 
-                    </p>
-                </li>
-            </ol>
-        </p>
-    </statement>
-    <proof>
-        <p>
-            That (1) implies (2) follows from <xref ref="th_onepoint_compactification"/>. For the converse, assume <m>X</m> is homeomorphic to the open set <m>U\subseteq Y</m>, where <m>Y</m> is compact and Hausdorff. We may use the homeomorphism to identify <m>X</m> with <m>U</m>: thus we think of <m>X\subseteq Y</m> as an open subspace of <m>Y</m>. Now, since <m>Y</m> is compact, it is locally compact. Hence by <xref ref="cor_locallycompact_char"/>, given any <m>x\in X</m> we can find an open <m>V\ni x</m> such that <m>\overline{V}\subseteq X</m> and <m>\overline{V}</m> is compact. This shows that every <m>x\in X</m> has a compact neighborhoof <m>K=\overline{V}\subseteq X</m>, as desired.  
-        </p>
-    </proof>
-</corollary>
+
+
 
 </section>

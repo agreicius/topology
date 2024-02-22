@@ -1,94 +1,8 @@
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="s_compact_metric">
   <title>Compactness in metric spaces</title>
-  <theorem xml:id="th_Tychonoff">
-    <title>Tychonoff theorem</title>
-    <statement>
-        <p>
-        Given any collection <m>\{X_i\}_{i\in I}</m> of compact topological spaces, the product space <m>X=\prod_{i\in I}X_i</m> (with product topology) is compact. 
-        </p>
-    </statement>
-    <proof>
-        <p>
-            We will often use the Tychonoff in its full strength, though for now we only prove the result for finite products. (See <xref ref="th_Tychonoff_general"/> for the general case.) It suffices, by induction, to show that the product of two compact spaces is compact...
-        </p>
-    </proof>
-  </theorem>
-  <lemma xml:id="lem_tube">
-    <title>Tube lemma</title>
-    <statement>
-        <p>
-           Let <m>X, Y</m> be topological spaces, and assume <m>Y</m> is compact. Given any <m>x_0\in X</m> and open set <m>U</m> containing <m>\{x\}\times Y</m>, there is an open set <m>W\subseteq X</m> such that 
-           <m>\{x\}\times Y\subseteq W\times Y\subseteq U</m>.
-        </p>
-    </statement>
-  </lemma>
-  
-  <definition xml:id="d_bounded_diam_distance">
-    <title>Bounded, diameter, and distance to sets</title>
-    <statement>
-        <p>
-          Let <m>(X,d)</m> be a metric space, let <m>A\subseteq X</m> be a nonempty set, and let <m>x\in X</m>. 
-        </p>
-          <p>
-            The <term>diameter</term> of <m>A</m>, denoted <m>\operatorname{diam} A</m>, is defined as <m>\operatorname{diam} A=\sup\{d(x,y)\colon x, y\in A\}</m>. The set <m>A</m> is bounded if <m>\operatorname{diam} A &lt; \infty</m>.
-          </p>    
-          <p>
-          The <term>distance</term> <m>d(x,A)</m> from <m>x</m> to <m>A</m> is defined as <m>d(x,A)=\inf\{d(x,y)\colon y\in A\}</m>. 
-        </p>
-    </statement>
-  </definition>
-  <theorem xml:id="th_Heine_Borel">
-    <title>Heine-Borel theorem</title>
-    <statement>
-        <p>
-            Let <m>X=\R^n</m>. Recall that the Euclidean metric let <m>d</m> and box metric <m>\rho</m> both induce the Euclidean topology on <m>\R^n</m>. For any <m>A\subseteq X</m> the following conditions are equivalent. 
-            <ol>
-                <li>
-                    <p>
-                        <m>A</m> is compact.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        <m>A</m> is closed and bounded with respect to <m>d</m> (equivalently, with respect to <m>\rho</m>). 
-                    </p>
-                </li>
-            </ol>
-        </p>
-    </statement>
-  </theorem>
-  <corollary xml:id="cor_extreme_value_theorem">
-    <title>Extreme value theorem</title>
-    <statement>
-        <p>
-        Let <m>f\colon X\rightarrow \R</m> be continuous. If <m>X</m> is compact, then there exist points <m>x, x'\in X</m> such that <m>f(x)=\inf\{f(X)\}=\min\{f(X)\}</m> and <m>f(x')=\sup\{f(X)\}=\max\{f(X)\}</m>. 
-        </p>
-    </statement>
-  </corollary>
-  <definition xml:id="d_Lebesgue_number">
-    <title>Lebesgue number</title>
-    <statement>
-        <p>
-        Let <m>(X,d)</m> be a metric space. A <term>Lebesgue number</term> for an open covering <m>\mathcal{U}=\{U_i\}_{i\in }</m> is a positive real number <m>\delta</m> satisfying the following condition: if <m>\operatorname{diam} A&lt; \delta</m>, then <m>A\subseteq U_i</m> for some <m>i\in I</m>.             
-        </p>
-    </statement>
-  </definition>
-  <corollary xml:id="cor_Lebesgue_number">
-    <title>Lebesgue number</title>
-    <statement>
-        <p>
-        If <m>X</m> is a compact metric space, then any open covering of <m>X</m> has a Lebesgue number. 
-        </p>
-    </statement>
-  </corollary>
-  <corollary xml:id="cor_continuous_uniformcontinuous">
-    <title>Compact: continuous implies uniformly continuous</title>
-    <statement>
-        <p>
-        Let <m>f\colon X\rightarrow Y</m> be a continuous function between the metric spaces <m>(X,d_X)</m> and <m>(Y,d_Y)</m>. If <m>X</m> is compact, then <m>f</m> is uniformly continuous: <ie/>, for all <m>\epsilon&gt; 0</m> there exists a <m>\delta &gt; 0</m> such that if <m>d_X(x, x')&lt; \delta</m>, then <m>d_Y(f(x),f(x'))&lt; \epsilon</m>. 
-        </p>
-    </statement>
-  </corollary>
+  <p>
+    As useful as the Heine-Borel theorem is in characterizing compactness in <m>\R^n</m>, it relies in part on a <em>non-topological property</em>: namely, boundedness with respect to the Euclidean, box, or taxicab norm. In this section we investigate the relation of compactness to various related topological properties that turn out to be equivalent to compactness in the setting of metric spaces. First we meet our new compact-like properties.     
+  </p>
   <definition xml:id="d_limit_point_compact">
     <title>Limit point compact</title>
     <statement>
@@ -97,14 +11,7 @@
         </p>
     </statement>
   </definition>
-  <theorem xml:id="th_compact_implies_limitpoint">
-    <title>Compact implies limit point compact</title>
-    <statement>
-        <p>
-        If <m>X</m> is compact, then <m>X</m> is limit point compact. 
-        </p>
-    </statement>
-  </theorem>
+  
   <definition xml:id="d_sequentially_compact">
     <title>Sequentially compact</title>
     <statement>
@@ -113,6 +20,9 @@
         </p>
     </statement>
   </definition>
+  <p>
+    <xref ref="th_compact_metric"/> asserts that compactness, limit point compactness, and sequential compactness are equivalent in the setting of metric spaces. 
+  </p>
   <theorem xml:id="th_compact_metric">
     <title>Compactness in metric spaces</title>
     <statement>
@@ -138,7 +48,195 @@
         </p>
     </statement>
   </theorem>
-  <project>
+  <p>
+    Our proof of <xref ref="th_compact_metric"/> will involve a series of results that articulate which implications hold between these three concepts in full generality, and highlight what extra conditions are required to obtain equivalences. Before embarking on this investigation we look at two examples that illustrate two different uses of <xref ref="th_compact_metric"/>: namely, (a) deciding whether a given subset of a metric space is compact, and (b) showing that a given space is not a metric space. 
+  </p>
+  <example>
+    
+  </example>
+  <theorem xml:id="th_compact_implies_limitpoint">
+    <title>Compact implies limit point compact</title>
+    <statement>
+        <p>
+        If <m>X</m> is compact, then <m>X</m> is limit point compact. 
+        </p>
+    </statement>
+    <proof>
+      <p>
+        Let <m>A</m> be an infinite subset of <m>X</m>, and let <m>A'=\{x_1,x_2,\dots\}</m> be any countable infinite subset of <m>A</m>. We will show that <m>A'</m> has a limit point. Assume by contradiction that <m>A'</m> has no limit point. Since in general the closure of a set is obtained by adding all limit points, we see that <m>A'</m> is closed. Since <m>X</m> is compact, we conclude that <m>A'</m> is compact. On the other hand, since no element of <m>A'</m> is a limit point of <m>A'</m> is a limit point of <m>A'</m>, it is easy to see that all singletons of <m>A'</m> are open in the subspace topology. This contradicts the compactness of <m>A'</m> since the open covering <m>A'=\bigcup_{n=1}^{\infty}\{x_n\}</m> has no finite subcover. 
+      </p>
+    </proof>
+  </theorem>
+  <remark xml:id="rm_countably_compact">
+    <title>Countably compact space</title>
+    <p>
+      A close look at our proof of <xref ref="th_compact_implies_limitpoint"/> reveals that limit point compactness follows from a slightly weaker notion of compactness: namely, <em>countable compactness</em>. A space is <term>countably compact</term> if every countable open subcover has a finite subcover. We have the following implications:
+      <me>
+        X \text{ compact} \implies X \text{ countably compact} \implies X \text{ limit point compact}
+      </me>.
+      It can be shown that none of these implications is in fact an equivalence. However, if <m>X</m> is further assumed to be <m>T_1</m>, then limit point compactness implies countable compactness. We record this fact schematically as follows: 
+      <me>
+        X \text{ limit point compact} \underset{(T_1)}{\implies} X \text{ countably compact}
+      </me>.
+    </p>
+  </remark>
+  <theorem xml:id="th_seqcompact_implies_limitpoint_compact">
+    <title>Sequential compactness implies limit point compactness</title>
+    <statement>
+      <p>
+        If <m>X</m> is sequentially compact, then <m>X</m> is limit point compactness. 
+      </p>
+    </statement>
+    <proof>
+      <p>
+        We will show that sequential compactness implies countable compactness. The result then follows from <xref ref="rm_countably_compact"/>. Suppose by contradiction that the open covering <m>X=\bigcup_{n=1}^\infty U_n</m> has no finite subcover. It follows that we can construct a sequence <m>(x_n)_{n=1}^\infty</m> satisfying <m>x_n\notin U_1\cup U_2\cup \cdots \cup U_n</m>. By sequential compactness there is a convergent subsequence <m>x_{n_m}\rightarrow x</m>. Since <m>\{U_n\}_{n=1}^\infty</m> is a covering, we have <m>x\in U_{N}</m> for some <m>N</m>. But by construction there is an <m>M</m> such that <m>x_{n_m}\notin U_N</m> for all <m>m\geq M</m>. A contradiction. Thus there must be a finite subcover of <m>\{U_n\}_{n=1}^\infty</m>.  
+      </p>
+    </proof>
+  </theorem>
+  <p>
+    At this point we have the following logical diagram for a general topological space. Without further assumptions on <m>X</m> none of the implications below is an equivalence. 
+  </p>
+  <figure xml:id="fig_compactness_I">
+    <caption>Compactness implications</caption>
+    <image xml:id="im_compactness_I">
+      <shortdescription>Compactness implications</shortdescription>
+      <latex-image>
+        \begin{tikzcd}
+X \text{ compact} \arrow[rd,Rightarrow] \amp \amp X\text{ sequentially compact} \arrow[ld,Rightarrow] \\
+\amp X\text{ countably compact} \arrow[d, Rightarrow] \\ 
+\amp X\text{ limit point compact}  
+\end{tikzcd}
+      </latex-image>
+    </image>
+  </figure>
+  <p>
+    We now set about elaborating on <xref ref="fig_compactness_I"/> by adding additional properties to <m>X</m>. It turns out that some of the so-called <em>countability axioms</em> play a useful role in this regard. We will take these topics up in earnest in <xref ref="s_countability_axioms"/>, but will introduce here, somewhat prematurely, two of these notions (viz., the first and second countable axioms). 
+  </p>
+  <definition xml:id="d_neighborhood_basis">
+    <title>Local basis</title>
+    <statement>
+        <p>
+           Let <m>X</m> be a topological space. Given <m>x\in X</m>, a <term>local basis</term> at <m>x</m> is a collection <m>\mathcal{B}_x</m> of open neighborhoods of <m>x</m> such that for all open <m>U</m> containing <m>x</m> there is a <m>B\in \mathcal{B}_x</m> such that <m>B\subseteq U</m>.  
+        </p>
+    </statement>
+</definition>
+<definition xml:id="d_first_countable">
+    <title>First countable</title>
+    <statement>
+        <p>
+          A topological space <m>X</m> is <term>first countable</term> if every <m>x\in X</m> has a countable local basis.   
+        </p>
+    </statement>
+</definition>
+  <theorem xml:id="th_limitpoint_implies_sequential">
+    <statement>
+      <title>Limit point compact+<m>T_1</m>+first countable implies sequentially compact</title>
+      <p>
+        Assume <m>X</m> is <m>T_1</m> and first countable. If <m>X</m> is limit point compact, then <m>X</m> is sequentially compact. 
+      </p>
+    </statement>
+    <proof>
+      <p>
+        Assume <m>X</m> is <m>T_1</m>, second countable, and limit point compact. Let <m>(x_n)_{n\in \Z_+}</m> be a sequence in <m>X</m> and let <m>A=\{x_n\colon n\in \Z_+\}</m>, the set of entries of <m>(x_n)_{n\in \Z_+\}</m>. If <m>A</m> is finite, then it is easy to see that there is a <em>constant</em> subsequence of <m>(x_n)_{n\in \Z_+}</m>, and such a subsequence clearly converges. If <m>A</m> is infinite, then since <m>X</m> is limit point compact, there is a limit point <m>x</m> of <m>A</m>. Let <m>\mathcal{B}=\{B_n\colon n\in \Z_+\}</m> be a countable local basis at <m>x</m>. Replacing <m>B_n</m> with <m>\bigcap_{i=1}^n B_n</m>, we may assume that <m>B_n\supseteq B_{n+1}</m> for all <m>n</m>. 
+      </p>
+    </proof>
+  </theorem>
+  <definition xml:id="d_second_countable">
+    <statement>
+      <p>
+      A topological space <m>X</m> is <term>second countable</term> if it has a countable basis.         
+      </p>
+    </statement>
+  </definition>
+  
+  <theorem xml:id="th_sequential_implies_compact">
+    <title>Sequentially compact+second countable implies compact</title>
+    <statement>
+      <p>
+        Let <m>X</m> be a second countable space. If <m>X</m> is sequentially compact, then <m>X</m> is compact. 
+      </p>
+    </statement>
+    <proof>
+      <p>
+        Assume <m>X</m> is second countable, and let <m>X=\bigcup_{i\in I}U_i</m>. As we will show in <xref ref="th_second_countable"/>, since <m>X</m> is second countable, there is a <em>countable</em> subcovering <m>X=\bigcup_{j=1}^\infty V_j</m>, where  <m>V_j=U_i_{j}</m> for some <m>i_j\in I</m>. If the countable covering <m>\{V_j\}_{j=1}^\infty</m> had no finite subcovering, then we could construct a sequence <m>(x_n)_{n=1}^\infty</m> satisfying <m>x_n\notin U_1\cup U_2\cup \cdots\cup U_n</m> for all <m>n\in \Z_+</m>. Since <m>X</m> is sequentially compact, the sequence would have a convergent subsequence <m>x_{n_k}\rightarrow x</m>. We must have <m>x\in V_N</m> for some <m>N</m>. But by construction <m>x_{n}\notin V_N</m> for all <m>n\geq N</m>, whence it follows that <m>x_{n_k}\notin V_n</m> eventually. A contradiction. We conclude that <m>\{V_n\}_{n\in \Z_+}</m>, and hence <m>\{U_i\}_{i\in I}</m> has a finite subcovering, as desired.   
+      </p>
+    </proof>
+  </theorem>
+  <p>
+    The following logical diagram summarizes what we know thus far. (We leave as an exercise the proof that if <m>X</m> is <m>T_1</m> and limit point compact, then it is countably compact.)
+  </p>
+  <figure xml:id="fig_compactness_II">
+    <caption>Compactness implications</caption>
+    <image xml:id="im_compactness_II">
+      <shortdescription>Compactness implications</shortdescription>
+      <latex-image>
+        \begin{tikzcd}
+X \text{ compact} \arrow[rd,Rightarrow] \amp \amp X\text{ sequentially compact} \arrow[ld,Rightarrow] \arrow[ll, Rightarrow, bend right=20, "(\operatorname{second\ count.})"']\\
+\amp X\text{ countably compact} \arrow[d, Rightarrow] \\ 
+\amp X\text{ limit point compact} \arrow[u, Rightarrow, bend right=50, "(T_1)"'] \arrow[uur, Rightarrow, bend right=50, "(T_1+\operatorname{first\ count.})"']
+\end{tikzcd}
+      </latex-image>
+    </image>
+  </figure>
+  <p>
+    <xref ref="cor_compact_limitpoint_sequential"/> now follows from a diagram chase and the fact that second countable implies first countable. (See <xref ref="th_second_countable"/>.) 
+  </p>
+  <corollary xml:id="cor_compact_limitpoint_sequential">
+    <title>Compactness equivalences</title>
+    <statement>
+      <p>
+        Let <m>X</m> be <m>T_1</m> and second countable. The following are equivalent. 
+        <ol>
+          <li>
+              <p>
+              <m>X</m> is compact.        
+              </p>
+          </li>
+          <li>
+              <p>
+              <m>X</m> is limit point compact. 
+              </p>
+          </li>
+          <li>
+              <p>
+              <m>X</m> is sequentially compact. 
+              </p>
+          </li>
+         </ol> 
+      </p>
+    </statement>
+  </corollary>
+  <p>
+    Finally, we are ready to prove <xref ref="th_compact_metric"/>. Since any metric space <m>X</m> is <m>T_1</m> and first countable, we have <m>(1)\implies (2)\implies (3)</m>. To show <m>(3)\implies (1)</m> it suffices to prove that any sequentially compact metric space is second countable. This is the result of our last theorem. 
+  </p>
+  <theorem xml:id="th_metric_sequential_second_countable">
+    <title>Metrizable+sequentially compact implies second countable</title>
+    <statement>
+      <p>
+        Let <m>X</m> be a metric space. If <m>X</m> is sequentially compact, then <m>X</m> is second countable. 
+      </p>
+    </statement>
+    <proof>
+      <p>
+        We show first that if <m>X</m> is a sequentially compact metric space, then it is totally bounded: <ie/>, given any <m>\epsilon &gt; 0</m>, we have
+        <me>
+          X=\bigcup_{i=1}^n B_\epsilon(x_i)
+        </me>
+        for some elements <m>\{x_i\colon 1\leq i\leq n\}</m>. Indeed, suppose by contradiction that there is an <m>\epsilon</m> for which this is not true. Construct a sequence as follows: choose any <m>x_1\in X</m>; since <m>B_\epsilon(x_1)\ne X</m>, we can find an element <m>x_2\notin B_\epsilon(x_2)</m>; in general, given choices <m>x_1,x_2,\dots, x_n</m>, choose 
+        <me>x_{n+1}\notin B_\epsilon(x_1)\cup B_{\epsilon}(x_2)\cup\cdots \cup B_{\epsilon}(x_n)</me>.
+        Since <m>X</m> is sequentially compact the the sequence <m>(x_n)_{n\in \Z_+}</m> has a convergent subsequence <m>(x_{n_k})_{k\in \Z_+}</m>. This is a contradiction since this sequence would not be Cauchy: indeed by construction, for any <m>n_j</m> and <m>n_k</m> with <m>n_k &gt; n_j</m>, we have <m>x_{n_k}\notin B_\epsilon(n_j)</m>. 
+      </p>
+      <p>
+        Since <m>X</m> is totally bounded, for each <m>n\in \Z_+</m> we have 
+        <me>
+          X=\bigcup_{i=1}^_{m_n} B_{1/n}(x_{n,i})
+        </me>.
+        Let <m>Q=\{x_{n,i}\colon n\in \Z_+, 1\leq i\leq m_n\}</m>, a countable set. It is easy to see that <m>Q</m> is dense in <m>X</m>: <ie/>, <m>\overline{Q}=X</m>. As we will show in <xref ref="th_second_countable"/>, any metric space containing a countable dense subset is second countable. 
+      </p>
+    </proof>
+  </theorem>
+  
+  <!-- <project>
     <title>Cantor set</title>
     <p>
       There is a unique family  <m>\{C_n\}_{n=0}^\infty</m> of closed sets of <m>[0,1]</m> of of <m>[0,1]</m> satisfying the following properties: 
@@ -191,10 +289,10 @@
         We show that <m>\mathcal{C}</m> is perfect. We know already that <m>\mathcal{C}</m> is closed. Given any <m>x\in \mathcal{C}</m> and <m>\epsilon &gt; 0</m>, pick <m>N\in \Z_+</m> such that <m>1/3^N&lt; \epsilon</m>. Since <m>x\in C_{N}</m>, we have <m>x\in I=[a_k/3^N, (a_k+1)/3^N]</m> for some <m>a_k\in \{0,1,\dots, 3^N-1\}</m>. Let <m>J, K</m> be the two subintervals of <m>I</m> remaining after deleting its middle third. Assume without loss of generality that <m>x\in J</m>. The collection <m>\{C_n\cap K\}_{n=1}^\infty</m> is itself a family of nested, closed and nonempty subsets of <m>[0,1]</m>. Again by compactness, there is an element <m>y\in \bigcap_{n=0}^\infty (C_n\cap K)\subseteq \mathcal{C}</m>. Since <m>x,y\in I</m>, we have <m>d(x,y)\leq 1/3^N&lt; \epsilon</m>. Since <m>x\in J</m> and <m>y\in K</m>, and since <m>J\cap K=\emptyset</m>, we have <m>x\ne y</m>. 
       </p>
       <p>
-        We prove <m>\mathcal{C}</m> is totally disconnected. Let <m>A</m> be any subset of <m>\mathcal{C}</m> containing two distinct elements <m>x</m> and <m>y</m>. We will find a separation of <m>A</m>. Since <m>x\ne y</m>, we can find an <m>n</m> and disjoint intervals <m>I_{n,j}=[a_j/3^n, (a_j+1)/3^n], I_{n,k}=[a_k/3^n, (a_k+1)/3^n]</m> such that <m>x\in I_{n,j}</m> and <m>y\in I_{n,k}</m>: otherwise we would have <m>d(x,y)\leq 1/3^n</m> for all <m>n</m>, which would imply <m>d(x,y)=0</m>. Assume without loss of generality that <m>a_j&lt; a_k</m>, and let <m>b</m> be any element between <m>a_j</m> and <m>a_k</m> that does not lie in <m>C_n</m>. The open sets <m>U=A\cap [0,b)</m> and <m>V=A\cap (b,1]</m> form a separation of <m>A</m>, proving it is not connected. We conclude that the only connected subsets of <m>\mathcal{C}</m> are singletons, and thus that the connected components are singletons.  
+        We prove <m>\mathcal{C}</m> is totally disconnected. Let <m>A</m> be any subset of <m>\mathcal{C}</m> containing two distinct elements <m>x</m> and <m>y</m>. We will find a nontrivial separation of <m>A</m>. Since <m>x\ne y</m>, we can find an <m>n</m> and disjoint intervals <m>I_{n,j}=[a_j/3^n, (a_j+1)/3^n], I_{n,k}=[a_k/3^n, (a_k+1)/3^n]</m> such that <m>x\in I_{n,j}</m> and <m>y\in I_{n,k}</m>: otherwise we would have <m>d(x,y)\leq 1/3^n</m> for all <m>n</m>, which would imply <m>d(x,y)=0</m>. Assume without loss of generality that <m>a_j&lt; a_k</m>, and let <m>b</m> be any element between <m>a_j</m> and <m>a_k</m> that does not lie in <m>C_n</m>. The open sets <m>U=A\cap [0,b)</m> and <m>V=A\cap (b,1]</m> form a separation of <m>A</m>, proving it is not connected. We conclude that the only connected subsets of <m>\mathcal{C}</m> are singletons, and thus that the connected components are singletons.  
       </p>
     </proof>
     
-  </project>
+  </project> -->
   
   </section>

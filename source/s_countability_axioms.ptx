@@ -1,21 +1,9 @@
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="s_countability_axioms">
   <title>Countability axioms</title>
-<definition xml:id="d_neighborhood_basis">
-    <title>Local basis</title>
-    <statement>
-        <p>
-           Let <m>X</m> be a topological space. Given <m>x\in X</m>, a <term>local basis</term> at <m>x</m> is a collection <m>\mathcal{B}_x</m> of open neighborhoods of <m>x</m> such that for all open <m>U</m> containing <m>x</m> there is a <m>B\in \mathcal{B}_x</m> such that <m>B\subseteq U</m>.  
-        </p>
-    </statement>
-</definition>
-<definition xml:id="d_first_countable">
-    <title>First countable</title>
-    <statement>
-        <p>
-          A topological space <m>X</m> is <term>first countable</term> if every <m>x\in X</m> has a countable local basis.   
-        </p>
-    </statement>
-</definition>
+<p>
+    We introduced the notions of <xref ref="d_first_countable" text="custom">first countability</xref> and <xref ref="d_second_countable" text="custom">second countability</xref> during our discussion of compactness in metric spaces (<xref ref="s_compact_metric" text="global"/>). In this section we will look more closely at these and related properties. 
+</p>
+
 <remark xml:id="rm_countable">
     <title>Countability properties</title>
     <p>
@@ -134,8 +122,10 @@
     </p>
     </proof>
 </theorem>
-
-<definition xml:id="d_second_countable">
+<p>
+    We now re-introduce second countability along with two related notions.  
+</p>
+<definition xml:id="d_second_countable_lind_separable">
     <title>Second countable, Lindelöf, separable</title>
     <statement>
         <p>
@@ -163,7 +153,7 @@
 <remark xml:id="rm_4_countable_axioms">
     <title>The four countability axioms</title>
     <p>
-        We will call the properties of being first countable, second countable, Lindelöf, and separable the {\em four countablity axioms}. 
+        We will call the properties of being first countable, second countable, Lindelöf, and separable the  <em>four countability axioms</em>. 
     </p>
 </remark>
 <theorem xml:id="th_second_countable">
@@ -196,10 +186,11 @@
                         For each <m>x</m>, the set <m>\mathcal{B}_x=\{B\in \mathcal{B}\colon x\in B\}</m> is easily seen to be a countable local basis at <m>x</m>. This proves <m>X</m> is first countable.  
                     </p>
                     <p>
-                        Let <m>X=\bigcup_{i\in I}U_i</m> be an open cover of <m>X</m>. For each <m>B_n\in \mathcal{B}</m> we have <m>B_n\in U_{i_n}</m> for some <m>i_n\in I</m>. Since the <m>B_n</m> cover <m>X</m>, we obtain the countable subcover <m>X=\bigcup_{n=1}^\infty U_{i_n}</m>. This proves <m>X</m> is Lindelöf. 
-                    </p>
-                    <p>
-                        For each <m>B_n\in \mathcal{B}</m> pick <m>x_n\in B_n</m>. Since <m>\mathcal{B}</m> is a basis, it follows that <m>A=\{x_n\}_{n=1}^\infty</m> is dense: indeed, given any <m>x</m> and open set <m>U\ni x</m>, we have <m>x\in B_n\subseteq U</m> for some <m>B_n</m>, in which case <m>x_n\in U</m>. 
+                        Let <m>X=\bigcup_{i\in I}U_i</m> be an open cover of <m>X</m>. Let 
+                        <me>
+                            \mathcal{B}'=\{B\in\mathcal{B}\colon B\subseteq U_i \text{ for some } i\in I\}
+                        </me>.
+                        Since <m>\mathcal{B}</m> is countable, so is <m>\mathcal{B}'</m>. Write <m>\mathcal{B}'=\{B_1', B_2',\dots\}</m>. For each <m>n\in \Z_+</m>, pick an index <m>i_n\in I</m> such that <m>B'_n\subseteq U_{i_n}</m>. We claim that <m>X=\bigcup_{n=1}^\infty U_{i_n}</m>, and thus that a countable subcovering of <m>\{U_i\}_{i\in I}</m>. Indeed, for any <m>x\in X</m>, we have <m>x\in B\subseteq U_i</m> for some <m>i\in I</m> and <m>B\in \mathcal{B}</m>. It follows that <m>B=B'_n</m> for some <m>n</m>, in which case <m>x\in B_n'\subseteq U_{i_n}</m>, as desired. 
                     </p>
                 </li>
                 <li>
@@ -211,6 +202,36 @@
         </p>
     </proof>
 </theorem>
+<remark>
+    <title>Implications among countability axioms</title>
+    <p>
+        Without further assumptions on the space <m>X</m>, the implications described in (1) of <xref ref="th_second_countable"/> are the only ones guaranteed. Figure <xref ref="fig_count"/> summarizes this situation. By contrast <xref ref="fig_count_metric"/> indicates the logical relations between the countability axioms when <m>X</m> is a metric space. Notice that even in this case, first countable is strictly weaker than second countable.
+    </p>
+    <figure xml:id="fig_count">
+        <caption>Implications among countability axioms</caption>
+        <image xml:id="im_count">
+            <shortdescription>Implications among countability axioms</shortdescription>
+            <latex-image>
+                \begin{tikzcd}
+                 X \text{ second countable} \arrow[d,Rightarrow] \arrow[dr, Rightarrow] \arrow[rr, Rightarrow] \amp  \amp X \text{ first countable} \\
+                 X \text{ separable}  \amp X\text{ Lindel\"of} 
+                \end{tikzcd}
+            </latex-image>
+        </image>
+    </figure>
+    <figure xml:id="fig_count_metric">
+        <caption>Countability axioms in metric spaces</caption>
+        <image xml:id="im_count_metric">
+            <shortdescription>Countability axioms in metric spaces</shortdescription>
+            <latex-image>
+                \begin{tikzcd}
+                 X \text{ second countable} \arrow[d,Leftrightarrow, "\operatorname{metric}"'] \arrow[dr, Leftrightarrow, "\operatorname{metric}"] \arrow[rr, Rightarrow] \amp  \amp X \text{ first countable} \\
+                 X \text{ separable} \arrow[r, Leftrightarrow, "\operatorname{metric}"]  \amp X\text{ Lindel\"of} 
+                \end{tikzcd}
+            </latex-image>
+        </image>
+    </figure>
+</remark>
 <example xml:id="eg_Euclidean_second_countable">
     <title><m>\R^n</m> is second countable</title>
     <statement>
@@ -320,11 +341,21 @@
             Give an example of a first countable space <m>X</m> and continuous function <m>f\colon X\rightarrow Y</m> such that <m>f(X)</m> is not first countable.
         </p>
     </statement>
+    <solution>
+        <p>
+            Consider the identity function <m>\id\colon \R\rightarrow \R</m>, where the codomain is given the cofinite topology and the domain is given the standard topology. (This is continuous since the standard topology is finer than the cofinite topology.) Since the standard topology is metrizable, the domain is first countable. On the other hand, we saw in <xref ref="eg_cofinite_first_countable"/> that any uncountable set is not first countable with respect to the cofinite topology. 
+        </p>
+    </solution>
 </example>
 <example xml:id="eg_uncountable_product">
     <title><m>\R^\R</m> is not metrizable.</title>
     <p>
         Let <m>X=\R^\R=\prod_{r\in \R}\R</m>. Show that <m>X</m> is not metrizable. 
     </p>
-</example>
+
+<solution>
+    <p>
+        According to (3) of <xref ref="th_first_second_countable_subspace_product"/> an uncountable product of nontrivial spaces is not first countable. Thus <m>X</m> is not first countable, in which case it is also not metrizable.
+    </p>
+</solution></example>
 </section>

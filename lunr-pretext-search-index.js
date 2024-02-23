@@ -2589,8 +2589,8 @@ var ptx_lunr_docs = [
   "url": "s_regular.html",
   "type": "Section",
   "number": "1.19",
-  "title": "Regular spaces",
-  "body": " Regular spaces   Separated by open sets   Let be a topological space. Subsets are separated by open sets if there exist disjoint open sets such that and .     Regular and normal spaces   Let be a topological space.    is regular if is , and given any closed set and any , the sets and can be separated by open sets.     is normal if is , and any two disjoint closed sets of can be separated by open sets.        Separation axioms  The properties of being , Hausdorff, regular, or normal are called separation axioms as they articulate how various subsets can be separated by open sets. Below you find the descriptions of these properties using the Trennungsaxiom schema. A further remark about the use of regular and normal in the literature: some texts do not include the condition in these notions, and describe the properties we define as regular Hausdorff and normal regular . There is considerably less ambiguity in the literature when using the descriptions, but you should still be careful.    Trennungsaxiom implications  It is easy to see that . Furthermore, your argument for the first two implications will reveal why the condition is needed.    Elementary examples      Discrete spaces are regular and normal.    An infinite space with the cofinite topology is neither regular nor normal.       (1) is clear since all sets are both open and closed. (2) follows from the fact that in this space any two nonempty open sets intersect nontrivially.     Metric spaces are normal   If is a metric space, then is normal.    Let be disjoint closed subsets of . For each we can find an such that . Similarly for each we can find an such that . I claim the open sets are disjoint, proving and are separated by open sets. Indeed if , then for some and . Without loss of generality we may assume that . But then we would have . This is a contradiction since we assumed .     is not regular   Prove: is Hausdorff, but not regular.    Since the -topology is finer than the standard topology on , is Hausdorff. To see that it is not regular, recall that is closed. I'll show that we cannot separate 0 and with open sets. Indeed, suppose we have open disjoint sets containing respectively. Since is open, it must contain an open basis element $B$ containing ; and since , this basis element can be chosen of the form . Now choose such that . Since we can find a basis element of the form that is contained in . Furthermore, shrinking if necessary, we can assume that . But then clearly , and hence also . Contradiction!     Regular and normal equivalences   Let be a -space.    is regular if and only if for all and open set , there is an open set such that .     is normal if and only if for any closed set and open set containing , there is an open set containing satisfying .          First, assume is regular. Given and as described, we can separate and the closed set by open sets and . It follows that : indeed, given any , the open set contains and does not intersect with .  Conversely, assume for all and open sets we can find an open set satisfying . Given any closed set and element , letting , we see that there is an open set satisfying . The open sets and are then easily seen to separate and .    This proof is very similar to the last. Essenially you need only replace with a closed set throughout.        Locally compact implies regular   Let be locally compact and Hausdorff. Prove: is regular.    This is an easy consequence of and .     Locally compact and non-normal  Yes, there are examples of locally compact -spaces that are not normal. They are not particularly easy to build, however. Look it up!    is regular   Prove: is regular.    Since has a finer topology than , it is . We will use the equivalence (1) from . Given any and open set , we can find such that . But is closed! (Prove this.) Thus we have found an open containing such that .     Basis of clopen sets  The argument from is easily generalized to show that any -space that has a basis consisting of sets that are both open and closed ( , clopen sets) is regular.    Regularity: subspace and product properties      Subspaces of regular spaces are regular.    Products of regular spaces are regular.          Assume is a subspace of the regular space . We know already that subspaces of -spaces are , so is . Next take any and any set not containing that is closed in . We have for some closed set . Since and is regular, we can find disjoint open sets that separate and in . The disjoint open (in ) sets and are then a separation of and in .    We use (1) from . Given and open set containing , choose a basis element of the form containing . Since each is regular, we can find open sets satisfying . Letting , we have .        Interestingly, neither of the statements of are true if regular is replaced with normal . It is worthwhile to examine what goes wrong in our arguments above if the element is replaced with a closed set throughout.   "
+  "title": "Regular and normal spaces",
+  "body": " Regular and normal spaces   Separated by open sets   Let be a topological space. Subsets are separated by open sets if there exist disjoint open sets such that and .     Regular and normal spaces   Let be a topological space.    is regular if is , and given any closed set and any , the sets and can be separated by open sets.     is normal if is , and any two disjoint closed sets of can be separated by open sets.        Separation axioms  The properties of being , Hausdorff, regular, or normal are called separation axioms as they articulate how various subsets can be separated by open sets. Below you find the descriptions of these properties using the Trennungsaxiom schema. A further remark about the use of regular and normal in the literature: some texts do not include the condition in these notions, and describe the properties we define as regular Hausdorff and normal regular . There is considerably less ambiguity in the literature when using the descriptions, but you should still be careful.    Trennungsaxiom implications  It is easy to see that . Furthermore, your argument for the first two implications will reveal why the condition is needed.    Elementary examples      Discrete spaces are regular and normal.    An infinite space with the cofinite topology is neither regular nor normal.       (1) is clear since all sets are both open and closed. (2) follows from the fact that in this space any two nonempty open sets intersect nontrivially.     Metric spaces are normal   If is a metric space, then is normal.    Let be disjoint closed subsets of . For each we can find an such that . Similarly for each we can find an such that . I claim the open sets are disjoint, proving and are separated by open sets. Indeed if , then for some and . Without loss of generality we may assume that . But then we would have . This is a contradiction since we assumed .     is not regular   Prove: is Hausdorff, but not regular.    Since the -topology is finer than the standard topology on , is Hausdorff. To see that it is not regular, recall that is closed. I'll show that we cannot separate and with open sets. Indeed, suppose we have open disjoint sets containing respectively. Since is open, it must contain an open basis element containing ; and since , this basis element can be chosen of the form . Now choose such that . Since we can find a basis element of the form that is contained in . Furthermore, shrinking if necessary, we can assume that . But then clearly , and hence also . Contradiction!     Regular and normal equivalences   Let be a -space.    is regular if and only if for every and every open set containing , there is an open set satisfying .     is normal if and only if for every closed subset and open set containing , there is an open set satisfying .          First, assume is regular. Given and as described, we can separate and the closed set by open sets and . It follows that : indeed, given any , the open set contains and does not intersect with .  Conversely, assume for all and open sets we can find an open set satisfying . Given any closed set and element , letting , we see that there is an open set satisfying . The open sets and are then easily seen to separate and .    This proof is very similar to the last. Essenially you need only replace with a closed set throughout.        Locally compact implies regular   If is locally compact Hausdorff, then is regular.    This is an easy consequence of and .     Locally compact and non-normal  Yes, there are examples of locally compact Hausdorff spaces that are not normal. They are not particularly easy to build, however. Look it up!    is regular   Prove: is regular.    Since has a finer topology than , it is . We will use the equivalence (1) from . Given any and open set , we can find such that . But is closed! (Prove this.) Thus we have found an open containing such that .     Basis of clopen sets  The argument from is easily generalized to show that any -space that has a basis consisting of sets that are both open and closed ( , clopen sets) is regular.    Regularity: subspace and product properties      Subspaces of regular spaces are regular.    Products of regular spaces are regular.          Assume is a subspace of the regular space . We know already that subspaces of -spaces are , so is . Next take any and any set not containing that is closed in . We have for some closed set . Since and is regular, we can find disjoint open sets that separate and in . The disjoint open (in ) sets and are then a separation of and in .    We use (1) from . Given and open set containing , choose a basis element of the form containing . Since each is regular, we can find open sets satisfying . Letting , we have .        Interestingly, neither of the statements of are true if regular is replaced with normal . It is worthwhile to examine what goes wrong in our arguments above if the element is replaced with a closed set throughout.    is normal   Prove: is normal.    Let be disjoint closed subsets of . We can find open coverings satisfying for all . First observe that for all . Indeed, otherwise we'd have , in which case either or : both are impossible since and . We conclude that , proving that and can be separated by open sets.     is not normal   Prove: is not normal.    See Munkres for the full proof. I'll content myself with a discussion of some of the key elements. First, let . This set is closed in , and hence closed in , since the left limit product topology is finer than the standard topology. Next, as we saw on a previous homework, is discrete as a subspace of : if follows that every subset of , being itself closed in , is closed in , using transitivity. In particular the two sets . By what we said above, the disjoint sets and are closed in , but as it turns out you cannot separate them by open sets. The proof is not terribly difficult, but will seem somewhat convoluted without knowing about the Baire category theorem. As such, I omit it. (Munkres doesn't use this approach, choosing instead a proof by contradiction, but he outlines a proof in one of his exercises.)     Regular+second countable normal   If is regular and second countable, then is normal.    Assume is regular and second countable. Let be a countable basis for . Let and be disjoint closed sets. By regularity, for each we can find disjoint open sets containing and respectively. Since is a basis, we can find a basis element such that . The set of all such is a countable subset of , giving rise to a countable cover satisfying for all . Similarly, we can construct an open covering satisfying for all . The corresponding open sets are not necessarily disjoint. However the sets and , where , still cover and respectively, are still open, and are disjoint.     Compact+Hausdorff normal   If is a compact Hausdorff space, then is normal.    Since is compact Hausdorff, it is locally compact Hausdorff, and hence regular by . We use the equivalent condition of normality from . To this end, let be closed, and let be any open set containing . Since is regular, for all we can find an open set containing such that . We have . Since is compact and is closed, is compact. Hence there is a finite subcovering . We have , as desired.    "
 },
 {
   "id": "d_separated",
@@ -2653,7 +2653,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.19.7",
   "title": "<span class=\"process-math\">\\(\\R_K\\)<\/span> is not regular.",
-  "body": " is not regular   Prove: is Hausdorff, but not regular.    Since the -topology is finer than the standard topology on , is Hausdorff. To see that it is not regular, recall that is closed. I'll show that we cannot separate 0 and with open sets. Indeed, suppose we have open disjoint sets containing respectively. Since is open, it must contain an open basis element $B$ containing ; and since , this basis element can be chosen of the form . Now choose such that . Since we can find a basis element of the form that is contained in . Furthermore, shrinking if necessary, we can assume that . But then clearly , and hence also . Contradiction!   "
+  "body": " is not regular   Prove: is Hausdorff, but not regular.    Since the -topology is finer than the standard topology on , is Hausdorff. To see that it is not regular, recall that is closed. I'll show that we cannot separate and with open sets. Indeed, suppose we have open disjoint sets containing respectively. Since is open, it must contain an open basis element containing ; and since , this basis element can be chosen of the form . Now choose such that . Since we can find a basis element of the form that is contained in . Furthermore, shrinking if necessary, we can assume that . But then clearly , and hence also . Contradiction!   "
 },
 {
   "id": "th_regular_normal_equivalence",
@@ -2662,7 +2662,7 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "1.19.8",
   "title": "Regular and normal equivalences.",
-  "body": " Regular and normal equivalences   Let be a -space.    is regular if and only if for all and open set , there is an open set such that .     is normal if and only if for any closed set and open set containing , there is an open set containing satisfying .          First, assume is regular. Given and as described, we can separate and the closed set by open sets and . It follows that : indeed, given any , the open set contains and does not intersect with .  Conversely, assume for all and open sets we can find an open set satisfying . Given any closed set and element , letting , we see that there is an open set satisfying . The open sets and are then easily seen to separate and .    This proof is very similar to the last. Essenially you need only replace with a closed set throughout.      "
+  "body": " Regular and normal equivalences   Let be a -space.    is regular if and only if for every and every open set containing , there is an open set satisfying .     is normal if and only if for every closed subset and open set containing , there is an open set satisfying .          First, assume is regular. Given and as described, we can separate and the closed set by open sets and . It follows that : indeed, given any , the open set contains and does not intersect with .  Conversely, assume for all and open sets we can find an open set satisfying . Given any closed set and element , letting , we see that there is an open set satisfying . The open sets and are then easily seen to separate and .    This proof is very similar to the last. Essenially you need only replace with a closed set throughout.      "
 },
 {
   "id": "th_locally_compact_regular",
@@ -2671,7 +2671,7 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "1.19.9",
   "title": "Locally compact implies regular.",
-  "body": " Locally compact implies regular   Let be locally compact and Hausdorff. Prove: is regular.    This is an easy consequence of and .   "
+  "body": " Locally compact implies regular   If is locally compact Hausdorff, then is regular.    This is an easy consequence of and .   "
 },
 {
   "id": "s_regular-11",
@@ -2680,7 +2680,7 @@ var ptx_lunr_docs = [
   "type": "Remark",
   "number": "1.19.10",
   "title": "Locally compact and non-normal.",
-  "body": " Locally compact and non-normal  Yes, there are examples of locally compact -spaces that are not normal. They are not particularly easy to build, however. Look it up!  "
+  "body": " Locally compact and non-normal  Yes, there are examples of locally compact Hausdorff spaces that are not normal. They are not particularly easy to build, however. Look it up!  "
 },
 {
   "id": "eg_Rl_regular",
@@ -2719,47 +2719,38 @@ var ptx_lunr_docs = [
   "body": " Interestingly, neither of the statements of are true if regular is replaced with normal . It is worthwhile to examine what goes wrong in our arguments above if the element is replaced with a closed set throughout.  "
 },
 {
-  "id": "s_normal",
-  "level": "1",
-  "url": "s_normal.html",
-  "type": "Section",
-  "number": "1.20",
-  "title": "Normal spaces",
-  "body": " Normal spaces   is normal   Prove: is normal.    Let be disjoint closed subsets of . We can find open coverings satisfying for all . First observe that for all . Indeed, otherwise we'd have , in which case either or : both are impossible since and . We conclude that , proving that and can be separated by open sets.     is not normal   Prove: is not normal.    See Munkres for the full proof. I'll content myself with a discussion of some of the key elements. First, let . This set is closed in , and hence closed in , since the left limit product topology is finer than the standard topology. Next, as we saw on a previous homework, is discrete as a subspace of : if follows that every subset of , being itself closed in , is closed in , using transitivity. In particular the two sets . By what we said above, the disjoint sets and are closed in , but as it turns out you cannot separate them by open sets. The proof is not terribly difficult, but will seem somewhat convoluted without knowing about the Baire category theorem. As such, I omit it. (Munkres doesn't use this approach, choosing instead a proof by contradiction, but he outlines a proof in one of his exercises.)     Regular+second countable normal   If is regular and second countable, then is normal.    Assume is regular and second countable. Let be a countable basis for . Let and be disjoint closed sets. By regularity, for each we can find disjoint open sets containing and respectively. Since is a basis, we can find a basis element such that . The set of all such is a countable subset of , giving rise to a countable cover satisfying for all . Similarly, we can construct an open covering satisfying for all . The corresponding open sets are not necessarily disjoint. However the sets and , where , still cover and respectively, are still open, and are disjoint.     Compact+Hausdorff normal   If is a compact Hausdorff space, then is normal.    Since is compact Hausdorff, it is locally compact Hausdorff, and hence regular by . We use the equivalent condition of normality from . To this end, let be closed, and let be any open set containing . Since is regular, for all we can find an open set containing such that . We have . Since is compact and is closed, is compact. Hence there is a finite subcovering . We have , as desired.    "
-},
-{
   "id": "eg_Rl_normal",
   "level": "2",
-  "url": "s_normal.html#eg_Rl_normal",
+  "url": "s_regular.html#eg_Rl_normal",
   "type": "Example",
-  "number": "1.20.1",
+  "number": "1.19.15",
   "title": "<span class=\"process-math\">\\(\\R_\\ell\\)<\/span> is normal.",
   "body": " is normal   Prove: is normal.    Let be disjoint closed subsets of . We can find open coverings satisfying for all . First observe that for all . Indeed, otherwise we'd have , in which case either or : both are impossible since and . We conclude that , proving that and can be separated by open sets.   "
 },
 {
-  "id": "s_normal-3",
+  "id": "s_regular-17",
   "level": "2",
-  "url": "s_normal.html#s_normal-3",
+  "url": "s_regular.html#s_regular-17",
   "type": "Example",
-  "number": "1.20.2",
+  "number": "1.19.16",
   "title": "<span class=\"process-math\">\\(R_\\ell\\times R_\\ell\\)<\/span> is not normal.",
   "body": " is not normal   Prove: is not normal.    See Munkres for the full proof. I'll content myself with a discussion of some of the key elements. First, let . This set is closed in , and hence closed in , since the left limit product topology is finer than the standard topology. Next, as we saw on a previous homework, is discrete as a subspace of : if follows that every subset of , being itself closed in , is closed in , using transitivity. In particular the two sets . By what we said above, the disjoint sets and are closed in , but as it turns out you cannot separate them by open sets. The proof is not terribly difficult, but will seem somewhat convoluted without knowing about the Baire category theorem. As such, I omit it. (Munkres doesn't use this approach, choosing instead a proof by contradiction, but he outlines a proof in one of his exercises.)   "
 },
 {
   "id": "th_regular_separable_normal",
   "level": "2",
-  "url": "s_normal.html#th_regular_separable_normal",
+  "url": "s_regular.html#th_regular_separable_normal",
   "type": "Theorem",
-  "number": "1.20.3",
+  "number": "1.19.17",
   "title": "Regular+second countable <span class=\"process-math\">\\(\\implies\\)<\/span> normal.",
   "body": " Regular+second countable normal   If is regular and second countable, then is normal.    Assume is regular and second countable. Let be a countable basis for . Let and be disjoint closed sets. By regularity, for each we can find disjoint open sets containing and respectively. Since is a basis, we can find a basis element such that . The set of all such is a countable subset of , giving rise to a countable cover satisfying for all . Similarly, we can construct an open covering satisfying for all . The corresponding open sets are not necessarily disjoint. However the sets and , where , still cover and respectively, are still open, and are disjoint.   "
 },
 {
   "id": "th_compact_Hausdorff_normal",
   "level": "2",
-  "url": "s_normal.html#th_compact_Hausdorff_normal",
+  "url": "s_regular.html#th_compact_Hausdorff_normal",
   "type": "Theorem",
-  "number": "1.20.4",
+  "number": "1.19.18",
   "title": "Compact+Hausdorff <span class=\"process-math\">\\(\\implies\\)<\/span> normal.",
   "body": " Compact+Hausdorff normal   If is a compact Hausdorff space, then is normal.    Since is compact Hausdorff, it is locally compact Hausdorff, and hence regular by . We use the equivalent condition of normality from . To this end, let be closed, and let be any open set containing . Since is regular, for all we can find an open set containing such that . We have . Since is compact and is closed, is compact. Hence there is a finite subcovering . We have , as desired.   "
 },
@@ -2768,7 +2759,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "s_Urysohn_lemma.html",
   "type": "Section",
-  "number": "1.21",
+  "number": "1.20",
   "title": "Urysohn lemma",
   "body": " Urysohn lemma   Urysohn lemma   Let be a normal space. Given two nonempty disjoint closed sets and there is a continuous function such that and .  It follows easily that the result is still true if we replace the interval with any closed interval .    It would be difficult to improve upon Munkres' exposition of this. I give essentially a full proof below nonetheless.   Step 1: construction of open sets  The first crucial step in the proof is to build a collection of open sets satisfying if . This is done by first picking an enumeration of where for convenience and . We use the enumeration to define open sets for each recursively as follows. Set . Since , by we can find an open containing such that . Now take any and assume by induction that we constructed open sets satisfying the desired inclusion condition. Write where and are the immediate predecessor and successor, respectively, of among the set . By induction we have . Pick to be any open set satisfying . Lastly define for all and for all . It is easy to see that thus defined, our collection satisfies the desired inclusion condition.    Step 2: definition of and continuity  Define as . Some easy properties of :    for all .     for all .     for all .   We prove continuity by showing that is continuous at each . Given and open set containing , choose rational numbers satisfying . I claim is an open set containing satisfying . First, it is clear that is open, and it follows easily from the elementary properties of quoted above that . Next, given any , since , we have , and since , we have . This concludes the proof.      Separated by a continuous function   Let be a topological space. Subsets are separated by a continuous function if there is a continuous function such that and .     Separation in normal spaces  If the closed sets are separated by the continuous function , they are separated by the open sets and . The Urysohn lemma tells us that in normal spaces the two notions are equivalent!   We can explore this idea of separated by a continuous function in relation to some of the other Trennnungsaxiome . For example, taking the regularity axiom ( ) and replacing the separated by open sets condition with a separated by a continuous function condition, we obtain the notion of complete regularity .   Completely regular   A -space is completely regular (or ) if for any closed set and element , there is a continuous function , such that and .     Complete regularity  With respect to regularity, separation by a continuous function is truly a stronger notion: , there are spaces that are regular but not completely regular. This is in contrast to the situation with normality: by Urysohn's lemma a space is normal if and only if disjoint closed sets are separated by a continuous function. Note also that by Urysohn's lemma, any normal space is completely regular. Thus adding to our list of Trennungsaxiome we still have a list of properties that satisfies if .    The notion of complete regularity strikes a nice balance between regularity and normality. In particular, it is stronger than regularity, but still behaves well with respect to subspaces and products.   Complete regularity: subspace and product properties      Subspaces of completely regular spaces are completely regular.    Products of completely regular spaces are completely regular.       The proof of (1) is elementary. (See text.) The proof of (2) is more interesting. Assume is a collection of completely regular spaces, and let . Let be a closed set, and let be any element not contained in . Since is open, we can find a base open neighborhood of of the form . For each let be a continuous function satisfying . The function is continuous (product of continuous functions) and satisfies and .    "
 },
@@ -2777,7 +2768,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Urysohn_lemma.html#th_Urysohn_lemma",
   "type": "Theorem",
-  "number": "1.21.1",
+  "number": "1.20.1",
   "title": "Urysohn lemma.",
   "body": " Urysohn lemma   Let be a normal space. Given two nonempty disjoint closed sets and there is a continuous function such that and .  It follows easily that the result is still true if we replace the interval with any closed interval .    It would be difficult to improve upon Munkres' exposition of this. I give essentially a full proof below nonetheless.   Step 1: construction of open sets  The first crucial step in the proof is to build a collection of open sets satisfying if . This is done by first picking an enumeration of where for convenience and . We use the enumeration to define open sets for each recursively as follows. Set . Since , by we can find an open containing such that . Now take any and assume by induction that we constructed open sets satisfying the desired inclusion condition. Write where and are the immediate predecessor and successor, respectively, of among the set . By induction we have . Pick to be any open set satisfying . Lastly define for all and for all . It is easy to see that thus defined, our collection satisfies the desired inclusion condition.    Step 2: definition of and continuity  Define as . Some easy properties of :    for all .     for all .     for all .   We prove continuity by showing that is continuous at each . Given and open set containing , choose rational numbers satisfying . I claim is an open set containing satisfying . First, it is clear that is open, and it follows easily from the elementary properties of quoted above that . Next, given any , since , we have , and since , we have . This concludes the proof.    "
 },
@@ -2786,7 +2777,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Urysohn_lemma.html#d_separated_continuous_function",
   "type": "Definition",
-  "number": "1.21.2",
+  "number": "1.20.2",
   "title": "Separated by a continuous function.",
   "body": " Separated by a continuous function   Let be a topological space. Subsets are separated by a continuous function if there is a continuous function such that and .   "
 },
@@ -2795,7 +2786,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Urysohn_lemma.html#rm_Urysohn_lemma",
   "type": "Remark",
-  "number": "1.21.3",
+  "number": "1.20.3",
   "title": "Separation in normal spaces.",
   "body": " Separation in normal spaces  If the closed sets are separated by the continuous function , they are separated by the open sets and . The Urysohn lemma tells us that in normal spaces the two notions are equivalent!  "
 },
@@ -2804,7 +2795,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Urysohn_lemma.html#d_completely_regular_normal",
   "type": "Definition",
-  "number": "1.21.4",
+  "number": "1.20.4",
   "title": "Completely regular.",
   "body": " Completely regular   A -space is completely regular (or ) if for any closed set and element , there is a continuous function , such that and .   "
 },
@@ -2813,7 +2804,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Urysohn_lemma.html#rm_complete_regularity",
   "type": "Remark",
-  "number": "1.21.5",
+  "number": "1.20.5",
   "title": "Complete regularity.",
   "body": " Complete regularity  With respect to regularity, separation by a continuous function is truly a stronger notion: , there are spaces that are regular but not completely regular. This is in contrast to the situation with normality: by Urysohn's lemma a space is normal if and only if disjoint closed sets are separated by a continuous function. Note also that by Urysohn's lemma, any normal space is completely regular. Thus adding to our list of Trennungsaxiome we still have a list of properties that satisfies if .   "
 },
@@ -2822,7 +2813,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Urysohn_lemma.html#th_complete_regularity",
   "type": "Theorem",
-  "number": "1.21.6",
+  "number": "1.20.6",
   "title": "Complete regularity: subspace and product properties.",
   "body": " Complete regularity: subspace and product properties      Subspaces of completely regular spaces are completely regular.    Products of completely regular spaces are completely regular.       The proof of (1) is elementary. (See text.) The proof of (2) is more interesting. Assume is a collection of completely regular spaces, and let . Let be a closed set, and let be any element not contained in . Since is open, we can find a base open neighborhood of of the form . For each let be a continuous function satisfying . The function is continuous (product of continuous functions) and satisfies and .   "
 },
@@ -2831,7 +2822,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "s_Urysohn_metrization.html",
   "type": "Section",
-  "number": "1.22",
+  "number": "1.21",
   "title": "Urysohn metrization theorem",
   "body": " Urysohn metrization theorem   Urysohn metrization theorem   If is a regular second countable space, then is metrizable.    The main step in the proof, one that uses , is the construction of a countable family of continuous functions satisfying the following property: for all and for all open sets containing , there is an such that and . It then follows from that the map defined as is an embedding into the metric space . Since subspaces of metric spaces are metric spaces, we conclude that is metrizable.  We now proceed with the construction. Let be a countable basis of . For all satisfying , let be a continuous function satisfying and : this guaranteed to exist by since , being regular and second countable, is normal. Since the collection is countable we can enumerate it as . Now, for any and any open set , we have for some . Since is regular, we can find a basis element such that . We have for some , , and , as desired.     Embedding theorem   Let be a -space. Given any collection of continuous functions satisfying the property that for all and for all open sets containing there is an such that and , the map defined as is an embedding into .     is injective  Since is , given any we can find an open set such that and . By assumption, there is some such that and . It follows that and hence that .    is continuous  This follows immediately from since each is continuous.    is embedding  Lastly, we prove that is an embedding mapping homeomorphically onto . Let be an open set containing an element , and let . Pick any such that and . Let be the projection map onto the -th coordinate, and define . Since is continuous and is open, the set is open in the subspace topology of . We claim that , proving that is an embedding. Since , we have . Similarly, if , then , from whence it follows that : otherwise we'd have .      Urysohn metrization theorem  Munkres gives an alternative proof that shows any regular second countable space can be embedded into with respect to the uniform metric. This argument is then generalized later to prove the Nagata-Smirnov metrization theorem, which states that is metrizable if and only if it is regular and has countable locally finite basis.     A space is completely regular if and only if it is homeomorphic to a subspace of for some set .    Implication: . Assume is completely regular. Recall that in particular this means is . Define to be the set of all pairs where and is an open neighborhood of . For each , let be a function satisfying and . (Such a function exists since is completely regular.) Now, for all and for all open sets containing , corresponding to the index we have the function which satisfies and . We conclude by that the map is an embedding of into , and thus that is homeomorphic to a subspace of .  Implication: . Since is completely regular, and since complete regularity is preserved under arbitrary products, the space is completely regular for any set . Furthermore, since complete regularity is inherited by subspaces, any subspace of is completely regular. Thus, if embeds into , then it is homeomorphic to a subspace of , and hence is completely regular.    "
 },
@@ -2840,7 +2831,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Urysohn_metrization.html#th_Urysohn_metrization",
   "type": "Theorem",
-  "number": "1.22.1",
+  "number": "1.21.1",
   "title": "Urysohn metrization theorem.",
   "body": " Urysohn metrization theorem   If is a regular second countable space, then is metrizable.    The main step in the proof, one that uses , is the construction of a countable family of continuous functions satisfying the following property: for all and for all open sets containing , there is an such that and . It then follows from that the map defined as is an embedding into the metric space . Since subspaces of metric spaces are metric spaces, we conclude that is metrizable.  We now proceed with the construction. Let be a countable basis of . For all satisfying , let be a continuous function satisfying and : this guaranteed to exist by since , being regular and second countable, is normal. Since the collection is countable we can enumerate it as . Now, for any and any open set , we have for some . Since is regular, we can find a basis element such that . We have for some , , and , as desired.   "
 },
@@ -2849,7 +2840,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Urysohn_metrization.html#th_embedding_theorem",
   "type": "Theorem",
-  "number": "1.22.2",
+  "number": "1.21.2",
   "title": "Embedding theorem.",
   "body": " Embedding theorem   Let be a -space. Given any collection of continuous functions satisfying the property that for all and for all open sets containing there is an such that and , the map defined as is an embedding into .     is injective  Since is , given any we can find an open set such that and . By assumption, there is some such that and . It follows that and hence that .    is continuous  This follows immediately from since each is continuous.    is embedding  Lastly, we prove that is an embedding mapping homeomorphically onto . Let be an open set containing an element , and let . Pick any such that and . Let be the projection map onto the -th coordinate, and define . Since is continuous and is open, the set is open in the subspace topology of . We claim that , proving that is an embedding. Since , we have . Similarly, if , then , from whence it follows that : otherwise we'd have .    "
 },
@@ -2858,7 +2849,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Urysohn_metrization.html#s_Urysohn_metrization-4",
   "type": "Remark",
-  "number": "1.22.3",
+  "number": "1.21.3",
   "title": "Urysohn metrization theorem.",
   "body": " Urysohn metrization theorem  Munkres gives an alternative proof that shows any regular second countable space can be embedded into with respect to the uniform metric. This argument is then generalized later to prove the Nagata-Smirnov metrization theorem, which states that is metrizable if and only if it is regular and has countable locally finite basis.  "
 },
@@ -2867,7 +2858,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Urysohn_metrization.html#cor_completely_regular_embedding",
   "type": "Corollary",
-  "number": "1.22.4",
+  "number": "1.21.4",
   "title": "",
   "body": "  A space is completely regular if and only if it is homeomorphic to a subspace of for some set .    Implication: . Assume is completely regular. Recall that in particular this means is . Define to be the set of all pairs where and is an open neighborhood of . For each , let be a function satisfying and . (Such a function exists since is completely regular.) Now, for all and for all open sets containing , corresponding to the index we have the function which satisfies and . We conclude by that the map is an embedding of into , and thus that is homeomorphic to a subspace of .  Implication: . Since is completely regular, and since complete regularity is preserved under arbitrary products, the space is completely regular for any set . Furthermore, since complete regularity is inherited by subspaces, any subspace of is completely regular. Thus, if embeds into , then it is homeomorphic to a subspace of , and hence is completely regular.   "
 },
@@ -2876,7 +2867,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "s_Tietze_extension.html",
   "type": "Section",
-  "number": "1.23",
+  "number": "1.22",
   "title": "Further applications of Urysohn",
   "body": " Further applications of Urysohn   Tietze extension theorem   Let be a closed subset of the normal space .   Any continuous function can be extended to a continuous function .    Any continuous function can be extended to a continuous function .       Proof of (1)  First we show that for any continuous function , we can find a continuous function such that (i) and (ii) for all . To do so, subdivide as define and , and, using Urysohn's lemma, choose a continuous function such that and . It is easily verified that this does the trick.  Now assume we have a continuous function . Letting , we see that extends continuously to if and only if extends continuously to . Thus, we may assume . We can build a sequence of continuous functions satisfying the following properties:    for all .     for all .   It follows from some convergence of infinite sums arguments that is a well-defined continuous function from to satisfying for all . (See Munkres for these details. Basically just the Weierstrass M-test, if that is familiar to you.)  How dow we build this sequence? From our first paragraph, we can pick to be any function satisfying and . Next assume we have constructed as specified for all . Apply the same reasoning to the function , which by assumption maps to to find . By the recursion principle we get a sequence satisfying (i) and (ii) for all .    Proof of (2)  Let be a homeomorphism. A continuous function extends continuously to a function if and only if extends continuously to a function . Thus we may assume . Since , by (1) there is a function . Let . If is nonempty, then , as desired. Otherwise, since is closed and , there is a continuous function such that and . The function is an extension of on that maps into , as desired.     Space-filling curve  We will show that there is a continuous surjective function . This is thus a path or curve, whose image is all of . This called a space-filling curve , or Peano curve .   Let be the Cantor set, and choose a homeomorphism , where is given the discrete topology and is given the product topology. (We proved is homeomorphic to in discussion.) Now define functions as Both functions are easily seen to be continuous; we prove this for . Let and let . For any , pick such that . Let . For any , we have , as desired.  Now using our homeomorphism , we see that the functions and are continuous functions from to . By the Tietze extension theorem , we obtain continuous extensions and . The function defined as is then a continuous function to .  It remains only to show that is surjective. Given any , let and be binary expansions of and . Let , and let . We have . This proves in fact that is surjective.     Partition of unity   Let . The {\\bf support} of a continuous function is defined as .  A partition of unity dominated by the open cover  is a collection of continuous functions satisfying (i) for all , and (ii) for all .     Partition of unity (finite)   Let be a normal space. Given any finite open covering of , there is a partition of unity dominated by .    Not covered in WQ23 course. See Munkres if interested.     Compact manifold embedding   Let be a compact -manifold. There is an embedding for some .    Not covered in WQ23 course. See Munkres if interested.    "
 },
@@ -2885,7 +2876,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Tietze_extension.html#th_Tietze_extension",
   "type": "Theorem",
-  "number": "1.23.1",
+  "number": "1.22.1",
   "title": "Tietze extension theorem.",
   "body": " Tietze extension theorem   Let be a closed subset of the normal space .   Any continuous function can be extended to a continuous function .    Any continuous function can be extended to a continuous function .       Proof of (1)  First we show that for any continuous function , we can find a continuous function such that (i) and (ii) for all . To do so, subdivide as define and , and, using Urysohn's lemma, choose a continuous function such that and . It is easily verified that this does the trick.  Now assume we have a continuous function . Letting , we see that extends continuously to if and only if extends continuously to . Thus, we may assume . We can build a sequence of continuous functions satisfying the following properties:    for all .     for all .   It follows from some convergence of infinite sums arguments that is a well-defined continuous function from to satisfying for all . (See Munkres for these details. Basically just the Weierstrass M-test, if that is familiar to you.)  How dow we build this sequence? From our first paragraph, we can pick to be any function satisfying and . Next assume we have constructed as specified for all . Apply the same reasoning to the function , which by assumption maps to to find . By the recursion principle we get a sequence satisfying (i) and (ii) for all .    Proof of (2)  Let be a homeomorphism. A continuous function extends continuously to a function if and only if extends continuously to a function . Thus we may assume . Since , by (1) there is a function . Let . If is nonempty, then , as desired. Otherwise, since is closed and , there is a continuous function such that and . The function is an extension of on that maps into , as desired.   "
 },
@@ -2903,7 +2894,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Tietze_extension.html#d_partition_of_unity",
   "type": "Definition",
-  "number": "1.23.2",
+  "number": "1.22.2",
   "title": "Partition of unity.",
   "body": " Partition of unity   Let . The {\\bf support} of a continuous function is defined as .  A partition of unity dominated by the open cover  is a collection of continuous functions satisfying (i) for all , and (ii) for all .   "
 },
@@ -2912,7 +2903,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Tietze_extension.html#th_partition_of_unity",
   "type": "Theorem",
-  "number": "1.23.3",
+  "number": "1.22.3",
   "title": "Partition of unity (finite).",
   "body": " Partition of unity (finite)   Let be a normal space. Given any finite open covering of , there is a partition of unity dominated by .    Not covered in WQ23 course. See Munkres if interested.   "
 },
@@ -2921,7 +2912,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Tietze_extension.html#cor_manifold_embedding",
   "type": "Corollary",
-  "number": "1.23.4",
+  "number": "1.22.4",
   "title": "Compact manifold embedding.",
   "body": " Compact manifold embedding   Let be a compact -manifold. There is an embedding for some .    Not covered in WQ23 course. See Munkres if interested.   "
 },
@@ -2930,7 +2921,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "s_nets.html",
   "type": "Section",
-  "number": "1.24",
+  "number": "1.23",
   "title": "Nets",
   "body": " Nets   Partial ordering axioms   Let denote a binary relation on the set . We write to assert that the relation holds between elements . The relation is a partial ordering if it satisfies the following three axioms.   Reflexive (PO1)  For all , we have .    Transitive (PO2)  For all , if and , then .    Antisymmetric (PO3)  For all , if and , then .   The relation is a quasiordering (or preordering ) if it satisfies axioms PO1 and PO2. When is a partial ordering or a quasiordering, we will often write for .  A partially ordered set (POSET, for short) is a pair , where is a partial ordering on . Similarly,a quasiordered set is a pair , where is a a quasiordering on .     Common examples     The usual less than or equal to relation is a partial ordering on .    Let be a set, and let be the power set of of . The relation defines a partial ordering on .    Let be a set, and let be the power set of of . The relation also defines a partial ordering on .    For an element in a topological space the set of all open neighborhoods of is a partially ordered set under reverse inclusion: , .    Recall that an integer divides an integer , written , if there is an integer such that . The relation defines a quasiordering on , but not a partial ordering: and , but . The same relation does define a partial ordering on .       Directed set   A directed set is a pair , where is a quasiordering on that satisfies the following axiom.   Directed (D)  For all , there is a such that and .   A subset of a directed set is cofinal if for all there is a such that .     Common examples  Each quasiordered (and\/or partially ordered) set in is easily seen to satisfy the further axiom (D), and is thus a directed set.    Nets and convergent nets   Let be a set. A net in is a function where is a directed set. In particular, a net is a tuple, and accordingly we may use the coordinate notation , where .  A net is eventually in a subset if there is an element such that for all .  Assume is a topological space. A net  converges to an element , denoted , if for all open sets containing the net is eventually in .  A net is cofinally in a subset if the set is cofinal: equivalently, if for all there is a such that .  An element is a limit point of the net if is cofinally in every open neighborhood of .     Riemann integral  A careful examination of the Riemann integral of a function over an interval reveals that it is a statement about a convergent net. Indeed, let be the set of all pointed partitions of into subintervals: , an element of is a pair , where is a subinterval partition and is a choice of sample points in each subinterval of . The relation is a quasiordering on satisfying (D). To any function we can associate the net , where for each we define to be the corresponding Riemann sum of . The statement that the Riemann integral exists and is equal to is then equivalent to the statement that if and the net converges to .    Nets and topology   Let be a topological space.   The closure of any set is the set of all for which there is a net such that .  It follows that a subset is closed if and only if it contains all limits of all convergent nets in .    A function is continuous if and only if for all convergent nets the net is convergent.    The space is Hausdorff if and only if every net in converges to at most one element in .          Assume . For all open sets containing , choose . Let be the set of all open neighborhoods of , considered as a directed set with reverse inclusion. Define as . The net converges to . Indeed, for any open set containing , we set : if , then (by definition of our ordering), and hence .  Assume for some net in . Given any open set containing , there is an such that for all . In particular, we have . Since is a net in , we conclude that .  Note: the argument for the forward direction uses the axiom of choice potentially. If that bugs you, consider the following alternative: let with quasiordering . (This is no longer a partial ordering necessarily.) Define as . This net also converges to .    Assume is continuous and is a net satisfying . Given any open set containing , the net is eventually in , since this is an open set containing . But then clearly is eventually in .  Inversely, if is not continuous, then there is an and open set containing such that for all open sets containing , there is an element . Let be the set of all open neighborhoods of with partial ordering given by reverse inclusion, and consider the net , where is the element described above. We have , using a similar argument as in (1), and yet . Indeed, by construction the net never lies in the open neighoborhood of .    Assume is Hausdorff and that the net converges to . Given any , pick disjoint open sets containing and , respectively. I claim that is not eventually in . Indeed, since , there is an such that for all . If, similarly, there were a such that for all , then we could find an index satisfying and , in which case . Contradiction! We conclude that is not eventually in , and hence that does not converge to .  Now assume that is not Hausdorff, as witnessed by elements : this means for all open sets containing and , respectively, we have have . Let be the set of all triples , where are open neighborhoods of and , respectively, and . Declare if and only if and . The set is directed: given , we can take , for some . Now, let be the net in defined as follows: given , define . I claim that and . Indeed given any open set containing and open set containing , there is an element . Let . For any we have . Thus is eventually in and eventually in , as desired.        Subnets   Let and be quasiordered sets. An order-preserving map is a function satisfying the following property: if , then .  Let be a net in . A subnet of is a net of the form , where is a directed set, and is an order-preserving map, and the image is cofinal in . Using tuple notation, we will write for the subnet .     Limit points of nets   Let be a topological space, and let be a net in . An element is a limit point of if and only if there is a subnet of converging to .    Let be a limit point of the net . By definition of limit point, the collection of all open neighborhoods of satisfies condition (i) of Kelley's lemma ; condition (ii) follows from properties of open sets. We conclude that there is a subnet which is eventually in for all open sets containing , and thus that this subnet converges to .  Assume is not a limit point of . Let be an open neighborhood of such that is not cofinal; then there exists an such that for all with . Let be a subnet of . We can write . I claim that . Indeed, since is cofinal in we can find a such that , in which case for all all we have , and thus . This shows that in fact is eventually in ; in particular it is definitely not eventually in .     Kelley's lemma   Let be a net. If is a nonempty collection of subsets of satisfying the conditions   for all the set is cofinal,    for all there is an such that ,   then there is a subnet of which is eventually in for all .    Assume is a collection of subsets of satisfying conditions (i)-(ii). Define to be the set of pairs where and . Given , , we declare if and only if and . It is clear that this is a quasiordering. We now show is directed. Given and , by property (ii) there is an such that . Since is cofinal, there is an such that , and . Setting , we see that and .  Define as . It is clear that is order preserving. We show that is cofinal in . Given any , pick any . Since is cofinal, there is an such that . We have .  Lastly, we show that the subnet is eventually in for all . Indeed, given , let for any . If for , then we have and . It follows that . This proves for all , and thus that is eventually in .    "
 },
@@ -2939,7 +2930,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_nets.html#d_partial_order",
   "type": "Definition",
-  "number": "1.24.1",
+  "number": "1.23.1",
   "title": "Partial ordering axioms.",
   "body": " Partial ordering axioms   Let denote a binary relation on the set . We write to assert that the relation holds between elements . The relation is a partial ordering if it satisfies the following three axioms.   Reflexive (PO1)  For all , we have .    Transitive (PO2)  For all , if and , then .    Antisymmetric (PO3)  For all , if and , then .   The relation is a quasiordering (or preordering ) if it satisfies axioms PO1 and PO2. When is a partial ordering or a quasiordering, we will often write for .  A partially ordered set (POSET, for short) is a pair , where is a partial ordering on . Similarly,a quasiordered set is a pair , where is a a quasiordering on .   "
 },
@@ -2948,7 +2939,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_nets.html#eg_poset",
   "type": "Example",
-  "number": "1.24.2",
+  "number": "1.23.2",
   "title": "Common examples.",
   "body": " Common examples     The usual less than or equal to relation is a partial ordering on .    Let be a set, and let be the power set of of . The relation defines a partial ordering on .    Let be a set, and let be the power set of of . The relation also defines a partial ordering on .    For an element in a topological space the set of all open neighborhoods of is a partially ordered set under reverse inclusion: , .    Recall that an integer divides an integer , written , if there is an integer such that . The relation defines a quasiordering on , but not a partial ordering: and , but . The same relation does define a partial ordering on .     "
 },
@@ -2957,7 +2948,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_nets.html#d_directed_set",
   "type": "Definition",
-  "number": "1.24.3",
+  "number": "1.23.3",
   "title": "Directed set.",
   "body": " Directed set   A directed set is a pair , where is a quasiordering on that satisfies the following axiom.   Directed (D)  For all , there is a such that and .   A subset of a directed set is cofinal if for all there is a such that .   "
 },
@@ -2966,7 +2957,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_nets.html#s_nets-5",
   "type": "Example",
-  "number": "1.24.4",
+  "number": "1.23.4",
   "title": "Common examples.",
   "body": " Common examples  Each quasiordered (and\/or partially ordered) set in is easily seen to satisfy the further axiom (D), and is thus a directed set.  "
 },
@@ -2975,7 +2966,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_nets.html#d_nets",
   "type": "Definition",
-  "number": "1.24.5",
+  "number": "1.23.5",
   "title": "Nets and convergent nets.",
   "body": " Nets and convergent nets   Let be a set. A net in is a function where is a directed set. In particular, a net is a tuple, and accordingly we may use the coordinate notation , where .  A net is eventually in a subset if there is an element such that for all .  Assume is a topological space. A net  converges to an element , denoted , if for all open sets containing the net is eventually in .  A net is cofinally in a subset if the set is cofinal: equivalently, if for all there is a such that .  An element is a limit point of the net if is cofinally in every open neighborhood of .   "
 },
@@ -2984,7 +2975,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_nets.html#eg_Riemann_integral",
   "type": "Example",
-  "number": "1.24.6",
+  "number": "1.23.6",
   "title": "Riemann integral.",
   "body": " Riemann integral  A careful examination of the Riemann integral of a function over an interval reveals that it is a statement about a convergent net. Indeed, let be the set of all pointed partitions of into subintervals: , an element of is a pair , where is a subinterval partition and is a choice of sample points in each subinterval of . The relation is a quasiordering on satisfying (D). To any function we can associate the net , where for each we define to be the corresponding Riemann sum of . The statement that the Riemann integral exists and is equal to is then equivalent to the statement that if and the net converges to .  "
 },
@@ -2993,7 +2984,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_nets.html#th_nets_topology",
   "type": "Theorem",
-  "number": "1.24.7",
+  "number": "1.23.7",
   "title": "Nets and topology.",
   "body": " Nets and topology   Let be a topological space.   The closure of any set is the set of all for which there is a net such that .  It follows that a subset is closed if and only if it contains all limits of all convergent nets in .    A function is continuous if and only if for all convergent nets the net is convergent.    The space is Hausdorff if and only if every net in converges to at most one element in .          Assume . For all open sets containing , choose . Let be the set of all open neighborhoods of , considered as a directed set with reverse inclusion. Define as . The net converges to . Indeed, for any open set containing , we set : if , then (by definition of our ordering), and hence .  Assume for some net in . Given any open set containing , there is an such that for all . In particular, we have . Since is a net in , we conclude that .  Note: the argument for the forward direction uses the axiom of choice potentially. If that bugs you, consider the following alternative: let with quasiordering . (This is no longer a partial ordering necessarily.) Define as . This net also converges to .    Assume is continuous and is a net satisfying . Given any open set containing , the net is eventually in , since this is an open set containing . But then clearly is eventually in .  Inversely, if is not continuous, then there is an and open set containing such that for all open sets containing , there is an element . Let be the set of all open neighborhoods of with partial ordering given by reverse inclusion, and consider the net , where is the element described above. We have , using a similar argument as in (1), and yet . Indeed, by construction the net never lies in the open neighoborhood of .    Assume is Hausdorff and that the net converges to . Given any , pick disjoint open sets containing and , respectively. I claim that is not eventually in . Indeed, since , there is an such that for all . If, similarly, there were a such that for all , then we could find an index satisfying and , in which case . Contradiction! We conclude that is not eventually in , and hence that does not converge to .  Now assume that is not Hausdorff, as witnessed by elements : this means for all open sets containing and , respectively, we have have . Let be the set of all triples , where are open neighborhoods of and , respectively, and . Declare if and only if and . The set is directed: given , we can take , for some . Now, let be the net in defined as follows: given , define . I claim that and . Indeed given any open set containing and open set containing , there is an element . Let . For any we have . Thus is eventually in and eventually in , as desired.      "
 },
@@ -3002,7 +2993,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_nets.html#d_order_preserving_subnets",
   "type": "Definition",
-  "number": "1.24.8",
+  "number": "1.23.8",
   "title": "Subnets.",
   "body": " Subnets   Let and be quasiordered sets. An order-preserving map is a function satisfying the following property: if , then .  Let be a net in . A subnet of is a net of the form , where is a directed set, and is an order-preserving map, and the image is cofinal in . Using tuple notation, we will write for the subnet .   "
 },
@@ -3011,7 +3002,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_nets.html#th_nets_limit_points",
   "type": "Theorem",
-  "number": "1.24.9",
+  "number": "1.23.9",
   "title": "Limit points of nets.",
   "body": " Limit points of nets   Let be a topological space, and let be a net in . An element is a limit point of if and only if there is a subnet of converging to .    Let be a limit point of the net . By definition of limit point, the collection of all open neighborhoods of satisfies condition (i) of Kelley's lemma ; condition (ii) follows from properties of open sets. We conclude that there is a subnet which is eventually in for all open sets containing , and thus that this subnet converges to .  Assume is not a limit point of . Let be an open neighborhood of such that is not cofinal; then there exists an such that for all with . Let be a subnet of . We can write . I claim that . Indeed, since is cofinal in we can find a such that , in which case for all all we have , and thus . This shows that in fact is eventually in ; in particular it is definitely not eventually in .   "
 },
@@ -3020,7 +3011,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_nets.html#lem_Kelleys_lemma",
   "type": "Lemma",
-  "number": "1.24.10",
+  "number": "1.23.10",
   "title": "Kelley’s lemma.",
   "body": " Kelley's lemma   Let be a net. If is a nonempty collection of subsets of satisfying the conditions   for all the set is cofinal,    for all there is an such that ,   then there is a subnet of which is eventually in for all .    Assume is a collection of subsets of satisfying conditions (i)-(ii). Define to be the set of pairs where and . Given , , we declare if and only if and . It is clear that this is a quasiordering. We now show is directed. Given and , by property (ii) there is an such that . Since is cofinal, there is an such that , and . Setting , we see that and .  Define as . It is clear that is order preserving. We show that is cofinal in . Given any , pick any . Since is cofinal, there is an such that . We have .  Lastly, we show that the subnet is eventually in for all . Indeed, given , let for any . If for , then we have and . It follows that . This proves for all , and thus that is eventually in .   "
 },
@@ -3029,7 +3020,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "s_Tychonoff.html",
   "type": "Section",
-  "number": "1.25",
+  "number": "1.24",
   "title": "Tychonoff theorem via nets",
   "body": " Tychonoff theorem via nets   Our main application of the theory of nets is (a) to give a characterization of compactness in terms of convergence and limit points of nets ( ), and (b) to use this characterization to prove the Tychonoff theorem     Nets and compactness   Nets and compactness   Let be a topological space. The following statements are equivalent.    is compact.    Every net in has a limit point.    Every net in has a convergent subnet.       Statements (ii) and (iii) are immediately seen to be equivalent thanks to . We will show that (i) and (ii) are equivalent.   Implication: (i) (ii)  Let be a net in . For each define . Clearly each is closed and nonempty. Furthermore, for any finite collection we have , since we can find a such that for all , and hence . Since is assumed to be compact, there is an element . We show that is a limit point of . Indeed, given any open set containing and any , since , there is an element with such that . This proves that is cofinally in , as desired.    Implication: (ii) (i)  We prove the contrapositive. Suppose is not compact, and let be a cover with no finite cover. Define to the be the set of all pairs , where is a finite subset of and . (Note that since has no finite subcover.) It is easy to see that is a directed set under the quasiordering defined as if and only if . Define the net as . We show that has no limit point. To this end, given any , we have for some . We will show that the net is not cofinally in . To this end consider the index , where . For all with , we have , in which case . Thus there is no satisfying .       Tychonoff's theorem   We now give a proof of Tychonoff's theorem using nets. The first such proof was given by UC Berkeley mathematician John L. Kelley in his 1950 paper Convergence in topology . Our proof draws from a couple of slight improvements to Kelley's original argument, both proffered by additional UC Berkeley mathematicians. (Go Bears!) Paul Chernoff's A simple proof of Tychonoff's theorem via nets removed the need for universal nets in Kelley's argument; Charles Pugh is credited for , which removes the argument's reliance on subnets. All of these various proofs invoke Zorn's lemma , which as it turns out is equivalent to the axiom of choice. You may be asking: Is there a proof of the Tychonoff theorem that does not rely on the axiom of choice? Amazingly, the answer is no! In fact, Kelley himself proved that Tychonoff's theorem is equivalent to the axiom of choice in another paper from 1950: The Tychonoff product theorem implies the axiom of choice . His argument is simply too elegant not to include here. (Note: Kelley's original argument had a minor flaw that is corrected in the proof below. I encourage you to look at the original article and see if you can find the invalid step.)    Tychonoff implies AC (Kelley)   If Tychonoff's theorem is true, then the axiom of choice is true.    Assume Tychonoff's theorem is true. We will prove the following equivalent formulation of the axiom of choice: . Given a collection of nonempty sets, let the result of adding one additional point, , to each . Why do we do this? Add the marked point to the -th component space gives us a foothold, as it were, allowing us to find elements in the product without invoking the axiom of choice in the process: we can always choose the -th entry to be this special element . We will use Tychonoff's theorem to show that is a nonempty subset of . To do so, we need to give the sets a compact topological structure: this is accomplished by declaring the topology on to be . (Check that this is a topology.) This clearly makes compact, since only contains four open sets. Note also that is closed with respect to this topology.  Since each is compact, by Tychonoff's theorem so is . For each , let be the th projection map and define . Since is closed in , and since is continuous, the set is closed for each . Furthermore given any finite set , the set is nonempty: indeed, by the finite axiom of choice principle (which is implied by ZF set theory) there exists a tuple , and thus the element defined as is an element of . Now since is compact, we have , using the finite intersection characterization of compactness. But clearly . Thus .    Now on to a net-based proof of Tychonoff's theorem. As mentioned we use Zorn's lemma, the statement of which involves some extra jargon.   Upper bounds, maximal elements, chains   Let be a partially ordered set.  An upper bound on a subset is an element such that for all .  An element is maximal if given any , if , then .  A subset is a chain (or totally ordered ) if for all we have or .     Zorn's lemma   Let be a partially ordered set. If every chain has an upper bound, then has a maximal element: , there is an such that for all , if , then .    As stated above, Zorn's lemma is equivalent to the axiom of choice. You can find a proof of this fact in most introductory set theory texts.    Lastly, before moving to the main attraction, we record a useful lemma that will simplify our main argument. The proof idea, due to Charles Pugh, avoids all mention of subnets, providing a path to proving Tychonoff's theorem that does not require subnets. There is a fairly direct alternative proof of the lemma using convergent subnets. See if you can figure it out!   Nets in products   Let be topological spaces, and assume is compact. Let be a net in , and let be the projection onto map. If is a limit point of the net , then there is a such that is a limit point of .    Let be a limit point of . Define to be the set of all pairs , where is an open neighborhood of , and . For elements we declare if and only if and . It is easy to see that is a partially ordered set with respect to this ordering. To see that it is directed, given indices and in , since is a limit point of , we can find a where and . This satisfies and , as desired.  Now define the net as . (Recall, our original net is .) Since is compact, the net has a limit point . We claim that is a limit point of our original net . To prove this, it is enough to show that given any basic opens set containing , and any , we can find an index such that . Given containing and index , first pick an index such that . This is possible since is a limit point of . By definition the pair is an element of . Since is a limit point of the net , and since is an open neighborhood of , we can find an element such that and . By definition of and its partial ordering, we have , , and . We conclude that , as desired.     Tychonoff theorem   Given any collection of compact spaces the product space is compact.    Proof (following P. Chernoff)  We show that any net in has a limit point . In an effort to distinguish between the different types of tuple objects at play here, I will exclusively use tuple notation for nets and exclusively use function notation for elements of . This is already in force above: the net specifies an element for each index ; but each is itself a function satisfying .  Now define to be the set of all pairs , where and is a limit point of the net . Note how we are exploiting the function notation here: since elements of are just functions with domain , restricting the domain yields a map from to defined as . This map is in fact just the projection map defined as . It follows from this that this map is continuous.  Next, we define the relation on as follows: if and only if and . It is easy to see that is a partial ordering. We now proceed in two steps: (1) we will show that satisfies the conditions of Zorn's lemma, and hence that it has a maximal element ; (2) we will show that and hence that is a limit point of . It then follows that is compact, as desired.   Step 1: has a maximal element  First observe that is nonempty. Indeed, given any , the net is just a net in the compact space , and hence has a limit point . It follows that . (There is a slight subtlety here, which is that the space is homeomorphic to the (somewhat funny looking) product space via the map .)  Next we show that any chain in has an upper bound in . To this end, given any chain in , we define as follows:    ;    the function is defined as , where is any element of for which .   First observe that is a well-defined function: if , where , then since is a chain either or ; assuming without loss of generality that we have by definition, and hence that . Next we must show that , understood as an element of , is a limit point of the net . Using the usual product topology basis, it suffices to show that given any finite set and open set of the form , and given any , there is an such that . Since is finite, we have for some sets satisfying . Since is a chain, there is an index such that for all . Thus we may assume there is an element such that . By definition is a limit point of the net . Since , it follows that . Thus there is an such that . It follows easily that . This proves is a limit point of , and hence that . It is clear from the definition of , that it is an upper bound of .  Having shown that satisfies the chain condition for Zorn's lemma, we conclude that it contains a maximal element .    Step 2:  Let be a maximal element of , so that is a limit point of the net . We show that and hence that is a limit point of .  Assume by contradiction that , and let . Since is compact, by the net in has a limit point of the form . But then the element defined as and satisfies and , contradicting the fact that is a maximal element.       "
 },
@@ -3038,7 +3029,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Tychonoff.html#th_nets_compactness",
   "type": "Theorem",
-  "number": "1.25.1",
+  "number": "1.24.1",
   "title": "Nets and compactness.",
   "body": " Nets and compactness   Let be a topological space. The following statements are equivalent.    is compact.    Every net in has a limit point.    Every net in has a convergent subnet.       Statements (ii) and (iii) are immediately seen to be equivalent thanks to . We will show that (i) and (ii) are equivalent.   Implication: (i) (ii)  Let be a net in . For each define . Clearly each is closed and nonempty. Furthermore, for any finite collection we have , since we can find a such that for all , and hence . Since is assumed to be compact, there is an element . We show that is a limit point of . Indeed, given any open set containing and any , since , there is an element with such that . This proves that is cofinally in , as desired.    Implication: (ii) (i)  We prove the contrapositive. Suppose is not compact, and let be a cover with no finite cover. Define to the be the set of all pairs , where is a finite subset of and . (Note that since has no finite subcover.) It is easy to see that is a directed set under the quasiordering defined as if and only if . Define the net as . We show that has no limit point. To this end, given any , we have for some . We will show that the net is not cofinally in . To this end consider the index , where . For all with , we have , in which case . Thus there is no satisfying .    "
 },
@@ -3047,7 +3038,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Tychonoff.html#th_Tychonoff_choice",
   "type": "Theorem",
-  "number": "1.25.2",
+  "number": "1.24.2",
   "title": "Tychonoff implies AC (Kelley).",
   "body": " Tychonoff implies AC (Kelley)   If Tychonoff's theorem is true, then the axiom of choice is true.    Assume Tychonoff's theorem is true. We will prove the following equivalent formulation of the axiom of choice: . Given a collection of nonempty sets, let the result of adding one additional point, , to each . Why do we do this? Add the marked point to the -th component space gives us a foothold, as it were, allowing us to find elements in the product without invoking the axiom of choice in the process: we can always choose the -th entry to be this special element . We will use Tychonoff's theorem to show that is a nonempty subset of . To do so, we need to give the sets a compact topological structure: this is accomplished by declaring the topology on to be . (Check that this is a topology.) This clearly makes compact, since only contains four open sets. Note also that is closed with respect to this topology.  Since each is compact, by Tychonoff's theorem so is . For each , let be the th projection map and define . Since is closed in , and since is continuous, the set is closed for each . Furthermore given any finite set , the set is nonempty: indeed, by the finite axiom of choice principle (which is implied by ZF set theory) there exists a tuple , and thus the element defined as is an element of . Now since is compact, we have , using the finite intersection characterization of compactness. But clearly . Thus .   "
 },
@@ -3056,7 +3047,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Tychonoff.html#d_chain",
   "type": "Definition",
-  "number": "1.25.3",
+  "number": "1.24.3",
   "title": "Upper bounds, maximal elements, chains.",
   "body": " Upper bounds, maximal elements, chains   Let be a partially ordered set.  An upper bound on a subset is an element such that for all .  An element is maximal if given any , if , then .  A subset is a chain (or totally ordered ) if for all we have or .   "
 },
@@ -3065,7 +3056,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Tychonoff.html#th_Zorns_lemma",
   "type": "Theorem",
-  "number": "1.25.4",
+  "number": "1.24.4",
   "title": "Zorn’s lemma.",
   "body": " Zorn's lemma   Let be a partially ordered set. If every chain has an upper bound, then has a maximal element: , there is an such that for all , if , then .    As stated above, Zorn's lemma is equivalent to the axiom of choice. You can find a proof of this fact in most introductory set theory texts.   "
 },
@@ -3074,7 +3065,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Tychonoff.html#lemma_product_nets",
   "type": "Lemma",
-  "number": "1.25.5",
+  "number": "1.24.5",
   "title": "Nets in products.",
   "body": " Nets in products   Let be topological spaces, and assume is compact. Let be a net in , and let be the projection onto map. If is a limit point of the net , then there is a such that is a limit point of .    Let be a limit point of . Define to be the set of all pairs , where is an open neighborhood of , and . For elements we declare if and only if and . It is easy to see that is a partially ordered set with respect to this ordering. To see that it is directed, given indices and in , since is a limit point of , we can find a where and . This satisfies and , as desired.  Now define the net as . (Recall, our original net is .) Since is compact, the net has a limit point . We claim that is a limit point of our original net . To prove this, it is enough to show that given any basic opens set containing , and any , we can find an index such that . Given containing and index , first pick an index such that . This is possible since is a limit point of . By definition the pair is an element of . Since is a limit point of the net , and since is an open neighborhood of , we can find an element such that and . By definition of and its partial ordering, we have , , and . We conclude that , as desired.   "
 },
@@ -3083,7 +3074,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_Tychonoff.html#th_Tychonoff_general",
   "type": "Theorem",
-  "number": "1.25.6",
+  "number": "1.24.6",
   "title": "Tychonoff theorem.",
   "body": " Tychonoff theorem   Given any collection of compact spaces the product space is compact.    Proof (following P. Chernoff)  We show that any net in has a limit point . In an effort to distinguish between the different types of tuple objects at play here, I will exclusively use tuple notation for nets and exclusively use function notation for elements of . This is already in force above: the net specifies an element for each index ; but each is itself a function satisfying .  Now define to be the set of all pairs , where and is a limit point of the net . Note how we are exploiting the function notation here: since elements of are just functions with domain , restricting the domain yields a map from to defined as . This map is in fact just the projection map defined as . It follows from this that this map is continuous.  Next, we define the relation on as follows: if and only if and . It is easy to see that is a partial ordering. We now proceed in two steps: (1) we will show that satisfies the conditions of Zorn's lemma, and hence that it has a maximal element ; (2) we will show that and hence that is a limit point of . It then follows that is compact, as desired.   Step 1: has a maximal element  First observe that is nonempty. Indeed, given any , the net is just a net in the compact space , and hence has a limit point . It follows that . (There is a slight subtlety here, which is that the space is homeomorphic to the (somewhat funny looking) product space via the map .)  Next we show that any chain in has an upper bound in . To this end, given any chain in , we define as follows:    ;    the function is defined as , where is any element of for which .   First observe that is a well-defined function: if , where , then since is a chain either or ; assuming without loss of generality that we have by definition, and hence that . Next we must show that , understood as an element of , is a limit point of the net . Using the usual product topology basis, it suffices to show that given any finite set and open set of the form , and given any , there is an such that . Since is finite, we have for some sets satisfying . Since is a chain, there is an index such that for all . Thus we may assume there is an element such that . By definition is a limit point of the net . Since , it follows that . Thus there is an such that . It follows easily that . This proves is a limit point of , and hence that . It is clear from the definition of , that it is an upper bound of .  Having shown that satisfies the chain condition for Zorn's lemma, we conclude that it contains a maximal element .    Step 2:  Let be a maximal element of , so that is a limit point of the net . We show that and hence that is a limit point of .  Assume by contradiction that , and let . Since is compact, by the net in has a limit point of the form . But then the element defined as and satisfies and , contradicting the fact that is a maximal element.    "
 },

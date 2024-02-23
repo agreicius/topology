@@ -1,5 +1,5 @@
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="s_regular">
-  <title>Regular spaces</title>
+  <title>Regular and normal spaces</title>
 <definition xml:id="d_separated">
     <title>Separated by open sets</title>
     <statement>
@@ -110,7 +110,7 @@
     </statement>
     <solution>
         <p>
-            Since the <m>K</m>-topology is finer than the standard topology on <m>\R</m>, <m>\R_K</m> is Hausdorff. To see that it is not regular, recall that <m>K=\{1/n\colon n\in \Z_+\}</m> is closed. I'll show that we cannot separate 0 and <m>K</m> with open sets. Indeed, suppose we have open disjoint sets <m>U, V</m> containing <m>0, K</m> respectively. Since <m>U</m> is open, it must contain an open basis element $B$ containing <m>0</m>; and since <m>U\cap K=\emptyset</m>, this basis element can be chosen of the form <m>(-\epsilon, \epsilon)-K</m>. Now choose <m>n\in \Z_+</m> such that <m>1/n\in (-\epsilon, \epsilon)</m>. Since <m>1/n\in K</m> we can find a basis element of the form <m>(1/n-\delta, 1/n+\delta)</m> that is contained in <m>V</m>. Furthermore, shrinking <m>\delta</m> if necessary, we can assume that <m>(1/n-\delta, 1/n+\delta)\subseteq (-\epsilon, \epsilon)</m>. But then clearly <m>(1/n-\delta, 1/n+\delta)\cap \left((-\epsilon, \epsilon)-K\right)\ne\emptyset</m>, and hence also <m>U\cap V\ne \emptyset</m>. Contradiction!
+            Since the <m>K</m>-topology is finer than the standard topology on <m>\R</m>, <m>\R_K</m> is Hausdorff. To see that it is not regular, recall that <m>K=\{1/n\colon n\in \Z_+\}</m> is closed. I'll show that we cannot separate <m>0</m> and <m>K</m> with open sets. Indeed, suppose we have open disjoint sets <m>U, V</m> containing <m>0, K</m> respectively. Since <m>U</m> is open, it must contain an open basis element <m>B</m> containing <m>0</m>; and since <m>U\cap K=\emptyset</m>, this basis element can be chosen of the form <m>(-\epsilon, \epsilon)-K</m>. Now choose <m>n\in \Z_+</m> such that <m>1/n\in (-\epsilon, \epsilon)</m>. Since <m>1/n\in K</m> we can find a basis element of the form <m>(1/n-\delta, 1/n+\delta)</m> that is contained in <m>V</m>. Furthermore, shrinking <m>\delta</m> if necessary, we can assume that <m>(1/n-\delta, 1/n+\delta)\subseteq (-\epsilon, \epsilon)</m>. But then clearly <m>(1/n-\delta, 1/n+\delta)\cap \left((-\epsilon, \epsilon)-K\right)\ne\emptyset</m>, and hence also <m>U\cap V\ne \emptyset</m>. Contradiction!
         </p>
     </solution>
 </example>
@@ -122,12 +122,18 @@
             <ol>
                 <li>
                     <p>
-                        <m>X</m> is regular if and only if for all <m>x\in X</m> and open set <m>U\ni x</m>, there is an open set <m>V\ni x</m> such that <m>\overline{V}\subseteq U</m>.
+                        <m>X</m> is regular if and only if for every <m>x\in X</m> and every open set <m>U</m> containing <m>x</m>, there is an open set <m>V</m> satisfying 
+                        <men xml:id="eq_reg">
+                            x\in V\subseteq \overline{V}\subseteq U
+                        </men>.
                     </p>
                 </li>
                 <li>
                     <p>
-                        <m>X</m> is normal if and only if for any closed set <m>A</m> and open set <m>U</m> containing <m>A</m>, there is an open set <m>V</m> containing <m>A</m> satisfying <m>\overline{V}\subseteq U</m>. 
+                        <m>X</m> is normal if and only if for every closed subset <m>A</m> and open set <m>U</m> containing <m>A</m>, there is an open set <m>V</m> satisfying 
+                        <men xml:id="eq_normal">
+                            A\subseteq V\subseteq \overline{V}\subseteq U
+                        </men>. 
                     </p>
                 </li>
             </ol>
@@ -157,7 +163,7 @@
     <title>Locally compact implies regular</title>
     <statement>
         <p>
-            Let <m>X</m> be locally compact and Hausdorff. Prove: <m>X</m> is regular. 
+            If <m>X</m> is locally compact Hausdorff, then <m>X</m> is regular. 
         </p>
     </statement>
     <proof>
@@ -169,7 +175,7 @@
 <remark>
     <title>Locally compact and non-normal</title>
     <p>
-        Yes, there are examples of locally compact <m>T_1</m>-spaces that are not normal. They are not particularly easy to build, however. Look it up! 
+        Yes, there are examples of locally compact Hausdorff spaces that are not normal. They are not particularly easy to build, however. Look it up! 
     </p>
 </remark>
 
@@ -235,4 +241,69 @@
         Interestingly, neither of the statements of <xref ref="th_regular_props"/> are true if <q>regular</q> is replaced with <q>normal</q>. It is worthwhile to examine what goes wrong in our arguments above if the element <m>x</m> is replaced with a closed set <m>A</m> throughout. 
     </p>
 </remark>
+<example xml:id="eg_Rl_normal">
+    <title><m>\R_\ell</m> is normal</title>
+    <statement>
+        <p>
+           Prove: <m>\R_\ell</m> is normal.  
+        </p>
+    </statement>
+    <solution>
+        <p>
+            Let <m>A, B</m> be disjoint closed subsets of <m>\R_\ell</m>. We can find open coverings <m>A\subseteq U=\bigcup_{a\in A}[a,x_a), B\subseteq V=\bigcup_{b\in B}[b, y_b)</m> satisfying <m>[a,x_a)\cap B=[b,y_b)\cap A=\emptyset</m> for all <m>a\in A, b\in B</m>. First observe that <m>[a,x_a)\cap [b,x_b)=\emptyset</m> for all <m>a\in A, b\in B</m>. Indeed, otherwise we'd have <m>[a,x_a)\cap [b,x_b)=[\max(a,b),\min(x_a,y_b))</m>, in which case either <m>a\in [a,x_a)\cap [b,x_b) </m> or <m>b\in [a,x_a)\cap [b,x_b)</m>: both are impossible since <m>a\notin [b,x_b)</m> and <m>b\notin [a,x_a)</m>. We conclude that <m>U\cap V=\emptyset</m>, proving that <m>A</m> and <m>B</m> can be separated by open sets. 
+        </p>
+    </solution>
+</example>
+<example>
+    <title><m>R_\ell\times R_\ell</m> is not normal</title>
+    <statement>
+        <p>
+            Prove: <m>\R_\ell\times \R_\ell</m> is not normal. 
+        </p>
+    </statement>
+    <solution>
+        <p>
+            See Munkres for the full proof. I'll content myself with a discussion of some of the key elements. First, let <m>D=\{(x,-x)\colon x\in\R\}\subseteq \R_\ell^2</m>. This set is closed in <m>\R^2</m>, and hence closed in <m>\R_\ell^2</m>, since the left limit product topology is finer than the standard topology. Next, as we saw on a previous homework, <m>D</m> is discrete as a subspace of <m>\R_\ell^2</m>: if follows that every subset of <m>D</m>, being itself closed in <m>D</m>, is closed in <m>\R_\ell^2</m>, using transitivity. In particular the two sets 
+            <md>
+                <mrow>A\amp=D\cap \Q^2=\{(x,-x)\colon x\in \Q\} \amp B\amp=D-A=\{(x,-x)\colon x\notin \Q\} </mrow>
+            </md>.
+            By what we said above, the disjoint sets <m>A</m> and <m>B</m> are closed in <m>\R_\ell^2</m>, but as it turns out you cannot separate them by open sets. The proof is not terribly difficult, but will seem somewhat convoluted without knowing about the Baire category theorem. As such, I omit it. (Munkres doesn't use this approach, choosing instead a proof by contradiction, but he outlines a proof in one of his exercises.)
+        </p>
+    </solution>
+</example>
+
+<theorem xml:id="th_regular_separable_normal">
+    <title>Regular+second countable <m>\implies</m> normal</title>
+    <statement>
+        <p>
+        If  <m>X</m> is regular and second countable, then <m>X</m> is normal. 
+        </p>
+    </statement>
+    <proof>
+        <p>
+            Assume <m>X</m> is regular and second countable. Let <m>\mathcal{B}=\{B_n\colon n\in \Z_+\}</m> be a countable basis for <m>X</m>. Let <m>A</m> and <m>B</m> be disjoint closed sets. By regularity, for each <m>a\in A</m> we can find disjoint open sets <m>U, V</m> containing <m>a</m> and <m>B</m> respectively. Since <m>\mathcal{B}</m> is a basis, we can find a basis element <m>B_{n_a}</m> such that <m>a\in B_{n_a}\subseteq \overline{B_{n_a}}\subseteq X-B</m>. The set of all such <m>B_{n_a}</m> is a countable subset of <m>\mathcal{B}</m>, giving rise to a countable cover <m>A\subseteq \bigcup_{n=1}^\infty U_n</m> satisfying <m>\overline{U_n}\subseteq X-B</m> for all <m>n</m>. Similarly, we can construct an open covering <m>B\subseteq \bigcup_{n=1}^\infty V_n</m> satisfying <m>\overline{V_n}\subseteq X-A</m> for all <m>n</m>. The corresponding open sets are not necessarily disjoint. However the sets <m>U=\bigcup_{n=1}^\infty U_n'</m> and <m>V=\bigcup_{n=1}^\infty V_n'</m>, where 
+            <md>
+                <mrow>U_n'\amp =U_n-\bigcup_{k=1}^n\overline{V_k} \amp 
+                    V_n'\amp =V_n-\bigcup_{k=1}^n\overline{U_k} </mrow>
+            </md>,
+            still cover <m>A</m> and <m>B</m> respectively, are still open, and are disjoint. 
+        </p>
+    </proof>
+</theorem>
+
+<theorem xml:id="th_compact_Hausdorff_normal">
+    <title>Compact+Hausdorff <m>\implies</m> normal</title>
+    <statement>
+        <p>
+        If <m>X</m> is a compact Hausdorff space, then <m>X</m> is normal. 
+        </p>
+    </statement>
+    <proof>
+        <p>
+            Since <m>X</m> is compact Hausdorff, it is locally compact Hausdorff, and hence regular by <xref ref="th_locally_compact_regular"/>. We use the equivalent condition of normality from <xref ref="th_regular_normal_equivalence"/>. To this end, let <m>A\subseteq X</m> be closed, and let <m>U</m> be any open set containing <m>U</m>. Since <m>X</m> is regular, for all <m>a\in A</m> we can find an open set <m>V_a</m> containing <m>a</m> such that <m>\overline{V_a}\subseteq U</m>. We have <m>A\subseteq \bigcup_{a\in A}V_a</m>. Since <m>X</m> is compact and <m>A</m> is closed, <m>A</m> is compact. Hence there is a finite subcovering <m>A\subseteq V=\bigcup_{k=1}^nV_{a_k}</m>. We have 
+            <me>\overline{V}=\bigcup_{k=1}^n\overline{V_{a_k}}\subseteq U</me>,
+            as desired.
+        </p>
+    </proof>
+</theorem>
 </section>

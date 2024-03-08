@@ -25,13 +25,15 @@
 <div class="para">Assume <span class="process-math">\(X\)</span> is second countable and let <span class="process-math">\(\mathcal{B}=\{B_n\}_{n=1}^\infty\)</span> be a countable basis.</div>
 <div class="para">For each <span class="process-math">\(x\text{,}\)</span> the set <span class="process-math">\(\mathcal{B}_x=\{B\in \mathcal{B}\colon x\in B\}\)</span> is easily seen to be a countable local basis at <span class="process-math">\(x\text{.}\)</span> This proves <span class="process-math">\(X\)</span> is first countable.</div>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(X=\bigcup_{i\in I}U_i\)</span> be an open cover of <span class="process-math">\(X\text{.}\)</span> Let</div>
+<div class="para">Let <span class="process-math">\(X=\bigcup_{i\in I}U_i\)</span> be an open cover of <span class="process-math">\(X\text{.}\)</span> We will show that there is a countable subcover, and hence that <span class="process-math">\(X\)</span> is Lindelöf. Let</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \mathcal{B}'=\{B\in\mathcal{B}\colon B\subseteq U_i \text{ for some } i\in I\}\text{.}
 \end{equation*}
 </div>
 <div class="para">Since <span class="process-math">\(\mathcal{B}\)</span> is countable, so is <span class="process-math">\(\mathcal{B}'\text{.}\)</span> Write <span class="process-math">\(\mathcal{B}'=\{B_1', B_2',\dots\}\text{.}\)</span> For each <span class="process-math">\(n\in \Z_+\text{,}\)</span> pick an index <span class="process-math">\(i_n\in I\)</span> such that <span class="process-math">\(B'_n\subseteq U_{i_n}\text{.}\)</span> We claim that <span class="process-math">\(X=\bigcup_{n=1}^\infty U_{i_n}\text{,}\)</span> and thus that a countable subcovering of <span class="process-math">\(\{U_i\}_{i\in I}\text{.}\)</span> Indeed, for any <span class="process-math">\(x\in X\text{,}\)</span> we have <span class="process-math">\(x\in B\subseteq U_i\)</span> for some <span class="process-math">\(i\in I\)</span> and <span class="process-math">\(B\in \mathcal{B}\text{.}\)</span> It follows that <span class="process-math">\(B=B'_n\)</span> for some <span class="process-math">\(n\text{,}\)</span> in which case <span class="process-math">\(x\in B_n'\subseteq U_{i_n}\text{,}\)</span> as desired.</div>
+</div>
+<div class="para">Lastly we show that <span class="process-math">\(X\)</span> is separable. For each <span class="process-math">\(n\in \Z_+\)</span> let <span class="process-math">\(q_n\)</span> be any element of <span class="process-math">\(B_n\text{.}\)</span> I claim that the set <span class="process-math">\(Q=\{q_n\colon n\in \Z_+\}\)</span> is dense, showing <span class="process-math">\(X\)</span> is separable. Indeed, given any open set <span class="process-math">\(U\text{,}\)</span> we have <span class="process-math">\(B_n\subseteq U\)</span> for some <span class="process-math">\(n\text{,}\)</span> in which case <span class="process-math">\(q_n\in U\text{.}\)</span>
 </div>
 </li>
 <li><div class="para">This is a (classic) homework exercise. Enjoy!</div></li>

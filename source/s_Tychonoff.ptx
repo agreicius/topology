@@ -1,66 +1,8 @@
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="s_Tychonoff">
     <title>Tychonoff theorem via nets</title> 
-    <introduction>
-        <p>
-            Our main application of the theory of nets is (a) to give a characterization of compactness in terms of convergence and limit points of nets (<xref ref="th_nets_compactness" text="global"/>), and (b) to use this characterization to prove the <xref ref="th_Tychonoff_general" text="custom">Tychonoff theorem </xref>
-        </p>
-    </introduction>
-    <subsection xml:id="ss_nets_compactness">
-        <title>Nets and compactness</title>
-        
-    
-    <theorem xml:id="th_nets_compactness">
-        <title>Nets and compactness</title>
-        <statement>
-            <p>
-               Let <m>X</m> be a topological space. The following statements are equivalent.  
-            <ol>
-                <li>
-                    <p>
-                        <m>X</m> is compact. 
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Every net in <m>X</m> has a limit point. 
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Every net in <m>X</m> has a convergent subnet. 
-                    </p>
-                </li>
-                
-            </ol>
-        </p>
-        </statement>
-        <proof>
-            <p>
-                Statements (ii) and (iii) are immediately seen to be equivalent thanks to <xref ref="th_nets_limit_points"/>. We will show that (i) and (ii) are equivalent. 
-            </p>
-            <case>
-                <title>Implication: (i) <m>\implies</m> (ii)</title>
-                <p>
-                    Let <m>f=(x_i)_{i\in I}</m> be a net in <m>X</m>. For each <m>i\in I</m> define <m>C_i=\overline{\{x_j\colon j\geq i\}}</m>. Clearly each <m>C_i</m> is closed and nonempty. Furthermore, for any finite collection <m>i_1,i_2,\dots, i_n</m> we have <m>\bigcap_{k=1}^n C_{i_k}\ne \emptyset</m>, since we can find a <m>j</m> such that <m>j\geq i_k</m> for all <m>1\leq k\leq n</m>, and hence <m>x_j\in \bigcap_{k=1}^n C_{i_k}</m>. Since <m>X</m> is assumed to be compact, there is an element <m>x\in \bigcap_{i\in I}C_i</m>. We show that <m>x</m> is a limit point of <m>(x_i)_{i\in I}</m>. Indeed, given any open set <m>U</m> containing <m>x</m> and any <m>i\in I</m>, since <m>x\in C_i=\overline{\{x_j\colon j\geq i\}</m>, there is an element <m>x_j</m> with <m>j\geq i</m> such that <m>x_j\in U</m>. This proves that <m>(x_i)_{i\in I}</m> is cofinally in <m>U</m>, as desired. 
-                </p>
-                
-            </case>
-            <case>
-                <title>Implication: (ii) <m>\implies</m> (i)</title>
-                <p>
-                    We prove the contrapositive. Suppose <m>X</m> is not compact, and let <m>\mathcal{U}=\{U_i\}_{i\in I}</m> be a cover with no finite cover. Define <m>J</m> to the be the set of all pairs <m>(K, x)</m>, where <m>K</m> is a finite subset of <m>I</m> and <m>x\in X-\bigcup_{k\in K}U_k</m>. (Note that <m>X-\bigcup_{k\in K}U_k\ne\emptyset</m> since <m>\mathcal{U}</m> has no finite subcover.) It is easy to see that <m>J</m> is a directed set under the quasiordering defined as <m>(K, x)\leq (K', x')</m> if and only if <m>K\subseteq K'</m>. Define the net <m>f\colon J\rightarrow X</m> as <m>f((K, x))=x</m>.  We show that <m>f</m> has no limit point. To this end, given any <m>y\in Y</m>, we have <m>y\in U_{i_0}</m> for some <m>i_0\in I </m>. We will show that the net <m>f</m> is not cofinally in <m>U_{i_0}</m>. To this end consider the index <m>j=({i_0}, x)\in J</m>, where <m>x\in X-U_{i_0}</m>. For all <m>j'=(K, x)</m> with <m>j'\geq j</m>, we have <m>K\supseteq \{i_0\}</m>, in which case <m>f(j')=x\in X-\bigcup_{k\in K}U_k\subseteq X-U_{i_0}</m>. Thus there is no <m>j'\geq j</m> satisfying <m>f(j)\in U_{i_0}</m>.    
-                </p>
-            </case>
-        </proof>
-    </theorem>
-</subsection>
-    <subsection xml:id="ss_Tychonoff">
-        <title>Tychonoff's theorem</title>
-        <introduction>
             <p>
                 We now give a proof of Tychonoff's theorem using nets. The first such proof was given by UC Berkeley mathematician John L. Kelley in his 1950 paper <em>Convergence in topology</em>. Our proof draws from a couple of slight improvements to Kelley's original argument, both proffered by additional UC Berkeley mathematicians. (Go Bears!) Paul Chernoff's <url href="https://www.jstor.org/stable/2324485">A simple proof of Tychonoff's theorem via nets</url> removed the need for universal nets in Kelley's argument; Charles Pugh is credited for <xref ref="lemma_product_nets"/>, which removes the argument's reliance on subnets. All of these various proofs invoke <xref ref="th_Zorns_lemma" text="custom">Zorn's lemma</xref>, which as it turns out is equivalent to the axiom of choice. You may be asking: Is there a proof of the Tychonoff theorem that does not rely on the axiom of choice? Amazingly, the answer is no! In fact, Kelley himself proved that Tychonoff's theorem is equivalent to the axiom of choice in another paper from 1950: <em>The Tychonoff product theorem implies the axiom of choice</em>. His argument is simply too elegant not to include here. (Note: Kelley's original argument had a minor flaw that is corrected in the proof below. I encourage you to look at the original article and see if you can find the invalid step.)
             </p>
-        </introduction>
         <theorem xml:id="th_Tychonoff_choice">
             <title>Tychonoff implies AC (Kelley)</title>
             <statement>
@@ -132,16 +74,16 @@
         <title>Nets in products</title>
         <statement>
             <p>
-                Let <m>X, Y</m> be topological spaces, and assume <m>Y</m> is compact. Let <m>f=((x_i, y_i))_{i\in I}</m> be a net in <m>X\times Y</m>, and let <m>\pi_X\colon X\times Y\rightarrow X</m> be the projection onto <m>X</m> map. If <m>x\in X</m> is a limit point of the net <m>\pi_X\circ f=(x_i)_{i\in I}</m>, then there is a <m>y\in Y</m> such that <m>(x,y)</m> is a limit point of <m>f</m>. 
+                Let <m>X, Y</m> be topological spaces, and assume <m>Y</m> is compact. Let <m>f=((x_i, y_i))_{i\in I}</m> be a net in <m>X\times Y</m>. If <m>x\in X</m> is a limit point of the net <m>(x_i)_{i\in I}</m>, then there is a <m>y\in Y</m> such that <m>(x,y)</m> is a limit point of <m>f</m>. 
             </p>
         </statement>
         <proof>
             <p>
-                Let <m>x\in X</m> be a limit point of <m>\pi_X\circ f=(x_i)_{i\in I}</m>. Define <m>J</m> to be the set of all pairs <m>(U,i)</m>, where <m>U</m> is an open neighborhood of <m>x</m>, and <m>x_i\in U</m>. For elements <m>(U,i), (U',i')\in J</m> we declare <m>(U,i)\leq (U',i')</m> if and only if <m>U\supseteq U'</m> and <m>i\leq i'</m>. It is easy to see that <m>J</m> is a partially ordered set with respect to this ordering. To see that it is directed, given indices <m>j=(U, i)</m> and <m>j'=(U', i')</m> in <m>J</m>,  since <m>x</m> is a limit point of <m>(x_{i})_{i\in I}</m>, we can find a <m>j''=(U\cap U', i'')</m> where <m>i,i'\leq i''</m> and <m>x_{i''}\in U\cap V</m>. This <m>j''</m> satisfies <m>j''\in J</m> and <m>j,j'\leq j''</m>, as desired. 
+                Let <m>x\in X</m> be a limit point of <m>(x_i)_{i\in I}</m>. Define <m>J</m> to be the set of all pairs <m>(U,i)</m>, where <m>U</m> is an open neighborhood of <m>x</m>, and <m>x_i\in U</m>. For elements <m>(U,i), (U',i')\in J</m> we declare <m>(U,i)\leq (U',i')</m> if and only if <m>U\supseteq U'</m> and <m>i\leq i'</m>. It is easy to see that <m>J</m> is a partially ordered set with respect to this ordering. We now show that $J$ is directed. Fix elements <m>j=(U, i)</m> and <m>j'=(U', i')</m> in <m>J</m>. Since <m>x</m> is a limit point of <m>(x_{i})_{i\in I}</m> and <m>U\cap U'</m> is an open neighborhood of <m>x</m>, we can find an index <m>i''</m> satisfying <m>i''\geq i</m>, <m>i''\geq i'</m>, and <m>x_{i''}\in U\cap U'</m>. It follows that <m>j''=(U\cap U', i'')</m> is an element of <m>J</m> and <m>j,j'\leq j''</m>, as desired. 
             </p>
             <p>
                 Now define the net <m>g\colon J\rightarrow Y</m> as <m>g((U,i))=y_i</m>. (Recall, our original net is <m>f=((x_i,y_i))_{i\in I}</m>.) 
-                Since <m>Y</m> is compact, the net <m>g</m> has a limit point <m>y\in Y</m>. We claim that <m>(x,y)</m> is a limit point of our original net <m>f=((x_i,y_i))_{i\in I}</m>.  To prove this, it is enough to show that given any basic opens set <m>U\times V</m> containing <m>(x,y)</m>, and any <m>i\in I</m>, we can find an index <m>i'\geq i</m> such that <m>(x_{i'},y_{i'})\in U\times V</m>. Given <m>U\times V</m> containing <m>(x,y)</m> and index <m>i\in I</m>, first pick an index <m>i''\geq i</m> such that <m>x_{i''}\in U</m>. This is possible since <m>x</m> is a limit point of <m>(x_i)_{i\in I}</m>. By definition the pair <m>j=(U,i'')</m> is an element of <m>J</m>. Since <m>y</m> is a limit point of the net <m>g</m>, and since <m>V</m> is an open neighborhood of <m>y</m>, we can find an element <m>j'=(U',i')</m> such that <m>j'\geq j</m> and <m>y_{i'}\in V</m>. By definition of <m>J</m> and its partial ordering, we have <m>i'\geq i</m>, <m>U'\subseteq U</m>, and <m>x_{i'}\in U'</m>. We conclude that <m>(x_{i'},y_{i'})\in U'\times V\subseteq U\times V</m>, as desired. 
+                Since <m>Y</m> is compact, the net <m>g</m> has a limit point <m>y\in Y</m>. We claim that <m>(x,y)</m> is a limit point of our original net <m>f=((x_i,y_i))_{i\in I}</m>.  To prove this, it is enough to show that given any basic opens set <m>U\times V</m> containing <m>(x,y)</m>, and any <m>i\in I</m>, we can find an index <m>i'\geq i</m> such that <m>(x_{i'},y_{i'})\in U\times V</m>. Given <m>U\times V</m> containing <m>(x,y)</m> and index <m>i\in I</m>, first pick an index <m>i''\geq i</m> such that <m>x_{i''}\in U</m>. This is possible since <m>x</m> is a limit point of <m>(x_i)_{i\in I}</m>. By definition the pair <m>j=(U,i'')</m> is an element of <m>J</m>. Since <m>y</m> is a limit point of the net <m>g</m>, and since <m>V</m> is an open neighborhood of <m>y</m>, we can find an element <m>j'=(U',i')</m> such that <m>j'=(U',i')\geq j=(U,i'')</m> and <m>g(j')=y_{i'}\in V</m>. By definition of <m>J</m> and its partial ordering, we have <m>i'\geq i</m>, <m>U'\subseteq U</m>, and <m>x_{i'}\in U'</m>. We conclude that <m>(x_{i'},y_{i'})\in U'\times V\subseteq U\times V</m>, as desired. 
             </p>
         </proof>
     </lemma>
@@ -155,18 +97,27 @@
         <proof>
             <title>Proof (following P. Chernoff)</title>
             <p>
-                We show that any net <m>(f_i)_{i\in I}</m> in <m>X</m> has a limit point <m>f\in X</m>. In an effort to distinguish between the different types of tuple objects at play here, I will exclusively use tuple notation for nets and exclusively use function notation for elements of <m>X=\prod_{t\in T}X_t</m>. This is already in force above: the net <m>(f_i)_{i\in I}</m> specifies an element <m>f_i\in X</m> for each index <m>i\in I</m>; but each <m>f_i</m> is itself a function <m>f_i\colon T\rightarrow \bigcup_{t\in T}X_t</m> satisfying <m>f(t)\in X_t</m>.   
+                Assume <m>X=\prod_{t\in T}X_t</m>, where <m>X_t</m> is compact for all <m>t\in T</m>. We will show that <m>X</m> is compact by proving that any net in <m>X</m> has a limit point. In an effort to distinguish between the different types of tuple objects at play here, we will (almost exclusively) use tuple notation for nets and (almost exclusively) use function notation for elements of <m>X=\prod_{t\in T}X_t</m>.   
             </p>
             <p>
-                Now define <m>\mathcal{F}</m> to be the set of all pairs <m>(S,g)</m>, where <m>S\subseteq T</m> and <m>g\in X_S=\prod_{t\in S}X_t</m> is a limit point of the net <m>(f_i\vert_S)_{i\in I}</m>. Note how we are exploiting the function notation here: since elements of <m>X_S</m> are just functions with domain <m>S\subseteq T</m>, restricting the domain yields a map from <m>X</m> to <m>X_S</m> defined as <m>f\mapsto f\vert_S</m>. This map is in fact just the projection map <m>\pi_S\colon X\rightarrow \prod_{t\in S}X_t</m> defined as <m>\pi_S(f)=(\pi_t(f))_{t\in S}</m>. It follows from this that this map is continuous.   
+                Before continuing, we introduce some additional notation. Given any subset <m>S\subseteq T</m>, we let 
+                <me>
+                    X_S=\prod_{t\in S} X_t=\{f\colon S\rightarrow \bigcup_{t\in S}X_t\colon f(t)\in X_t \text{ for all } t\in S\}
+                </me>, 
+                and we define 
+                <md>
+                    <mrow>\pi_S\colon X \amp \rightarrow X_S</mrow>
+                    <mrow> f=(x_t)_{t\in T} \amp\longmapsto f\vert_S=(x_t)_{t\in S} </mrow>
+                </md>.
+                In other words <m>X_S</m> is the product of all the <m>S</m>-components of <m>X</m>, and <m>\pi_S</m> is the projection map from <m>X</m> onto this product. Observe that if <m>S=\{t_0\}</m> is a singleton, then <m>\prod_{t\in \{t_0\}}X_t</m> is homeomorphic with <m>X_{t_0}</m> via the map <m>f\mapsto f(t_0)</m>. 
             </p>
             <p>
-                Next, we define the relation <m>\leq</m> on <m>\mathcal{F}</m> as follows: <m>(S,g)\leq (S', g')</m> if and only if <m>S\subseteq S'</m> and <m>g'\vert_{S}=g</m>. It is easy to see that <m>\leq</m> is a partial ordering. We now proceed in two steps: (1) we will show that <m>\mathcal{F}</m> satisfies the conditions of Zorn's lemma, and hence that it has a maximal element <m>(S^*, g^*)</m>; (2) we will show that <m>S^*=T</m> and hence that <m>g^*=f\in X</m> is a limit point of <m>(f_i)_{i\in I}</m>. It then follows that <m>X</m> is compact, as desired.  
+                Now fix any net <m>h=(f_i)_{i\in I}</m> in <m>X</m>. Define <m>\mathcal{F}</m> to be the set of all pairs <m>(S,g)</m>, where <m>S\subseteq T</m> and <m>g\in X_S=\prod_{t\in S}X_t</m> is a limit point of the net <m>(f_i\vert_S)_{i\in I}</m> in <m>X_S</m>. (Using our notation introduced above, we have <m>(f_i\vert_S)_{i\in I}=\pi_S\circ h</m>.) We give <m>\mathcal{F}</m> the structure of a partial ordered set as follows: given elements <m>(S,g)</m> and <m>(S',g')</m>, we define <m>(S,g)\leq (S',g')</m> if and only if <m>S\subseteq S'</m> and <m>g'\vert_S=g</m>. (It is easy to see that <m>\leq</m> is indeed a partial order.) Our proof now proceeds in two steps: (1) we will show that <m>(\mathcal{F},\leq)</m> satisfies the conditions of Zorn's lemma, and hence has a maximal element <m>(S^*, g^*)</m>; (2) we will show that <m>S^*=T</m> and hence that <m>g^*=f\in X=\prod_{t\in T}X_t</m> is a limit point of the net <m>h=(f_i)_{i\in I}</m>. 
             </p>
             <proof>
                 <title>Step 1: <m>\mathcal{F}</m> has a maximal element</title>
                 <p>
-                   First observe that <m>\mathcal{F}</m> is nonempty. Indeed, given any <m>t_0\in T</m>, the net <m>(f_i\vert_{\{t_0\}})_{i\in I}</m> is just a net in the compact space <m>X_{t_0}</m>, and hence has a limit point <m>g</m>. It follows that <m>(\{t_0\}, g)\in \mathcal{F}</m>. (There is a slight subtlety here, which is that the space <m>X_{t_0}</m> is homeomorphic to the (somewhat funny looking) product space <m>\prod_{t\in \{t_0\}}X_t</m> via the map <m>f\mapsto f(t_0)</m>.)
+                   First observe that <m>\mathcal{F}</m> is nonempty. Indeed, given any <m>t_0\in T</m>, the net <m>(f_i\vert_{\{t_0\}})_{i\in I}</m> is just a net in the space <m>X_{\{t_0\}}=\prod_{t\in \{t_0\}}X_t</m>. As we observed above, this space is homeomorphic to <m>X_{t_0}</m>, and hence is compact. By <xref ref="th_nets_compactness"/>, the net <m>(f_i\vert_{\{t_0\}})_{i\in I}</m> has a limit point <m>g</m>. We conclude that <m>(\{t_0\}, g)\in \mathcal{F}</m>. 
                 </p>
                 <p>
                     Next we show that any chain in <m>\mathcal{F}</m> has an upper bound in <m>\mathcal{F}</m>. To this end, given any chain <m>\mathcal{C}</m> in <m>\mathcal{F}</m>, we define <m>(\widetilde{S},\widetilde{g})</m> as follows: 
@@ -178,12 +129,17 @@
                         </li>
                         <li>
                             <p>
-                                the function <m>\widetilde{g}\colon \widetilde{S}\rightarrow \bigcup_{t\in \widetilde{S}}X_t</m> is defined as <m>\widetilde{g}(s)=g(s)</m>, where <m>(S,g)</m> is any element of <m>\mathcal{F}</m> for which <m>s\in S</m>.
+                                the function <m>\widetilde{g}\colon \widetilde{S}\rightarrow \bigcup_{t\in \widetilde{S}}X_t</m> is defined as <m>\widetilde{g}(s)=g(s)</m>, where <m>(S,g)</m> is any element of <m>\mathcal{C}</m> for which <m>s\in S</m>.
                             </p>
                         </li>
                     </ul> 
-                    First observe that <m>\widetilde{g}</m> is a well-defined function: if <m>s\in S\cap S'</m>, where <m>(S,g),(S',g')\in \mathcal{F}</m>, then since <m>\mathcal{C}</m> is a chain either <m>(S,g)\leq (S',g')</m> or <m>(S',g')\leq (S,g)</m>; assuming without loss of generality that <m>(S,g)\leq (S',g')</m> we have <m>g'\vert_S=g</m> by definition, and hence that <m>g(s)=g'(s)</m>. Next we must show that <m>\widetilde{g}</m>, understood as an element of <m>\prod_{t\in \widetilde{S}}X_t</m>, is a limit point of the net <m>(f_i\vert_{\widetilde{S}})_{i\in I}</m>. Using the usual product topology basis, it suffices to show that given any finite set <m>F\subseteq \widetilde{S}</m> and open set of the form <m>U=\prod_{t\in F}U_t\times \prod_{t\in \widetilde{S}-F}X_t</m>, and given any <m>i\in I</m>, there is an <m>i'\geq i</m> such that <m>f_i\vert_{\widetilde{S}}\in U</m>. Since <m>F</m> is finite, we have <m>F\subseteq \bigcup_{k=1}^nS_k</m> for some sets <m>S_k</m> satisfying <m>(S_k, g_k)\in \mathcal{C}</m>. Since <m>\mathcal{C}</m> is a chain, there is an index <m>k_0\in \{k_1,k_2,\dots, k_n\}</m> such that <m>S_{k_0}\supseteq S_k</m> for all  <m>1\leq k\leq n</m>. Thus we may assume there is an element <m>(S, g)\in \mathcal{F}</m> such that <m>F\subseteq S</m>. By definition <m>g</m> is a limit point of the net <m>(f_i\vert_S)_{i\in I}</m>. Since <m>\widetilde{g}\vert_S=g</m>, it follows that <m>g\in \prod_{t\in F}X_t\times \prod_{t\in S-F}X_t</m>. Thus there is an <m>i'\geq i</m> such that <m>f_{i'}\vert_S\in \prod_{t\in F}X_t\times \prod_{t\in S-F}X_t</m>. It follows easily that <m>f_{i'}\vert_{\widetilde{S}}\in \prod_{t\in F}X_t\times \prod_{t\in \widetilde{S}-F}X_t</m>. This proves <m>\widetilde{g}</m> is a limit point of <m>(f_i\vert_\widetilde{S})_{i\in I}</m>, and hence that <m>(\widetilde{S}, \widetilde{g})\in \mathcal{F}</m>. It is clear from the definition of <m>(\widetilde{S},\widetilde{g})</m>, that it is an upper bound of <m>\mathcal{C}</m>. 
+                    Assuming <m>(\widetilde{S},\widetilde{g})</m> is indeed a well-defined element of <m>\mathcal{F}</m>, it clear that it is an upper bound of <m>\mathcal{C}</m>. 
                 </p>
+                <p>We first observe that <m>\widetilde{g}</m> is a well-defined function: if <m>s\in S\cap S'</m>, where <m>(S,g),(S',g')\in \mathcal{F}</m>, then since <m>\mathcal{C}</m> is a chain either <m>(S,g)\leq (S',g')</m> or <m>(S',g')\leq (S,g)</m>; assuming without loss of generality that <m>(S,g)\leq (S',g')</m> we have <m>g'\vert_S=g</m> by definition, and hence that <m>g(s)=g'(s)</m>.
+                    </p>
+                    <p>
+                        Next we show that <m>\widetilde{g}\in X_{\widetilde{S}}=\prod_{t\in \widetilde{S}}X_t</m> is a limit point of the net <m>(f_i\vert_{\widetilde{S}})_{i\in I}</m>.  To this end, let <m>U</m> be an open neighborhood of <m>\widetilde{g}</m> in <m>X_{\widetilde{S}}</m>. Shrinking if necessary, we may assume that <m>U=\prod_{t\in F}U_t\times \prod_{t\in \widetilde{S}-F}X_t</m>, where <m>F</m> is a finite subset of <m>\widetilde{S}</m>. Note that in general we have <m>g\in U</m> for some <m>g\in X_{\widetilde{S}}</m> if and only if <m>g(t)\in U_t</m> for all <m>t\in F</m>. Now, given any <m>i_0\in I</m>, we seek an index <m>i'\geq i_0</m> such that <m>f_{i'}\vert_{\widetilde{S}}\in U</m>.  Since <m>F</m> is a finite subset of <m>\widetilde{S}=\bigcup\limits_{(S,g)\in \mathcal{C}} S</m>, we have <m>F\subseteq \bigcup_{k=1}^nS_k</m> for some sets <m>S_k</m> satisfying <m>(S_k, g_k)\in \mathcal{C}</m>. Since <m>\mathcal{C}</m> is a chain, this finite collection of elements <m>(S_k, g_k)</m> has a maximal element. It follows that <m>F\subseteq S_k</m> for some <m>k</m>: <ie/>, we may assume that <m>F\subseteq S</m> for some element <m>(S,g)\in \mathcal{C}</m>. By definition <m>g</m> is a limit point of the net <m>(f_i\vert_S)_{i\in I}</m>. Since <m>\widetilde{g}\vert_S=g</m>, it follows that <m>g(t)\in U_t</m> for all <m>t\in F</m> and thus <m>g\in U'=\prod_{t\in F}U_t\times \prod_{t\in S-F}X_t</m>. Since <m>g</m> is a limit point of <m>(f_i\vert_S)_{i\in I}</m>, there is an <m>i'\geq i_0</m> such that <m>f_{i'}\vert_S\in \prod_{t\in F}U_t\times \prod_{t\in S-F}X_t</m>: or equivalently, that <m>f_{i'}\vert_S(t)\in U_t</m> for all <m>t\in F</m>.  But then the same reasoning shows <m>f_{i'}\vert_{\widetilde{S}}\in \prod_{t\in F}U_t\times \prod_{t\in \widetilde{S}-F}X_t</m>, as desired. 
+                    </p>
                 <p>
                     Having shown that <m>\mathcal{F}</m> satisfies the chain condition for Zorn's lemma, we conclude that it contains a maximal element <m>(S^*, g^*)</m>. 
                 </p>
@@ -194,12 +150,37 @@
                     Let <m>(S^*, g^*)</m> be a maximal element of <m>\mathcal{F}</m>, so that <m>g^*</m> is a limit point of the net <m>(f_i\vert_{S^*})_{i\in I}</m>. We show that <m>S^*</m> and hence that <m>g^*=f\in X</m> is a limit point of <m>(f_i)_{i\in I}</m>. 
                 </p>
                 <p>
-                    Assume by contradiction that <m>S^*\ne T</m>, and let <m>t_0\in T-S^*</m>. Since <m>X_{t_0}</m> is compact, by <xref ref="lemma_product_nets"/> the net <m>(f_i\vert_{S^*\cup \{t_0\}})_{i\in I}</m> in <m>X_{S^*\cup {t_0}}=X_{S^*}\times X_{t_0}</m> has a limit point of the form <m>(g^*, x_{t_0})</m>. But then the element <m>(S,g)\in \mathcal{F}</m> defined as <m>S=S^*\cup \{t_0\}</m> and 
+                    Assume by contradiction that <m>S^*\ne T</m>. Pick any <m>t_0\in T-S^*</m>, and define <m>S=S^*\cup\{t_0\}</m>. We will show that there is a <m>g\in X_{S}</m> such that <m>g\vert_{S^*}=g^*</m>, and <m>g</m> is a limit point of <m>(f_i\vert_{S})_{i\in I}</m>. This is a contradiction since then <m>(S^*,g^*)\leq (S,g)</m> but <m>(S^*,g^*)\ne (S,g)</m>. 
+                </p>
+                <p>
+                Observe first that <m>X_{S}</m> is homeomorphic to <m>X_{S^*}\times X_{t_0}</m> via the map 
+                <md>
+                    <mrow>\phi\colon X_S \amp \rightarrow X_{S^*}\times X_{t_0}</mrow>
+                    <mrow>f \amp \mapsto (f\vert_{S^*}, f(t_0))</mrow>
+                </md>.
+                Let <m>\pi\colon X_{S^*}\times X_{t_0}\rightarrow X_{S^*}</m> be projection onto the first component. The commutative diagram below nicely summarizes the maps in play. 
+                <image xml:id="im_Tych_comm" width="70%">
+                    <shortdescription>Commutative projection diagram</shortdescription>
+                    <latex-image >
+                        \begin{tikzcd}
+                            f \arrow[ddd,mapsto, bend right=20] \arrow[rrr,mapsto, bend left=20] \arrow[dr,phantom,sloped, "\in"] \amp[-30] \amp  \amp[-30] (f\vert_{S^*},f(t_0))\arrow[dl,phantom,sloped, "\ni"]\\[-20]
+                             \amp X_{S} \arrow[r,"\phi"] \arrow[d] \amp X_{S^*}\times X_{t_0} \arrow[dl,"\pi"] \amp  \\ [10]
+                             \amp X_{S^*} \\ [-20]
+                             f\vert_{S^*}\arrow[ur,phantom,sloped, "\in"]
+                        \end{tikzcd}
+                        <!-- \begin{tikzcd}
+                            f \arrow[d,mapsto] \arrow[r,phantom,description, "\in"]  \amp [-25] X_{S} \arrow[r,"\phi"] \arrow[d] \amp X_{S^*}\times X_{t_0} \arrow[dl,"\pi"] \amp  \\
+                            f\vert_{S^*}\arrow[r,phantom,description, "\in"] \amp X_{S^*}
+                        \end{tikzcd} -->
+                    </latex-image>
+                </image>
+                Since <m>X_{t_0}</m> is compact, and since <m>g^*</m> is a limit point of the net <m>(f_i\vert_{S^*})_{i\in I}</m> in <m>X_{S^*}</m>, by <xref ref="lemma_product_nets"/> the net <m>(f_i\vert_{S^*}, f_i(t_0))_{i\in I}</m> in <m>X_{S^*}\times X_{t_0}</m> has a limit point of the form <m>(g^*, x_{t_0})</m>. Since <m>\phi</m> is a homeomorphism, pulling everything back to <m>X_S</m>, we see that the function <m>g\in \pi_{t\in S} X_t</m> defined as
                     <me>
                     g(s)=\begin{cases} g^*(s)\amp \text{if } s\in S^* \\
                         x_{t_0}\amp \text{if } s=t_0
                         \end{cases}
                     </me>
+                    is a limit point of <m>(f_i\vert_{S})_{i\in I}</m>. We conclude that <m>(S,g)</m> is an element of <m>\mathcal{F}</m> and satisfies 
                     satisfies <m>(S,g)\geq (S^*, g^*)</m> and <m>(S,g)\ne (S^*, g^*)</m>, contradicting the fact that <m>(S^*, g^*)</m> is a maximal element. 
                 </p>
             </proof>
@@ -207,7 +188,6 @@
         
     </theorem>
     
-    </subsection>
     <!-- <definition xml:id="d_universal_net">
         <title>Universal net</title>
         <statement>

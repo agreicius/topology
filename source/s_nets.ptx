@@ -1,5 +1,8 @@
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="s_nets">
     <title>Nets</title>
+    <p>
+        Nets are a relatively straightforward generalization of a sequence <m>(x_n)_{n\in \Z_+}</m> obtained by replacing the index set <m>\Z_+</m> with the more general notion of a <em>directed set</em>. Our main application of the theory of nets is (a) to give a characterization of compactness in terms of convergence and limit points of nets (<xref ref="th_nets_compactness" text="global"/>), and (b) to use this characterization to prove the <xref ref="th_Tychonoff_general" text="custom">Tychonoff theorem </xref>
+    </p>
 <definition xml:id="d_partial_order">
     <title>Partial ordering axioms</title>  
     <statement>
@@ -115,7 +118,7 @@
         <me>
             \mathcal{P}\colon a=x_0 &lt; x_1&lt; \dots &lt; x_n=b
         </me>
-        and <m>\boldx=(x_1^*, x_2^*,\dots, x_n^*)</m> is a choice of <q>sample points</q> in each subinterval of  <m>\mathcal{P}</m>. The relation <m>(\mathcal{P},\boldx)\leq (\mathcal{P}', \boldx')\iff \mathcal{P}' \text{ is a refinement of } \mathcal{P}</m> is a quasiordering on <m>I</m> satisfying (D). To any function <m>f\colon [a,b]\rightarrow \R</m>  we can associate the net <m>(R_i)_{i\in I}</m>, where for each <m>i=(\mathcal{P}, \boldx)\in I</m> we define <m>R_i</m> to be the corresponding Riemann sum of <m>f</m>. The statement that the Riemann integral <m>\int_a^b f\, dx</m> exists and is equal to <m>R</m> is then equivalent to the statement that if and the net <m>(R_i)_{i\in I}</m> converges to <m>R</m>.  
+        and <m>\boldx=(x_1^*, x_2^*,\dots, x_n^*)</m> is a choice of <q>sample points</q> in each subinterval of  <m>\mathcal{P}</m>. The relation <m>(\mathcal{P},\boldx)\leq (\mathcal{P}', \boldx')\iff \mathcal{P}' \text{ is a refinement of } \mathcal{P}</m> is a quasiordering on <m>I</m> satisfying (D). To any function <m>f\colon [a,b]\rightarrow \R</m>  we can associate the net <m>(R_i)_{i\in I}</m>, where for each <m>i=(\mathcal{P}, \boldx)\in I</m> we define <m>R_i</m> to be the corresponding Riemann sum of <m>f</m>. The statement that the Riemann integral <m>\int_a^b f\, dx</m> exists and is equal to <m>R</m> is then equivalent to the statement that the net <m>(R_i)_{i\in I}</m> converges to <m>R</m>.  
     </p>
     
 </example>
@@ -152,13 +155,10 @@
             <ol>
                 <li>
                     <p>
-                        Assume <m>x\in \overline{A}</m>. For all open sets <m>U</m> containing <m>x</m>, choose <m>x_U\in U\cap A</m>. Let <m>I</m> be the set of all open neighborhoods of <m>x</m>, considered as a directed set with reverse inclusion. Define <m>f\colon I\rightarrow A</m> as <m>f(U)=x_U</m>. The net <m>(x_U)_{U\in I}</m> converges to <m>x</m>. Indeed, for any open set <m>V</m> containing <m>x</m>, we set <m>i_0=V\in I</m>: if <m>U\geq V</m>, then <m>U\subseteq V</m> (by definition of our ordering), and hence <m>x_U\in U\subseteq V</m>. 
+                        First we show the forward implication. Assume <m>x\in \overline{A}</m>. Let <m>I</m> be the set of all pairs <m>i=(U,a)</m>, where <m>U</m> is an open neighborhoods of <m>x</m>, and <m>a\in U\cap A</m>. The set <m>I</m> is nonempty since <m>x\in \overline{A}</m>. For elements <m>i=(U,a)</m> and <m>i'=(U',a')</m> of <m>I</m> define <m>i\leq i'</m> if and only if <m>U\supseteq U'</m>. It is easy to see that <m>I</m> is a quasi-ordered and directed set with respect to this relation. Lastly, define <m>f\colon I\rightarrow A</m> as <m>f((U,a))=a</m>. The net <m>f</m> converges to <m>x</m>. Indeed, for any open set <m>V</m> containing <m>x</m>, there is an element <m>a\in V\cap A</m>. Setting <m>i_0=(V,a)</m>, if <m>j=(U,a')</m> satisfies <m>j\geq i_0</m>, then <m>U\subseteq V</m> and hence <m>f(j)=f((U,a'))=a'\in V</m>, as desired.
                     </p>
                     <p>
-                        Assume <m>x_i\rightarrow x</m> for some net <m>(x_i)_{i\in I}</m> in <m>A</m>. Given any open set <m>U</m> containing <m>x</m>, there is an <m>i_0\in I</m> such that <m>x_j\in U</m> for all <m>j\geq i_0</m>. In particular, we have <m>x_{i_0}\in U</m>. Since <m>(x_i)_{i\in I}</m> is a net in <m>A</m>, we conclude that <m>x_{i_0}\in\cap A\cap U</m>.
-                    </p>
-                    <p>
-                        Note: the argument for the forward direction uses the axiom of choice potentially. If that bugs you, consider the following alternative: let <m>I=\{(U,y)\colon U\text{ open neighborhood of } x, y\in U\cap A\}</m> with quasiordering <m>(U,y)\leq (U', y')\iff U\supseteq U'</m>.  (This is no longer a partial ordering necessarily.) Define <m>f\colon I\rightarrow X</m> as <m>f((U,y))=y</m>. This net also converges to <m>x</m>. 
+                        For the reverse implication, assume <m>x_i\rightarrow x</m> for some net <m>(x_i)_{i\in I}</m> in <m>A</m>. Given any open set <m>U</m> containing <m>x</m>, there is an <m>i_0\in I</m> such that <m>x_j\in U</m> for all <m>j\geq i_0</m>. In particular, we have <m>x_{i_0}\in U</m>. Since <m>(x_i)_{i\in I}</m> is a net in <m>A</m>, we conclude that <m>x_{i_0}\in\cap A\cap U</m>.
                     </p>
                 </li>
                 <li>
@@ -166,7 +166,12 @@
                         Assume <m>f</m> is continuous and <m>(x_i)_{i\in I}</m> is a net satisfying <m>x_i\rightarrow x</m>. Given any open set <m>U</m> containing <m>y</m>, the net <m>(x_i)_{i\in I}</m> is eventually in <m>f^{-1}(U)</m>, since this is an open set containing <m>x</m>. But then clearly <m>(f(x_i))_{i\in I}</m> is eventually in <m>f(f^{-1}(U))\subseteq U</m>. 
                     </p>
                     <p>
-                        Inversely, if <m>f</m> is not continuous, then there is an <m>x\in X</m> and open set <m>U</m> containing <m>y=f(x)</m> such that for all open sets <m>V</m> containing <m>x</m>, there is an element <m>y_V=f(x_V)\in f(V)\cap (Y-U)</m>. Let <m>I</m> be the set of all open neighborhoods of <m>x</m> with partial ordering given by reverse inclusion, and consider the net <m>(x_V)_{V\in I}</m>, where <m>x_V</m> is the element described above. We have <m>x_V\rightarrow x</m>, using a similar argument as in (1), and yet <m>(f(x_V))_{V\in I}=(y_V)_{V\in I}\not\rightarrow y</m>. Indeed, by construction the net <m>(y_V)_{V\in I}</m> never lies in the open neighoborhood <m>U</m> of <m>y</m>. 
+                        Inversely, if <m>f</m> is not continuous, then there is an <m>x\in X</m> and open set <m>U</m> containing <m>y=f(x)</m> such that for all open sets <m>V</m> containing <m>x</m>, there is an element <m>x'\in V</m> such that  <m>f(x')\in f(V)-U</m>. Let <m>I</m> be the set of all pairs <m>(V, z)</m>, where <m>V</m> is an open neighborhood of <m>x</m> and <m>f(z)\in f(V)-U</m>. The set <m>I</m> is nonempty and is directed under the quasi-ordering <m>(V,z)\leq (V',z')</m> if and only if <m>V\supseteq V'</m>. Define the net <m>h\colon I\rightarrow X</m> as <m>h((V,z))=z</m>. 
+                    </p>
+                    <p>The net <m>h</m> converges to <m>x</m>: given any open neighborhood <m>V</m> of <m>x</m>, there is a <m>z\in V</m> such that <m>i_0=(V,z)</m> is an element of <m>I</m>; for all <m>j=(V',z')\geq i_0=(V,z)</m>, we have <m>V\subseteq V'</m> and hence <m>h(j)=h((V',z'))=z'\in V'\subseteq V</m>.   
+                    </p>
+                    <p>
+                        On the other hand, the net <m>f\circ h</m>, defined as <m>f\circ h((V,z))=f(z)</m> does not converge to <m>f(x)</m>. Indeed by construction, for <em>all</em> <m>j=(V,z)\in J</m> we have <m>f(z)\notin U</m>. 
                     </p>
                 </li>
                 <li>
@@ -204,7 +209,7 @@
             Let <m>x</m> be a limit point of the net <m>(x_i)_{i\in I}</m>. By definition of limit point, the collection <m>\mathcal{A}</m> of all open neighborhoods of <m>x</m> satisfies condition (i) of <xref ref="lem_Kelleys_lemma" text="custom">Kelley's lemma</xref>; condition (ii) follows from properties of open sets. We conclude that there is a subnet which is eventually in <m>U</m> for all open sets containing <m>x</m>, and thus that this subnet converges to <m>x</m>.   
         </p>
         <p>
-            Assume <m>x</m> is not a limit point of <m>f=(x_i)_{i\in I}</m>. Let <m>U</m> be an open neighborhood of <m>x</m> such that <m>I_U=\{i\in I\colon x_i\in U\}</m> is not cofinal; then there exists an <m>i_0\in I</m> such that <m>x_i\notin U</m>for all <m>i\in I_U</m> with <m>i\geq i_0</m>. Let <m>h=f\circ g\colon J\rightarrow X</m> be a subnet of <m>f</m>. We can write <m>h=(x_{g(j)})_{j\in J}</m>. I claim that <m>x_{g(j)}\not\to x</m>. Indeed, since <m>g(J)</m> is cofinal in <m>I</m> we can find a <m>j_0</m> such that <m>g(j_0)\geq i_0</m>, in which case for all all <m>j\geq j_0</m> we have <m>g(j)\geq g(j_0)\geq i_0</m>, and thus <m>x_{g(j)\notin U</m>. This shows that in fact <m>(x_{g(j)})_{j\in J}</m> is eventually in <m>X-U</m>; in particular it is definitely not eventually in <m>U</m>.    
+            Assume <m>x</m> is not a limit point of <m>f=(x_i)_{i\in I}</m>. Let <m>U</m> be an open neighborhood of <m>x</m> such that <m>I_U=\{i\in I\colon x_i\in U\}</m> is not cofinal; then there exists an <m>i_0\in I</m> such that <m>x_i\notin U</m>for all <m>i\in I_U</m> with <m>i\geq i_0</m>. Let <m>h=f\circ g\colon J\rightarrow X</m> be a subnet of <m>f</m>. We can write <m>h=(x_{g(j)})_{j\in J}</m>. I claim that <m>x_{g(j)}\not\to x</m>. Indeed, since <m>g(J)</m> is cofinal in <m>I</m> we can find a <m>j_0</m> such that <m>g(j_0)\geq i_0</m>, in which case for all all <m>j\geq j_0</m> we have <m>g(j)\geq g(j_0)\geq i_0</m>, and thus <m>x_{g(j)}\notin U</m>. This shows that in fact <m>(x_{g(j)})_{j\in J}</m> is eventually in <m>X-U</m>; in particular it is definitely not eventually in <m>U</m>.    
         </p>
     </proof>
 </theorem>
@@ -240,7 +245,50 @@
         </p>
     </proof>
 </lemma>
-
+<theorem xml:id="th_nets_compactness">
+    <title>Nets and compactness</title>
+    <statement>
+        <p>
+           Let <m>X</m> be a topological space. The following statements are equivalent.  
+        <ol>
+            <li>
+                <p>
+                    <m>X</m> is compact. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    Every net in <m>X</m> has a limit point. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    Every net in <m>X</m> has a convergent subnet. 
+                </p>
+            </li>
+            
+        </ol>
+    </p>
+    </statement>
+    <proof>
+        <p>
+            Statements (ii) and (iii) are immediately seen to be equivalent thanks to <xref ref="th_nets_limit_points"/>. We will show that (i) and (ii) are equivalent. 
+        </p>
+        <case>
+            <title>Implication: (i) <m>\implies</m> (ii)</title>
+            <p>
+                Let <m>f=(x_i)_{i\in I}</m> be a net in <m>X</m>. For each <m>i\in I</m> define <m>C_i=\overline{\{x_j\colon j\geq i\}}</m>. Clearly each <m>C_i</m> is closed and nonempty. Furthermore, for any finite collection <m>i_1,i_2,\dots, i_n</m> we have <m>\bigcap_{k=1}^n C_{i_k}\ne \emptyset</m>, since we can find a <m>j</m> such that <m>j\geq i_k</m> for all <m>1\leq k\leq n</m>, and hence <m>x_j\in \bigcap_{k=1}^n C_{i_k}</m>. Since <m>X</m> is assumed to be compact, there is an element <m>x\in \bigcap_{i\in I}C_i</m>. We show that <m>x</m> is a limit point of <m>(x_i)_{i\in I}</m>. Indeed, given any open set <m>U</m> containing <m>x</m> and any <m>i\in I</m>, since <m>x\in C_i=\overline{\{x_j\colon j\geq i\}}</m>, there is an element <m>x_j</m> with <m>j\geq i</m> such that <m>x_j\in U</m>. This proves that <m>(x_i)_{i\in I}</m> is cofinally in <m>U</m>, as desired. 
+            </p>
+            
+        </case>
+        <case>
+            <title>Implication: (ii) <m>\implies</m> (i)</title>
+            <p>
+                We prove the contrapositive. Suppose <m>X</m> is not compact, and let <m>\mathcal{U}=\{U_i\}_{i\in I}</m> be a cover with no finite cover. Define <m>J</m> to the be the set of all pairs <m>(K, x)</m>, where <m>K</m> is a finite subset of <m>I</m> and <m>x\in X-\bigcup_{k\in K}U_k</m>. (Note that <m>X-\bigcup_{k\in K}U_k\ne\emptyset</m> since <m>\mathcal{U}</m> has no finite subcover.) It is easy to see that <m>J</m> is a directed set under the quasiordering defined as <m>(K, x)\leq (K', x')</m> if and only if <m>K\subseteq K'</m>. Define the net <m>f\colon J\rightarrow X</m> as <m>f((K, x))=x</m>.  We show that <m>f</m> has no limit point. To this end, given any <m>y\in Y</m>, we have <m>y\in U_{i_0}</m> for some <m>i_0\in I </m>. We will show that the net <m>f</m> is not cofinally in <m>U_{i_0}</m>. To this end consider the index <m>j=({i_0}, x)\in J</m>, where <m>x\in X-U_{i_0}</m>. For all <m>j'=(K, x)</m> with <m>j'\geq j</m>, we have <m>K\supseteq \{i_0\}</m>, in which case <m>f(j')=x\in X-\bigcup_{k\in K}U_k\subseteq X-U_{i_0}</m>. Thus there is no <m>j'\geq j</m> satisfying <m>f(j)\in U_{i_0}</m>.    
+            </p>
+        </case>
+    </proof>
+</theorem>
 
 
 

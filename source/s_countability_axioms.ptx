@@ -186,11 +186,14 @@
                         For each <m>x</m>, the set <m>\mathcal{B}_x=\{B\in \mathcal{B}\colon x\in B\}</m> is easily seen to be a countable local basis at <m>x</m>. This proves <m>X</m> is first countable.  
                     </p>
                     <p>
-                        Let <m>X=\bigcup_{i\in I}U_i</m> be an open cover of <m>X</m>. Let 
+                        Let <m>X=\bigcup_{i\in I}U_i</m> be an open cover of <m>X</m>. We will show that there is a countable subcover, and hence that <m>X</m> is Lindelöf. Let 
                         <me>
                             \mathcal{B}'=\{B\in\mathcal{B}\colon B\subseteq U_i \text{ for some } i\in I\}
                         </me>.
                         Since <m>\mathcal{B}</m> is countable, so is <m>\mathcal{B}'</m>. Write <m>\mathcal{B}'=\{B_1', B_2',\dots\}</m>. For each <m>n\in \Z_+</m>, pick an index <m>i_n\in I</m> such that <m>B'_n\subseteq U_{i_n}</m>. We claim that <m>X=\bigcup_{n=1}^\infty U_{i_n}</m>, and thus that a countable subcovering of <m>\{U_i\}_{i\in I}</m>. Indeed, for any <m>x\in X</m>, we have <m>x\in B\subseteq U_i</m> for some <m>i\in I</m> and <m>B\in \mathcal{B}</m>. It follows that <m>B=B'_n</m> for some <m>n</m>, in which case <m>x\in B_n'\subseteq U_{i_n}</m>, as desired. 
+                    </p>
+                    <p>
+                        Lastly we show that <m>X</m> is separable. For each <m>n\in \Z_+</m> let <m>q_n</m> be any element of <m>B_n</m>. I claim that the set <m>Q=\{q_n\colon n\in \Z_+\}</m> is dense, showing <m>X</m> is separable. Indeed, given any open set <m>U</m>, we have <m>B_n\subseteq U</m> for some <m>n</m>, in which case <m>q_n\in U</m>.  
                     </p>
                 </li>
                 <li>

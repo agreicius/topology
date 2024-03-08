@@ -1,5 +1,5 @@
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="s_Tietze_extension">
-    <title>Further applications of Urysohn</title>
+    <title>Urysohn offspring</title>
     
     <theorem xml:id="th_Tietze_extension">
         <title>Tietze extension theorem</title>
@@ -65,7 +65,7 @@
       </p>
       
       <proof>
-        <p>
+        <!-- <p>
             Let <m>\mathcal{C}\subseteq [0,1]</m> be the Cantor set, and choose a homeomorphism <m>h\colon \mathcal{C}\rightarrow \{0,1\}^\omega</m>, where <m>\{0,1\}</m> is given the discrete topology and <m>\{0,1\}^\omega</m> is given the product topology. (We proved <m>\mathcal{C}</m> is homeomorphic to <m>\{0,1\}^\omega</m> in discussion.) Now define functions <m>g_1,g_2\colon \{0,1\}\rightarrow [0,1]</m> as 
             <md>
                 <mrow>g_1((a_1,a_2,a_3,\dots))\amp= \frac{a_1}{2}+\frac{a_3}{2^2}+\frac{a_5}{2^3}+\cdots =\sum_{k=1}^\infty \frac{a_{2k-1}}{2^k} </mrow>
@@ -93,7 +93,7 @@
                 <mrow> \amp =(y_1,y_2) \amp \text{(by construction)}</mrow>
             </md>.
             This proves in fact that <m>\phi\vert_\mathcal{C}</m> is surjective. 
-          </p>
+          </p> -->
       </proof>
         
     </project>
@@ -101,7 +101,7 @@
         <title>Partition of unity</title>
         <statement>
             <p>
-             Let <m>Y\subseteq \R</m>. The {\bf support} <m>\operatorname{supp} f</m> of a continuous function <m>f\colon X\rightarrow Y</m> is defined as <m>\operatorname{supp} f=\overline{f^{-1}(\{0\})}</m>.    
+             Let <m>Y\subseteq \R</m>. The <term>support</term> <m>\operatorname{supp} f</m> of a continuous function <m>f\colon X\rightarrow Y</m> is defined as <m>\operatorname{supp} f=\overline{f^{-1}(\{0\})}</m>.    
             </p>
             <p>
             A <term>partition of unity dominated by the open cover</term> <m>X=\bigcup_{k=1}^nU_k</m> is a collection of continuous functions <m>\{\phi_k\colon X\rightarrow [0,1]\}_{k=1}^n</m> satisfying (i) <m>\operatorname{supp} \phi_k\subseteq U_k</m> for all <m>1\leq k\leq n</m>, and (ii) <m>\sum_{k=1}^n\phi_k(x)=1</m> for all <m>x\in X</m>. 

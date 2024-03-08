@@ -166,7 +166,7 @@
                             f \arrow[ddd,mapsto, bend right=20] \arrow[rrr,mapsto, bend left=20] \arrow[dr,phantom,sloped, "\in"] \amp[-30] \amp  \amp[-30] (f\vert_{S^*},f(t_0))\arrow[dl,phantom,sloped, "\ni"]\\[-20]
                              \amp X_{S} \arrow[r,"\phi"] \arrow[d] \amp X_{S^*}\times X_{t_0} \arrow[dl,"\pi"] \amp  \\ [10]
                              \amp X_{S^*} \\ [-20]
-                             f\vert_{S^*}\arrow[ur,phantom,sloped, "\in"]
+                             f\vert_{S^*}\arrow[ur,phantom,shift right, sloped, "\in"]
                         \end{tikzcd}
                         <!-- \begin{tikzcd}
                             f \arrow[d,mapsto] \arrow[r,phantom,description, "\in"]  \amp [-25] X_{S} \arrow[r,"\phi"] \arrow[d] \amp X_{S^*}\times X_{t_0} \arrow[dl,"\pi"] \amp  \\

@@ -1,6 +1,7 @@
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="s_connected1">
   <title>Connected spaces</title>
 <definition xml:id="d_connected_space">
+  <title>Connected space and separations</title>
   <statement>
     <p>
       A <term>separation</term> of a topological space <m>X</m> is a pair of disjoint open sets <m>U_1, U_2</m> satisfying <m>X=U_1\cup U_2</m>. Call a separation <m>X=U_1\cup U_2</m> <term>trivial</term> if <m>\{U_1, U_2\}=\{\emptyset, X\}</m>, and <term>nontrivial</term> otherwise. A space <m>X</m> is <term>connected</term> if it is nonempty and   all separations of <m>X</m> are trivial; it is <term>disconnected</term> otherwise.

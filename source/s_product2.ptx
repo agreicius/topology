@@ -59,6 +59,7 @@
 		</statement>
 	</remark>
 	<convention>
+		<title><m>A^\omega</m></title>
 	Following Munkres, given a set <m>A</m> and the special index set <m>I=\Z_+=\{1,2,3,\dots\}</m>, we write <m>A^\omega</m> for <m>A^{\Z_+}</m> as a shorthand.
 	</convention>
 

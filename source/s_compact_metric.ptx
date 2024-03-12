@@ -137,11 +137,12 @@ X \text{ compact} \arrow[rd,Rightarrow] \amp \amp X\text{ sequentially compact} 
     </statement>
     <proof>
       <p>
-        Assume <m>X</m> is <m>T_1</m>, second countable, and limit point compact. Let <m>(x_n)_{n\in \Z_+}</m> be a sequence in <m>X</m> and let <m>A=\{x_n\colon n\in \Z_+\}</m>, the set of entries of <m>(x_n)_{n\in \Z_+\}</m>. If <m>A</m> is finite, then it is easy to see that there is a <em>constant</em> subsequence of <m>(x_n)_{n\in \Z_+}</m>, and such a subsequence clearly converges. If <m>A</m> is infinite, then since <m>X</m> is limit point compact, there is a limit point <m>x</m> of <m>A</m>. Let <m>\mathcal{B}=\{B_n\colon n\in \Z_+\}</m> be a countable local basis at <m>x</m>. Replacing <m>B_n</m> with <m>\bigcap_{i=1}^n B_n</m>, we may assume that <m>B_n\supseteq B_{n+1}</m> for all <m>n</m>. 
+        Assume <m>X</m> is <m>T_1</m>, second countable, and limit point compact. Let <m>(x_n)_{n\in \Z_+}</m> be a sequence in <m>X</m> and let <m>A=\{x_n\colon n\in \Z_+\}</m>, the set of entries of <m>(x_n)_{n\in \Z_+}</m>. If <m>A</m> is finite, then it is easy to see that there is a <em>constant</em> subsequence of <m>(x_n)_{n\in \Z_+}</m>, and such a subsequence clearly converges. If <m>A</m> is infinite, then since <m>X</m> is limit point compact, there is a limit point <m>x</m> of <m>A</m>. Let <m>\mathcal{B}=\{B_n\colon n\in \Z_+\}</m> be a countable local basis at <m>x</m>. Replacing <m>B_n</m> with <m>\bigcap_{i=1}^n B_n</m>, we may assume that <m>B_n\supseteq B_{n+1}</m> for all <m>n</m>. 
       </p>
     </proof>
   </theorem>
   <definition xml:id="d_second_countable">
+    <title>Second countable</title>
     <statement>
       <p>
       A topological space <m>X</m> is <term>second countable</term> if it has a countable basis.         
@@ -158,7 +159,7 @@ X \text{ compact} \arrow[rd,Rightarrow] \amp \amp X\text{ sequentially compact} 
     </statement>
     <proof>
       <p>
-        Assume <m>X</m> is second countable, and let <m>X=\bigcup_{i\in I}U_i</m>. As we will show in <xref ref="th_second_countable"/>, since <m>X</m> is second countable, there is a <em>countable</em> subcovering <m>X=\bigcup_{j=1}^\infty V_j</m>, where  <m>V_j=U_i_{j}</m> for some <m>i_j\in I</m>. If the countable covering <m>\{V_j\}_{j=1}^\infty</m> had no finite subcovering, then we could construct a sequence <m>(x_n)_{n=1}^\infty</m> satisfying <m>x_n\notin U_1\cup U_2\cup \cdots\cup U_n</m> for all <m>n\in \Z_+</m>. Since <m>X</m> is sequentially compact, the sequence would have a convergent subsequence <m>x_{n_k}\rightarrow x</m>. We must have <m>x\in V_N</m> for some <m>N</m>. But by construction <m>x_{n}\notin V_N</m> for all <m>n\geq N</m>, whence it follows that <m>x_{n_k}\notin V_n</m> eventually. A contradiction. We conclude that <m>\{V_n\}_{n\in \Z_+}</m>, and hence <m>\{U_i\}_{i\in I}</m> has a finite subcovering, as desired.   
+        Assume <m>X</m> is second countable, and let <m>X=\bigcup_{i\in I}U_i</m>. As we will show in <xref ref="th_second_countable"/>, since <m>X</m> is second countable, there is a <em>countable</em> subcovering <m>X=\bigcup_{j=1}^\infty V_j</m>, where  <m>V_j=U_{i_{j}}</m> for some <m>i_j\in I</m>. If the countable covering <m>\{V_j\}_{j=1}^\infty</m> had no finite subcovering, then we could construct a sequence <m>(x_n)_{n=1}^\infty</m> satisfying <m>x_n\notin U_1\cup U_2\cup \cdots\cup U_n</m> for all <m>n\in \Z_+</m>. Since <m>X</m> is sequentially compact, the sequence would have a convergent subsequence <m>x_{n_k}\rightarrow x</m>. We must have <m>x\in V_N</m> for some <m>N</m>. But by construction <m>x_{n}\notin V_N</m> for all <m>n\geq N</m>, whence it follows that <m>x_{n_k}\notin V_n</m> eventually. A contradiction. We conclude that <m>\{V_n\}_{n\in \Z_+}</m>, and hence <m>\{U_i\}_{i\in I}</m> has a finite subcovering, as desired.   
       </p>
     </proof>
   </theorem>
@@ -229,14 +230,32 @@ X \text{ compact} \arrow[rd,Rightarrow] \amp \amp X\text{ sequentially compact} 
       <p>
         Since <m>X</m> is totally bounded, for each <m>n\in \Z_+</m> we have 
         <me>
-          X=\bigcup_{i=1}^_{m_n} B_{1/n}(x_{n,i})
+          X=\bigcup_{i=1}^{m_n} B_{1/n}(x_{n,i})
         </me>.
         Let <m>Q=\{x_{n,i}\colon n\in \Z_+, 1\leq i\leq m_n\}</m>, a countable set. It is easy to see that <m>Q</m> is dense in <m>X</m>: <ie/>, <m>\overline{Q}=X</m>. As we will show in <xref ref="th_second_countable"/>, any metric space containing a countable dense subset is second countable. 
       </p>
     </proof>
   </theorem>
-  
-  <!-- <project>
+  <p>
+    We end our treatment of compactness with the amazing <em>Cantor set</em>. This mysterious space, besides serving as a nice testing ground for our theory around connectedness and compactness, is surprisingly omnipresent in topology and related fields. By way of illustration, we remark that it can be shown that every compact metric space is the continuous image of the Cantor set.  
+  </p>
+  <definition xml:id="d_perfect">
+    <title>Perfect space</title>
+    <statement>
+      <p>
+        Let <m>X</m> be a topological space. An element <m>x\in X</m> is <term>isolated</term> if <m>\{x\}</m> is open in <m>X</m>. The space <m>X</m> is <term>perfect</term> if it has no isolated elements. 
+      </p>
+    </statement>
+  </definition>
+  <definition xml:id="d_totally_disconnected">
+    <title>Totally disconnected</title>
+    <statement>
+      <p>
+        A space <m>X</m> is <term>totally disconnected</term> if the connected components of <m>X</m> are singletons: equivalently, if an subset of <m>X</m> containing more than one element is disconnected. 
+      </p>
+    </statement>
+  </definition>
+  <project>
     <title>Cantor set</title>
     <p>
       There is a unique family  <m>\{C_n\}_{n=0}^\infty</m> of closed sets of <m>[0,1]</m> of of <m>[0,1]</m> satisfying the following properties: 
@@ -279,7 +298,7 @@ X \text{ compact} \arrow[rd,Rightarrow] \amp \amp X\text{ sequentially compact} 
       The <term>Cantor set</term> is defined as <m>\mathcal{C}=\bigcap_{n=0}^\infty C_n</m>. 
     </p>
     <p>
-      Prove: the Cantor set is nonempty, Hausdorff, compact, <term>perfect</term> (closed and all points of <m>\mathcal{C}</m> are limit points of <m>\mathcal{C}</m>), and <term>totally disconnected</term> (the connected components of <m>\mathcal{C}</m> are singletons).  
+      The Cantor set is nonempty, (i) Hausdorff, (ii) compact, (iii) perfect, (iv) totally disconnected, and (v) second countable, as we show below. Amazingly, you can also show that any nonempty space <m>X</m> satisfying properties <m>(i)-(v)</m> is homeomorphic to the Cantor set!   
     </p>
     <proof>
       <p>
@@ -293,6 +312,6 @@ X \text{ compact} \arrow[rd,Rightarrow] \amp \amp X\text{ sequentially compact} 
       </p>
     </proof>
     
-  </project> -->
+  </project>
   
   </section>

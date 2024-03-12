@@ -272,6 +272,7 @@
 	</theorem>
 
 	<definition xml:id="d_continuity_at_x">
+		<title>Continuity at <m>x</m></title>
 		<statement>
 			<p>
 				Let <m>f\colon X\rightarrow Y</m> be a map between topological spaces.

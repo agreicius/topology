@@ -64,6 +64,7 @@
     </p>
 </project>
 <definition xml:id="d_compactification">
+    <title>Compactification</title>
     <statement>
         <p>
             A <term>compactification</term> of a topological space <m>X</m> is an embedding <m>\iota\colon X\hookrightarrow Y</m>, where <m>Y</m> is compact and <m>\overline{\iota(X)}=Y</m>. 

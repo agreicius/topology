@@ -1,10 +1,8 @@
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="s_metric1">
   <title>Metric spaces</title>
-  <introduction>
     <p>
     In this section we introduce a special family of topological spaces: <xref ref="top_eg_metric_spaces" text="custom">metric spaces</xref>. These types of spaces are pervasive throughout mathematics and are conceptually very familiar or intuitive. Indeed, historically metric spaces were the main inspiration to axiomatic topology; and the metric balls defined in <xref ref="d_epsilon_balls"/> were the inspiration for the notion of a topological basis. Lastly, the defining structure of metric space, a <em>metric</em> <m>d</m>, gives us a <em>quantitative</em> grip on the topology, whereas generally in topology we must rely on the <em>qualitative</em> description of open sets given by the axioms.
     </p>
-</introduction>
 <definition xml:id="d_metric_space">
   <title>Metric space</title>
   <statement>
@@ -35,10 +33,11 @@
   </statement>
 </definition>
 <definition xml:id="d_Euclidean_box_metric">
+  
+  <title>Euclidean, box, and taxicab metrics</title>
   <idx><h>metric</h><h>Euclidean</h></idx>
   <idx><h>metric</h><h>box</h></idx>
   <idx><h>metric</h><h>taxicab</h></idx>
-  <title>Euclidean, box, and taxicab metrics</title>
   <statement>
     <p>
       Let <m>X=\R^n</m>, where <m>n</m> is a positive integer. Let <m>\boldx=(x_1,x_2,\dots, x_n), \boldy=(y_1,y_2,\dots, y_n)</m>.
@@ -79,7 +78,9 @@
       </ol>
     </p>
   </statement>
-  <proof>
+  
+</definition>
+<proof>
     <p>
       <ol>
         <li>
@@ -118,7 +119,6 @@
       </ol>
     </p>
   </proof>
-</definition>
 <definition xml:id="d_epsilon_balls">
   <title>Metric balls</title>
   <statement>
@@ -310,6 +310,9 @@
   </solution>
 </example>
 <definition xml:id="d_trivial_metric">
+  <title>Trivial metric</title>
+  
+  
   <statement>
     <p>
       Given a set <m>X</m> the function <m>d\colon X\times X\rightarrow \R</m> defined as

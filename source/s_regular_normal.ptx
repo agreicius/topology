@@ -85,6 +85,9 @@
     </statement>
     <proof>
         <p>
+            First observe that metric spaces are <m>T_1</m>. 
+        </p>
+        <p>
             Let <m>A,B</m> be disjoint closed subsets of <m>X</m>. For each <m>a\in A</m> we can find an <m>\epsilon_a&gt; 0 </m> such that <m>B_{\epsilon_a}(a)\cap B=\emptyset</m>. Similarly for each <m>b\in B</m> we can find an <m>\epsilon_b&gt; 0</m> such that <m>B_{\epsilon_b}(b)\cap A=\emptyset</m>. I claim the open sets 
             <md>
                 <mrow>U \amp =\bigcup_{a\in A}B_{\epsilon_a/2}(a)</mrow>
@@ -160,7 +163,7 @@
     </proof>
 </theorem>
 <theorem xml:id="th_locally_compact_regular">
-    <title>Locally compact implies regular</title>
+    <title>Locally compact Hausdorff implies regular</title>
     <statement>
         <p>
             If <m>X</m> is locally compact Hausdorff, then <m>X</m> is regular. 
@@ -255,10 +258,10 @@
     </solution>
 </example>
 <example>
-    <title><m>R_\ell\times R_\ell</m> is not normal</title>
+    <title><m>\R_\ell\times \R_\ell</m> is not normal</title>
     <statement>
         <p>
-            Prove: <m>\R_\ell\times \R_\ell</m> is not normal. 
+            The space <m>\R_\ell\times \R_\ell</m> is not normal. 
         </p>
     </statement>
     <solution>
@@ -271,7 +274,21 @@
         </p>
     </solution>
 </example>
-
+<theorem xml:id="th_compact_Hausdorff_normal">
+    <title>Compact+Hausdorff <m>\implies</m> normal</title>
+    <statement>
+        <p>
+        If <m>X</m> is a compact Hausdorff space, then <m>X</m> is normal. 
+        </p>
+    </statement>
+    <proof>
+        <p>
+            Since <m>X</m> is compact Hausdorff, it is locally compact Hausdorff, and hence regular by <xref ref="th_locally_compact_regular"/>. We use the equivalent condition of normality from <xref ref="th_regular_normal_equivalence"/>. To this end, let <m>A\subseteq X</m> be closed, and let <m>U</m> be any open set containing <m>U</m>. Since <m>X</m> is regular, for all <m>a\in A</m> we can find an open set <m>V_a</m> containing <m>a</m> such that <m>\overline{V_a}\subseteq U</m>. We have <m>A\subseteq \bigcup_{a\in A}V_a</m>. Since <m>X</m> is compact and <m>A</m> is closed, <m>A</m> is compact. Hence there is a finite subcovering <m>A\subseteq V=\bigcup_{k=1}^nV_{a_k}</m>. We have 
+            <me>\overline{V}=\bigcup_{k=1}^n\overline{V_{a_k}}\subseteq U</me>,
+            as desired.
+        </p>
+    </proof>
+</theorem>
 <theorem xml:id="th_regular_separable_normal">
     <title>Regular+second countable <m>\implies</m> normal</title>
     <statement>
@@ -291,19 +308,5 @@
     </proof>
 </theorem>
 
-<theorem xml:id="th_compact_Hausdorff_normal">
-    <title>Compact+Hausdorff <m>\implies</m> normal</title>
-    <statement>
-        <p>
-        If <m>X</m> is a compact Hausdorff space, then <m>X</m> is normal. 
-        </p>
-    </statement>
-    <proof>
-        <p>
-            Since <m>X</m> is compact Hausdorff, it is locally compact Hausdorff, and hence regular by <xref ref="th_locally_compact_regular"/>. We use the equivalent condition of normality from <xref ref="th_regular_normal_equivalence"/>. To this end, let <m>A\subseteq X</m> be closed, and let <m>U</m> be any open set containing <m>U</m>. Since <m>X</m> is regular, for all <m>a\in A</m> we can find an open set <m>V_a</m> containing <m>a</m> such that <m>\overline{V_a}\subseteq U</m>. We have <m>A\subseteq \bigcup_{a\in A}V_a</m>. Since <m>X</m> is compact and <m>A</m> is closed, <m>A</m> is compact. Hence there is a finite subcovering <m>A\subseteq V=\bigcup_{k=1}^nV_{a_k}</m>. We have 
-            <me>\overline{V}=\bigcup_{k=1}^n\overline{V_{a_k}}\subseteq U</me>,
-            as desired.
-        </p>
-    </proof>
-</theorem>
+
 </section>

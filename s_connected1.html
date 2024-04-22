@@ -317,9 +317,15 @@ window.MathJax = {
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_countability_axioms.html" class="internal"><span class="codenumber">1.18</span> <span class="title">Countability axioms</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_regular.html" class="internal"><span class="codenumber">1.19</span> <span class="title">Regular and normal spaces</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_Urysohn_lemma.html" class="internal"><span class="codenumber">1.20</span> <span class="title">Things Urysohn</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_Tietze_extension.html" class="internal"><span class="codenumber">1.21</span> <span class="title">Urysohn offspring</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_Tietze_extension.html" class="internal"><span class="codenumber">1.21</span> <span class="title">Further applications of Urysohn</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_nets.html" class="internal"><span class="codenumber">1.22</span> <span class="title">Nets</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_Tychonoff.html" class="internal"><span class="codenumber">1.23</span> <span class="title">Tychonoff theorem via nets</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_Tychonoff.html" class="internal"><span class="codenumber">1.23</span> <span class="title">Tychonoff theorem via nets</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_Tychonoff.html#ss_nets_compactness" class="internal"><span class="title">Nets and compactness</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_Tychonoff.html#ss_Tychonoff" class="internal"><span class="title">Tychonoff’s theorem</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -364,11 +370,12 @@ window.MathJax = {
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">1.12</span><span class="space"> </span><span class="title">Connected spaces</span>
 </h2>
 <article class="definition definition-like" id="d_connected_space"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.12.1</span><span class="period">.</span><span class="space"> </span><span class="title">Connected space and separations.</span>
-</h3> <div class="para" id="d_connected_space-2-1">A <dfn class="terminology">separation</dfn> of a topological space <span class="process-math">\(X\)</span> is a pair of disjoint open sets <span class="process-math">\(U_1, U_2\)</span> satisfying <span class="process-math">\(X=U_1\cup U_2\text{.}\)</span> Call a separation <span class="process-math">\(X=U_1\cup U_2\)</span> <dfn class="terminology">trivial</dfn> if <span class="process-math">\(\{U_1, U_2\}=\{\emptyset, X\}\text{,}\)</span> and <dfn class="terminology">nontrivial</dfn> otherwise. A space <span class="process-math">\(X\)</span> is <dfn class="terminology">connected</dfn> if it is nonempty and   all separations of <span class="process-math">\(X\)</span> are trivial; it is <dfn class="terminology">disconnected</dfn> otherwise.</div> <div class="para" id="d_connected_space-2-2">A subset <span class="process-math">\(Y\subseteq X\)</span> is <dfn class="terminology">connected</dfn> (resp., <dfn class="terminology">disconnected</dfn>) if it is connected (resp., disconnected) with respect to the subspace topology.</div></article><article class="remark remark-like" id="s_connected1-3"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.12.1</span><span class="period">.</span>
+</h3>
+<div class="para" id="d_connected_space-1-1">A <dfn class="terminology">separation</dfn> of a topological space <span class="process-math">\(X\)</span> is a pair of disjoint open sets <span class="process-math">\(U_1, U_2\)</span> satisfying <span class="process-math">\(X=U_1\cup U_2\text{.}\)</span> Call a separation <span class="process-math">\(X=U_1\cup U_2\)</span> <dfn class="terminology">trivial</dfn> if <span class="process-math">\(\{U_1, U_2\}=\{\emptyset, X\}\text{,}\)</span> and <dfn class="terminology">nontrivial</dfn> otherwise. A space <span class="process-math">\(X\)</span> is <dfn class="terminology">connected</dfn> if it is nonempty and   all separations of <span class="process-math">\(X\)</span> are trivial; it is <dfn class="terminology">disconnected</dfn> otherwise.</div> <div class="para" id="d_connected_space-1-2">A subset <span class="process-math">\(Y\subseteq X\)</span> is <dfn class="terminology">connected</dfn> (resp., <dfn class="terminology">disconnected</dfn>) if it is connected (resp., disconnected) with respect to the subspace topology.</div></article><article class="remark remark-like" id="s_connected1-3"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.12.2</span><span class="period">.</span><span class="space"> </span><span class="title">Conventions.</span>
 </h3> <div class="para logical" id="s_connected1-3-2">
-<div class="para">Our defined terms in <a href="" class="xref" data-knowl="./knowl/xref/d_connected_space.html" title="Definition 1.12.1: Connected space and separations">Definition 1.12.1</a> differ from Munkres in two regards.</div>
+<div class="para">Our defined terms in <a href="" class="xref" data-knowl="./knowl/xref/d_connected_space.html" title="Definition 1.12.1">Definition 1.12.1</a> differ from Munkres in two regards.</div>
 <ol class="decimal">
 <li id="s_connected1-3-2-2-1"><div class="para" id="s_connected1-3-2-2-1-1">Munkres takes as a separation what we call a <em class="emphasis">nontrivial</em> separation. We choose the weaker notion so that we have a convenient term for a disjoint cover of a space by two open sets.</div></li>
 <li id="s_connected1-3-2-2-2"><div class="para" id="s_connected1-3-2-2-2-1">Munkres does not insist that a space be nonempty to be connected. There does not seem to be much consensus on whether to include this as a necessary condition. However, when discussing connected components later on, we would like to be able to say simply that a space is connected if and only if it has exactly one connected component. This is reason enough for us to go with the nonempty condition.</div></li>
